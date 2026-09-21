@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us – Visionary Path Services</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <style>
+        .page-hero { background: linear-gradient(135deg, #0d2b5e 0%, #1a4a8a 50%, #0d2b5e 100%); padding: 110px 0 70px; text-align: center; position: relative; overflow: hidden; }
+        .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1600&q=80') center/cover; opacity: 0.12; }
+        .page-hero-inner { position: relative; z-index: 1; }
+        .page-hero-eyebrow { color: #1a9c4e; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+        .page-hero h1 { color: #fff; font-size: clamp(2rem,5vw,3.2rem); font-weight: 800; margin-bottom: 14px; }
+        .page-hero p { color: rgba(255,255,255,0.82); font-size: 1.05rem; max-width: 560px; margin: 0 auto 28px; line-height: 1.7; }
+        .hero-pills { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .hero-pill { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.92); padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 500; }
+        .section-label { color: #1a9c4e; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+        .section-title { color: #0d2b5e; font-size: clamp(1.6rem,3vw,2.4rem); font-weight: 800; margin-bottom: 14px; }
+        .contact-section { padding: 80px 0; background: #f8fafc; }
+        .contact-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
+        @media(max-width:900px){.contact-inner{grid-template-columns:1fr;}}
+        .contact-left h2 { color: #0d2b5e; font-size: clamp(1.5rem,3vw,2rem); font-weight: 800; margin-bottom: 8px; }
+        .contact-left > p { color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 32px; }
+        .contact-method { display: flex; gap: 16px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid #e8f0fe; }
+        .contact-method:last-child { border-bottom: none; }
+        .method-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .method-icon.phone { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
+        .method-icon.whatsapp { background: linear-gradient(135deg, #dcfce7, #bbf7d0); }
+        .method-icon.email { background: linear-gradient(135deg, #fef3c7, #fde68a); }
+        .method-icon.social { background: linear-gradient(135deg, #ede9fe, #ddd6fe); }
+        .method-info h4 { color: #0d2b5e; font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+        .method-info a { color: #1a9c4e; font-weight: 600; text-decoration: none; font-size: 1rem; display: block; margin-bottom: 3px; }
+        .method-info a:hover { text-decoration: underline; }
+        .method-info p { color: #94a3b8; font-size: 0.85rem; margin: 0; }
+        .contact-form-col h2 { color: #0d2b5e; font-size: clamp(1.4rem,3vw,1.9rem); font-weight: 800; margin-bottom: 8px; }
+        .contact-form-col > p { color: #64748b; font-size: 0.9rem; margin-bottom: 24px; }
+        .contact-form-box { background: #fff; border-radius: 20px; padding: 36px 32px; box-shadow: 0 8px 32px rgba(13,43,94,0.1); border: 1.5px solid #e8f0fe; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; color: #374151; font-size: 0.87rem; font-weight: 600; margin-bottom: 7px; }
+        .form-group .req { color: #ef4444; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        @media(max-width:600px){.form-row{grid-template-columns:1fr;}}
+        .input-icon-wrap { position: relative; }
+        .input-icon-wrap i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 0.88rem; }
+        .input-icon-wrap input, .input-icon-wrap textarea { width: 100%; padding: 12px 14px 12px 40px; border: 1.5px solid #e2e8f0; border-radius: 10px; font-size: 0.9rem; color: #1e293b; font-family: inherit; background: #f8fafc; transition: all 0.2s; box-sizing: border-box; }
+        .input-icon-wrap input:focus, .input-icon-wrap textarea:focus { outline: none; border-color: #1a9c4e; background: #fff; box-shadow: 0 0 0 3px rgba(26,156,78,0.1); }
+        .input-icon-wrap.textarea-wrap i { top: 16px; transform: none; }
+        .input-icon-wrap textarea { padding-top: 14px; resize: vertical; }
+        .trust-bar { background: #fff; border-top: 1px solid #e8f0fe; padding: 50px 0; }
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+        .trust-item { text-align: center; padding: 24px 16px; border-radius: 16px; background: #f8fafc; border: 1.5px solid #e8f0fe; transition: all 0.3s; }
+        .trust-item:hover { border-color: #1a9c4e; box-shadow: 0 6px 24px rgba(13,43,94,0.1); transform: translateY(-3px); }
+        .trust-item .trust-icon { font-size: 1.8rem; margin-bottom: 10px; display: block; }
+        .trust-item h4 { color: #0d2b5e; font-size: 0.95rem; font-weight: 700; margin-bottom: 5px; }
+        .trust-item p { color: #64748b; font-size: 0.82rem; margin: 0; line-height: 1.5; }
+        .office-section { padding: 70px 0; background: #0d2b5e; }
+        .office-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        @media(max-width:768px){.office-inner{grid-template-columns:1fr;}}
+        .office-info h2 { color: #fff; font-size: clamp(1.4rem,3vw,2rem); font-weight: 800; margin-bottom: 6px; }
+        .office-info .tagline { color: #1a9c4e; font-size: 0.9rem; font-weight: 600; margin-bottom: 24px; }
+        .office-detail { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .office-detail:last-child { border-bottom: none; }
+        .office-detail i { color: #1a9c4e; margin-top: 3px; width: 20px; flex-shrink: 0; }
+        .office-detail span { color: rgba(255,255,255,0.85); font-size: 0.9rem; line-height: 1.6; }
+        .office-cta-col { text-align: center; }
+        .office-cta-col h3 { color: #fff; font-size: 1.6rem; font-weight: 800; margin-bottom: 10px; }
+        .office-cta-col p { color: rgba(255,255,255,0.75); margin-bottom: 28px; font-size: 0.95rem; }
+        .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <span><span class="top-bar-dash">—</span> Your Education Goals, Our Guidance</span>
+            <div class="top-bar-right">
+                <i class="fas fa-phone"></i> Contact:- 9063703038
+                <a href="https://instagram.com/visionarypathservices" target="_blank"><i class="fab fa-instagram"></i></a>
+                <span class="separator">|</span>
+                <a href="mailto:Visionarypathservises@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">⚡</div>
+                <div class="logo-text">
+                    <span class="logo-name">VISIONARY PATH SERVICES</span>
+                    <span class="logo-tagline">Guiding Dreams, Financing Futures</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="has-dropdown">
+                    <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="abroad-loans.html">Abroad Education Loans</a></li>
+                        <li><a href="domestic-loans.html">Domestic Education Loans</a></li>
+                        <li><a href="mbbs-loans.html">MBBS Loans</a></li>
+                        <li><a href="other-loans.html">Other Loans</a></li>
+                    </ul>
+                </li>
+                <li><a href="partner-lenders.html">Partner Lenders</a></li>
+                <li><a href="partner-with-us.html">Partner With Us</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+            <div class="nav-cta">
+                <button class="btn btn-primary" onclick="openPopup()"><i class="fas fa-clipboard-list"></i> Check Eligibility</button>
+                <a href="https://wa.me/919063703038" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+            </div>
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="container page-hero-inner">
+            <p class="page-hero-eyebrow" data-aos="fade-up">GET IN TOUCH</p>
+            <h1 data-aos="fade-up" data-aos-delay="100">We're Here to <span style="color:#1a9c4e">Help You</span></h1>
+            <p data-aos="fade-up" data-aos-delay="200">Have questions about education loans? Our team is just a message away.</p>
+            <div class="hero-pills" data-aos="fade-up" data-aos-delay="300">
+                <span class="hero-pill"><i class="fas fa-bolt"></i> Quick Response</span>
+                <span class="hero-pill"><i class="fas fa-user-graduate"></i> Expert Guidance</span>
+                <span class="hero-pill"><i class="fas fa-shield-alt"></i> Trusted Support</span>
+                <span class="hero-pill"><i class="fas fa-hand-holding-heart"></i> Personalized Assistance</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-inner">
+                <!-- LEFT: Get in Touch -->
+                <div class="contact-left" data-aos="fade-right">
+                    <p class="section-label">REACH US</p>
+                    <h2>Get in Touch</h2>
+                    <p>We're available Monday to Saturday to answer your questions about education loans. Choose the channel that suits you best.</p>
+                    <div class="contact-method">
+                        <div class="method-icon phone"><i class="fas fa-phone" style="color:#2563eb"></i></div>
+                        <div class="method-info">
+                            <h4>Call Us</h4>
+                            <a href="tel:+919063703038">+91 90637 03038</a>
+                            <p>Mon – Sat, 9:00 AM – 6:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="method-icon whatsapp"><i class="fab fa-whatsapp" style="color:#16a34a"></i></div>
+                        <div class="method-info">
+                            <h4>WhatsApp Us</h4>
+                            <a href="https://wa.me/919063703038" target="_blank">+91 90637 03038</a>
+                            <p>Chat with us for quick support</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="method-icon email"><i class="fas fa-envelope" style="color:#d97706"></i></div>
+                        <div class="method-info">
+                            <h4>Email Us</h4>
+                            <a href="mailto:Visionarypathservises@gmail.com">Visionarypathservises@gmail.com</a>
+                            <p>We usually respond within 24 hours</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="method-icon social"><i class="fab fa-instagram" style="color:#7c3aed"></i></div>
+                        <div class="method-info">
+                            <h4>Follow Us</h4>
+                            <a href="https://instagram.com/visionarypathservices" target="_blank">@visionarypathservices</a>
+                            <p>Stay updated with the latest news and opportunities</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Send Us a Message -->
+                <div class="contact-form-col" data-aos="fade-left">
+                    <p class="section-label">SEND A MESSAGE</p>
+                    <h2>Send Us a Message</h2>
+                    <p>Fill in the form below and our team will get back to you shortly.</p>
+                    <div class="contact-form-box">
+                        <form onsubmit="submitContactForm(event)">
+                            <div class="form-row">
+                                <div class="form-group"><label>First Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" placeholder="First name" required></div></div>
+                                <div class="form-group"><label>Last Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" placeholder="Last name" required></div></div>
+                            </div>
+                            <div class="form-group"><label>Phone Number <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-phone"></i><input type="tel" placeholder="Enter your phone number" required></div></div>
+                            <div class="form-group"><label>Email ID <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" placeholder="Enter your email ID" required></div></div>
+                            <div class="form-group"><label>WhatsApp Number <span class="req">*</span></label><div class="input-icon-wrap"><i class="fab fa-whatsapp" style="color:#16a34a"></i><input type="tel" placeholder="Enter your WhatsApp number" required></div></div>
+                            <div class="form-group"><label>Additional Information (Optional)</label><div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-alt"></i><textarea placeholder="Tell us about your education loan requirements..." rows="4"></textarea></div></div>
+                            <button type="submit" class="btn btn-primary btn-full">Submit Enquiry <i class="fas fa-arrow-right"></i></button>
+                            <p style="text-align:center;color:#94a3b8;font-size:0.8rem;margin-top:12px;"><i class="fas fa-lock"></i> Your information is safe with us and will be used only for consultation purposes.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item" data-aos="fade-up" data-aos-delay="0">
+                    <span class="trust-icon">🔒</span>
+                    <h4>100% Confidential</h4>
+                    <p>Your personal information is never shared without your consent.</p>
+                </div>
+                <div class="trust-item" data-aos="fade-up" data-aos-delay="80">
+                    <span class="trust-icon">🎓</span>
+                    <h4>Expert Support</h4>
+                    <p>From application to disbursement, our team is by your side.</p>
+                </div>
+                <div class="trust-item" data-aos="fade-up" data-aos-delay="160">
+                    <span class="trust-icon">⏱️</span>
+                    <h4>Timely Assistance</h4>
+                    <p>We value your time and aim to respond promptly to all queries.</p>
+                </div>
+                <div class="trust-item" data-aos="fade-up" data-aos-delay="240">
+                    <span class="trust-icon">📞</span>
+                    <h4>Multiple Channels</h4>
+                    <p>Call, Email or WhatsApp — reach us through the channel you prefer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OFFICE INFO + CTA -->
+    <section class="office-section">
+        <div class="container">
+            <div class="office-inner">
+                <div class="office-info" data-aos="fade-right">
+                    <p style="color:#1a9c4e;font-size:0.8rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px">OUR OFFICE</p>
+                    <h2>Visionary Path Services</h2>
+                    <p class="tagline">Guiding Dreams, Financing Futures</p>
+                    <div class="office-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>#(Your Address Here), Bengaluru, Karnataka – 5600XX</span>
+                    </div>
+                    <div class="office-detail">
+                        <i class="fas fa-clock"></i>
+                        <span><strong style="color:#fff">Working Hours</strong><br>Monday – Saturday: 9:00 AM – 6:00 PM<br>Sunday: Closed</span>
+                    </div>
+                    <div class="office-detail">
+                        <i class="fas fa-phone"></i>
+                        <span><a href="tel:+919063703038" style="color:#1a9c4e;text-decoration:none;font-weight:600;">+91 90637 03038</a></span>
+                    </div>
+                    <div class="office-detail">
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="mailto:Visionarypathservises@gmail.com" style="color:#1a9c4e;text-decoration:none;font-weight:600;">Visionarypathservises@gmail.com</a></span>
+                    </div>
+                </div>
+                <div class="office-cta-col" data-aos="fade-left">
+                    <h3>Still Have Questions?</h3>
+                    <p>Our expert team is ready to guide you through every step of your education loan journey. Reach out now!</p>
+                    <div class="cta-btns">
+                        <a href="tel:+919063703038" class="btn btn-primary btn-lg"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/919063703038" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-col"><div class="footer-logo"><div class="logo-icon small">⚡</div><div><span class="footer-logo-name">VISIONARY PATH SERVICES</span><span class="footer-logo-tagline">Guiding Dreams, Financing Futures</span></div></div></div>
+            <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="partner-lenders.html">Partner Lenders</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+            <div class="footer-col"><h4>Our Services</h4><ul><li><a href="abroad-loans.html">Abroad Education Loans</a></li><li><a href="domestic-loans.html">Domestic Education Loans</a></li><li><a href="mbbs-loans.html">MBBS Loans</a></li><li><a href="other-loans.html">Other Loans</a></li></ul></div>
+            <div class="footer-col"><h4>Contact Us</h4><ul class="contact-list"><li><i class="fas fa-phone"></i> <a href="tel:9063703038">9063703038</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:Visionarypathservises@gmail.com">Visionarypathservises@gmail.com</a></li><li><i class="fas fa-globe"></i> <a href="#">www.visionarypathservices.com</a></li></ul><div class="footer-socials"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div></div>
+        </div>
+        <div class="footer-bottom"><div class="container footer-bottom-inner"><span>&copy; 2025 Visionary Path Services. All Rights Reserved.</span><div class="footer-bottom-links"><a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a> | <a href="#">Disclaimer</a></div></div></div>
+    </footer>
+
+    <!-- POPUP -->
+    <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
+        <div class="popup-modal">
+            <button class="popup-close" onclick="closePopup()">&times;</button>
+            <div class="popup-left">
+                <div class="popup-logo"><div class="logo-icon small">⚡</div><div><span class="popup-logo-name">VISIONARY PATH SERVICES</span><span class="popup-logo-tagline">Guiding Dreams, Financing Futures</span></div></div>
+                <p class="popup-quote handwritten">Your Education Goals Our Support</p>
+                <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-text">Together!</span></h3>
+                <ul class="popup-features"><li><i class="fas fa-users"></i> Expert Guidance</li><li><i class="fas fa-shield-alt"></i> Secure &amp; Confidential</li><li><i class="fas fa-headset"></i> Quick Response</li></ul>
+            </div>
+            <div class="popup-right">
+                <h2>Get in Touch</h2>
+                <p>Share a few details and our expert will connect with you shortly.</p>
+                <form class="popup-form" onsubmit="submitForm(event)">
+                    <div class="form-row"><div class="form-group"><label>First Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" placeholder="Enter your first name" required></div></div><div class="form-group"><label>Last Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" placeholder="Enter your last name" required></div></div></div>
+                    <div class="form-group"><label>Phone Number <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-phone"></i><input type="tel" placeholder="Enter your phone number" required></div></div>
+                    <div class="form-group"><label>Email ID <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" placeholder="Enter your email ID" required></div></div>
+                    <div class="form-group"><label>WhatsApp Number <span class="req">*</span></label><div class="input-icon-wrap whatsapp-inp"><i class="fab fa-whatsapp"></i><input type="tel" placeholder="Enter your WhatsApp number" required></div></div>
+                    <div class="form-group"><label>I'm interested in</label><div class="interest-options"><label class="interest-opt"><input type="radio" name="interest" value="abroad"> Abroad Education Loan</label><label class="interest-opt"><input type="radio" name="interest" value="domestic"> Domestic Education Loan</label><label class="interest-opt"><input type="radio" name="interest" value="mbbs"> MBBS Education Loan</label><label class="interest-opt"><input type="radio" name="interest" value="other"> Other Loan</label></div></div>
+                    <div class="form-group"><label>Additional Information (Optional)</label><div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-alt"></i><textarea placeholder="Tell us more about your requirements..." rows="3"></textarea></div></div>
+                    <button type="submit" class="btn btn-primary btn-full">Submit Enquiry <i class="fas fa-arrow-right"></i></button>
+                    <p class="popup-safe"><i class="fas fa-lock"></i> Your information is safe with us and will be used only for consultation purposes.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <a href="https://wa.me/919063703038" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <script>
+        function submitContactForm(e) {
+            e.preventDefault();
+            alert('Thank you for reaching out! We will contact you within 24 hours.');
+            e.target.reset();
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 700, once: true });</script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

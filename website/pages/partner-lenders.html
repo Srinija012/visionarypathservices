@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Lenders – Visionary Path Services</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <style>
+        .page-hero { background: linear-gradient(135deg, #0d2b5e 0%, #1a4a8a 50%, #0d2b5e 100%); padding: 120px 0 70px; text-align: center; position: relative; overflow: hidden; }
+        .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80') center/cover; opacity: 0.12; }
+        .page-hero-inner { position: relative; z-index: 1; }
+        .page-hero-eyebrow { color: #1a9c4e; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+        .page-hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 16px; }
+        .page-hero p { color: rgba(255,255,255,0.82); font-size: 1.1rem; max-width: 620px; margin: 0 auto; line-height: 1.7; }
+        .section-label { color: #1a9c4e; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+        .section-title { color: #0d2b5e; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 14px; }
+        .section-sub { color: #64748b; font-size: 1rem; max-width: 620px; margin: 0 auto 50px; line-height: 1.7; }
+        .lenders-section { padding: 80px 0; background: #f8fafc; }
+        .lender-category { margin-bottom: 60px; }
+        .lender-category:last-child { margin-bottom: 0; }
+        .category-header { display: flex; align-items: center; gap: 14px; margin-bottom: 32px; }
+        .category-tag { background: #0d2b5e; color: #fff; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; padding: 6px 16px; border-radius: 20px; text-transform: uppercase; }
+        .category-tag.green { background: #1a9c4e; }
+        .category-tag.navy { background: #0d2b5e; }
+        .category-line { flex: 1; height: 1px; background: #e2e8f0; }
+        .lenders-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+        .lender-card { background: #fff; border-radius: 16px; padding: 28px 20px; text-align: center; border: 1.5px solid #e8f0fe; transition: all 0.3s; position: relative; overflow: hidden; }
+        .lender-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #0d2b5e, #1a9c4e); transform: scaleX(0); transition: transform 0.3s; }
+        .lender-card:hover::before { transform: scaleX(1); }
+        .lender-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(13,43,94,0.15); border-color: #1a9c4e; }
+        .lender-initial { width: 64px; height: 64px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; margin: 0 auto 14px; color: #fff; }
+        .lender-initial.blue { background: linear-gradient(135deg, #0d2b5e, #1a4a8a); }
+        .lender-initial.green { background: linear-gradient(135deg, #1a9c4e, #0d7a3a); }
+        .lender-initial.red { background: linear-gradient(135deg, #dc2626, #b91c1c); }
+        .lender-initial.orange { background: linear-gradient(135deg, #ea580c, #c2410c); }
+        .lender-initial.purple { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
+        .lender-initial.teal { background: linear-gradient(135deg, #0369a1, #075985); }
+        .lender-initial.indigo { background: linear-gradient(135deg, #4338ca, #3730a3); }
+        .lender-initial.maroon { background: linear-gradient(135deg, #9f1239, #881337); }
+        .lender-name { color: #0d2b5e; font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+        .lender-type { color: #94a3b8; font-size: 0.78rem; }
+        .stats-bar { background: #0d2b5e; padding: 50px 0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+        .stat-item { text-align: center; padding: 20px; border-right: 1px solid rgba(255,255,255,0.1); }
+        .stat-item:last-child { border-right: none; }
+        .stat-icon { font-size: 2rem; margin-bottom: 12px; }
+        .stat-label { color: rgba(255,255,255,0.85); font-size: 0.95rem; font-weight: 500; }
+        .cta-bar { background: linear-gradient(135deg, #1a9c4e, #0d7a3a); padding: 60px 0; text-align: center; }
+        .cta-bar h2 { color: #fff; font-size: clamp(1.4rem, 3vw, 2.1rem); font-weight: 800; margin-bottom: 28px; }
+        .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <span><span class="top-bar-dash">—</span> Your Education Goals, Our Guidance</span>
+            <div class="top-bar-right">
+                <i class="fas fa-phone"></i> Contact:- 9063703038
+                <a href="https://instagram.com/visionarypathservices" target="_blank"><i class="fab fa-instagram"></i></a>
+                <span class="separator">|</span>
+                <a href="mailto:Visionarypathservises@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">⚡</div>
+                <div class="logo-text">
+                    <span class="logo-name">VISIONARY PATH SERVICES</span>
+                    <span class="logo-tagline">Guiding Dreams, Financing Futures</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="has-dropdown">
+                    <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="abroad-loans.html">Abroad Education Loans</a></li>
+                        <li><a href="domestic-loans.html">Domestic Education Loans</a></li>
+                        <li><a href="mbbs-loans.html">MBBS Loans</a></li>
+                        <li><a href="other-loans.html">Other Loans</a></li>
+                    </ul>
+                </li>
+                <li><a href="partner-lenders.html" class="active">Partner Lenders</a></li>
+                <li><a href="partner-with-us.html">Partner With Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="nav-cta">
+                <button class="btn btn-primary" onclick="openPopup()"><i class="fas fa-clipboard-list"></i> Check Eligibility</button>
+                <a href="https://wa.me/919063703038" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+            </div>
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="container page-hero-inner">
+            <p class="page-hero-eyebrow" data-aos="fade-up">OUR NETWORK</p>
+            <h1 data-aos="fade-up" data-aos-delay="100">Trusted Partners for Your <span style="color:#1a9c4e">Education Journey</span></h1>
+            <p data-aos="fade-up" data-aos-delay="200">We work with a network of leading banks and NBFCs to bring you the best education loan options for your profile.</p>
+        </div>
+    </section>
+
+    <!-- LENDERS -->
+    <section class="lenders-section">
+        <div class="container">
+            <div style="text-align:center; margin-bottom:60px" data-aos="fade-up">
+                <p class="section-label">OUR LENDING PARTNERS</p>
+                <h2 class="section-title">Banks &amp; NBFCs We <span style="color:#1a9c4e">Work With</span></h2>
+                <p class="section-sub">Our network of trusted lenders ensures you get the most suitable education loan options for your academic and financial profile.</p>
+            </div>
+
+            <!-- NBFCs -->
+            <div class="lender-category" data-aos="fade-up">
+                <div class="category-header">
+                    <span class="category-tag green">NBFCs</span>
+                    <div class="category-line"></div>
+                </div>
+                <div class="lenders-grid">
+                    <div class="lender-card">
+                        <div class="lender-initial blue">CR</div>
+                        <div class="lender-name">Credila</div>
+                        <div class="lender-type">NBFC</div>
+                    </div>
+                    <div class="lender-card">
+                        <div class="lender-initial green">AV</div>
+                        <div class="lender-name">AVANSE</div>
+                        <div class="lender-type">NBFC</div>
+                    </div>
+                    <div class="lender-card">
+                        <div class="lender-initial orange">AX</div>
+                        <div class="lender-name">AUXILO</div>
+                        <div class="lender-type">NBFC</div>
+                    </div>
+                    <div class="lender-card">
+                        <div class="lender-initial purple">PF</div>
+                        <div class="lender-name">Poonawalla Fincorp</div>
+                        <div class="lender-type">NBFC</div>
+                    </div>
+                    <div class="lender-card">
+                        <div class="lender-initial teal">TC</div>
+                        <div class="lender-name">TATA Capital</div>
+                        <div class="lender-type">NBFC</div>
+                    </div>
+                    <div class="lender-card">
+                        <div class="lender-initial indigo">IC</div>
+                        <div class="lender-name">InCred</div>
+                        <div class="lender-type">NBFC</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Private Banks -->
+            <div class="lender-category" data-aos="fade-up">
+                <div class="category-header">
+                    <span class="category-tag navy">Private Banks</span>
+                    <div class="category-line"></div>
+                </div>
+                <div class="lenders-grid">
+                    <div class="lender-card">
+                        <div class="lender-initial maroon">IC</div>
+                        <div class="lender-name">ICICI Bank</div>
+                        <div class="lender-type">Private Bank</div>
+                    </div>
+                    <div class="lender-card">
+                        <div class="lender-initial orange">ID</div>
+                        <div class="lender-name">IDFC FIRST Bank</div>
+                        <div class="lender-type">Private Bank</div>
+                    </div>
+                    <div class="lender-card">
+                        <div class="lender-initial blue">YB</div>
+                        <div class="lender-name">YES BANK</div>
+                        <div class="lender-type">Private Bank</div>
+                    </div>
+                    <div class="lender-card">
+                        <div class="lender-initial red">AB</div>
+                        <div class="lender-name">AXIS BANK</div>
+                        <div class="lender-type">Private Bank</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Public Banks -->
+            <div class="lender-category" data-aos="fade-up">
+                <div class="category-header">
+                    <span class="category-tag" style="background:#334155">Public Banks</span>
+                    <div class="category-line"></div>
+                </div>
+                <div class="lenders-grid">
+                    <div class="lender-card">
+                        <div class="lender-initial blue">SB</div>
+                        <div class="lender-name">SBI</div>
+                        <div class="lender-type">Public Bank</div>
+                    </div>
+                    <div class="lender-card">
+                        <div class="lender-initial indigo">PN</div>
+                        <div class="lender-name">PNB</div>
+                        <div class="lender-type">Public Bank</div>
+                    </div>
+                    <div class="lender-card">
+                        <div class="lender-initial green">CB</div>
+                        <div class="lender-name">Canara Bank</div>
+                        <div class="lender-type">Public Bank</div>
+                    </div>
+                    <div class="lender-card">
+                        <div class="lender-initial orange">BB</div>
+                        <div class="lender-name">Bank of Baroda</div>
+                        <div class="lender-type">Public Bank</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BAR -->
+    <div class="cta-bar">
+        <div class="container">
+            <h2 data-aos="fade-up">Your Education Dream Is Backed By Trusted Partners.</h2>
+            <div class="cta-btns" data-aos="fade-up" data-aos-delay="100">
+                <button class="btn btn-primary btn-lg" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                <a href="https://wa.me/919063703038" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-label">Reputed &amp; Reliable Lending Institutions</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="80">
+                    <div class="stat-icon">🔄</div>
+                    <div class="stat-label">Multiple Options to Choose From</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="160">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-label">Profile-Based Loan Guidance</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="240">
+                    <div class="stat-icon">🤝</div>
+                    <div class="stat-label">Support Throughout your Loan Journey</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-col"><div class="footer-logo"><div class="logo-icon small">⚡</div><div><span class="footer-logo-name">VISIONARY PATH SERVICES</span><span class="footer-logo-tagline">Guiding Dreams, Financing Futures</span></div></div></div>
+            <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="partner-lenders.html">Partner Lenders</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+            <div class="footer-col"><h4>Our Services</h4><ul><li><a href="abroad-loans.html">Abroad Education Loans</a></li><li><a href="domestic-loans.html">Domestic Education Loans</a></li><li><a href="mbbs-loans.html">MBBS Loans</a></li><li><a href="other-loans.html">Other Loans</a></li></ul></div>
+            <div class="footer-col"><h4>Contact Us</h4><ul class="contact-list"><li><i class="fas fa-phone"></i> <a href="tel:9063703038">9063703038</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:Visionarypathservises@gmail.com">Visionarypathservises@gmail.com</a></li><li><i class="fas fa-globe"></i> <a href="#">www.visionarypathservices.com</a></li></ul><div class="footer-socials"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div></div>
+        </div>
+        <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© 2025 Visionary Path Services. All Rights Reserved.</span><div class="footer-bottom-links"><a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a> | <a href="#">Disclaimer</a></div></div></div>
+    </footer>
+
+    <!-- POPUP -->
+    <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
+        <div class="popup-modal">
+            <button class="popup-close" onclick="closePopup()">✕</button>
+            <div class="popup-left">
+                <div class="popup-logo"><div class="logo-icon small">⚡</div><div><span class="popup-logo-name">VISIONARY PATH SERVICES</span><span class="popup-logo-tagline">Guiding Dreams, Financing Futures</span></div></div>
+                <p class="popup-quote handwritten">Your Education Goals Our Support</p>
+                <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-text">Together!</span></h3>
+                <ul class="popup-features"><li><i class="fas fa-users"></i> Expert Guidance</li><li><i class="fas fa-shield-alt"></i> Secure &amp; Confidential</li><li><i class="fas fa-headset"></i> Quick Response</li></ul>
+            </div>
+            <div class="popup-right">
+                <h2>Get in Touch</h2>
+                <p>Share a few details and our expert will connect with you shortly.</p>
+                <form class="popup-form" onsubmit="submitForm(event)">
+                    <div class="form-row"><div class="form-group"><label>First Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" placeholder="Enter your first name" required></div></div><div class="form-group"><label>Last Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" placeholder="Enter your last name" required></div></div></div>
+                    <div class="form-group"><label>Phone Number <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-phone"></i><input type="tel" placeholder="Enter your phone number" required></div></div>
+                    <div class="form-group"><label>Email ID <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" placeholder="Enter your email ID" required></div></div>
+                    <div class="form-group"><label>WhatsApp Number <span class="req">*</span></label><div class="input-icon-wrap whatsapp-inp"><i class="fab fa-whatsapp"></i><input type="tel" placeholder="Enter your WhatsApp number" required></div></div>
+                    <div class="form-group"><label>I'm interested in</label><div class="interest-options"><label class="interest-opt"><input type="radio" name="interest" value="abroad"> Abroad Education Loan</label><label class="interest-opt"><input type="radio" name="interest" value="domestic"> Domestic Education Loan</label><label class="interest-opt"><input type="radio" name="interest" value="mbbs"> MBBS Education Loan</label><label class="interest-opt"><input type="radio" name="interest" value="other"> Other Loan</label></div></div>
+                    <div class="form-group"><label>Additional Information (Optional)</label><div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-alt"></i><textarea placeholder="Tell us more about your requirements..." rows="3"></textarea></div></div>
+                    <button type="submit" class="btn btn-primary btn-full">Submit Enquiry <i class="fas fa-arrow-right"></i></button>
+                    <p class="popup-safe"><i class="fas fa-lock"></i> Your information is safe with us and will be used only for consultation purposes.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <a href="https://wa.me/919063703038" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 700, once: true });</script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner With Us – Visionary Path Services</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <style>
+        .page-hero { background: linear-gradient(135deg, #0d2b5e 0%, #1a4a8a 50%, #0d3d1e 100%); padding: 120px 0 70px; text-align: center; position: relative; overflow: hidden; }
+        .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80') center/cover; opacity: 0.12; }
+        .page-hero-inner { position: relative; z-index: 1; }
+        .page-hero-eyebrow { color: #1a9c4e; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+        .page-hero h1 { color: #fff; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; margin-bottom: 16px; }
+        .page-hero p { color: rgba(255,255,255,0.82); font-size: 1.05rem; max-width: 600px; margin: 0 auto; line-height: 1.7; }
+        .section-label { color: #1a9c4e; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+        .section-title { color: #0d2b5e; font-size: clamp(1.5rem, 3vw, 2.3rem); font-weight: 800; margin-bottom: 14px; }
+        .section-sub { color: #64748b; font-size: 1rem; max-width: 600px; margin: 0 auto 50px; line-height: 1.7; }
+        .stats-bar { background: #0d2b5e; padding: 40px 0; }
+        .stats-row { display: flex; gap: 0; justify-content: center; flex-wrap: wrap; }
+        .stat-pill { padding: 16px 36px; text-align: center; border-right: 1px solid rgba(255,255,255,0.12); }
+        .stat-pill:last-child { border-right: none; }
+        .stat-pill .num { color: #1a9c4e; font-size: 1.6rem; font-weight: 800; display: block; }
+        .stat-pill .lbl { color: rgba(255,255,255,0.8); font-size: 0.85rem; }
+        .partner-section { padding: 80px 0; background: #f8fafc; }
+        .partner-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+        @media(max-width:900px){.partner-inner{grid-template-columns:1fr;}}
+        .partner-form-col h2 { color: #0d2b5e; font-size: clamp(1.4rem,3vw,2rem); font-weight: 800; margin-bottom: 8px; }
+        .partner-form-col p { color: #64748b; font-size: 0.95rem; margin-bottom: 28px; line-height: 1.6; }
+        .partner-form { background: #fff; border-radius: 20px; padding: 36px 32px; box-shadow: 0 8px 32px rgba(13,43,94,0.1); border: 1.5px solid #e8f0fe; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; color: #374151; font-size: 0.88rem; font-weight: 600; margin-bottom: 7px; }
+        .form-group .req { color: #ef4444; }
+        .input-icon-wrap { position: relative; }
+        .input-icon-wrap i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 0.9rem; }
+        .input-icon-wrap input, .input-icon-wrap textarea { width: 100%; padding: 12px 14px 12px 40px; border: 1.5px solid #e2e8f0; border-radius: 10px; font-size: 0.9rem; color: #1e293b; font-family: inherit; background: #f8fafc; transition: all 0.2s; box-sizing: border-box; }
+        .input-icon-wrap input:focus, .input-icon-wrap textarea:focus { outline: none; border-color: #1a9c4e; background: #fff; box-shadow: 0 0 0 3px rgba(26,156,78,0.1); }
+        .input-icon-wrap textarea { padding-top: 14px; resize: vertical; }
+        .input-icon-wrap.textarea-wrap i { top: 18px; transform: none; }
+        .why-col { }
+        .why-col h2 { color: #0d2b5e; font-size: clamp(1.3rem,3vw,1.9rem); font-weight: 800; margin-bottom: 20px; }
+        .why-list { list-style: none; padding: 0; margin: 0 0 32px; }
+        .why-item { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid #e8f0fe; }
+        .why-item:last-child { border-bottom: none; }
+        .why-icon { width: 48px; height: 48px; background: linear-gradient(135deg, #e8f4ee, #c6e8d6); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .why-item h4 { color: #0d2b5e; font-size: 0.98rem; font-weight: 700; margin-bottom: 5px; }
+        .why-item p { color: #64748b; font-size: 0.88rem; line-height: 1.6; margin: 0; }
+        .together-card { background: linear-gradient(135deg, #0d2b5e, #1a4a8a); border-radius: 20px; padding: 36px 32px; margin-top: 8px; }
+        .together-card p { color: rgba(255,255,255,0.9); font-size: 1.1rem; font-weight: 600; line-height: 1.6; margin: 0; }
+        .who-section { padding: 80px 0; background: #fff; }
+        .who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 50px; }
+        .who-card { background: #f8fafc; border-radius: 16px; padding: 28px 22px; text-align: center; border: 1.5px solid #e8f0fe; transition: all 0.3s; }
+        .who-card:hover { background: #0d2b5e; border-color: #0d2b5e; transform: translateY(-6px); box-shadow: 0 12px 36px rgba(13,43,94,0.2); }
+        .who-card:hover .who-icon-wrap, .who-card:hover h3, .who-card:hover p { color: #fff; }
+        .who-card:hover .who-icon-wrap { background: rgba(255,255,255,0.15); }
+        .who-icon-wrap { width: 64px; height: 64px; background: linear-gradient(135deg, #e8f4ee, #c6e8d6); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 16px; transition: all 0.3s; }
+        .who-card h3 { color: #0d2b5e; font-size: 1rem; font-weight: 700; margin-bottom: 6px; transition: all 0.3s; }
+        .who-card p { color: #64748b; font-size: 0.85rem; margin: 0; transition: all 0.3s; }
+        .cta-section { padding: 70px 0; background: linear-gradient(135deg, #1a9c4e, #0d7a3a); text-align: center; }
+        .cta-section h2 { color: #fff; font-size: clamp(1.4rem,3vw,2rem); font-weight: 800; margin-bottom: 28px; }
+        .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <span><span class="top-bar-dash">—</span> Your Education Goals, Our Guidance</span>
+            <div class="top-bar-right">
+                <i class="fas fa-phone"></i> Contact:- 9063703038
+                <a href="https://instagram.com/visionarypathservices" target="_blank"><i class="fab fa-instagram"></i></a>
+                <span class="separator">|</span>
+                <a href="mailto:Visionarypathservises@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">⚡</div>
+                <div class="logo-text">
+                    <span class="logo-name">VISIONARY PATH SERVICES</span>
+                    <span class="logo-tagline">Guiding Dreams, Financing Futures</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="has-dropdown">
+                    <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="abroad-loans.html">Abroad Education Loans</a></li>
+                        <li><a href="domestic-loans.html">Domestic Education Loans</a></li>
+                        <li><a href="mbbs-loans.html">MBBS Loans</a></li>
+                        <li><a href="other-loans.html">Other Loans</a></li>
+                    </ul>
+                </li>
+                <li><a href="partner-lenders.html">Partner Lenders</a></li>
+                <li><a href="partner-with-us.html" class="active">Partner With Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="nav-cta">
+                <button class="btn btn-primary" onclick="openPopup()"><i class="fas fa-clipboard-list"></i> Check Eligibility</button>
+                <a href="https://wa.me/919063703038" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+            </div>
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="container page-hero-inner">
+            <p class="page-hero-eyebrow" data-aos="fade-up">JOIN OUR NETWORK</p>
+            <h1 data-aos="fade-up" data-aos-delay="100">Grow Your Business with <span style="color:#1a9c4e">Visionary Path Services</span></h1>
+            <p data-aos="fade-up" data-aos-delay="200">Partner with us and be a part of thousands of students' success stories through education financing.</p>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-row">
+                <div class="stat-pill" data-aos="fade-up" data-aos-delay="0">
+                    <span class="num">10,000+</span>
+                    <span class="lbl">Students Supported</span>
+                </div>
+                <div class="stat-pill" data-aos="fade-up" data-aos-delay="80">
+                    <span class="num">500+</span>
+                    <span class="lbl">Channel Partners</span>
+                </div>
+                <div class="stat-pill" data-aos="fade-up" data-aos-delay="160">
+                    <span class="num">🌍</span>
+                    <span class="lbl">Global Study Destinations</span>
+                </div>
+                <div class="stat-pill" data-aos="fade-up" data-aos-delay="240">
+                    <span class="num">🤝</span>
+                    <span class="lbl">Stronger Together For a Brighter Tomorrow</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PARTNER FORM + WHY -->
+    <section class="partner-section">
+        <div class="container">
+            <div class="partner-inner">
+                <!-- FORM -->
+                <div class="partner-form-col" data-aos="fade-right">
+                    <p class="section-label">BECOME A PARTNER</p>
+                    <h2>Let's Create More Success <span style="color:#1a9c4e">Stories Together</span></h2>
+                    <p>Fill in your details below and our partnership team will reach out to discuss how we can grow together.</p>
+                    <div class="partner-form">
+                        <form onsubmit="submitPartnerForm(event)">
+                            <div class="form-group">
+                                <label>Name of Consultancy / DSA / Agent <span class="req">*</span></label>
+                                <div class="input-icon-wrap"><i class="fas fa-building"></i><input type="text" placeholder="Enter your company / agency name" required></div>
+                            </div>
+                            <div class="form-group">
+                                <label>Your Email <span class="req">*</span></label>
+                                <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" placeholder="Enter your email address" required></div>
+                            </div>
+                            <div class="form-group">
+                                <label>Your Phone <span class="req">*</span></label>
+                                <div class="input-icon-wrap"><i class="fas fa-phone"></i><input type="tel" placeholder="Enter your phone number" required></div>
+                            </div>
+                            <div class="form-group">
+                                <label>Primary Contact Person</label>
+                                <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" placeholder="Name of primary contact person"></div>
+                            </div>
+                            <div class="form-group">
+                                <label>Designation</label>
+                                <div class="input-icon-wrap"><i class="fas fa-id-badge"></i><input type="text" placeholder="Your designation / role"></div>
+                            </div>
+                            <div class="form-group">
+                                <label>Notes (Optional)</label>
+                                <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-alt"></i><textarea placeholder="Tell us about your business and how you'd like to partner..." rows="3"></textarea></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Submit Your Details <i class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- WHY PARTNER -->
+                <div class="why-col" data-aos="fade-left">
+                    <p class="section-label">ADVANTAGES</p>
+                    <h2>Why Partner <span style="color:#1a9c4e">With Us?</span></h2>
+                    <ul class="why-list">
+                        <li class="why-item">
+                            <div class="why-icon">🏆</div>
+                            <div>
+                                <h4>High Approval Rate</h4>
+                                <p>Better chances for successful loan approvals with trusted lenders.</p>
+                            </div>
+                        </li>
+                        <li class="why-item">
+                            <div class="why-icon">🤝</div>
+                            <div>
+                                <h4>Dedicated Partner Support</h4>
+                                <p>Get end-to-end guidance at every step of the partnership journey.</p>
+                            </div>
+                        </li>
+                        <li class="why-item">
+                            <div class="why-icon">🏦</div>
+                            <div>
+                                <h4>Wide Range of Lenders</h4>
+                                <p>Access top banks &amp; NBFCs under one roof for all loan categories.</p>
+                            </div>
+                        </li>
+                        <li class="why-item">
+                            <div class="why-icon">⚡</div>
+                            <div>
+                                <h4>Faster Processing</h4>
+                                <p>Quick updates and hassle-free coordination with our expert team.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="together-card">
+                        <p>Together We Empower Students' Dreams. Your Business Growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO CAN PARTNER -->
+    <section class="who-section">
+        <div class="container" style="text-align:center">
+            <p class="section-label">WHO CAN JOIN</p>
+            <h2 class="section-title">Who Can Partner <span style="color:#1a9c4e">With Us?</span></h2>
+            <p class="section-sub">We welcome a wide range of partners who are passionate about helping students achieve their education goals.</p>
+            <div class="who-grid">
+                <div class="who-card" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="who-icon-wrap">🏫</div>
+                    <h3>Education Consultants</h3>
+                    <p>Counsellors guiding students toward the right courses and institutions.</p>
+                </div>
+                <div class="who-card" data-aos="zoom-in" data-aos-delay="60">
+                    <div class="who-icon-wrap">✈️</div>
+                    <h3>Study Abroad Consultants</h3>
+                    <p>Experts helping students plan and execute their international study dreams.</p>
+                </div>
+                <div class="who-card" data-aos="zoom-in" data-aos-delay="120">
+                    <div class="who-icon-wrap">💳</div>
+                    <h3>DSA / Loan Partners</h3>
+                    <p>Direct selling agents with experience in financial products and loans.</p>
+                </div>
+                <div class="who-card" data-aos="zoom-in" data-aos-delay="180">
+                    <div class="who-icon-wrap">👤</div>
+                    <h3>Freelance Counsellors</h3>
+                    <p>Independent education advisors helping students choose the right path.</p>
+                </div>
+                <div class="who-card" data-aos="zoom-in" data-aos-delay="240">
+                    <div class="who-icon-wrap">🌍</div>
+                    <h3>Overseas Education Agents</h3>
+                    <p>Agents facilitating student admissions at international universities.</p>
+                </div>
+                <div class="who-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="who-icon-wrap">🤝</div>
+                    <h3>Referral Partners</h3>
+                    <p>Individuals and organizations who can refer students seeking education loans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Ready to Grow Together?</h2>
+            <div class="cta-btns" data-aos="fade-up" data-aos-delay="80">
+                <a href="#partner-form" class="btn btn-primary btn-lg" onclick="document.querySelector('.partner-form-col').scrollIntoView({behavior:'smooth'});return false;">Become a Partner <i class="fas fa-arrow-right"></i></a>
+                <a href="https://wa.me/919063703038" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-col"><div class="footer-logo"><div class="logo-icon small">⚡</div><div><span class="footer-logo-name">VISIONARY PATH SERVICES</span><span class="footer-logo-tagline">Guiding Dreams, Financing Futures</span></div></div></div>
+            <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="partner-lenders.html">Partner Lenders</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+            <div class="footer-col"><h4>Our Services</h4><ul><li><a href="abroad-loans.html">Abroad Education Loans</a></li><li><a href="domestic-loans.html">Domestic Education Loans</a></li><li><a href="mbbs-loans.html">MBBS Loans</a></li><li><a href="other-loans.html">Other Loans</a></li></ul></div>
+            <div class="footer-col"><h4>Contact Us</h4><ul class="contact-list"><li><i class="fas fa-phone"></i> <a href="tel:9063703038">9063703038</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:Visionarypathservises@gmail.com">Visionarypathservises@gmail.com</a></li><li><i class="fas fa-globe"></i> <a href="#">www.visionarypathservices.com</a></li></ul><div class="footer-socials"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div></div>
+        </div>
+        <div class="footer-bottom"><div class="container footer-bottom-inner"><span>&copy; 2025 Visionary Path Services. All Rights Reserved.</span><div class="footer-bottom-links"><a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a> | <a href="#">Disclaimer</a></div></div></div>
+    </footer>
+
+    <!-- POPUP -->
+    <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
+        <div class="popup-modal">
+            <button class="popup-close" onclick="closePopup()">&times;</button>
+            <div class="popup-left">
+                <div class="popup-logo"><div class="logo-icon small">⚡</div><div><span class="popup-logo-name">VISIONARY PATH SERVICES</span><span class="popup-logo-tagline">Guiding Dreams, Financing Futures</span></div></div>
+                <p class="popup-quote handwritten">Your Education Goals Our Support</p>
+                <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-text">Together!</span></h3>
+                <ul class="popup-features"><li><i class="fas fa-users"></i> Expert Guidance</li><li><i class="fas fa-shield-alt"></i> Secure &amp; Confidential</li><li><i class="fas fa-headset"></i> Quick Response</li></ul>
+            </div>
+            <div class="popup-right">
+                <h2>Get in Touch</h2>
+                <p>Share a few details and our expert will connect with you shortly.</p>
+                <form class="popup-form" onsubmit="submitForm(event)">
+                    <div class="form-row"><div class="form-group"><label>First Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" placeholder="Enter your first name" required></div></div><div class="form-group"><label>Last Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" placeholder="Enter your last name" required></div></div></div>
+                    <div class="form-group"><label>Phone Number <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-phone"></i><input type="tel" placeholder="Enter your phone number" required></div></div>
+                    <div class="form-group"><label>Email ID <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" placeholder="Enter your email ID" required></div></div>
+                    <div class="form-group"><label>WhatsApp Number <span class="req">*</span></label><div class="input-icon-wrap whatsapp-inp"><i class="fab fa-whatsapp"></i><input type="tel" placeholder="Enter your WhatsApp number" required></div></div>
+                    <div class="form-group"><label>I'm interested in</label><div class="interest-options"><label class="interest-opt"><input type="radio" name="interest" value="abroad"> Abroad Education Loan</label><label class="interest-opt"><input type="radio" name="interest" value="domestic"> Domestic Education Loan</label><label class="interest-opt"><input type="radio" name="interest" value="mbbs"> MBBS Education Loan</label><label class="interest-opt"><input type="radio" name="interest" value="other"> Other Loan</label></div></div>
+                    <div class="form-group"><label>Additional Information (Optional)</label><div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-alt"></i><textarea placeholder="Tell us more about your requirements..." rows="3"></textarea></div></div>
+                    <button type="submit" class="btn btn-primary btn-full">Submit Enquiry <i class="fas fa-arrow-right"></i></button>
+                    <p class="popup-safe"><i class="fas fa-lock"></i> Your information is safe with us and will be used only for consultation purposes.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <a href="https://wa.me/919063703038" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <script>
+        function submitPartnerForm(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! Our partnership team will contact you shortly.');
+            e.target.reset();
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 700, once: true });</script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
