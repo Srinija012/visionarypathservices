@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us – Visionary Path Services</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
@@ -27,24 +29,116 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-inner">
             <a href="../index.html" class="logo">
-                <div class="logo-icon">⚡</div>
-                <div class="logo-text">
+                                <div class="logo-text">
                     <span class="logo-name">VISIONARY PATH SERVICES</span>
                     <span class="logo-tagline">Guiding Dreams, Financing Futures</span>
                 </div>
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
-                <li class="has-dropdown">
-                    <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown">
-                        <li><a href="abroad-loans.html">Abroad Education Loans</a></li>
-                        <li><a href="domestic-loans.html">Domestic Education Loans</a></li>
-                        <li><a href="mbbs-loans.html">MBBS Loans</a></li>
-                        <li><a href="other-loans.html">Other Loans</a></li>
-                    </ul>
-                </li>
+                <li><a href="about.html" class="active">About Us</a></li><li class="has-dropdown services-dropdown">
+    <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+    <div class="dropdown mega-dropdown">
+        <div class="mega-body">
+            <!-- Left: Loan Programs -->
+            <div class="mega-col mega-col-loans">
+                <div class="mega-header">
+                    <span class="mega-header-title"><i class="fas fa-graduation-cap"></i> Loan Programs</span>
+                    <span class="mega-header-pill">4 Options</span>
+                </div>
+                <div class="mega-loan-items">
+                    <a href="abroad-loans.html" class="mega-loan-card">
+                        <div class="mega-icon-badge bg-blue"><i class="fas fa-plane-departure"></i></div>
+                        <div class="mega-loan-info">
+                            <div class="mega-loan-title">Abroad Education Loans</div>
+                            <div class="mega-loan-desc">Up to ₹2 Cr • Collateral &amp; Non-collateral</div>
+                        </div>
+                    </a>
+                    <a href="domestic-loans.html" class="mega-loan-card">
+                        <div class="mega-icon-badge bg-green"><i class="fas fa-landmark"></i></div>
+                        <div class="mega-loan-info">
+                            <div class="mega-loan-title">Domestic Education Loans</div>
+                            <div class="mega-loan-desc">For premier Indian colleges, IITs &amp; IIMs</div>
+                        </div>
+                    </a>
+                    <a href="mbbs-loans.html" class="mega-loan-card">
+                        <div class="mega-icon-badge bg-teal"><i class="fas fa-stethoscope"></i></div>
+                        <div class="mega-loan-info">
+                            <div class="mega-loan-title">MBBS Loans</div>
+                            <div class="mega-loan-desc">Medical studies in India and overseas</div>
+                        </div>
+                    </a>
+                    <a href="other-loans.html" class="mega-loan-card">
+                        <div class="mega-icon-badge bg-amber"><i class="fas fa-briefcase"></i></div>
+                        <div class="mega-loan-info">
+                            <div class="mega-loan-title">Other Loans &amp; Forex</div>
+                            <div class="mega-loan-desc">Personal, Home, Business &amp; Forex</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Right: Destinations -->
+            <div class="mega-col mega-col-countries">
+                <div class="mega-header">
+                    <span class="mega-header-title"><i class="fas fa-globe-americas"></i> Study Destinations</span>
+                    <span class="mega-header-pill">10 Countries</span>
+                </div>
+                <div class="mega-countries-grid">
+                    <a href="countries/usa.html" class="mega-country-link">
+                        <span class="country-flag">🇺🇸</span>
+                        <span class="country-name">Study in USA</span>
+                    </a>
+                    <a href="countries/uk.html" class="mega-country-link">
+                        <span class="country-flag">🇬🇧</span>
+                        <span class="country-name">Study in UK</span>
+                    </a>
+                    <a href="countries/canada.html" class="mega-country-link">
+                        <span class="country-flag">🇨🇦</span>
+                        <span class="country-name">Study in Canada</span>
+                    </a>
+                    <a href="countries/germany.html" class="mega-country-link">
+                        <span class="country-flag">🇩🇪</span>
+                        <span class="country-name">Study in Germany</span>
+                    </a>
+                    <a href="countries/australia.html" class="mega-country-link">
+                        <span class="country-flag">🇦🇺</span>
+                        <span class="country-name">Study in Australia</span>
+                    </a>
+                    <a href="countries/ireland.html" class="mega-country-link">
+                        <span class="country-flag">🇮🇪</span>
+                        <span class="country-name">Study in Ireland</span>
+                    </a>
+                    <a href="countries/france.html" class="mega-country-link">
+                        <span class="country-flag">🇫🇷</span>
+                        <span class="country-name">Study in France</span>
+                    </a>
+                    <a href="countries/new-zealand.html" class="mega-country-link">
+                        <span class="country-flag">🇳🇿</span>
+                        <span class="country-name">Study in New Zealand</span>
+                    </a>
+                    <a href="countries/dubai.html" class="mega-country-link">
+                        <span class="country-flag">🇦🇪</span>
+                        <span class="country-name">Study in Dubai</span>
+                    </a>
+                    <a href="countries/europe.html" class="mega-country-link">
+                        <span class="country-flag">🇪🇺</span>
+                        <span class="country-name">Study in Europe</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Mega Footer -->
+        <div class="mega-footer">
+            <div class="mega-footer-left">
+                <span class="mega-footer-tag">100% FREE ADVISORY</span>
+                <span class="mega-footer-note">Compare offers across 15+ partner lenders</span>
+            </div>
+            <a href="services.html" class="mega-footer-cta">
+                View All Services <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</li>
                 <li><a href="partner-lenders.html">Partner Lenders</a></li>
                 <li><a href="partner-with-us.html">Partner With Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -76,7 +170,7 @@
                 </div>
             </div>
             <div class="page-hero-img" data-aos="fade-left">
-                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=700&q=80" alt="About Visionary Path Services">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=700&q=80" alt="About Visionary Path Services" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
@@ -161,7 +255,7 @@
                 </div>
                 <div data-aos="fade-left">
                     <div style="border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.12);">
-                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80" alt="Our Mission" style="width:100%;height:400px;object-fit:cover;">
+                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80" alt="Our Mission" style="width:100%;height:400px;object-fit:cover;" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -178,7 +272,7 @@
                 <a href="contact.html" class="btn btn-primary" style="background:#34d399;border-color:#34d399;color:#0d2b5e;font-weight:700;">Talk to Our Team <i class="fas fa-arrow-right"></i></a>
             </div>
             <div data-aos="fade-left">
-                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Students" style="width:100%;border-radius:20px;height:300px;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Students" style="width:100%;border-radius:20px;height:300px;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,0.3);" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
@@ -187,7 +281,7 @@
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-col">
-                <div class="footer-logo"><div class="logo-icon small">⚡</div><div><span class="footer-logo-name">VISIONARY PATH SERVICES</span><span class="footer-logo-tagline">Guiding Dreams, Financing Futures</span></div></div>
+                <div class="footer-logo"><div><span class="footer-logo-name">VISIONARY PATH SERVICES</span><span class="footer-logo-tagline">Guiding Dreams, Financing Futures</span></div></div>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
@@ -215,45 +309,142 @@
         <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© 2025 Visionary Path Services. All Rights Reserved.</span><div class="footer-bottom-links"><a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a> | <a href="#">Disclaimer</a></div></div></div>
     </footer>
 
-    <!-- POPUP -->
+    <!-- POPUP INQUIRY FORM (Industry-Grade Edition) -->
     <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
         <div class="popup-modal">
-            <button class="popup-close" onclick="closePopup()">✕</button>
+            <button class="popup-close" onclick="closePopup()" aria-label="Close Popup">✕</button>
             <div class="popup-left">
-                <div class="popup-logo"><div class="logo-icon small">⚡</div><div><span class="popup-logo-name">VISIONARY PATH SERVICES</span><span class="popup-logo-tagline">Guiding Dreams, Financing Futures</span></div></div>
-                <p class="popup-quote handwritten">Your Education Goals Our Support</p>
-                <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-text">Together!</span></h3>
-                <ul class="popup-features"><li><i class="fas fa-users"></i> Expert Guidance</li><li><i class="fas fa-shield-alt"></i> Secure &amp; Confidential</li><li><i class="fas fa-headset"></i> Quick Response</li></ul>
-            </div>
-            <div class="popup-right">
-                <h2>Get in Touch</h2>
-                <p>Share a few details and our expert will connect with you shortly.</p>
-                <form class="popup-form" onsubmit="submitForm(event)">
-                    <div class="form-row">
-                        <div class="form-group"><label>First Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" placeholder="Enter your first name" required></div></div>
-                        <div class="form-group"><label>Last Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" placeholder="Enter your last name" required></div></div>
+                <div class="popup-left-content">
+                    <div class="popup-badge">
+                        <span class="badge-dot"></span>
+                        <span>100% FREE CONSULTATION</span>
                     </div>
-                    <div class="form-group"><label>Phone Number <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-phone"></i><input type="tel" placeholder="Enter your phone number" required></div></div>
-                    <div class="form-group"><label>Email ID <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" placeholder="Enter your email ID" required></div></div>
-                    <div class="form-group"><label>WhatsApp Number <span class="req">*</span></label><div class="input-icon-wrap whatsapp-inp"><i class="fab fa-whatsapp"></i><input type="tel" placeholder="Enter your WhatsApp number" required></div></div>
-                    <div class="form-group">
-                        <label>I'm interested in</label>
-                        <div class="interest-options">
-                            <label class="interest-opt"><input type="radio" name="interest" value="abroad"> Abroad Education Loan</label>
-                            <label class="interest-opt"><input type="radio" name="interest" value="domestic"> Domestic Education Loan</label>
-                            <label class="interest-opt"><input type="radio" name="interest" value="mbbs"> MBBS Education Loan</label>
-                            <label class="interest-opt"><input type="radio" name="interest" value="other"> Other Loan</label>
+                    <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
+                    <p class="popup-left-desc">Compare pre-approved loan options from 15+ top banks &amp; NBFCs with zero service fees.</p>
+                    <div class="popup-features-list">
+                        <div class="popup-feature-item">
+                            <div class="feature-icon-box"><i class="fas fa-user-check"></i></div>
+                            <div class="feature-text-wrap">
+                                <strong>Expert Guidance</strong>
+                                <span>Dedicated Personal Loan Officer</span>
+                            </div>
+                        </div>
+                        <div class="popup-feature-item">
+                            <div class="feature-icon-box"><i class="fas fa-shield-halved"></i></div>
+                            <div class="feature-text-wrap">
+                                <strong>Secure &amp; Confidential</strong>
+                                <span>Bank-grade 256-bit data protection</span>
+                            </div>
+                        </div>
+                        <div class="popup-feature-item">
+                            <div class="feature-icon-box"><i class="fas fa-bolt"></i></div>
+                            <div class="feature-text-wrap">
+                                <strong>Quick Turnaround</strong>
+                                <span>Fast assessment &amp; sanction updates</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group"><label>Additional Information (Optional)</label><div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-alt"></i><textarea placeholder="Tell us more about your requirements..." rows="3"></textarea></div></div>
-                    <button type="submit" class="btn btn-primary btn-full">Submit Enquiry <i class="fas fa-arrow-right"></i></button>
-                    <p class="popup-safe"><i class="fas fa-lock"></i> Your information is safe with us and will be used only for consultation purposes.</p>
+                </div>
+                <div class="popup-left-footer">
+                    <div class="lenders-badge">
+                        <i class="fas fa-building-columns"></i>
+                        <span>15+ Partner Banks &amp; NBFCs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-right">
+                <div class="popup-form-header">
+                    <h4>Get Free Loan Assessment</h4>
+                    <p>Share your details to connect with a senior education loan advisor</p>
+                </div>
+                <form class="popup-form" onsubmit="submitForm(event)">
+                    <div class="form-row name-row">
+                        <div class="form-group">
+                            <label>First Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="firstName" placeholder="e.g. Aarav" required></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="lastName" placeholder="e.g. Sharma" required></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Phone Number <span class="req">*</span></label>
+                            <div class="input-icon-wrap phone-wrap">
+                                <span class="country-prefix"><i class="fas fa-phone-alt"></i> +91</span>
+                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="label-with-action">
+                                <label>WhatsApp Number <span class="req">*</span></label>
+                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()">Same as phone</button>
+                            </div>
+                            <div class="input-icon-wrap whatsapp-inp">
+                                <i class="fab fa-whatsapp"></i>
+                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address <span class="req">*</span></label>
+                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="e.g. aarav.sharma@gmail.com" required></div>
+                    </div>
+                    <div class="form-group mb-tight">
+                        <label class="form-label-regular">I'm interested in</label>
+                        <div class="interest-options">
+                            <label class="interest-opt">
+                                <input type="radio" name="interest" value="abroad" checked>
+                                <span class="custom-radio"></span>
+                                <span class="opt-label"><i class="fas fa-globe-americas"></i> Abroad Education Loan</span>
+                            </label>
+                            <label class="interest-opt">
+                                <input type="radio" name="interest" value="domestic">
+                                <span class="custom-radio"></span>
+                                <span class="opt-label"><i class="fas fa-graduation-cap"></i> Domestic Education Loan</span>
+                            </label>
+                            <label class="interest-opt">
+                                <input type="radio" name="interest" value="mbbs">
+                                <span class="custom-radio"></span>
+                                <span class="opt-label"><i class="fas fa-user-md"></i> MBBS Education Loan</span>
+                            </label>
+                            <label class="interest-opt">
+                                <input type="radio" name="interest" value="other">
+                                <span class="custom-radio"></span>
+                                <span class="opt-label"><i class="fas fa-coins"></i> Other Loan Options</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group mb-tight">
+                        <label class="form-label-regular">Additional Information (Optional)</label>
+                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea name="message" placeholder="Target country, university, loan amount needed..." rows="2"></textarea></div>
+                    </div>
+                    <button type="submit" class="btn btn-submit-enquiry">
+                        <span>Submit Enquiry</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <div class="popup-safe">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>100% Confidential • Zero Spam Guarantee • Free Consultation</span>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 
+    <!-- FLOATING ELIGIBILITY QUICK CTA (Marketing CRO) -->
+    <button id="floatingEligibilityBtn" class="floating-eligibility-btn" onclick="openPopup()" aria-label="Check Loan Eligibility Free">
+        <span class="floating-btn-pulse"></span>
+        <i class="fas fa-bolt"></i>
+        <span>Check Eligibility <strong class="badge-free">FREE</strong></span>
+    </button>
+
     <a href="https://wa.me/919063703038" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <!-- Framer Motion & UI/UX Animation Engine -->
+    <script src="../js/vendor/motion.js"></script>
+    <script src="../js/motion-ux.js"></script>
+    <script src="../js/apple-icons.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>
