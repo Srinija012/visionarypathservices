@@ -1,0 +1,102 @@
+=== image1.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image2.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image3.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image4.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image5.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image6.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image7.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image8.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image9.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image10.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image11.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image12.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image13.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image14.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image15.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image16.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image17.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image18.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image19.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image20.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image21.jpeg ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image22.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image23.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image24.jpeg ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image25.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image26.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image27.jpeg ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image28.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image29.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image30.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image31.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image32.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image33.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
+=== image34.png ===
+ERROR: tesseract is not installed or it's not in your PATH. See README file for more information.
+
