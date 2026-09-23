@@ -2712,206 +2712,123 @@ img.vps-lazy.vps-lazy-loaded {
 }
 
 /* ==========================================
-   11. APPLE-GRADE UNIFIED VECTOR ICON SYSTEM
-   Consistent 1.8px stroke geometry, SF Symbols / Lucide
-   rounded optics. Zero mixing across all components.
+   11. FONT AWESOME ICON SIZING HELPERS
+   All icons sourced from Font Awesome 6.5 CDN.
+   These rules handle sizing & alignment only.
    ========================================== */
-.apple-icon {
-    display: inline-block;
-    width: 1.15em;
-    height: 1.15em;
-    vertical-align: -0.18em;
-    flex-shrink: 0;
-    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), stroke 0.2s ease, color 0.2s ease;
-}
 
-/* Outlined icons (Apple SF Symbols Default) */
-.apple-icon:not(.apple-icon-solid) {
-    stroke: currentColor;
-    stroke-width: 1.8px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-}
-
-/* Solid Brand Icons (WhatsApp, YouTube) - crisp silhouette, zero stroke distortion */
-.apple-icon.apple-icon-solid,
-.apple-icon-whatsapp,
-.apple-icon-youtube {
-    fill: currentColor !important;
-    stroke: none !important;
-}
-
-.apple-icon.apple-icon-solid path,
-.apple-icon-whatsapp path,
-.apple-icon-youtube path,
-.apple-icon-youtube polygon {
-    fill: currentColor !important;
-    stroke: none !important;
-}
-
-/* Optical sizing & centering inside circular badge containers */
-.pillar-icon-circle .apple-icon {
-    width: 26px;
-    height: 26px;
-    stroke-width: 1.9px;
+.pillar-icon-circle i,
+.pan-card-badge i,
+.w-icon-circle i,
+.bridge-icon-wrap i {
+    font-size: 1.25rem;
     vertical-align: middle;
 }
 
-.pan-card-badge .apple-icon {
-    width: 22px;
-    height: 22px;
-    stroke-width: 1.9px;
+.core-card-icon i,
+.service-icon i,
+.who-icon-wrap i,
+.feature-icon i,
+.step-icon i,
+.loan-icon i,
+.card-icon i,
+.stat-icon i {
+    font-size: 1.35rem;
     vertical-align: middle;
 }
 
-.w-icon-circle .apple-icon {
-    width: 22px;
-    height: 22px;
-    stroke-width: 1.9px;
-    vertical-align: middle;
-}
-
-.bridge-icon-wrap .apple-icon {
-    width: 22px;
-    height: 22px;
-    stroke-width: 1.9px;
-    vertical-align: middle;
-}
-
-.core-card-icon .apple-icon,
-.service-icon .apple-icon,
-.who-icon-wrap .apple-icon,
-.feature-icon .apple-icon,
-.step-icon .apple-icon,
-.loan-icon .apple-icon,
-.card-icon .apple-icon,
-.stat-icon .apple-icon {
-    width: 24px;
-    height: 24px;
-    stroke-width: 1.9px;
-    vertical-align: middle;
-}
-
-/* Buttons & Navigation micro-alignment */
-.btn .apple-icon {
-    width: 1.1em;
-    height: 1.1em;
-    margin-left: 5px;
-    vertical-align: -0.16em;
-}
-
-.btn .apple-icon:first-child,
-.btn i + .apple-icon {
-    margin-left: 0;
+.btn i {
     margin-right: 6px;
+    vertical-align: -0.1em;
 }
 
-.btn-whatsapp-nav .apple-icon,
-.btn-whatsapp .apple-icon {
-    width: 1.25em;
-    height: 1.25em;
-    vertical-align: -0.22em;
+.btn-whatsapp-nav i,
+.btn-whatsapp i {
+    font-size: 1.1rem;
     margin-right: 6px;
-    fill: currentColor !important;
-    stroke: none !important;
-}
-
-.whatsapp-float .apple-icon {
-    width: 32px;
-    height: 32px;
-    color: #ffffff;
-    fill: #ffffff !important;
-    stroke: none !important;
-    vertical-align: middle;
-}
-
-.nav-links a .apple-icon {
-    width: 12px;
-    height: 12px;
-    stroke-width: 2.2px;
-    margin-left: 3px;
-    opacity: 0.75;
-    vertical-align: -0.05em;
-}
-
-.contact-num .apple-icon {
-    width: 14px;
-    height: 14px;
-    color: #38bdf8;
-    margin-right: 4px;
-    vertical-align: -0.12em;
-}
-
-.exact-hero-safety .apple-icon {
-    width: 15px;
-    height: 15px;
-    color: var(--green);
-    margin-right: 3px;
     vertical-align: -0.15em;
 }
 
-/* Input Wrappers */
-.input-icon-wrap > .apple-icon {
+.whatsapp-float i {
+    font-size: 1.75rem;
+    color: #ffffff;
+    vertical-align: middle;
+}
+
+.nav-links a i {
+    font-size: 0.7rem;
+    margin-left: 3px;
+    opacity: 0.75;
+    vertical-align: 0;
+}
+
+.contact-num i {
+    font-size: 0.85rem;
+    color: #38bdf8;
+    margin-right: 4px;
+    vertical-align: -0.08em;
+}
+
+.exact-hero-safety i {
+    font-size: 0.85rem;
+    color: var(--green);
+    margin-right: 3px;
+    vertical-align: -0.1em;
+}
+
+.input-icon-wrap > i {
     position: absolute;
     left: 14px;
     top: 50%;
     transform: translateY(-50%);
-    width: 17px;
-    height: 17px;
+    font-size: 0.95rem;
     color: #94a3b8;
     pointer-events: none;
     transition: color 0.2s ease;
 }
 
-.input-icon-wrap.textarea-wrap > .apple-icon {
+.input-icon-wrap.textarea-wrap > i {
     top: 14px;
     transform: none;
 }
 
-.input-icon-wrap.whatsapp-inp > .apple-icon {
+.input-icon-wrap.whatsapp-inp > i {
     color: var(--green);
 }
 
-.input-icon-wrap:focus-within > .apple-icon {
+.input-icon-wrap:focus-within > i {
     color: var(--blue);
 }
 
-.input-icon-wrap.whatsapp-inp:focus-within > .apple-icon {
+.input-icon-wrap.whatsapp-inp:focus-within > i {
     color: var(--green);
 }
 
-/* Accordions */
-.faq-question .apple-icon {
-    width: 16px;
-    height: 16px;
-    stroke-width: 2.2px;
+.faq-question i {
+    font-size: 0.9rem;
     color: var(--blue);
     transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.faq-item.active .faq-question .apple-icon {
+.faq-item.active .faq-question i {
     transform: rotate(180deg);
 }
 
-/* Footer & Lists */
-.contact-list li .apple-icon {
-    width: 16px;
-    height: 16px;
+.contact-list li i {
+    font-size: 0.9rem;
     margin-right: 8px;
     color: #38bdf8;
-    vertical-align: -0.16em;
+    vertical-align: -0.1em;
 }
 
-.footer-bottom-socials a .apple-icon,
-.top-bar-right a .apple-icon {
-    width: 16px;
-    height: 16px;
-    vertical-align: -0.15em;
+.footer-bottom-socials a i,
+.top-bar-right a i {
+    font-size: 1rem;
+    vertical-align: -0.1em;
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.footer-bottom-socials a:hover .apple-icon,
-.top-bar-right a:hover .apple-icon {
+.footer-bottom-socials a:hover i,
+.top-bar-right a:hover i {
     transform: translateY(-2px);
 }
