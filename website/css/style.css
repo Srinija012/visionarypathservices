@@ -3119,3 +3119,83 @@ html, body { overflow-x: hidden; }
     max-width: 100%;
     height: auto;
 }
+
+/* ==========================================
+   14. UNIFIED MARQUEE SCROLL (Homepage & Inner)
+   ========================================== */
+.home-marquee-section {
+    background: var(--white);
+    padding: 36px 0 30px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    overflow: hidden;
+}
+.home-marquee-label {
+    text-align: center;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+.marquee-track {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+.marquee-inner {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: marquee-scroll 32s linear infinite;
+}
+.marquee-inner:hover { animation-play-state: paused; }
+@keyframes marquee-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.marquee-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--white);
+    border: 1.5px solid var(--border-color);
+    border-radius: 14px;
+    padding: 12px 20px;
+    min-width: 180px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    cursor: default;
+    flex-shrink: 0;
+}
+.marquee-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(13,43,94,0.08);
+    border-color: var(--green);
+}
+.marquee-initial {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--white);
+    flex-shrink: 0;
+}
+.mi-blue   { background: linear-gradient(135deg, var(--navy), #1a4a8a); }
+.mi-green  { background: linear-gradient(135deg, var(--green), #0d7a3a); }
+.mi-red    { background: linear-gradient(135deg, #dc2626, #b91c1c); }
+.mi-orange { background: linear-gradient(135deg, #ea580c, #c2410c); }
+.mi-purple { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
+.mi-teal   { background: linear-gradient(135deg, #0369a1, #075985); }
+.mi-indigo { background: linear-gradient(135deg, #4338ca, #3730a3); }
+.mi-maroon { background: linear-gradient(135deg, #9f1239, #881337); }
+.marquee-card-info { line-height: 1.25; }
+.marquee-card-name { font-weight: 700; font-size: 0.9rem; color: var(--navy); }
+.marquee-card-type { font-size: 0.74rem; color: var(--text-muted); margin-top: 2px; }
+
