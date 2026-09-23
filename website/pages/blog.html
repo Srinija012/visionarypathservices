@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Loan Guides &amp; Insights – Visionary Path Services Blog</title>
+    <meta name="description" content="Expert insights, CIBIL eligibility criteria, abroad loan blueprints, and step-by-step documentation guides for higher studies in India and overseas.">
+    <link rel="canonical" href="https://www.visionarypathservices.com/pages/blog.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <style>
+        .blog-hub-hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #1a4a8a 50%, var(--navy) 100%);
+            padding: 130px 0 70px;
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
+        .hub-eyebrow {
+            color: var(--green-light);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .hub-title {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .hub-sub {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.1rem;
+            max-width: 620px;
+            margin: 0 auto 30px;
+        }
+        .hub-categories {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+        .hub-category-pill {
+            background: rgba(255,255,255,0.12);
+            border: 1.5px solid rgba(255,255,255,0.25);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .hub-category-pill:hover, .hub-category-pill.active {
+            background: var(--green);
+            border-color: var(--green);
+            color: #fff;
+        }
+
+        /* Featured Article Card */
+        .featured-wrap {
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+            margin-bottom: 60px;
+        }
+        .featured-card {
+            background: #fff;
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: 0 16px 48px rgba(13,43,94,0.12);
+            border: 1.5px solid #e8f0fe;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        @media (max-width: 900px) {
+            .featured-card {
+                grid-template-columns: 1fr;
+                padding: 28px 20px;
+            }
+        }
+        .featured-badge {
+            background: #fef3c7;
+            color: #b45309;
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .featured-title {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1.35;
+            margin-bottom: 14px;
+        }
+        .featured-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .featured-title a:hover {
+            color: var(--green);
+        }
+        .featured-desc {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+        .featured-meta {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            font-size: 0.85rem;
+            color: var(--slate-300);
+            flex-wrap: wrap;
+        }
+
+        /* Blog Grid Section */
+        .blog-hub-section {
+            padding: 0 0 90px;
+            background: var(--bg-card);
+        }
+        .section-header-wrap {
+            margin-bottom: 40px;
+        }
+        .section-header-wrap h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--navy);
+        }
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 32px;
+        }
+        .post-card {
+            background: #fff;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(13,43,94,0.06);
+            border: 1.5px solid #eef2f6;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+        .post-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(13,43,94,0.12);
+            border-color: var(--green);
+        }
+        .post-thumb {
+            height: 190px;
+            background: linear-gradient(135deg, var(--navy-light), var(--navy));
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.9);
+            font-size: 3rem;
+        }
+        .post-thumb-flag {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: rgba(13,43,94,0.85);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 50px;
+            backdrop-filter: blur(4px);
+        }
+        .post-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .post-category {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .post-card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+        .post-card-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .post-card-title a:hover {
+            color: var(--green);
+        }
+        .post-card-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        .post-footer-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            color: var(--slate-300);
+            padding-top: 14px;
+            border-top: 1px solid #f1f5f9;
+        }
+        .read-more-link {
+            color: var(--green);
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .read-more-link:hover {
+            color: var(--green-light);
+        }
+
+        /* Banner strip */
+        .hub-help-strip {
+            background: linear-gradient(90deg, var(--green), #0d7a3a);
+            padding: 50px 0;
+            text-align: center;
+            color: #fff;
+            margin-top: 80px;
+        }
+        .hub-help-strip h2 {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .hub-help-strip p {
+            color: rgba(255,255,255,0.88);
+            max-width: 600px;
+            margin: 0 auto 28px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span class="top-bar-dash">—</span> Your Education Goals, Our Guidance
+            </div>
+            <div class="top-bar-right">
+                <span class="contact-num"><i class="fas fa-phone-alt"></i> Contact:- 9063703038</span>
+                <span class="top-sep">|</span>
+                <a href="https://instagram.com/visionarypathservices" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <span class="top-sep">|</span>
+                <a href="mailto:Visionarypathservises@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-text">
+                    <span class="logo-name">VISIONARY PATH SERVICES</span>
+                    <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="has-dropdown services-dropdown">
+                    <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown mega-dropdown">
+                        <div class="mega-body">
+                            <div class="mega-col mega-col-loans">
+                                <div class="mega-header">
+                                    <span class="mega-header-title"><i class="fas fa-graduation-cap"></i> Loan Programs</span>
+                                    <span class="mega-header-pill">4 Options</span>
+                                </div>
+                                <div class="mega-loan-items">
+                                    <a href="abroad-loans.html" class="mega-loan-card">
+                                        <div class="mega-icon-badge bg-blue"><i class="fas fa-plane-departure"></i></div>
+                                        <div class="mega-loan-info">
+                                            <div class="mega-loan-title">Abroad Education Loans</div>
+                                            <div class="mega-loan-desc">Up to ₹2 Cr • Collateral &amp; Non-collateral</div>
+                                        </div>
+                                    </a>
+                                    <a href="domestic-loans.html" class="mega-loan-card">
+                                        <div class="mega-icon-badge bg-green"><i class="fas fa-landmark"></i></div>
+                                        <div class="mega-loan-info">
+                                            <div class="mega-loan-title">Domestic Education Loans</div>
+                                            <div class="mega-loan-desc">For premier Indian colleges, IITs &amp; IIMs</div>
+                                        </div>
+                                    </a>
+                                    <a href="mbbs-loans.html" class="mega-loan-card">
+                                        <div class="mega-icon-badge bg-teal"><i class="fas fa-stethoscope"></i></div>
+                                        <div class="mega-loan-info">
+                                            <div class="mega-loan-title">MBBS Loans</div>
+                                            <div class="mega-loan-desc">Medical studies in India and overseas</div>
+                                        </div>
+                                    </a>
+                                    <a href="other-loans.html" class="mega-loan-card">
+                                        <div class="mega-icon-badge bg-amber"><i class="fas fa-briefcase"></i></div>
+                                        <div class="mega-loan-info">
+                                            <div class="mega-loan-title">Other Loans &amp; Forex</div>
+                                            <div class="mega-loan-desc">Personal, Home, Business &amp; Forex</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="mega-col mega-col-countries">
+                                <div class="mega-header">
+                                    <span class="mega-header-title"><i class="fas fa-globe-americas"></i> Study Destinations</span>
+                                    <span class="mega-header-pill">10 Countries</span>
+                                </div>
+                                <div class="mega-countries-grid">
+                                    <a href="countries/usa.html" class="mega-country-link">
+                                        <span class="country-flag">🇺🇸</span>
+                                        <span class="country-name">Study in USA</span>
+                                    </a>
+                                    <a href="countries/uk.html" class="mega-country-link">
+                                        <span class="country-flag">🇬🇧</span>
+                                        <span class="country-name">Study in UK</span>
+                                    </a>
+                                    <a href="countries/canada.html" class="mega-country-link">
+                                        <span class="country-flag">🇨🇦</span>
+                                        <span class="country-name">Study in Canada</span>
+                                    </a>
+                                    <a href="countries/germany.html" class="mega-country-link">
+                                        <span class="country-flag">🇩🇪</span>
+                                        <span class="country-name">Study in Germany</span>
+                                    </a>
+                                    <a href="countries/australia.html" class="mega-country-link">
+                                        <span class="country-flag">🇦🇺</span>
+                                        <span class="country-name">Study in Australia</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="partner-lenders.html">Partner Lenders</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="nav-cta">
+                <button class="btn btn-eligibility" onclick="openPopup()">
+                    <i class="fas fa-file-signature"></i> Check Eligibility
+                </button>
+                <a href="https://wa.me/919063703038" target="_blank" class="btn-whatsapp-nav">
+                    <i class="fab fa-whatsapp"></i> Talk to Expert
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- BLOG HUB HERO -->
+    <section class="blog-hub-hero">
+        <div class="container">
+            <span class="hub-eyebrow">Visionary Path Knowledge Center</span>
+            <h1 class="hub-title">Education Loan Guides &amp; Insights</h1>
+            <p class="hub-sub">Transparent, profile-first banking research, interest rate comparisons, and eligibility blueprints to finance your degree without hassle.</p>
+            <div class="hub-categories">
+                <a href="#featured" class="hub-category-pill active">All Articles</a>
+                <a href="#featured" class="hub-category-pill">CIBIL &amp; Eligibility</a>
+                <a href="#featured" class="hub-category-pill">Study Abroad</a>
+                <a href="#featured" class="hub-category-pill">Collateral vs Non-Collateral</a>
+                <a href="#featured" class="hub-category-pill">MBBS Financing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="blog-hub-section">
+        <div class="container">
+            
+            <!-- FEATURED ARTICLE BANNER -->
+            <div class="featured-wrap" id="featured" data-aos="fade-up">
+                <div class="featured-card">
+                    <div>
+                        <span class="featured-badge"><i class="fas fa-star"></i> Featured Guide • High Impact</span>
+                        <h2 class="featured-title">
+                            <a href="blogs/how-does-cibil-score-affect-your-education-loan.html">How Does CIBIL Score Affect Your Education Loan Approval? (2026 In-Depth Guide)</a>
+                        </h2>
+                        <p class="featured-desc">
+                            Discover how credit scores work for student loans, cutoff criteria for SBI vs NBFCs, whose score is analyzed, and 5 practical solutions if your co-applicant's CIBIL is low.
+                        </p>
+                        <div class="featured-meta">
+                            <span><i class="fas fa-clock"></i> 7 Min Read</span>
+                            <span>•</span>
+                            <span><i class="fas fa-calendar-alt"></i> September 2026</span>
+                            <span>•</span>
+                            <span><i class="fas fa-check-circle" style="color:var(--green);"></i> 100% Verified</span>
+                        </div>
+                    </div>
+                    <div style="text-align: center; background: linear-gradient(135deg, #f0fdf4, #e8f4fd); border-radius: 16px; padding: 32px 24px; border: 1px solid #d1fae5;">
+                        <div style="font-size: 3.5rem; color: var(--navy); margin-bottom: 12px;">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3 style="color: var(--navy); font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Check Your Bank Fit</h3>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 20px;">Understand how banks categorize your CIBIL score before submitting an application.</p>
+                        <a href="blogs/how-does-cibil-score-affect-your-education-loan.html" class="btn btn-eligibility" style="display:inline-flex; justify-content:center;">
+                            Read Full Guide <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UPCOMING / CLUSTER GUIDES GRID -->
+            <div class="section-header-wrap">
+                <h2>Browse Comprehensive Loan Guides</h2>
+                <p style="color: var(--text-muted);">Curated by education loan officers with over 15+ partner banking networks.</p>
+            </div>
+
+            <div class="posts-grid">
+                
+                <!-- Card 1: USA Education Loans -->
+                <div class="post-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="post-thumb">
+                        <span class="post-thumb-flag">🇺🇸 Study in USA</span>
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <div class="post-body">
+                        <span class="post-category">Country Guides</span>
+                        <h3 class="post-card-title">
+                            <a href="countries/usa.html">Education Loans for USA: I-20 Proof of Funds &amp; Pre-Visa Sanction Letters</a>
+                        </h3>
+                        <p class="post-card-desc">
+                            Learn how to obtain conditional sanction letters for US visa interviews, compare dollar vs rupee loans, and calculate total cost of attendance.
+                        </p>
+                        <div class="post-footer-bar">
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <a href="countries/usa.html" class="read-more-link">Explore Guide <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Secured vs Unsecured Loans -->
+                <div class="post-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="post-thumb" style="background: linear-gradient(135deg, #0d7a3a, #1a9c4e);">
+                        <span class="post-thumb-flag">Comparison Matrix</span>
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="post-body">
+                        <span class="post-category">Loan Architecture</span>
+                        <h3 class="post-card-title">
+                            <a href="abroad-loans.html">Collateral vs Non-Collateral Education Loans: Which Is Right for You?</a>
+                        </h3>
+                        <p class="post-card-desc">
+                            Compare interest rates, legal processing timelines, property valuation requirements, and maximum unsecured limits up to ₹75 Lakhs.
+                        </p>
+                        <div class="post-footer-bar">
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                            <a href="abroad-loans.html" class="read-more-link">Explore Guide <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: MBBS Abroad -->
+                <div class="post-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="post-thumb" style="background: linear-gradient(135deg, #0f766e, #14b8a6);">
+                        <span class="post-thumb-flag">Medical Careers</span>
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="post-body">
+                        <span class="post-category">MBBS Financing</span>
+                        <h3 class="post-card-title">
+                            <a href="mbbs-loans.html">How to Secure Education Loans for MBBS in Georgia, Philippines &amp; Uzbekistan</a>
+                        </h3>
+                        <p class="post-card-desc">
+                            Navigating NMC guidelines, multi-year tuition schedules, collateral requirements, and banks offering dedicated medical loan schemes.
+                        </p>
+                        <div class="post-footer-bar">
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <a href="mbbs-loans.html" class="read-more-link">Explore Guide <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ADVISORY CONVERSION STRIP -->
+    <section class="hub-help-strip">
+        <div class="container">
+            <h2>Ready to Fund Your Higher Education?</h2>
+            <p>Skip the confusing bank queues. Get a personalized profile evaluation across 15+ banks and NBFCs with 100% zero service fees.</p>
+            <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                <button class="btn btn-eligibility" style="background:#fff; color:var(--navy);" onclick="openPopup()">
+                    <i class="fas fa-clipboard-check"></i> Free Eligibility Assessment
+                </button>
+                <a href="https://wa.me/919063703038" target="_blank" class="btn btn-whatsapp-nav">
+                    <i class="fab fa-whatsapp"></i> Chat with Senior Counselor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand">
+                <div class="logo-text">
+                    <span class="logo-name" style="color:#fff;">VISIONARY PATH SERVICES</span>
+                    <span class="logo-sub" style="color:rgba(255,255,255,0.7);">Guiding Dreams, Financing Futures</span>
+                </div>
+                <p class="footer-desc">
+                    Dedicated education loan assistance and financial guidance consultancy helping students navigate higher education funding across India and abroad.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="partner-lenders.html">Partner Lenders</a></li>
+                    <li><a href="blog.html">Blog &amp; Knowledge Hub</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Loan Programs</h4>
+                <ul class="footer-links">
+                    <li><a href="abroad-loans.html">Abroad Education Loans</a></li>
+                    <li><a href="domestic-loans.html">Domestic Education Loans</a></li>
+                    <li><a href="mbbs-loans.html">MBBS Education Loans</a></li>
+                    <li><a href="other-loans.html">Forex Assistance</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="contact-list">
+                    <li><i class="fas fa-phone-alt"></i> <a href="tel:9063703038">+91 9063703038</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:Visionarypathservises@gmail.com">Visionarypathservises@gmail.com</a></li>
+                    <li><i class="fas fa-globe"></i> <a href="https://www.visionarypathservices.com" target="_blank">www.visionarypathservices.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <span>© 2026 Visionary Path Services. All Rights Reserved.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- POPUP INQUIRY MODAL -->
+    <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
+        <div class="popup-modal">
+            <button class="popup-close" onclick="closePopup()">✕</button>
+            <div class="popup-left">
+                <div class="popup-left-content">
+                    <div class="popup-badge"><span>100% FREE CONSULTATION</span></div>
+                    <h3 class="popup-title">Check Your Loan Eligibility</h3>
+                    <p class="popup-left-desc">Compare pre-approved loan options from 15+ top banks &amp; NBFCs with zero service fees.</p>
+                </div>
+            </div>
+            <div class="popup-right">
+                <div class="popup-form-header">
+                    <h4>Get Free Loan Assessment</h4>
+                    <p>Share your details to connect with a senior loan advisor</p>
+                </div>
+                <form class="popup-form" onsubmit="submitForm(event)">
+                    <div class="form-row name-row">
+                        <div class="form-group">
+                            <label>First Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="firstName" placeholder="First Name" required></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="lastName" placeholder="Last Name" required></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Phone Number <span class="req">*</span></label>
+                            <div class="input-icon-wrap phone-wrap">
+                                <span class="country-prefix">+91</span>
+                                <input type="tel" name="phone" id="popupPhone" placeholder="Phone Number" pattern="[0-9]{10}" maxlength="10" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address <span class="req">*</span></label>
+                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="Email" required></div>
+                    </div>
+                    <button type="submit" class="btn btn-submit-enquiry">
+                        <span>Submit Enquiry</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/919063703038" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        function openPopup() {
+            document.getElementById('popupOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closePopup() {
+            document.getElementById('popupOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function closePopupOutside(e) {
+            if (e.target.id === 'popupOverlay') closePopup();
+        }
+        function submitForm(e) {
+            e.preventDefault();
+            alert('Thank you! Our senior loan advisor will contact you shortly.');
+            closePopup();
+        }
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

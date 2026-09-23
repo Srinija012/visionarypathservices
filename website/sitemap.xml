@@ -60,6 +60,19 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Education Loan Blog & Knowledge Hub -->
+  <url>
+    <loc>https://www.visionarypathservices.com/pages/blog.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.visionarypathservices.com/pages/blogs/how-does-cibil-score-affect-your-education-loan.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
   <!-- Country Specific Landing Pages -->
   <url>
     <loc>https://www.visionarypathservices.com/pages/countries/usa.html</loc>
