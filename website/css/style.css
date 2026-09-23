@@ -1916,14 +1916,7 @@ img { max-width: 100%; display: block; }
     margin-left: 4px;
     letter-spacing: 0.5px;
 }
-@media (max-width: 600px) {
-    .floating-eligibility-btn {
-        bottom: 16px;
-        left: 16px;
-        padding: 9px 13px;
-        font-size: 12px;
-    }
-}
+
 
 /* Floating WhatsApp */
 .whatsapp-float {
@@ -2051,6 +2044,7 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 768px) {
+    /* --- Hero Section Mobile --- */
     .exact-hero::before {
         background-image: 
             linear-gradient(to bottom, rgba(248, 251, 254, 0.94) 0%, rgba(248, 251, 254, 0.88) 55%, rgba(248, 251, 254, 0.98) 100%),
@@ -2066,18 +2060,150 @@ img { max-width: 100%; display: block; }
     .pan-india-section { padding: 26px 0; }
     .exact-hero-content { padding-right: 0; text-align: center; max-width: 100%; }
     .brand-eyebrow { justify-content: center; }
-    .exact-hero-actions { justify-content: center; }
+    .exact-hero-actions { justify-content: center; flex-wrap: wrap; }
     .exact-hero-safety { justify-content: center; text-align: center; }
     .dream-banner-left { display: block; margin-top: 10px; margin-bottom: -10px; }
     .dream-books-img { max-height: 110px; transform: translateY(-20px); }
-    .popup-left { width: 100%; min-width: unset; padding: 26px 20px 20px 20px; border-right: none; border-bottom: 1px solid rgba(22, 163, 74, 0.15); }
-    .popup-features-list { display: grid; grid-template-columns: 1fr; gap: 10px; }
+
+    /* --- POPUP MODAL MOBILE (Full Fix) --- */
+    .popup-overlay {
+        padding: 12px;
+        align-items: flex-start;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .popup-modal {
+        flex-direction: column;
+        max-width: 100%;
+        max-height: none;
+        margin: auto;
+        border-radius: 20px;
+    }
+    .popup-close {
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+        z-index: 20;
+    }
+    .popup-left {
+        width: 100%;
+        min-width: unset;
+        padding: 22px 20px 16px 20px;
+        border-right: none;
+        border-bottom: 1px solid rgba(22, 163, 74, 0.15);
+    }
+    .popup-left::before { display: none; }
+    .popup-left-brand h3 { font-size: 17px; }
+    .popup-left-brand p { font-size: 12px; }
+    .popup-features-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+    .popup-feature-item {
+        padding: 8px 10px;
+        font-size: 11.5px;
+    }
     .popup-left-footer { display: none; }
-    .popup-right { padding: 22px 20px 20px 20px; }
-    .form-row { grid-template-columns: 1fr; }
-    .interest-options { grid-template-columns: 1fr; }
+
+    .popup-right {
+        padding: 20px 18px 22px 18px;
+    }
+    .popup-form-header {
+        margin-bottom: 12px;
+    }
+    .popup-form-header h4 {
+        font-size: 17px;
+    }
+    .popup-form-header p {
+        font-size: 11.5px;
+    }
+
+    /* Form rows stack vertically */
+    .form-row,
+    .form-row.name-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* Enlarge touch targets — 44px minimum (Apple HIG) */
+    .input-icon-wrap input,
+    .input-icon-wrap textarea {
+        padding: 12px 14px 12px 38px;
+        font-size: 16px; /* Prevents iOS zoom on focus */
+        min-height: 46px;
+        border-radius: 12px;
+    }
+    .input-icon-wrap.phone-wrap input {
+        padding-left: 78px;
+    }
+    .form-group {
+        margin-bottom: 10px;
+    }
+    .form-group label,
+    .form-label-regular {
+        font-size: 12px;
+    }
+
+    /* Interest radio tiles stack */
+    .interest-options {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .interest-opt {
+        padding: 12px 14px;
+        font-size: 13px;
+        min-height: 44px;
+    }
+
+    /* Submit button bigger touch target */
+    .btn-submit-enquiry {
+        padding: 14px 20px;
+        font-size: 15px;
+        min-height: 48px;
+        border-radius: 14px;
+    }
+    .popup-safe {
+        font-size: 10.5px;
+        margin-top: 8px;
+    }
+
+    /* Copy phone button */
+    .label-with-action {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    .btn-copy-phone {
+        padding: 4px 10px;
+        font-size: 11px;
+    }
+
+    /* --- Footer Mobile --- */
     .footer-inner { grid-template-columns: 1fr; }
     .footer-bottom-inner { flex-direction: column; gap: 8px; text-align: center; }
+
+    /* --- Page Hero Mobile --- */
+    .page-hero {
+        padding: 80px 0 50px;
+    }
+    .page-hero h1 {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
+    }
+
+    /* --- Inner Page Sections Mobile --- */
+    .section-pad { padding: 50px 0; }
+    .container { padding: 0 16px; }
+
+    /* --- EMI Calculator Mobile --- */
+    .emi-section { padding: 50px 0; }
+    .emi-box { padding: 24px 16px; }
+
+    /* --- FAQ Mobile --- */
+    .faq-section { padding: 50px 0; }
+    .faq-question { padding: 16px 18px; font-size: 14px; }
+    .faq-answer { padding: 0 18px 16px; font-size: 13px; }
 }
 
 @media (max-width: 600px) {
@@ -2088,6 +2214,39 @@ img { max-width: 100%; display: block; }
     .pan-india-title { font-size: 21px; margin-bottom: 6px; }
     .pan-india-sub { font-size: 13px; line-height: 1.5; }
     .pan-india-cards { grid-template-columns: 1fr; gap: 12px; }
+
+    /* Popup features list single column on very small screens */
+    .popup-features-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Floating buttons — stack vertically so they don't overlap */
+    .floating-eligibility-btn {
+        bottom: 78px;
+        left: 12px;
+        right: auto;
+        padding: 9px 12px;
+        font-size: 11.5px;
+        max-width: calc(100vw - 80px);
+    }
+    .floating-eligibility-btn .badge-free { display: none; }
+
+    .whatsapp-float {
+        bottom: 16px;
+        right: 16px;
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+    }
+
+    /* Hero pills wrap */
+    .hero-pills { gap: 8px; }
+    .hero-pill { padding: 6px 14px; font-size: 0.78rem; }
+
+    /* Stats bar responsive */
+    .stats-row { flex-direction: column; align-items: center; }
+    .stat-pill { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 12px 20px; }
+    .stat-pill:last-child { border-bottom: none; }
 }
 
 /* --- Additional Shared Inner Pages Styling --- */

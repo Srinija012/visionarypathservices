@@ -71,6 +71,34 @@
         .office-cta-col h3 { color: #fff; font-size: 1.6rem; font-weight: 800; margin-bottom: 10px; }
         .office-cta-col p { color: rgba(255,255,255,0.75); margin-bottom: 28px; font-size: 0.95rem; }
         .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+        /* --- Contact Page Mobile Responsive --- */
+        @media (max-width: 768px) {
+            .contact-section { padding: 50px 0; }
+            .contact-inner { gap: 32px; }
+            .contact-form-box { padding: 24px 18px; border-radius: 16px; }
+            .contact-form-col h2 { font-size: 1.3rem; }
+            .contact-left > p { margin-bottom: 20px; }
+            .contact-method { padding: 14px 0; gap: 12px; }
+            .method-icon { width: 44px; height: 44px; border-radius: 12px; font-size: 1.1rem; }
+            .input-icon-wrap input, .input-icon-wrap textarea {
+                font-size: 16px;
+                min-height: 46px;
+                padding: 12px 14px 12px 40px;
+            }
+            .trust-bar { padding: 36px 0; }
+            .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+            .trust-item { padding: 18px 12px; }
+            .office-section { padding: 50px 0; }
+            .office-inner { gap: 32px; }
+        }
+        @media (max-width: 480px) {
+            .contact-form-box { padding: 20px 14px; }
+            .trust-grid { grid-template-columns: 1fr; }
+            .page-hero { padding: 80px 0 50px; }
+            .hero-pills { gap: 8px; }
+            .hero-pill { padding: 6px 14px; font-size: 0.78rem; }
+        }
     </style>
 </head>
 <body>
@@ -206,7 +234,7 @@
             </ul>
             <div class="nav-cta">
                 <button class="btn btn-primary" onclick="openPopup()"><i class="fas fa-clipboard-list"></i> Check Eligibility</button>
-                <a href="https://wa.me/919063703038" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+                <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
             </div>
             <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
         </div>
@@ -248,7 +276,7 @@
                         <div class="method-icon whatsapp"><i class="fab fa-whatsapp" style="color:#16a34a"></i></div>
                         <div class="method-info">
                             <h4>WhatsApp Us</h4>
-                            <a href="https://wa.me/919063703038" target="_blank">+91 90637 03038</a>
+                            <a href="https://wa.me/918150949070" target="_blank">+91 81509 49070</a>
                             <p>Chat with us for quick support</p>
                         </div>
                     </div>
@@ -352,7 +380,7 @@
                     <p>Our expert team is ready to guide you through every step of your education loan journey. Reach out now!</p>
                     <div class="cta-btns">
                         <a href="tel:+919063703038" class="btn btn-primary btn-lg"><i class="fas fa-phone"></i> Call Now</a>
-                        <a href="https://wa.me/919063703038" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                        <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -501,7 +529,7 @@
         <span>Check Eligibility <strong class="badge-free">FREE</strong></span>
     </button>
 
-    <a href="https://wa.me/919063703038" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/918150949070" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
     <script>
         function submitContactForm(e) {
             e.preventDefault();

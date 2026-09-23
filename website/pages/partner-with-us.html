@@ -63,6 +63,34 @@
         .cta-section { padding: 70px 0; background: linear-gradient(135deg, #1a9c4e, #0d7a3a); text-align: center; }
         .cta-section h2 { color: #fff; font-size: clamp(1.4rem,3vw,2rem); font-weight: 800; margin-bottom: 28px; }
         .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* --- Partner Page Mobile Responsive --- */
+        @media (max-width: 768px) {
+            .partner-section { padding: 50px 0; }
+            .partner-inner { gap: 32px; }
+            .partner-form { padding: 24px 18px; border-radius: 16px; }
+            .partner-form-col h2 { font-size: 1.3rem; }
+            .partner-form-col p { margin-bottom: 18px; }
+            .input-icon-wrap input, .input-icon-wrap textarea {
+                font-size: 16px;
+                min-height: 46px;
+                padding: 12px 14px 12px 40px;
+            }
+            .who-section { padding: 50px 0; }
+            .who-grid { margin-top: 32px; gap: 16px; }
+            .who-icon-wrap { width: 52px; height: 52px; border-radius: 14px; font-size: 1.5rem; }
+            .why-item { padding: 12px 0; gap: 10px; }
+            .why-icon { width: 42px; height: 42px; border-radius: 10px; font-size: 1.1rem; }
+            .together-card { padding: 28px 22px; }
+            .together-card p { font-size: 1rem; }
+            .cta-section { padding: 50px 0; }
+            .stats-bar { padding: 28px 0; }
+        }
+        @media (max-width: 480px) {
+            .partner-form { padding: 20px 14px; }
+            .page-hero { padding: 80px 0 50px; }
+            .who-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -198,7 +226,7 @@
             </ul>
             <div class="nav-cta">
                 <button class="btn btn-primary" onclick="openPopup()"><i class="fas fa-clipboard-list"></i> Check Eligibility</button>
-                <a href="https://wa.me/919063703038" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+                <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
             </div>
             <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
         </div>
@@ -366,7 +394,7 @@
             <h2 data-aos="fade-up">Ready to Grow Together?</h2>
             <div class="cta-btns" data-aos="fade-up" data-aos-delay="80">
                 <a href="#partner-form" class="btn btn-primary btn-lg" onclick="document.querySelector('.partner-form-col').scrollIntoView({behavior:'smooth'});return false;">Become a Partner <i class="fas fa-arrow-right"></i></a>
-                <a href="https://wa.me/919063703038" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+                <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
             </div>
         </div>
     </section>
@@ -513,7 +541,7 @@
         <span>Check Eligibility <strong class="badge-free">FREE</strong></span>
     </button>
 
-    <a href="https://wa.me/919063703038" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/918150949070" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
     <script>
         function submitPartnerForm(e) {
             e.preventDefault();
