@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 50" width="190" height="50">
+  <g transform="translate(12, 10)">
+    <!-- InCred! Wordmark in signature orange -->
+    <text x="0" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="900" fill="#ff5500" letter-spacing="-0.5">InCred<tspan fill="#ff3b00" font-weight="900">!</tspan></text>
+    <text x="2" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="7" font-weight="700" fill="#555555" letter-spacing="0.5">EDUCATION LOANS</text>
+  </g>
+</svg>

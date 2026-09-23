@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <g transform="translate(10, 8)">
+    <!-- MPOWER Faceted Triangles Icon -->
+    <polygon points="17,3 9,18 25,18" fill="#fdb813"/>
+    <polygon points="9,18 1,32 17,32" fill="#f37023"/>
+    <polygon points="25,18 17,32 33,32" fill="#e59800"/>
+    <polygon points="17,18 9,32 25,32" fill="#ffffff" opacity="0.3"/>
+  </g>
+  <!-- Text -->
+  <text x="50" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="900" fill="#003d79" letter-spacing="0.5">MPOWER</text>
+  <text x="50" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="800" fill="#f37023" letter-spacing="1.5">FINANCING</text>
+</svg>

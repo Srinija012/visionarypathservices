@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <g transform="translate(10, 8)">
+    <!-- Interlocking Triangles -->
+    <polygon points="5,30 20,4 32,30" fill="#0080c6"/>
+    <polygon points="12,4 27,30 35,12" fill="#ffb81c" opacity="0.95"/>
+    <polygon points="12,18 20,4 27,20" fill="#00669e"/>
+  </g>
+  <!-- Text -->
+  <text x="52" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="900" fill="#0080c6" letter-spacing="-0.3">Canara Bank</text>
+  <text x="53" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="7.5" font-weight="700" fill="#2d3748" letter-spacing="0.5">PUBLIC SECTOR BANK</text>
+</svg>

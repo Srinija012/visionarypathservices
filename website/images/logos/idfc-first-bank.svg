@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <g transform="translate(10, 8)">
+    <!-- Maroon IDFC Box -->
+    <rect width="34" height="34" rx="6" fill="#9d1d27"/>
+    <!-- IDFC Stylized Intersection -->
+    <path d="M7 8 L27 8 L27 13 L12 13 L12 18 L25 18 L25 22 L12 22 L12 27 L7 27 Z" fill="#ffffff"/>
+    <rect x="22" y="11" width="5" height="16" fill="#ffffff"/>
+  </g>
+  <!-- Text -->
+  <text x="52" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="900" fill="#9d1d27" letter-spacing="-0.2">IDFC FIRST</text>
+  <text x="52" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#2d3748" letter-spacing="0.5">Bank</text>
+</svg>

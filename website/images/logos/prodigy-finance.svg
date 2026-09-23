@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <g transform="translate(10, 8)">
+    <!-- Prodigy Lotus Emblem -->
+    <g fill="none" stroke="#00a3e0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 5 C16 14 10 24 6 28 C14 26 18 20 18 10 Z"/>
+      <path d="M18 5 C18 14 24 24 28 28 C20 26 16 20 16 10 Z"/>
+      <path d="M17 12 C17 20 17 28 17 31"/>
+      <path d="M9 22 C13 25 21 25 25 22"/>
+    </g>
+  </g>
+  <!-- Text -->
+  <text x="48" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="800" fill="#002b49" letter-spacing="-0.3">Prodigy</text>
+  <text x="48" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#00a3e0" letter-spacing="0.2">Finance</text>
+</svg>

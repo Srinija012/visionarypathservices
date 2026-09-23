@@ -3123,79 +3123,187 @@ html, body { overflow-x: hidden; }
 /* ==========================================
    14. UNIFIED MARQUEE SCROLL (Homepage & Inner)
    ========================================== */
-.home-marquee-section {
-    background: var(--white);
-    padding: 36px 0 30px;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
+.home-marquee-section,
+.marquee-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    padding: 44px 0 38px;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
     overflow: hidden;
+    position: relative;
 }
-.home-marquee-label {
+.home-marquee-label,
+.marquee-label {
     text-align: center;
-    font-size: 0.76rem;
-    font-weight: 700;
-    letter-spacing: 2.5px;
-    color: var(--text-muted);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--navy);
     text-transform: uppercase;
-    margin-bottom: 22px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.home-marquee-label::before,
+.home-marquee-label::after,
+.marquee-label::before,
+.marquee-label::after {
+    content: '';
+    display: inline-block;
+    width: 36px;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, var(--green));
+}
+.home-marquee-label::after,
+.marquee-label::after {
+    background: linear-gradient(90deg, var(--green), transparent);
 }
 .marquee-track {
     position: relative;
     width: 100%;
     overflow: hidden;
+    padding: 6px 0;
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
     mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 .marquee-inner {
     display: flex;
-    gap: 20px;
+    gap: 18px;
     width: max-content;
-    animation: marquee-scroll 32s linear infinite;
+    animation: marquee-scroll 42s linear infinite;
+    will-change: transform;
 }
 .marquee-inner:hover { animation-play-state: paused; }
 @keyframes marquee-scroll {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
+/* Realistic & High-End Marquee Cards */
 .marquee-card {
     display: flex;
     align-items: center;
-    gap: 12px;
-    background: var(--white);
-    border: 1.5px solid var(--border-color);
+    justify-content: space-between;
+    gap: 14px;
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
     border-radius: 14px;
-    padding: 12px 20px;
-    min-width: 180px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-    cursor: default;
+    padding: 10px 18px;
+    min-width: 220px;
+    height: 62px;
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
+    cursor: pointer;
     flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(13, 43, 94, 0.04);
 }
 .marquee-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(13,43,94,0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px -2px rgba(13, 43, 94, 0.12), 0 0 0 1px rgba(0, 163, 137, 0.2);
     border-color: var(--green);
 }
-.marquee-initial {
-    width: 42px;
-    height: 42px;
-    border-radius: 10px;
+.marquee-logo-wrap {
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
-    font-weight: 800;
-    color: var(--white);
+    max-width: 145px;
     flex-shrink: 0;
 }
-.mi-blue   { background: linear-gradient(135deg, var(--navy), #1a4a8a); }
-.mi-green  { background: linear-gradient(135deg, var(--green), #0d7a3a); }
-.mi-red    { background: linear-gradient(135deg, #dc2626, #b91c1c); }
-.mi-orange { background: linear-gradient(135deg, #ea580c, #c2410c); }
-.mi-purple { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
-.mi-teal   { background: linear-gradient(135deg, #0369a1, #075985); }
-.mi-indigo { background: linear-gradient(135deg, #4338ca, #3730a3); }
-.mi-maroon { background: linear-gradient(135deg, #9f1239, #881337); }
-.marquee-card-info { line-height: 1.25; }
-.marquee-card-name { font-weight: 700; font-size: 0.9rem; color: var(--navy); }
-.marquee-card-type { font-size: 0.74rem; color: var(--text-muted); margin-top: 2px; }
+.marquee-logo-img {
+    max-height: 36px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.25s ease;
+}
+.marquee-card:hover .marquee-logo-img {
+    transform: scale(1.04);
+}
+.marquee-card-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.badge-nbfc {
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+.badge-psu {
+    background: #eff6ff;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+}
+.badge-pvt {
+    background: #fdf2f8;
+    color: #9d174d;
+    border: 1px solid #fbcfe8;
+}
+.badge-intl {
+    background: #f0fdfa;
+    color: #0f766e;
+    border: 1px solid #99f6e4;
+}
+
+/* Lenders Grid Page Logos */
+.lender-logo-wrap {
+    height: 52px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    padding: 4px;
+}
+.lender-logo-img {
+    max-height: 48px;
+    max-width: 160px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lender-card:hover .lender-logo-img {
+    transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+    .home-marquee-section,
+    .marquee-section {
+        padding: 32px 0 26px;
+    }
+    .home-marquee-label,
+    .marquee-label {
+        font-size: 0.74rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 18px;
+    }
+    .marquee-card {
+        min-width: 185px;
+        height: 54px;
+        padding: 8px 12px;
+        gap: 10px;
+    }
+    .marquee-logo-wrap {
+        height: 32px;
+        max-width: 115px;
+    }
+    .marquee-logo-img {
+        max-height: 28px;
+        max-width: 110px;
+    }
+    .marquee-card-badge {
+        font-size: 0.62rem;
+        padding: 2px 6px;
+    }
+}
+
+
 
