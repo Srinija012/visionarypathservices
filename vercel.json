@@ -1,4 +1,6 @@
 {
-  "root": "website",
-  "outputDirectory": "website"
+  "buildCommand": null,
+  "outputDirectory": "website",
+  "installCommand": null,
+  "framework": null
 }
