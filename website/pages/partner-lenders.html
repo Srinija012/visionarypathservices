@@ -9,55 +9,304 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <style>
-        .page-hero { background: linear-gradient(135deg, var(--navy) 0%, #1a4a8a 50%, var(--navy) 100%); padding: 120px 0 70px; text-align: center; position: relative; overflow: hidden; }
-        .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80') center/cover; opacity: 0.12; }
+        /* ── PAGE HERO ────────────────────────── */
+        .page-hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #1a4a8a 50%, var(--navy) 100%);
+            padding: 120px 0 70px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80') center/cover;
+            opacity: 0.10;
+        }
         .page-hero-inner { position: relative; z-index: 1; }
-        .page-hero-eyebrow { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
-        .page-hero h1 { color: var(--white); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 16px; }
-        .page-hero p { color: rgba(255,255,255,0.82); font-size: 1.1rem; max-width: 620px; margin: 0 auto; line-height: 1.7; }
-        .section-label { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
-        .section-title { color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 14px; }
-        .section-sub { color: var(--text-muted); font-size: 1rem; max-width: 620px; margin: 0 auto 50px; line-height: 1.7; }
+        .page-hero-eyebrow {
+            color: var(--green);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .page-hero h1 {
+            color: var(--white);
+            font-size: clamp(1.9rem, 5vw, 3.2rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .page-hero p {
+            color: rgba(255,255,255,0.82);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto 28px;
+            line-height: 1.7;
+        }
+        .hero-trust-pills {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .hero-trust-pill {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.22);
+            color: var(--white);
+            border-radius: 50px;
+            padding: 7px 18px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+        .hero-trust-pill i { color: var(--green-light); }
+
+        /* ── INFINITE MARQUEE STRIP ───────────── */
+        .marquee-section {
+            background: var(--white);
+            padding: 48px 0;
+            border-bottom: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+        .marquee-label {
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+        .marquee-track {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            /* fade edges */
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+        }
+        .marquee-inner {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            animation: marquee-scroll 30s linear infinite;
+        }
+        .marquee-inner:hover { animation-play-state: paused; }
+        @keyframes marquee-scroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--white);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 14px 24px;
+            min-width: 190px;
+            transition: box-shadow 0.25s ease, border-color 0.25s ease;
+            cursor: default;
+            flex-shrink: 0;
+        }
+        .marquee-card:hover {
+            box-shadow: 0 8px 24px rgba(13,43,94,0.10);
+            border-color: var(--green);
+        }
+        .marquee-initial {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+        .mi-blue   { background: linear-gradient(135deg, var(--navy), #1a4a8a); }
+        .mi-green  { background: linear-gradient(135deg, var(--green), #0d7a3a); }
+        .mi-red    { background: linear-gradient(135deg, #dc2626, #b91c1c); }
+        .mi-orange { background: linear-gradient(135deg, #ea580c, #c2410c); }
+        .mi-purple { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
+        .mi-teal   { background: linear-gradient(135deg, #0369a1, #075985); }
+        .mi-indigo { background: linear-gradient(135deg, #4338ca, #3730a3); }
+        .mi-maroon { background: linear-gradient(135deg, #9f1239, #881337); }
+        .mi-amber  { background: linear-gradient(135deg, var(--amber), var(--amber-dark)); }
+        .marquee-card-info { line-height: 1.3; }
+        .marquee-card-name { font-weight: 700; font-size: 0.9rem; color: var(--navy); }
+        .marquee-card-type { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+
+        /* ── LENDERS GRID SECTION ─────────────── */
         .lenders-section { padding: 80px 0; background: var(--bg-card); }
-        .lender-category { margin-bottom: 60px; }
+        .section-eyebrow {
+            color: var(--green);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .section-heading {
+            color: var(--navy);
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+        .section-sub {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto 52px;
+            line-height: 1.7;
+        }
+        .lender-category { margin-bottom: 56px; }
         .lender-category:last-child { margin-bottom: 0; }
-        .category-header { display: flex; align-items: center; gap: 14px; margin-bottom: 32px; }
-        .category-tag { background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; padding: 6px 16px; border-radius: 20px; text-transform: uppercase; }
-        .category-tag.green { background: var(--green); }
-        .category-tag.navy { background: var(--navy); }
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 28px;
+        }
+        .category-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            color: var(--white);
+            white-space: nowrap;
+        }
+        .ct-green  { background: var(--green); }
+        .ct-navy   { background: var(--navy); }
+        .ct-slate  { background: var(--slate); }
         .category-line { flex: 1; height: 1px; background: var(--border-color); }
-        .lenders-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
-        .lender-card { background: var(--white); border-radius: 16px; padding: 28px 20px; text-align: center; border: 1.5px solid #e8f0fe; transition: all 0.3s; position: relative; overflow: hidden; }
-        .lender-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--navy), var(--green)); transform: scaleX(0); transition: transform 0.3s; }
+        .lenders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 18px;
+        }
+        .lender-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 28px 20px;
+            text-align: center;
+            border: 1.5px solid #e8f0fe;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .lender-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--navy), var(--green));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
         .lender-card:hover::before { transform: scaleX(1); }
-        .lender-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(13,43,94,0.15); border-color: var(--green); }
-        .lender-initial { width: 64px; height: 64px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; margin: 0 auto 14px; color: var(--white); }
-        .lender-initial.blue { background: linear-gradient(135deg, var(--navy), #1a4a8a); }
-        .lender-initial.green { background: linear-gradient(135deg, var(--green), #0d7a3a); }
-        .lender-initial.red { background: linear-gradient(135deg, #dc2626, #b91c1c); }
-        .lender-initial.orange { background: linear-gradient(135deg, #ea580c, #c2410c); }
-        .lender-initial.purple { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
-        .lender-initial.teal { background: linear-gradient(135deg, #0369a1, #075985); }
-        .lender-initial.indigo { background: linear-gradient(135deg, #4338ca, #3730a3); }
-        .lender-initial.maroon { background: linear-gradient(135deg, #9f1239, #881337); }
+        .lender-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(13,43,94,0.14);
+            border-color: var(--green);
+        }
+        .lender-initial {
+            width: 62px;
+            height: 62px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin: 0 auto 16px;
+            color: var(--white);
+        }
         .lender-name { color: var(--navy); font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
-        .lender-type { color: var(--slate-300); font-size: 0.78rem; }
-        .stats-bar { background: var(--navy); padding: 50px 0; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
-        .stat-item { text-align: center; padding: 20px; border-right: 1px solid rgba(255,255,255,0.1); }
+        .lender-type { color: var(--slate-300); font-size: 0.77rem; }
+
+        /* ── STATS BAR ────────────────────────── */
+        .stats-bar { background: var(--navy); padding: 52px 0; }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 20px 24px;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
         .stat-item:last-child { border-right: none; }
-        .stat-icon { font-size: 2rem; margin-bottom: 12px; }
-        .stat-label { color: rgba(255,255,255,0.85); font-size: 0.95rem; font-weight: 500; }
-        .cta-bar { background: linear-gradient(135deg, var(--green), #0d7a3a); padding: 60px 0; text-align: center; }
-        .cta-bar h2 { color: var(--white); font-size: clamp(1.4rem, 3vw, 2.1rem); font-weight: 800; margin-bottom: 28px; }
-        .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .stat-item-icon {
+            font-size: 1.8rem;
+            color: var(--green-light);
+            margin-bottom: 12px;
+        }
+        .stat-item-label {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.92rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        /* ── CTA BAR ──────────────────────────── */
+        .cta-bar {
+            background: linear-gradient(135deg, var(--green), #0d7a3a);
+            padding: 64px 0;
+            text-align: center;
+        }
+        .cta-bar h2 {
+            color: var(--white);
+            font-size: clamp(1.4rem, 3vw, 2.1rem);
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .cta-bar p {
+            color: rgba(255,255,255,0.85);
+            font-size: 1rem;
+            margin-bottom: 28px;
+        }
+        .cta-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ── RESPONSIVE ───────────────────────── */
+        @media (max-width: 768px) {
+            .page-hero { padding: 100px 0 56px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.1); }
+            .stat-item:last-child { border-bottom: none; }
+            .lenders-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+            .lender-initial { width: 52px; height: 52px; font-size: 1rem; }
+            .marquee-card { min-width: 160px; padding: 12px 18px; }
+        }
+        @media (max-width: 480px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            .stat-item { border-right: none !important; }
+            .hero-trust-pills { gap: 8px; }
+            .hero-trust-pill { font-size: 0.76rem; padding: 6px 13px; }
+        }
     </style>
 </head>
 <body>
 
-        <!-- TOP BAR -->
+    <!-- TOP BAR -->
     <div class="top-bar">
         <div class="container top-bar-inner">
             <div class="top-bar-left">
@@ -176,154 +425,144 @@
     <!-- HERO -->
     <section class="page-hero">
         <div class="container page-hero-inner">
-            <p class="page-hero-eyebrow" data-aos="fade-up">OUR NETWORK</p>
-            <h1 data-aos="fade-up" data-aos-delay="100">Trusted Partners for Your <span style="color:var(--green)">Education Journey</span></h1>
-            <p data-aos="fade-up" data-aos-delay="200">We work with a network of leading banks and NBFCs to bring you the best education loan options for your profile.</p>
-        </div>
-    </section>
-
-    <!-- LENDERS -->
-    <section class="lenders-section">
-        <div class="container">
-            <div style="text-align:center; margin-bottom:60px" data-aos="fade-up">
-                <p class="section-label">OUR LENDING PARTNERS</p>
-                <h2 class="section-title">Banks &amp; NBFCs We <span style="color:var(--green)">Work With</span></h2>
-                <p class="section-sub">Our network of trusted lenders ensures you get the most suitable education loan options for your academic and financial profile.</p>
-            </div>
-
-            <!-- NBFCs -->
-            <div class="lender-category" data-aos="fade-up">
-                <div class="category-header">
-                    <span class="category-tag green">NBFCs</span>
-                    <div class="category-line"></div>
-                </div>
-                <div class="lenders-grid">
-                    <div class="lender-card">
-                        <div class="lender-initial blue">CR</div>
-                        <div class="lender-name">Credila</div>
-                        <div class="lender-type">NBFC</div>
-                    </div>
-                    <div class="lender-card">
-                        <div class="lender-initial green">AV</div>
-                        <div class="lender-name">AVANSE</div>
-                        <div class="lender-type">NBFC</div>
-                    </div>
-                    <div class="lender-card">
-                        <div class="lender-initial orange">AX</div>
-                        <div class="lender-name">AUXILO</div>
-                        <div class="lender-type">NBFC</div>
-                    </div>
-                    <div class="lender-card">
-                        <div class="lender-initial purple">PF</div>
-                        <div class="lender-name">Poonawalla Fincorp</div>
-                        <div class="lender-type">NBFC</div>
-                    </div>
-                    <div class="lender-card">
-                        <div class="lender-initial teal">TC</div>
-                        <div class="lender-name">TATA Capital</div>
-                        <div class="lender-type">NBFC</div>
-                    </div>
-                    <div class="lender-card">
-                        <div class="lender-initial indigo">IC</div>
-                        <div class="lender-name">InCred</div>
-                        <div class="lender-type">NBFC</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Private Banks -->
-            <div class="lender-category" data-aos="fade-up">
-                <div class="category-header">
-                    <span class="category-tag navy">Private Banks</span>
-                    <div class="category-line"></div>
-                </div>
-                <div class="lenders-grid">
-                    <div class="lender-card">
-                        <div class="lender-initial maroon">IC</div>
-                        <div class="lender-name">ICICI Bank</div>
-                        <div class="lender-type">Private Bank</div>
-                    </div>
-                    <div class="lender-card">
-                        <div class="lender-initial orange">ID</div>
-                        <div class="lender-name">IDFC FIRST Bank</div>
-                        <div class="lender-type">Private Bank</div>
-                    </div>
-                    <div class="lender-card">
-                        <div class="lender-initial blue">YB</div>
-                        <div class="lender-name">YES BANK</div>
-                        <div class="lender-type">Private Bank</div>
-                    </div>
-                    <div class="lender-card">
-                        <div class="lender-initial red">AB</div>
-                        <div class="lender-name">AXIS BANK</div>
-                        <div class="lender-type">Private Bank</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Public Banks -->
-            <div class="lender-category" data-aos="fade-up">
-                <div class="category-header">
-                    <span class="category-tag" style="background:var(--slate)">Public Banks</span>
-                    <div class="category-line"></div>
-                </div>
-                <div class="lenders-grid">
-                    <div class="lender-card">
-                        <div class="lender-initial blue">SB</div>
-                        <div class="lender-name">SBI</div>
-                        <div class="lender-type">Public Bank</div>
-                    </div>
-                    <div class="lender-card">
-                        <div class="lender-initial indigo">PN</div>
-                        <div class="lender-name">PNB</div>
-                        <div class="lender-type">Public Bank</div>
-                    </div>
-                    <div class="lender-card">
-                        <div class="lender-initial green">CB</div>
-                        <div class="lender-name">Canara Bank</div>
-                        <div class="lender-type">Public Bank</div>
-                    </div>
-                    <div class="lender-card">
-                        <div class="lender-initial orange">BB</div>
-                        <div class="lender-name">Bank of Baroda</div>
-                        <div class="lender-type">Public Bank</div>
-                    </div>
-                </div>
+            <p class="page-hero-eyebrow">OUR LENDING NETWORK</p>
+            <h1>Trusted Partners for Your<br><span style="color:var(--green-light)">Education Journey</span></h1>
+            <p>We work with India's leading banks and NBFCs to bring you the best education loan options — matched to your profile.</p>
+            <div class="hero-trust-pills">
+                <span class="hero-trust-pill"><i class="fas fa-building-columns"></i> 15+ Partner Institutions</span>
+                <span class="hero-trust-pill"><i class="fas fa-shield-alt"></i> RBI Regulated Banks</span>
+                <span class="hero-trust-pill"><i class="fas fa-indian-rupee-sign"></i> Loans up to ₹2 Cr</span>
+                <span class="hero-trust-pill"><i class="fas fa-handshake"></i> 100% Free Advisory</span>
             </div>
         </div>
     </section>
 
-    <!-- CTA BAR -->
-    <div class="cta-bar">
-        <div class="container">
-            <h2 data-aos="fade-up">Your Education Dream Is Backed By Trusted Partners.</h2>
-            <div class="cta-btns" data-aos="fade-up" data-aos-delay="100">
-                <button class="btn btn-primary btn-lg" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
-                <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+    <!-- ══ INFINITE MARQUEE SCROLL ══════════════════════════════════════════ -->
+    <div class="marquee-section">
+        <p class="marquee-label">Our Trusted Lending Partners</p>
+        <div class="marquee-track">
+            <div class="marquee-inner" id="marqueeInner">
+                <!-- Set 1 -->
+                <div class="marquee-card"><div class="marquee-initial mi-blue">CR</div><div class="marquee-card-info"><div class="marquee-card-name">Credila</div><div class="marquee-card-type">NBFC</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-green">AV</div><div class="marquee-card-info"><div class="marquee-card-name">AVANSE</div><div class="marquee-card-type">NBFC</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-orange">AX</div><div class="marquee-card-info"><div class="marquee-card-name">AUXILO</div><div class="marquee-card-type">NBFC</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-purple">PF</div><div class="marquee-card-info"><div class="marquee-card-name">Poonawalla Fincorp</div><div class="marquee-card-type">NBFC</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-teal">TC</div><div class="marquee-card-info"><div class="marquee-card-name">TATA Capital</div><div class="marquee-card-type">NBFC</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-indigo">IC</div><div class="marquee-card-info"><div class="marquee-card-name">InCred</div><div class="marquee-card-type">NBFC</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-maroon">IC</div><div class="marquee-card-info"><div class="marquee-card-name">ICICI Bank</div><div class="marquee-card-type">Private Bank</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-orange">ID</div><div class="marquee-card-info"><div class="marquee-card-name">IDFC FIRST Bank</div><div class="marquee-card-type">Private Bank</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-blue">YB</div><div class="marquee-card-info"><div class="marquee-card-name">YES BANK</div><div class="marquee-card-type">Private Bank</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-red">AB</div><div class="marquee-card-info"><div class="marquee-card-name">AXIS BANK</div><div class="marquee-card-type">Private Bank</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-blue">SB</div><div class="marquee-card-info"><div class="marquee-card-name">SBI</div><div class="marquee-card-type">Public Bank</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-indigo">PN</div><div class="marquee-card-info"><div class="marquee-card-name">PNB</div><div class="marquee-card-type">Public Bank</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-green">CB</div><div class="marquee-card-info"><div class="marquee-card-name">Canara Bank</div><div class="marquee-card-type">Public Bank</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-orange">BB</div><div class="marquee-card-info"><div class="marquee-card-name">Bank of Baroda</div><div class="marquee-card-type">Public Bank</div></div></div>
+                <!-- Set 2 — duplicate for seamless loop -->
+                <div class="marquee-card"><div class="marquee-initial mi-blue">CR</div><div class="marquee-card-info"><div class="marquee-card-name">Credila</div><div class="marquee-card-type">NBFC</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-green">AV</div><div class="marquee-card-info"><div class="marquee-card-name">AVANSE</div><div class="marquee-card-type">NBFC</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-orange">AX</div><div class="marquee-card-info"><div class="marquee-card-name">AUXILO</div><div class="marquee-card-type">NBFC</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-purple">PF</div><div class="marquee-card-info"><div class="marquee-card-name">Poonawalla Fincorp</div><div class="marquee-card-type">NBFC</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-teal">TC</div><div class="marquee-card-info"><div class="marquee-card-name">TATA Capital</div><div class="marquee-card-type">NBFC</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-indigo">IC</div><div class="marquee-card-info"><div class="marquee-card-name">InCred</div><div class="marquee-card-type">NBFC</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-maroon">IC</div><div class="marquee-card-info"><div class="marquee-card-name">ICICI Bank</div><div class="marquee-card-type">Private Bank</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-orange">ID</div><div class="marquee-card-info"><div class="marquee-card-name">IDFC FIRST Bank</div><div class="marquee-card-type">Private Bank</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-blue">YB</div><div class="marquee-card-info"><div class="marquee-card-name">YES BANK</div><div class="marquee-card-type">Private Bank</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-red">AB</div><div class="marquee-card-info"><div class="marquee-card-name">AXIS BANK</div><div class="marquee-card-type">Private Bank</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-blue">SB</div><div class="marquee-card-info"><div class="marquee-card-name">SBI</div><div class="marquee-card-type">Public Bank</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-indigo">PN</div><div class="marquee-card-info"><div class="marquee-card-name">PNB</div><div class="marquee-card-type">Public Bank</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-green">CB</div><div class="marquee-card-info"><div class="marquee-card-name">Canara Bank</div><div class="marquee-card-type">Public Bank</div></div></div>
+                <div class="marquee-card"><div class="marquee-initial mi-orange">BB</div><div class="marquee-card-info"><div class="marquee-card-name">Bank of Baroda</div><div class="marquee-card-type">Public Bank</div></div></div>
             </div>
         </div>
     </div>
 
-    <!-- STATS -->
+    <!-- ══ FULL LENDERS GRID ════════════════════════════════════════════════ -->
+    <section class="lenders-section">
+        <div class="container">
+            <div style="text-align:center">
+                <p class="section-eyebrow">VERIFIED PARTNERS</p>
+                <h2 class="section-heading">Banks &amp; NBFCs We <span class="green-text">Work With</span></h2>
+                <p class="section-sub">Our network of trusted, RBI-regulated lenders ensures you always get matched to the most suitable loan option for your profile.</p>
+            </div>
+
+            <!-- NBFCs -->
+            <div class="lender-category">
+                <div class="category-header">
+                    <span class="category-tag ct-green">NBFCs</span>
+                    <div class="category-line"></div>
+                </div>
+                <div class="lenders-grid">
+                    <div class="lender-card"><div class="lender-initial mi-blue">CR</div><div class="lender-name">Credila</div><div class="lender-type">NBFC · Education Specialist</div></div>
+                    <div class="lender-card"><div class="lender-initial mi-green">AV</div><div class="lender-name">AVANSE</div><div class="lender-type">NBFC · Study Abroad Leader</div></div>
+                    <div class="lender-card"><div class="lender-initial mi-orange">AX</div><div class="lender-name">AUXILO</div><div class="lender-type">NBFC · Higher Education</div></div>
+                    <div class="lender-card"><div class="lender-initial mi-purple">PF</div><div class="lender-name">Poonawalla Fincorp</div><div class="lender-type">NBFC · Personal &amp; Education</div></div>
+                    <div class="lender-card"><div class="lender-initial mi-teal">TC</div><div class="lender-name">TATA Capital</div><div class="lender-type">NBFC · Diversified Lending</div></div>
+                    <div class="lender-card"><div class="lender-initial mi-indigo">IC</div><div class="lender-name">InCred</div><div class="lender-type">NBFC · Digital-First</div></div>
+                </div>
+            </div>
+
+            <!-- Private Banks -->
+            <div class="lender-category">
+                <div class="category-header">
+                    <span class="category-tag ct-navy">Private Banks</span>
+                    <div class="category-line"></div>
+                </div>
+                <div class="lenders-grid">
+                    <div class="lender-card"><div class="lender-initial mi-maroon">IC</div><div class="lender-name">ICICI Bank</div><div class="lender-type">Private Bank</div></div>
+                    <div class="lender-card"><div class="lender-initial mi-orange">ID</div><div class="lender-name">IDFC FIRST Bank</div><div class="lender-type">Private Bank</div></div>
+                    <div class="lender-card"><div class="lender-initial mi-blue">YB</div><div class="lender-name">YES BANK</div><div class="lender-type">Private Bank</div></div>
+                    <div class="lender-card"><div class="lender-initial mi-red">AB</div><div class="lender-name">AXIS BANK</div><div class="lender-type">Private Bank</div></div>
+                </div>
+            </div>
+
+            <!-- Public Banks -->
+            <div class="lender-category">
+                <div class="category-header">
+                    <span class="category-tag ct-slate">Public Banks</span>
+                    <div class="category-line"></div>
+                </div>
+                <div class="lenders-grid">
+                    <div class="lender-card"><div class="lender-initial mi-blue">SB</div><div class="lender-name">SBI</div><div class="lender-type">Public Bank · Largest in India</div></div>
+                    <div class="lender-card"><div class="lender-initial mi-indigo">PN</div><div class="lender-name">PNB</div><div class="lender-type">Public Bank</div></div>
+                    <div class="lender-card"><div class="lender-initial mi-green">CB</div><div class="lender-name">Canara Bank</div><div class="lender-type">Public Bank</div></div>
+                    <div class="lender-card"><div class="lender-initial mi-orange">BB</div><div class="lender-name">Bank of Baroda</div><div class="lender-type">Public Bank</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
     <div class="stats-bar">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
-                    <div class="stat-icon"><i class="fas fa-award"></i></div>
-                    <div class="stat-label">Reputed &amp; Reliable Lending Institutions</div>
+                <div class="stat-item">
+                    <div class="stat-item-icon"><i class="fas fa-award"></i></div>
+                    <div class="stat-item-label">Reputed &amp; RBI-Regulated<br>Lending Institutions</div>
                 </div>
-                <div class="stat-item" data-aos="fade-up" data-aos-delay="80">
-                    <div class="stat-icon"><i class="fas fa-rotate"></i></div>
-                    <div class="stat-label">Multiple Options to Choose From</div>
+                <div class="stat-item">
+                    <div class="stat-item-icon"><i class="fas fa-rotate"></i></div>
+                    <div class="stat-item-label">Multiple Options<br>to Compare &amp; Choose</div>
                 </div>
-                <div class="stat-item" data-aos="fade-up" data-aos-delay="160">
-                    <div class="stat-icon"><i class="fas fa-bullseye"></i></div>
-                    <div class="stat-label">Profile-Based Loan Guidance</div>
+                <div class="stat-item">
+                    <div class="stat-item-icon"><i class="fas fa-bullseye"></i></div>
+                    <div class="stat-item-label">Profile-Based<br>Loan Matching</div>
                 </div>
-                <div class="stat-item" data-aos="fade-up" data-aos-delay="240">
-                    <div class="stat-icon"><i class="fas fa-handshake"></i></div>
-                    <div class="stat-label">Support Throughout your Loan Journey</div>
+                <div class="stat-item">
+                    <div class="stat-item-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="stat-item-label">Full Support Throughout<br>Your Loan Journey</div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA BAR -->
+    <div class="cta-bar">
+        <div class="container">
+            <h2>Your Education Dream Is Backed By Trusted Partners.</h2>
+            <p>Let us match you to the right lender — free, fast, and personalised.</p>
+            <div class="cta-btns">
+                <button class="btn btn-primary btn-lg" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
             </div>
         </div>
     </div>
@@ -331,152 +570,117 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container footer-inner">
-            <div class="footer-col"><div class="footer-logo"><div><span class="footer-logo-name">VISIONARY PATH SERVICES</span><span class="footer-logo-tagline">Guiding Dreams, Financing Futures</span></div></div></div>
-            <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="partner-lenders.html">Partner Lenders</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
-            <div class="footer-col"><h4>Our Services</h4><ul><li><a href="abroad-loans.html">Abroad Education Loans</a></li><li><a href="domestic-loans.html">Domestic Education Loans</a></li><li><a href="mbbs-loans.html">MBBS Loans</a></li><li><a href="other-loans.html">Other Loans</a></li></ul></div>
-            <div class="footer-col"><h4>Contact Us</h4><ul class="contact-list"><li><i class="fas fa-phone"></i> <a href="tel:9063703038">9063703038</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:Visionarypathservises@gmail.com">Visionarypathservises@gmail.com</a></li><li><i class="fas fa-globe"></i> <a href="#">www.visionarypathservices.com</a></li></ul><div class="footer-socials"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div></div>
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <div class="logo-text">
+                        <span class="footer-logo-name">VISIONARY PATH SERVICES</span>
+                        <span class="footer-logo-tagline">Guiding Dreams, Financing Futures</span>
+                    </div>
+                </div>
+                <p class="footer-about-text">Visionary Path Services is an education loan assistance and guidance company helping students navigate Domestic, International, and MBBS Education Loans with complete transparency.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com/visionarypathservices" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="partner-lenders.html">Partner Lenders</a></li>
+                    <li><a href="partner-with-us.html">Partner With Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Education Loan Types</h4>
+                <ul class="two-col-list">
+                    <li><a href="domestic-loans.html">Secured Education Loan</a></li>
+                    <li><a href="abroad-loans.html">Unsecured Education Loan</a></li>
+                    <li><a href="domestic-loans.html">NBFC Education Loan</a></li>
+                    <li><a href="abroad-loans.html">International Education Loans</a></li>
+                    <li><a href="mbbs-loans.html">MBBS Loans</a></li>
+                    <li><a href="other-loans.html">Forex &amp; Other Loans</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="contact-list">
+                    <li><i class="fas fa-phone-alt"></i><a href="tel:9063703038">+91 9063703038</a></li>
+                    <li><i class="fas fa-envelope"></i><a href="mailto:Visionarypathservises@gmail.com">Visionarypathservises@gmail.com</a></li>
+                    <li><i class="fas fa-globe"></i><a href="https://www.visionarypathservices.com" target="_blank">www.visionarypathservices.com</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© 2025 Visionary Path Services. All Rights Reserved.</span><div class="footer-bottom-links"><a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a> | <a href="#">Disclaimer</a></div></div></div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <span>© 2026 Visionary Path Services. All Rights Reserved.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a> | <a href="#">Disclaimer</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- POPUP INQUIRY FORM (Industry-Grade Edition) -->
+    <!-- POPUP INQUIRY FORM -->
     <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
         <div class="popup-modal">
             <button class="popup-close" onclick="closePopup()" aria-label="Close Popup">✕</button>
             <div class="popup-left">
                 <div class="popup-left-content">
-                    <div class="popup-badge">
-                        <span class="badge-dot"></span>
-                        <span>100% FREE CONSULTATION</span>
-                    </div>
+                    <div class="popup-badge"><span class="badge-dot"></span><span>100% FREE CONSULTATION</span></div>
                     <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
                     <p class="popup-left-desc">Compare pre-approved loan options from 15+ top banks &amp; NBFCs with zero service fees.</p>
                     <div class="popup-features-list">
-                        <div class="popup-feature-item">
-                            <div class="feature-icon-box"><i class="fas fa-user-check"></i></div>
-                            <div class="feature-text-wrap">
-                                <strong>Expert Guidance</strong>
-                                <span>Dedicated Personal Loan Officer</span>
-                            </div>
-                        </div>
-                        <div class="popup-feature-item">
-                            <div class="feature-icon-box"><i class="fas fa-shield-halved"></i></div>
-                            <div class="feature-text-wrap">
-                                <strong>Secure &amp; Confidential</strong>
-                                <span>Bank-grade 256-bit data protection</span>
-                            </div>
-                        </div>
-                        <div class="popup-feature-item">
-                            <div class="feature-icon-box"><i class="fas fa-bolt"></i></div>
-                            <div class="feature-text-wrap">
-                                <strong>Quick Turnaround</strong>
-                                <span>Fast assessment &amp; sanction updates</span>
-                            </div>
-                        </div>
+                        <div class="popup-feature-item"><div class="feature-icon-box"><i class="fas fa-user-check"></i></div><div class="feature-text-wrap"><strong>Expert Guidance</strong><span>Dedicated Personal Loan Officer</span></div></div>
+                        <div class="popup-feature-item"><div class="feature-icon-box"><i class="fas fa-shield-halved"></i></div><div class="feature-text-wrap"><strong>Secure &amp; Confidential</strong><span>Bank-grade 256-bit data protection</span></div></div>
+                        <div class="popup-feature-item"><div class="feature-icon-box"><i class="fas fa-bolt"></i></div><div class="feature-text-wrap"><strong>Quick Turnaround</strong><span>Fast assessment &amp; sanction updates</span></div></div>
                     </div>
                 </div>
-                <div class="popup-left-footer">
-                    <div class="lenders-badge">
-                        <i class="fas fa-building-columns"></i>
-                        <span>15+ Partner Banks &amp; NBFCs</span>
-                    </div>
-                </div>
+                <div class="popup-left-footer"><div class="lenders-badge"><i class="fas fa-building-columns"></i><span>15+ Partner Banks &amp; NBFCs</span></div></div>
             </div>
             <div class="popup-right">
-                <div class="popup-form-header">
-                    <h4>Get Free Loan Assessment</h4>
-                    <p>Share your details to connect with a senior education loan advisor</p>
-                </div>
+                <div class="popup-form-header"><h4>Get Free Loan Assessment</h4><p>Share your details to connect with a senior education loan advisor</p></div>
                 <form class="popup-form" onsubmit="submitForm(event)">
                     <div class="form-row name-row">
-                        <div class="form-group">
-                            <label>First Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="firstName" placeholder="e.g. Aarav" required></div>
-                        </div>
-                        <div class="form-group">
-                            <label>Last Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="lastName" placeholder="e.g. Sharma" required></div>
-                        </div>
+                        <div class="form-group"><label>First Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="firstName" placeholder="e.g. Aarav" required></div></div>
+                        <div class="form-group"><label>Last Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="lastName" placeholder="e.g. Sharma" required></div></div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group">
-                            <label>Phone Number <span class="req">*</span></label>
-                            <div class="input-icon-wrap phone-wrap">
-                                <span class="country-prefix"><i class="fas fa-phone-alt"></i> +91</span>
-                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="label-with-action">
-                                <label>WhatsApp Number <span class="req">*</span></label>
-                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()">Same as phone</button>
-                            </div>
-                            <div class="input-icon-wrap whatsapp-inp">
-                                <i class="fab fa-whatsapp"></i>
-                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" required>
-                            </div>
-                        </div>
+                        <div class="form-group"><label>Phone Number <span class="req">*</span></label><div class="input-icon-wrap phone-wrap"><span class="country-prefix"><i class="fas fa-phone-alt"></i> +91</span><input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" required></div></div>
+                        <div class="form-group"><div class="label-with-action"><label>WhatsApp Number <span class="req">*</span></label><button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()">Same as phone</button></div><div class="input-icon-wrap whatsapp-inp"><i class="fab fa-whatsapp"></i><input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" required></div></div>
                     </div>
-                    <div class="form-group">
-                        <label>Email Address <span class="req">*</span></label>
-                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="e.g. aarav.sharma@gmail.com" required></div>
-                    </div>
+                    <div class="form-group"><label>Email Address <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="e.g. aarav.sharma@gmail.com" required></div></div>
                     <div class="form-group mb-tight">
                         <label class="form-label-regular">I'm interested in</label>
                         <div class="interest-options">
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="abroad" checked>
-                                <span class="custom-radio"></span>
-                                <span class="opt-label"><i class="fas fa-globe-americas"></i> Abroad Education Loan</span>
-                            </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="domestic">
-                                <span class="custom-radio"></span>
-                                <span class="opt-label"><i class="fas fa-graduation-cap"></i> Domestic Education Loan</span>
-                            </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="mbbs">
-                                <span class="custom-radio"></span>
-                                <span class="opt-label"><i class="fas fa-user-md"></i> MBBS Education Loan</span>
-                            </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="other">
-                                <span class="custom-radio"></span>
-                                <span class="opt-label"><i class="fas fa-coins"></i> Other Loan Options</span>
-                            </label>
+                            <label class="interest-opt"><input type="radio" name="interest" value="abroad" checked><span class="custom-radio"></span><span class="opt-label"><i class="fas fa-globe-americas"></i> Abroad Education Loan</span></label>
+                            <label class="interest-opt"><input type="radio" name="interest" value="domestic"><span class="custom-radio"></span><span class="opt-label"><i class="fas fa-graduation-cap"></i> Domestic Education Loan</span></label>
+                            <label class="interest-opt"><input type="radio" name="interest" value="mbbs"><span class="custom-radio"></span><span class="opt-label"><i class="fas fa-user-md"></i> MBBS Education Loan</span></label>
+                            <label class="interest-opt"><input type="radio" name="interest" value="other"><span class="custom-radio"></span><span class="opt-label"><i class="fas fa-coins"></i> Other Loan Options</span></label>
                         </div>
                     </div>
-                    <div class="form-group mb-tight">
-                        <label class="form-label-regular">Additional Information (Optional)</label>
-                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea name="message" placeholder="Preferred bank/NBFC, university, loan amount needed..." rows="2"></textarea></div>
-                    </div>
-                    <button type="submit" class="btn btn-submit-enquiry">
-                        <span>Submit Enquiry</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                    <div class="popup-safe">
-                        <i class="fas fa-shield-halved"></i>
-                        <span>100% Confidential • Zero Spam Guarantee • Free Consultation</span>
-                    </div>
+                    <div class="form-group mb-tight"><label class="form-label-regular">Additional Information (Optional)</label><div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea name="message" placeholder="Preferred bank/NBFC, university, loan amount needed..." rows="2"></textarea></div></div>
+                    <button type="submit" class="btn btn-submit-enquiry"><span>Submit Enquiry</span><i class="fas fa-arrow-right"></i></button>
+                    <div class="popup-safe"><i class="fas fa-shield-halved"></i><span>100% Confidential • Zero Spam Guarantee • Free Consultation</span></div>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- FLOATING ELIGIBILITY QUICK CTA (Marketing CRO) -->
     <button id="floatingEligibilityBtn" class="floating-eligibility-btn" onclick="openPopup()" aria-label="Check Loan Eligibility Free">
         <span class="floating-btn-pulse"></span>
         <i class="fas fa-bolt"></i>
         <span>Check Eligibility <strong class="badge-free">FREE</strong></span>
     </button>
+    <a href="https://wa.me/918150949070" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
-    <a href="https://wa.me/918150949070" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 700, once: false });</script>
-    <!-- Framer Motion & UI/UX Animation Engine -->
     <script src="../js/vendor/motion.js"></script>
     <script src="../js/motion-ux.js"></script>
-    
     <script src="../js/main.js"></script>
 </body>
 </html>

@@ -221,19 +221,49 @@ function initAOS() {
     elements.forEach(el => observer.observe(el));
 }
 
-// --- Form Submit ---
+// --- Form Submit (Dual-Capture: Instant UI Feedback + WhatsApp Instant Lead Notification) ---
 function submitForm(e) {
     e.preventDefault();
-    const btn = e.target.querySelector('button[type="submit"]');
+    const form = e.target;
+    const btn = form.querySelector('button[type="submit"]');
     const originalContent = btn.innerHTML;
-    btn.innerHTML = '<i class="fas fa-check-circle"></i> Submitted! We\'ll contact you soon.';
+
+    // Collect lead details
+    const formData = new FormData(form);
+    const firstName = formData.get('firstName') || '';
+    const lastName = formData.get('lastName') || '';
+    const phone = formData.get('phone') || '';
+    const whatsapp = formData.get('whatsapp') || phone;
+    const email = formData.get('email') || '';
+    const interest = formData.get('interest') || 'Abroad Education Loan';
+    const message = formData.get('message') || '';
+
+    // Show visual confirmation
+    btn.innerHTML = '<i class="fas fa-check-circle"></i> Connecting to Counselor...';
     btn.style.background = '#10b981';
+
+    // Construct formatted WhatsApp message
+    const leadMsg = encodeURIComponent(
+        `*New Education Loan Inquiry - Visionary Path Services*\n\n` +
+        `👤 *Name:* ${firstName} ${lastName}\n` +
+        `📞 *Phone:* +91 ${phone}\n` +
+        `💬 *WhatsApp:* +91 ${whatsapp}\n` +
+        `✉️ *Email:* ${email}\n` +
+        `🎯 *Interested In:* ${interest}\n` +
+        (message ? `📝 *Notes:* ${message}\n` : '') +
+        `\n_Sent via visionarypathservices.com_`
+    );
+
+    const waUrl = `https://wa.me/918150949070?text=${leadMsg}`;
+
     setTimeout(() => {
         closePopup();
         btn.innerHTML = originalContent || 'Submit Enquiry <i class="fas fa-arrow-right"></i>';
         btn.style.background = '';
-        e.target.reset();
-    }, 2500);
+        form.reset();
+        // Seamlessly open WhatsApp lead thread in new tab so counselor receives immediate ping
+        window.open(waUrl, '_blank');
+    }, 1200);
 }
 
 // --- Counter animation ---

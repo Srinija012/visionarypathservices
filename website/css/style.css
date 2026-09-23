@@ -682,12 +682,43 @@ img { max-width: 100%; display: block; }
 }
 .exact-hero-lead {
     font-size: 15px;
-    color: #475569;
+    color: var(--slate-light);
     line-height: 1.62;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     font-weight: 400;
     max-width: 490px;
 }
+
+/* Hero loan-type quick pills */
+.hero-loan-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+.hero-loan-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    background: rgba(13,43,94,0.06);
+    border: 1.5px solid rgba(13,43,94,0.12);
+    border-radius: 50px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--navy);
+    transition: var(--transition);
+    cursor: pointer;
+    text-decoration: none;
+}
+.hero-loan-pill i { color: var(--green); font-size: 11px; }
+.hero-loan-pill:hover {
+    background: var(--green-bg);
+    border-color: var(--green);
+    color: var(--green);
+    transform: translateY(-1px);
+}
+
 .exact-hero-actions {
     display: flex;
     gap: 14px;
@@ -2983,3 +3014,108 @@ img.vps-lazy.vps-lazy-loaded {
 .mb-16 { margin-bottom: 16px; }
 .mb-24 { margin-bottom: 24px; }
 .mb-32 { margin-bottom: 32px; }
+
+/* ==========================================
+   13. RESPONSIVENESS FIXES
+   Covers gaps found during audit:
+   - 480px: pan-india cards 1-col
+   - 375px: pillar labels font-size
+   - Floating button / WhatsApp overlap
+   - Country page inner grids
+   - overflow-x protection
+   ========================================== */
+
+/* Prevent horizontal scroll globally */
+html, body { overflow-x: hidden; }
+* { min-width: 0; }
+
+/* Country page inner grids — responsive */
+.loan-features-grid,
+.country-stats-grid,
+.benefits-grid,
+.why-grid,
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+@media (max-width: 768px) {
+    .loan-features-grid,
+    .country-stats-grid,
+    .benefits-grid,
+    .why-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Services page 3-col → 2-col at tablet before 1-col */
+@media (max-width: 900px) and (min-width: 601px) {
+    .core-focus-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* 480px: pan-india cards stack to 1 col */
+@media (max-width: 480px) {
+    .pan-india-cards { grid-template-columns: 1fr !important; gap: 12px; }
+    .why-nine-grid { grid-template-columns: 1fr; }
+
+    /* Hero loan pills — wrap tighter */
+    .hero-loan-pills { gap: 6px; }
+    .hero-loan-pill { font-size: 11.5px; padding: 6px 13px; }
+
+    /* Floating buttons — prevent overlap on small screens */
+    .floating-eligibility-btn {
+        bottom: 86px;
+        left: 12px;
+        right: auto;
+        max-width: calc(100vw - 88px);
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+    .floating-eligibility-btn .badge-free { display: none; }
+
+    .whatsapp-float {
+        bottom: 16px;
+        right: 16px;
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+    }
+}
+
+/* 375px: pillar labels don't overflow */
+@media (max-width: 375px) {
+    .pillar-item { min-width: 0; }
+    .pillar-label {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+    .pillar-icon-circle {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+    .exact-hero-title {
+        font-size: clamp(1.7rem, 9vw, 2.4rem);
+    }
+    .container { padding: 0 14px; }
+}
+
+/* 320px: page hero minimum sizes */
+@media (max-width: 320px) {
+    .page-hero h1 { font-size: 1.5rem; }
+    .exact-hero-title { font-size: 1.6rem; }
+    .btn-hero-primary, .btn-hero-secondary { font-size: 13px; padding: 11px 18px; }
+}
+
+/* About purpose — overflow fix */
+.about-purpose { overflow: hidden; }
+.about-purpose-inner { flex-wrap: wrap; }
+
+/* Images in inner sections */
+.core-card img,
+.service-card img,
+.loan-card img {
+    max-width: 100%;
+    height: auto;
+}
