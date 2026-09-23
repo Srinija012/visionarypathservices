@@ -11,47 +11,47 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <style>
-        .page-hero { background: linear-gradient(135deg, #0d2b5e 0%, #1a4a8a 50%, #0d2b5e 100%); padding: 120px 0 70px; text-align: center; position: relative; overflow: hidden; }
+        .page-hero { background: linear-gradient(135deg, var(--navy) 0%, #1a4a8a 50%, var(--navy) 100%); padding: 120px 0 70px; text-align: center; position: relative; overflow: hidden; }
         .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80') center/cover; opacity: 0.12; }
         .page-hero-inner { position: relative; z-index: 1; }
-        .page-hero-eyebrow { color: #1a9c4e; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
-        .page-hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 16px; }
+        .page-hero-eyebrow { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+        .page-hero h1 { color: var(--white); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 16px; }
         .page-hero p { color: rgba(255,255,255,0.82); font-size: 1.1rem; max-width: 620px; margin: 0 auto; line-height: 1.7; }
-        .section-label { color: #1a9c4e; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
-        .section-title { color: #0d2b5e; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 14px; }
-        .section-sub { color: #64748b; font-size: 1rem; max-width: 620px; margin: 0 auto 50px; line-height: 1.7; }
-        .lenders-section { padding: 80px 0; background: #f8fafc; }
+        .section-label { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+        .section-title { color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 14px; }
+        .section-sub { color: var(--text-muted); font-size: 1rem; max-width: 620px; margin: 0 auto 50px; line-height: 1.7; }
+        .lenders-section { padding: 80px 0; background: var(--bg-card); }
         .lender-category { margin-bottom: 60px; }
         .lender-category:last-child { margin-bottom: 0; }
         .category-header { display: flex; align-items: center; gap: 14px; margin-bottom: 32px; }
-        .category-tag { background: #0d2b5e; color: #fff; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; padding: 6px 16px; border-radius: 20px; text-transform: uppercase; }
-        .category-tag.green { background: #1a9c4e; }
-        .category-tag.navy { background: #0d2b5e; }
-        .category-line { flex: 1; height: 1px; background: #e2e8f0; }
+        .category-tag { background: var(--navy); color: var(--white); font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; padding: 6px 16px; border-radius: 20px; text-transform: uppercase; }
+        .category-tag.green { background: var(--green); }
+        .category-tag.navy { background: var(--navy); }
+        .category-line { flex: 1; height: 1px; background: var(--border-color); }
         .lenders-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
-        .lender-card { background: #fff; border-radius: 16px; padding: 28px 20px; text-align: center; border: 1.5px solid #e8f0fe; transition: all 0.3s; position: relative; overflow: hidden; }
-        .lender-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #0d2b5e, #1a9c4e); transform: scaleX(0); transition: transform 0.3s; }
+        .lender-card { background: var(--white); border-radius: 16px; padding: 28px 20px; text-align: center; border: 1.5px solid #e8f0fe; transition: all 0.3s; position: relative; overflow: hidden; }
+        .lender-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--navy), var(--green)); transform: scaleX(0); transition: transform 0.3s; }
         .lender-card:hover::before { transform: scaleX(1); }
-        .lender-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(13,43,94,0.15); border-color: #1a9c4e; }
-        .lender-initial { width: 64px; height: 64px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; margin: 0 auto 14px; color: #fff; }
-        .lender-initial.blue { background: linear-gradient(135deg, #0d2b5e, #1a4a8a); }
-        .lender-initial.green { background: linear-gradient(135deg, #1a9c4e, #0d7a3a); }
+        .lender-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(13,43,94,0.15); border-color: var(--green); }
+        .lender-initial { width: 64px; height: 64px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; margin: 0 auto 14px; color: var(--white); }
+        .lender-initial.blue { background: linear-gradient(135deg, var(--navy), #1a4a8a); }
+        .lender-initial.green { background: linear-gradient(135deg, var(--green), #0d7a3a); }
         .lender-initial.red { background: linear-gradient(135deg, #dc2626, #b91c1c); }
         .lender-initial.orange { background: linear-gradient(135deg, #ea580c, #c2410c); }
         .lender-initial.purple { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
         .lender-initial.teal { background: linear-gradient(135deg, #0369a1, #075985); }
         .lender-initial.indigo { background: linear-gradient(135deg, #4338ca, #3730a3); }
         .lender-initial.maroon { background: linear-gradient(135deg, #9f1239, #881337); }
-        .lender-name { color: #0d2b5e; font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
-        .lender-type { color: #94a3b8; font-size: 0.78rem; }
-        .stats-bar { background: #0d2b5e; padding: 50px 0; }
+        .lender-name { color: var(--navy); font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+        .lender-type { color: var(--slate-300); font-size: 0.78rem; }
+        .stats-bar { background: var(--navy); padding: 50px 0; }
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
         .stat-item { text-align: center; padding: 20px; border-right: 1px solid rgba(255,255,255,0.1); }
         .stat-item:last-child { border-right: none; }
         .stat-icon { font-size: 2rem; margin-bottom: 12px; }
         .stat-label { color: rgba(255,255,255,0.85); font-size: 0.95rem; font-weight: 500; }
-        .cta-bar { background: linear-gradient(135deg, #1a9c4e, #0d7a3a); padding: 60px 0; text-align: center; }
-        .cta-bar h2 { color: #fff; font-size: clamp(1.4rem, 3vw, 2.1rem); font-weight: 800; margin-bottom: 28px; }
+        .cta-bar { background: linear-gradient(135deg, var(--green), #0d7a3a); padding: 60px 0; text-align: center; }
+        .cta-bar h2 { color: var(--white); font-size: clamp(1.4rem, 3vw, 2.1rem); font-weight: 800; margin-bottom: 28px; }
         .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     </style>
 </head>
@@ -177,7 +177,7 @@
     <section class="page-hero">
         <div class="container page-hero-inner">
             <p class="page-hero-eyebrow" data-aos="fade-up">OUR NETWORK</p>
-            <h1 data-aos="fade-up" data-aos-delay="100">Trusted Partners for Your <span style="color:#1a9c4e">Education Journey</span></h1>
+            <h1 data-aos="fade-up" data-aos-delay="100">Trusted Partners for Your <span style="color:var(--green)">Education Journey</span></h1>
             <p data-aos="fade-up" data-aos-delay="200">We work with a network of leading banks and NBFCs to bring you the best education loan options for your profile.</p>
         </div>
     </section>
@@ -187,7 +187,7 @@
         <div class="container">
             <div style="text-align:center; margin-bottom:60px" data-aos="fade-up">
                 <p class="section-label">OUR LENDING PARTNERS</p>
-                <h2 class="section-title">Banks &amp; NBFCs We <span style="color:#1a9c4e">Work With</span></h2>
+                <h2 class="section-title">Banks &amp; NBFCs We <span style="color:var(--green)">Work With</span></h2>
                 <p class="section-sub">Our network of trusted lenders ensures you get the most suitable education loan options for your academic and financial profile.</p>
             </div>
 
@@ -264,7 +264,7 @@
             <!-- Public Banks -->
             <div class="lender-category" data-aos="fade-up">
                 <div class="category-header">
-                    <span class="category-tag" style="background:#334155">Public Banks</span>
+                    <span class="category-tag" style="background:var(--slate)">Public Banks</span>
                     <div class="category-line"></div>
                 </div>
                 <div class="lenders-grid">

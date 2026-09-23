@@ -11,42 +11,42 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <style>
-        .page-hero { background: linear-gradient(135deg, #0d2b5e 0%, #1a4a8a 60%, #0d2b5e 100%); padding: 120px 0 70px; text-align: center; position: relative; overflow: hidden; }
+        .page-hero { background: linear-gradient(135deg, var(--navy) 0%, #1a4a8a 60%, var(--navy) 100%); padding: 120px 0 70px; text-align: center; position: relative; overflow: hidden; }
         .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=1600&q=80') center/cover; opacity: 0.12; }
         .page-hero-inner { position: relative; z-index: 1; }
-        .page-hero-eyebrow { color: #1a9c4e; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
-        .page-hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 16px; }
+        .page-hero-eyebrow { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+        .page-hero h1 { color: var(--white); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 16px; }
         .page-hero p { color: rgba(255,255,255,0.82); font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; line-height: 1.7; }
         .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
-        .intro-section { padding: 80px 0; background: #f8fafc; }
-        .section-label { color: #1a9c4e; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
-        .section-title { color: #0d2b5e; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 14px; }
-        .section-sub { color: #64748b; font-size: 1rem; max-width: 640px; margin: 0 auto 50px; line-height: 1.7; }
+        .intro-section { padding: 80px 0; background: var(--bg-card); }
+        .section-label { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+        .section-title { color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 14px; }
+        .section-sub { color: var(--text-muted); font-size: 1rem; max-width: 640px; margin: 0 auto 50px; line-height: 1.7; }
         .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         @media(max-width:768px){.two-col{grid-template-columns:1fr;}}
         .intro-img { border-radius: 20px; overflow: hidden; box-shadow: 0 16px 48px rgba(13,43,94,0.18); }
         .intro-img img { width: 100%; height: 380px; object-fit: cover; display: block; }
-        .intro-text h2 { color: #0d2b5e; font-size: clamp(1.5rem,3vw,2.1rem); font-weight: 800; margin-bottom: 16px; }
-        .intro-text p { color: #64748b; font-size: 0.97rem; line-height: 1.75; margin-bottom: 20px; }
+        .intro-text h2 { color: var(--navy); font-size: clamp(1.5rem,3vw,2.1rem); font-weight: 800; margin-bottom: 16px; }
+        .intro-text p { color: var(--text-muted); font-size: 0.97rem; line-height: 1.75; margin-bottom: 20px; }
         .check-list { list-style: none; padding: 0; margin: 0 0 28px; }
-        .check-list li { display: flex; align-items: flex-start; gap: 10px; color: #334155; font-size: 0.95rem; padding: 8px 0; border-bottom: 1px solid #f1f5f9; }
-        .check-list li i { color: #1a9c4e; margin-top: 3px; flex-shrink: 0; }
-        .countries-section { padding: 80px 0; background: #fff; }
+        .check-list li { display: flex; align-items: flex-start; gap: 10px; color: var(--slate); font-size: 0.95rem; padding: 8px 0; border-bottom: 1px solid #f1f5f9; }
+        .check-list li i { color: var(--green); margin-top: 3px; flex-shrink: 0; }
+        .countries-section { padding: 80px 0; background: var(--white); }
         .countries-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; margin-top: 50px; }
-        .country-card { background: #f8fafc; border-radius: 16px; padding: 28px 20px; text-align: center; border: 1.5px solid #e8f0fe; transition: all 0.3s; cursor: pointer; }
-        .country-card:hover { background: #0d2b5e; border-color: #0d2b5e; transform: translateY(-6px); box-shadow: 0 12px 36px rgba(13,43,94,0.2); }
-        .country-card:hover .country-name, .country-card:hover .country-flag { color: #fff; }
+        .country-card { background: var(--bg-card); border-radius: 16px; padding: 28px 20px; text-align: center; border: 1.5px solid #e8f0fe; transition: all 0.3s; cursor: pointer; }
+        .country-card:hover { background: var(--navy); border-color: var(--navy); transform: translateY(-6px); box-shadow: 0 12px 36px rgba(13,43,94,0.2); }
+        .country-card:hover .country-name, .country-card:hover .country-flag { color: var(--white); }
         .country-flag { font-size: 2.8rem; margin-bottom: 12px; display: block; }
-        .country-name { color: #0d2b5e; font-weight: 700; font-size: 0.95rem; }
-        .process-section { padding: 80px 0; background: #f8fafc; }
+        .country-name { color: var(--navy); font-weight: 700; font-size: 0.95rem; }
+        .process-section { padding: 80px 0; background: var(--bg-card); }
         .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 50px; }
-        .process-step { background: #fff; border-radius: 16px; padding: 28px 22px; border: 1.5px solid #e8f0fe; transition: all 0.3s; }
-        .process-step:hover { box-shadow: 0 8px 32px rgba(13,43,94,0.12); transform: translateY(-4px); border-color: #1a9c4e; }
+        .process-step { background: var(--white); border-radius: 16px; padding: 28px 22px; border: 1.5px solid #e8f0fe; transition: all 0.3s; }
+        .process-step:hover { box-shadow: 0 8px 32px rgba(13,43,94,0.12); transform: translateY(-4px); border-color: var(--green); }
         .step-icon { width: 52px; height: 52px; background: linear-gradient(135deg, #e8f4ee, #c6e8d6); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 16px; }
-        .process-step h3 { color: #0d2b5e; font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
-        .process-step p { color: #64748b; font-size: 0.88rem; line-height: 1.65; }
-        .cta-section { padding: 80px 0; background: linear-gradient(135deg, #0d2b5e, #1a4a8a); text-align: center; }
-        .cta-section h2 { color: #fff; font-size: clamp(1.5rem,3vw,2.2rem); font-weight: 800; margin-bottom: 12px; }
+        .process-step h3 { color: var(--navy); font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+        .process-step p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; }
+        .cta-section { padding: 80px 0; background: linear-gradient(135deg, var(--navy), #1a4a8a); text-align: center; }
+        .cta-section h2 { color: var(--white); font-size: clamp(1.5rem,3vw,2.2rem); font-weight: 800; margin-bottom: 12px; }
         .cta-section p { color: rgba(255,255,255,0.82); margin-bottom: 32px; font-size: 1rem; }
         .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     </style>
@@ -173,7 +173,7 @@
     <section class="page-hero">
         <div class="container page-hero-inner">
             <p class="page-hero-eyebrow" data-aos="fade-up">STUDY ABROAD</p>
-            <h1 data-aos="fade-up" data-aos-delay="100">International <span style="color:#1a9c4e">Education Loans</span></h1>
+            <h1 data-aos="fade-up" data-aos-delay="100">International <span style="color:var(--green)">Education Loans</span></h1>
             <p data-aos="fade-up" data-aos-delay="200">Take your dreams global. Get financial support for your higher education abroad with the right loan options.</p>
             <div class="hero-btns" data-aos="fade-up" data-aos-delay="300">
                 <button class="btn btn-primary btn-lg" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
@@ -188,7 +188,7 @@
             <div class="two-col">
                 <div class="intro-text" data-aos="fade-right">
                     <p class="section-label">PERSONALIZED GUIDANCE</p>
-                    <h2>Your Global Education Journey <span style="color:#1a9c4e">Starts Here</span></h2>
+                    <h2>Your Global Education Journey <span style="color:var(--green)">Starts Here</span></h2>
                     <p>We provide personalized education loan guidance for students who aspire to study at top universities around the world. Our team helps you understand available loan options from leading banks and NBFCs tailored to your profile and destination.</p>
                     <ul class="check-list">
                         <li><i class="fas fa-check-circle"></i> Profile assessment for the right loan route</li>
@@ -214,7 +214,7 @@
     <section class="countries-section">
         <div class="container" style="text-align:center">
             <p class="section-label">DESTINATIONS</p>
-            <h2 class="section-title">Countries We <span style="color:#1a9c4e">Cover</span></h2>
+            <h2 class="section-title">Countries We <span style="color:var(--green)">Cover</span></h2>
             <p class="section-sub">We provide education loan guidance for students heading to the world's top study destinations.</p>
             <div class="countries-grid">
                 <a href="countries/usa.html" class="country-card" data-aos="zoom-in" data-aos-delay="0" style="text-decoration:none;color:inherit;cursor:pointer;">
@@ -265,7 +265,7 @@
     <section class="process-section">
         <div class="container" style="text-align:center">
             <p class="section-label">HOW IT WORKS</p>
-            <h2 class="section-title">Your Education Loan <span style="color:#1a9c4e">Journey</span></h2>
+            <h2 class="section-title">Your Education Loan <span style="color:var(--green)">Journey</span></h2>
             <p class="section-sub">Step-by-step guidance from initial assessment to final disbursement.</p>
             <div class="process-steps">
                 <div class="process-step" data-aos="fade-up" data-aos-delay="0">
@@ -303,20 +303,20 @@
     </section>
 
     <!-- LENDING PARTNERS PREVIEW -->
-    <section class="lenders-section" style="background:#f8fafc;padding:70px 0;">
+    <section class="lenders-section" style="background:var(--bg-card);padding:70px 0;">
         <div class="container" style="text-align:center">
             <p class="section-label">OUR LENDING PARTNERS</p>
-            <h2 class="section-title">Trusted Banks &amp; NBFCs <span style="color:#1a9c4e">We Work With</span></h2>
+            <h2 class="section-title">Trusted Banks &amp; NBFCs <span style="color:var(--green)">We Work With</span></h2>
             <p class="section-sub">We connect students with 15+ premier financial institutions across India.</p>
             <div class="countries-grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));margin-top:40px;">
-                <div class="country-card" data-aos="fade-up"><strong>HDFC Credila</strong><br><small style="color:#64748b">NBFC</small></div>
-                <div class="country-card" data-aos="fade-up" data-aos-delay="50"><strong>Avanse</strong><br><small style="color:#64748b">NBFC</small></div>
-                <div class="country-card" data-aos="fade-up" data-aos-delay="100"><strong>Auxilo</strong><br><small style="color:#64748b">NBFC</small></div>
-                <div class="country-card" data-aos="fade-up" data-aos-delay="150"><strong>ICICI Bank</strong><br><small style="color:#64748b">Private Bank</small></div>
-                <div class="country-card" data-aos="fade-up" data-aos-delay="200"><strong>IDFC FIRST</strong><br><small style="color:#64748b">Private Bank</small></div>
-                <div class="country-card" data-aos="fade-up" data-aos-delay="250"><strong>State Bank of India</strong><br><small style="color:#64748b">Public Bank</small></div>
-                <div class="country-card" data-aos="fade-up" data-aos-delay="300"><strong>Bank of Baroda</strong><br><small style="color:#64748b">Public Bank</small></div>
-                <div class="country-card" data-aos="fade-up" data-aos-delay="350"><strong>Punjab National Bank</strong><br><small style="color:#64748b">Public Bank</small></div>
+                <div class="country-card" data-aos="fade-up"><strong>HDFC Credila</strong><br><small style="color:var(--text-muted)">NBFC</small></div>
+                <div class="country-card" data-aos="fade-up" data-aos-delay="50"><strong>Avanse</strong><br><small style="color:var(--text-muted)">NBFC</small></div>
+                <div class="country-card" data-aos="fade-up" data-aos-delay="100"><strong>Auxilo</strong><br><small style="color:var(--text-muted)">NBFC</small></div>
+                <div class="country-card" data-aos="fade-up" data-aos-delay="150"><strong>ICICI Bank</strong><br><small style="color:var(--text-muted)">Private Bank</small></div>
+                <div class="country-card" data-aos="fade-up" data-aos-delay="200"><strong>IDFC FIRST</strong><br><small style="color:var(--text-muted)">Private Bank</small></div>
+                <div class="country-card" data-aos="fade-up" data-aos-delay="250"><strong>State Bank of India</strong><br><small style="color:var(--text-muted)">Public Bank</small></div>
+                <div class="country-card" data-aos="fade-up" data-aos-delay="300"><strong>Bank of Baroda</strong><br><small style="color:var(--text-muted)">Public Bank</small></div>
+                <div class="country-card" data-aos="fade-up" data-aos-delay="350"><strong>Punjab National Bank</strong><br><small style="color:var(--text-muted)">Public Bank</small></div>
             </div>
             <div style="margin-top:30px;">
                 <a href="partner-lenders.html" class="btn btn-outline">View All Partner Lenders <i class="fas fa-arrow-right"></i></a>

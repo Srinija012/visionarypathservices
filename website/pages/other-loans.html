@@ -11,22 +11,22 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <style>
-        .page-hero { background: linear-gradient(135deg, #0d2b5e 0%, #1a4a8a 50%, #0d2b5e 100%); padding: 120px 0 70px; text-align: center; position: relative; overflow: hidden; }
+        .page-hero { background: linear-gradient(135deg, var(--navy) 0%, #1a4a8a 50%, var(--navy) 100%); padding: 120px 0 70px; text-align: center; position: relative; overflow: hidden; }
         .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1600&q=80') center/cover; opacity: 0.12; }
         .page-hero-inner { position: relative; z-index: 1; }
-        .page-hero-eyebrow { color: #1a9c4e; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
-        .page-hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 16px; }
+        .page-hero-eyebrow { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+        .page-hero h1 { color: var(--white); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 16px; }
         .page-hero p { color: rgba(255,255,255,0.82); font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; line-height: 1.7; }
         .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-        .section-label { color: #1a9c4e; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
-        .section-title { color: #0d2b5e; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 14px; }
-        .section-sub { color: #64748b; font-size: 1rem; max-width: 620px; margin: 0 auto 50px; line-height: 1.7; }
-        .loans-section { padding: 80px 0; background: #f8fafc; }
+        .section-label { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+        .section-title { color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 14px; }
+        .section-sub { color: var(--text-muted); font-size: 1rem; max-width: 620px; margin: 0 auto 50px; line-height: 1.7; }
+        .loans-section { padding: 80px 0; background: var(--bg-card); }
         .loans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 50px; }
-        .loan-card { background: #fff; border-radius: 20px; padding: 36px 28px; border: 1.5px solid #e8f0fe; transition: all 0.35s; position: relative; overflow: hidden; }
+        .loan-card { background: var(--white); border-radius: 20px; padding: 36px 28px; border: 1.5px solid #e8f0fe; transition: all 0.35s; position: relative; overflow: hidden; }
         .loan-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
-        .loan-card.personal::before { background: linear-gradient(90deg, #0d2b5e, #1a4a8a); }
-        .loan-card.business::before { background: linear-gradient(90deg, #1a9c4e, #0d7a3a); }
+        .loan-card.personal::before { background: linear-gradient(90deg, var(--navy), #1a4a8a); }
+        .loan-card.business::before { background: linear-gradient(90deg, var(--green), #0d7a3a); }
         .loan-card.car::before { background: linear-gradient(90deg, #7c3aed, #5b21b6); }
         .loan-card.home::before { background: linear-gradient(90deg, #ea580c, #c2410c); }
         .loan-card.forex::before { background: linear-gradient(90deg, #0369a1, #075985); }
@@ -37,22 +37,22 @@
         .loan-card.car .loan-icon { background: linear-gradient(135deg, #ede9fe, #ddd6fe); }
         .loan-card.home .loan-icon { background: linear-gradient(135deg, #ffedd5, #fed7aa); }
         .loan-card.forex .loan-icon { background: linear-gradient(135deg, #e0f2fe, #bae6fd); }
-        .loan-card h3 { color: #0d2b5e; font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; }
-        .loan-card p { color: #64748b; font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; }
+        .loan-card h3 { color: var(--navy); font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; }
+        .loan-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; }
         .loan-card ul { list-style: none; padding: 0; margin: 0 0 24px; }
-        .loan-card ul li { display: flex; align-items: flex-start; gap: 8px; color: #475569; font-size: 0.88rem; padding: 5px 0; }
-        .loan-card ul li i { color: #1a9c4e; margin-top: 3px; font-size: 0.8rem; }
-        .loan-card .card-link { color: #1a9c4e; font-weight: 600; font-size: 0.88rem; display: flex; align-items: center; gap: 6px; text-decoration: none; }
+        .loan-card ul li { display: flex; align-items: flex-start; gap: 8px; color: var(--slate-light); font-size: 0.88rem; padding: 5px 0; }
+        .loan-card ul li i { color: var(--green); margin-top: 3px; font-size: 0.8rem; }
+        .loan-card .card-link { color: var(--green); font-weight: 600; font-size: 0.88rem; display: flex; align-items: center; gap: 6px; text-decoration: none; }
         .loan-card .card-link:hover { gap: 10px; }
-        .intro-section { padding: 80px 0; background: #fff; }
+        .intro-section { padding: 80px 0; background: var(--white); }
         .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         @media(max-width:768px){.two-col{grid-template-columns:1fr;} .loans-grid{grid-template-columns:1fr;} }
         .intro-img { border-radius: 20px; overflow: hidden; box-shadow: 0 16px 48px rgba(13,43,94,0.18); }
         .intro-img img { width: 100%; height: 380px; object-fit: cover; display: block; }
-        .intro-text h2 { color: #0d2b5e; font-size: clamp(1.4rem,3vw,2rem); font-weight: 800; margin-bottom: 16px; }
-        .intro-text p { color: #64748b; font-size: 0.97rem; line-height: 1.75; margin-bottom: 20px; }
-        .cta-section { padding: 80px 0; background: linear-gradient(135deg, #0d2b5e, #1a4a8a); text-align: center; }
-        .cta-section h2 { color: #fff; font-size: clamp(1.5rem,3vw,2.2rem); font-weight: 800; margin-bottom: 12px; }
+        .intro-text h2 { color: var(--navy); font-size: clamp(1.4rem,3vw,2rem); font-weight: 800; margin-bottom: 16px; }
+        .intro-text p { color: var(--text-muted); font-size: 0.97rem; line-height: 1.75; margin-bottom: 20px; }
+        .cta-section { padding: 80px 0; background: linear-gradient(135deg, var(--navy), #1a4a8a); text-align: center; }
+        .cta-section h2 { color: var(--white); font-size: clamp(1.5rem,3vw,2.2rem); font-weight: 800; margin-bottom: 12px; }
         .cta-section p { color: rgba(255,255,255,0.82); margin-bottom: 32px; }
         .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     </style>
@@ -179,7 +179,7 @@
     <section class="page-hero">
         <div class="container page-hero-inner">
             <p class="page-hero-eyebrow" data-aos="fade-up">MORE FINANCIAL SOLUTIONS</p>
-            <h1 data-aos="fade-up" data-aos-delay="100">Other <span style="color:#1a9c4e">Loans</span></h1>
+            <h1 data-aos="fade-up" data-aos-delay="100">Other <span style="color:var(--green)">Loans</span></h1>
             <p data-aos="fade-up" data-aos-delay="200">Beyond Education Loans — we also guide you through a range of other financial products to support your goals.</p>
             <div class="hero-btns" data-aos="fade-up" data-aos-delay="300">
                 <button class="btn btn-primary btn-lg" onclick="openPopup()">Enquire Now <i class="fas fa-arrow-right"></i></button>
@@ -194,7 +194,7 @@
             <div class="two-col">
                 <div class="intro-text" data-aos="fade-right">
                     <p class="section-label">BEYOND EDUCATION</p>
-                    <h2>Complete Financial <span style="color:#1a9c4e">Guidance</span></h2>
+                    <h2>Complete Financial <span style="color:var(--green)">Guidance</span></h2>
                     <p>At Visionary Path Services, we understand that financial needs extend beyond education. Whether you need a personal loan for immediate requirements, a business loan to fuel your enterprise, or a home loan to realize your housing dream, our expert team is here to guide you through the right options.</p>
                     <p>We help you understand available loan products from leading banks and NBFCs, assess your eligibility, and navigate the application process with confidence.</p>
                     <div style="display:flex;gap:12px;flex-wrap:wrap">
@@ -213,7 +213,7 @@
     <section class="loans-section">
         <div class="container" style="text-align:center">
             <p class="section-label">WHAT WE OFFER</p>
-            <h2 class="section-title">Our Other <span style="color:#1a9c4e">Financial Services</span></h2>
+            <h2 class="section-title">Our Other <span style="color:var(--green)">Financial Services</span></h2>
             <p class="section-sub">We guide you across a wide spectrum of loan products to help you meet all your financial needs.</p>
             <div class="loans-grid">
                 <div class="loan-card personal" data-aos="fade-up" data-aos-delay="0">
