@@ -1,12 +1,127 @@
 /* ============================================================
-   VISIONARY PATH SERVICES — Readability & UI Improvements
-   Production Audit Patch · September 2026
-   
-   Strategy: Additive-only overrides. Targets every under-
-   spec'd font-size, low-contrast text, and cramped spacing
-   across the site. All pages load this after style.css.
+   VISIONARY PATH SERVICES — Master Design System & UI Consistency
+   Enterprise FinTech Production Standard · September 2026
    ============================================================ */
 
+:root {
+    /* ── 1. Master Brand Tokens (Single Source of Truth) ── */
+    --color-primary: #0a1d37;
+    --color-primary-dark: #050d1a;
+    --color-primary-light: #132e54;
+
+    --color-green: #1a9c4e;
+    --color-green-dark: #15803d;
+    --color-green-light: #22c55e;
+    --color-green-bg: #ecfdf5;
+
+    --color-blue: #1a56db;
+    --color-blue-light: #2563eb;
+    --color-blue-bg: #eff6ff;
+
+    --color-amber: #d97706;
+    --color-amber-dark: #b45309;
+    --color-amber-bg: #fef3c7;
+
+    --color-bg: #f8fafc;
+    --color-bg-subtle: #f1f5f9;
+    --color-white: #ffffff;
+
+    --color-border: #e2e8f0;
+    --color-border-strong: #cbd5e1;
+    --color-border-subtle: rgba(226, 232, 240, 0.8);
+
+    --color-text: #0f172a;
+    --color-text-body: #1e293b;
+    --color-text-muted: #475569;
+    --color-text-faint: #64748b;
+
+    /* ── 2. Backward Compatibility Aliases ── */
+    --navy: var(--color-primary);
+    --navy-dark: var(--color-primary-dark);
+    --navy-light: var(--color-primary-light);
+    --green: var(--color-green);
+    --green-dark: var(--color-green-dark);
+    --green-light: var(--color-green-light);
+    --green-bg: var(--color-green-bg);
+    --blue: var(--color-blue);
+    --blue-dark: #1e40af;
+    --blue-light: var(--color-blue-bg);
+    --bg-light: var(--color-bg);
+    --bg-card: var(--color-bg);
+    --white: var(--color-white);
+    --border-color: var(--color-border);
+    --text-main: var(--color-text);
+    --text-body: var(--color-text-body);
+    --text-muted: var(--color-text-muted);
+
+    /* ── 3. Typography Foundation ── */
+    --font-display: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
+
+    /* ── 4. Concentric Corner Radii ── */
+    --radius-xs: 4px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+
+    /* ── 5. Standard Spacing Scale ── */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-20: 80px;
+    --space-24: 96px;
+
+    /* ── 6. Layout Metrics ── */
+    --container-width: 1200px;
+    --space-section: 72px;
+    --space-section-mobile: 44px;
+
+    /* ── 7. Elevation Shadows ── */
+    --shadow-xs: 0 1px 2px rgba(10, 29, 55, 0.04);
+    --shadow-sm: 0 2px 5px -1px rgba(10, 29, 55, 0.06), 0 1px 3px -1px rgba(10, 29, 55, 0.03);
+    --shadow-md: 0 8px 20px -3px rgba(10, 29, 55, 0.08), 0 3px 6px -2px rgba(10, 29, 55, 0.04);
+    --shadow-lg: 0 16px 36px -4px rgba(10, 29, 55, 0.12), 0 6px 12px -3px rgba(10, 29, 55, 0.04);
+    --shadow-xl: 0 24px 52px -6px rgba(10, 29, 55, 0.16), 0 10px 20px -4px rgba(10, 29, 55, 0.06);
+
+    /* ── 8. Transitions ── */
+    --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-base: 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-smooth: 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Global Container & Section Rhythm Normalization ── */
+.container {
+    width: min(100% - 32px, var(--container-width, 1200px)) !important;
+    margin-inline: auto !important;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: min(100% - 24px, var(--container-width, 1200px)) !important;
+    }
+}
+
+.section,
+.section-pad {
+    padding: var(--space-section, 72px) 0;
+}
+
+@media (max-width: 768px) {
+    .section,
+    .section-pad {
+        padding: var(--space-section-mobile, 44px) 0;
+    }
+}
 
 /* ──────────────────────────────────────────────────────────
    1. TYPOGRAPHY FOUNDATION  
@@ -846,4 +961,662 @@ textarea:focus-visible {
     font-size: 0.95rem !important;
     min-height: 44px !important;
 }
+
+/* ──────────────────────────────────────────────────────────
+   28. GLOBAL BUTTON PRIMITIVES & HARMONIZATION
+   Enforces consistent height, padding, radius, and states
+   ────────────────────────────────────────────────────────── */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 14px;
+    min-height: 44px;
+    padding: 10px 22px;
+    border-radius: var(--radius-md, 12px);
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1;
+    text-align: center;
+    transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 2px;
+}
+
+.btn-primary,
+.btn-eligibility,
+.btn-submit-enquiry {
+    background: var(--color-green) !important;
+    color: var(--color-white) !important;
+    border-color: var(--color-green) !important;
+    box-shadow: 0 4px 14px rgba(26, 156, 78, 0.22);
+}
+
+.btn-primary:hover,
+.btn-eligibility:hover,
+.btn-submit-enquiry:hover {
+    background: var(--color-green-dark) !important;
+    border-color: var(--color-green-dark) !important;
+    box-shadow: 0 6px 18px rgba(26, 156, 78, 0.32);
+}
+
+.btn-secondary {
+    background: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 4px 14px rgba(10, 29, 55, 0.16);
+}
+
+.btn-secondary:hover {
+    background: var(--color-primary-dark) !important;
+    border-color: var(--color-primary-dark) !important;
+    box-shadow: 0 6px 18px rgba(10, 29, 55, 0.24);
+}
+
+.btn-outline {
+    background: transparent !important;
+    color: var(--color-green) !important;
+    border-color: var(--color-green) !important;
+}
+
+.btn-outline:hover {
+    background: var(--color-green-bg) !important;
+}
+
+.btn-ghost {
+    background: transparent !important;
+    color: var(--color-text-body) !important;
+    border-color: transparent !important;
+}
+
+.btn-ghost:hover {
+    background: var(--color-bg-subtle) !important;
+}
+
+.btn-whatsapp,
+.btn-whatsapp-nav {
+    background: #15803d !important;
+    color: var(--color-white) !important;
+    border-color: #15803d !important;
+    box-shadow: 0 4px 12px rgba(21, 128, 61, 0.2);
+}
+
+.btn-whatsapp:hover,
+.btn-whatsapp-nav:hover {
+    background: #166534 !important;
+    border-color: #166534 !important;
+    box-shadow: 0 6px 16px rgba(21, 128, 61, 0.3);
+}
+
+/* ──────────────────────────────────────────────────────────
+   29. GLOBAL CARD PRIMITIVES & ELEVATION
+   ────────────────────────────────────────────────────────── */
+
+.card,
+.service-card,
+.loan-card,
+.country-card,
+.lender-card,
+.testimonial-card,
+.calculator-card,
+.info-card,
+.blog-card,
+.stat-card,
+.pan-card,
+.why-feature-card,
+.bridge-card,
+.core-card,
+.partner-card,
+.country-stat-box,
+.process-card {
+    border-radius: var(--radius-lg, 16px);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-xs);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.card:hover,
+.service-card:hover,
+.loan-card:hover,
+.country-card:hover,
+.lender-card:hover,
+.testimonial-card:hover,
+.calculator-card:hover,
+.info-card:hover,
+.blog-card:hover,
+.stat-card:hover,
+.pan-card:hover,
+.why-feature-card:hover,
+.bridge-card:hover,
+.core-card:hover,
+.partner-card:hover,
+.country-stat-box:hover,
+.process-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-border-strong);
+}
+
+/* ──────────────────────────────────────────────────────────
+   30. LENDER FILTER TOOLBAR (Partner Lenders UX Engine)
+   ────────────────────────────────────────────────────────── */
+
+.lender-filters-wrapper {
+    background: var(--color-white);
+    border-radius: var(--radius-xl, 24px);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    padding: 24px 28px;
+    margin: 0 0 44px;
+}
+
+.lender-filters-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.lender-search-box {
+    position: relative;
+    flex: 1;
+    min-width: 260px;
+    max-width: 440px;
+}
+
+.lender-search-box input {
+    width: 100%;
+    height: 44px;
+    padding: 10px 16px 10px 42px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md, 12px);
+    font-family: var(--font-body);
+    font-size: 14.5px;
+    color: var(--color-text);
+    background: var(--color-bg);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.lender-search-box input:focus {
+    background: #ffffff;
+    border-color: var(--color-blue);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.12);
+}
+
+.lender-search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.lender-results-status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13.5px;
+    color: var(--color-text-muted);
+}
+
+.lender-count-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    background: var(--color-green-bg);
+    color: var(--color-green-dark);
+    font-weight: 700;
+    font-size: 12.5px;
+    border-radius: 50px;
+    border: 1px solid rgba(26, 156, 78, 0.2);
+}
+
+.btn-clear-filters {
+    background: transparent;
+    border: none;
+    color: var(--color-blue);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.btn-clear-filters:hover {
+    background: var(--color-blue-bg);
+    text-decoration: underline;
+}
+
+.filter-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.filter-row:last-child {
+    margin-bottom: 0;
+}
+
+.filter-label {
+    font-size: 12.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text-muted);
+    min-width: 120px;
+    padding-top: 8px;
+}
+
+.filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex: 1;
+}
+
+.lender-filter-btn {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-body);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    line-height: 1;
+}
+
+.lender-filter-btn:hover {
+    background: #ffffff;
+    border-color: var(--color-border-strong);
+    color: var(--color-primary);
+}
+
+.lender-filter-btn.active {
+    background: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(10, 29, 55, 0.16);
+}
+
+.lenders-empty-state {
+    text-align: center;
+    padding: 56px 20px;
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    border: 1.5px dashed var(--color-border-strong);
+    margin: 32px 0;
+}
+
+.lenders-empty-state i {
+    font-size: 40px;
+    color: var(--color-text-muted);
+    margin-bottom: 16px;
+}
+
+.lenders-empty-state h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.lenders-empty-state p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    max-width: 440px;
+    margin: 0 auto 20px;
+}
+
+/* ──────────────────────────────────────────────────────────
+   31. FINANCIAL TOOLS / CALCULATOR STANDARDIZATION
+   ────────────────────────────────────────────────────────── */
+
+.calc-tabs-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    background: var(--color-bg);
+    padding: 6px;
+    border-radius: var(--radius-lg, 16px);
+    border: 1px solid var(--color-border);
+    margin-bottom: 28px;
+}
+
+.calc-tab-btn {
+    flex: 1;
+    min-width: 140px;
+    padding: 12px 18px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: var(--radius-md, 12px);
+    border: none;
+    background: transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.calc-tab-btn:hover {
+    color: var(--color-primary);
+}
+
+.calc-tab-btn.active {
+    background: var(--color-white);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-sm);
+    font-weight: 700;
+}
+
+.calc-panel-card {
+    background: var(--color-white);
+    border-radius: var(--radius-xl, 24px);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    padding: 36px 32px;
+}
+
+.calc-input-group {
+    margin-bottom: 24px;
+}
+
+.calc-input-group label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--color-text-body);
+    margin-bottom: 10px;
+}
+
+.calc-input-val {
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: 15px;
+    font-variant-numeric: tabular-nums;
+}
+
+.calc-slider {
+    width: 100%;
+    height: 7px;
+    border-radius: 6px;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: #e2e8f0;
+}
+
+.calc-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--color-green);
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.calc-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+    background: var(--color-green-dark);
+}
+
+.calc-result-box {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-radius: var(--radius-lg, 16px);
+    padding: 30px 26px;
+    color: #ffffff;
+    box-shadow: var(--shadow-md);
+}
+
+.calc-result-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 8px;
+}
+
+.calc-result-main {
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 800;
+    color: #4ade80;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+/* ──────────────────────────────────────────────────────────
+   32. ACCESSIBILITY & PREFERS-REDUCED-MOTION
+   ────────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ──────────────────────────────────────────────────────────
+   33. GLOBAL HERO SECTION NORMALIZATION
+   Harmonizes hero height, padding, typography and breadcrumb across all routes
+   ────────────────────────────────────────────────────────── */
+
+.page-hero,
+header.page-hero,
+section.page-hero,
+.legal-hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0d2b5e 50%, var(--color-primary-dark) 100%) !important;
+    padding: 72px 0 54px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    color: #ffffff !important;
+}
+
+.page-hero-inner,
+.legal-hero-inner {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.breadcrumb,
+.page-hero .breadcrumb,
+.legal-hero .breadcrumb {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: rgba(255, 255, 255, 0.72) !important;
+    margin-bottom: 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-wrap: wrap !important;
+}
+
+.breadcrumb a,
+.page-hero .breadcrumb a,
+.legal-hero .breadcrumb a {
+    color: rgba(255, 255, 255, 0.75) !important;
+    text-decoration: none !important;
+    transition: color var(--transition-fast) !important;
+}
+
+.breadcrumb a:hover,
+.page-hero .breadcrumb a:hover,
+.legal-hero .breadcrumb a:hover {
+    color: #4ade80 !important;
+    text-decoration: underline !important;
+}
+
+.breadcrumb strong,
+.breadcrumb span {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+.page-hero-eyebrow,
+.hero-eyebrow,
+.section-label,
+.section-eyebrow {
+    color: #4ade80 !important;
+    font-size: 12.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 12px !important;
+    display: inline-block !important;
+}
+
+.page-hero h1,
+header.page-hero h1,
+.legal-hero h1 {
+    font-size: clamp(2.1rem, 4.2vw, 3.2rem) !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.025em !important;
+    margin-bottom: 16px !important;
+}
+
+.page-hero p,
+.legal-hero p {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-size: 16.5px !important;
+    line-height: 1.7 !important;
+}
+
+/* ──────────────────────────────────────────────────────────
+   34. FORM INPUTS & SELECTS ACCESSIBILITY
+   ────────────────────────────────────────────────────────── */
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    font-family: var(--font-body);
+    font-size: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md, 12px);
+    padding: 10px 14px;
+    color: var(--color-text);
+    background: #ffffff;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--color-blue);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.12);
+}
+
+/* ──────────────────────────────────────────────────────────
+   35. MOBILE-FIRST RESPONSIVENESS OVERRIDES
+   Ensures zero horizontal overflow and readable text at 320px–480px
+   ────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .page-hero,
+    header.page-hero,
+    section.page-hero,
+    .legal-hero {
+        padding: 52px 0 40px !important;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .lender-filters-wrapper {
+        padding: 18px 16px;
+    }
+
+    .filter-label {
+        min-width: 100%;
+        margin-bottom: 6px;
+    }
+
+    .table-responsive {
+        margin: 18px 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .page-hero h1,
+    header.page-hero h1,
+    .legal-hero h1 {
+        font-size: 1.85rem !important;
+    }
+
+    .section-title {
+        font-size: 1.65rem !important;
+    }
+
+    .calc-tabs-bar {
+        flex-direction: column;
+    }
+
+    .calc-panel-card {
+        padding: 24px 18px !important;
+    }
+}
+
 

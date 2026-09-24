@@ -457,5 +457,153 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('emiAmount') || document.getElementById('emiAmountRange')) {
         calculateEMI();
     }
+    initLenderFilters();
 });
+
+// --- Interactive Partner Lenders Filter Engine ---
+function initLenderFilters() {
+    const wrapper = document.getElementById('lenderFiltersWrapper');
+    if (!wrapper) return;
+
+    const searchInput = document.getElementById('lenderSearchInput');
+    const countBadge = document.getElementById('lenderCountBadge');
+    const clearBtn = document.getElementById('btnClearFilters');
+    const emptyState = document.getElementById('lendersEmptyState');
+    const filterBtns = wrapper.querySelectorAll('.lender-filter-btn');
+    const cards = document.querySelectorAll('.lender-info-card');
+    const categories = document.querySelectorAll('.lender-category');
+
+    let currentFilters = {
+        type: 'all',
+        security: 'all',
+        dest: 'all',
+        search: ''
+    };
+
+    // Pre-annotate cards
+    cards.forEach(card => {
+        const categoryTag = card.closest('.lender-category')?.querySelector('.category-tag')?.textContent.trim().toLowerCase() || '';
+        let type = 'other';
+        if (categoryTag.includes('nbfc')) type = 'nbfc';
+        else if (categoryTag.includes('private')) type = 'pvt';
+        else if (categoryTag.includes('public')) type = 'psu';
+        else if (categoryTag.includes('international')) type = 'intl';
+
+        card.dataset.type = type;
+
+        const text = card.textContent.toLowerCase();
+        let security = 'both';
+        if (text.includes('collateral & no-collateral') || text.includes('both')) security = 'both';
+        else if (text.includes('no-collateral') || text.includes('unsecured')) security = 'unsecured';
+        else if (text.includes('collateral')) security = 'secured';
+        card.dataset.security = security;
+
+        let dest = 'both';
+        if (type === 'intl') dest = 'abroad';
+        card.dataset.dest = dest;
+    });
+
+    function applyFilters() {
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+            const name = card.querySelector('.lic-name')?.textContent.toLowerCase() || '';
+            const tagline = card.querySelector('.lic-tagline')?.textContent.toLowerCase() || '';
+            const cardText = card.textContent.toLowerCase();
+
+            // Search filter
+            const matchesSearch = !currentFilters.search || name.includes(currentFilters.search) || tagline.includes(currentFilters.search) || cardText.includes(currentFilters.search);
+
+            // Type filter
+            const matchesType = currentFilters.type === 'all' || card.dataset.type === currentFilters.type;
+
+            // Security filter
+            let matchesSecurity = true;
+            if (currentFilters.security !== 'all') {
+                if (currentFilters.security === 'unsecured') {
+                    matchesSecurity = card.dataset.security === 'unsecured' || card.dataset.security === 'both';
+                } else if (currentFilters.security === 'secured') {
+                    matchesSecurity = card.dataset.security === 'secured' || card.dataset.security === 'both';
+                }
+            }
+
+            // Destination filter
+            let matchesDest = true;
+            if (currentFilters.dest !== 'all') {
+                if (currentFilters.dest === 'abroad') {
+                    matchesDest = true; // All lenders on VPS fund abroad
+                } else if (currentFilters.dest === 'domestic') {
+                    matchesDest = card.dataset.dest !== 'abroad'; // Global USD lenders only fund abroad
+                }
+            }
+
+            if (matchesSearch && matchesType && matchesSecurity && matchesDest) {
+                card.style.display = '';
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // Hide empty category containers
+        categories.forEach(cat => {
+            const visibleInCat = cat.querySelectorAll('.lender-info-card:not([style*="display: none"])');
+            cat.style.display = visibleInCat.length > 0 ? '' : 'none';
+        });
+
+        // Update count badge & empty state
+        if (countBadge) {
+            countBadge.textContent = `Showing ${visibleCount} of ${cards.length} Lenders`;
+        }
+        if (emptyState) {
+            emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        // Show/hide clear button
+        const isFiltered = currentFilters.type !== 'all' || currentFilters.security !== 'all' || currentFilters.dest !== 'all' || currentFilters.search !== '';
+        if (clearBtn) {
+            clearBtn.style.display = isFiltered ? 'inline-block' : 'none';
+        }
+    }
+
+    // Button click listeners
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const group = this.dataset.filterGroup;
+            const val = this.dataset.filterVal;
+
+            wrapper.querySelectorAll(`.lender-filter-btn[data-filter-group="${group}"]`).forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            currentFilters[group] = val;
+            applyFilters();
+        });
+    });
+
+    // Search input listener
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            currentFilters.search = this.value.trim().toLowerCase();
+            applyFilters();
+        });
+    }
+
+    // Clear filters
+    function resetLenderFilters() {
+        currentFilters = { type: 'all', security: 'all', dest: 'all', search: '' };
+        if (searchInput) searchInput.value = '';
+        wrapper.querySelectorAll('.lender-filter-btn').forEach(btn => {
+            if (btn.dataset.filterVal === 'all') btn.classList.add('active');
+            else btn.classList.remove('active');
+        });
+        applyFilters();
+    }
+
+    if (clearBtn) {
+        clearBtn.addEventListener('click', resetLenderFilters);
+    }
+
+    window.resetLenderFilters = resetLenderFilters;
+}
+
 

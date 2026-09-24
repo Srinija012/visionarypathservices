@@ -977,7 +977,55 @@
                 <p class="section-sub">Our network of trusted, RBI-regulated lenders ensures you always get matched to the most suitable loan option for your profile.</p>
             </div>
 
-            
+            <!-- INTERACTIVE LENDER FILTER ENGINE -->
+            <div class="lender-filters-wrapper" id="lenderFiltersWrapper">
+                <div class="lender-filters-top">
+                    <div class="lender-search-box">
+                        <i class="fas fa-search lender-search-icon" aria-hidden="true"></i>
+                        <input type="text" id="lenderSearchInput" placeholder="Search by bank or NBFC name..." aria-label="Search partner lenders">
+                    </div>
+                    <div class="lender-results-status">
+                        <span class="lender-count-badge" id="lenderCountBadge">Showing 20 of 20 Lenders</span>
+                        <button type="button" class="btn-clear-filters" id="btnClearFilters" style="display:none;">Clear Filters</button>
+                    </div>
+                </div>
+
+                <div class="filter-row">
+                    <span class="filter-label">Institution:</span>
+                    <div class="filter-group">
+                        <button type="button" class="lender-filter-btn active" data-filter-group="type" data-filter-val="all">All Lenders</button>
+                        <button type="button" class="lender-filter-btn" data-filter-group="type" data-filter-val="psu">Public Banks (PSU)</button>
+                        <button type="button" class="lender-filter-btn" data-filter-group="type" data-filter-val="pvt">Private Banks</button>
+                        <button type="button" class="lender-filter-btn" data-filter-group="type" data-filter-val="nbfc">Specialist NBFCs</button>
+                        <button type="button" class="lender-filter-btn" data-filter-group="type" data-filter-val="intl">Global / USD Lenders</button>
+                    </div>
+                </div>
+
+                <div class="filter-row">
+                    <span class="filter-label">Security:</span>
+                    <div class="filter-group">
+                        <button type="button" class="lender-filter-btn active" data-filter-group="security" data-filter-val="all">All Security Types</button>
+                        <button type="button" class="lender-filter-btn" data-filter-group="security" data-filter-val="unsecured">No Collateral (Unsecured)</button>
+                        <button type="button" class="lender-filter-btn" data-filter-group="security" data-filter-val="secured">With Collateral (Secured)</button>
+                    </div>
+                </div>
+
+                <div class="filter-row">
+                    <span class="filter-label">Destination:</span>
+                    <div class="filter-group">
+                        <button type="button" class="lender-filter-btn active" data-filter-group="dest" data-filter-val="all">All Destinations</button>
+                        <button type="button" class="lender-filter-btn" data-filter-group="dest" data-filter-val="abroad">Abroad / Global</button>
+                        <button type="button" class="lender-filter-btn" data-filter-group="dest" data-filter-val="domestic">India (Domestic)</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="lendersEmptyState" class="lenders-empty-state" style="display: none;">
+                <i class="fas fa-building-columns"></i>
+                <h3>No Matching Lenders Found</h3>
+                <p>We couldn't find a lender matching your exact filter combination. Speak to our senior advisory team for tailored profile matching.</p>
+                <button type="button" class="btn btn-primary" onclick="resetLenderFilters(); openPopup();">Speak to Advisor Free <i class="fas fa-arrow-right"></i></button>
+            </div>
 
             <div class="lender-category">
                 <div class="category-header">
