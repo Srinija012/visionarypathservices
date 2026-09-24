@@ -778,7 +778,7 @@ template = """<!DOCTYPE html>
             <div class="container footer-bottom-inner">
                 <span>© 2026 Visionary Path Services. All Rights Reserved.</span>
                 <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a> | <a href="#">Disclaimer</a>
+                    <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../terms-and-conditions.html">Terms &amp; Conditions</a> | <a href="../disclaimer.html">Disclaimer</a>
                 </div>
             </div>
         </div>
