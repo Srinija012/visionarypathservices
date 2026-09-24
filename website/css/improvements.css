@@ -803,3 +803,47 @@ textarea:focus-visible {
 ::-webkit-scrollbar-thumb:hover {
     background: #94a3b8;
 }
+
+/* ──────────────────────────────────────────────────────────
+   27. LENDER DETAIL CARDS (Partner Lenders Page)
+   Ensures sharp typography, contrast & touch targets
+   ────────────────────────────────────────────────────────── */
+
+.lic-name {
+    font-size: 1.05rem !important;
+    color: var(--navy) !important;
+}
+
+.lic-tagline {
+    font-size: 0.8rem !important;
+    color: #475569 !important;
+}
+
+.lic-quote {
+    font-size: 0.84rem !important;
+    color: #1e3a5f !important;
+    line-height: 1.45 !important;
+}
+
+.lic-rate-pill {
+    font-size: 0.84rem !important;
+    letter-spacing: 0.2px !important;
+}
+
+.lic-label {
+    font-size: 0.88rem !important;
+    color: #334155 !important;
+    font-weight: 600 !important;
+}
+
+.lic-value {
+    font-size: 0.9rem !important;
+    color: #0b2545 !important;
+    font-weight: 700 !important;
+}
+
+.lic-cta {
+    font-size: 0.95rem !important;
+    min-height: 44px !important;
+}
+

@@ -296,12 +296,12 @@
         /* ── LENDER DETAIL CARDS (Poonawalla style) ── */
         .lenders-info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
-            gap: 22px;
+            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+            gap: 24px;
         }
         .lender-info-card {
             background: #fff;
-            border-radius: 20px;
+            border-radius: 22px;
             border: 1.5px solid #e4ecfb;
             overflow: hidden;
             display: flex;
@@ -316,31 +316,46 @@
         }
         /* header gradient band */
         .lic-header {
-            background: linear-gradient(140deg, #eaf2ff 0%, #f4f9ff 55%, #e8f6f3 100%);
-            padding: 18px 20px 15px;
+            background: linear-gradient(180deg, #d8ebfd 0%, #edf6fd 60%, #e1effd 100%);
+            padding: 20px 20px 18px;
             border-bottom: 1.5px solid #dce9f7;
             position: relative;
+            overflow: hidden;
+        }
+        .lic-illustration {
+            position: absolute;
+            right: 8px;
+            top: 10px;
+            width: 100px;
+            height: 90px;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .lic-header-content {
+            position: relative;
+            z-index: 2;
+            max-width: calc(100% - 90px);
         }
         .lic-brand {
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 13px;
+            margin-bottom: 8px;
         }
         .lic-logo-wrap {
-            width: 54px;
-            height: 38px;
+            width: 52px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: #fff;
-            border-radius: 9px;
+            border-radius: 10px;
             padding: 4px 6px;
             flex-shrink: 0;
-            box-shadow: 0 2px 8px rgba(13,43,94,0.11);
+            box-shadow: 0 2px 8px rgba(13,43,94,0.10);
         }
         .lic-logo {
-            max-height: 28px;
+            max-height: 30px;
             max-width: 44px;
             object-fit: contain;
             display: block;
@@ -348,7 +363,7 @@
         .lic-name {
             color: var(--navy);
             font-weight: 800;
-            font-size: 0.96rem;
+            font-size: 0.98rem;
             line-height: 1.25;
         }
         .lic-tagline {
@@ -357,80 +372,99 @@
             font-weight: 500;
             margin-top: 2px;
         }
-        /* dark navy rate pill */
+        .lic-quote {
+            color: #27496d;
+            font-size: 0.76rem;
+            font-weight: 500;
+            line-height: 1.35;
+            margin: 8px 0 12px;
+        }
+        /* dark royal navy rate pill */
         .lic-rate-pill {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: var(--navy);
+            background: #003882;
             color: #fff;
-            font-size: 0.79rem;
+            font-size: 0.8rem;
             font-weight: 700;
-            padding: 7px 15px;
+            padding: 7px 16px;
             border-radius: 50px;
-            letter-spacing: 0.2px;
+            letter-spacing: 0.1px;
+            box-shadow: 0 4px 12px rgba(0,56,130,0.22);
+            white-space: nowrap;
         }
         .lic-rate-pill i { color: #6ee7b7; font-size: 0.72rem; }
         /* detail rows */
         .lic-body {
-            padding: 6px 20px 4px;
+            padding: 8px 20px 4px;
             flex: 1;
         }
         .lic-row {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 10px 0;
-            border-bottom: 1px solid #f1f5fb;
+            gap: 12px;
+            padding: 11px 0;
+            border-bottom: 1px solid #f0f4f9;
         }
         .lic-row:last-child { border-bottom: none; }
         .lic-icon {
-            width: 30px;
-            height: 30px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
-            background: #eef4fd;
+            background: #e0edfe;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            color: var(--navy);
-            font-size: 0.72rem;
+            color: #0284c7;
+            font-size: 0.92rem;
         }
         .lic-label {
-            color: #6b8ab5;
-            font-size: 0.79rem;
-            font-weight: 500;
+            color: #4b627f;
+            font-size: 0.84rem;
+            font-weight: 600;
             white-space: nowrap;
-            flex: 0 0 110px;
+            flex: 0 0 125px;
         }
         .lic-value {
-            color: var(--navy);
+            color: #0b2545;
             font-weight: 700;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-align: right;
             flex: 1;
             line-height: 1.35;
         }
-        /* CTA button */
+        /* CTA button inside footer */
+        .lic-footer {
+            padding: 12px 20px 20px;
+        }
         .lic-cta {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 9px;
-            background: #1a56db;
+            gap: 10px;
+            background: #0060cc;
             color: #fff;
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            font-size: 0.91rem;
+            font-size: 0.93rem;
             border: none;
-            padding: 15px 20px;
+            border-radius: 12px;
+            padding: 13px 20px;
             cursor: pointer;
-            transition: background 0.2s ease, gap 0.2s ease;
+            transition: all 0.25s ease;
             width: 100%;
+            box-shadow: 0 4px 14px rgba(0,96,204,0.25);
             letter-spacing: 0.1px;
         }
-        .lic-cta:hover { background: #1644b0; gap: 13px; }
-        .lic-cta i { font-size: 0.85rem; }
+        .lic-cta:hover {
+            background: #004eb3;
+            box-shadow: 0 6px 18px rgba(0,96,204,0.35);
+            transform: translateY(-1px);
+            gap: 14px;
+        }
+        .lic-cta i { font-size: 0.9rem; }
 
         /* ── STATS BAR ────────────────────────── */
         .stats-bar { background: var(--navy); padding: 52px 0; }
@@ -943,142 +977,1416 @@
                 <p class="section-sub">Our network of trusted, RBI-regulated lenders ensures you always get matched to the most suitable loan option for your profile.</p>
             </div>
 
-            <!-- NBFCs -->
+            
+
             <div class="lender-category">
                 <div class="category-header">
                     <span class="category-tag ct-green">NBFCs</span>
                     <div class="category-line"></div>
                 </div>
-                <div class="lenders-grid">
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/credila.webp" alt="Credila" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">HDFC Credila</div>
-                        <div class="lender-type">NBFC · Education Specialist</div>
+                <div class="lenders-info-grid">
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/credila.webp" alt="HDFC Credila" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">HDFC Credila</div>
+                                        <div class="lic-tagline">NBFC · Education Specialist</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Customized loan solutions crafted exclusively for higher education.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 10.5%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 1.5 Cr</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">1% of Loan Amount</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 10 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Collateral & No-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 1 Year</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/avanse.webp" alt="AVANSE" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">AVANSE</div>
-                        <div class="lender-type">NBFC · Study Abroad Leader</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/avanse.webp" alt="AVANSE" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">AVANSE</div>
+                                        <div class="lic-tagline">NBFC · Study Abroad Leader</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Fast-track financing for premier global and domestic universities.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 11%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 1 Cr</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">0.5% – 1% + GST</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 10 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Collateral & No-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 6 Months</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/auxilo.webp" alt="AUXILO" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">AUXILO</div>
-                        <div class="lender-type">NBFC · Higher Education</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/auxilo.webp" alt="AUXILO" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">AUXILO</div>
+                                        <div class="lic-tagline">NBFC · Higher Education</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Proactive student financing with dynamic structuring and quick approvals.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 11%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 75 Lakh</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">0.5% – 1.5% + GST</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 10 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Collateral & No-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 6 Months</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/poonawalla.webp" alt="Poonawalla Fincorp" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">Poonawalla Fincorp</div>
-                        <div class="lender-type">NBFC · Personal &amp; Education</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/poonawalla.webp" alt="POONAWALLA FINCORP" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">POONAWALLA FINCORP</div>
+                                        <div class="lic-tagline">Ideas Realized</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Financial support designed to help turn education plans into reality.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 9.5%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 2 Cr</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">0.5% – 1% of Loan Amount<br>+ 18% GST</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 15 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Collateral & No-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 1 Year</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/tata-capital.webp" alt="TATA Capital" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">TATA Capital</div>
-                        <div class="lender-type">NBFC · Diversified Lending</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/tata-capital.webp" alt="TATA Capital" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">TATA Capital</div>
+                                        <div class="lic-tagline">NBFC · Diversified Lending</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Trusted Tata lineage offering transparent and flexible student capital.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 11.5%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 75 Lakh</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">2% – 2.5% + GST</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 7 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Collateral & No-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 6 Months</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/incred.webp" alt="InCred" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">InCred</div>
-                        <div class="lender-type">NBFC · Digital-First</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/incred.webp" alt="InCred" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">InCred</div>
+                                        <div class="lic-tagline">NBFC · Digital-First</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Modern tech-driven loans tailored for global aspirational scholars.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 11%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 75 Lakh</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">1% – 2% + GST</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 10 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Collateral & No-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 6 Months</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/kuhoo.png" alt="Kuhoo" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">Kuhoo</div>
-                        <div class="lender-type">NBFC · Student Loans</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/kuhoo.png" alt="Kuhoo" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">Kuhoo</div>
+                                        <div class="lic-tagline">NBFC · Student Loans</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Student-centric funding engineered for merit and future earning potential.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 11.5%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 75 Lakh</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">1% + GST</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 10 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Non-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 6 Months</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Private Banks -->
             <div class="lender-category">
                 <div class="category-header">
                     <span class="category-tag ct-navy">Private Banks</span>
                     <div class="category-line"></div>
                 </div>
-                <div class="lenders-grid">
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/icici-bank.webp" alt="ICICI Bank" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">ICICI Bank</div>
-                        <div class="lender-type">Private Bank</div>
+                <div class="lenders-info-grid">
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/icici-bank.webp" alt="ICICI Bank" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">ICICI Bank</div>
+                                        <div class="lic-tagline">Private Bank</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Comprehensive education funding with competitive rates and global reach.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 9.5%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 2 Cr</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">0.5% – 1% of Loan Amount</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 10 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Collateral & No-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 1 Year</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/idfc-first-bank.webp" alt="IDFC FIRST Bank" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">IDFC FIRST Bank</div>
-                        <div class="lender-type">Private Bank</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/idfc-first-bank.webp" alt="IDFC FIRST Bank" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">IDFC FIRST Bank</div>
+                                        <div class="lic-tagline">Private Bank</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Zero-friction digital sanctions with zero pre-payment penalties.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 9.5%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 1 Cr</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">Nil – 1%</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 10 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Collateral & No-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 6 Months</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/yes-bank.png" alt="YES BANK" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">YES BANK</div>
-                        <div class="lender-type">Private Bank</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/yes-bank.png" alt="YES BANK" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">YES BANK</div>
+                                        <div class="lic-tagline">Private Bank</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Tailored higher education financing for premier Indian and global institutions.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 10.5%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 1.5 Cr</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">0.5% – 1%</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 10 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Collateral & No-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 1 Year</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/axis-bank.webp" alt="AXIS BANK" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">AXIS BANK</div>
-                        <div class="lender-type">Private Bank</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/axis-bank.webp" alt="AXIS BANK" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">AXIS BANK</div>
+                                        <div class="lic-tagline">Private Bank</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Affordable rate structures with high sanction limits and 80E tax benefits.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 9.75%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 75 Lakh</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">0.5% – 1%</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 15 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Collateral & No-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 6 Months</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Public Banks -->
             <div class="lender-category">
                 <div class="category-header">
                     <span class="category-tag ct-slate">Public Sector Banks</span>
                     <div class="category-line"></div>
                 </div>
-                <div class="lenders-grid">
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/sbi.webp" alt="SBI" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">State Bank of India</div>
-                        <div class="lender-type">Public Bank · Largest in India</div>
+                <div class="lenders-info-grid">
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/sbi.webp" alt="State Bank of India" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">State Bank of India</div>
+                                        <div class="lic-tagline">Public Bank · Largest in India</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Nationwide trusted funding with the lowest sovereign interest rates.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 8.15%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 1.5 Cr</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">NIL (Study Abroad)</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 15 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Collateral & No-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 1 Year</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/bank-of-baroda.png" alt="Bank of Baroda" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">Bank of Baroda</div>
-                        <div class="lender-type">Public Bank</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/bank-of-baroda.png" alt="Bank of Baroda" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">Bank of Baroda</div>
+                                        <div class="lic-tagline">Public Bank</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Premier global education loans with concessional rates for top universities.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 8.15%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 80 Lakh</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">1% (max INR 10,000)</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 15 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Collateral & No-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 1 Year</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/pnb.webp" alt="PNB" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">Punjab National Bank</div>
-                        <div class="lender-type">Public Bank</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/pnb.webp" alt="Punjab National Bank" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">Punjab National Bank</div>
+                                        <div class="lic-tagline">Public Bank</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Pioneering public banking support for technical and overseas courses.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 8.55%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 1 Cr</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">1% (max INR 10,000)</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 15 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Collateral & No-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 1 Year</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/canara-bank.svg" alt="Canara Bank" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">Canara Bank</div>
-                        <div class="lender-type">Public Bank</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/canara-bank.svg" alt="Canara Bank" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">Canara Bank</div>
+                                        <div class="lic-tagline">Public Bank</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Transparent public sector education loan with zero processing charges.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 8.55%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 40 Lakh</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">NIL</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 15 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Collateral & No-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 1 Year</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/union-bank.webp" alt="Union Bank of India" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">Union Bank of India</div>
-                        <div class="lender-type">Public Bank</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/union-bank.webp" alt="Union Bank of India" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">Union Bank of India</div>
+                                        <div class="lic-tagline">Public Bank</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Affordable academic financing with flexible repayment and prompt sanction.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 8.4%</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-sack-dollar"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to INR 40 Lakh</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">0.5%</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 15 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">Collateral & No-collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">Course Duration + 1 Year</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Global & Dollar Lenders -->
             <div class="lender-category">
                 <div class="category-header">
-                    <span class="category-tag ct-green">International &amp; Dollar Lenders</span>
+                    <span class="category-tag ct-green">International & Dollar Lenders</span>
                     <div class="category-line"></div>
                 </div>
-                <div class="lenders-grid">
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/prodigy-finance.webp" alt="Prodigy Finance" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">Prodigy Finance</div>
-                        <div class="lender-type">Global · No Cosigner / No Collateral</div>
+                <div class="lenders-info-grid">
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/prodigy-finance.webp" alt="Prodigy Finance" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">Prodigy Finance</div>
+                                        <div class="lic-tagline">Global · No Cosigner / No Collateral</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Borderless loans funded in USD/GBP without co-signer or property collateral.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 11.5% (USD)</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-dollar-sign"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to ,000</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">2.5%</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 10 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">No Collateral / No Cosigner</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">During Course</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/mpower-financing.png" alt="MPOWER Financing" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">MPOWER Financing</div>
-                        <div class="lender-type">Global · US &amp; Canada Study</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/mpower-financing.png" alt="MPOWER Financing" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">MPOWER Financing</div>
+                                        <div class="lic-tagline">Global · US & Canada Study</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Fixed-rate dollar loans empowering international students in US and Canada.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 12.99% (USD)</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-dollar-sign"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">Up to ,000</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">5%</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 10 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">No Collateral / No Cosigner</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">During Course</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/sallie-mae.svg" alt="Sallie Mae" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">Sallie Mae</div>
-                        <div class="lender-type">Global Leader in Student Financing</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/sallie-mae.svg" alt="Sallie Mae" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">Sallie Mae</div>
+                                        <div class="lic-tagline">Global Leader in Student Financing</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“US market leader providing flexible repayment plans and competitive terms.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 4.5% (USD)</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-dollar-sign"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">100% of Cost</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">None</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 15 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">No Collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">During Course</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="lender-card">
-                        <div class="lender-logo-wrap"><img src="../images/logos/earnest.svg" alt="Earnest" class="lender-logo-img" loading="lazy"></div>
-                        <div class="lender-name">Earnest</div>
-                        <div class="lender-type">Transparent Student Loans</div>
+
+                    <div class="lender-info-card">
+                        <div class="lic-header">
+                            <div class="lic-illustration" aria-hidden="true">
+    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
+        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
+        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
+        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
+        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
+        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
+        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
+        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
+        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
+        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
+        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
+        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
+        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
+        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
+        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
+        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
+        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
+        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
+    </svg>
+</div>
+                            <div class="lic-header-content">
+                                <div class="lic-brand">
+                                    <div class="lic-logo-wrap"><img src="../images/logos/earnest.svg" alt="Earnest" class="lic-logo" loading="lazy"></div>
+                                    <div>
+                                        <div class="lic-name">Earnest</div>
+                                        <div class="lic-tagline">Transparent Student Loans</div>
+                                    </div>
+                                </div>
+                                <div class="lic-quote">“Fintech-powered student borrowing with 9-month post-grad grace periods.”</div>
+                                <div class="lic-rate-pill">Interest rate starting at 4.45% (USD)</div>
+                            </div>
+                        </div>
+                        <div class="lic-body">
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-dollar-sign"></i></div>
+                                <div class="lic-label">Loan Amount:</div>
+                                <div class="lic-value">100% of Cost</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
+                                <div class="lic-label">Processing Fee:</div>
+                                <div class="lic-value">None</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
+                                <div class="lic-label">Tenure:</div>
+                                <div class="lic-value">Up to 15 Years</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
+                                <div class="lic-label">Loan Type:</div>
+                                <div class="lic-value">No Collateral</div>
+                            </div>
+                            <div class="lic-row">
+                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
+                                <div class="lic-label">Moratorium Period:</div>
+                                <div class="lic-value">During Course</div>
+                            </div>
+                        </div>
+                        <div class="lic-footer">
+                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
