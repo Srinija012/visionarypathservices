@@ -9,6 +9,12 @@
     <title>Services – Visionary Path Services</title>
     <meta name="description" content="Explore our education loan services: Study Abroad, Domestic Universities, MBBS financing, and Forex assistance with zero hidden fees.">
     <link rel="canonical" href="https://www.visionarypathservices.com/pages/services.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Education Loan Services – Visionary Path Services">
+    <meta property="og:description" content="Explore end-to-end education loan services for domestic studies, study abroad, MBBS degrees, and forex assistance with zero service fees.">
+    <meta property="og:url" content="https://www.visionarypathservices.com/pages/services.html">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
@@ -20,14 +26,14 @@
         .page-hero { background: linear-gradient(135deg, var(--navy) 0%, #1a4a8a 50%, var(--navy) 100%); padding: 120px 0 60px; text-align: center; position: relative; overflow: hidden; }
         .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600&q=80') center/cover; opacity: 0.13; }
         .page-hero-inner { position: relative; z-index: 1; }
-        .page-hero-eyebrow { color: var(--green); font-size: 0.85rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+        .page-hero-eyebrow { color: var(--green); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px; }
         .page-hero h1 { color: var(--white); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 16px; }
         .page-hero p { color: rgba(255,255,255,0.82); font-size: 1.1rem; max-width: 580px; margin: 0 auto 30px; }
         .hero-tabs { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
-        .hero-tab { background: rgba(255,255,255,0.12); border: 1.5px solid rgba(255,255,255,0.25); color: var(--white); padding: 10px 22px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.3s; text-decoration: none; }
+        .hero-tab { background: rgba(255,255,255,0.12); border: 1.5px solid rgba(255,255,255,0.25); color: var(--white); padding: 10px 22px; border-radius: 10px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.3s; text-decoration: none; }
         .hero-tab:hover, .hero-tab.active { background: var(--green); border-color: var(--green); color: var(--white); }
         .services-section { padding: 80px 0; background: var(--bg-card); }
-        .section-label { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+        .section-label { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
         .section-title { color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 14px; }
         .section-sub { color: var(--text-muted); font-size: 1rem; max-width: 600px; margin: 0 auto 50px; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; }
@@ -54,7 +60,7 @@
         .loan-col ul { list-style: none; padding: 0; margin: 0; }
         .loan-col ul li { color: rgba(255,255,255,0.82); font-size: 0.9rem; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 8px; }
         .loan-col ul li::before { content: '›'; color: var(--green); font-weight: 700; font-size: 1.1rem; }
-        .cta-strip { background: linear-gradient(90deg, var(--green), #0d7a3a); padding: 50px 0; text-align: center; }
+        .cta-strip { background: linear-gradient(135deg, var(--navy) 0%, #11284a 100%); padding: 70px 0; text-align: center; }
         .cta-strip h2 { color: var(--white); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; margin-bottom: 10px; }
         .cta-strip p { color: rgba(255,255,255,0.85); margin-bottom: 28px; }
         .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
@@ -63,6 +69,7 @@
 <body>
 
         <!-- VPS_NAVBAR_START -->
+<a href="#mainContent" class="skip-link">Skip to main content</a>
 <!-- TOPBAR -->
 <div class="top-bar">
     <div class="container top-bar-inner">
@@ -92,7 +99,7 @@
         </a>
         <ul class="nav-links" id="navLinks">
             <li class="has-dropdown services-dropdown">
-                <a href="../pages/services.html" class="nav-link-services active">Services <i class="fas fa-chevron-down"></i></a>
+                <a href="../pages/services.html" class="nav-link-services active" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="dropdown mega-dropdown">
                     <div class="mega-body">
                         <!-- Left: Loan Programs -->
@@ -200,7 +207,7 @@
             <li><a href="../pages/partner-with-us.html" class="nav-link-partner-with-us">Partner With Us</a></li>
             <!-- More dropdown -->
             <li class="has-dropdown">
-                <a href="#" class="nav-link-more">More <i class="fas fa-chevron-down"></i></a>
+                <a href="#" class="nav-link-more" aria-haspopup="true" aria-expanded="false">More <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="more-dropdown">
                     <a href="../pages/about.html" class="more-dropdown-item">
                         <i class="fas fa-info-circle"></i> About Us
@@ -234,8 +241,9 @@
 <!-- VPS_NAVBAR_END -->
 
     <!-- PAGE HERO -->
-    <section class="page-hero">
+    <section class="page-hero" id="mainContent">
         <div class="container page-hero-inner">
+            <nav aria-label="Breadcrumb" class="breadcrumb"><a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <span>Services</span></nav>
             <p class="page-hero-eyebrow" data-aos="fade-up">WHAT WE OFFER</p>
             <h1 data-aos="fade-up" data-aos-delay="100">Our <span class="green-text">Services</span></h1>
             <p data-aos="fade-up" data-aos-delay="200">Comprehensive education loan guidance tailored to your academic goals and financial needs.</p>
@@ -478,7 +486,7 @@
 <!-- VPS_FOOTER_END -->
 
     <!-- POPUP INQUIRY FORM (Industry-Grade Edition) -->
-    <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
+    <div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle" onclick="closePopupOutside(event)">
         <div class="popup-modal">
             <button class="popup-close" onclick="closePopup()" aria-label="Close Popup">✕</button>
             <div class="popup-left">
@@ -487,7 +495,7 @@
                         <span class="badge-dot"></span>
                         <span>100% FREE CONSULTATION</span>
                     </div>
-                    <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
+                    <h3 class="popup-title" id="popupTitle">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
                     <p class="popup-left-desc">Compare pre-approved loan options from 15+ top banks &amp; NBFCs with zero service fees.</p>
                     <div class="popup-features-list">
                         <div class="popup-feature-item">

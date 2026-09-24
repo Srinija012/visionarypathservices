@@ -3513,14 +3513,14 @@ html, body { overflow-x: hidden; }
     border: 1px solid #bfdbfe;
 }
 .badge-pvt {
-    background: #fdf2f8;
-    color: #9d174d;
-    border: 1px solid #fbcfe8;
+    background: #f1f5f9;
+    color: #0a1d37;
+    border: 1px solid #cbd5e1;
 }
 .badge-intl {
-    background: #f0fdfa;
-    color: #0f766e;
-    border: 1px solid #99f6e4;
+    background: #eff6ff;
+    color: #1a56db;
+    border: 1px solid #bfdbfe;
 }
 
 /* Lenders Grid Page Logos */

@@ -9,6 +9,12 @@
     <title>Domestic Education Loans – Visionary Path Services</title>
     <meta name="description" content="Affordable education loans for premier Indian colleges, IITs, IIMs, and central universities. Compare options with 15+ partner lenders.">
     <link rel="canonical" href="https://www.visionarypathservices.com/pages/domestic-loans.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Domestic Education Loans – Visionary Path Services">
+    <meta property="og:description" content="Compare education loans for premier Indian institutions including IITs, IIMs, and universities with lowest interest rates and 100% free guidance.">
+    <meta property="og:url" content="https://www.visionarypathservices.com/pages/domestic-loans.html">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
@@ -20,11 +26,11 @@
         .page-hero { background: linear-gradient(135deg, var(--navy) 0%, #1a3a7e 60%, var(--navy) 100%); padding: 120px 0 70px; text-align: center; position: relative; overflow: hidden; }
         .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1600&q=80') center/cover; opacity: 0.12; }
         .page-hero-inner { position: relative; z-index: 1; }
-        .page-hero-eyebrow { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+        .page-hero-eyebrow { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px; }
         .page-hero h1 { color: var(--white); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 16px; }
         .page-hero p { color: rgba(255,255,255,0.82); font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; line-height: 1.7; }
         .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-        .section-label { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+        .section-label { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
         .section-title { color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 14px; }
         .section-sub { color: var(--text-muted); font-size: 1rem; max-width: 620px; margin: 0 auto 50px; line-height: 1.7; }
         .overview-section { padding: 80px 0; background: var(--bg-card); }
@@ -39,17 +45,53 @@
         .check-list li i { color: var(--green); margin-top: 3px; flex-shrink: 0; }
         .loan-options-section { padding: 80px 0; background: var(--white); }
         .loan-options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 50px; }
-        .loan-option-card { border-radius: 18px; padding: 36px 28px; transition: all 0.3s; position: relative; overflow: hidden; }
-        .loan-option-card.public { background: linear-gradient(135deg, var(--navy), #1a4a8a); }
-        .loan-option-card.private { background: linear-gradient(135deg, var(--green), #0d7a3a); }
-        .loan-option-card.nbfc { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
-        .loan-option-card:hover { transform: translateY(-8px); box-shadow: 0 20px 56px rgba(0,0,0,0.25); }
-        .loan-option-card .card-icon { font-size: 2.4rem; margin-bottom: 20px; }
-        .loan-option-card h3 { color: var(--white); font-size: 1.25rem; font-weight: 700; margin-bottom: 14px; }
-        .loan-option-card p { color: rgba(255,255,255,0.85); font-size: 0.92rem; line-height: 1.65; margin-bottom: 20px; }
+        .loan-option-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 36px 28px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-xs);
+            text-align: left;
+        }
+        .loan-option-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            border-radius: 16px 16px 0 0;
+        }
+        .loan-option-card.public::before { background: var(--navy); }
+        .loan-option-card.private::before { background: var(--blue); }
+        .loan-option-card.nbfc::before { background: var(--green); }
+        .loan-option-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: #cbd5e1;
+        }
+        .loan-option-card .card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 18px;
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .loan-option-card.public .card-icon { color: var(--navy); background: #eff6ff; }
+        .loan-option-card.private .card-icon { color: var(--blue); background: #eff6ff; }
+        .loan-option-card.nbfc .card-icon { color: var(--green); background: #ecfdf5; }
+        .loan-option-card h3 { color: var(--navy); font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; }
+        .loan-option-card p { color: #475569; font-size: 0.94rem; line-height: 1.65; margin-bottom: 20px; }
         .loan-option-card ul { list-style: none; padding: 0; margin: 0; }
-        .loan-option-card ul li { color: rgba(255,255,255,0.9); font-size: 0.88rem; padding: 5px 0; display: flex; align-items: center; gap: 8px; }
-        .loan-option-card ul li::before { content: '✓'; font-weight: 700; }
+        .loan-option-card ul li { color: #334155; font-size: 0.9rem; padding: 6px 0; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #f1f5f9; }
+        .loan-option-card ul li:last-child { border-bottom: none; }
+        .loan-option-card ul li::before { content: '✓'; font-weight: 700; color: var(--green); }
         .features-section { padding: 80px 0; background: var(--bg-card); }
         .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 50px; }
         .feature-card { background: var(--white); border-radius: 16px; padding: 28px 22px; text-align: center; border: 1.5px solid #e8f0fe; transition: all 0.3s; }
@@ -66,6 +108,7 @@
 <body>
 
         <!-- VPS_NAVBAR_START -->
+<a href="#mainContent" class="skip-link">Skip to main content</a>
 <!-- TOPBAR -->
 <div class="top-bar">
     <div class="container top-bar-inner">
@@ -95,7 +138,7 @@
         </a>
         <ul class="nav-links" id="navLinks">
             <li class="has-dropdown services-dropdown">
-                <a href="../pages/services.html" class="nav-link-services">Services <i class="fas fa-chevron-down"></i></a>
+                <a href="../pages/services.html" class="nav-link-services active" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="dropdown mega-dropdown">
                     <div class="mega-body">
                         <!-- Left: Loan Programs -->
@@ -203,7 +246,7 @@
             <li><a href="../pages/partner-with-us.html" class="nav-link-partner-with-us">Partner With Us</a></li>
             <!-- More dropdown -->
             <li class="has-dropdown">
-                <a href="#" class="nav-link-more">More <i class="fas fa-chevron-down"></i></a>
+                <a href="#" class="nav-link-more" aria-haspopup="true" aria-expanded="false">More <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="more-dropdown">
                     <a href="../pages/about.html" class="more-dropdown-item">
                         <i class="fas fa-info-circle"></i> About Us
@@ -237,8 +280,9 @@
 <!-- VPS_NAVBAR_END -->
 
     <!-- HERO -->
-    <section class="page-hero">
+    <section class="page-hero" id="mainContent">
         <div class="container page-hero-inner">
+            <nav aria-label="Breadcrumb" class="breadcrumb"><a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <a href="services.html">Services</a> <span class="breadcrumb-sep">/</span> <span>Domestic Education Loans</span></nav>
             <p class="page-hero-eyebrow" data-aos="fade-up">STUDY IN INDIA</p>
             <h1 data-aos="fade-up" data-aos-delay="100">Domestic <span style="color:var(--green)">Education Loans</span></h1>
             <p data-aos="fade-up" data-aos-delay="200">Financial support for higher education within India — guidance through public banks, private banks, and NBFCs tailored to your academic profile.</p>
@@ -317,6 +361,66 @@
                         <li>Credila, Avanse, Auxilo, InCred</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOMESTIC LOANS COMPARISON TABLE -->
+    <section class="section" style="padding: 72px 0; background: #ffffff;">
+        <div class="container" style="text-align:center">
+            <p class="section-label">INSTITUTIONAL BENCHMARKS</p>
+            <h2 class="section-title">Domestic Education Loan <span style="color:var(--green)">Schemes Compared</span></h2>
+            <p class="section-sub">Understand the key differences between premier institute schemes, public bank norms, and NBFC financing.</p>
+            
+            <div class="comparison-table-wrapper" data-aos="fade-up">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Premier Colleges (IIT/IIM/NIT)</th>
+                            <th>Standard Public Bank (Vidya Lakshmi)</th>
+                            <th>Specialist Education NBFCs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-cell-highlight">Eligible Institutions</td>
+                            <td>Top 150+ NIRF Ranked (IITs, IIMs, AIIMS, NLUs, BITS)</td>
+                            <td>All UGC / AICTE recognized colleges in India</td>
+                            <td>Approved private universities, tech institutes &amp; bootcamps</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-highlight">Collateral-Free Limit</td>
+                            <td><strong>Up to ₹20L – ₹40 Lakhs</strong> without property</td>
+                            <td>Up to ₹7.5 Lakhs (Under CGFSEL guarantee)</td>
+                            <td><strong>Up to ₹25L – ₹35 Lakhs</strong> without property</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-highlight">Typical Interest Rate</td>
+                            <td><span class="table-badge-green">8.15% – 8.85% p.a.</span> (Subsidized)</td>
+                            <td><span class="table-badge-blue">9.15% – 10.50% p.a.</span> (Floating)</td>
+                            <td><span class="table-badge-blue">11.00% – 13.50% p.a.</span> (Risk-adjusted)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-highlight">Margin Money</td>
+                            <td>Nil (100% financing for top colleges)</td>
+                            <td>5% for loans above ₹4 Lakhs</td>
+                            <td>0% – 10% depending on course profile</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-highlight">Moratorium &amp; Repayment</td>
+                            <td>Course duration + 12 months grace period</td>
+                            <td>Course duration + 6 to 12 months grace period</td>
+                            <td>Flexible moratorium / Partial simple interest</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-highlight">Processing Speed</td>
+                            <td>5 – 7 business days</td>
+                            <td>10 – 18 business days</td>
+                            <td><strong>3 – 5 business days</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -457,7 +561,7 @@
 <!-- VPS_FOOTER_END -->
 
     <!-- POPUP INQUIRY FORM (Industry-Grade Edition) -->
-    <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
+    <div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle" onclick="closePopupOutside(event)">
         <div class="popup-modal">
             <button class="popup-close" onclick="closePopup()" aria-label="Close Popup">✕</button>
             <div class="popup-left">
@@ -466,7 +570,7 @@
                         <span class="badge-dot"></span>
                         <span>100% FREE CONSULTATION</span>
                     </div>
-                    <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
+                    <h3 class="popup-title" id="popupTitle">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
                     <p class="popup-left-desc">Compare pre-approved loan options from 15+ top banks &amp; NBFCs with zero service fees.</p>
                     <div class="popup-features-list">
                         <div class="popup-feature-item">

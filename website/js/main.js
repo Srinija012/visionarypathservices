@@ -28,6 +28,9 @@ function openPopup() {
     if (overlay) {
         overlay.classList.add('active');
         overlay.setAttribute('aria-hidden', 'false');
+        overlay.setAttribute('role', 'dialog');
+        overlay.setAttribute('aria-modal', 'true');
+        overlay.setAttribute('aria-labelledby', 'popupTitle');
         document.body.classList.add('modal-open');
         // Focus first field
         setTimeout(() => {
@@ -249,22 +252,36 @@ function initAOS() {
 function submitForm(e) {
     e.preventDefault();
     const form = e.target;
+    if (form.dataset.submitting === 'true') return;
+
     const btn = form.querySelector('button[type="submit"]');
-    const originalContent = btn.innerHTML;
+    const originalContent = btn ? btn.innerHTML : '';
 
     // Collect lead details
     const formData = new FormData(form);
-    const firstName = formData.get('firstName') || '';
-    const lastName = formData.get('lastName') || '';
-    const phone = formData.get('phone') || '';
-    const whatsapp = formData.get('whatsapp') || phone;
-    const email = formData.get('email') || '';
+    const firstName = (formData.get('firstName') || '').toString().trim();
+    const lastName = (formData.get('lastName') || '').toString().trim();
+    const phone = (formData.get('phone') || '').toString().replace(/[^0-9]/g, '');
+    const whatsapp = (formData.get('whatsapp') || phone).toString().replace(/[^0-9]/g, '');
+    const email = (formData.get('email') || '').toString().trim();
     const interest = formData.get('interest') || 'Abroad Education Loan';
-    const message = formData.get('message') || '';
+    const message = (formData.get('message') || '').toString().trim();
 
-    // Show visual confirmation
-    btn.innerHTML = '<i class="fas fa-check-circle"></i> Connecting to Counselor...';
-    btn.style.background = '#10b981';
+    if (phone.length < 10) {
+        const phoneInput = form.querySelector('input[name="phone"]');
+        if (phoneInput) {
+            phoneInput.focus();
+            phoneInput.reportValidity();
+        }
+        return;
+    }
+
+    form.dataset.submitting = 'true';
+    if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Connecting to Counselor...';
+        btn.style.background = '#10b981';
+    }
 
     // Construct formatted WhatsApp message
     const leadMsg = encodeURIComponent(
@@ -282,12 +299,16 @@ function submitForm(e) {
 
     setTimeout(() => {
         closePopup();
-        btn.innerHTML = originalContent || 'Submit Enquiry <i class="fas fa-arrow-right"></i>';
-        btn.style.background = '';
+        if (btn) {
+            btn.innerHTML = originalContent || 'Submit Enquiry <i class="fas fa-arrow-right"></i>';
+            btn.style.background = '';
+            btn.disabled = false;
+        }
+        form.dataset.submitting = 'false';
         form.reset();
         // Seamlessly open WhatsApp lead thread in new tab so counselor receives immediate ping
         window.open(waUrl, '_blank');
-    }, 1200);
+    }, 1000);
 }
 
 // --- Counter animation ---
@@ -351,16 +372,86 @@ document.addEventListener('keydown', (e) => {
 // --- Partner Form Submit ---
 function submitPartnerForm(e) {
     e.preventDefault();
-    const btn = e.target.querySelector('button[type="submit"]');
-    const originalText = btn.innerHTML;
-    btn.innerHTML = '<i class="fas fa-check"></i> Application Received! Our Partnership Team Will Contact You.';
-    btn.style.background = '#15803d';
+    const form = e.target;
+    if (form.dataset.submitting === 'true') return;
+    form.dataset.submitting = 'true';
+
+    const btn = form.querySelector('button[type="submit"]');
+    const originalText = btn ? btn.innerHTML : '';
+    if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-check"></i> Application Received! Our Partnership Team Will Contact You.';
+        btn.style.background = '#15803d';
+    }
     setTimeout(() => {
-        btn.innerHTML = originalText;
-        btn.style.background = '';
-        e.target.reset();
+        if (btn) {
+            btn.innerHTML = originalText;
+            btn.style.background = '';
+            btn.disabled = false;
+        }
+        form.dataset.submitting = 'false';
+        form.reset();
     }, 3500);
 }
+
+// --- Contact Form Submit ---
+function submitContactForm(e) {
+    e.preventDefault();
+    const form = e.target;
+    if (form.dataset.submitting === 'true') return;
+
+    const btn = form.querySelector('button[type="submit"]');
+    const originalText = btn ? btn.innerHTML : '';
+
+    const firstName = (form.querySelector('input[name="firstName"]')?.value || form.querySelector('input[placeholder*="First"]')?.value || '').toString().trim();
+    const lastName = (form.querySelector('input[name="lastName"]')?.value || form.querySelector('input[placeholder*="Last"]')?.value || '').toString().trim();
+    const phone = (form.querySelector('input[name="phone"]')?.value || form.querySelector('input[type="tel"]')?.value || '').toString().replace(/[^0-9]/g, '');
+    const email = (form.querySelector('input[name="email"]')?.value || form.querySelector('input[type="email"]')?.value || '').toString().trim();
+    const whatsapp = (form.querySelector('input[name="whatsapp"]')?.value || phone).toString().replace(/[^0-9]/g, '');
+    const message = (form.querySelector('textarea[name="message"]')?.value || form.querySelector('textarea')?.value || '').toString().trim();
+
+    if (phone.length < 10) {
+        const phoneInput = form.querySelector('input[type="tel"]');
+        if (phoneInput) {
+            phoneInput.focus();
+            phoneInput.reportValidity();
+        }
+        return;
+    }
+
+    form.dataset.submitting = 'true';
+    if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-check-circle"></i> Enquiry Sent! Connecting to Advisor...';
+        btn.style.background = '#15803d';
+    }
+
+    const leadMsg = encodeURIComponent(
+        `*New Contact Message - Visionary Path Services*\n\n` +
+        `👤 *Name:* ${firstName} ${lastName}\n` +
+        `📞 *Phone:* +91 ${phone}\n` +
+        `💬 *WhatsApp:* +91 ${whatsapp}\n` +
+        `✉️ *Email:* ${email}\n` +
+        (message ? `📝 *Message:* ${message}\n` : '') +
+        `\n_Sent via visionarypathservices.com/pages/contact.html_`
+    );
+
+    const waUrl = `https://wa.me/918150949070?text=${leadMsg}`;
+
+    setTimeout(() => {
+        if (btn) {
+            btn.innerHTML = originalText;
+            btn.style.background = '';
+            btn.disabled = false;
+        }
+        form.dataset.submitting = 'false';
+        form.reset();
+        window.open(waUrl, '_blank');
+    }, 1200);
+}
+
+window.submitContactForm = submitContactForm;
+window.submitPartnerForm = submitPartnerForm;
 
 // --- Education Loan EMI Calculator ---
 function formatINR(val) {
@@ -566,14 +657,19 @@ function initLenderFilters() {
         }
     }
 
-    // Button click listeners
+    // Button click listeners & accessibility
     filterBtns.forEach(btn => {
+        btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
         btn.addEventListener('click', function() {
             const group = this.dataset.filterGroup;
             const val = this.dataset.filterVal;
 
-            wrapper.querySelectorAll(`.lender-filter-btn[data-filter-group="${group}"]`).forEach(b => b.classList.remove('active'));
+            wrapper.querySelectorAll(`.lender-filter-btn[data-filter-group="${group}"]`).forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-pressed', 'false');
+            });
             this.classList.add('active');
+            this.setAttribute('aria-pressed', 'true');
 
             currentFilters[group] = val;
             applyFilters();
@@ -593,8 +689,9 @@ function initLenderFilters() {
         currentFilters = { type: 'all', security: 'all', dest: 'all', search: '' };
         if (searchInput) searchInput.value = '';
         wrapper.querySelectorAll('.lender-filter-btn').forEach(btn => {
-            if (btn.dataset.filterVal === 'all') btn.classList.add('active');
-            else btn.classList.remove('active');
+            const isAll = btn.dataset.filterVal === 'all';
+            btn.classList.toggle('active', isAll);
+            btn.setAttribute('aria-pressed', isAll ? 'true' : 'false');
         });
         applyFilters();
     }

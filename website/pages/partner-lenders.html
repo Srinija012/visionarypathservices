@@ -7,6 +7,15 @@
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="alternate icon" type="image/x-icon" href="../favicon.svg">
     <title>Partner Lenders – Visionary Path Services</title>
+    <meta name="description" content="Explore our network of 15+ leading partner banks, NBFCs, and international lenders for secured and unsecured education loans with 100% free guidance.">
+    <link rel="canonical" href="https://www.visionarypathservices.com/pages/partner-lenders.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Partner Lenders – Visionary Path Services">
+    <meta property="og:description" content="Compare 15+ premier banking and NBFC partners for domestic and international education loans with zero advisory fees.">
+    <meta property="og:url" content="https://www.visionarypathservices.com/pages/partner-lenders.html">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
@@ -34,7 +43,7 @@
             color: var(--green);
             font-size: 0.78rem;
             font-weight: 700;
-            letter-spacing: 3px;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
             margin-bottom: 14px;
         }
@@ -85,7 +94,7 @@
             text-align: center;
             font-size: 0.82rem;
             font-weight: 800;
-            letter-spacing: 2px;
+            letter-spacing: 0.08em;
             color: var(--navy);
             text-transform: uppercase;
             margin-bottom: 24px;
@@ -186,14 +195,14 @@
             border: 1px solid #bfdbfe;
         }
         .badge-pvt {
-            background: #fdf2f8;
-            color: #9d174d;
-            border: 1px solid #fbcfe8;
+            background: #f1f5f9;
+            color: #0a1d37;
+            border: 1px solid #cbd5e1;
         }
         .badge-intl {
-            background: #f0fdfa;
-            color: #0f766e;
-            border: 1px solid #99f6e4;
+            background: #eff6ff;
+            color: #1a56db;
+            border: 1px solid #bfdbfe;
         }
 
         /* ── LENDERS GRID SECTION ─────────────── */
@@ -202,7 +211,7 @@
             color: var(--green);
             font-size: 0.78rem;
             font-weight: 700;
-            letter-spacing: 3px;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
             margin-bottom: 10px;
         }
@@ -230,9 +239,9 @@
         .category-tag {
             font-size: 0.72rem;
             font-weight: 700;
-            letter-spacing: 2px;
-            padding: 6px 16px;
-            border-radius: 50px;
+            letter-spacing: 0.06em;
+            padding: 6px 14px;
+            border-radius: 6px;
             text-transform: uppercase;
             color: var(--white);
             white-space: nowrap;
@@ -543,6 +552,7 @@
 <body>
 
     <!-- VPS_NAVBAR_START -->
+<a href="#mainContent" class="skip-link">Skip to main content</a>
 <!-- TOPBAR -->
 <div class="top-bar">
     <div class="container top-bar-inner">
@@ -572,7 +582,7 @@
         </a>
         <ul class="nav-links" id="navLinks">
             <li class="has-dropdown services-dropdown">
-                <a href="../pages/services.html" class="nav-link-services">Services <i class="fas fa-chevron-down"></i></a>
+                <a href="../pages/services.html" class="nav-link-services" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="dropdown mega-dropdown">
                     <div class="mega-body">
                         <!-- Left: Loan Programs -->
@@ -680,7 +690,7 @@
             <li><a href="../pages/partner-with-us.html" class="nav-link-partner-with-us">Partner With Us</a></li>
             <!-- More dropdown -->
             <li class="has-dropdown">
-                <a href="#" class="nav-link-more">More <i class="fas fa-chevron-down"></i></a>
+                <a href="#" class="nav-link-more" aria-haspopup="true" aria-expanded="false">More <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="more-dropdown">
                     <a href="../pages/about.html" class="more-dropdown-item">
                         <i class="fas fa-info-circle"></i> About Us
@@ -714,8 +724,11 @@
 <!-- VPS_NAVBAR_END -->
 
     <!-- HERO -->
-    <section class="page-hero">
+    <section class="page-hero" id="mainContent">
         <div class="container page-hero-inner">
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+                <a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <span>Partner Lenders</span>
+            </nav>
             <p class="page-hero-eyebrow">OUR LENDING NETWORK</p>
             <h1>Trusted Partners for Your<br><span style="color:var(--green-light)">Education Journey</span></h1>
             <p>We work with India's leading banks and NBFCs to bring you the best education loan options — matched to your profile.</p>
@@ -2570,13 +2583,13 @@
 <!-- VPS_FOOTER_END -->
 
     <!-- POPUP INQUIRY FORM -->
-    <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
+    <div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle" onclick="closePopupOutside(event)">
         <div class="popup-modal">
             <button class="popup-close" onclick="closePopup()" aria-label="Close Popup">✕</button>
             <div class="popup-left">
                 <div class="popup-left-content">
                     <div class="popup-badge"><span class="badge-dot"></span><span>100% FREE CONSULTATION</span></div>
-                    <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
+                    <h3 class="popup-title" id="popupTitle">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
                     <p class="popup-left-desc">Compare pre-approved loan options from 15+ top banks &amp; NBFCs with zero service fees.</p>
                     <div class="popup-features-list">
                         <div class="popup-feature-item"><div class="feature-icon-box"><i class="fas fa-user-check"></i></div><div class="feature-text-wrap"><strong>Expert Guidance</strong><span>Dedicated Personal Loan Officer</span></div></div>

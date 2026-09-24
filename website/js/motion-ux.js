@@ -196,9 +196,16 @@
         const images = document.querySelectorAll('img');
         if (!images.length) return;
 
-        // Apply native lazy loading & async decoding to all images
+        // Apply native lazy loading below fold & eager priority to above-the-fold hero images
         images.forEach(img => {
-            if (!img.getAttribute('loading')) {
+            const isAboveTheFold = img.closest('.hero, .page-hero, .exact-hero, .blog-hub-hero, .blog-header, .top-bar, .navbar, .logo') || img.hasAttribute('data-no-lazy');
+            if (isAboveTheFold) {
+                if (img.getAttribute('loading') === 'lazy') {
+                    img.removeAttribute('loading');
+                }
+                img.setAttribute('loading', 'eager');
+                img.setAttribute('fetchpriority', 'high');
+            } else if (!img.getAttribute('loading')) {
                 img.setAttribute('loading', 'lazy');
             }
             if (!img.getAttribute('decoding')) {

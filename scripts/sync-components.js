@@ -48,12 +48,14 @@ for (const filePath of htmlFiles) {
     const currentRelPath = relativeToWebsite.replace(/\\/g, '/');
     if (currentRelPath === 'index.html') {
         fileNavbar = fileNavbar.replace(/class="logo"/, 'class="logo active-home"');
-    } else if (currentRelPath === 'pages/services.html') {
+    } else if (currentRelPath === 'pages/services.html' || currentRelPath.includes('loans.html') || currentRelPath.startsWith('pages/countries/')) {
         fileNavbar = fileNavbar.replace(/class="nav-link-services"/, 'class="nav-link-services active"');
     } else if (currentRelPath === 'pages/partner-lenders.html') {
         fileNavbar = fileNavbar.replace(/class="nav-link-partner-lenders"/, 'class="nav-link-partner-lenders active"');
     } else if (currentRelPath === 'pages/partner-with-us.html') {
         fileNavbar = fileNavbar.replace(/class="nav-link-partner-with-us"/, 'class="nav-link-partner-with-us active"');
+    } else if (currentRelPath === 'pages/about.html' || currentRelPath === 'pages/contact.html' || currentRelPath.startsWith('pages/blog')) {
+        fileNavbar = fileNavbar.replace(/class="nav-link-more"/, 'class="nav-link-more active"');
     }
 
     const wrappedNavbar = `<!-- VPS_NAVBAR_START -->\n${fileNavbar}\n<!-- VPS_NAVBAR_END -->`;

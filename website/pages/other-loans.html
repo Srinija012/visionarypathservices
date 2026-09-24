@@ -9,6 +9,12 @@
     <title>Other Loans – Visionary Path Services</title>
     <meta name="description" content="Guidance for personal loans, home loans, loan against property (LAP), and student forex card assistance across India.">
     <link rel="canonical" href="https://www.visionarypathservices.com/pages/other-loans.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Other Loans & Financial Solutions – Visionary Path Services">
+    <meta property="og:description" content="Explore personal loans, home loans, business loans, and forex card assistance with institutional partners and transparent advisory.">
+    <meta property="og:url" content="https://www.visionarypathservices.com/pages/other-loans.html">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
@@ -20,36 +26,37 @@
         .page-hero { background: linear-gradient(135deg, var(--navy) 0%, #1a4a8a 50%, var(--navy) 100%); padding: 120px 0 70px; text-align: center; position: relative; overflow: hidden; }
         .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1600&q=80') center/cover; opacity: 0.12; }
         .page-hero-inner { position: relative; z-index: 1; }
-        .page-hero-eyebrow { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+        .page-hero-eyebrow { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px; }
         .page-hero h1 { color: var(--white); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 16px; }
         .page-hero p { color: rgba(255,255,255,0.82); font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; line-height: 1.7; }
         .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-        .section-label { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+        .section-label { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
         .section-title { color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 14px; }
         .section-sub { color: var(--text-muted); font-size: 1rem; max-width: 620px; margin: 0 auto 50px; line-height: 1.7; }
         .loans-section { padding: 80px 0; background: var(--bg-card); }
         .loans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 50px; }
-        .loan-card { background: var(--white); border-radius: 20px; padding: 36px 28px; border: 1.5px solid #e8f0fe; transition: all 0.35s; position: relative; overflow: hidden; }
-        .loan-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
-        .loan-card.personal::before { background: linear-gradient(90deg, var(--navy), #1a4a8a); }
-        .loan-card.business::before { background: linear-gradient(90deg, var(--green), #0d7a3a); }
-        .loan-card.car::before { background: linear-gradient(90deg, #7c3aed, #5b21b6); }
-        .loan-card.home::before { background: linear-gradient(90deg, #ea580c, #c2410c); }
-        .loan-card.forex::before { background: linear-gradient(90deg, #0369a1, #075985); }
-        .loan-card:hover { transform: translateY(-8px); box-shadow: 0 20px 56px rgba(13,43,94,0.15); }
-        .loan-icon { width: 70px; height: 70px; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 22px; }
-        .loan-card.personal .loan-icon { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
-        .loan-card.business .loan-icon { background: linear-gradient(135deg, #dcfce7, #bbf7d0); }
-        .loan-card.car .loan-icon { background: linear-gradient(135deg, #ede9fe, #ddd6fe); }
-        .loan-card.home .loan-icon { background: linear-gradient(135deg, #ffedd5, #fed7aa); }
-        .loan-card.forex .loan-icon { background: linear-gradient(135deg, #e0f2fe, #bae6fd); }
+        .loan-card { background: var(--white); border-radius: 16px; padding: 36px 28px; border: 1px solid #e2e8f0; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; position: relative; overflow: hidden; box-shadow: var(--shadow-xs); text-align: left; }
+        .loan-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; border-radius: 16px 16px 0 0; }
+        .loan-card.personal::before { background: var(--navy); }
+        .loan-card.business::before { background: var(--green); }
+        .loan-card.car::before { background: var(--blue); }
+        .loan-card.home::before { background: #1e3a8a; }
+        .loan-card.forex::before { background: #047857; }
+        .loan-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: #cbd5e1; }
+        .loan-icon { width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px; }
+        .loan-card.personal .loan-icon { background: #eff6ff; color: var(--navy); }
+        .loan-card.business .loan-icon { background: #ecfdf5; color: var(--green); }
+        .loan-card.car .loan-icon { background: #eff6ff; color: var(--blue); }
+        .loan-card.home .loan-icon { background: #f1f5f9; color: var(--navy); }
+        .loan-card.forex .loan-icon { background: #ecfdf5; color: #15803d; }
         .loan-card h3 { color: var(--navy); font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; }
-        .loan-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; }
+        .loan-card p { color: #475569; font-size: 0.94rem; line-height: 1.65; margin-bottom: 20px; }
         .loan-card ul { list-style: none; padding: 0; margin: 0 0 24px; }
-        .loan-card ul li { display: flex; align-items: flex-start; gap: 8px; color: var(--slate-light); font-size: 0.88rem; padding: 5px 0; }
-        .loan-card ul li i { color: var(--green); margin-top: 3px; font-size: 0.8rem; }
-        .loan-card .card-link { color: var(--green); font-weight: 600; font-size: 0.88rem; display: flex; align-items: center; gap: 6px; text-decoration: none; }
-        .loan-card .card-link:hover { gap: 10px; }
+        .loan-card ul li { display: flex; align-items: flex-start; gap: 8px; color: #334155; font-size: 0.9rem; padding: 6px 0; border-bottom: 1px solid #f1f5f9; }
+        .loan-card ul li:last-child { border-bottom: none; }
+        .loan-card ul li i { color: var(--green); margin-top: 3px; font-size: 0.85rem; }
+        .loan-card .card-link { color: var(--green); font-weight: 700; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; background: transparent; border: none; cursor: pointer; padding: 0; font-family: var(--font-body); transition: gap 0.2s ease; }
+        .loan-card .card-link:hover { gap: 10px; color: var(--green-dark); }
         .intro-section { padding: 80px 0; background: var(--white); }
         .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         @media(max-width:768px){.two-col{grid-template-columns:1fr;} .loans-grid{grid-template-columns:1fr;} }
@@ -66,6 +73,7 @@
 <body>
 
         <!-- VPS_NAVBAR_START -->
+<a href="#mainContent" class="skip-link">Skip to main content</a>
 <!-- TOPBAR -->
 <div class="top-bar">
     <div class="container top-bar-inner">
@@ -95,7 +103,7 @@
         </a>
         <ul class="nav-links" id="navLinks">
             <li class="has-dropdown services-dropdown">
-                <a href="../pages/services.html" class="nav-link-services">Services <i class="fas fa-chevron-down"></i></a>
+                <a href="../pages/services.html" class="nav-link-services active" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="dropdown mega-dropdown">
                     <div class="mega-body">
                         <!-- Left: Loan Programs -->
@@ -203,7 +211,7 @@
             <li><a href="../pages/partner-with-us.html" class="nav-link-partner-with-us">Partner With Us</a></li>
             <!-- More dropdown -->
             <li class="has-dropdown">
-                <a href="#" class="nav-link-more">More <i class="fas fa-chevron-down"></i></a>
+                <a href="#" class="nav-link-more" aria-haspopup="true" aria-expanded="false">More <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="more-dropdown">
                     <a href="../pages/about.html" class="more-dropdown-item">
                         <i class="fas fa-info-circle"></i> About Us
@@ -237,8 +245,9 @@
 <!-- VPS_NAVBAR_END -->
 
     <!-- HERO -->
-    <section class="page-hero">
+    <section class="page-hero" id="mainContent">
         <div class="container page-hero-inner">
+            <nav aria-label="Breadcrumb" class="breadcrumb"><a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <a href="services.html">Services</a> <span class="breadcrumb-sep">/</span> <span>Other Loans &amp; Forex</span></nav>
             <p class="page-hero-eyebrow" data-aos="fade-up">MORE FINANCIAL SOLUTIONS</p>
             <h1 data-aos="fade-up" data-aos-delay="100">Other <span style="color:var(--green)">Loans</span></h1>
             <p data-aos="fade-up" data-aos-delay="200">Beyond Education Loans — we also guide you through a range of other financial products to support your goals.</p>
@@ -337,6 +346,66 @@
                     </ul>
                     <button class="card-link" onclick="openPopup()">Enquire Now <i class="fas fa-arrow-right"></i></button>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANCILLARY FINANCIAL SERVICES COMPARISON -->
+    <section class="section" style="padding: 72px 0; background: #ffffff;">
+        <div class="container" style="text-align:center">
+            <p class="section-label">PRODUCT MATRIX</p>
+            <h2 class="section-title">Ancillary Loan Solutions <span style="color:var(--green)">Overview</span></h2>
+            <p class="section-sub">Transparent summary of eligibility parameters, tenure caps, and processing requirements across our broader financial advisory portfolio.</p>
+            
+            <div class="comparison-table-wrapper" data-aos="fade-up">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Maximum Cap</th>
+                            <th>Collateral Needed</th>
+                            <th>Tenure Range</th>
+                            <th>Ideal Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-cell-highlight">Personal Loan</td>
+                            <td>Up to ₹40 Lakhs</td>
+                            <td><span class="table-badge-green">No Collateral</span></td>
+                            <td>1 – 5 Years</td>
+                            <td>Emergency funding, initial travel, relocation expenses</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-highlight">Business Loan</td>
+                            <td>Up to ₹1 – 5+ Crores</td>
+                            <td>Unsecured &amp; Secured</td>
+                            <td>1 – 7 Years</td>
+                            <td>SME working capital, commercial expansion, inventory</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-highlight">Home Loan</td>
+                            <td>Up to ₹5+ Crores</td>
+                            <td>Property Mortgaged</td>
+                            <td>Up to 30 Years</td>
+                            <td>Home purchase, flat construction, mortgage takeover</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-highlight">Car Loan</td>
+                            <td>Up to 90% On-Road</td>
+                            <td>Hypothecation of Vehicle</td>
+                            <td>1 – 7 Years</td>
+                            <td>New &amp; certified pre-owned passenger vehicles</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-highlight">Forex Card &amp; Wire</td>
+                            <td>As per RBI LRS (Up to $250k)</td>
+                            <td>Nil (KYC &amp; Visa verified)</td>
+                            <td>Same-day / Express</td>
+                            <td>Student tuition remittance &amp; international multi-currency card</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -446,7 +515,7 @@
 <!-- VPS_FOOTER_END -->
 
     <!-- POPUP INQUIRY FORM (Industry-Grade Edition) -->
-    <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
+    <div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle" onclick="closePopupOutside(event)">
         <div class="popup-modal">
             <button class="popup-close" onclick="closePopup()" aria-label="Close Popup">✕</button>
             <div class="popup-left">
@@ -455,7 +524,7 @@
                         <span class="badge-dot"></span>
                         <span>100% FREE CONSULTATION</span>
                     </div>
-                    <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
+                    <h3 class="popup-title" id="popupTitle">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
                     <p class="popup-left-desc">Compare pre-approved loan options from 15+ top banks &amp; NBFCs with zero service fees.</p>
                     <div class="popup-features-list">
                         <div class="popup-feature-item">

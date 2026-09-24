@@ -9,6 +9,12 @@
     <title>About Us – Visionary Path Services</title>
     <meta name="description" content="Learn about Visionary Path Services, our mission, student-first philosophy, and pan-India team offering 100% free education loan counseling.">
     <link rel="canonical" href="https://www.visionarypathservices.com/pages/about.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="About Us – Visionary Path Services">
+    <meta property="og:description" content="Discover Visionary Path Services – leading pan-India education loan advisory guiding students with free, unbiased domestic and overseas education financing.">
+    <meta property="og:url" content="https://www.visionarypathservices.com/pages/about.html">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
@@ -18,6 +24,7 @@
 </head>
 <body>
     <!-- VPS_NAVBAR_START -->
+<a href="#mainContent" class="skip-link">Skip to main content</a>
 <!-- TOPBAR -->
 <div class="top-bar">
     <div class="container top-bar-inner">
@@ -47,7 +54,7 @@
         </a>
         <ul class="nav-links" id="navLinks">
             <li class="has-dropdown services-dropdown">
-                <a href="../pages/services.html" class="nav-link-services">Services <i class="fas fa-chevron-down"></i></a>
+                <a href="../pages/services.html" class="nav-link-services" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="dropdown mega-dropdown">
                     <div class="mega-body">
                         <!-- Left: Loan Programs -->
@@ -155,7 +162,7 @@
             <li><a href="../pages/partner-with-us.html" class="nav-link-partner-with-us">Partner With Us</a></li>
             <!-- More dropdown -->
             <li class="has-dropdown">
-                <a href="#" class="nav-link-more">More <i class="fas fa-chevron-down"></i></a>
+                <a href="#" class="nav-link-more active" aria-haspopup="true" aria-expanded="false">More <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="more-dropdown">
                     <a href="../pages/about.html" class="more-dropdown-item">
                         <i class="fas fa-info-circle"></i> About Us
@@ -189,10 +196,10 @@
 <!-- VPS_NAVBAR_END -->
 
     <!-- HERO -->
-    <section class="page-hero">
+    <section class="page-hero" id="mainContent">
         <div class="container page-hero-inner">
             <div data-aos="fade-right">
-                <p class="breadcrumb"><a href="../index.html">Home</a> &gt; <strong>About Us</strong></p>
+                <nav aria-label="Breadcrumb" class="breadcrumb"><a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <span>About Us</span></nav>
                 <p class="hero-eyebrow"><span class="eyebrow-line"></span> ABOUT US</p>
                 <h1>Visionary Path Services<br><span class="green-text">Guiding Today for a Brighter Tomorrow</span></h1>
                 <p>Visionary Path Services is an education loan assistance and guidance company focused on helping students with Domestic, International, and MBBS Education Loans.</p>
@@ -254,7 +261,7 @@
                 </div>
                 <div class="core-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="core-card-num">03</div>
-                    <div class="core-card-icon" style="background:#fce7f3;color:#9d174d;"><i class="fas fa-stethoscope"></i></div>
+                    <div class="core-card-icon" style="background:#eff6ff;color:var(--navy);"><i class="fas fa-stethoscope"></i></div>
                     <h3>MBBS Education Loans — India &amp; Abroad</h3>
                     <p>Specialized support for MBBS aspirants in India and overseas.</p>
                 </div>
@@ -285,7 +292,7 @@
                         </div>
                         <div style="width:1px;background:#e5e7eb;"></div>
                         <div style="text-align:center;">
-                            <div style="width:52px;height:52px;background:#fef9c3;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:#92400e;margin:0 auto 10px;"><i class="fas fa-chart-bar"></i></div>
+                            <div style="width:52px;height:52px;background:#eff6ff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--navy);margin:0 auto 10px;"><i class="fas fa-chart-bar"></i></div>
                             <p style="font-size:12px;font-weight:700;color:var(--navy);">Brighter<br>Futures</p>
                         </div>
                     </div>
@@ -306,7 +313,7 @@
                 <div style="width:40px;height:3px;background:var(--green);margin-bottom:16px;"></div>
                 <h2 style="font-size:40px;font-weight:800;color:var(--white);line-height:1.2;">Your Education.<br><span style="color:#34d399;">Our Support.</span></h2>
                 <p style="font-size:15px;color:rgba(255,255,255,0.75);margin:16px 0 28px;line-height:1.8;">We are here to make your education-loan journey simpler, clearer and more organized—so you can focus on what truly matters, your future.</p>
-                <a href="contact.html" class="btn btn-primary" style="background:#34d399;border-color:#34d399;color:var(--navy);font-weight:700;">Talk to Our Team <i class="fas fa-arrow-right"></i></a>
+                <a href="contact.html" class="btn btn-primary">Talk to Our Team <i class="fas fa-arrow-right"></i></a>
             </div>
             <div data-aos="fade-left">
                 <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Students" style="width:100%;border-radius:20px;height:300px;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,0.3);" loading="lazy" decoding="async">
@@ -408,7 +415,7 @@
 <!-- VPS_FOOTER_END -->
 
     <!-- POPUP INQUIRY FORM (Industry-Grade Edition) -->
-    <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
+    <div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle" onclick="closePopupOutside(event)">
         <div class="popup-modal">
             <button class="popup-close" onclick="closePopup()" aria-label="Close Popup">✕</button>
             <div class="popup-left">
@@ -417,7 +424,7 @@
                         <span class="badge-dot"></span>
                         <span>100% FREE CONSULTATION</span>
                     </div>
-                    <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
+                    <h3 class="popup-title" id="popupTitle">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
                     <p class="popup-left-desc">Compare pre-approved loan options from 15+ top banks &amp; NBFCs with zero service fees.</p>
                     <div class="popup-features-list">
                         <div class="popup-feature-item">

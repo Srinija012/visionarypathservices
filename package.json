@@ -6,7 +6,8 @@
   "scripts": {
     "sync": "node scripts/sync-components.js",
     "build": "node scripts/sync-components.js",
-    "test": "node scripts/test-sync.js"
+    "test": "node scripts/test-sync.js",
+    "audit": "node scripts/production-audit.js"
   },
   "repository": {
     "type": "git",
