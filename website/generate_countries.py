@@ -961,6 +961,9 @@ def generate():
         print(f"Generated: {filepath}")
 
     print("All 10 country pages generated successfully!")
+    import subprocess
+    script_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../scripts/sync-components.js")
+    subprocess.run(["node", script_path])
 
 if __name__ == "__main__":
     generate()
