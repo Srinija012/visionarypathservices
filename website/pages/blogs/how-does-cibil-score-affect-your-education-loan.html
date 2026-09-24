@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="alternate icon" type="image/x-icon" href="../../favicon.svg">
     <title>How Does CIBIL Score Affect Your Education Loan Approval? (2026 Guide)</title>
     <meta name="description" content="Learn how CIBIL score impacts education loan approval for study in India & abroad. Cutoff scores for SBI, private banks & NBFCs, solutions for low CIBIL, and co-applicant rules.">
     <link rel="canonical" href="https://www.visionarypathservices.com/pages/blogs/how-does-cibil-score-affect-your-education-loan.html">
@@ -1242,50 +1245,33 @@
         </div>
     </div>
 
-    <!-- WHATSAPP FLOATING BUTTON -->
-    <a href="https://wa.me/919063703038" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+        <!-- FLOATING ELIGIBILITY QUICK CTA (Marketing CRO) -->
+    <button id="floatingEligibilityBtn" class="floating-eligibility-btn" onclick="openPopup()" aria-label="Check Loan Eligibility Free">
+        <span class="floating-btn-pulse"></span>
+        <i class="fas fa-bolt"></i>
+        <span>Check Eligibility <strong class="badge-free">FREE</strong></span>
+    </button>
 
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/918150949070" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Framer Motion & UI/UX Animation Engine -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../../js/vendor/motion.js"></script>
+    <script src="../../js/motion-ux.js"></script>
+    <script src="../../js/main.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
-
         function toggleFaq(el) {
             const answer = el.nextElementSibling;
-            const icon = el.querySelector('i');
-            if (answer.style.display === 'block') {
-                answer.style.display = 'none';
-                icon.style.transform = 'rotate(0deg)';
+            const icon = el.querySelector("i");
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                icon.style.transform = "rotate(0deg)";
             } else {
-                answer.style.display = 'block';
-                icon.style.transform = 'rotate(180deg)';
+                answer.style.display = "block";
+                icon.style.transform = "rotate(180deg)";
             }
-        }
-
-        // Popup Handlers
-        function openPopup() {
-            document.getElementById('popupOverlay').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closePopup() {
-            document.getElementById('popupOverlay').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        function closePopupOutside(e) {
-            if (e.target.id === 'popupOverlay') closePopup();
-        }
-        function copyPhoneToWhatsApp() {
-            const p = document.getElementById('popupPhone').value;
-            if (p) document.getElementById('popupWhatsApp').value = p;
-        }
-        function submitForm(e) {
-            e.preventDefault();
-            alert('Thank you! Our senior loan advisor will contact you within 2-4 working hours.');
-            closePopup();
-        }
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
         }
     </script>
 </body>

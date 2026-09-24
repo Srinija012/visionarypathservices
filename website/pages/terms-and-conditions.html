@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="alternate icon" type="image/x-icon" href="../favicon.svg">
     <title>Terms and Conditions – Visionary Path Services</title>
     <meta name="description" content="Official Terms and Conditions for Visionary Path Services. Review our loan facilitation terms, bank discretion clauses, interest rate disclaimers, and advisory guidelines.">
     <link rel="canonical" href="https://www.visionarypathservices.com/pages/terms-and-conditions.html">
@@ -654,11 +657,19 @@
         </div>
     </div>
 
-    <!-- WHATSAPP FLOATING BUTTON -->
-    <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+        <!-- FLOATING ELIGIBILITY QUICK CTA (Marketing CRO) -->
+    <button id="floatingEligibilityBtn" class="floating-eligibility-btn" onclick="openPopup()" aria-label="Check Loan Eligibility Free">
+        <span class="floating-btn-pulse"></span>
+        <i class="fas fa-bolt"></i>
+        <span>Check Eligibility <strong class="badge-free">FREE</strong></span>
+    </button>
 
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/918150949070" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Framer Motion & UI/UX Animation Engine -->
+    <script src="../js/vendor/motion.js"></script>
+    <script src="../js/motion-ux.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>

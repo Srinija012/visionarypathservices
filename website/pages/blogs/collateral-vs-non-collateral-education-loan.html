@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="alternate icon" type="image/x-icon" href="../../favicon.svg">
     <title>Collateral vs Non-Collateral Education Loans: Limits, Rates &amp; Banks (2026)</title>
     <meta name="description" content="Compare secured vs unsecured education loans for abroad and domestic studies. Check maximum limits up to ₹75 Lakhs without collateral, interest rate differences, and bank lists.">
     <link rel="canonical" href="https://www.visionarypathservices.com/pages/blogs/collateral-vs-non-collateral-education-loan.html">
@@ -870,79 +873,158 @@
 </footer>
 <!-- VPS_FOOTER_END -->
 
-    <!-- POPUP INQUIRY MODAL -->
+        <!-- POPUP INQUIRY FORM (Industry-Grade Edition) -->
     <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
         <div class="popup-modal">
-            <button class="popup-close" onclick="closePopup()">✕</button>
+            <button class="popup-close" onclick="closePopup()" aria-label="Close Popup">✕</button>
             <div class="popup-left">
                 <div class="popup-left-content">
-                    <div class="popup-badge"><span>100% FREE CONSULTATION</span></div>
-                    <h3 class="popup-title">Check Loan Eligibility</h3>
-                    <p class="popup-left-desc">Compare secured and non-collateral loan options across 15+ banks and NBFCs.</p>
+                    <div class="popup-badge">
+                        <span class="badge-dot"></span>
+                        <span>100% FREE CONSULTATION</span>
+                    </div>
+                    <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
+                    <p class="popup-left-desc">Compare pre-approved loan options from 15+ top banks &amp; NBFCs with zero service fees.</p>
+                    <div class="popup-features-list">
+                        <div class="popup-feature-item">
+                            <div class="feature-icon-box"><i class="fas fa-user-check"></i></div>
+                            <div class="feature-text-wrap">
+                                <strong>Expert Guidance</strong>
+                                <span>Dedicated Personal Loan Officer</span>
+                            </div>
+                        </div>
+                        <div class="popup-feature-item">
+                            <div class="feature-icon-box"><i class="fas fa-shield-halved"></i></div>
+                            <div class="feature-text-wrap">
+                                <strong>Secure &amp; Confidential</strong>
+                                <span>Bank-grade 256-bit data protection</span>
+                            </div>
+                        </div>
+                        <div class="popup-feature-item">
+                            <div class="feature-icon-box"><i class="fas fa-bolt"></i></div>
+                            <div class="feature-text-wrap">
+                                <strong>Quick Turnaround</strong>
+                                <span>Fast assessment &amp; sanction updates</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-left-footer">
+                    <div class="lenders-badge">
+                        <i class="fas fa-building-columns"></i>
+                        <span>15+ Partner Banks &amp; NBFCs</span>
+                    </div>
                 </div>
             </div>
             <div class="popup-right">
                 <div class="popup-form-header">
                     <h4>Get Free Loan Assessment</h4>
-                    <p>Connect with a senior education loan advisor</p>
+                    <p>Share your details to connect with a senior education loan advisor</p>
                 </div>
                 <form class="popup-form" onsubmit="submitForm(event)">
                     <div class="form-row name-row">
                         <div class="form-group">
                             <label>First Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="firstName" placeholder="First Name" required></div>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="firstName" placeholder="e.g. Aarav" required></div>
                         </div>
                         <div class="form-group">
                             <label>Last Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="lastName" placeholder="Last Name" required></div>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="lastName" placeholder="e.g. Sharma" required></div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label>Phone Number <span class="req">*</span></label>
                             <div class="input-icon-wrap phone-wrap">
-                                <span class="country-prefix">+91</span>
-                                <input type="tel" name="phone" id="popupPhone" placeholder="Phone Number" pattern="[0-9]{10}" maxlength="10" required>
+                                <span class="country-prefix"><i class="fas fa-phone"></i> +91</span>
+                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="label-with-action">
+                                <label>WhatsApp Number <span class="req">*</span></label>
+                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()">Same as phone</button>
+                            </div>
+                            <div class="input-icon-wrap whatsapp-inp">
+                                <i class="fab fa-whatsapp"></i>
+                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" required>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Email Address <span class="req">*</span></label>
-                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="Email" required></div>
+                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="e.g. aarav.sharma@gmail.com" required></div>
+                    </div>
+                    <div class="form-group mb-tight">
+                        <label class="form-label-regular">I'm interested in</label>
+                        <div class="interest-options">
+                            <label class="interest-opt">
+                                <input type="radio" name="interest" value="abroad" checked>
+                                <span class="custom-radio"></span>
+                                <span class="opt-label"><i class="fas fa-globe-americas"></i> Abroad Education Loan</span>
+                            </label>
+                            <label class="interest-opt">
+                                <input type="radio" name="interest" value="domestic">
+                                <span class="custom-radio"></span>
+                                <span class="opt-label"><i class="fas fa-graduation-cap"></i> Domestic Education Loan</span>
+                            </label>
+                            <label class="interest-opt">
+                                <input type="radio" name="interest" value="mbbs">
+                                <span class="custom-radio"></span>
+                                <span class="opt-label"><i class="fas fa-user-md"></i> MBBS Education Loan</span>
+                            </label>
+                            <label class="interest-opt">
+                                <input type="radio" name="interest" value="other">
+                                <span class="custom-radio"></span>
+                                <span class="opt-label"><i class="fas fa-coins"></i> Other Loan Options</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group mb-tight">
+                        <label class="form-label-regular">Additional Information (Optional)</label>
+                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea name="message" placeholder="Target country, university, loan amount needed..." rows="2"></textarea></div>
                     </div>
                     <button type="submit" class="btn btn-submit-enquiry">
                         <span>Submit Enquiry</span>
                         <i class="fas fa-arrow-right"></i>
                     </button>
+                    <div class="popup-safe">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>100% Confidential • Zero Spam Guarantee • Free Consultation</span>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- WHATSAPP FLOATING BUTTON -->
-    <a href="https://wa.me/919063703038" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+        <!-- FLOATING ELIGIBILITY QUICK CTA (Marketing CRO) -->
+    <button id="floatingEligibilityBtn" class="floating-eligibility-btn" onclick="openPopup()" aria-label="Check Loan Eligibility Free">
+        <span class="floating-btn-pulse"></span>
+        <i class="fas fa-bolt"></i>
+        <span>Check Eligibility <strong class="badge-free">FREE</strong></span>
+    </button>
 
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/918150949070" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Framer Motion & UI/UX Animation Engine -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../../js/vendor/motion.js"></script>
+    <script src="../../js/motion-ux.js"></script>
+    <script src="../../js/main.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
         function toggleFaq(el) {
             const answer = el.nextElementSibling;
-            const icon = el.querySelector('i');
-            if (answer.style.display === 'block') {
-                answer.style.display = 'none';
-                icon.style.transform = 'rotate(0deg)';
+            const icon = el.querySelector("i");
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                icon.style.transform = "rotate(0deg)";
             } else {
-                answer.style.display = 'block';
-                icon.style.transform = 'rotate(180deg)';
+                answer.style.display = "block";
+                icon.style.transform = "rotate(180deg)";
             }
         }
-        function openPopup() { document.getElementById('popupOverlay').classList.add('active'); document.body.style.overflow = 'hidden'; }
-        function closePopup() { document.getElementById('popupOverlay').classList.remove('active'); document.body.style.overflow = ''; }
-        function closePopupOutside(e) { if (e.target.id === 'popupOverlay') closePopup(); }
-        function submitForm(e) { e.preventDefault(); alert('Thank you! Our senior advisor will contact you within 2-4 hours.'); closePopup(); }
-        function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
     </script>
 </body>
 </html>

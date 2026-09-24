@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="vpsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1d37"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Rounded Shield / Icon Shape -->
+  <rect width="48" height="48" rx="12" fill="url(#vpsGrad)"/>
+  
+  <!-- Modern Geometric 'V' Monogram with Guidance Angle -->
+  <path d="M12 14L24 36L36 14" stroke="url(#accentGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- North Star / Guidance Compass Dot -->
+  <circle cx="24" cy="14" r="3" fill="#38bdf8"/>
+</svg>
