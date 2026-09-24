@@ -200,22 +200,13 @@ function closeMenu() {
 window.toggleMenu = toggleMenu;
 window.closeMenu = closeMenu;
 
-// Mobile dropdown toggle & drawer link handling
+// Mobile dropdown toggle
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.has-dropdown > a').forEach(item => {
         item.addEventListener('click', function(e) {
             if (window.innerWidth <= 960) {
                 e.preventDefault();
                 this.parentElement.classList.toggle('open');
-            }
-        });
-    });
-
-    // Auto-close menu when tapping regular links in mobile drawer
-    document.querySelectorAll('#navLinks a:not(.nav-link-services):not(.nav-link-more)').forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth <= 960) {
-                closeMenu();
             }
         });
     });
