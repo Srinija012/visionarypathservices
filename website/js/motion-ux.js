@@ -9,7 +9,7 @@
     // Respect user's reduced-motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // 1. Scroll Progress Indicator Bar
+    // 1. Sleek Reading Progress Indicator Bar
     function initScrollProgressBar() {
         if (document.getElementById('scrollProgressBar')) return;
         const bar = document.createElement('div');
@@ -18,26 +18,15 @@
             position: fixed;
             top: 0;
             left: 0;
-            height: 3.5px;
+            height: 2.5px;
             width: 0%;
-            background: linear-gradient(90deg, #16a34a, #0284c7, #2563eb, #16a34a);
-            background-size: 300% 100%;
+            background: linear-gradient(90deg, #059669 0%, #1d4ed8 100%);
             z-index: 10005;
             pointer-events: none;
             transition: width 0.08s ease-out;
-            animation: progressGradient 4s linear infinite;
+            opacity: 0.9;
         `;
         document.body.appendChild(bar);
-
-        // Inject keyframe animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes progressGradient {
-                0% { background-position: 0% 50%; }
-                100% { background-position: 100% 50%; }
-            }
-        `;
-        document.head.appendChild(style);
 
         window.addEventListener('scroll', () => {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -53,7 +42,7 @@
         if (!navbar) return;
 
         function updateNavbar() {
-            if (window.scrollY > 24) {
+            if (window.scrollY > 20) {
                 navbar.classList.add('scrolled-elevated');
             } else {
                 navbar.classList.remove('scrolled-elevated');
@@ -94,10 +83,6 @@
                     el.motionTimer = setTimeout(() => {
                         el.classList.add('motion-revealed');
                     }, delay);
-                } else {
-                    // Reset on leave so it smoothly re-animates whenever the user scrolls back!
-                    if (el.motionTimer) clearTimeout(el.motionTimer);
-                    el.classList.remove('motion-revealed');
                 }
             });
         }, {
@@ -121,7 +106,7 @@
         cardContainers.forEach(container => {
             const children = Array.from(container.children);
             children.forEach((child, index) => {
-                child.dataset.delay = `${index * 70}`;
+                child.dataset.delay = `${index * 60}`;
                 child.classList.add('motion-init');
                 observer.observe(child);
             });
@@ -136,35 +121,9 @@
         });
     }
 
-    // 4. Interactive 3D Parallax Tilt for Cards
+    // 4. Subtle Tactile Microinteractions (Clean CSS-driven elevation, no dizzying 3D tilts)
     function initCardTilt() {
-        if (prefersReducedMotion || window.innerWidth < 992) return;
-
-        const tiltCards = document.querySelectorAll('.pan-card, .why-feature-card, .core-card, .country-card');
-
-        tiltCards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-
-                const rotateX = ((y - centerY) / centerY) * -4;
-                const rotateY = ((x - centerX) / centerX) * 4;
-
-                card.style.transform = `perspective(800px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-4px)`;
-            });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px)';
-                card.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease';
-            });
-
-            card.addEventListener('mouseenter', () => {
-                card.style.transition = 'transform 0.1s ease-out, box-shadow 0.2s ease';
-            });
-        });
+        // Disabling erratic 3D tilts for clean, high-grade FinTech interaction stability
     }
 
     // 5. Tactile Button Spring Press Feedback
@@ -183,14 +142,14 @@
         });
     }
 
-    // 6. Interactive Animated Numbers Counter (Bidirectional: counts up every time scrolled into view)
+    // 6. Interactive Animated Numbers Counter (Smooth single trigger with graceful completion)
     function initAnimatedCounters() {
         if (prefersReducedMotion) return;
 
         const counterTargets = document.querySelectorAll('.pan-card-num, .core-card-num, .w-num, .stat-val');
         if (!counterTargets.length) return;
 
-        const counterObserver = new IntersectionObserver((entries) => {
+        const counterObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 const el = entry.target;
                 if (!el.dataset.fullText) {
@@ -224,10 +183,7 @@
                     }
 
                     requestAnimationFrame(step);
-                } else {
-                    // Reset to initial representation when scrolled out so it re-animates on scroll back
-                    const targetNum = parseInt(numMatch[0], 10);
-                    el.textContent = (originalText.startsWith('0') && targetNum < 10) ? '00' : originalText.replace(/\d+/, '0');
+                    observer.unobserve(el);
                 }
             });
         }, { threshold: 0.15 });

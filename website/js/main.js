@@ -2,8 +2,8 @@
 // VISIONARY PATH SERVICES - Main JavaScript
 // ==========================================
 
-// --- Marketer-Grade Popup Engine & CRO Lead Generation ---
-const POPUP_COOLDOWN_MS = 3 * 60 * 1000; // 3-minute cool-down between auto-triggers if dismissed
+// --- Polished Lead Generation Popup Engine ---
+const POPUP_COOLDOWN_MS = 15 * 60 * 1000; // 15-minute cool-down after dismissal
 
 function isPopupDismissedRecently() {
     try {
@@ -20,14 +20,20 @@ function resetPopupState() {
         sessionStorage.removeItem('vps_popup_dismissed_time');
         sessionStorage.removeItem('vps_popup_dismissed');
     } catch (err) {}
-    console.log('✅ VPS Popup state reset. Auto-triggers active.');
+    console.log('VPS Popup state reset. Auto-triggers active.');
 }
 
 function openPopup() {
     const overlay = document.getElementById('popupOverlay');
     if (overlay) {
         overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        // Focus first field
+        setTimeout(() => {
+            const firstInput = overlay.querySelector('input:not([type="hidden"]):not([readonly])');
+            if (firstInput) firstInput.focus();
+        }, 150);
     }
     const floatBtn = document.getElementById('floatingEligibilityBtn');
     if (floatBtn) {
@@ -39,8 +45,9 @@ function closePopup() {
     const overlay = document.getElementById('popupOverlay');
     if (overlay) {
         overlay.classList.remove('active');
+        overlay.setAttribute('aria-hidden', 'true');
     }
-    document.body.style.overflow = '';
+    document.body.classList.remove('modal-open');
     try {
         sessionStorage.setItem('vps_popup_dismissed_time', Date.now().toString());
         sessionStorage.setItem('vps_popup_dismissed', 'true');
@@ -84,10 +91,10 @@ function ensureFloatingButton() {
     }
 }
 
-// Multi-Intent Marketing Trigger Engine:
-// 1. Scroll Intent (>350px or >20% scroll)
-// 2. Timed Engagement (14-second reading fallback)
-// 3. Desktop Exit-Intent (mouse moves to browser top bar)
+// High-Intent Respectful Engagement Trigger Engine:
+// 1. High Scroll Intent (>65% scroll depth or reaching CTA footer)
+// 2. High Engagement Time (45-second thoughtful reading)
+// 3. Desktop Exit-Intent (user cursor genuinely leaves top of window)
 // 4. URL query param preview (?popup=1 or ?test_popup=true)
 function initMarketingPopupEngine() {
     let triggered = false;
@@ -103,8 +110,12 @@ function initMarketingPopupEngine() {
 
     function triggerModal(reason) {
         if (triggered || isPopupDismissedRecently()) return;
+        
+        // Never interrupt user if they are currently typing or calculating
+        const activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : '';
+        if (activeTag === 'input' || activeTag === 'textarea' || activeTag === 'select') return;
+
         triggered = true;
-        // Clean up listeners
         window.removeEventListener('scroll', checkScrollIntent);
         document.removeEventListener('mouseleave', checkExitIntent);
         if (timerFallback) clearTimeout(timerFallback);
@@ -113,10 +124,10 @@ function initMarketingPopupEngine() {
             if (!isPopupDismissedRecently()) {
                 openPopup();
             }
-        }, 200);
+        }, 300);
     }
 
-    // Trigger 1: Scroll Intent (350px or 20% down page)
+    // Trigger 1: Genuine Scroll Depth (>65% down page)
     function checkScrollIntent() {
         if (triggered || isPopupDismissedRecently()) return;
 
@@ -124,36 +135,24 @@ function initMarketingPopupEngine() {
         const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrollPercent = totalHeight > 0 ? (scrollDistance / totalHeight) * 100 : 0;
 
-        const highIntentSection = document.getElementById('faqs') || 
-                                  document.querySelector('.faq-section') ||
-                                  document.querySelector('.loan-types-grid') ||
-                                  document.querySelector('.services-grid');
-        let reachedSection = false;
-        if (highIntentSection) {
-            const rect = highIntentSection.getBoundingClientRect();
-            if (rect.top <= window.innerHeight * 0.85) {
-                reachedSection = true;
-            }
-        }
-
-        if (scrollDistance > 350 || scrollPercent > 20 || reachedSection) {
+        if (scrollPercent > 65) {
             triggerModal('scroll');
         }
     }
 
     // Trigger 2: Desktop Exit-Intent
     function checkExitIntent(e) {
-        if (e.clientY <= 12 && !triggered && !isPopupDismissedRecently()) {
+        if (e.clientY <= 6 && !triggered && !isPopupDismissedRecently()) {
             triggerModal('exit_intent');
         }
     }
 
-    // Trigger 3: Timed Engagement Fallback (14 seconds)
+    // Trigger 3: Thoughtful Reading Fallback (45 seconds)
     const timerFallback = setTimeout(() => {
         if (!triggered && !isPopupDismissedRecently()) {
             triggerModal('timer');
         }
-    }, 14000);
+    }, 45000);
 
     window.addEventListener('scroll', checkScrollIntent, { passive: true });
     document.addEventListener('mouseleave', checkExitIntent);
@@ -168,13 +167,38 @@ window.closePopup = closePopup;
 window.resetPopupState = resetPopupState;
 window.copyPhoneToWhatsApp = copyPhoneToWhatsApp;
 
-// --- Mobile Menu ---
+// --- Mobile Navigation Drawer System ---
 function toggleMenu() {
     const links = document.getElementById('navLinks');
-    const cta = document.querySelector('.nav-cta');
-    links.classList.toggle('open');
-    if (cta) cta.classList.toggle('open');
+    const hamburger = document.getElementById('hamburger');
+    const navCta = document.querySelector('.nav-cta');
+    const isOpen = links ? links.classList.toggle('open') : false;
+    
+    if (navCta) {
+        navCta.classList.toggle('open', isOpen);
+    }
+    if (hamburger) {
+        hamburger.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+    document.body.classList.toggle('menu-open', isOpen);
 }
+
+function closeMenu() {
+    const links = document.getElementById('navLinks');
+    const hamburger = document.getElementById('hamburger');
+    const navCta = document.querySelector('.nav-cta');
+    if (links) links.classList.remove('open');
+    if (navCta) navCta.classList.remove('open');
+    if (hamburger) {
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+    }
+    document.body.classList.remove('menu-open');
+}
+
+window.toggleMenu = toggleMenu;
+window.closeMenu = closeMenu;
 
 // Mobile dropdown toggle
 document.addEventListener('DOMContentLoaded', () => {
@@ -308,18 +332,19 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('click', (e) => {
     const navLinks = document.getElementById('navLinks');
     const hamburger = document.getElementById('hamburger');
-    if (navLinks && hamburger && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-        navLinks.classList.remove('open');
+    if (navLinks && navLinks.classList.contains('open') && !navLinks.contains(e.target) && (!hamburger || !hamburger.contains(e.target))) {
+        closeMenu();
     }
 });
 
-// ESC key to close modal
+// ESC key to close modal and mobile drawer
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         const popup = document.getElementById('popupOverlay');
         if (popup && popup.classList.contains('active')) {
             closePopup();
         }
+        closeMenu();
     }
 });
 
