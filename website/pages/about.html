@@ -21,6 +21,1130 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/improvements.css">
+    <style>
+        /* ============================================================
+           VISIONARY PATH SERVICES — ABOUT US PAGE STYLES
+           UI/UX Pro Max · Senior Frontend Typography & Hierarchy
+           Based on make-interfaces-feel-better principles
+           ============================================================ */
+
+        /* ── Typographic Foundations & Hierarchy ── */
+        .about-hero {
+            background: linear-gradient(140deg, #061325 0%, #0a1d37 40%, #0d2b5e 80%, #043826 100%);
+            padding: 72px 0 64px;
+            position: relative;
+            overflow: hidden;
+            color: #ffffff;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(52, 211, 153, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(29, 78, 216, 0.12) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .about-hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 56px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-hero-content {
+            text-align: left;
+        }
+
+        .about-eyebrow-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(52, 211, 153, 0.12);
+            border: 1px solid rgba(52, 211, 153, 0.28);
+            color: #34d399;
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: var(--radius-full);
+            margin-bottom: 18px;
+        }
+
+        .about-eyebrow-tag .badge-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #34d399;
+            box-shadow: 0 0 8px #34d399;
+        }
+
+        .about-hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 4.4vw, 3.25rem);
+            font-weight: 800;
+            line-height: 1.16;
+            letter-spacing: -0.025em;
+            color: #ffffff;
+            margin-bottom: 18px;
+            text-wrap: balance;
+        }
+
+        .hero-green-highlight {
+            color: #34d399;
+            display: inline;
+        }
+
+        .about-hero-lead {
+            font-size: clamp(1.02rem, 1.4vw, 1.12rem);
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.92);
+            margin-bottom: 12px;
+            text-wrap: pretty;
+        }
+
+        .about-hero-sub {
+            font-size: 0.95rem;
+            line-height: 1.68;
+            color: rgba(255, 255, 255, 0.78);
+            margin-bottom: 22px;
+            text-wrap: pretty;
+        }
+
+        /* Glassmorphism Foundational Belief Box */
+        .about-belief-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-left: 4px solid #34d399;
+            border-radius: 14px;
+            padding: 16px 20px;
+            margin: 22px 0 26px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.2);
+        }
+
+        .belief-icon-box {
+            width: 44px;
+            height: 44px;
+            background: rgba(52, 211, 153, 0.18);
+            border: 1px solid rgba(52, 211, 153, 0.35);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #34d399;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .belief-text {
+            font-size: 0.92rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.55;
+            margin: 0;
+            text-wrap: pretty;
+        }
+
+        .belief-text strong {
+            color: #34d399;
+            font-weight: 700;
+        }
+
+        .about-hero-actions {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .btn-hero-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 48px;
+            padding: 12px 24px;
+            background: #10b981;
+            color: #061325;
+            font-weight: 700;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px -4px rgba(16, 185, 129, 0.45);
+            border: none;
+            cursor: pointer;
+            transition-property: transform, background-color, box-shadow;
+            transition-duration: 0.18s;
+            transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-hero-cta:hover {
+            background: #34d399;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 26px -4px rgba(16, 185, 129, 0.55);
+        }
+
+        .btn-hero-cta:active {
+            transform: scale(0.98);
+        }
+
+        .btn-hero-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 48px;
+            padding: 12px 22px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            font-weight: 600;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            text-decoration: none;
+            transition-property: transform, background-color, border-color;
+            transition-duration: 0.18s;
+            transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-hero-whatsapp:hover {
+            background: rgba(255, 255, 255, 0.18);
+            border-color: rgba(255, 255, 255, 0.38);
+            transform: translateY(-2px);
+            color: #ffffff;
+        }
+
+        .btn-hero-whatsapp:active {
+            transform: scale(0.98);
+        }
+
+        .hero-trust-micro {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .hero-trust-micro span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-trust-micro i {
+            color: #34d399;
+            font-size: 0.85rem;
+        }
+
+        /* Hero Media & Floating Badges */
+        .about-hero-media {
+            position: relative;
+        }
+
+        .about-hero-image-card {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            outline: 1px solid rgba(255, 255, 255, 0.15);
+            outline-offset: -1px;
+            box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.42);
+            background: #0a1d37;
+        }
+
+        .about-hero-image-card img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            display: block;
+            transition-property: transform;
+            transition-duration: 0.4s;
+            transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .about-hero-image-card:hover img {
+            transform: scale(1.02);
+        }
+
+        .about-floating-badge {
+            position: absolute;
+            background: rgba(10, 29, 55, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 14px;
+            padding: 12px 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.35);
+            z-index: 3;
+        }
+
+        .floating-badge-bl {
+            bottom: 24px;
+            left: 20px;
+        }
+
+        .floating-badge-tr {
+            top: 24px;
+            right: 20px;
+        }
+
+        .floating-badge-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            flex-shrink: 0;
+        }
+
+        .floating-badge-icon.icon-green {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border: 1px solid rgba(52, 211, 153, 0.3);
+        }
+
+        .floating-badge-icon.icon-blue {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+        }
+
+        .floating-badge-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .floating-badge-val {
+            font-family: var(--font-display);
+            font-size: 1.12rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.2;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .floating-badge-lbl {
+            font-size: 0.74rem;
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        /* ── 2. STATS TRUST STRIP ── */
+        .about-stats-bar {
+            background: #061325;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid #e2e8f0;
+            padding: 30px 0;
+        }
+
+        .about-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .about-stat-item {
+            text-align: center;
+            padding: 10px 18px;
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .about-stat-item:last-child {
+            border-right: none;
+        }
+
+        .about-stat-number {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.1;
+            margin-bottom: 6px;
+            font-variant-numeric: tabular-nums;
+            display: block;
+        }
+
+        .about-stat-number.green-accent {
+            color: #34d399;
+        }
+
+        .about-stat-label {
+            font-size: 0.84rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.72);
+            line-height: 1.4;
+            display: block;
+        }
+
+        /* ── Shared Section Typography ── */
+        .section-header-center {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 48px;
+        }
+
+        .about-section-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1.22;
+            letter-spacing: -0.02em;
+            margin-bottom: 14px;
+            text-wrap: balance;
+        }
+
+        .about-section-sub {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin: 0 auto;
+            text-wrap: pretty;
+        }
+
+        /* ── 3. PURPOSE & PHILOSOPHY SECTION ── */
+        .about-purpose-section {
+            padding: 85px 0;
+            background: #ffffff;
+        }
+
+        .about-manifesto-card {
+            background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 100%);
+            border: 1.5px solid #d1fae5;
+            border-radius: 20px;
+            padding: 38px 44px;
+            margin-bottom: 44px;
+            box-shadow: 0 4px 16px -2px rgba(10, 29, 55, 0.04);
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .manifesto-quote-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px -4px rgba(16, 185, 129, 0.35);
+        }
+
+        .manifesto-content h3 {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1.35;
+            margin-bottom: 10px;
+            text-wrap: balance;
+        }
+
+        .manifesto-content p {
+            font-size: 0.98rem;
+            color: #334155;
+            line-height: 1.75;
+            margin: 0;
+            text-wrap: pretty;
+        }
+
+        .about-philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .philosophy-card {
+            background: #ffffff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 32px 26px;
+            box-shadow: 0 2px 8px -2px rgba(10, 29, 55, 0.04);
+            transition-property: transform, border-color, box-shadow;
+            transition-duration: 0.22s;
+            transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .philosophy-card:hover {
+            transform: translateY(-4px);
+            border-color: #cbd5e1;
+            box-shadow: 0 16px 36px -6px rgba(10, 29, 55, 0.08);
+        }
+
+        .philosophy-card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .philosophy-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.35;
+            margin-bottom: 10px;
+            text-wrap: balance;
+        }
+
+        .philosophy-card p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin: 0;
+            text-wrap: pretty;
+            flex: 1;
+        }
+
+        /* ── 4. CORE FOCUS (SPECIALIZATIONS) ── */
+        .about-focus-section {
+            padding: 85px 0;
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .about-focus-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-bottom: 36px;
+        }
+
+        .focus-card {
+            background: #ffffff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 34px 28px;
+            position: relative;
+            box-shadow: 0 4px 14px -2px rgba(10, 29, 55, 0.04);
+            transition-property: transform, border-color, box-shadow;
+            transition-duration: 0.22s;
+            transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .focus-card:hover {
+            transform: translateY(-5px);
+            border-color: #cbd5e1;
+            box-shadow: 0 16px 36px -6px rgba(10, 29, 55, 0.1);
+        }
+
+        .focus-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .focus-card-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .focus-card-num {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #94a3b8;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: -0.02em;
+        }
+
+        .focus-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.22rem;
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1.35;
+            margin-bottom: 12px;
+            text-wrap: balance;
+        }
+
+        .focus-card p {
+            font-size: 0.92rem;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            text-wrap: pretty;
+            flex: 1;
+        }
+
+        .focus-features-list {
+            list-style: none;
+            margin: 0 0 24px 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 18px;
+        }
+
+        .focus-features-list li {
+            font-size: 0.85rem;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .focus-features-list li i {
+            color: var(--green);
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .focus-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--blue-dark);
+            text-decoration: none;
+            margin-top: auto;
+            transition-property: color, transform;
+            transition-duration: 0.18s;
+        }
+
+        .focus-card-link:hover {
+            color: var(--green);
+            transform: translateX(4px);
+        }
+
+        .focus-card-link i {
+            font-size: 0.8rem;
+            transition-property: transform;
+            transition-duration: 0.18s;
+        }
+
+        .focus-card-link:hover i {
+            transform: translateX(3px);
+        }
+
+        .focus-summary-box {
+            background: #ffffff;
+            border: 1.5px solid #e2e8f0;
+            border-left: 4px solid var(--blue);
+            border-radius: 14px;
+            padding: 22px 28px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 2px 8px -2px rgba(10, 29, 55, 0.04);
+        }
+
+        .focus-summary-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #eff6ff;
+            color: var(--blue-dark);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .focus-summary-text {
+            font-size: 0.94rem;
+            color: #334155;
+            line-height: 1.7;
+            margin: 0;
+            text-wrap: pretty;
+        }
+
+        /* ── 5. THE 6-STEP ADVISORY JOURNEY ── */
+        .about-journey-section {
+            padding: 85px 0;
+            background: #ffffff;
+        }
+
+        .about-journey-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .step-card {
+            background: #ffffff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 32px 26px;
+            position: relative;
+            box-shadow: 0 2px 8px -2px rgba(10, 29, 55, 0.04);
+            transition-property: transform, border-color, box-shadow;
+            transition-duration: 0.22s;
+            transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step-card:hover {
+            transform: translateY(-4px);
+            border-color: #cbd5e1;
+            box-shadow: 0 16px 36px -6px rgba(10, 29, 55, 0.09);
+        }
+
+        .step-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
+
+        .step-pill {
+            font-family: var(--font-display);
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            background: #eff6ff;
+            color: var(--blue-dark);
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            border: 1px solid #dbeafe;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .step-icon-wrap {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: var(--navy);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .step-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.35;
+            margin-bottom: 10px;
+            text-wrap: balance;
+        }
+
+        .step-card p {
+            font-size: 0.91rem;
+            color: #475569;
+            line-height: 1.7;
+            margin: 0;
+            text-wrap: pretty;
+            flex: 1;
+        }
+
+        /* ── 6. OUR MISSION & VALUES ── */
+        .about-mission-section {
+            padding: 85px 0;
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .about-mission-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .mission-text-col {
+            text-align: left;
+        }
+
+        .mission-text-col .about-section-title {
+            margin-bottom: 18px;
+        }
+
+        .mission-lead {
+            font-size: 1.05rem;
+            color: #1e293b;
+            font-weight: 500;
+            line-height: 1.75;
+            margin-bottom: 14px;
+            text-wrap: pretty;
+        }
+
+        .mission-body {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.75;
+            margin-bottom: 32px;
+            text-wrap: pretty;
+        }
+
+        .mission-values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .mission-value-card {
+            background: #ffffff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 22px 18px;
+            text-align: center;
+            box-shadow: 0 2px 6px -1px rgba(10, 29, 55, 0.04);
+        }
+
+        .mission-value-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            margin: 0 auto 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .mission-value-card h4 {
+            font-family: var(--font-display);
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.35;
+            margin-bottom: 4px;
+            text-wrap: balance;
+        }
+
+        .mission-value-card span {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+            display: block;
+        }
+
+        .mission-media-col {
+            position: relative;
+        }
+
+        .mission-image-card {
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 50px -10px rgba(10, 29, 55, 0.16);
+            outline: 1px solid rgba(0, 0, 0, 0.08);
+            outline-offset: -1px;
+        }
+
+        .mission-image-card img {
+            width: 100%;
+            height: 440px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .mission-image-badge {
+            position: absolute;
+            bottom: 24px;
+            left: 20px;
+            right: 20px;
+            background: rgba(10, 29, 55, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 14px;
+            padding: 16px 20px;
+            color: #ffffff;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .mission-image-badge p {
+            font-size: 0.88rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.95);
+            margin: 0 0 6px 0;
+            line-height: 1.5;
+        }
+
+        .mission-image-badge span {
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #34d399;
+        }
+
+        /* ── 7. WHY CHOOSE VPS (TRUST GRID) ── */
+        .about-trust-section {
+            padding: 85px 0;
+            background: #ffffff;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .about-trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .trust-pillar-card {
+            background: #ffffff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 28px 22px;
+            box-shadow: 0 2px 8px -2px rgba(10, 29, 55, 0.04);
+            transition-property: transform, border-color, box-shadow;
+            transition-duration: 0.22s;
+            transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .trust-pillar-card:hover {
+            transform: translateY(-4px);
+            border-color: #cbd5e1;
+            box-shadow: 0 16px 36px -6px rgba(10, 29, 55, 0.08);
+        }
+
+        .trust-pillar-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 18px;
+        }
+
+        .trust-pillar-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.35;
+            margin-bottom: 8px;
+            text-wrap: balance;
+        }
+
+        .trust-pillar-card p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.68;
+            margin: 0;
+            text-wrap: pretty;
+            flex: 1;
+        }
+
+        /* ── 8. CLOSING CTA BANNER ── */
+        .about-cta-section {
+            padding: 85px 0;
+            background: linear-gradient(145deg, #051329 0%, #0a1d37 55%, #053b26 100%);
+            position: relative;
+            overflow: hidden;
+            color: #ffffff;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .about-cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(52, 211, 153, 0.12) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .about-cta-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-cta-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 3.8vw, 2.85rem);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+            margin-bottom: 16px;
+            text-wrap: balance;
+        }
+
+        .about-cta-sub {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+            margin-bottom: 28px;
+            text-wrap: pretty;
+        }
+
+        .about-cta-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .about-cta-direct {
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .about-cta-direct a {
+            color: #34d399;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .about-cta-direct a:hover {
+            text-decoration: underline;
+        }
+
+        .about-cta-image-card {
+            border-radius: 20px;
+            overflow: hidden;
+            outline: 1px solid rgba(255, 255, 255, 0.15);
+            outline-offset: -1px;
+            box-shadow: 0 24px 60px -10px rgba(0, 0, 0, 0.4);
+        }
+
+        .about-cta-image-card img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ── Responsive Adaptations ── */
+        @media (max-width: 1024px) {
+            .about-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .about-hero-image-card img {
+                height: 380px;
+            }
+            .about-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .about-stat-item:nth-child(2) {
+                border-right: none;
+            }
+            .about-focus-grid,
+            .about-journey-grid,
+            .about-philosophy-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .about-mission-layout,
+            .about-cta-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .about-trust-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .about-hero {
+                padding: 55px 0 45px;
+            }
+            .about-purpose-section,
+            .about-focus-section,
+            .about-journey-section,
+            .about-mission-section,
+            .about-trust-section,
+            .about-cta-section {
+                padding: 55px 0;
+            }
+            .about-manifesto-card {
+                flex-direction: column;
+                padding: 26px 20px;
+                gap: 18px;
+            }
+            .about-stats-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .about-stat-item {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                padding: 14px 10px;
+            }
+            .about-stat-item:last-child {
+                border-bottom: none;
+            }
+            .about-focus-grid,
+            .about-journey-grid,
+            .about-philosophy-grid,
+            .about-trust-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .mission-values-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+            .about-hero-actions,
+            .about-cta-btns {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .btn-hero-cta,
+            .btn-hero-whatsapp {
+                width: 100%;
+                text-align: center;
+            }
+            .focus-summary-box {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px 18px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- VPS_NAVBAR_START -->
@@ -196,127 +1320,367 @@
 <!-- VPS_NAVBAR_END -->
 
     <!-- HERO -->
-    <section class="page-hero" id="mainContent">
-        <div class="container page-hero-inner">
-            <div data-aos="fade-right">
-                <nav aria-label="Breadcrumb" class="breadcrumb"><a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <span>About Us</span></nav>
-                <p class="hero-eyebrow"><span class="eyebrow-line"></span> ABOUT US</p>
-                <h1>Visionary Path Services<br><span class="green-text">Guiding Today for a Brighter Tomorrow</span></h1>
-                <p>Visionary Path Services is an education loan assistance and guidance company focused on helping students with Domestic, International, and MBBS Education Loans.</p>
-                <p>We provide genuine, transparent, and profile-based guidance throughout the education-loan journey—from eligibility assessment and documentation to application processing, sanction, and disbursement support.</p>
-                <div class="belief-box" style="background:#f0fff8;border-left:4px solid var(--green);border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0;display:flex;align-items:center;gap:14px;">
-                    <div style="width:44px;height:44px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:18px;flex-shrink:0;"><i class="fas fa-handshake"></i></div>
-                    <p style="margin:0;font-weight:600;color:var(--navy);font-size:14px;">We believe in clear guidance, honest communication, and step-by-step support—not false promises.</p>
+    <section class="about-hero" id="mainContent">
+        <div class="container">
+            <div class="about-hero-grid">
+                <div class="about-hero-content" data-aos="fade-right">
+                    <nav aria-label="Breadcrumb" class="breadcrumb"><a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <span>About Us</span></nav>
+                    <div class="about-eyebrow-tag">
+                        <span class="badge-dot"></span> PAN-INDIA EDUCATION LOAN ADVISORY
+                    </div>
+                    <h1 class="about-hero-title">
+                        Visionary Path Services<br>
+                        <span class="hero-green-highlight">Guiding Today for a Brighter Tomorrow</span>
+                    </h1>
+                    <p class="about-hero-lead">
+                        Visionary Path Services is an independent education loan assistance and guidance advisory dedicated to helping students secure optimal Domestic, International, and MBBS higher education financing.
+                    </p>
+                    <p class="about-hero-sub">
+                        We deliver genuine, transparent, and profile-based guidance throughout every phase of the education loan lifecycle—from preliminary eligibility assessment and documentation packaging to lender negotiation, sanction, and final disbursement.
+                    </p>
+                    
+                    <div class="about-belief-card">
+                        <div class="belief-icon-box"><i class="fas fa-handshake"></i></div>
+                        <p class="belief-text">
+                            <strong>Our Foundational Promise:</strong> We believe in clear guidance, honest communication, and step-by-step support—never false promises.
+                        </p>
+                    </div>
+
+                    <div class="about-hero-actions">
+                        <button class="btn-hero-cta" onclick="openPopup()">
+                            <i class="fas fa-file-signature"></i> Check Eligibility – Free <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn-hero-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Talk to an Expert
+                        </a>
+                    </div>
+                    <div class="hero-trust-micro">
+                        <span><i class="fas fa-check-circle"></i> 100% Free Advisory</span>
+                        <span><i class="fas fa-check-circle"></i> 15+ Partner Lenders</span>
+                        <span><i class="fas fa-check-circle"></i> Zero Service Markup</span>
+                    </div>
                 </div>
-                <div class="hero-btns" style="margin-top:24px;">
-                    <button class="btn btn-primary" onclick="openPopup()">Check Eligibility – Free <i class="fas fa-arrow-right"></i></button>
-                    <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+
+                <div class="about-hero-media" data-aos="fade-left">
+                    <div class="about-hero-image-card">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80" alt="Students receiving higher education guidance at Visionary Path Services" loading="lazy" decoding="async">
+                        <div class="about-floating-badge floating-badge-tr">
+                            <div class="floating-badge-icon icon-blue"><i class="fas fa-building-columns"></i></div>
+                            <div class="floating-badge-content">
+                                <span class="floating-badge-val">15+ Partners</span>
+                                <span class="floating-badge-lbl">Banks &amp; NBFCs</span>
+                            </div>
+                        </div>
+                        <div class="about-floating-badge floating-badge-bl">
+                            <div class="floating-badge-icon icon-green"><i class="fas fa-hand-holding-dollar"></i></div>
+                            <div class="floating-badge-content">
+                                <span class="floating-badge-val">₹0 Fees</span>
+                                <span class="floating-badge-lbl">100% Free Guidance</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="page-hero-img" data-aos="fade-left">
-                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=700&q=80" alt="About Visionary Path Services" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
 
-    <!-- OUR PURPOSE -->
-    <section class="section-pad">
+    <!-- STATS TRUST STRIP -->
+    <div class="about-stats-bar">
         <div class="container">
-            <div class="about-purpose" data-aos="fade-up">
-                <div class="about-purpose-inner">
-                    <div class="our-purpose-label">
-                        <h2>Our<br>Purpose</h2>
-                    </div>
-                    <div class="purpose-text" style="flex:1;">
-                        <p>At Visionary Path Services, we believe that financial limitations should not stand in the way of a student's education and career aspirations. We are an Education Loan Assistance and Guidance company helping students and parents navigate the education-loan process for higher education in <strong>India and abroad.</strong></p>
-                    </div>
+            <div class="about-stats-grid">
+                <div class="about-stat-item" data-aos="fade-up" data-aos-delay="0">
+                    <span class="about-stat-number green-accent">10,000+</span>
+                    <span class="about-stat-label">Students Guided Pan-India</span>
+                </div>
+                <div class="about-stat-item" data-aos="fade-up" data-aos-delay="80">
+                    <span class="about-stat-number">15+</span>
+                    <span class="about-stat-label">Scheduled Banks &amp; NBFCs</span>
+                </div>
+                <div class="about-stat-item" data-aos="fade-up" data-aos-delay="160">
+                    <span class="about-stat-number green-accent">₹0</span>
+                    <span class="about-stat-label">Counseling &amp; Advisory Fee</span>
+                </div>
+                <div class="about-stat-item" data-aos="fade-up" data-aos-delay="240">
+                    <span class="about-stat-number">100%</span>
+                    <span class="about-stat-label">Transparent Process</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OUR PURPOSE & PHILOSOPHY -->
+    <section class="about-purpose-section">
+        <div class="container">
+            <div class="section-header-center" data-aos="fade-up">
+                <span class="section-label"><i class="fas fa-compass"></i> OUR PURPOSE &amp; PHILOSOPHY</span>
+                <h2 class="about-section-title">Empowering Academic Dreams Beyond <span class="green-text">Financial Boundaries</span></h2>
+                <p class="about-section-sub">We believe financial constraints should never stand in the way of a student's education, ambition, and career aspirations.</p>
+            </div>
+
+            <div class="about-manifesto-card" data-aos="fade-up">
+                <div class="manifesto-quote-icon"><i class="fas fa-quote-left"></i></div>
+                <div class="manifesto-content">
+                    <h3>Democratizing Higher Education Financing Across India</h3>
+                    <p>At Visionary Path Services, our purpose is simple: ensure no deserving student is held back from their dreams due to financial complexity. We are an Education Loan Assistance and Guidance company dedicated to helping students and parents navigate the education loan process for premier institutions in <strong>India and abroad</strong>. Through personalized, profile-driven counseling, we transform an overwhelming banking procedure into a smooth, transparent, and confidence-inspiring journey.</p>
+                </div>
+            </div>
+
+            <div class="about-philosophy-grid">
+                <div class="philosophy-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="philosophy-card-icon" style="background:#eff6ff;color:var(--blue-dark);"><i class="fas fa-scale-balanced"></i></div>
+                    <h4>Unbiased Multi-Lender Guidance</h4>
+                    <p>We work for you, not for any single bank. We objectively compare options across 15+ RBI-regulated lenders to ensure you secure the most favorable interest rates and repayment terms.</p>
+                </div>
+                <div class="philosophy-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="philosophy-card-icon" style="background:#dcfce7;color:#166534;"><i class="fas fa-user-check"></i></div>
+                    <h4>Profile-First Advisory</h4>
+                    <p>Every student's academic background, family finances, and future career potential are distinct. We tailor funding strategies specifically to your profile rather than pushing generic formulas.</p>
+                </div>
+                <div class="philosophy-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="philosophy-card-icon" style="background:#fef3c7;color:#b45309;"><i class="fas fa-shield-halved"></i></div>
+                    <h4>Zero False Promises</h4>
+                    <p>We provide accurate loan eligibility forecasts, honest documentation requirements, and upfront clarity on collateral vs. non-collateral prospects from day one.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- OUR CORE FOCUS -->
-    <section class="section-pad bg-light">
+    <section class="about-focus-section">
         <div class="container">
-            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:40px;margin-bottom:36px;" data-aos="fade-up">
-                <div>
-                    <div class="section-eyebrow-line"></div>
-                    <h2 style="font-size:36px;font-weight:800;color:var(--navy);">Our Core <span class="green-text">Focus</span></h2>
-                </div>
-                <p style="max-width:400px;font-size:15px;color:var(--text-muted);line-height:1.7;">We assist students with a wide range of education loan options to support their academic and career goals.</p>
+            <div class="section-header-center" data-aos="fade-up">
+                <span class="section-label"><i class="fas fa-layer-group"></i> OUR CORE SPECIALIZATIONS</span>
+                <h2 class="about-section-title">Comprehensive Financing Solutions <span class="green-text">For Every Dream</span></h2>
+                <p class="about-section-sub">We assist students with specialized education loan advisory across three major educational sectors.</p>
             </div>
-            <p style="font-size:15px;color:var(--text-body);margin-bottom:12px;" data-aos="fade-up">Our core focus is on:</p>
-            <div class="core-focus-grid">
-                <div class="core-card" data-aos="fade-up" data-aos-delay="0">
-                    <div class="core-card-num">01</div>
-                    <div class="core-card-icon" style="background:#dbeafe;color:var(--blue-dark);"><i class="fas fa-graduation-cap"></i></div>
+
+            <div class="about-focus-grid">
+                <!-- Card 1: Domestic -->
+                <div class="focus-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="focus-card-top">
+                        <div class="focus-card-icon" style="background:#dbeafe;color:var(--blue-dark);"><i class="fas fa-landmark"></i></div>
+                        <span class="focus-card-num">01</span>
+                    </div>
                     <h3>Domestic Education Loans</h3>
-                    <p>Assistance for higher education within India, across top universities and institutions.</p>
+                    <p>Assistance for higher education within India across top universities, IITs, IIMs, NITs, and leading accredited institutions.</p>
+                    <ul class="focus-features-list">
+                        <li><i class="fas fa-circle-check"></i> Public, Private &amp; NBFC Lenders</li>
+                        <li><i class="fas fa-circle-check"></i> Collateral &amp; Non-Collateral Options</li>
+                        <li><i class="fas fa-circle-check"></i> Tax Deductions under Section 80E</li>
+                    </ul>
+                    <a href="domestic-loans.html" class="focus-card-link">Explore Domestic Loans <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="core-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="core-card-num">02</div>
-                    <div class="core-card-icon" style="background:#dcfce7;color:#166534;"><i class="fas fa-globe"></i></div>
+
+                <!-- Card 2: International -->
+                <div class="focus-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="focus-card-top">
+                        <div class="focus-card-icon" style="background:#dcfce7;color:#166534;"><i class="fas fa-globe-americas"></i></div>
+                        <span class="focus-card-num">02</span>
+                    </div>
                     <h3>International Education Loans</h3>
-                    <p>Guidance for students planning to study abroad, with access to multiple lender options.</p>
+                    <p>Guidance for students aspiring to study abroad, with direct access to tailored international funding packages from leading lenders.</p>
+                    <ul class="focus-features-list">
+                        <li><i class="fas fa-circle-check"></i> USA, UK, Canada, Australia &amp; Europe</li>
+                        <li><i class="fas fa-circle-check"></i> Up to ₹2 Cr+ with Pre-Visa Sanction</li>
+                        <li><i class="fas fa-circle-check"></i> Tuition, Living &amp; Travel Expenses</li>
+                    </ul>
+                    <a href="abroad-loans.html" class="focus-card-link">Explore Abroad Loans <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="core-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="core-card-num">03</div>
-                    <div class="core-card-icon" style="background:#eff6ff;color:var(--navy);"><i class="fas fa-stethoscope"></i></div>
+
+                <!-- Card 3: MBBS -->
+                <div class="focus-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="focus-card-top">
+                        <div class="focus-card-icon" style="background:#ccfbf1;color:#0f766e;"><i class="fas fa-stethoscope"></i></div>
+                        <span class="focus-card-num">03</span>
+                    </div>
                     <h3>MBBS Education Loans — India &amp; Abroad</h3>
-                    <p>Specialized support for MBBS aspirants in India and overseas.</p>
+                    <p>Specialized high-quantum loan assistance specifically structured for undergraduate and postgraduate medical aspirants.</p>
+                    <ul class="focus-features-list">
+                        <li><i class="fas fa-circle-check"></i> Premier Medical Colleges in India</li>
+                        <li><i class="fas fa-circle-check"></i> Overseas Universities (NMC Compliant)</li>
+                        <li><i class="fas fa-circle-check"></i> Extended Moratorium Periods</li>
+                    </ul>
+                    <a href="mbbs-loans.html" class="focus-card-link">Explore MBBS Loans <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            <p style="font-size:15px;color:var(--text-body);line-height:1.8;margin-top:16px;" data-aos="fade-up">From understanding your financial and academic profile to guiding you through documentation, application processing and the next steps toward sanction and disbursement, we aim to make the education-loan journey simpler, clearer and more organized.</p>
+
+            <div class="focus-summary-box" data-aos="fade-up">
+                <div class="focus-summary-icon"><i class="fas fa-circle-info"></i></div>
+                <p class="focus-summary-text">From understanding your financial and academic profile to guiding you through documentation, application processing, and the next steps toward sanction and disbursement, we aim to make the education loan journey simpler, clearer, and thoroughly organized.</p>
+            </div>
         </div>
     </section>
 
-    <!-- OUR MISSION -->
-    <section class="section-pad">
+    <!-- THE 6-STEP ADVISORY JOURNEY -->
+    <section class="about-journey-section">
         <div class="container">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
-                <div data-aos="fade-right">
-                    <div class="section-eyebrow-line"></div>
-                    <h2 style="font-size:48px;font-weight:800;line-height:1.1;margin-bottom:8px;color:var(--navy);">Our<br><span class="green-text">Mission</span></h2>
-                    <h3 style="font-size:20px;font-weight:700;color:var(--navy);margin-bottom:16px;">Making Education Funding Simpler for Every Student</h3>
-                    <p style="font-size:15px;color:var(--text-body);line-height:1.8;margin-bottom:16px;">Our mission is to provide students and parents with <strong>clear, practical and personalized education-loan guidance</strong> so they can make informed decisions about financing their education.</p>
-                    <p style="font-size:15px;color:var(--text-body);line-height:1.8;margin-bottom:32px;">We focus on understanding each student's profile rather than suggesting the same solution to everyone.</p>
-                    <div style="display:flex;gap:24px;flex-wrap:wrap;">
-                        <div style="text-align:center;">
-                            <div style="width:52px;height:52px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--green);margin:0 auto 10px;"><i class="fas fa-user-check"></i></div>
-                            <p style="font-size:12px;font-weight:700;color:var(--navy);">Personalized<br>Guidance</p>
+            <div class="section-header-center" data-aos="fade-up">
+                <span class="section-label"><i class="fas fa-route"></i> HOW WE GUIDE YOU</span>
+                <h2 class="about-section-title">The 6-Step Advisory <span class="green-text">Roadmap</span></h2>
+                <p class="about-section-sub">Our step-by-step guidance protocol eliminates guesswork, prevents documentation rejections, and accelerates loan sanctions.</p>
+            </div>
+
+            <div class="about-journey-grid">
+                <!-- Step 1 -->
+                <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="step-card-header">
+                        <span class="step-pill">Step 01</span>
+                        <div class="step-icon-wrap"><i class="fas fa-bullseye"></i></div>
+                    </div>
+                    <h3>Profile Assessment</h3>
+                    <p>We analyze the student's target degree, college/university, destination country, required funding amount, and financial profile to identify potential education loan pathways.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-card" data-aos="fade-up" data-aos-delay="80">
+                    <div class="step-card-header">
+                        <span class="step-pill">Step 02</span>
+                        <div class="step-icon-wrap"><i class="fas fa-building-columns"></i></div>
+                    </div>
+                    <h3>Loan Option Guidance</h3>
+                    <p>We help students and parents compare suitable options available across partner public banks, private banks, NBFCs, and international lending institutions.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="step-card-header">
+                        <span class="step-pill">Step 03</span>
+                        <div class="step-icon-wrap"><i class="fas fa-file-lines"></i></div>
+                    </div>
+                    <h3>Documentation Assistance</h3>
+                    <p>We provide comprehensive guidance on required paperwork and assist applicants in organizing their academic, KYC, and financial documents to avoid processing delays.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-card" data-aos="fade-up" data-aos-delay="240">
+                    <div class="step-card-header">
+                        <span class="step-pill">Step 04</span>
+                        <div class="step-icon-wrap"><i class="fas fa-magnifying-glass-chart"></i></div>
+                    </div>
+                    <h3>Eligibility Guidance</h3>
+                    <p>We walk applicants through all factors that influence loan eligibility—including CIBIL health, co-borrower income, and collateral evaluation—before submitting an application.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step-card" data-aos="fade-up" data-aos-delay="320">
+                    <div class="step-card-header">
+                        <span class="step-pill">Step 05</span>
+                        <div class="step-icon-wrap"><i class="fas fa-handshake-angle"></i></div>
+                    </div>
+                    <h3>Application Support</h3>
+                    <p>We assist applicants throughout the formal application process and proactively coordinate with bank credit underwriters to address queries rapidly.</p>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="step-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-card-header">
+                        <span class="step-pill">Step 06</span>
+                        <div class="step-icon-wrap"><i class="fas fa-money-check-dollar"></i></div>
+                    </div>
+                    <h3>Sanction &amp; Disbursement Support</h3>
+                    <p>We continue to assist through the subsequent stages of the loan journey, coordinating sanction letter verification, margin money, and timely disbursement schedules.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR MISSION & VALUES -->
+    <section class="about-mission-section">
+        <div class="container">
+            <div class="about-mission-layout">
+                <div class="mission-text-col" data-aos="fade-right">
+                    <span class="section-label"><i class="fas fa-bullseye"></i> OUR CORE MISSION</span>
+                    <h2 class="about-section-title">Making Education Funding <span class="green-text">Simpler for Every Student</span></h2>
+                    <p class="mission-lead">Our mission is to provide students and parents with clear, practical, and personalized education loan guidance so they can make informed decisions about financing their education.</p>
+                    <p class="mission-body">We reject generic, one-size-fits-all loan solutions. By understanding each family's individual requirements and academic merits, we open the door to legitimate, structured, and affordable financing options.</p>
+                    
+                    <div class="mission-values-grid">
+                        <div class="mission-value-card">
+                            <div class="mission-value-icon" style="background:#dcfce7;color:var(--green);"><i class="fas fa-user-check"></i></div>
+                            <h4>Personalized Guidance</h4>
+                            <span>Tailored solutions for your profile</span>
                         </div>
-                        <div style="width:1px;background:#e5e7eb;"></div>
-                        <div style="text-align:center;">
-                            <div style="width:52px;height:52px;background:#dbeafe;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--blue-dark);margin:0 auto 10px;"><i class="fas fa-lightbulb"></i></div>
-                            <p style="font-size:12px;font-weight:700;color:var(--navy);">Informed<br>Decisions</p>
+                        <div class="mission-value-card">
+                            <div class="mission-value-icon" style="background:#dbeafe;color:var(--blue-dark);"><i class="fas fa-lightbulb"></i></div>
+                            <h4>Informed Decisions</h4>
+                            <span>Transparent terms &amp; zero hidden fees</span>
                         </div>
-                        <div style="width:1px;background:#e5e7eb;"></div>
-                        <div style="text-align:center;">
-                            <div style="width:52px;height:52px;background:#eff6ff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--navy);margin:0 auto 10px;"><i class="fas fa-chart-bar"></i></div>
-                            <p style="font-size:12px;font-weight:700;color:var(--navy);">Brighter<br>Futures</p>
+                        <div class="mission-value-card">
+                            <div class="mission-value-icon" style="background:#eff6ff;color:var(--navy);"><i class="fas fa-chart-line"></i></div>
+                            <h4>Brighter Futures</h4>
+                            <span>Empowering career aspirations</span>
                         </div>
                     </div>
                 </div>
-                <div data-aos="fade-left">
-                    <div style="border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.12);">
-                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80" alt="Our Mission" style="width:100%;height:400px;object-fit:cover;" loading="lazy" decoding="async">
+
+                <div class="mission-media-col" data-aos="fade-left">
+                    <div class="mission-image-card">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80" alt="Students collaborating during an education loan consultation" loading="lazy" decoding="async">
+                        <div class="mission-image-badge">
+                            <p>"Guiding Today for a Brighter Tomorrow"</p>
+                            <span>Visionary Path Services Motto</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- YOUR EDUCATION OUR SUPPORT CTA -->
-    <section class="section-pad" style="background:linear-gradient(135deg,var(--navy),#1a3a7c);">
-        <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
-            <div data-aos="fade-right">
-                <div style="width:40px;height:3px;background:var(--green);margin-bottom:16px;"></div>
-                <h2 style="font-size:40px;font-weight:800;color:var(--white);line-height:1.2;">Your Education.<br><span style="color:#34d399;">Our Support.</span></h2>
-                <p style="font-size:15px;color:rgba(255,255,255,0.75);margin:16px 0 28px;line-height:1.8;">We are here to make your education-loan journey simpler, clearer and more organized—so you can focus on what truly matters, your future.</p>
-                <a href="contact.html" class="btn btn-primary">Talk to Our Team <i class="fas fa-arrow-right"></i></a>
+    <!-- WHY STUDENTS & PARENTS TRUST US -->
+    <section class="about-trust-section">
+        <div class="container">
+            <div class="section-header-center" data-aos="fade-up">
+                <span class="section-label"><i class="fas fa-shield-halved"></i> WHY VISIONARY PATH SERVICES</span>
+                <h2 class="about-section-title">The Trusted Partner for <span class="green-text">Education Financing</span></h2>
+                <p class="about-section-sub">We combine institutional banking expertise with student-first ethics to ensure your education financing experience is seamless.</p>
             </div>
-            <div data-aos="fade-left">
-                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Students" style="width:100%;border-radius:20px;height:300px;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,0.3);" loading="lazy" decoding="async">
+
+            <div class="about-trust-grid">
+                <div class="trust-pillar-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="trust-pillar-icon" style="background:#dcfce7;color:#166534;"><i class="fas fa-hand-holding-dollar"></i></div>
+                    <h3>100% Free Service</h3>
+                    <p>Our counseling, document review, and application assistance are completely free for students. We never charge any processing or consulting fees.</p>
+                </div>
+                <div class="trust-pillar-card" data-aos="fade-up" data-aos-delay="80">
+                    <div class="trust-pillar-icon" style="background:#dbeafe;color:var(--blue-dark);"><i class="fas fa-network-wired"></i></div>
+                    <h3>15+ Lending Partners</h3>
+                    <p>We partner with premier Scheduled Commercial Banks, leading NBFCs, and international lenders to bring you the widest selection of competitive loan options.</p>
+                </div>
+                <div class="trust-pillar-card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="trust-pillar-icon" style="background:#eff6ff;color:var(--navy);"><i class="fas fa-user-shield"></i></div>
+                    <h3>Dedicated Loan Advisor</h3>
+                    <p>Every student is paired with a seasoned education loan specialist who stays with you from initial eligibility review until funds reach your university.</p>
+                </div>
+                <div class="trust-pillar-card" data-aos="fade-up" data-aos-delay="240">
+                    <div class="trust-pillar-icon" style="background:#fef3c7;color:#b45309;"><i class="fas fa-location-dot"></i></div>
+                    <h3>Pan-India Assistance</h3>
+                    <p>Seamless digital support across all states in India, ensuring that high-quality education loan guidance is accessible no matter where you reside.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLOSING CTA SECTION -->
+    <section class="about-cta-section">
+        <div class="container">
+            <div class="about-cta-layout">
+                <div data-aos="fade-right">
+                    <div style="width:40px;height:3px;background:var(--green);margin-bottom:16px;"></div>
+                    <h2 class="about-cta-title">Your Education.<br><span style="color:#34d399;">Our Support.</span></h2>
+                    <p class="about-cta-sub">We are here to make your education loan journey simpler, clearer, and more organized—so you can focus on what truly matters: your future.</p>
+                    <div class="about-cta-btns">
+                        <button class="btn-hero-cta" onclick="openPopup()">Check Eligibility – Free <i class="fas fa-arrow-right"></i></button>
+                        <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn-hero-whatsapp"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+                    </div>
+                    <p class="about-cta-direct">
+                        Prefer to speak directly? Call our advisory desk at <a href="tel:9063703038">+91 9063703038</a> or email <a href="mailto:Visionarypathservises@gmail.com">Visionarypathservises@gmail.com</a>.
+                    </p>
+                </div>
+                <div class="about-cta-media" data-aos="fade-left">
+                    <div class="about-cta-image-card">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80" alt="Empowered students who secured education loans through Visionary Path Services" loading="lazy" decoding="async">
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -1055,14 +1055,46 @@ main ol li {
    20. ABOUT PAGE  
    ────────────────────────────────────────────────────────── */
 
+.about-hero-title {
+    font-family: var(--font-display, 'Poppins', sans-serif);
+    font-size: clamp(2.2rem, 4.4vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1.16;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+}
+
+.about-section-title {
+    font-family: var(--font-display, 'Poppins', sans-serif);
+    font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+}
+
+.about-hero-lead,
+.about-section-sub {
+    text-wrap: pretty;
+}
+
+.about-stat-number,
+.focus-card-num,
+.step-pill,
+.floating-badge-val {
+    font-variant-numeric: tabular-nums;
+}
+
 .our-purpose-label h2 {
     font-size: clamp(30px, 4vw, 42px);
+    text-wrap: balance;
 }
 
 .purpose-text p {
     font-size: 16.5px;
     line-height: 1.85;
     color: #1e293b;
+    text-wrap: pretty;
 }
 
 /* ──────────────────────────────────────────────────────────
