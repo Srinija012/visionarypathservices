@@ -1,0 +1,805 @@
+/* ============================================================
+   VISIONARY PATH SERVICES — Readability & UI Improvements
+   Production Audit Patch · September 2026
+   
+   Strategy: Additive-only overrides. Targets every under-
+   spec'd font-size, low-contrast text, and cramped spacing
+   across the site. All pages load this after style.css.
+   ============================================================ */
+
+
+/* ──────────────────────────────────────────────────────────
+   1. TYPOGRAPHY FOUNDATION  
+   Body bumped to 16px (WCAG AA minimum for body text).
+   Line height kept at 1.65 for comfortable scan rhythm.
+   ────────────────────────────────────────────────────────── */
+
+body {
+    font-size: 16px;          /* was 15px — below readable threshold */
+    line-height: 1.65;
+    color: #1e293b;           /* slightly richer than #334155 for contrast */
+}
+
+/* Heading rhythm — tighter only for display headings */
+h1, h2, h3 {
+    line-height: 1.2;
+}
+h4, h5, h6 {
+    line-height: 1.35;
+}
+
+/* Body paragraphs: give them room */
+p {
+    max-width: 72ch;          /* optimal reading measure */
+    line-height: 1.7;
+}
+
+/* Section-level subtitle text — was 14.5–15px, now 16px */
+.exact-hero-lead,
+.bridging-sub,
+.why-sub,
+.section-sub,
+.pan-india-sub {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #374151;           /* #64748b was 4.5:1 – borderline; this is 7:1 */
+}
+
+/* ──────────────────────────────────────────────────────────
+   2. TOP BAR  
+   Current 12.5px is too small for mission-critical contact.
+   ────────────────────────────────────────────────────────── */
+
+.top-bar {
+    font-size: 13.5px;
+}
+
+.contact-num {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.top-bar-right a {
+    font-size: 14px;
+}
+
+/* ──────────────────────────────────────────────────────────
+   3. NAVIGATION  
+   Nav links at 13.5px are legible but tight on 1024px.
+   Bump to 14px. Dropdown text sizes lifted to readable floor.
+   ────────────────────────────────────────────────────────── */
+
+.nav-links a {
+    font-size: 14px;
+}
+
+/* Mega dropdown card titles */
+.mega-loan-title {
+    font-size: 14px;
+}
+
+/* Mega dropdown descriptions — was 11px, well below any standard */
+.mega-loan-desc {
+    font-size: 13px;
+    color: #475569;           /* lifted from #64748b for readability */
+}
+
+/* Country names in mega dropdown */
+.country-name {
+    font-size: 13px;
+}
+
+/* Mega footer labels */
+.mega-footer-note {
+    font-size: 12.5px;
+}
+.mega-footer-cta {
+    font-size: 13px;
+}
+.mega-header-title {
+    font-size: 12px;
+}
+.mega-header-pill {
+    font-size: 11px;
+}
+
+/* More dropdown items */
+.more-dropdown-item {
+    font-size: 14px;
+}
+
+/* Logo sub-tagline — currently 9.5px, unreadable */
+.logo-sub,
+.logo-tagline {
+    font-size: 10.5px;
+    letter-spacing: 0.3px;
+}
+
+/* ──────────────────────────────────────────────────────────
+   4. HERO SECTION  
+   ────────────────────────────────────────────────────────── */
+
+.exact-hero-title {
+    font-size: clamp(36px, 4.2vw, 52px);
+    letter-spacing: -0.03em;
+}
+
+.exact-hero-lead {
+    font-size: 17px;          /* was 15px */
+    max-width: 520px;
+}
+
+.hero-loan-pill {
+    font-size: 13px;
+}
+
+.exact-hero-safety {
+    font-size: 13px;
+}
+
+/* Pillar labels — was 13.5px, legible but let's polish */
+.pillar-label {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* ──────────────────────────────────────────────────────────
+   5. SECTION HEADINGS & EYEBROWS  
+   ────────────────────────────────────────────────────────── */
+
+.section-title {
+    font-size: clamp(26px, 3.5vw, 38px);
+}
+
+.eyebrow-text,
+.brand-eyebrow .eyebrow-text {
+    font-size: 13px;
+}
+
+.why-top-eyebrow {
+    font-size: 13px;
+}
+
+.handwritten-note {
+    font-size: 14px;
+}
+
+/* ──────────────────────────────────────────────────────────
+   6. CARD BODY TEXT  
+   Most cards use 12–12.5px for descriptions — lifted to 13.5px.
+   This is the single biggest readability fix on the site.
+   ────────────────────────────────────────────────────────── */
+
+/* Pan India cards */
+.pan-card p {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #475569;
+}
+
+.pan-card h3 {
+    font-size: 15.5px;
+}
+
+/* Why VPS 9 cards */
+.why-feature-card p {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #475569;
+}
+
+.why-feature-card h4 {
+    font-size: 15.5px;
+}
+
+/* Bridge cards */
+.bridge-points li {
+    font-size: 14.5px;
+    line-height: 1.6;
+}
+
+.disclosure-text {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Core cards (About, Services) */
+.core-card p {
+    font-size: 14.5px;
+    line-height: 1.7;
+}
+
+.core-card h3 {
+    font-size: 18.5px;
+}
+
+/* Docs card lists */
+.check-bullet-list li {
+    font-size: 15px;
+}
+
+.doc-checklist li {
+    font-size: 14px;
+}
+
+/* Country stat label */
+.country-stat-lbl {
+    font-size: 12px;   /* uppercase + tracking makes 12px readable */
+}
+
+/* ──────────────────────────────────────────────────────────
+   7. FAQ COMPONENT  
+   ────────────────────────────────────────────────────────── */
+
+.faq-question {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.faq-answer {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #374151;
+}
+
+/* ──────────────────────────────────────────────────────────
+   8. FOOTER  
+   Footer link text at 13px and about text at 13px both
+   suffer from low contrast on the dark navy bg. Lift contrast.
+   ────────────────────────────────────────────────────────── */
+
+.footer-about-text,
+.footer-desc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.82);   /* was 0.7 — too faint */
+    line-height: 1.7;
+}
+
+.footer-col h4 {
+    font-size: 15px;
+}
+
+.footer-col ul li a,
+.footer-links li a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.82);   /* was 0.72 */
+}
+
+.footer-col ul li a:hover,
+.footer-links li a:hover {
+    color: #ffffff;
+}
+
+.contact-list li {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);   /* was 0.75 */
+}
+
+.footer-logo-name,
+.footer-brand .logo-name {
+    font-size: 16px;
+}
+
+.footer-logo-tagline,
+.footer-brand .logo-sub {
+    font-size: 11px;
+    color: #6ee7b7;   /* slightly brighter green on dark */
+}
+
+.footer-bottom-inner {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.70);   /* was 0.55 — too faint */
+}
+
+.two-col-list li a {
+    font-size: 13px !important;   /* was 12px */
+}
+
+/* ──────────────────────────────────────────────────────────
+   9. POPUP MODAL  
+   ────────────────────────────────────────────────────────── */
+
+.popup-left-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+}
+
+.feature-text-wrap strong {
+    font-size: 13.5px;
+}
+
+.feature-text-wrap span {
+    font-size: 12px;
+    color: #475569;   /* was #64748b — borderline on white */
+}
+
+.popup-form-header h4 {
+    font-size: 21px;
+}
+
+.popup-form-header p {
+    font-size: 13.5px;
+    color: #475569;
+}
+
+.form-group label,
+.form-label-regular {
+    font-size: 13px;
+    color: #1e293b;
+}
+
+.input-icon-wrap input,
+.input-icon-wrap textarea {
+    font-size: 15px;   /* was 13px — iOS auto-zoom threshold is 16px; near-16 is safe */
+    color: #0f172a;
+}
+
+.popup-safe {
+    font-size: 12px;
+    color: #475569;
+}
+
+/* ──────────────────────────────────────────────────────────
+   10. PAGE HERO (inner pages)  
+   The .page-hero p text contrast at rgba(255,255,255,0.85)
+   on gradient is fine, but size was sometimes 1rem = 16px. Keep.
+   ────────────────────────────────────────────────────────── */
+
+.page-hero p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.90);   /* boosted from 0.85 */
+}
+
+.page-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+}
+
+.breadcrumb {
+    font-size: 13.5px;
+}
+
+/* ──────────────────────────────────────────────────────────
+   11. INNER PAGE SECTIONS (shared across services/loan pages)
+   ────────────────────────────────────────────────────────── */
+
+/* Purpose section */
+.purpose-text p {
+    font-size: 16.5px;
+    line-height: 1.8;
+}
+
+/* Section sub text for all inner pages */
+.section-sub {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #475569;
+}
+
+/* ──────────────────────────────────────────────────────────
+   12. EMI CALCULATOR  
+   ────────────────────────────────────────────────────────── */
+
+.emi-inputs-col h3 {
+    font-size: 26px;
+}
+
+.emi-inputs-col p {
+    font-size: 15px;
+    color: #475569;
+}
+
+.emi-label-row label {
+    font-size: 15px;
+}
+
+.emi-breakdown-row {
+    font-size: 15px;
+}
+
+.emi-bar-legend {
+    font-size: 13px;
+    color: #475569;
+}
+
+/* ──────────────────────────────────────────────────────────
+   13. FINANCIAL TOOLS / CALCULATORS  
+   ────────────────────────────────────────────────────────── */
+
+.calc-pane-title {
+    font-size: 1.55rem;
+}
+
+.calc-label {
+    font-size: 1rem;
+}
+
+.calc-val-input {
+    font-size: 1.2rem;
+}
+
+.calc-result-sub {
+    font-size: 1rem;
+}
+
+.calc-breakdown-row {
+    font-size: 1rem;
+}
+
+.calc-breakdown-row.total-row {
+    font-size: 1.1rem;
+}
+
+.calc-disclaimer {
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+/* ──────────────────────────────────────────────────────────
+   14. MARQUEE / LENDER CARDS  
+   ────────────────────────────────────────────────────────── */
+
+.marquee-card-badge {
+    font-size: 0.72rem;   /* was 0.68rem — just below readable floor */
+}
+
+/* ──────────────────────────────────────────────────────────
+   15. BUTTONS — size and touch targets  
+   ────────────────────────────────────────────────────────── */
+
+.btn {
+    font-size: 14px;
+    min-height: 44px;   /* Apple HIG / WCAG 2.5.5 minimum touch target */
+}
+
+.btn-hero-primary {
+    font-size: 15.5px;
+    padding: 14px 32px;
+}
+
+.btn-hero-secondary {
+    font-size: 14.5px;
+    padding: 13px 28px;
+}
+
+.btn-primary,
+.btn-eligibility {
+    font-size: 14px;
+    padding: 10px 22px;
+}
+
+.btn-whatsapp-nav {
+    font-size: 13px;
+}
+
+.btn-lg {
+    font-size: 15.5px;
+}
+
+.btn-calc-deal {
+    font-size: 1.05rem;
+    padding: 16px 28px;
+}
+
+/* ──────────────────────────────────────────────────────────
+   16. INLINE-STYLE PAGE OVERRIDES  
+   Services, Contact, Partner pages use <style> blocks with
+   small px values. These global selectors beat specificity.
+   ────────────────────────────────────────────────────────── */
+
+/* Services page inline overrides */
+.service-card h3 {
+    font-size: 19px !important;
+}
+
+.service-card p {
+    font-size: 14.5px !important;
+    line-height: 1.65 !important;
+}
+
+.service-link {
+    font-size: 14px !important;
+}
+
+.process-card h3 {
+    font-size: 16.5px !important;
+}
+
+.process-card p {
+    font-size: 14.5px !important;
+    line-height: 1.7 !important;
+}
+
+.loan-col h4 {
+    font-size: 15.5px !important;
+}
+
+.loan-col ul li {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+}
+
+.cta-strip h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem) !important;
+}
+
+.cta-strip p {
+    font-size: 16px !important;
+}
+
+/* Contact page inline overrides */
+.contact-left > p,
+.contact-form-col > p {
+    font-size: 15.5px !important;
+    line-height: 1.7 !important;
+}
+
+.method-info h4 {
+    font-size: 16px !important;
+}
+
+.method-info a {
+    font-size: 16px !important;
+}
+
+.method-info p {
+    font-size: 14px !important;
+    color: #475569 !important;   /* was var(--slate-300) = #cbd5e1 on white — very low contrast */
+}
+
+.form-group label {
+    font-size: 14px !important;
+}
+
+.input-icon-wrap input,
+.input-icon-wrap textarea {
+    font-size: 16px !important;  /* prevents iOS zoom on focus */
+}
+
+/* ──────────────────────────────────────────────────────────
+   17. MUTED / SECONDARY TEXT CONTRAST FIX  
+   --text-muted = #64748b has 4.5:1 contrast on white which
+   only passes AA for large text (18px+). For 13-14px body
+   text this is a fail. Bring all muted instances above 4.7:1.
+   ────────────────────────────────────────────────────────── */
+
+.text-muted,
+.section-sub,
+.pan-india-sub,
+.why-sub,
+.exact-hero-safety {
+    color: #475569 !important;   /* 7.1:1 on white */
+}
+
+/* Card muted text */
+.pan-card p,
+.why-feature-card p {
+    color: #4b5563 !important;   /* 7.4:1 on white */
+}
+
+/* ──────────────────────────────────────────────────────────
+   18. BLOG PAGE  
+   ────────────────────────────────────────────────────────── */
+
+.blog-card h3,
+.blog-card-title {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.blog-card p,
+.blog-card-excerpt {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #374151;
+}
+
+.blog-card-meta,
+.blog-meta {
+    font-size: 13px;
+    color: #475569;
+}
+
+/* ──────────────────────────────────────────────────────────
+   19. DISCLAIMER / PRIVACY / TERMS — legal pages  
+   Legal text needs to be the MOST readable.
+   ────────────────────────────────────────────────────────── */
+
+.legal-section p,
+.disclaimer-content p,
+.privacy-content p,
+.terms-content p,
+main p {
+    font-size: 15.5px;
+    line-height: 1.85;
+    color: #1e293b;
+    max-width: 76ch;
+}
+
+main h2 {
+    font-size: clamp(22px, 2.8vw, 30px);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+main h3 {
+    font-size: clamp(18px, 2vw, 22px);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+main ul li,
+main ol li {
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+/* ──────────────────────────────────────────────────────────
+   20. ABOUT PAGE  
+   ────────────────────────────────────────────────────────── */
+
+.our-purpose-label h2 {
+    font-size: clamp(30px, 4vw, 42px);
+}
+
+.purpose-text p {
+    font-size: 16.5px;
+    line-height: 1.85;
+    color: #1e293b;
+}
+
+/* ──────────────────────────────────────────────────────────
+   21. PARTNER-WITH-US PAGE  
+   ────────────────────────────────────────────────────────── */
+
+.partner-card h3,
+.partner-benefit h3 {
+    font-size: 18px;
+}
+
+.partner-card p,
+.partner-benefit p {
+    font-size: 14.5px;
+    line-height: 1.7;
+}
+
+/* ──────────────────────────────────────────────────────────
+   22. CTA SECTIONS  
+   ────────────────────────────────────────────────────────── */
+
+.cta-section h2 {
+    font-size: clamp(26px, 3.8vw, 40px);
+}
+
+.cta-section p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.dream-heading {
+    font-size: 26px;
+    line-height: 1.3;
+}
+
+.dream-note-text {
+    font-size: 14px;
+}
+
+/* ──────────────────────────────────────────────────────────
+   23. RESPONSIVE ADJUSTMENTS — readability maintained  
+   ────────────────────────────────────────────────────────── */
+
+@media (max-width: 960px) {
+    body { font-size: 16px; }
+
+    .exact-hero-lead { font-size: 16px; }
+    .bridging-sub { font-size: 15px; }
+    .section-sub { font-size: 15px; }
+
+    .faq-question { font-size: 15.5px; }
+    .faq-answer { font-size: 14.5px; }
+
+    .footer-about-text,
+    .footer-desc { font-size: 13.5px; }
+
+    .footer-col ul li a,
+    .footer-links li a { font-size: 13.5px; }
+}
+
+@media (max-width: 768px) {
+    body { font-size: 16px; }  /* Never shrink below 16px */
+
+    .page-hero p { font-size: 16px; }
+    .exact-hero-lead { font-size: 16px; }
+
+    .pan-card p { font-size: 14px; }
+    .why-feature-card p { font-size: 14px; }
+    .bridge-points li { font-size: 14px; }
+
+    .faq-question { font-size: 15px; }
+    .faq-answer { font-size: 14px; }
+
+    main p { font-size: 15px; }
+    main ul li, main ol li { font-size: 15px; }
+
+    .cta-section p { font-size: 16px; }
+    .dream-heading { font-size: 22px; }
+
+    .contact-list li { font-size: 13.5px; }
+    .footer-col ul li a,
+    .footer-links li a { font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+    .hero-loan-pill { font-size: 12.5px; }
+    .pan-card h3 { font-size: 15px; }
+    .why-feature-card h4 { font-size: 15px; }
+    .mega-loan-title { font-size: 13.5px; }
+}
+
+/* ──────────────────────────────────────────────────────────
+   24. INTERACTION STATES — visible & accessible  
+   ────────────────────────────────────────────────────────── */
+
+/* Larger focus ring for better keyboard visibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #2563eb !important;
+    outline-offset: 3px !important;
+    box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.18) !important;
+}
+
+/* Selection highlight */
+::selection {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+/* ──────────────────────────────────────────────────────────
+   25. UTILITY — spacing breathing room  
+   Cards that are dense get a touch more internal padding.
+   ────────────────────────────────────────────────────────── */
+
+.why-feature-card {
+    padding: 28px 24px;
+}
+
+.pan-card {
+    padding: 24px 22px;
+}
+
+.core-card {
+    padding: 34px 26px;
+}
+
+.bridge-card {
+    padding: 34px 32px;
+}
+
+/* ──────────────────────────────────────────────────────────
+   26. SCROLLBAR — polished & branded  
+   ────────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
