@@ -37,8 +37,8 @@
         const max = parseFloat(slider.max) || 100;
         const val = parseFloat(slider.value) || 0;
         const pct = ((val - min) / (max - min)) * 100;
-        // Using brand primary green (#1a9c4e) and light gray (#e2e8f0)
-        slider.style.background = `linear-gradient(to right, #1a9c4e 0%, #1a9c4e ${pct}%, #e2e8f0 ${pct}%, #e2e8f0 100%)`;
+        // Using brand primary green (#059669) and light gray (#e2e8f0)
+        slider.style.background = `linear-gradient(to right, #059669 0%, #059669 ${pct}%, #e2e8f0 ${pct}%, #e2e8f0 100%)`;
     }
 
     // --- Tab Switching ---
