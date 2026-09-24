@@ -357,6 +357,20 @@ countries = [
     }
 ]
 
+
+COUNTRY_META = {
+    "usa": {"country_name": "the USA", "country_short": "USA", "country_full": "the United States"},
+    "uk": {"country_name": "the UK", "country_short": "UK", "country_full": "the United Kingdom"},
+    "canada": {"country_name": "Canada", "country_short": "Canada", "country_full": "Canada"},
+    "germany": {"country_name": "Germany", "country_short": "Germany", "country_full": "Germany"},
+    "australia": {"country_name": "Australia", "country_short": "Australia", "country_full": "Australia"},
+    "ireland": {"country_name": "Ireland", "country_short": "Ireland", "country_full": "Ireland"},
+    "france": {"country_name": "France", "country_short": "France", "country_full": "France"},
+    "new-zealand": {"country_name": "New Zealand", "country_short": "New Zealand", "country_full": "New Zealand"},
+    "dubai": {"country_name": "Dubai & the UAE", "country_short": "Dubai", "country_full": "Dubai & the UAE"},
+    "europe": {"country_name": "Europe", "country_short": "Europe", "country_full": "European Universities"},
+}
+
 template = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -424,113 +438,39 @@ template = """<!DOCTYPE html>
       ]
     }}
     </script>
-    <style>
-        .country-stats-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
-        }}
-        .country-stat-box {{
-            background: #ffffff;
-            border: 1.5px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 24px 20px;
-            text-align: center;
-            box-shadow: 0 4px 16px rgba(13,43,94,0.04);
-            transition: transform 0.25s ease;
-        }}
-        .country-stat-box:hover {{
-            transform: translateY(-4px);
-            border-color: #93c5fd;
-        }}
-        .country-stat-val {{
-            font-size: 1.35rem;
-            font-weight: 800;
-            color: var(--navy);
-            margin: 8px 0 4px;
-        }}
-        .country-stat-lbl {{
-            font-size: 0.85rem;
-            color: #64748b;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-weight: 600;
-        }}
-        .uni-tags-wrap {{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-        }}
-        .uni-tag {{
-            background: #eef5ff;
-            color: var(--blue);
-            font-weight: 600;
-            font-size: 13.5px;
-            padding: 7px 16px;
-            border-radius: 20px;
-            border: 1px solid #cfe2fe;
-        }}
-        .check-bullet-list {{
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-        }}
-        .check-bullet-list li {{
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            font-size: 15px;
-            color: #334155;
-            margin-bottom: 14px;
-            line-height: 1.6;
-        }}
-        .check-bullet-list li i {{
-            color: var(--green);
-            font-size: 17px;
-            margin-top: 3px;
-            flex-shrink: 0;
-        }}
-        .docs-card {{
-            background: #f8fafc;
-            border: 1.5px solid #e2e8f0;
-            border-radius: 18px;
-            padding: 30px;
-            margin: 30px 0;
-        }}
-    </style>
 </head>
 <body>
 
-    <!-- TOPBAR -->
-    <div class="topbar">
-        <div class="container topbar-inner">
-            <div class="topbar-left">
-                <span><i class="fas fa-clock"></i> Mon–Sat: 9:30 AM – 7:00 PM</span>
-                <span><i class="fas fa-map-marker-alt"></i> Pan-India Education Loan Guidance</span>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span class="top-bar-dash">—</span> Your Education Goals, Our Guidance
             </div>
-            <div class="topbar-right">
-                <a href="tel:9063703038"><i class="fas fa-phone"></i> +91 9063703038</a>
-                <a href="mailto:Visionarypathservises@gmail.com"><i class="fas fa-envelope"></i> Visionarypathservises@gmail.com</a>
+            <div class="top-bar-right">
+                <span class="contact-num"><i class="fas fa-phone-alt"></i> Contact:- 9063703038</span>
+                <span class="top-sep">|</span>
+                <a href="https://instagram.com/visionarypathservices" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <span class="top-sep">|</span>
+                <a href="mailto:Visionarypathservises@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </div>
 
     <!-- NAVBAR -->
-    <nav class="navbar" id="navbar">
+    <header class="navbar" id="navbar">
         <div class="container nav-inner">
             <a href="../../index.html" class="logo">
                 <div class="logo-text">
                     <span class="logo-name">VISIONARY PATH SERVICES</span>
-                    <span class="logo-tagline">Guiding Dreams, Financing Futures</span>
+                    <span class="logo-sub">Guiding Dreams, Financing Futures</span>
                 </div>
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="../../index.html">Home</a></li>
                 <li><a href="../about.html">About Us</a></li>
                 <li class="has-dropdown services-dropdown">
-                    <a href="../services.html">Services <i class="fas fa-chevron-down"></i></a>
+                    <a href="../services.html" class="active">Services <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown mega-dropdown">
                         <div class="mega-body">
                             <!-- Left: Loan Programs -->
@@ -578,46 +518,16 @@ template = """<!DOCTYPE html>
                                     <span class="mega-header-pill">10 Countries</span>
                                 </div>
                                 <div class="mega-countries-grid">
-                                    <a href="usa.html" class="mega-country-link">
-                                        <span class="country-flag">🇺🇸</span>
-                                        <span class="country-name">Study in USA</span>
-                                    </a>
-                                    <a href="uk.html" class="mega-country-link">
-                                        <span class="country-flag">🇬🇧</span>
-                                        <span class="country-name">Study in UK</span>
-                                    </a>
-                                    <a href="canada.html" class="mega-country-link">
-                                        <span class="country-flag">🇨🇦</span>
-                                        <span class="country-name">Study in Canada</span>
-                                    </a>
-                                    <a href="germany.html" class="mega-country-link">
-                                        <span class="country-flag">🇩🇪</span>
-                                        <span class="country-name">Study in Germany</span>
-                                    </a>
-                                    <a href="australia.html" class="mega-country-link">
-                                        <span class="country-flag">🇦🇺</span>
-                                        <span class="country-name">Study in Australia</span>
-                                    </a>
-                                    <a href="ireland.html" class="mega-country-link">
-                                        <span class="country-flag">🇮🇪</span>
-                                        <span class="country-name">Study in Ireland</span>
-                                    </a>
-                                    <a href="france.html" class="mega-country-link">
-                                        <span class="country-flag">🇫🇷</span>
-                                        <span class="country-name">Study in France</span>
-                                    </a>
-                                    <a href="new-zealand.html" class="mega-country-link">
-                                        <span class="country-flag">🇳🇿</span>
-                                        <span class="country-name">Study in New Zealand</span>
-                                    </a>
-                                    <a href="dubai.html" class="mega-country-link">
-                                        <span class="country-flag">🇦🇪</span>
-                                        <span class="country-name">Study in Dubai</span>
-                                    </a>
-                                    <a href="europe.html" class="mega-country-link">
-                                        <span class="country-flag">🇪🇺</span>
-                                        <span class="country-name">Study in Europe</span>
-                                    </a>
+                                    <a href="usa.html" class="mega-country-link"><span class="country-flag">🇺🇸</span><span class="country-name">Study in USA</span></a>
+                                    <a href="uk.html" class="mega-country-link"><span class="country-flag">🇬🇧</span><span class="country-name">Study in UK</span></a>
+                                    <a href="canada.html" class="mega-country-link"><span class="country-flag">🇨🇦</span><span class="country-name">Study in Canada</span></a>
+                                    <a href="germany.html" class="mega-country-link"><span class="country-flag">🇩🇪</span><span class="country-name">Study in Germany</span></a>
+                                    <a href="australia.html" class="mega-country-link"><span class="country-flag">🇦🇺</span><span class="country-name">Study in Australia</span></a>
+                                    <a href="ireland.html" class="mega-country-link"><span class="country-flag">🇮🇪</span><span class="country-name">Study in Ireland</span></a>
+                                    <a href="france.html" class="mega-country-link"><span class="country-flag">🇫🇷</span><span class="country-name">Study in France</span></a>
+                                    <a href="new-zealand.html" class="mega-country-link"><span class="country-flag">🇳🇿</span><span class="country-name">Study in New Zealand</span></a>
+                                    <a href="dubai.html" class="mega-country-link"><span class="country-flag">🇦🇪</span><span class="country-name">Study in Dubai</span></a>
+                                    <a href="europe.html" class="mega-country-link"><span class="country-flag">🇪🇺</span><span class="country-name">Study in Europe</span></a>
                                 </div>
                             </div>
                         </div>
@@ -636,15 +546,35 @@ template = """<!DOCTYPE html>
                 </li>
                 <li><a href="../partner-lenders.html">Partner Lenders</a></li>
                 <li><a href="../partner-with-us.html">Partner With Us</a></li>
-                <li><a href="../contact.html">Contact Us</a></li>
+                <li class="has-dropdown">
+                    <a href="#">More <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown more-dropdown">
+                        <a href="../about.html" class="more-dropdown-item">
+                            <i class="fas fa-info-circle"></i> About Us
+                        </a>
+                        <div class="more-dropdown-divider"></div>
+                        <a href="../blog.html" class="more-dropdown-item">
+                            <i class="fas fa-newspaper"></i> Blog
+                        </a>
+                        <a href="../contact.html" class="more-dropdown-item">
+                            <i class="fas fa-envelope"></i> Contact Us
+                        </a>
+                    </div>
+                </li>
             </ul>
             <div class="nav-cta">
-                <button class="btn btn-primary" onclick="openPopup()"><i class="fas fa-clipboard-list"></i> Check Eligibility</button>
-                <a href="https://wa.me/919063703038" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Talk to Expert</a>
+                <button class="btn btn-eligibility" onclick="openPopup()">
+                    <i class="fas fa-file-signature"></i> Check Eligibility
+                </button>
+                <a href="https://wa.me/918150949070" target="_blank" class="btn-whatsapp-nav">
+                    <i class="fab fa-whatsapp"></i> Talk to Expert
+                </a>
             </div>
-            <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="navLinks">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-    </nav>
+    </header>
 
     <!-- PAGE HERO -->
     <header class="page-hero">
@@ -652,37 +582,37 @@ template = """<!DOCTYPE html>
             <div class="breadcrumb">
                 <a href="../../index.html">Home</a> / <a href="../abroad-loans.html">Study Abroad</a> / <span>{title}</span>
             </div>
-            <p class="page-hero-eyebrow" data-aos="fade-up">{flag} GLOBAL HIGHER EDUCATION</p>
+            <div class="page-hero-eyebrow" data-aos="fade-up">{flag} GLOBAL HIGHER EDUCATION</div>
             <h1 data-aos="fade-up" data-aos-delay="100">{h1}</h1>
             <p data-aos="fade-up" data-aos-delay="200">{subtitle}</p>
             <div class="hero-btns" data-aos="fade-up" data-aos-delay="300">
                 <button class="btn btn-primary btn-lg" onclick="openPopup()">Check Eligibility – Free <i class="fas fa-arrow-right"></i></button>
-                <a href="https://wa.me/919063703038" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp Advisor</a>
+                <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp Advisor</a>
             </div>
         </div>
     </header>
 
     <!-- KEY STATS -->
-    <section class="section" style="padding:50px 0; background:#f8fbfe;">
+    <section class="country-stats-section">
         <div class="container">
             <div class="country-stats-grid" data-aos="fade-up">
                 <div class="country-stat-box">
-                    <div style="font-size:24px; color:var(--blue);"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="country-stat-icon" style="color:var(--blue);"><i class="fas fa-graduation-cap"></i></div>
                     <div class="country-stat-val">{tuition}</div>
                     <div class="country-stat-lbl">Average Tuition / Year</div>
                 </div>
                 <div class="country-stat-box">
-                    <div style="font-size:24px; color:var(--green);"><i class="fas fa-wallet"></i></div>
+                    <div class="country-stat-icon" style="color:var(--green);"><i class="fas fa-wallet"></i></div>
                     <div class="country-stat-val">{living}</div>
                     <div class="country-stat-lbl">Estimated Living Cost</div>
                 </div>
                 <div class="country-stat-box">
-                    <div style="font-size:24px; color:var(--navy);"><i class="fas fa-hand-holding-dollar"></i></div>
+                    <div class="country-stat-icon" style="color:var(--navy);"><i class="fas fa-hand-holding-dollar"></i></div>
                     <div class="country-stat-val">{max_loan}</div>
                     <div class="country-stat-lbl">Available Loan Limit</div>
                 </div>
                 <div class="country-stat-box">
-                    <div style="font-size:24px; color:#f59e0b;"><i class="fas fa-file-invoice"></i></div>
+                    <div class="country-stat-icon" style="color:#d97706;"><i class="fas fa-file-invoice"></i></div>
                     <div class="country-stat-val">{visa_req}</div>
                     <div class="country-stat-lbl">Key Visa Requirement</div>
                 </div>
@@ -691,31 +621,31 @@ template = """<!DOCTYPE html>
     </section>
 
     <!-- COUNTRY OVERVIEW -->
-    <section class="section" style="padding:80px 0;">
+    <section class="section" style="padding: 72px 0;">
         <div class="container">
-            <div class="two-col" style="align-items:center;">
+            <div class="two-col">
                 <div data-aos="fade-right">
-                    <p class="section-label">{flag} DESTINATION INSIGHTS</p>
-                    <h2 class="section-title">Funding Your Education in <span style="color:#1a9c4e">{title}</span></h2>
-                    <p style="font-size:16px; color:#475569; line-height:1.75; margin-bottom:20px;">{intro}</p>
+                    <div class="section-label">{flag} DESTINATION INSIGHTS</div>
+                    <h2 class="section-title">Funding Your Education in <span style="color:var(--green)">{country_full}</span></h2>
+                    <p style="font-size:15.5px; color:#475569; line-height:1.75; margin-bottom:20px;">{intro}</p>
                     
-                    <div style="background:#f0fdf4; border-left:4px solid var(--green); padding:16px 20px; border-radius:8px; margin:24px 0;">
-                        <strong style="color:var(--navy); font-size:15px;"><i class="fas fa-briefcase" style="color:var(--green); margin-right:6px;"></i> Post-Study Career Opportunity:</strong>
-                        <p style="font-size:14px; color:#334155; margin-top:4px;">{stem_opt}</p>
+                    <div class="career-opp-card">
+                        <strong><i class="fas fa-briefcase" style="color:var(--green);"></i> Post-Study Career Opportunity:</strong>
+                        <p>{stem_opt}</p>
                     </div>
 
-                    <h3 style="font-size:18px; color:var(--navy); margin-top:24px;">Popular Universities We Support:</h3>
+                    <h3 style="font-size:18px; color:var(--navy); margin-top:24px; font-weight:700;">Popular Universities We Support:</h3>
                     <div class="uni-tags-wrap">
                         {uni_tags}
                     </div>
                 </div>
                 <div data-aos="fade-left">
                     <div class="docs-card">
-                        <h3 style="font-size:20px; color:var(--navy); margin-bottom:16px;"><i class="fas fa-shield-alt" style="color:var(--blue); margin-right:8px;"></i> What Lenders Offer For {title}</h3>
+                        <h3><i class="fas fa-shield-alt" style="color:var(--blue);"></i> What Lenders Offer for {country_name}</h3>
                         <ul class="check-bullet-list">
                             {loan_bullets}
                         </ul>
-                        <button class="btn btn-primary" style="width:100%; margin-top:16px;" onclick="openPopup()">Get Personalized Loan Options <i class="fas fa-arrow-right"></i></button>
+                        <button class="btn btn-primary" style="width:100%; margin-top:8px;" onclick="openPopup()">Get Personalized Loan Options <i class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -723,28 +653,45 @@ template = """<!DOCTYPE html>
     </section>
 
     <!-- DOCUMENTATION CHECKLIST -->
-    <section class="section" style="background:#f8fafc; padding:80px 0;">
+    <section class="section" style="background:#f8fafc; padding: 72px 0; border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0;">
         <div class="container">
-            <div style="text-align:center; max-width:700px; margin:0 auto 50px;">
-                <p class="section-label">DOCUMENTATION CHECKLIST</p>
-                <h2 class="section-title">Required Documents for <span style="color:#1a9c4e">{title} Loans</span></h2>
+            <div style="text-align:center; max-width:700px; margin:0 auto 48px;">
+                <div class="section-label">DOCUMENTATION CHECKLIST</div>
+                <h2 class="section-title">Required Documents for <span style="color:var(--green)">{country_short} Education Loans</span></h2>
                 <p class="section-sub">We assist you in organizing all paperwork to ensure swift lender approval with zero hassle.</p>
             </div>
             <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;" data-aos="fade-up">
                 <div class="core-card">
-                    <div class="core-card-icon" style="background:#e0ecfb; color:var(--blue);"><i class="fas fa-user-graduate"></i></div>
+                    <div class="core-card-icon" style="background:#eff6ff; color:var(--blue);"><i class="fas fa-user-graduate"></i></div>
                     <h3>Student Documents</h3>
-                    <p>• Valid Passport copy<br>• 10th, 12th &amp; Degree Marksheets<br>• Entrance Test Scores (GRE/GMAT/IELTS/TOEFL)<br>• Admission Offer Letter / I-20 / CAS<br>• Statement of Estimated Expenses</p>
+                    <ul class="doc-checklist">
+                        <li><i class="fas fa-check-circle"></i> Valid Passport copy</li>
+                        <li><i class="fas fa-check-circle"></i> 10th, 12th &amp; Degree Marksheets</li>
+                        <li><i class="fas fa-check-circle"></i> Entrance Test Scores (GRE/GMAT/IELTS/TOEFL)</li>
+                        <li><i class="fas fa-check-circle"></i> Admission Offer Letter / I-20 / CAS / eCoE</li>
+                        <li><i class="fas fa-check-circle"></i> Statement of Estimated Expenses</li>
+                    </ul>
                 </div>
                 <div class="core-card">
-                    <div class="core-card-icon" style="background:#dcfce7; color:var(--green);"><i class="fas fa-user-tie"></i></div>
+                    <div class="core-card-icon" style="background:#ecfdf5; color:var(--green);"><i class="fas fa-user-tie"></i></div>
                     <h3>Co-Applicant Financials</h3>
-                    <p>• PAN &amp; Aadhaar Card<br>• Last 3 months Salary Slips (Salaried) / 2 yrs ITR (Self-Employed)<br>• Form 16 / Computation of Income<br>• Last 6 months bank statement showing salary/business credits</p>
+                    <ul class="doc-checklist">
+                        <li><i class="fas fa-check-circle"></i> PAN &amp; Aadhaar Card</li>
+                        <li><i class="fas fa-check-circle"></i> Last 3 months Salary Slips / 2 yrs ITR</li>
+                        <li><i class="fas fa-check-circle"></i> Form 16 / Computation of Income</li>
+                        <li><i class="fas fa-check-circle"></i> Last 6 months bank statement showing salary/credits</li>
+                    </ul>
                 </div>
                 <div class="core-card">
-                    <div class="core-card-icon" style="background:#fef3c7; color:#d97706;"><i class="fas fa-building-circle-check"></i></div>
+                    <div class="core-card-icon" style="background:#fefce8; color:#b45309;"><i class="fas fa-building-circle-check"></i></div>
                     <h3>Collateral (If Applicable)</h3>
-                    <p>• Registered Title Deed / Sale Deed<br>• Approved Building Plan &amp; NOC<br>• Up-to-date Property Tax receipts<br>• Encumbrance Certificate (13–30 yrs)<br>• Or Fixed Deposit receipts with bank</p>
+                    <ul class="doc-checklist">
+                        <li><i class="fas fa-check-circle"></i> Registered Title Deed / Sale Deed</li>
+                        <li><i class="fas fa-check-circle"></i> Approved Building Plan &amp; NOC</li>
+                        <li><i class="fas fa-check-circle"></i> Up-to-date Property Tax receipts</li>
+                        <li><i class="fas fa-check-circle"></i> Encumbrance Certificate (13–30 yrs)</li>
+                        <li><i class="fas fa-check-circle"></i> Or Fixed Deposit receipts with bank</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -753,9 +700,9 @@ template = """<!DOCTYPE html>
     <!-- FAQs -->
     <section class="faq-section" id="faqs">
         <div class="container">
-            <div style="text-align:center; margin-bottom:40px;">
-                <p class="section-label">FREQUENTLY ASKED QUESTIONS</p>
-                <h2 class="section-title">{title} Education Loan <span style="color:#1a9c4e">FAQs</span></h2>
+            <div style="text-align:center; margin-bottom:44px;">
+                <div class="section-label">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="section-title">{country_short} Education Loan <span style="color:var(--green)">FAQs</span></h2>
                 <p class="section-sub">Clear answers regarding financial guidelines, lender eligibility, and visa procedures.</p>
             </div>
             <div class="faq-list" data-aos="fade-up">
@@ -767,11 +714,11 @@ template = """<!DOCTYPE html>
     <!-- CTA -->
     <section class="cta-section">
         <div class="container">
-            <h2 data-aos="fade-up">Ready to Begin Your Studies in {title}?</h2>
+            <h2 data-aos="fade-up">Ready to Begin Your Studies in <span style="color:#86efac;">{country_name}</span>?</h2>
             <p data-aos="fade-up" data-aos-delay="80">Get free expert guidance on secured &amp; unsecured education loans suited to your profile.</p>
             <div class="cta-btns" data-aos="fade-up" data-aos-delay="160">
                 <button class="btn btn-primary btn-lg" onclick="openPopup()">Check Loan Eligibility Free <i class="fas fa-arrow-right"></i></button>
-                <a href="https://wa.me/919063703038" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
             </div>
         </div>
     </section>
@@ -821,7 +768,7 @@ template = """<!DOCTYPE html>
                 </ul>
                 <div class="footer-socials" style="margin-top:16px;">
                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://instagram.com/visionarypathservices" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
                 </div>
@@ -829,7 +776,7 @@ template = """<!DOCTYPE html>
         </div>
         <div class="footer-bottom">
             <div class="container footer-bottom-inner">
-                <span>© 2025 Visionary Path Services. All Rights Reserved.</span>
+                <span>© 2026 Visionary Path Services. All Rights Reserved.</span>
                 <div class="footer-bottom-links">
                     <a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a> | <a href="#">Disclaimer</a>
                 </div>
@@ -837,7 +784,7 @@ template = """<!DOCTYPE html>
         </div>
     </footer>
 
-    <!-- POPUP INQUIRY FORM (Industry-Grade Edition) -->
+    <!-- POPUP INQUIRY FORM -->
     <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
         <div class="popup-modal">
             <button class="popup-close" onclick="closePopup()" aria-label="Close Popup">✕</button>
@@ -847,8 +794,8 @@ template = """<!DOCTYPE html>
                         <span class="badge-dot"></span>
                         <span>100% FREE CONSULTATION</span>
                     </div>
-                    <h3 class="popup-title">Check Your<br>Eligibility For<br><span class="green-highlight">{title}!</span></h3>
-                    <p class="popup-left-desc">Compare pre-approved loan options for {title} from 15+ top banks &amp; NBFCs with zero service fees.</p>
+                    <h3 class="popup-title">Check Your<br>Eligibility for<br><span class="green-highlight">{country_name}!</span></h3>
+                    <p class="popup-left-desc">Compare pre-approved loan options for {country_name} from 15+ top banks &amp; NBFCs with zero service fees.</p>
                     <div class="popup-features-list">
                         <div class="popup-feature-item">
                             <div class="feature-icon-box"><i class="fas fa-user-check"></i></div>
@@ -883,7 +830,7 @@ template = """<!DOCTYPE html>
             <div class="popup-right">
                 <div class="popup-form-header">
                     <h4>Get Free Loan Assessment</h4>
-                    <p>Connect with a senior counselor specializing in {title}</p>
+                    <p>Connect with a senior counselor specializing in {country_short} education loans</p>
                 </div>
                 <form class="popup-form" onsubmit="submitForm(event)">
                     <div class="form-row name-row">
@@ -921,11 +868,11 @@ template = """<!DOCTYPE html>
                     </div>
                     <div class="form-group mb-tight">
                         <label class="form-label-regular">Target Country / Destination</label>
-                        <div class="input-icon-wrap"><i class="fas fa-globe-americas"></i><input type="text" name="country" value="{title}" readonly style="background:#f8fafc; font-weight:600; color:#0b2545;"></div>
+                        <div class="input-icon-wrap"><i class="fas fa-globe-americas"></i><input type="text" name="country" value="{country_short}" readonly style="background:#f8fafc; font-weight:600; color:#0b2545;"></div>
                     </div>
                     <div class="form-group mb-tight">
                         <label class="form-label-regular">Degree, Course &amp; Loan Amount</label>
-                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-graduation-cap"></i><textarea name="message" placeholder="e.g. MS in CS, target budget ₹50 Lakhs..." rows="2"></textarea></div>
+                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-graduation-cap"></i><textarea name="message" placeholder="e.g. Master's in CS, target budget ₹50 Lakhs..." rows="2"></textarea></div>
                     </div>
                     <button type="submit" class="btn btn-submit-enquiry">
                         <span>Check My Eligibility Free</span>
@@ -940,34 +887,43 @@ template = """<!DOCTYPE html>
         </div>
     </div>
 
-    <!-- FLOATING ELIGIBILITY QUICK CTA (Marketing CRO) -->
+    <!-- FLOATING ELIGIBILITY QUICK CTA -->
     <button id="floatingEligibilityBtn" class="floating-eligibility-btn" onclick="openPopup()" aria-label="Check Loan Eligibility Free">
         <span class="floating-btn-pulse"></span>
         <i class="fas fa-bolt"></i>
         <span>Check Eligibility <strong class="badge-free">FREE</strong></span>
     </button>
 
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/918150949070" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../../js/apple-icons.js"></script>
     <script src="../../js/main.js"></script>
+    <script src="../../js/motion-ux.js"></script>
     <script>
-        AOS.init({{ duration: 700, once: false }});
+        AOS.init({{ duration: 700, once: true }});
     </script>
 </body>
 </html>
 """
 
-output_dir = "/Users/nani/Downloads/visionary path/website/pages/countries"
-os.makedirs(output_dir, exist_ok=True)
+def generate():
+    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "pages/countries")
+    os.makedirs(output_dir, exist_ok=True)
 
-for c in countries:
-    uni_tags_html = "\n".join([f'                        <span class="uni-tag"><i class="fas fa-building-columns" style="margin-right:4px;"></i> {u}</span>' for u in c["top_unis"]])
-    loan_bullets_html = "\n".join([f'                            <li><i class="fas fa-check-circle"></i> {b}</li>' for b in c["loan_highlights"]])
-    
-    faqs_html = []
-    for f in c["faqs"]:
-        faqs_html.append(f"""                <div class="faq-item">
+    for c in countries:
+        cid = c["id"]
+        meta = COUNTRY_META.get(cid, {"country_name": c["title"], "country_short": c["title"], "country_full": c["title"]})
+        
+        uni_tags_html = "\n".join([f'                        <span class="uni-tag"><i class="fas fa-building-columns" style="margin-right:4px;"></i> {u}</span>' for u in c["top_unis"]])
+        loan_bullets_html = "\n".join([f'                            <li><i class="fas fa-check-circle"></i> {b}</li>' for b in c["loan_highlights"]])
+        
+        faqs_html = []
+        for f in c["faqs"]:
+            faqs_html.append(f"""                <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         <span>{f['q']}</span>
                         <i class="fas fa-chevron-down"></i>
@@ -976,29 +932,35 @@ for c in countries:
                         {f['a']}
                     </div>
                 </div>""")
-    faq_items_html = "\n".join(faqs_html)
+        faq_items_html = "\n".join(faqs_html)
 
-    html_content = template.format(
-        id=c["id"],
-        title=c["title"],
-        h1=c["h1"],
-        subtitle=c["subtitle"],
-        flag=c["flag"],
-        currency=c["currency"],
-        tuition=c["tuition"],
-        living=c["living"],
-        max_loan=c["max_loan"],
-        visa_req=c["visa_req"],
-        intro=c["intro"],
-        stem_opt=c["stem_opt"],
-        uni_tags=uni_tags_html,
-        loan_bullets=loan_bullets_html,
-        faq_items=faq_items_html
-    )
+        html_content = template.format(
+            id=cid,
+            title=c["title"],
+            h1=c["h1"],
+            subtitle=c["subtitle"],
+            flag=c["flag"],
+            currency=c["currency"],
+            tuition=c["tuition"],
+            living=c["living"],
+            max_loan=c["max_loan"],
+            visa_req=c["visa_req"],
+            intro=c["intro"],
+            stem_opt=c["stem_opt"],
+            country_name=meta["country_name"],
+            country_short=meta["country_short"],
+            country_full=meta["country_full"],
+            uni_tags=uni_tags_html,
+            loan_bullets=loan_bullets_html,
+            faq_items=faq_items_html
+        )
 
-    filepath = os.path.join(output_dir, f"{c['id']}.html")
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(html_content)
-    print(f"Generated: {filepath}")
+        filepath = os.path.join(output_dir, f"{cid}.html")
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write(html_content)
+        print(f"Generated: {filepath}")
 
-print("All 10 country pages generated successfully!")
+    print("All 10 country pages generated successfully!")
+
+if __name__ == "__main__":
+    generate()
