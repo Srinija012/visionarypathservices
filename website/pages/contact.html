@@ -115,15 +115,15 @@
     <div class="container top-bar-inner">
         <div class="top-bar-left">
             <span class="pulse-dot"></span>
-            <span>Pan India Education Loan Assistance &amp; Guidance</span>
-            <span class="top-bar-dash">—</span> Your Education Goals, Our Guidance
+            <span class="top-bar-title">Pan India Education Loan Assistance &amp; Guidance</span>
+            <span class="top-bar-dash">—</span> <span class="top-bar-sub">Your Education Goals, Our Guidance</span>
         </div>
         <div class="top-bar-right">
             <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact:- 9063703038</a>
             <span class="top-sep">|</span>
-            <a href="https://instagram.com/visionarypathservices" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://instagram.com/visionarypathservices" target="_blank" rel="noopener" aria-label="Instagram" class="top-social-link"><i class="fab fa-instagram"></i></a>
             <span class="top-sep">|</span>
-            <a href="mailto:Visionarypathservises@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="mailto:Visionarypathservises@gmail.com" aria-label="Email" class="top-email-link"><i class="fas fa-envelope"></i></a>
         </div>
     </div>
 </div>
@@ -138,6 +138,15 @@
             </div>
         </a>
         <ul class="nav-links" id="navLinks">
+            <li class="drawer-header-item">
+                <div class="drawer-brand-wrap">
+                    <span class="drawer-brand-name">VISIONARY PATH</span>
+                    <span class="drawer-brand-badge"><i class="fas fa-shield-alt"></i> 100% Free Advisory</span>
+                </div>
+                <button type="button" class="drawer-close-btn" onclick="closeMenu()" aria-label="Close Navigation Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </li>
             <li class="has-dropdown services-dropdown">
                 <a href="../pages/services.html" class="nav-link-services">Services <i class="fas fa-chevron-down"></i></a>
                 <div class="dropdown mega-dropdown">
@@ -264,6 +273,19 @@
                     </a>
                 </div>
             </li>
+            <li class="drawer-actions-item">
+                <button type="button" class="btn btn-drawer-eligibility" onclick="closeMenu(); openPopup();">
+                    <i class="fas fa-file-signature"></i> Check Eligibility – Free
+                </button>
+                <div class="drawer-contact-grid">
+                    <a href="tel:9063703038" class="btn-drawer-contact btn-drawer-call">
+                        <i class="fas fa-phone"></i> Call Advisor
+                    </a>
+                    <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn-drawer-contact btn-drawer-wa">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </li>
         </ul>
         <div class="nav-cta">
             <button class="btn btn-eligibility" onclick="openPopup()">
@@ -272,6 +294,14 @@
             <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn-whatsapp-nav">
                 <i class="fab fa-whatsapp"></i> Talk to Expert
             </a>
+        </div>
+        <div class="nav-mobile-bar-actions">
+            <a href="tel:9063703038" class="nav-mobile-call-btn" aria-label="Call Visionary Path Services">
+                <i class="fas fa-phone"></i>
+            </a>
+            <button class="btn btn-mobile-apply" onclick="openPopup()" aria-label="Check Loan Eligibility">
+                Eligibility
+            </button>
         </div>
         <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="navLinks">
             <span></span><span></span><span></span>
