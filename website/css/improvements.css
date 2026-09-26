@@ -3124,7 +3124,6 @@ textarea:focus-visible,
 /* Minimum 44px touch target guidelines */
 .btn,
 .nav-links > li > a,
-.hamburger,
 .popup-close,
 .floating-eligibility-btn,
 .whatsapp-float,
@@ -3133,6 +3132,15 @@ textarea:focus-visible,
     min-height: 44px;
     display: inline-flex;
     align-items: center;
+}
+
+/* Hamburger: touch target on mobile only — hidden on desktop */
+@media (max-width: 900px) {
+    .hamburger {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
 }
 
 /* ──────────────────────────────────────────────────────────
@@ -11183,4 +11191,90 @@ input[aria-invalid="false"].touched:not(:focus),
 
 
 
+
+/* ══════════════════════════════════════════════════════════════════════
+   COUNTRY PAGE — Hallmark token-backed utility classes
+   Replaces all inline style= overrides removed from study destination pages.
+   All values reference design tokens via var(). No raw hex values.
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* ── Stat box icon colours ── */
+.stat-icon-navy   { color: var(--color-navy, #0B1F33); }
+.stat-icon-navy-deep { color: var(--color-navy-dark, #050E17); }
+.stat-icon-orange { color: var(--color-orange, #FF5A00); }
+.stat-icon-amber  { color: var(--color-warning, #D97706); }
+
+/* ── Country overview body paragraph ── */
+.country-overview-body {
+    font-size: 15.5px;
+    color: var(--color-text-secondary, #475569);
+    line-height: 1.75;
+    margin-bottom: 20px;
+    max-width: 72ch;
+}
+
+/* ── "Popular Universities" sub-heading ── */
+.country-unis-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-navy, #0B1F33);
+    margin-top: 24px;
+}
+
+/* ── Docs card CTA button — full-width with top gap ── */
+.btn-block-mt {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* ── Documentation checklist section background ── */
+.section-docs-bg {
+    background: var(--color-off-white, #F7F9FB);
+    border-top: 1px solid var(--color-border, #DDE5EC);
+    border-bottom: 1px solid var(--color-border, #DDE5EC);
+}
+
+/* ── Centred section header — compact (FAQ, etc.) ── */
+.section-header-center-sm {
+    text-align: center;
+    margin-bottom: 44px;
+}
+
+/* ── Documentation cards grid ── */
+.docs-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+/* ── Core card icon colour variants ── */
+.card-icon-navy {
+    background: var(--color-surface-subtle, #EAF0F5);
+    color: var(--color-navy, #0B1F33);
+}
+.card-icon-green {
+    background: var(--vp-green-accent, #EAF7F0);
+    color: var(--vp-green-text, #047857);
+}
+.card-icon-amber {
+    background: #fefce8;
+    color: var(--color-warning, #D97706);
+}
+
+/* ── Uni tag icon — spacing via CSS, no inline margin ── */
+.uni-tag i.fas {
+    margin-right: 4px;
+}
+
+/* ── Disclaimer footer check icon ── */
+.disclaimer-check-icon {
+    margin-right: 5px;
+}
+
+/* ── Popup country input read-only styling ── */
+.country-input-readonly {
+    background: var(--color-surface-soft, #F7F9FB);
+    font-weight: 600;
+    color: var(--color-navy, #0B1F33);
+}
 
