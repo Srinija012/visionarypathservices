@@ -54,7 +54,7 @@ for (const filePath of htmlFiles) {
         fileNavbar = fileNavbar.replace(/class="nav-link-partner-lenders"/, 'class="nav-link-partner-lenders active"');
     } else if (currentRelPath === 'pages/partner-with-us.html') {
         fileNavbar = fileNavbar.replace(/class="nav-link-partner-with-us"/, 'class="nav-link-partner-with-us active"');
-    } else if (currentRelPath === 'pages/about.html' || currentRelPath === 'pages/contact.html' || currentRelPath.startsWith('pages/blog')) {
+    } else if (currentRelPath === 'pages/about.html' || currentRelPath === 'pages/contact.html' || currentRelPath.startsWith('pages/blog') || currentRelPath === 'pages/calculators.html') {
         fileNavbar = fileNavbar.replace(/class="nav-link-more"/, 'class="nav-link-more active"');
     }
 
