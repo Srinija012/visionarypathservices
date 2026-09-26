@@ -83,14 +83,19 @@ function syncWhatsApp(inputEl) {
 
 // Ensures floating quick-access CTA button exists on the page
 function ensureFloatingButton() {
-    if (!document.getElementById('floatingEligibilityBtn')) {
-        const btn = document.createElement('button');
+    let btn = document.getElementById('floatingEligibilityBtn');
+    if (!btn) {
+        btn = document.createElement('button');
         btn.id = 'floatingEligibilityBtn';
         btn.className = 'floating-eligibility-btn';
         btn.setAttribute('onclick', 'openPopup()');
         btn.setAttribute('aria-label', 'Check Loan Eligibility Free');
         btn.innerHTML = '<span class="floating-btn-pulse"></span><i class="fas fa-bolt"></i><span>Check Eligibility <strong class="badge-free">FREE</strong></span>';
         document.body.appendChild(btn);
+    }
+    if (window.scrollY <= 400) {
+        btn.classList.add('hide');
+        btn.classList.remove('is-active-scrolled');
     }
 }
 
@@ -215,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// --- Navbar scroll effect ---
+// --- Navbar & Floating CTA scroll effect ---
 window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
     if (navbar) {
@@ -225,7 +230,17 @@ window.addEventListener('scroll', () => {
             navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
         }
     }
-});
+    const floatBtn = document.getElementById('floatingEligibilityBtn');
+    if (floatBtn && !document.getElementById('popupOverlay')?.classList.contains('active')) {
+        if (window.scrollY > 400) {
+            floatBtn.classList.add('is-active-scrolled');
+            floatBtn.classList.remove('hide');
+        } else {
+            floatBtn.classList.remove('is-active-scrolled');
+            floatBtn.classList.add('hide');
+        }
+    }
+}, { passive: true });
 
 // --- Simple AOS (Animate on Scroll) with Bidirectional Support ---
 function initAOS() {

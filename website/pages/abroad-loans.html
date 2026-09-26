@@ -20,7 +20,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../css/design-system.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -71,9 +71,10 @@
 <div class="top-bar">
     <div class="container top-bar-inner">
         <div class="top-bar-left">
-            <span class="pulse-dot"></span>
-            <span>Pan India Education Loan Assistance &amp; Guidance</span>
-            <span class="top-bar-dash">—</span> Your Education Goals, Our Guidance
+            <span class="orange-rule" style="width:18px; height:2px; margin-right:8px; vertical-align:middle; display:inline-block;"></span>
+            <span>Your Education Goals, Our Guidance</span>
+            <span class="top-bar-dash" style="color:var(--color-orange); margin: 0 6px;">•</span>
+            <span style="opacity: 0.88;">Pan India Loan Advisory</span>
         </div>
         <div class="top-bar-right">
             <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact: 9063703038</a>
@@ -88,10 +89,30 @@
 <!-- NAVBAR -->
 <header class="navbar" id="navbar">
     <div class="container nav-inner">
-        <a href="../index.html" class="logo">
+        <a href="../index.html" class="logo" aria-label="Visionary Path Services Home">
+            <span class="vps-brand-mark">
+                <svg class="vps-flash-svg" viewBox="0 0 100 120" width="34" height="41" fill="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="navFlashGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+                            <stop offset="0%" stop-color="#FF7A00" />
+                            <stop offset="55%" stop-color="#FF5A00" />
+                            <stop offset="100%" stop-color="#FF3800" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+                          stroke="url(#navFlashGrad)" 
+                          stroke-width="14.5" 
+                          stroke-linejoin="round" 
+                          stroke-linecap="round" />
+                </svg>
+            </span>
             <div class="logo-text">
-                <span class="logo-name">VISIONARY PATH SERVICES</span>
-                <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                <span class="logo-name">VISIONARY</span>
+                <span class="logo-sub">
+                    <span class="logo-sub-line"></span>
+                    <span class="logo-sub-text">PATH SERVICES</span>
+                    <span class="logo-sub-line"></span>
+                </span>
             </div>
         </a>
         <ul class="nav-links" id="navLinks">
@@ -237,93 +258,84 @@
 </header>
 <!-- VPS_NAVBAR_END -->
 
-    <!-- HERO -->
-    <section class="page-hero" id="mainContent">
-        <div class="container page-hero-inner">
-            <div class="page-hero-grid">
-                <div class="page-hero-content" data-aos="fade-right">
-                    <nav aria-label="Breadcrumb" class="breadcrumb">
-                        <a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <a href="services.html">Services</a> <span class="breadcrumb-sep">/</span> <span>Abroad Education Loans</span>
+    <!-- HERO SECTION -->
+    <section class="vps-hero" id="mainContent">
+        <div class="vps-hero-worldmap" aria-hidden="true"></div>
+        <div class="vps-halftone-motif top-left" aria-hidden="true"></div>
+        <div class="vps-halftone-motif bottom-right" aria-hidden="true"></div>
+        <div class="vps-hero-swoosh" aria-hidden="true"></div>
+        
+        <div class="container">
+            <div class="vps-hero-grid">
+                <div class="vps-hero-content" data-aos="fade-right">
+                    <nav aria-label="Breadcrumb" class="vps-breadcrumb">
+                        <a href="../index.html">Home</a>
+                        <span class="vps-breadcrumb-sep">/</span>
+                        <a href="services.html">Services</a>
+                        <span class="vps-breadcrumb-sep">/</span>
+                        <span>Abroad Education Loans</span>
                     </nav>
-                    <div class="brand-eyebrow">
-                        <span class="pulse-dot"></span>
-                        <span>GLOBAL HIGHER EDUCATION FINANCING</span>
+                    
+                    <div class="vps-eyebrow">
+                        <span class="vps-eyebrow-dot"></span>
+                        <span>ABROAD EDUCATION LOANS</span>
                     </div>
-                    <h1>
-                        Abroad <span class="green-highlight">Education Loans</span> up to ₹2 Cr
+                    
+                    <h1 class="vps-hero-title">
+                        Abroad <span class="vps-orange-text">Education Loans</span><br>
+                        Turn Your Global Education Dream Into Reality
                     </h1>
-                    <p class="page-hero-lead">
-                        Secured and unsecured loan solutions for premier universities across the USA, UK, Canada, Germany, Australia, and 10+ countries. 100% free guidance, express approvals.
+                    
+                    <p class="vps-hero-lead">
+                        Get personalized education-loan guidance for studying abroad from profile assessment and loan options to documentation, application, sanction and disbursement support.
                     </p>
-                    <div class="hero-btns">
-                        <button class="btn btn-hero-primary" onclick="openPopup()">
-                            Check My Eligibility <i class="fas fa-arrow-right"></i>
+                    
+                    <div class="vps-hero-actions">
+                        <button class="btn btn-vps-primary" onclick="openPopup()">
+                            Check Eligibility <i class="fas fa-arrow-right"></i>
                         </button>
-                        <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn btn-hero-secondary">
-                            <i class="fab fa-whatsapp"></i> Talk to Expert
+                        <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn btn-vps-secondary">
+                            <i class="fab fa-whatsapp" style="color:#25D366;font-size:18px;"></i> Talk to an Expert
                         </a>
                     </div>
-                    <div class="hero-trust-strip">
-                        <div class="hero-trust-item">
-                            <i class="fas fa-shield-halved trust-icon-green"></i>
+                    
+                    <div class="vps-dest-ticker">
+                        <i class="fas fa-plane-departure vps-dest-ticker-icon"></i>
+                        <span>USA | UK | Canada | Australia | Germany | Ireland | Europe &amp; More</span>
+                    </div>
+                    
+                    <div class="vps-hero-trust">
+                        <div class="vps-trust-item">
+                            <i class="fas fa-shield-halved"></i>
                             <span><strong>100% Free</strong> Advisory</span>
                         </div>
-                        <span class="hero-trust-sep">•</span>
-                        <div class="hero-trust-item">
-                            <i class="fas fa-building-columns trust-icon-blue"></i>
+                        <span class="vps-trust-sep">•</span>
+                        <div class="vps-trust-item">
+                            <i class="fas fa-building-columns"></i>
                             <span><strong>15+</strong> Partner Lenders</span>
                         </div>
-                        <span class="hero-trust-sep">•</span>
-                        <div class="hero-trust-item">
-                            <i class="fas fa-lock trust-icon-green"></i>
+                        <span class="vps-trust-sep">•</span>
+                        <div class="vps-trust-item">
+                            <i class="fas fa-lock"></i>
                             <span>Safe &amp; Confidential</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Snapshot Card (Landing Page Grade Visual) -->
-                <div class="page-hero-visual" data-aos="fade-left">
-                    <div class="hero-snapshot-card">
-                        <div class="snapshot-header">
-                            <div class="snapshot-badge">
-                                <span class="snapshot-pulse-dot"></span>
-                                <span>Fast-Track Processing</span>
-                            </div>
-                            <span class="snapshot-highlight">Pre-Visa Sanction</span>
+                <!-- Right Visual -->
+                <div class="vps-hero-visual" data-aos="fade-left">
+                    <div class="vps-hero-img-wrap">
+                        <div class="vps-handwriting vps-handwriting-hero">
+                            Explore Learn Grow Globally <span class="hw-accent">✈️</span>
                         </div>
-
-                        <div class="snapshot-stats-grid">
-                            <div class="snapshot-stat">
-                                <span class="snapshot-stat-label">Max Loan Limit</span>
-                                <span class="snapshot-stat-val">Up to ₹2 Cr</span>
-                                <span class="snapshot-stat-note">100% CoA Covered</span>
+                        <img src="../images/hero_student_clean.png" alt="International student smiling with study passport and university documents" width="698" height="505" fetchpriority="high">
+                        <div class="vps-hero-float-badge">
+                            <div class="vps-float-badge-icon">
+                                <i class="fas fa-bolt"></i>
                             </div>
-                            <div class="snapshot-stat">
-                                <span class="snapshot-stat-label">Non-Collateral</span>
-                                <span class="snapshot-stat-val">Up to ₹1 Cr</span>
-                                <span class="snapshot-stat-note">Merit &amp; GRE Based</span>
-                            </div>
-                            <div class="snapshot-stat">
-                                <span class="snapshot-stat-label">Starting Interest</span>
-                                <span class="snapshot-stat-val">8.50% p.a.</span>
-                                <span class="snapshot-stat-note">Concessional Rates</span>
-                            </div>
-                            <div class="snapshot-stat">
-                                <span class="snapshot-stat-label">Sanction Timeline</span>
-                                <span class="snapshot-stat-val">5–7 Days</span>
-                                <span class="snapshot-stat-note">Express Turnaround</span>
-                            </div>
-                        </div>
-
-                        <div class="snapshot-lenders-footer">
-                            <span class="snapshot-footer-label">Top Global Lending Partners:</span>
-                            <div class="snapshot-lender-pills">
-                                <span class="snap-pill">SBI</span>
-                                <span class="snap-pill">HDFC Credila</span>
-                                <span class="snap-pill">ICICI Bank</span>
-                                <span class="snap-pill">Avanse</span>
-                                <span class="snap-pill">Axis Bank</span>
-                                <span class="snap-pill">InCred</span>
+                            <div>
+                                <span class="vps-float-badge-title">Up to ₹2 Crores</span>
+                                <span class="vps-float-badge-sub">Collateral &amp; Non-Collateral</span>
                             </div>
                         </div>
                     </div>
@@ -332,135 +344,328 @@
         </div>
     </section>
 
-    <!-- INTRO -->
-    <section class="intro-section">
+    <!-- WHY STUDENTS CHOOSE US -->
+    <section class="vps-why-section">
         <div class="container">
-            <div class="two-col">
-                <div class="intro-text" data-aos="fade-right">
-                    <p class="section-label">PERSONALIZED GUIDANCE</p>
-                    <h2>Your Global Education Journey <span class="green-highlight">Starts Here</span></h2>
-                    <p>We provide personalized education loan guidance for students who aspire to study at top universities around the world. Our team helps you understand available loan options from leading banks and NBFCs tailored to your profile and destination.</p>
-                    <ul class="check-list">
-                        <li><i class="fas fa-check-circle"></i> Profile assessment for the right loan route</li>
-                        <li><i class="fas fa-check-circle"></i> Guidance on secured &amp; unsecured loan options</li>
-                        <li><i class="fas fa-check-circle"></i> Documentation assistance and organization</li>
-                        <li><i class="fas fa-check-circle"></i> Eligibility clarity before applying</li>
-                        <li><i class="fas fa-check-circle"></i> Application and disbursement support</li>
-                        <li><i class="fas fa-check-circle"></i> Multiple lenders including top banks &amp; NBFCs</li>
-                    </ul>
-                    <div style="display:flex;gap:12px;flex-wrap:wrap">
-                        <button class="btn btn-primary" onclick="openPopup()">Get Started <i class="fas fa-arrow-right"></i></button>
-                        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+            <div class="vps-section-header" data-aos="fade-up">
+                <div class="vps-eyebrow">
+                    <span class="vps-eyebrow-dot"></span>
+                    <span>WHY CHOOSE US</span>
+                </div>
+                <h2>Why Students Choose Visionary Path Services</h2>
+                <div class="vps-header-divider">
+                    <span class="vps-divider-line"></span>
+                    <span class="vps-divider-dot"></span>
+                    <span class="vps-divider-line"></span>
+                </div>
+                <p class="vps-section-sub">Your trusted partner for education-loan guidance.</p>
+            </div>
+            
+            <div class="vps-why-grid">
+                <div class="vps-why-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="vps-card-icon-box">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Profile-Based Guidance</h3>
+                    <p>Guidance based on your course, university, destination and financial profile.</p>
+                </div>
+                <div class="vps-why-card" data-aos="fade-up" data-aos-delay="80">
+                    <div class="vps-card-icon-box">
+                        <i class="fas fa-building-columns"></i>
+                    </div>
+                    <h3>Multiple Loan Options</h3>
+                    <p>Explore applicable options from banks, NBFCs and other lending institutions.</p>
+                </div>
+                <div class="vps-why-card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="vps-card-icon-box">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3>Documentation Support</h3>
+                    <p>Guidance to organize the documents required for your loan application.</p>
+                </div>
+                <div class="vps-why-card" data-aos="fade-up" data-aos-delay="240">
+                    <div class="vps-card-icon-box">
+                        <i class="fas fa-handshake-angle"></i>
+                    </div>
+                    <h3>End-to-End Assistance</h3>
+                    <p>Support throughout the education-loan journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT IS AN ABROAD EDUCATION LOAN & EXPENSES -->
+    <section class="vps-explain-section">
+        <div class="container">
+            <div class="vps-explain-intro" data-aos="fade-up">
+                <div class="vps-explain-text">
+                    <div class="vps-eyebrow">
+                        <span class="vps-eyebrow-dot"></span>
+                        <span>ABROAD EDUCATION</span>
+                    </div>
+                    <h2>What is an Abroad Education Loan?</h2>
+                    <div class="vps-header-divider" style="justify-content: flex-start; margin: 10px 0 16px;">
+                        <span class="vps-divider-line"></span>
+                        <span class="vps-divider-dot"></span>
+                    </div>
+                    <p>
+                        An abroad education loan is financing that can help eligible students meet the cost of higher education outside India. Depending on the lender and applicant profile, the loan may cover various education-related expenses.
+                    </p>
+                </div>
+                <div class="vps-explain-annotation">
+                    <div class="vps-handwriting" style="font-size: 24px;">
+                        Invest in Your Future <br><span class="hw-accent">Without Limits</span> ✨
                     </div>
                 </div>
-                <div class="intro-img" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1569437061241-a848be43cc82?w=800&q=80" alt="Students studying abroad" loading="lazy" decoding="async">
+            </div>
+
+            <div class="vps-expenses-header" data-aos="fade-up">
+                <h3>Expenses That Can Be Covered <span class="policy-tag">(as per lender policy)</span></h3>
+            </div>
+
+            <div class="vps-expenses-grid">
+                <div class="vps-expense-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="vps-expense-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Tuition Fees</h4>
+                    <p>Fees payable to the university or institution.</p>
+                </div>
+                <div class="vps-expense-card" data-aos="fade-up" data-aos-delay="60">
+                    <div class="vps-expense-icon">
+                        <i class="fas fa-house-chimney"></i>
+                    </div>
+                    <h4>Accommodation &amp; Living Expenses</h4>
+                    <p>Eligible accommodation and living costs.</p>
+                </div>
+                <div class="vps-expense-card" data-aos="fade-up" data-aos-delay="120">
+                    <div class="vps-expense-icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <h4>Travel Expenses</h4>
+                    <p>Certain eligible travel-related expenses.</p>
+                </div>
+                <div class="vps-expense-card" data-aos="fade-up" data-aos-delay="180">
+                    <div class="vps-expense-icon">
+                        <i class="fas fa-book-open-reader"></i>
+                    </div>
+                    <h4>Academic Expenses</h4>
+                    <p>Books, equipment and other study-related expenses.</p>
+                </div>
+                <div class="vps-expense-card" data-aos="fade-up" data-aos-delay="240">
+                    <div class="vps-expense-icon">
+                        <i class="fas fa-cubes-stacked"></i>
+                    </div>
+                    <h4>Other Education Expenses</h4>
+                    <p>Other approved expenses, depending on the lender.</p>
+                </div>
+            </div>
+
+            <p class="vps-expense-note" data-aos="fade-up">
+                Note: Coverage and eligible expenses vary by lender, course, institution and applicant profile.
+            </p>
+        </div>
+    </section>
+
+    <!-- POPULAR STUDY DESTINATIONS -->
+    <section class="vps-dest-section">
+        <div class="container">
+            <div class="vps-dest-header-wrap" data-aos="fade-up">
+                <div class="vps-section-header text-left" style="margin-bottom:0;">
+                    <div class="vps-eyebrow">
+                        <span class="vps-eyebrow-dot"></span>
+                        <span>DESTINATIONS</span>
+                    </div>
+                    <h2>Popular Study Destinations</h2>
+                    <div class="vps-header-divider">
+                        <span class="vps-divider-line"></span>
+                        <span class="vps-divider-dot"></span>
+                        <span class="vps-divider-line"></span>
+                    </div>
+                    <p class="vps-section-sub">Explore education-loan options for top global destinations.</p>
+                </div>
+                <div>
+                    <div class="vps-handwriting" style="font-size:22px;">
+                        Global Opportunities <span class="hw-accent">Brighter Futures</span> 🌍
+                    </div>
+                </div>
+            </div>
+
+            <div class="vps-dest-grid">
+                <!-- USA -->
+                <div class="vps-dest-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="vps-dest-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1508873696983-2df5293cb32f?w=800&auto=format&fit=crop&q=80" alt="Statue of Liberty New York City USA" loading="lazy" decoding="async" width="800" height="480">
+                    </div>
+                    <div class="vps-dest-content">
+                        <h3>USA</h3>
+                        <p>Education Loans for USA</p>
+                        <a href="countries/usa.html" class="btn btn-vps-navy vps-dest-btn">
+                            Explore <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- UK -->
+                <div class="vps-dest-card" data-aos="fade-up" data-aos-delay="60">
+                    <div class="vps-dest-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&auto=format&fit=crop&q=80" alt="Big Ben and Parliament in London UK" loading="lazy" decoding="async" width="800" height="480">
+                    </div>
+                    <div class="vps-dest-content">
+                        <h3>UK</h3>
+                        <p>Education Loans for UK</p>
+                        <a href="countries/uk.html" class="btn btn-vps-navy vps-dest-btn">
+                            Explore <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Canada -->
+                <div class="vps-dest-card" data-aos="fade-up" data-aos-delay="120">
+                    <div class="vps-dest-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1517935703635-2717090c2210?w=800&auto=format&fit=crop&q=80" alt="Toronto skyline Canada with CN Tower" loading="lazy" decoding="async" width="800" height="480">
+                    </div>
+                    <div class="vps-dest-content">
+                        <h3>Canada</h3>
+                        <p>Education Loans for Canada</p>
+                        <a href="countries/canada.html" class="btn btn-vps-navy vps-dest-btn">
+                            Explore <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Australia -->
+                <div class="vps-dest-card" data-aos="fade-up" data-aos-delay="180">
+                    <div class="vps-dest-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&auto=format&fit=crop&q=80" alt="Sydney Opera House in Australia" loading="lazy" decoding="async" width="800" height="480">
+                    </div>
+                    <div class="vps-dest-content">
+                        <h3>Australia</h3>
+                        <p>Education Loans for Australia</p>
+                        <a href="countries/australia.html" class="btn btn-vps-navy vps-dest-btn">
+                            Explore <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Germany -->
+                <div class="vps-dest-card" data-aos="fade-up" data-aos-delay="240">
+                    <div class="vps-dest-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1560969184-10fe8719e047?w=800&auto=format&fit=crop&q=80" alt="Brandenburg Gate in Berlin Germany" loading="lazy" decoding="async" width="800" height="480">
+                    </div>
+                    <div class="vps-dest-content">
+                        <h3>Germany</h3>
+                        <p>Education Loans for Germany</p>
+                        <a href="countries/germany.html" class="btn btn-vps-navy vps-dest-btn">
+                            Explore <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ireland -->
+                <div class="vps-dest-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="vps-dest-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?w=800&auto=format&fit=crop&q=80" alt="Historic Dublin Castle in Ireland" loading="lazy" decoding="async" width="800" height="480">
+                    </div>
+                    <div class="vps-dest-content">
+                        <h3>Ireland</h3>
+                        <p>Education Loans for Ireland</p>
+                        <a href="countries/ireland.html" class="btn btn-vps-navy vps-dest-btn">
+                            Explore <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- France -->
+                <div class="vps-dest-card" data-aos="fade-up" data-aos-delay="360">
+                    <div class="vps-dest-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&auto=format&fit=crop&q=80" alt="Eiffel Tower Paris France" loading="lazy" decoding="async" width="800" height="480">
+                    </div>
+                    <div class="vps-dest-content">
+                        <h3>France</h3>
+                        <p>Education Loans for France</p>
+                        <a href="countries/france.html" class="btn btn-vps-navy vps-dest-btn">
+                            Explore <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Other Countries -->
+                <div class="vps-dest-card" data-aos="fade-up" data-aos-delay="420">
+                    <div class="vps-dest-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=80" alt="Global study destinations world travel globe" loading="lazy" decoding="async" width="800" height="480">
+                    </div>
+                    <div class="vps-dest-content">
+                        <h3>Other Countries</h3>
+                        <p>Explore More Destinations</p>
+                        <a href="services.html" class="btn btn-vps-navy vps-dest-btn">
+                            Explore <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COUNTRIES -->
-    <section class="countries-section">
-        <div class="container" style="text-align:center">
-            <p class="section-label">DESTINATIONS</p>
-            <h2 class="section-title">Countries We <span class="green-highlight">Cover</span></h2>
-            <p class="section-sub">We provide education loan guidance for students heading to the world's top study destinations.</p>
-            <div class="countries-grid">
-                <a href="countries/usa.html" class="country-card" data-aos="zoom-in" data-aos-delay="0" style="text-decoration:none;color:inherit;cursor:pointer;">
-                    <span class="country-flag">🇺🇸</span>
-                    <div class="country-name">USA</div>
-                </a>
-                <a href="countries/uk.html" class="country-card" data-aos="zoom-in" data-aos-delay="60" style="text-decoration:none;color:inherit;cursor:pointer;">
-                    <span class="country-flag">🇬🇧</span>
-                    <div class="country-name">UK</div>
-                </a>
-                <a href="countries/canada.html" class="country-card" data-aos="zoom-in" data-aos-delay="120" style="text-decoration:none;color:inherit;cursor:pointer;">
-                    <span class="country-flag">🇨🇦</span>
-                    <div class="country-name">Canada</div>
-                </a>
-                <a href="countries/germany.html" class="country-card" data-aos="zoom-in" data-aos-delay="180" style="text-decoration:none;color:inherit;cursor:pointer;">
-                    <span class="country-flag">🇩🇪</span>
-                    <div class="country-name">Germany</div>
-                </a>
-                <a href="countries/australia.html" class="country-card" data-aos="zoom-in" data-aos-delay="240" style="text-decoration:none;color:inherit;cursor:pointer;">
-                    <span class="country-flag">🇦🇺</span>
-                    <div class="country-name">Australia</div>
-                </a>
-                <a href="countries/ireland.html" class="country-card" data-aos="zoom-in" data-aos-delay="300" style="text-decoration:none;color:inherit;cursor:pointer;">
-                    <span class="country-flag">🇮🇪</span>
-                    <div class="country-name">Ireland</div>
-                </a>
-                <a href="countries/new-zealand.html" class="country-card" data-aos="zoom-in" data-aos-delay="360" style="text-decoration:none;color:inherit;cursor:pointer;">
-                    <span class="country-flag">🇳🇿</span>
-                    <div class="country-name">New Zealand</div>
-                </a>
-                <a href="countries/france.html" class="country-card" data-aos="zoom-in" data-aos-delay="420" style="text-decoration:none;color:inherit;cursor:pointer;">
-                    <span class="country-flag">🇫🇷</span>
-                    <div class="country-name">France</div>
-                </a>
-                <a href="countries/dubai.html" class="country-card" data-aos="zoom-in" data-aos-delay="480" style="text-decoration:none;color:inherit;cursor:pointer;">
-                    <span class="country-flag">🇦🇪</span>
-                    <div class="country-name">Dubai</div>
-                </a>
-                <a href="countries/europe.html" class="country-card" data-aos="zoom-in" data-aos-delay="540" style="text-decoration:none;color:inherit;cursor:pointer;">
-                    <span class="country-flag">🌍</span>
-                    <div class="country-name">Other European Countries</div>
-                </a>
+    <!-- SECURED & UNSECURED EDUCATION LOANS -->
+    <section class="vps-comparison-section">
+        <div class="container">
+            <div class="vps-section-header" data-aos="fade-up">
+                <div class="vps-eyebrow">
+                    <span class="vps-eyebrow-dot"></span>
+                    <span>LOAN OPTIONS</span>
+                </div>
+                <h2>Secured &amp; Unsecured Education Loans</h2>
+                <div class="vps-header-divider">
+                    <span class="vps-divider-line"></span>
+                    <span class="vps-divider-dot"></span>
+                    <span class="vps-divider-line"></span>
+                </div>
+                <p class="vps-section-sub">Choose the option that suits your profile and funding requirement.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- PROCESS (6-STEP JOURNEY) -->
-    <section class="process-section">
-        <div class="container" style="text-align:center">
-            <p class="section-label">HOW IT WORKS</p>
-            <h2 class="section-title">Your Education Loan <span class="green-highlight">Journey</span></h2>
-            <p class="section-sub">Step-by-step guidance from initial assessment to final disbursement.</p>
-            <div class="process-steps">
-                <div class="process-step" data-aos="fade-up" data-aos-delay="0">
-                    <div class="step-icon"><i class="fas fa-bullseye"></i></div>
-                    <h3>1. Profile Assessment</h3>
-                    <p>We evaluate your academic background, target university, country, and financial profile to map the best loan options.</p>
+            <!-- Two Comparison Cards -->
+            <div class="vps-loan-options-grid">
+                <div class="vps-loan-card secured" data-aos="fade-right">
+                    <div class="vps-loan-card-header">
+                        <div class="vps-loan-icon-box">
+                            <i class="fas fa-house-chimney-window"></i>
+                        </div>
+                        <h3>Secured Education Loan</h3>
+                    </div>
+                    <p class="vps-loan-desc">
+                        Education loan where collateral/security may be required, subject to lender policy.
+                    </p>
+                    <div class="vps-loan-suitable">
+                        <strong>Suitable for:</strong> Higher funding requirements and profiles meeting lender criteria.
+                    </div>
+                    <button class="btn btn-vps-navy" onclick="openPopup()" style="align-self:flex-start;">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </button>
                 </div>
-                <div class="process-step" data-aos="fade-up" data-aos-delay="60">
-                    <div class="step-icon"><i class="fas fa-building-columns"></i></div>
-                    <h3>2. Loan Option Guidance</h3>
-                    <p>We explain suitable options across public banks, private banks, and NBFCs — both secured and unsecured.</p>
-                </div>
-                <div class="process-step" data-aos="fade-up" data-aos-delay="120">
-                    <div class="step-icon"><i class="fas fa-file-invoice"></i></div>
-                    <h3>3. Documentation Assistance</h3>
-                    <p>Clear checklists and step-by-step help organizing academic, financial, KYC, and collateral papers.</p>
-                </div>
-                <div class="process-step" data-aos="fade-up" data-aos-delay="180">
-                    <div class="step-icon"><i class="fas fa-clipboard-check"></i></div>
-                    <h3>4. Eligibility Guidance</h3>
-                    <p>We review co-applicant income, CIBIL standing, and program eligibility before submission to minimize delays.</p>
-                </div>
-                <div class="process-step" data-aos="fade-up" data-aos-delay="240">
-                    <div class="step-icon"><i class="fas fa-handshake"></i></div>
-                    <h3>5. Application Support</h3>
-                    <p>Direct application submission and regular follow-ups with bank officers to fast-track your loan file.</p>
-                </div>
-                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
-                    <div class="step-icon"><i class="fas fa-money-bill-wave"></i></div>
-                    <h3>6. Sanction &amp; Disbursement</h3>
-                    <p>Guidance through sanction letter verification, property valuation, mortgage formalities, and fee remittance.</p>
+
+                <div class="vps-loan-card unsecured" data-aos="fade-left">
+                    <div class="vps-loan-card-header">
+                        <div class="vps-loan-icon-box">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3>Unsecured Education Loan</h3>
+                    </div>
+                    <p class="vps-loan-desc">
+                        Education loan where collateral may not be required for eligible profiles, subject to lender criteria.
+                    </p>
+                    <div class="vps-loan-suitable">
+                        <strong>Suitable for:</strong> Eligible students who meet the lender's academic and financial requirements.
+                    </div>
+                    <button class="btn btn-vps-navy" onclick="openPopup()" style="align-self:flex-start;">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- COMPARISON TABLE SECTION -->
-    <section class="section" style="padding: 72px 0; background: #ffffff;">
-        <div class="container" style="text-align:center">
-            <p class="section-label">COMPARATIVE ANALYSIS</p>
-            <h2 class="section-title">Collateral vs. Non-Collateral <span class="green-highlight">Abroad Loans</span></h2>
-            <p class="section-sub">Choose the right borrowing structure based on your family's asset profile, loan amount requirement, and timeline.</p>
-            
-            <div class="comparison-table-wrapper table-responsive" data-aos="fade-up">
-                <table class="comparison-table">
+            <!-- Detailed Comparison Table -->
+            <div class="vps-table-wrapper table-responsive" data-aos="fade-up">
+                <table class="vps-comparison-table">
                     <thead>
                         <tr>
                             <th>Feature / Parameter</th>
@@ -470,37 +675,37 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="table-cell-highlight">Maximum Loan Amount</td>
+                            <td class="vps-table-param">Maximum Loan Amount</td>
                             <td><strong>Up to ₹2+ Crores</strong> (100% of I-20 / CAS costs)</td>
                             <td><strong>Up to ₹75 Lakhs</strong> (Subject to GRE &amp; co-applicant)</td>
                         </tr>
                         <tr>
-                            <td class="table-cell-highlight">Interest Rate Benchmark</td>
-                            <td><span class="table-badge-green">8.50% – 10.25% p.a.</span> (Floating / Concessional)</td>
-                            <td><span class="table-badge-blue">10.50% – 12.75% p.a.</span> (Risk-adjusted)</td>
+                            <td class="vps-table-param">Interest Rate Benchmark</td>
+                            <td><span class="vps-badge-rate-warm">8.50% – 10.25% p.a.</span> (Floating / Concessional)</td>
+                            <td><span class="vps-badge-rate-cool">10.50% – 12.75% p.a.</span> (Risk-adjusted)</td>
                         </tr>
                         <tr>
-                            <td class="table-cell-highlight">Acceptable Security</td>
+                            <td class="vps-table-param">Acceptable Security</td>
                             <td>Residential property, commercial plot, Fixed Deposit (FD)</td>
                             <td><strong>Zero Collateral</strong> (Based on academic potential)</td>
                         </tr>
                         <tr>
-                            <td class="table-cell-highlight">Processing Turnaround</td>
+                            <td class="vps-table-param">Processing Turnaround</td>
                             <td>10 – 15 business days (Includes legal &amp; technical valuation)</td>
                             <td><strong>4 – 7 business days</strong> (Express digital sanction)</td>
                         </tr>
                         <tr>
-                            <td class="table-cell-highlight">Margin Money Requirement</td>
+                            <td class="vps-table-param">Margin Money Requirement</td>
                             <td>0% – 10% (Often 100% financing approved)</td>
                             <td>0% – 15% (Depends on lender and country)</td>
                         </tr>
                         <tr>
-                            <td class="table-cell-highlight">Section 80E Tax Deduction</td>
+                            <td class="vps-table-param">Section 80E Tax Deduction</td>
                             <td>100% of interest deductible for up to 8 years</td>
                             <td>100% of interest deductible for up to 8 years</td>
                         </tr>
                         <tr>
-                            <td class="table-cell-highlight">Primary Lending Partners</td>
+                            <td class="vps-table-param">Primary Lending Partners</td>
                             <td>SBI, Bank of Baroda, PNB, Canara Bank, Union Bank</td>
                             <td>HDFC Credila, Avanse, Auxilo, ICICI Bank, InCred</td>
                         </tr>
@@ -510,60 +715,132 @@
         </div>
     </section>
 
-    <!-- LENDING PARTNERS PREVIEW -->
-    <section class="lenders-section" style="background:var(--bg-card);padding:70px 0;">
-        <div class="container" style="text-align:center">
-            <p class="section-label">OUR LENDING PARTNERS</p>
-            <h2 class="section-title">Trusted Banks &amp; NBFCs <span class="green-highlight">We Work With</span></h2>
-            <p class="section-sub">We connect students with 15+ premier financial institutions across India.</p>
-            <div class="countries-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 40px;">
-                <div class="pan-card" style="padding: 20px 16px; text-align: center;" data-aos="fade-up">
-                    <strong style="color:var(--navy); font-size: 15px; display: block; margin-bottom: 6px;">HDFC Credila</strong>
-                    <span class="marquee-card-badge badge-nbfc">NBFC Partner</span>
+    <!-- CO-SIGNER & NO-CO-SIGNER OPTIONS -->
+    <section class="vps-cosigner-section">
+        <div class="container">
+            <div class="vps-section-header" data-aos="fade-up">
+                <div class="vps-eyebrow">
+                    <span class="vps-eyebrow-dot"></span>
+                    <span>APPLICANT PROFILES</span>
                 </div>
-                <div class="pan-card" style="padding: 20px 16px; text-align: center;" data-aos="fade-up" data-aos-delay="50">
-                    <strong style="color:var(--navy); font-size: 15px; display: block; margin-bottom: 6px;">Avanse</strong>
-                    <span class="marquee-card-badge badge-nbfc">NBFC Partner</span>
+                <h2>Co-Signer &amp; No-Co-Signer Options</h2>
+                <div class="vps-header-divider">
+                    <span class="vps-divider-line"></span>
+                    <span class="vps-divider-dot"></span>
+                    <span class="vps-divider-line"></span>
                 </div>
-                <div class="pan-card" style="padding: 20px 16px; text-align: center;" data-aos="fade-up" data-aos-delay="100">
-                    <strong style="color:var(--navy); font-size: 15px; display: block; margin-bottom: 6px;">Auxilo</strong>
-                    <span class="marquee-card-badge badge-nbfc">NBFC Partner</span>
+                <p class="vps-section-sub">Flexible options to suit different student profiles.</p>
+            </div>
+
+            <div class="vps-cosigner-grid">
+                <div class="vps-cosigner-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="vps-cosigner-icon">
+                        <i class="fas fa-people-roof"></i>
+                    </div>
+                    <div class="vps-cosigner-info">
+                        <h3>Co-Signer / Co-Applicant</h3>
+                        <p>Explore education-loan routes where a parent or eligible co-applicant supports the application.</p>
+                    </div>
                 </div>
-                <div class="pan-card" style="padding: 20px 16px; text-align: center;" data-aos="fade-up" data-aos-delay="150">
-                    <strong style="color:var(--navy); font-size: 15px; display: block; margin-bottom: 6px;">ICICI Bank</strong>
-                    <span class="marquee-card-badge badge-pvt">Private Bank</span>
-                </div>
-                <div class="pan-card" style="padding: 20px 16px; text-align: center;" data-aos="fade-up" data-aos-delay="200">
-                    <strong style="color:var(--navy); font-size: 15px; display: block; margin-bottom: 6px;">IDFC FIRST</strong>
-                    <span class="marquee-card-badge badge-pvt">Private Bank</span>
-                </div>
-                <div class="pan-card" style="padding: 20px 16px; text-align: center;" data-aos="fade-up" data-aos-delay="250">
-                    <strong style="color:var(--navy); font-size: 15px; display: block; margin-bottom: 6px;">State Bank of India</strong>
-                    <span class="marquee-card-badge badge-psu">Public Bank</span>
-                </div>
-                <div class="pan-card" style="padding: 20px 16px; text-align: center;" data-aos="fade-up" data-aos-delay="300">
-                    <strong style="color:var(--navy); font-size: 15px; display: block; margin-bottom: 6px;">Bank of Baroda</strong>
-                    <span class="marquee-card-badge badge-psu">Public Bank</span>
-                </div>
-                <div class="pan-card" style="padding: 20px 16px; text-align: center;" data-aos="fade-up" data-aos-delay="350">
-                    <strong style="color:var(--navy); font-size: 15px; display: block; margin-bottom: 6px;">Punjab National Bank</strong>
-                    <span class="marquee-card-badge badge-psu">Public Bank</span>
+
+                <div class="vps-cosigner-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vps-cosigner-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="vps-cosigner-info">
+                        <h3>No-Co-Signer Options</h3>
+                        <p>Some lenders may offer no-co-signer routes for eligible students, depending on destination, institution, course and lender criteria.</p>
+                    </div>
                 </div>
             </div>
-            <div style="margin-top:30px;">
-                <a href="partner-lenders.html" class="btn btn-outline">View All Partner Lenders <i class="fas fa-arrow-right"></i></a>
+
+            <p class="vps-cosigner-footnote" data-aos="fade-up">
+                * Availability and eligibility vary by lender and applicant profile.
+            </p>
+        </div>
+    </section>
+
+    <!-- LENDING PARTNERS PREVIEW -->
+    <section class="vps-partners-preview">
+        <div class="container" style="text-align:center">
+            <div class="vps-section-header" data-aos="fade-up" style="margin-bottom:28px;">
+                <div class="vps-eyebrow">
+                    <span class="vps-eyebrow-dot"></span>
+                    <span>TRUSTED ECOSYSTEM</span>
+                </div>
+                <h2>Trusted Banks &amp; NBFCs We Work With</h2>
+                <div class="vps-header-divider">
+                    <span class="vps-divider-line"></span>
+                    <span class="vps-divider-dot"></span>
+                    <span class="vps-divider-line"></span>
+                </div>
+                <p class="vps-section-sub">We connect students with 15+ premier financial institutions across India.</p>
+            </div>
+
+            <div class="vps-partners-grid">
+                <div class="vps-partner-pill" data-aos="fade-up" data-aos-delay="0">
+                    <strong>HDFC Credila</strong>
+                    <span class="vps-partner-badge nbfc">NBFC Partner</span>
+                </div>
+                <div class="vps-partner-pill" data-aos="fade-up" data-aos-delay="50">
+                    <strong>Avanse</strong>
+                    <span class="vps-partner-badge nbfc">NBFC Partner</span>
+                </div>
+                <div class="vps-partner-pill" data-aos="fade-up" data-aos-delay="100">
+                    <strong>Auxilo</strong>
+                    <span class="vps-partner-badge nbfc">NBFC Partner</span>
+                </div>
+                <div class="vps-partner-pill" data-aos="fade-up" data-aos-delay="150">
+                    <strong>ICICI Bank</strong>
+                    <span class="vps-partner-badge bank">Private Bank</span>
+                </div>
+                <div class="vps-partner-pill" data-aos="fade-up" data-aos-delay="200">
+                    <strong>IDFC FIRST</strong>
+                    <span class="vps-partner-badge bank">Private Bank</span>
+                </div>
+                <div class="vps-partner-pill" data-aos="fade-up" data-aos-delay="250">
+                    <strong>State Bank of India</strong>
+                    <span class="vps-partner-badge bank">Public Bank</span>
+                </div>
+                <div class="vps-partner-pill" data-aos="fade-up" data-aos-delay="300">
+                    <strong>Bank of Baroda</strong>
+                    <span class="vps-partner-badge bank">Public Bank</span>
+                </div>
+                <div class="vps-partner-pill" data-aos="fade-up" data-aos-delay="350">
+                    <strong>Punjab National Bank</strong>
+                    <span class="vps-partner-badge bank">Public Bank</span>
+                </div>
+            </div>
+
+            <div style="margin-top:28px;">
+                <a href="partner-lenders.html" class="btn btn-vps-secondary">
+                    View All Partner Lenders <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <h2 data-aos="fade-up">Ready to Study Abroad?</h2>
-            <p data-aos="fade-up" data-aos-delay="80">Let our experts help you find the right education loan for your international journey.</p>
-            <div class="cta-btns" data-aos="fade-up" data-aos-delay="160">
-                <button class="btn btn-primary btn-lg" onclick="openPopup()">Check Eligibility Free <i class="fas fa-arrow-right"></i></button>
-                <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Chat with Expert</a>
+    <!-- FINAL CTA -->
+    <section class="vps-final-cta">
+        <div class="vps-cta-swoosh" aria-hidden="true"></div>
+        <div class="container vps-cta-inner">
+            <h2 data-aos="fade-up">
+                Not Sure Which Option Suits You?<br>
+                <span class="vps-orange-text">Let Our Experts Guide You.</span>
+            </h2>
+            <p class="vps-cta-sub" data-aos="fade-up" data-aos-delay="80">
+                Get personalized, 100% free loan guidance comparing pre-approved offers across 15+ premier lending institutions.
+            </p>
+            <div class="vps-final-cta-btns" data-aos="fade-up" data-aos-delay="160">
+                <button class="btn btn-vps-primary btn-lg" onclick="openPopup()">
+                    Check Your Eligibility <i class="fas fa-arrow-right"></i>
+                </button>
+                <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn btn-vps-cta-secondary btn-lg">
+                    <i class="fab fa-whatsapp" style="color:#25D366;font-size:20px;"></i> Talk to an Expert
+                </a>
+            </div>
+            <div class="vps-handwriting vps-handwriting-final" data-aos="fade-up" data-aos-delay="240">
+                Same Dreams <span class="hw-accent">Bigger Horizons</span> 🚀
             </div>
         </div>
     </section>
@@ -623,8 +900,32 @@
     <div class="container footer-inner">
         <div class="footer-col brand-col">
             <div class="footer-logo">
-                <span class="logo-name">VISIONARY PATH SERVICES</span>
-                <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                <a href="../index.html" class="logo logo-dark" aria-label="Visionary Path Services Home">
+                    <span class="vps-brand-mark">
+                        <svg class="vps-flash-svg" viewBox="0 0 100 120" width="34" height="41" fill="none" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="footerFlashGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+                                    <stop offset="0%" stop-color="#FF8A00" />
+                                    <stop offset="55%" stop-color="#FF5A00" />
+                                    <stop offset="100%" stop-color="#FF3800" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+                                  stroke="url(#footerFlashGrad)" 
+                                  stroke-width="14.5" 
+                                  stroke-linejoin="round" 
+                                  stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <div class="logo-text">
+                        <span class="logo-name">VISIONARY</span>
+                        <span class="logo-sub">
+                            <span class="logo-sub-line"></span>
+                            <span class="logo-sub-text">PATH SERVICES</span>
+                            <span class="logo-sub-line"></span>
+                        </span>
+                    </div>
+                </a>
             </div>
             <p class="footer-desc">
                 Pan-India premier education loan advisory service. We empower students to secure domestic and international academic financing from top banks and NBFCs with zero service charges.

@@ -21,7 +21,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../css/design-system.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -73,9 +73,10 @@
 <div class="top-bar">
     <div class="container top-bar-inner">
         <div class="top-bar-left">
-            <span class="pulse-dot"></span>
-            <span>Pan India Education Loan Assistance &amp; Guidance</span>
-            <span class="top-bar-dash">—</span> Your Education Goals, Our Guidance
+            <span class="orange-rule" style="width:18px; height:2px; margin-right:8px; vertical-align:middle; display:inline-block;"></span>
+            <span>Your Education Goals, Our Guidance</span>
+            <span class="top-bar-dash" style="color:var(--color-orange); margin: 0 6px;">•</span>
+            <span style="opacity: 0.88;">Pan India Loan Advisory</span>
         </div>
         <div class="top-bar-right">
             <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact: 9063703038</a>
@@ -90,10 +91,30 @@
 <!-- NAVBAR -->
 <header class="navbar" id="navbar">
     <div class="container nav-inner">
-        <a href="../index.html" class="logo">
+        <a href="../index.html" class="logo" aria-label="Visionary Path Services Home">
+            <span class="vps-brand-mark">
+                <svg class="vps-flash-svg" viewBox="0 0 100 120" width="34" height="41" fill="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="navFlashGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+                            <stop offset="0%" stop-color="#FF7A00" />
+                            <stop offset="55%" stop-color="#FF5A00" />
+                            <stop offset="100%" stop-color="#FF3800" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+                          stroke="url(#navFlashGrad)" 
+                          stroke-width="14.5" 
+                          stroke-linejoin="round" 
+                          stroke-linecap="round" />
+                </svg>
+            </span>
             <div class="logo-text">
-                <span class="logo-name">VISIONARY PATH SERVICES</span>
-                <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                <span class="logo-name">VISIONARY</span>
+                <span class="logo-sub">
+                    <span class="logo-sub-line"></span>
+                    <span class="logo-sub-text">PATH SERVICES</span>
+                    <span class="logo-sub-line"></span>
+                </span>
             </div>
         </a>
         <ul class="nav-links" id="navLinks">
@@ -450,12 +471,6 @@
                 </div>
                 <div class="marquee-card">
                     <div class="marquee-logo-wrap">
-                        <img src="../images/logos/sallie-mae.svg" alt="Sallie Mae" class="marquee-logo-img" loading="lazy">
-                    </div>
-                    <span class="marquee-card-badge badge-intl">Global</span>
-                </div>
-                <div class="marquee-card">
-                    <div class="marquee-logo-wrap">
                         <img src="../images/logos/kuhoo.png" alt="Kuhoo" class="marquee-logo-img" loading="lazy">
                     </div>
                     <span class="marquee-card-badge badge-nbfc">NBFC</span>
@@ -561,12 +576,6 @@
                 <div class="marquee-card">
                     <div class="marquee-logo-wrap">
                         <img src="../images/logos/mpower-financing.png" alt="MPOWER Financing" class="marquee-logo-img" loading="lazy">
-                    </div>
-                    <span class="marquee-card-badge badge-intl">Global</span>
-                </div>
-                <div class="marquee-card">
-                    <div class="marquee-logo-wrap">
-                        <img src="../images/logos/sallie-mae.svg" alt="Sallie Mae" class="marquee-logo-img" loading="lazy">
                     </div>
                     <span class="marquee-card-badge badge-intl">Global</span>
                 </div>
@@ -1911,74 +1920,6 @@
                         </div>
                     </div>
 
-                    <div class="lender-info-card">
-                        <div class="lic-header">
-                            <div class="lic-illustration" aria-hidden="true">
-    <svg viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M22 76 L86 68 L104 76 L40 84 Z" fill="#0284c7"/>
-        <path d="M22 76 L22 84 L40 92 L40 84 Z" fill="#0369a1"/>
-        <path d="M40 84 L40 92 L104 84 L104 76 Z" fill="#38bdf8"/>
-        <path d="M35 80 L98 72 L100 78 L37 86 Z" fill="#ffffff"/>
-        <path d="M26 62 L90 54 L108 62 L44 70 Z" fill="#0284c7"/>
-        <path d="M26 62 L26 70 L44 78 L44 70 Z" fill="#0369a1"/>
-        <path d="M44 70 L44 78 L108 70 L108 62 Z" fill="#38bdf8"/>
-        <path d="M39 66 L102 58 L104 64 L41 72 Z" fill="#ffffff"/>
-        <path d="M30 48 L94 40 L112 48 L48 56 Z" fill="#0284c7"/>
-        <path d="M30 48 L30 56 L48 64 L48 56 Z" fill="#0369a1"/>
-        <path d="M48 56 L48 64 L112 56 L112 48 Z" fill="#38bdf8"/>
-        <path d="M43 52 L106 44 L108 50 L45 58 Z" fill="#ffffff"/>
-        <polygon points="66,12 110,25 66,38 22,25" fill="#1e293b"/>
-        <polygon points="66,15 104,25 66,35 28,25" fill="#0f172a"/>
-        <path d="M42 32 L42 44 C42 51, 88 51, 88 44 L88 32 Z" fill="#1e293b"/>
-        <ellipse cx="66" cy="25" rx="3" ry="1.8" fill="#f59e0b"/>
-        <path d="M66 25 Q84 27 88 38 L90 50" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-        <rect x="87" y="49" width="6" height="11" rx="1.5" fill="#eab308"/>
-        <path d="M87 60 L93 60 L92 64 L88 64 Z" fill="#ca8a04"/>
-    </svg>
-</div>
-                            <div class="lic-header-content">
-                                <div class="lic-brand">
-                                    <div class="lic-logo-wrap"><img src="../images/logos/sallie-mae.svg" alt="Sallie Mae" class="lic-logo" loading="lazy"></div>
-                                    <div>
-                                        <div class="lic-name">Sallie Mae</div>
-                                        <div class="lic-tagline">Global Leader in Student Financing</div>
-                                    </div>
-                                </div>
-                                <div class="lic-quote">“US market leader providing flexible repayment plans and competitive terms.”</div>
-                                <div class="lic-rate-pill">Interest rate starting at 4.5% (USD)</div>
-                            </div>
-                        </div>
-                        <div class="lic-body">
-                            <div class="lic-row">
-                                <div class="lic-icon"><i class="fas fa-dollar-sign"></i></div>
-                                <div class="lic-label">Loan Amount:</div>
-                                <div class="lic-value">100% of Cost</div>
-                            </div>
-                            <div class="lic-row">
-                                <div class="lic-icon"><i class="fas fa-percent"></i></div>
-                                <div class="lic-label">Processing Fee:</div>
-                                <div class="lic-value">None</div>
-                            </div>
-                            <div class="lic-row">
-                                <div class="lic-icon"><i class="fas fa-clock"></i></div>
-                                <div class="lic-label">Tenure:</div>
-                                <div class="lic-value">Up to 15 Years</div>
-                            </div>
-                            <div class="lic-row">
-                                <div class="lic-icon"><i class="fas fa-file-lines"></i></div>
-                                <div class="lic-label">Loan Type:</div>
-                                <div class="lic-value">No Collateral</div>
-                            </div>
-                            <div class="lic-row">
-                                <div class="lic-icon"><i class="fas fa-gear"></i></div>
-                                <div class="lic-label">Moratorium Period:</div>
-                                <div class="lic-value">During Course</div>
-                            </div>
-                        </div>
-                        <div class="lic-footer">
-                            <button class="lic-cta" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
 
                     <div class="lender-info-card">
                         <div class="lic-header">
@@ -2144,8 +2085,32 @@
     <div class="container footer-inner">
         <div class="footer-col brand-col">
             <div class="footer-logo">
-                <span class="logo-name">VISIONARY PATH SERVICES</span>
-                <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                <a href="../index.html" class="logo logo-dark" aria-label="Visionary Path Services Home">
+                    <span class="vps-brand-mark">
+                        <svg class="vps-flash-svg" viewBox="0 0 100 120" width="34" height="41" fill="none" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="footerFlashGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+                                    <stop offset="0%" stop-color="#FF8A00" />
+                                    <stop offset="55%" stop-color="#FF5A00" />
+                                    <stop offset="100%" stop-color="#FF3800" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+                                  stroke="url(#footerFlashGrad)" 
+                                  stroke-width="14.5" 
+                                  stroke-linejoin="round" 
+                                  stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <div class="logo-text">
+                        <span class="logo-name">VISIONARY</span>
+                        <span class="logo-sub">
+                            <span class="logo-sub-line"></span>
+                            <span class="logo-sub-text">PATH SERVICES</span>
+                            <span class="logo-sub-line"></span>
+                        </span>
+                    </div>
+                </a>
             </div>
             <p class="footer-desc">
                 Pan-India premier education loan advisory service. We empower students to secure domestic and international academic financing from top banks and NBFCs with zero service charges.

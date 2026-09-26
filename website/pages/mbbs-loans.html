@@ -6,7 +6,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="alternate icon" type="image/x-icon" href="../favicon.svg">
-    <title>MBBS Loans – Visionary Path Services</title>
+    <title>MBBS Education Loans – Visionary Path Services</title>
     <meta name="description" content="Specialized medical education financing for MBBS in India (government & private colleges) and MBBS Abroad with simple documentation.">
     <link rel="canonical" href="https://www.visionarypathservices.com/pages/mbbs-loans.html">
     <!-- Open Graph -->
@@ -18,10 +18,13 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://www.visionarypathservices.com/favicon.svg">
 
+    <!-- Preconnect & Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Design System & Stylesheets -->
     <link rel="stylesheet" href="../css/design-system.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/improvements.css">    
@@ -54,7 +57,13 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "MBBS Education Loans (India & Abroad)",
+              "name": "Services",
+              "item": "https://www.visionarypathservices.com/pages/services.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "MBBS Education Loans",
               "item": "https://www.visionarypathservices.com/pages/mbbs-loans.html"
             }
           ]
@@ -63,17 +72,18 @@
     }
     </script>
 </head>
-<body>
+<body class="mbbs-page-body">
 
-        <!-- VPS_NAVBAR_START -->
+    <!-- VPS_NAVBAR_START -->
 <a href="#mainContent" class="skip-link">Skip to main content</a>
 <!-- TOPBAR -->
 <div class="top-bar">
     <div class="container top-bar-inner">
         <div class="top-bar-left">
-            <span class="pulse-dot"></span>
-            <span>Pan India Education Loan Assistance &amp; Guidance</span>
-            <span class="top-bar-dash">—</span> Your Education Goals, Our Guidance
+            <span class="orange-rule" style="width:18px; height:2px; margin-right:8px; vertical-align:middle; display:inline-block;"></span>
+            <span>Your Education Goals, Our Guidance</span>
+            <span class="top-bar-dash" style="color:var(--color-orange); margin: 0 6px;">•</span>
+            <span style="opacity: 0.88;">Pan India Loan Advisory</span>
         </div>
         <div class="top-bar-right">
             <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact: 9063703038</a>
@@ -88,10 +98,30 @@
 <!-- NAVBAR -->
 <header class="navbar" id="navbar">
     <div class="container nav-inner">
-        <a href="../index.html" class="logo">
+        <a href="../index.html" class="logo" aria-label="Visionary Path Services Home">
+            <span class="vps-brand-mark">
+                <svg class="vps-flash-svg" viewBox="0 0 100 120" width="34" height="41" fill="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="navFlashGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+                            <stop offset="0%" stop-color="#FF7A00" />
+                            <stop offset="55%" stop-color="#FF5A00" />
+                            <stop offset="100%" stop-color="#FF3800" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+                          stroke="url(#navFlashGrad)" 
+                          stroke-width="14.5" 
+                          stroke-linejoin="round" 
+                          stroke-linecap="round" />
+                </svg>
+            </span>
             <div class="logo-text">
-                <span class="logo-name">VISIONARY PATH SERVICES</span>
-                <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                <span class="logo-name">VISIONARY</span>
+                <span class="logo-sub">
+                    <span class="logo-sub-line"></span>
+                    <span class="logo-sub-text">PATH SERVICES</span>
+                    <span class="logo-sub-line"></span>
+                </span>
             </div>
         </a>
         <ul class="nav-links" id="navLinks">
@@ -237,400 +267,825 @@
 </header>
 <!-- VPS_NAVBAR_END -->
 
-    <!-- HERO -->
-    <section class="page-hero" id="mainContent">
-        <div class="container page-hero-inner">
-            <div class="page-hero-grid">
-                <div class="page-hero-content" data-aos="fade-right">
-                    <nav aria-label="Breadcrumb" class="breadcrumb">
-                        <a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <a href="services.html">Services</a> <span class="breadcrumb-sep">/</span> <span>MBBS Loans</span>
+    <!-- 1. HERO SECTION -->
+    <section class="mbbs-hero" id="mainContent">
+        <div class="mbbs-container">
+            <div class="mbbs-hero-grid">
+                <!-- Left: Focused Copy & CTAs -->
+                <div class="mbbs-hero-content">
+                    <nav aria-label="Breadcrumb" class="mbbs-breadcrumb">
+                        <a href="../index.html">Home</a>
+                        <span class="mbbs-breadcrumb-sep">/</span>
+                        <a href="../pages/services.html">Services</a>
+                        <span class="mbbs-breadcrumb-sep">/</span>
+                        <span class="mbbs-breadcrumb-active">MBBS Loans</span>
                     </nav>
-                    <div class="brand-eyebrow">
-                        <span class="pulse-dot"></span>
-                        <span>SPECIALIZED MEDICAL DEGREE FINANCING</span>
-                    </div>
-                    <h1>
-                        MBBS <span class="green-highlight">Education Loans</span> in India &amp; Abroad
+
+                    <div class="mbbs-eyebrow">MBBS EDUCATION LOANS</div>
+
+                    <h1 class="mbbs-hero-h1">
+                        MBBS Education Loans for a <span>Healthier Tomorrow</span>
                     </h1>
-                    <p class="page-hero-lead">
-                        Dedicated financing for government medical colleges, deemed universities, and MCI/NMC-recognized international medical institutions with 100% free guidance.
+
+                    <p class="mbbs-hero-lead">
+                        Finance your medical education in India or abroad with guidance on suitable loan options, documentation and lender requirements.
                     </p>
-                    <div class="hero-btns">
-                        <button class="btn btn-hero-primary" onclick="openPopup()">
-                            Check My Eligibility <i class="fas fa-arrow-right"></i>
+
+                    <div class="mbbs-hero-ctas">
+                        <button class="mbbs-btn-primary" onclick="openPopup()">
+                            Check Eligibility <i class="fas fa-arrow-right"></i>
                         </button>
-                        <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn btn-hero-secondary">
-                            <i class="fab fa-whatsapp"></i> Talk to Expert
+                        <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="mbbs-btn-secondary">
+                            <i class="fab fa-whatsapp"></i> Talk to an Expert
                         </a>
                     </div>
-                    <div class="hero-trust-strip">
-                        <div class="hero-trust-item">
-                            <i class="fas fa-shield-halved trust-icon-green"></i>
-                            <span><strong>100% Free</strong> Advisory</span>
+
+                    <!-- Compact Trust Indicators -->
+                    <div class="mbbs-hero-trust-row">
+                        <div class="mbbs-trust-item">
+                            <i class="fas fa-check-circle"></i> India &amp; Abroad
                         </div>
-                        <span class="hero-trust-sep">•</span>
-                        <div class="hero-trust-item">
-                            <i class="fas fa-building-columns trust-icon-blue"></i>
-                            <span><strong>15+</strong> Partner Lenders</span>
+                        <span class="mbbs-trust-sep">•</span>
+                        <div class="mbbs-trust-item">
+                            <i class="fas fa-check-circle"></i> Multiple Lenders
                         </div>
-                        <span class="hero-trust-sep">•</span>
-                        <div class="hero-trust-item">
-                            <i class="fas fa-lock trust-icon-green"></i>
-                            <span>Safe &amp; Confidential</span>
+                        <span class="mbbs-trust-sep">•</span>
+                        <div class="mbbs-trust-item">
+                            <i class="fas fa-check-circle"></i> Secured &amp; Unsecured
+                        </div>
+                        <span class="mbbs-trust-sep">•</span>
+                        <div class="mbbs-trust-item">
+                            <i class="fas fa-check-circle"></i> Expert Guidance
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Snapshot Card (Landing Page Grade Visual) -->
-                <div class="page-hero-visual" data-aos="fade-left">
-                    <div class="hero-snapshot-card">
-                        <div class="snapshot-header">
-                            <div class="snapshot-badge">
-                                <span class="snapshot-pulse-dot"></span>
-                                <span>Doctoral &amp; Medical Desk</span>
-                            </div>
-                            <span class="snapshot-highlight">Zero Advisory Fees</span>
-                        </div>
-
-                        <div class="snapshot-stats-grid">
-                            <div class="snapshot-stat">
-                                <span class="snapshot-stat-label">Max MBBS Limit</span>
-                                <span class="snapshot-stat-val">Up to ₹1.5 Cr</span>
-                                <span class="snapshot-stat-note">Tuition + Clinicals</span>
-                            </div>
-                            <div class="snapshot-stat">
-                                <span class="snapshot-stat-label">Global Coverage</span>
-                                <span class="snapshot-stat-val">India &amp; Abroad</span>
-                                <span class="snapshot-stat-note">NMC / WHO Listed</span>
-                            </div>
-                            <div class="snapshot-stat">
-                                <span class="snapshot-stat-label">Starting ROI</span>
-                                <span class="snapshot-stat-val">8.75% p.a.</span>
-                                <span class="snapshot-stat-note">Medical Concessions</span>
-                            </div>
-                            <div class="snapshot-stat">
-                                <span class="snapshot-stat-label">Moratorium</span>
-                                <span class="snapshot-stat-val">Up to 6 Yrs</span>
-                                <span class="snapshot-stat-note">Course + Internship</span>
-                            </div>
-                        </div>
-
-                        <div class="snapshot-lenders-footer">
-                            <span class="snapshot-footer-label">Partner Medical Lenders:</span>
-                            <div class="snapshot-lender-pills">
-                                <span class="snap-pill">SBI</span>
-                                <span class="snap-pill">Bank of Baroda</span>
-                                <span class="snap-pill">Avanse</span>
-                                <span class="snap-pill">Canara Bank</span>
-                                <span class="snap-pill">Auxilo</span>
-                                <span class="snap-pill">InCred</span>
-                            </div>
-                        </div>
+                <!-- Right: Single Strong Medical Student Image -->
+                <div class="mbbs-hero-visual">
+                    <div class="mbbs-hero-img-wrap">
+                        <img src="../images/mbbs/hero-medical-student.jpg" alt="Indian medical student in doctor coat on modern medical university campus" class="mbbs-hero-img" width="800" height="600" loading="eager" decoding="async">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- OVERVIEW -->
-    <section class="overview-section">
-        <div class="container">
-            <div class="two-col">
-                <div class="intro-text" data-aos="fade-right">
-                    <p class="section-label">MEDICAL EDUCATION FINANCING</p>
-                    <h2>Support for Every <span class="green-highlight">MBBS Aspirant</span></h2>
-                    <p>Medical education requires significant investment. We specialize in helping MBBS students navigate the loan landscape — whether you're pursuing a government medical college, private medical college in India, or an MBBS degree abroad.</p>
-                    <ul class="check-list">
-                        <li><i class="fas fa-check-circle"></i> Loans for government &amp; private medical colleges</li>
-                        <li><i class="fas fa-check-circle"></i> MBBS abroad loan options (Russia, Ukraine, China, etc.)</li>
-                        <li><i class="fas fa-check-circle"></i> Profile-based lender matching</li>
-                        <li><i class="fas fa-check-circle"></i> Documentation &amp; eligibility guidance</li>
-                        <li><i class="fas fa-check-circle"></i> Secured &amp; unsecured loan options</li>
-                        <li><i class="fas fa-check-circle"></i> Application to sanction support</li>
-                    </ul>
-                    <div style="display:flex;gap:12px;flex-wrap:wrap">
-                        <button class="btn btn-primary" onclick="openPopup()">Get Guidance <i class="fas fa-arrow-right"></i></button>
-                        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+    <!-- 2. WHY CHOOSE US (4 Benefits) -->
+    <section class="mbbs-section" id="why-us">
+        <div class="mbbs-container">
+            <div class="mbbs-section-head">
+                <div class="mbbs-eyebrow">WHY CHOOSE US</div>
+                <h2 class="mbbs-h2">Specialized Guidance for Your Medical Career</h2>
+                <p class="mbbs-subhead">Dedicated financial structuring built around the unique multi-year curriculum and internship requirements of medical degrees.</p>
+            </div>
+
+            <div class="mbbs-benefits-grid">
+                <div class="mbbs-benefit-item">
+                    <div class="mbbs-benefit-icon"><i class="fas fa-stethoscope"></i></div>
+                    <h3 class="mbbs-benefit-title">Specialized MBBS Loan Guidance</h3>
+                    <p class="mbbs-benefit-desc">Tailored loan structures supporting 5–6 year medical academic cycles and clinical internship moratoriums.</p>
+                </div>
+                <div class="mbbs-benefit-item">
+                    <div class="mbbs-benefit-icon"><i class="fas fa-building-columns"></i></div>
+                    <h3 class="mbbs-benefit-title">Multiple Lender Options</h3>
+                    <p class="mbbs-benefit-desc">Compare sanction limits, flexible repayment tenures, and interest rates across 15+ premier banking partners.</p>
+                </div>
+                <div class="mbbs-benefit-item">
+                    <div class="mbbs-benefit-icon"><i class="fas fa-file-shield"></i></div>
+                    <h3 class="mbbs-benefit-title">Documentation Support</h3>
+                    <p class="mbbs-benefit-desc">Step-by-step assistance organizing academic transcripts, NEET scorecards, KYC, and co-applicant files.</p>
+                </div>
+                <div class="mbbs-benefit-item">
+                    <div class="mbbs-benefit-icon"><i class="fas fa-hand-holding-hand"></i></div>
+                    <h3 class="mbbs-benefit-title">End-to-End Assistance</h3>
+                    <p class="mbbs-benefit-desc">Personalized advisory from initial feasibility assessment through sanction letter issuance and fee disbursement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. WHAT IS AN MBBS EDUCATION LOAN? -->
+    <section class="mbbs-section mbbs-section-alt" id="overview">
+        <div class="mbbs-container">
+            <div class="mbbs-overview-grid">
+                <div class="mbbs-overview-text">
+                    <div class="mbbs-eyebrow">PROGRAM OVERVIEW</div>
+                    <h2 class="mbbs-h2">What Is an MBBS Education Loan?</h2>
+                    <p>
+                        An MBBS education loan is a specialized academic financing solution structured for undergraduate medical students pursuing degrees in India or recognized institutions abroad.
+                    </p>
+                    <p>
+                        Because medical education requires 5 to 6 years of intensive training, these loans offer extended repayment horizons, higher funding ceilings, and moratorium periods covering both the academic tenure and mandatory medical internships.
+                    </p>
+                </div>
+                <div class="mbbs-overview-quote-box">
+                    <p class="mbbs-overview-quote">
+                        "Funding can support eligible expenses such as tuition, accommodation, books, travel and other approved education costs."
+                    </p>
+                    <a href="#eligibility" class="mbbs-link-arrow">
+                        Understand Eligibility <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. EXPENSES COVERED (5 Items in Compact Grid) -->
+    <section class="mbbs-section" id="expenses">
+        <div class="mbbs-container">
+            <div class="mbbs-section-head">
+                <div class="mbbs-eyebrow">COVERED EXPENSES</div>
+                <h2 class="mbbs-h2">Expenses Covered Under MBBS Loans</h2>
+                <p class="mbbs-subhead">Comprehensive funding designed to support your entire medical education journey from admission to graduation.</p>
+            </div>
+
+            <div class="mbbs-expenses-grid">
+                <div class="mbbs-expense-item">
+                    <i class="fas fa-graduation-cap mbbs-expense-icon"></i>
+                    <h3 class="mbbs-expense-title">Tuition</h3>
+                    <p class="mbbs-expense-desc">100% college or university tuition fees disbursed semester-by-semester directly to the institution.</p>
+                </div>
+                <div class="mbbs-expense-item">
+                    <i class="fas fa-bed mbbs-expense-icon"></i>
+                    <h3 class="mbbs-expense-title">Accommodation</h3>
+                    <p class="mbbs-expense-desc">Campus hostel accommodation, private student rentals, utility charges, and meal plan expenses.</p>
+                </div>
+                <div class="mbbs-expense-item">
+                    <i class="fas fa-book-medical mbbs-expense-icon"></i>
+                    <h3 class="mbbs-expense-title">Books &amp; Equipment</h3>
+                    <p class="mbbs-expense-desc">Medical textbooks, anatomical kits, diagnostic instruments, lab manuals, and medical computer tablets.</p>
+                </div>
+                <div class="mbbs-expense-item">
+                    <i class="fas fa-plane-departure mbbs-expense-icon"></i>
+                    <h3 class="mbbs-expense-title">Travel</h3>
+                    <p class="mbbs-expense-desc">Economy airfare tickets for overseas medical studies, mandatory student visa fees, and health insurance.</p>
+                </div>
+                <div class="mbbs-expense-item">
+                    <i class="fas fa-receipt mbbs-expense-icon"></i>
+                    <h3 class="mbbs-expense-title">Other Eligible Expenses</h3>
+                    <p class="mbbs-expense-desc">Examination charges, clinical rotation fees, library deposits, and necessary educational supplies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. MBBS LOAN OPTIONS (Secured vs. Unsecured Side-by-Side) -->
+    <section class="mbbs-section mbbs-section-alt" id="loan-options">
+        <div class="mbbs-container">
+            <div class="mbbs-section-head">
+                <div class="mbbs-eyebrow">LOAN OPTIONS</div>
+                <h2 class="mbbs-h2">Secured &amp; Unsecured MBBS Loan Options</h2>
+                <p class="mbbs-subhead">Choose the financing structure best suited to your admission tier, institution location, and family financial profile.</p>
+            </div>
+
+            <div class="mbbs-options-grid">
+                <!-- Secured Option -->
+                <div class="mbbs-option-card secured">
+                    <div>
+                        <div class="mbbs-option-header">
+                            <div class="mbbs-option-icon"><i class="fas fa-shield-halved"></i></div>
+                            <span class="mbbs-option-badge">Tangible Security</span>
+                        </div>
+                        <h3 class="mbbs-option-title">Secured MBBS Education Loan</h3>
+                        <p class="mbbs-option-desc">
+                            High-quantum medical education loan backed by tangible collateral such as residential property, commercial premises, or fixed deposits. Enables higher sanction limits, lower interest rates, and longer repayment tenures.
+                        </p>
+                        <div class="mbbs-option-suitable">
+                            <strong>Suitable for:</strong>
+                            High-fee programs in premier Indian private colleges and leading global universities requiring ₹15 Lakhs up to ₹1.5+ Crores.
+                        </div>
+                    </div>
+                    <button class="mbbs-btn-primary" onclick="openPopup()">
+                        Check Secured Eligibility <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Unsecured Option -->
+                <div class="mbbs-option-card unsecured">
+                    <div>
+                        <div class="mbbs-option-header">
+                            <div class="mbbs-option-icon"><i class="fas fa-file-signature"></i></div>
+                            <span class="mbbs-option-badge">Collateral-Free</span>
+                        </div>
+                        <h3 class="mbbs-option-title">Unsecured MBBS Education Loan</h3>
+                        <p class="mbbs-option-desc">
+                            Collateral-free medical financing evaluated on student academic merit, NEET ranking, and the financial co-borrower's verifiable monthly salary and credit bureau record.
+                        </p>
+                        <div class="mbbs-option-suitable">
+                            <strong>Suitable for:</strong>
+                            Government medical college admissions and approved global institutions requiring ₹7.5 Lakhs up to ₹40 Lakhs without pledging physical assets.
+                        </div>
+                    </div>
+                    <button class="mbbs-btn-secondary" onclick="openPopup()">
+                        Check Unsecured Eligibility <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. WHO CAN APPLY? (Eligibility Checklist) -->
+    <section class="mbbs-section" id="eligibility">
+        <div class="mbbs-container">
+            <div class="mbbs-section-head">
+                <div class="mbbs-eyebrow">CRITERIA</div>
+                <h2 class="mbbs-h2">Who Can Apply?</h2>
+                <p class="mbbs-subhead">Eligibility may depend on your academic profile, institution, course and financial requirements.</p>
+            </div>
+
+            <div class="mbbs-eligibility-wrap">
+                <div class="mbbs-checklist-grid">
+                    <div class="mbbs-check-item">
+                        <i class="fas fa-circle-check mbbs-check-icon"></i>
+                        <div>
+                            <h3 class="mbbs-check-title">Academic Background</h3>
+                            <p class="mbbs-check-desc">Indian national with minimum 50% marks in 10+2 (Physics, Chemistry, Biology) and valid qualifying NEET score.</p>
+                        </div>
+                    </div>
+                    <div class="mbbs-check-item">
+                        <i class="fas fa-circle-check mbbs-check-icon"></i>
+                        <div>
+                            <h3 class="mbbs-check-title">Recognized College/Institution</h3>
+                            <p class="mbbs-check-desc">Admission confirmed in an NMC (National Medical Commission), WHO, or government-approved medical institution.</p>
+                        </div>
+                    </div>
+                    <div class="mbbs-check-item">
+                        <i class="fas fa-circle-check mbbs-check-icon"></i>
+                        <div>
+                            <h3 class="mbbs-check-title">Course/Program</h3>
+                            <p class="mbbs-check-desc">Enrolled in a regular full-time undergraduate MBBS, MD, or recognized equivalent medical degree.</p>
+                        </div>
+                    </div>
+                    <div class="mbbs-check-item">
+                        <i class="fas fa-circle-check mbbs-check-icon"></i>
+                        <div>
+                            <h3 class="mbbs-check-title">Funding Requirement</h3>
+                            <p class="mbbs-check-desc">Official fee breakdown issued by the college specifying tuition fees, hostel, clinical deposits, and other charges.</p>
+                        </div>
+                    </div>
+                    <div class="mbbs-check-item">
+                        <i class="fas fa-circle-check mbbs-check-icon"></i>
+                        <div>
+                            <h3 class="mbbs-check-title">Co-Applicant Profile</h3>
+                            <p class="mbbs-check-desc">Resident Indian financial co-borrower (parent, spouse, sibling, or guardian) with verifiable salary or business income.</p>
+                        </div>
+                    </div>
+                    <div class="mbbs-check-item">
+                        <i class="fas fa-circle-check mbbs-check-icon"></i>
+                        <div>
+                            <h3 class="mbbs-check-title">Credit History</h3>
+                            <p class="mbbs-check-desc">Healthy repayment track record with satisfactory CIBIL or credit bureau score for the primary financial co-signer.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="intro-img" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&q=80" alt="Medical students" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. STUDY DESTINATIONS (Compact Destination Selector) -->
+    <section class="mbbs-section mbbs-section-alt" id="destinations">
+        <div class="mbbs-container">
+            <div class="mbbs-section-head">
+                <div class="mbbs-eyebrow">GLOBAL DESTINATIONS</div>
+                <h2 class="mbbs-h2">MBBS Study Destinations</h2>
+                <p class="mbbs-subhead">Explore medical degree funding options across India and top international destinations.</p>
+            </div>
+
+            <div class="mbbs-dest-selector">
+                <!-- Compact Tabs -->
+                <div class="mbbs-dest-tabs" role="tablist">
+                    <button class="mbbs-dest-tab-btn active" role="tab" aria-selected="true" onclick="switchMbbsDest('india', this)">India</button>
+                    <button class="mbbs-dest-tab-btn" role="tab" aria-selected="false" onclick="switchMbbsDest('uk', this)">UK</button>
+                    <button class="mbbs-dest-tab-btn" role="tab" aria-selected="false" onclick="switchMbbsDest('usa', this)">USA</button>
+                    <button class="mbbs-dest-tab-btn" role="tab" aria-selected="false" onclick="switchMbbsDest('canada', this)">Canada</button>
+                    <button class="mbbs-dest-tab-btn" role="tab" aria-selected="false" onclick="switchMbbsDest('russia', this)">Russia</button>
+                    <button class="mbbs-dest-tab-btn" role="tab" aria-selected="false" onclick="switchMbbsDest('georgia', this)">Georgia</button>
+                    <button class="mbbs-dest-tab-btn" role="tab" aria-selected="false" onclick="switchMbbsDest('philippines', this)">Philippines</button>
+                    <button class="mbbs-dest-tab-btn" role="tab" aria-selected="false" onclick="switchMbbsDest('other', this)">Other Countries</button>
+                </div>
+
+                <!-- India Panel -->
+                <div class="mbbs-dest-panel active" id="dest-india">
+                    <div class="mbbs-dest-info">
+                        <h3 class="mbbs-dest-name">MBBS in India</h3>
+                        <p class="mbbs-dest-desc">Financing for government medical colleges, deemed universities, and recognized private medical institutions across India.</p>
+                        <div class="mbbs-dest-meta-grid">
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Recognition</span>
+                                <span class="mbbs-dest-meta-val">NMC / State Councils</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Loan Limit</span>
+                                <span class="mbbs-dest-meta-val">Up to ₹1.5+ Cr</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Starting ROI</span>
+                                <span class="mbbs-dest-meta-val">8.50% – 10.50% p.a.</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Moratorium</span>
+                                <span class="mbbs-dest-meta-val">Course + 1 Yr Internship</span>
+                            </div>
+                        </div>
+                        <button class="mbbs-btn-primary" onclick="openPopup()">Explore India Loan Options →</button>
+                    </div>
+                    <div class="mbbs-dest-visual">
+                        <img src="../images/mbbs/destination-india.jpg" alt="Premier All India Institute of Medical Sciences campus" class="mbbs-dest-img" loading="lazy" decoding="async">
+                    </div>
+                </div>
+
+                <!-- UK Panel -->
+                <div class="mbbs-dest-panel" id="dest-uk">
+                    <div class="mbbs-dest-info">
+                        <h3 class="mbbs-dest-name">MBBS &amp; Clinical Medicine in the UK</h3>
+                        <p class="mbbs-dest-desc">Support for GMC-recognized British universities with comprehensive tuition and living expense financing.</p>
+                        <div class="mbbs-dest-meta-grid">
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Recognition</span>
+                                <span class="mbbs-dest-meta-val">GMC / WHO Listed</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Loan Limit</span>
+                                <span class="mbbs-dest-meta-val">Up to ₹1.5 Cr</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Coverage</span>
+                                <span class="mbbs-dest-meta-val">Tuition + NHS Living</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Disbursement</span>
+                                <span class="mbbs-dest-meta-val">GBP Direct Wire</span>
+                            </div>
+                        </div>
+                        <button class="mbbs-btn-primary" onclick="openPopup()">Explore UK Loan Options →</button>
+                    </div>
+                    <div class="mbbs-dest-visual">
+                        <img src="../images/mbbs/destination-europe.jpg" alt="Prestigious UK and European medical university campus" class="mbbs-dest-img" loading="lazy" decoding="async">
+                    </div>
+                </div>
+
+                <!-- USA Panel -->
+                <div class="mbbs-dest-panel" id="dest-usa">
+                    <div class="mbbs-dest-info">
+                        <h3 class="mbbs-dest-name">Pre-Med &amp; MD Programs in the USA</h3>
+                        <p class="mbbs-dest-desc">Financing pathways for undergraduate pre-med and USMLE-aligned medical degree pathways with dollar loan advisory.</p>
+                        <div class="mbbs-dest-meta-grid">
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Recognition</span>
+                                <span class="mbbs-dest-meta-val">LCME / ECFMG</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Loan Limit</span>
+                                <span class="mbbs-dest-meta-val">Up to ₹2.0 Cr</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Collateral</span>
+                                <span class="mbbs-dest-meta-val">Property / Co-signer</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Lenders</span>
+                                <span class="mbbs-dest-meta-val">PSU, Pvt &amp; Global NBFCs</span>
+                            </div>
+                        </div>
+                        <button class="mbbs-btn-primary" onclick="openPopup()">Explore USA Loan Options →</button>
+                    </div>
+                    <div class="mbbs-dest-visual">
+                        <img src="../images/domestic/stream_medical.jpg" alt="Medical learning and simulation facilities in North America" class="mbbs-dest-img" loading="lazy" decoding="async">
+                    </div>
+                </div>
+
+                <!-- Canada Panel -->
+                <div class="mbbs-dest-panel" id="dest-canada">
+                    <div class="mbbs-dest-info">
+                        <h3 class="mbbs-dest-name">Medical &amp; Health Sciences in Canada</h3>
+                        <p class="mbbs-dest-desc">Financing solutions for premier Canadian university health science and international medical qualifications.</p>
+                        <div class="mbbs-dest-meta-grid">
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Recognition</span>
+                                <span class="mbbs-dest-meta-val">CACMS / WHO</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Loan Limit</span>
+                                <span class="mbbs-dest-meta-val">Up to ₹1.5 Cr</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">GIC Support</span>
+                                <span class="mbbs-dest-meta-val">Living Costs Covered</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Disbursement</span>
+                                <span class="mbbs-dest-meta-val">CAD Direct Wire</span>
+                            </div>
+                        </div>
+                        <button class="mbbs-btn-primary" onclick="openPopup()">Explore Canada Loan Options →</button>
+                    </div>
+                    <div class="mbbs-dest-visual">
+                        <img src="../images/domestic/stream_medical.jpg" alt="Canadian university medical laboratory and academic facility" class="mbbs-dest-img" loading="lazy" decoding="async">
+                    </div>
+                </div>
+
+                <!-- Russia Panel -->
+                <div class="mbbs-dest-panel" id="dest-russia">
+                    <div class="mbbs-dest-info">
+                        <h3 class="mbbs-dest-name">MBBS in Russia</h3>
+                        <p class="mbbs-dest-desc">Affordable, English-medium medical degree programs across top Russian state medical universities complying with NMC guidelines.</p>
+                        <div class="mbbs-dest-meta-grid">
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Recognition</span>
+                                <span class="mbbs-dest-meta-val">NMC / WHO Listed</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Typical Budget</span>
+                                <span class="mbbs-dest-meta-val">₹25L – ₹40L Total</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Loan Options</span>
+                                <span class="mbbs-dest-meta-val">Secured &amp; NBFC Unsecured</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Remittance</span>
+                                <span class="mbbs-dest-meta-val">Annual University Invoices</span>
+                            </div>
+                        </div>
+                        <button class="mbbs-btn-primary" onclick="openPopup()">Explore Russia Loan Options →</button>
+                    </div>
+                    <div class="mbbs-dest-visual">
+                        <img src="../images/mbbs/destination-europe.jpg" alt="European and Russian state medical university building" class="mbbs-dest-img" loading="lazy" decoding="async">
+                    </div>
+                </div>
+
+                <!-- Georgia Panel -->
+                <div class="mbbs-dest-panel" id="dest-georgia">
+                    <div class="mbbs-dest-info">
+                        <h3 class="mbbs-dest-name">MBBS in Georgia</h3>
+                        <p class="mbbs-dest-desc">European-standard medical education with clinical rotations and full compliance with NMC Foreign Medical Graduate Licentiate rules.</p>
+                        <div class="mbbs-dest-meta-grid">
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Recognition</span>
+                                <span class="mbbs-dest-meta-val">WFME / NMC / WHO</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Typical Budget</span>
+                                <span class="mbbs-dest-meta-val">₹30L – ₹45L Total</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Loan Limit</span>
+                                <span class="mbbs-dest-meta-val">Up to ₹50 Lakhs</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Living Costs</span>
+                                <span class="mbbs-dest-meta-val">Covered in Sanction</span>
+                            </div>
+                        </div>
+                        <button class="mbbs-btn-primary" onclick="openPopup()">Explore Georgia Loan Options →</button>
+                    </div>
+                    <div class="mbbs-dest-visual">
+                        <img src="../images/mbbs/destination-europe.jpg" alt="European medical school campus in Georgia" class="mbbs-dest-img" loading="lazy" decoding="async">
+                    </div>
+                </div>
+
+                <!-- Philippines Panel -->
+                <div class="mbbs-dest-panel" id="dest-philippines">
+                    <div class="mbbs-dest-info">
+                        <h3 class="mbbs-dest-name">MD / MBBS in the Philippines</h3>
+                        <p class="mbbs-dest-desc">American-format MD curriculum with English-medium instruction and hands-on clinical internships.</p>
+                        <div class="mbbs-dest-meta-grid">
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Recognition</span>
+                                <span class="mbbs-dest-meta-val">CHED / WHO Listed</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Typical Budget</span>
+                                <span class="mbbs-dest-meta-val">₹25L – ₹38L Total</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Loan Coverage</span>
+                                <span class="mbbs-dest-meta-val">Tuition &amp; Boarding</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Approval Window</span>
+                                <span class="mbbs-dest-meta-val">7–12 Working Days</span>
+                            </div>
+                        </div>
+                        <button class="mbbs-btn-primary" onclick="openPopup()">Explore Philippines Loan Options →</button>
+                    </div>
+                    <div class="mbbs-dest-visual">
+                        <img src="../images/domestic/stream_medical.jpg" alt="Medical university training facility in Southeast Asia" class="mbbs-dest-img" loading="lazy" decoding="async">
+                    </div>
+                </div>
+
+                <!-- Other Countries Panel -->
+                <div class="mbbs-dest-panel" id="dest-other">
+                    <div class="mbbs-dest-info">
+                        <h3 class="mbbs-dest-name">Other International Destinations</h3>
+                        <p class="mbbs-dest-desc">Advisory and loan sanctioning support for medical colleges in Germany, Ireland, Australia, Uzbekistan, Kazakhstan, and UAE.</p>
+                        <div class="mbbs-dest-meta-grid">
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Eligibility</span>
+                                <span class="mbbs-dest-meta-val">NEET Qualified</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Loan Quantum</span>
+                                <span class="mbbs-dest-meta-val">Up to ₹1.5+ Cr</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Forex Support</span>
+                                <span class="mbbs-dest-meta-val">Zero Outward Margin</span>
+                            </div>
+                            <div class="mbbs-dest-meta-item">
+                                <span class="mbbs-dest-meta-label">Consultation</span>
+                                <span class="mbbs-dest-meta-val">100% Free Advisory</span>
+                            </div>
+                        </div>
+                        <button class="mbbs-btn-primary" onclick="openPopup()">Check Country Eligibility →</button>
+                    </div>
+                    <div class="mbbs-dest-visual">
+                        <img src="../images/mbbs/destination-europe.jpg" alt="Global medical universities across Europe and Central Asia" class="mbbs-dest-img" loading="lazy" decoding="async">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MBBS OPTIONS -->
-    <section class="mbbs-options-section">
-        <div class="container" style="text-align:center">
-            <p class="section-label">LOAN CATEGORIES</p>
-            <h2 class="section-title">MBBS Loan <span class="green-highlight">Options</span></h2>
-            <p class="section-sub">Whether you're studying medicine in India or abroad, we help you find the right financing path.</p>
-            <div class="mbbs-grid">
-                <div class="mbbs-card india" data-aos="fade-up" data-aos-delay="0">
-                    <span class="badge">INDIA</span>
-                    <div class="card-icon"><i class="fas fa-hospital"></i></div>
-                    <h3>MBBS in India</h3>
-                    <p>Comprehensive loan guidance for medical students pursuing MBBS at government and private medical colleges across India.</p>
-                    <ul>
-                        <li><i class="fas fa-chevron-right"></i> Government medical college loans</li>
-                        <li><i class="fas fa-chevron-right"></i> Private medical college loans</li>
-                        <li><i class="fas fa-chevron-right"></i> AIIMS, JIPMER &amp; premier institutions</li>
-                        <li><i class="fas fa-chevron-right"></i> Secured &amp; unsecured options available</li>
-                        <li><i class="fas fa-chevron-right"></i> Public bank, private bank &amp; NBFC loans</li>
-                    </ul>
+    <!-- 8. SIMPLE LOAN PROCESS (5 Steps) -->
+    <section class="mbbs-section" id="process">
+        <div class="mbbs-container">
+            <div class="mbbs-section-head">
+                <div class="mbbs-eyebrow">HOW IT WORKS</div>
+                <h2 class="mbbs-h2">Simple 5-Step Loan Journey</h2>
+                <p class="mbbs-subhead">A transparent, step-by-step advisory protocol from initial consultation to final tuition disbursement.</p>
+            </div>
+
+            <div class="mbbs-timeline">
+                <div class="mbbs-timeline-step">
+                    <div class="mbbs-step-num">01</div>
+                    <h3 class="mbbs-step-title">Understand Your Requirement</h3>
+                    <p class="mbbs-step-desc">Profile evaluation, college fee structure review, and loan quantum structuring.</p>
                 </div>
-                <div class="mbbs-card abroad" data-aos="fade-up" data-aos-delay="150">
-                    <span class="badge">ABROAD</span>
-                    <div class="card-icon"><i class="fas fa-plane-departure"></i></div>
-                    <h3>MBBS Abroad</h3>
-                    <p>Specialized education loan guidance for students pursuing MBBS degrees at recognized medical universities abroad.</p>
-                    <ul>
-                        <li><i class="fas fa-chevron-right"></i> Russia, Ukraine, China, Philippines</li>
-                        <li><i class="fas fa-chevron-right"></i> Europe &amp; other global destinations</li>
-                        <li><i class="fas fa-chevron-right"></i> Recognized university loan options</li>
-                        <li><i class="fas fa-chevron-right"></i> Dollar/foreign currency loan guidance</li>
-                        <li><i class="fas fa-chevron-right"></i> Document &amp; eligibility assistance</li>
-                    </ul>
+                <div class="mbbs-timeline-step">
+                    <div class="mbbs-step-num">02</div>
+                    <h3 class="mbbs-step-title">Compare Loan Options</h3>
+                    <p class="mbbs-step-desc">Evaluate sanction terms, interest rates, and moratorium benefits across 15+ lenders.</p>
+                </div>
+                <div class="mbbs-timeline-step">
+                    <div class="mbbs-step-num">03</div>
+                    <h3 class="mbbs-step-title">Prepare Documentation</h3>
+                    <p class="mbbs-step-desc">Organize KYC, NEET scorecard, academic records, and co-applicant financials.</p>
+                </div>
+                <div class="mbbs-timeline-step">
+                    <div class="mbbs-step-num">04</div>
+                    <h3 class="mbbs-step-title">Apply &amp; Track</h3>
+                    <p class="mbbs-step-desc">Direct bank underwriter coordination and active tracking to prevent delays.</p>
+                </div>
+                <div class="mbbs-timeline-step">
+                    <div class="mbbs-step-num">05</div>
+                    <h3 class="mbbs-step-title">Approval &amp; Disbursement</h3>
+                    <p class="mbbs-step-desc">Sanction verification and prompt fee transfer directly to your medical university.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MBBS COMPARISON TABLE -->
-    <section class="section" style="padding: 72px 0; background: #ffffff;">
-        <div class="container" style="text-align:center">
-            <p class="section-label">MEDICAL FINANCING GUIDE</p>
-            <h2 class="section-title">MBBS in India vs. Abroad <span class="green-highlight">Financing Matrix</span></h2>
-            <p class="section-sub">Compare key parameters across domestic and international medical education loans to make an informed choice.</p>
-            
-            <div class="comparison-table-wrapper table-responsive" data-aos="fade-up">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Parameter</th>
-                            <th>MBBS in India (Govt &amp; Private)</th>
-                            <th>MBBS Abroad (Europe, Russia, Asia)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="table-cell-highlight">Typical Total Course Cost</td>
-                            <td>₹4L – ₹15L (Govt) / ₹50L – ₹1.2 Cr (Private)</td>
-                            <td>₹25L – ₹45 Lakhs (All-inclusive including living)</td>
-                        </tr>
-                        <tr>
-                            <td class="table-cell-highlight">Collateral Requirement</td>
-                            <td>Up to ₹7.5L Collateral-Free; Property/FD for higher sums</td>
-                            <td>Secured property/FD generally preferred for full funding</td>
-                        </tr>
-                        <tr>
-                            <td class="table-cell-highlight">Sanction Limit Available</td>
-                            <td>Up to ₹1.5+ Crores (Subject to property value &amp; income)</td>
-                            <td>Up to ₹40L – ₹60 Lakhs (Covers fee installments &amp; forex)</td>
-                        </tr>
-                        <tr>
-                            <td class="table-cell-highlight">Interest Rate Range</td>
-                            <td><span class="table-badge-green">8.50% – 10.50% p.a.</span> (Subsidized for merit)</td>
-                            <td><span class="table-badge-blue">9.50% – 12.00% p.a.</span> (Floating)</td>
-                        </tr>
-                        <tr>
-                            <td class="table-cell-highlight">Regulatory Compliance</td>
-                            <td>NMC / NEET UG Qualified Admission</td>
-                            <td>NMC Foreign Medical Graduate Licentiate (FMGL) Rules</td>
-                        </tr>
-                        <tr>
-                            <td class="table-cell-highlight">Disbursement Structure</td>
-                            <td>Direct semester / annual fee transfer to medical college</td>
-                            <td>Yearly fee remittance in foreign currency + living costs</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <!-- 9. LENDER PARTNERS (Single Clean Logo Strip) -->
+    <section class="mbbs-section mbbs-section-alt" id="lenders">
+        <div class="mbbs-container">
+            <div class="mbbs-section-head">
+                <div class="mbbs-eyebrow">BANKING NETWORK</div>
+                <h2 class="mbbs-h2">Trusted Lending Partners</h2>
+                <p class="mbbs-subhead">We work with India's premier public banks, private financial institutions, and specialized education NBFCs.</p>
+            </div>
+
+            <div class="mbbs-lender-strip-wrap">
+                <div class="mbbs-lender-strip">
+                    <div class="mbbs-lender-logo-item" title="State Bank of India">
+                        <img src="../images/logos/sbi.webp" alt="State Bank of India logo" width="130" height="38" loading="lazy">
+                    </div>
+                    <div class="mbbs-lender-logo-item" title="Bank of Baroda">
+                        <img src="../images/logos/bank-of-baroda.svg" alt="Bank of Baroda logo" width="130" height="38" loading="lazy">
+                    </div>
+                    <div class="mbbs-lender-logo-item" title="Canara Bank">
+                        <img src="../images/logos/canara-bank.svg" alt="Canara Bank logo" width="130" height="38" loading="lazy">
+                    </div>
+                    <div class="mbbs-lender-logo-item" title="HDFC Credila">
+                        <img src="../images/logos/credila.svg" alt="HDFC Credila logo" width="130" height="38" loading="lazy">
+                    </div>
+                    <div class="mbbs-lender-logo-item" title="Avanse Financial Services">
+                        <img src="../images/logos/avanse.svg" alt="Avanse logo" width="130" height="38" loading="lazy">
+                    </div>
+                    <div class="mbbs-lender-logo-item" title="Auxilo Finserve">
+                        <img src="../images/logos/auxilo.svg" alt="Auxilo logo" width="130" height="38" loading="lazy">
+                    </div>
+                    <div class="mbbs-lender-logo-item" title="InCred Finance">
+                        <img src="../images/logos/incred.svg" alt="InCred logo" width="130" height="38" loading="lazy">
+                    </div>
+                    <div class="mbbs-lender-logo-item" title="Tata Capital">
+                        <img src="../images/logos/tata-capital.svg" alt="Tata Capital logo" width="130" height="38" loading="lazy">
+                    </div>
+                </div>
+
+                <p class="mbbs-lender-disclaimer">
+                    Loan approvals, sanction limits, applicable interest rates, and disbursement terms remain at the sole discretion of partner RBI-regulated lending institutions subject to applicant creditworthiness and collateral verification.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- PROCESS -->
-    <section class="process-section">
-        <div class="container" style="text-align:center">
-            <p class="section-label">HOW WE HELP</p>
-            <h2 class="section-title">Our MBBS Loan <span class="green-highlight">Support</span></h2>
-            <p class="section-sub">Dedicated support through every stage of your MBBS loan journey.</p>
-            <div class="process-steps">
-                <div class="process-step" data-aos="fade-up" data-aos-delay="0">
-                    <div class="step-icon"><i class="fas fa-bullseye"></i></div>
-                    <h3>Profile Assessment</h3>
-                    <p>We understand your medical college, country, course duration, and financial profile to identify the best loan route.</p>
-                </div>
-                <div class="process-step" data-aos="fade-up" data-aos-delay="80">
-                    <div class="step-icon"><i class="fas fa-building-columns"></i></div>
-                    <h3>Lender Matching</h3>
-                    <p>We match your profile with the most suitable banks and NBFCs that finance MBBS programs.</p>
-                </div>
-                <div class="process-step" data-aos="fade-up" data-aos-delay="160">
-                    <div class="step-icon"><i class="fas fa-file-invoice"></i></div>
-                    <h3>Document Guidance</h3>
-                    <p>We help you organize all required documents for the MBBS loan application smoothly.</p>
-                </div>
-                <div class="process-step" data-aos="fade-up" data-aos-delay="240">
-                    <div class="step-icon"><i class="fas fa-check-circle"></i></div>
-                    <h3>Application &amp; Sanction</h3>
-                    <p>We support you through the application process, follow-ups, and sanction coordination.</p>
-                </div>
+    <!-- 10. EMI CALCULATOR (Functional & Compact) -->
+    <section class="mbbs-section" id="emi-calculator">
+        <div class="mbbs-container">
+            <div class="mbbs-section-head">
+                <div class="mbbs-eyebrow">FINANCIAL PLANNING</div>
+                <h2 class="mbbs-h2">MBBS Education Loan EMI Calculator</h2>
+                <p class="mbbs-subhead">Estimate your monthly installments, total interest, and plan your medical education finances clearly.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- EMI CALCULATOR -->
-    <section class="emi-section" id="emi-calculator">
-        <div class="container">
-            <div style="text-align:center;margin-bottom:40px;">
-                <p class="section-label">CALCULATE YOUR REPAYMENTS</p>
-                <h2 class="section-title">Education Loan <span class="green-highlight">EMI Calculator</span></h2>
-                <p class="section-sub">Estimate your monthly installments, total interest, and plan your medical education finances clearly.</p>
-            </div>
-            <div class="emi-box" data-aos="fade-up">
-                <div class="emi-inputs-col">
-                    <h3>Loan Parameters</h3>
-                    <p>Adjust the sliders or click preset amounts to compute your customized EMI schedule.</p>
+            <div class="mbbs-emi-card">
+                <!-- Controls -->
+                <div class="mbbs-emi-controls">
+                    <h3>Adjust Loan Parameters</h3>
                     
-                    <div class="emi-control-group">
-                        <div class="emi-label-row">
+                    <div class="mbbs-emi-group">
+                        <div class="mbbs-emi-label-row">
                             <label for="emiAmountRange">Loan Amount (Principal)</label>
-                            <span class="emi-val-badge">₹ <span id="emiAmountDisplay">25,00,000</span></span>
+                            <span class="mbbs-emi-badge">₹ <span id="emiAmountDisplay">25,00,000</span></span>
                         </div>
-                        <input type="range" id="emiAmountRange" class="emi-slider" min="500000" max="15000000" step="50000" value="2500000" oninput="syncEMI('emiAmountRange', 'emiAmount')">
+                        <input type="range" id="emiAmountRange" class="emi-slider" min="500000" max="15000000" step="50000" value="2500000" oninput="syncEMI('emiAmountRange', 'emiAmount')" aria-label="Loan Amount Principal Slider">
                         <input type="hidden" id="emiAmount" value="2500000">
-                        <div class="emi-presets">
-                            <button type="button" class="emi-preset-btn" onclick="setLoanAmount(1500000)">₹15 Lakhs</button>
-                            <button type="button" class="emi-preset-btn" onclick="setLoanAmount(2500000)">₹25 Lakhs</button>
-                            <button type="button" class="emi-preset-btn" onclick="setLoanAmount(4000000)">₹40 Lakhs</button>
-                            <button type="button" class="emi-preset-btn" onclick="setLoanAmount(7500000)">₹75 Lakhs</button>
-                            <button type="button" class="emi-preset-btn" onclick="setLoanAmount(10000000)">₹1 Crore</button>
+                        <div class="mbbs-emi-presets">
+                            <button type="button" class="mbbs-preset-btn" onclick="setLoanAmount(1500000)">₹15L</button>
+                            <button type="button" class="mbbs-preset-btn" onclick="setLoanAmount(2500000)">₹25L</button>
+                            <button type="button" class="mbbs-preset-btn" onclick="setLoanAmount(4000000)">₹40L</button>
+                            <button type="button" class="mbbs-preset-btn" onclick="setLoanAmount(7500000)">₹75L</button>
+                            <button type="button" class="mbbs-preset-btn" onclick="setLoanAmount(10000000)">₹1 Crore</button>
                         </div>
                     </div>
 
-                    <div class="emi-control-group">
-                        <div class="emi-label-row">
+                    <div class="mbbs-emi-group">
+                        <div class="mbbs-emi-label-row">
                             <label for="emiRateRange">Annual Interest Rate (%)</label>
-                            <span class="emi-val-badge"><span id="emiRateDisplay">9.5%</span></span>
+                            <span class="mbbs-emi-badge"><span id="emiRateDisplay">9.5%</span></span>
                         </div>
-                        <input type="range" id="emiRateRange" class="emi-slider" min="7.5" max="16.0" step="0.1" value="9.5" oninput="syncEMI('emiRateRange', 'emiRate')">
+                        <input type="range" id="emiRateRange" class="emi-slider" min="7.5" max="16.0" step="0.1" value="9.5" oninput="syncEMI('emiRateRange', 'emiRate')" aria-label="Annual Interest Rate Slider">
                         <input type="hidden" id="emiRate" value="9.5">
                     </div>
 
-                    <div class="emi-control-group">
-                        <div class="emi-label-row">
-                            <label for="emiTenureRange">Repayment Tenure (Years)</label>
-                            <span class="emi-val-badge"><span id="emiTenureDisplay">10 Years (120 Months)</span></span>
+                    <div class="mbbs-emi-group">
+                        <div class="mbbs-emi-label-row">
+                            <label for="emiTenureRange">Repayment Tenure</label>
+                            <span class="mbbs-emi-badge"><span id="emiTenureDisplay">10 Years (120 Months)</span></span>
                         </div>
-                        <input type="range" id="emiTenureRange" class="emi-slider" min="1" max="15" step="1" value="10" oninput="syncEMI('emiTenureRange', 'emiTenure')">
+                        <input type="range" id="emiTenureRange" class="emi-slider" min="1" max="15" step="1" value="10" oninput="syncEMI('emiTenureRange', 'emiTenure')" aria-label="Repayment Tenure Slider">
                         <input type="hidden" id="emiTenure" value="10">
                     </div>
                 </div>
 
-                <div class="emi-results-card">
-                    <div class="emi-result-highlight">
-                        <div class="emi-result-label">Estimated Monthly EMI</div>
-                        <div class="emi-result-amount" id="emiResult">₹ 32,323</div>
-                    </div>
-
-                    <div class="emi-breakdown-row">
-                        <span>Principal Amount:</span>
+                <!-- Output Summary -->
+                <div class="mbbs-emi-summary-box">
+                    <div class="mbbs-emi-main-label">Estimated Monthly Installment (EMI)</div>
+                    <div class="mbbs-emi-main-val" id="emiResult">₹ 32,323</div>
+                    
+                    <div class="mbbs-emi-row">
+                        <span>Principal Borrowed</span>
                         <strong id="emiAmountSummary">₹ 25,00,000</strong>
                     </div>
-                    <div class="emi-breakdown-row">
-                        <span>Total Interest Payable:</span>
+                    <div class="mbbs-emi-row">
+                        <span>Total Interest Payable</span>
                         <strong id="totalInterest">₹ 13,78,740</strong>
                     </div>
-                    <div class="emi-breakdown-row" style="border-top:1px dashed #cbd5e1;margin-top:8px;padding-top:12px;">
-                        <span>Total Payment (Principal + Interest):</span>
-                        <strong id="totalPayable" style="color:var(--navy);font-size:16px;">₹ 38,78,740</strong>
+                    <div class="mbbs-emi-row">
+                        <span>Total Repayment</span>
+                        <strong id="totalPayable">₹ 38,78,740</strong>
                     </div>
 
-                    <div class="emi-bar-container">
+                    <!-- Progress bar -->
+                    <div class="emi-bar-container" style="margin: 16px 0 20px 0;">
                         <div class="emi-bar-track">
                             <div class="emi-bar-principal" id="emiPrincipalBar" style="width: 64%;"></div>
                             <div class="emi-bar-interest" id="emiInterestBar" style="width: 36%;"></div>
                         </div>
-                        <div class="emi-bar-legend">
-                            <span><span class="emi-legend-dot" style="background:var(--blue)"></span> Principal</span>
-                            <span><span class="emi-legend-dot" style="background:var(--green)"></span> Interest</span>
-                        </div>
                     </div>
 
-                    <button class="btn btn-primary emi-cta-btn" onclick="openPopup()">Apply With This Estimate <i class="fas fa-arrow-right"></i></button>
+                    <button class="mbbs-btn-primary" style="width:100%; justify-content:center;" onclick="openPopup()">
+                        Check Eligibility With This Estimate <i class="fas fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MBBS FAQs -->
-    <section class="faq-section" id="faqs">
-        <div class="container">
-            <div style="text-align:center;margin-bottom:40px;">
-                <p class="section-label">FREQUENTLY ASKED QUESTIONS</p>
-                <h2 class="section-title">Common Questions About <span class="green-highlight">MBBS Loans</span></h2>
-                <p class="section-sub">Clear answers regarding medical education financing, collateral requirements, and disbursement.</p>
+    <!-- 11. SUCCESS STORIES (Single Elegant Testimonial Area) -->
+    <section class="mbbs-section mbbs-section-alt" id="testimonials">
+        <div class="mbbs-container">
+            <div class="mbbs-section-head">
+                <div class="mbbs-eyebrow">STUDENT SUCCESS</div>
+                <h2 class="mbbs-h2">Trusted by Medical Students Across India</h2>
+                <p class="mbbs-subhead">Hear from students and families who successfully funded their medical aspirations with our guidance.</p>
             </div>
-            <div class="faq-list" data-aos="fade-up">
+
+            <div class="mbbs-testimonial-wrap">
+                <div class="mbbs-quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="mbbs-quote-text">
+                    "Securing an MBBS education loan for a private medical college felt overwhelming until Visionary Path Services evaluated our options. They matched us with a public bank offering a 1-year post-internship moratorium and guided our property collateral documentation smoothly. Zero fees charged."
+                </p>
+                <div class="mbbs-student-meta">
+                    <div class="mbbs-student-avatar">PS</div>
+                    <div>
+                        <div class="mbbs-student-name">Dr. Priya Sharma</div>
+                        <div class="mbbs-student-college">MBBS Graduate • KMC Manipal</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FAQ (Single Clean Accordion) -->
+    <section class="mbbs-section" id="faqs">
+        <div class="mbbs-container">
+            <div class="mbbs-section-head">
+                <div class="mbbs-eyebrow">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="mbbs-h2">Common Questions About MBBS Loans</h2>
+                <p class="mbbs-subhead">Clear answers regarding medical education financing, collateral requirements, and disbursement.</p>
+            </div>
+
+            <div class="faq-list mbbs-faq-list">
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         <span>Can I get an education loan for MBBS in private medical colleges in India?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        Yes, leading public sector banks, private banks, and NBFCs provide education loans for recognized private medical colleges in India. Depending on fee brackets (which often exceed ₹40 Lakhs), loans may be secured with tangible collateral or provided under special doctor loan schemes.
+                        Yes, leading public sector banks, private banks, and NBFCs provide education loans for recognized private medical colleges in India. Depending on fee brackets (which often exceed ₹40 Lakhs), loans may be secured with tangible collateral or provided under specialized medical student lending schemes.
                     </div>
                 </div>
+
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         <span>Is collateral mandatory for MBBS loans abroad?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        For MBBS programs abroad exceeding ₹7.5 Lakhs in public banks, tangible collateral (residential/commercial property, fixed deposits) is generally required. However, select NBFCs and private partners offer partially collateralized or non-collateral options up to ₹40–₹50 Lakhs depending on the financial co-applicant's income and credit score.
+                        For MBBS programs abroad exceeding ₹7.5 Lakhs in public banks, tangible collateral (residential/commercial property, fixed deposits) is generally required. However, select NBFCs and private banking partners offer partially collateralized or non-collateral options up to ₹40–₹50 Lakhs depending on the financial co-applicant's income and credit score.
                     </div>
                 </div>
+
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>Does the loan cover living expenses, hostel fees, and equipment?</span>
+                        <span>What expenses are covered under an MBBS education loan?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        Yes, comprehensive education loans cover tuition fees, examination fees, library/laboratory charges, hostel &amp; mess accommodation, books, medical equipment/instruments, and health insurance for the entire 5 to 6 year course duration.
+                        Comprehensive education loans cover 100% tuition fees, examination and laboratory charges, hostel and living accommodation, medical books, diagnostic equipment, health insurance, and mandatory travel expenses for the entire 5 to 6 year course duration.
                     </div>
                 </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do I need a co-applicant for an MBBS loan?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, a financial co-applicant (typically a parent, spouse, sibling, or legal guardian) is mandatory for education loans in India. The co-applicant's verifiable income, banking history, and credit score (CIBIL) determine loan eligibility and sanction limits.
+                    </div>
+                </div>
+
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         <span>When does repayment start for an MBBS education loan?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        Repayment comes with a moratorium period (course duration + 6 months to 1 year internship). During the moratorium, simple interest or partial simple interest is typically serviced, and principal EMI repayments begin after the moratorium ends.
+                        Repayment begins with a generous moratorium period that covers the entire 5 to 6 years of academic study plus 6 months to 1 year of compulsory rotating internship. During the moratorium, simple interest or partial interest is serviced, and full principal EMI installments begin after course completion.
                     </div>
                 </div>
+
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>What is Visionary Path Services' service fee for loan processing?</span>
+                        <span>What is Visionary Path Services' fee for loan processing?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        Visionary Path Services provides 100% free guidance and processing assistance to students and parents. We do not charge any service fees or consultation charges from students.
+                        Visionary Path Services provides 100% free guidance and processing assistance to medical students and parents. We do not charge any consultation charges, advisory fees, or processing cuts from students.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <h2 data-aos="fade-up">Ready to Fund Your Medical Dream?</h2>
-            <p data-aos="fade-up" data-aos-delay="80">Let our experts find the right MBBS loan solution for you — in India or abroad.</p>
-            <div class="cta-btns" data-aos="fade-up" data-aos-delay="160">
-                <button class="btn btn-primary btn-lg" onclick="openPopup()">Check Eligibility Free <i class="fas fa-arrow-right"></i></button>
-                <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Chat with Expert</a>
+    <!-- 13. FINAL CTA (Deep Navy & High-Conversion) -->
+    <section class="mbbs-final-cta-section" id="cta">
+        <div class="mbbs-container">
+            <div class="mbbs-final-cta-box">
+                <div class="mbbs-eyebrow" style="color:#FF8A00;">START YOUR APPLICATION</div>
+                <h2 class="mbbs-final-h2">Your MBBS Dream Is Closer Than You Think.</h2>
+                <p class="mbbs-final-sub">Let our experts help you understand the right education-loan options with zero consultation charges.</p>
+                <div class="mbbs-final-btns">
+                    <button class="mbbs-btn-primary" onclick="openPopup()">
+                        Check Your Eligibility <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="mbbs-btn-secondary">
+                        <i class="fab fa-whatsapp"></i> WhatsApp an Expert
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -690,8 +1145,32 @@
     <div class="container footer-inner">
         <div class="footer-col brand-col">
             <div class="footer-logo">
-                <span class="logo-name">VISIONARY PATH SERVICES</span>
-                <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                <a href="../index.html" class="logo logo-dark" aria-label="Visionary Path Services Home">
+                    <span class="vps-brand-mark">
+                        <svg class="vps-flash-svg" viewBox="0 0 100 120" width="34" height="41" fill="none" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="footerFlashGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+                                    <stop offset="0%" stop-color="#FF8A00" />
+                                    <stop offset="55%" stop-color="#FF5A00" />
+                                    <stop offset="100%" stop-color="#FF3800" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+                                  stroke="url(#footerFlashGrad)" 
+                                  stroke-width="14.5" 
+                                  stroke-linejoin="round" 
+                                  stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <div class="logo-text">
+                        <span class="logo-name">VISIONARY</span>
+                        <span class="logo-sub">
+                            <span class="logo-sub-line"></span>
+                            <span class="logo-sub-text">PATH SERVICES</span>
+                            <span class="logo-sub-line"></span>
+                        </span>
+                    </div>
+                </a>
             </div>
             <p class="footer-desc">
                 Pan-India premier education loan advisory service. We empower students to secure domestic and international academic financing from top banks and NBFCs with zero service charges.
@@ -767,7 +1246,7 @@
 </footer>
 <!-- VPS_FOOTER_END -->
 
-    <!-- POPUP INQUIRY FORM (Industry-Grade Edition) -->
+    <!-- POPUP INQUIRY FORM (Standard VPS Form) -->
     <div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle" onclick="closePopupOutside(event)">
         <div class="popup-modal">
             <button class="popup-close" onclick="closePopup()" aria-label="Close Popup">✕</button>
@@ -815,7 +1294,7 @@
                     <h4>Get Free Loan Assessment</h4>
                     <p>Share your details to connect with a senior education loan advisor</p>
                 </div>
-                                <form class="popup-form" onsubmit="submitForm(event)">
+                <form class="popup-form" onsubmit="submitForm(event)">
                     <div class="form-row name-row">
                         <div class="form-group">
                             <label for="popupFirstName">First Name <span class="req">*</span></label>
@@ -853,7 +1332,7 @@
                         <span class="form-label-regular" id="popupInterestLabel">I'm interested in</span>
                         <div class="interest-options" role="radiogroup" aria-labelledby="popupInterestLabel">
                             <label class="interest-opt" for="popupInterestAbroad">
-                                <input type="radio" id="popupInterestAbroad" name="interest" value="abroad" aria-label="Abroad Education Loan" checked>
+                                <input type="radio" id="popupInterestAbroad" name="interest" value="abroad" aria-label="Abroad Education Loan">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-globe-americas"></i> Abroad Education Loan</span>
                             </label>
@@ -863,7 +1342,7 @@
                                 <span class="opt-label"><i class="fas fa-graduation-cap"></i> Domestic Education Loan</span>
                             </label>
                             <label class="interest-opt" for="popupInterestMbbs">
-                                <input type="radio" id="popupInterestMbbs" name="interest" value="mbbs" aria-label="MBBS Education Loan">
+                                <input type="radio" id="popupInterestMbbs" name="interest" value="mbbs" aria-label="MBBS Education Loan" checked>
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-user-md"></i> MBBS Education Loan</span>
                             </label>
@@ -876,7 +1355,7 @@
                     </div>
                     <div class="form-group mb-tight">
                         <label for="popupMessage" class="form-label-regular">Additional Information (Optional)</label>
-                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea id="popupMessage" name="message" placeholder="Target country, university, loan amount needed..." aria-label="Additional Information" rows="2"></textarea></div>
+                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea id="popupMessage" name="message" placeholder="Target country, medical university, loan amount needed..." aria-label="Additional Information" rows="2"></textarea></div>
                     </div>
                     <button type="submit" class="btn btn-submit-enquiry">
                         <span>Submit Enquiry</span>
@@ -891,20 +1370,39 @@
         </div>
     </div>
 
-    <!-- FLOATING ELIGIBILITY QUICK CTA (Marketing CRO) -->
+    <!-- FLOATING QUICK CTA BUTTON -->
     <button id="floatingEligibilityBtn" class="floating-eligibility-btn" onclick="openPopup()" aria-label="Check Loan Eligibility Free">
         <span class="floating-btn-pulse"></span>
         <i class="fas fa-bolt"></i>
         <span>Check Eligibility <strong class="badge-free">FREE</strong></span>
     </button>
 
-    <a href="https://wa.me/918150949070" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init({ duration: 700, once: false });</script>
-    <!-- Framer Motion & UI/UX Animation Engine -->
     <script src="../js/vendor/motion.js"></script>
     <script src="../js/motion-ux.js"></script>
-    
     <script src="../js/main.js"></script>
+
+    <!-- Destination Selector Switcher Script -->
+    <script>
+    function switchMbbsDest(destId, btn) {
+        document.querySelectorAll('.mbbs-dest-tab-btn').forEach(function(b) {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+        });
+        document.querySelectorAll('.mbbs-dest-panel').forEach(function(p) {
+            p.classList.remove('active');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        var target = document.getElementById('dest-' + destId);
+        if (target) {
+            target.classList.add('active');
+        }
+    }
+    </script>
 </body>
 </html>

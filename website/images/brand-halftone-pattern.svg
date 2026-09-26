@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300" fill="none">
+  <defs>
+    <radialGradient id="htGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF5A00" stop-opacity="0.15"/>
+      <stop offset="70%" stop-color="#FF5A00" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#FF5A00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Halftone Dot Grid with Graduated Radii -->
+  <g fill="#FF5A00">
+    <!-- Row 1 -->
+    <circle cx="30" cy="30" r="1" opacity="0.08"/>
+    <circle cx="60" cy="30" r="1.2" opacity="0.1"/>
+    <circle cx="90" cy="30" r="1.5" opacity="0.12"/>
+    <circle cx="120" cy="30" r="1.8" opacity="0.15"/>
+    <circle cx="150" cy="30" r="2" opacity="0.18"/>
+    <circle cx="180" cy="30" r="1.8" opacity="0.15"/>
+    <circle cx="210" cy="30" r="1.5" opacity="0.12"/>
+    <circle cx="240" cy="30" r="1.2" opacity="0.1"/>
+    <circle cx="270" cy="30" r="1" opacity="0.08"/>
+    <!-- Row 2 -->
+    <circle cx="30" cy="60" r="1.2" opacity="0.1"/>
+    <circle cx="60" cy="60" r="1.6" opacity="0.14"/>
+    <circle cx="90" cy="60" r="2.2" opacity="0.18"/>
+    <circle cx="120" cy="60" r="2.8" opacity="0.24"/>
+    <circle cx="150" cy="60" r="3.2" opacity="0.28"/>
+    <circle cx="180" cy="60" r="2.8" opacity="0.24"/>
+    <circle cx="210" cy="60" r="2.2" opacity="0.18"/>
+    <circle cx="240" cy="60" r="1.6" opacity="0.14"/>
+    <circle cx="270" cy="60" r="1.2" opacity="0.1"/>
+    <!-- Row 3 -->
+    <circle cx="30" cy="90" r="1.5" opacity="0.12"/>
+    <circle cx="60" cy="90" r="2.2" opacity="0.18"/>
+    <circle cx="90" cy="90" r="3" opacity="0.25"/>
+    <circle cx="120" cy="90" r="3.8" opacity="0.32"/>
+    <circle cx="150" cy="90" r="4.5" opacity="0.4"/>
+    <circle cx="180" cy="90" r="3.8" opacity="0.32"/>
+    <circle cx="210" cy="90" r="3" opacity="0.25"/>
+    <circle cx="240" cy="90" r="2.2" opacity="0.18"/>
+    <circle cx="270" cy="90" r="1.5" opacity="0.12"/>
+    <!-- Row 4 -->
+    <circle cx="30" cy="120" r="1.8" opacity="0.15"/>
+    <circle cx="60" cy="120" r="2.8" opacity="0.24"/>
+    <circle cx="90" cy="120" r="3.8" opacity="0.32"/>
+    <circle cx="120" cy="120" r="4.8" opacity="0.42"/>
+    <circle cx="150" cy="120" r="5.5" opacity="0.5"/>
+    <circle cx="180" cy="120" r="4.8" opacity="0.42"/>
+    <circle cx="210" cy="120" r="3.8" opacity="0.32"/>
+    <circle cx="240" cy="120" r="2.8" opacity="0.24"/>
+    <circle cx="270" cy="120" r="1.8" opacity="0.15"/>
+    <!-- Row 5 (Center Peak) -->
+    <circle cx="30" cy="150" r="2" opacity="0.18"/>
+    <circle cx="60" cy="150" r="3.2" opacity="0.28"/>
+    <circle cx="90" cy="150" r="4.5" opacity="0.4"/>
+    <circle cx="120" cy="150" r="5.5" opacity="0.5"/>
+    <circle cx="150" cy="150" r="6.5" opacity="0.6"/>
+    <circle cx="180" cy="150" r="5.5" opacity="0.5"/>
+    <circle cx="210" cy="150" r="4.5" opacity="0.4"/>
+    <circle cx="240" cy="150" r="3.2" opacity="0.28"/>
+    <circle cx="270" cy="150" r="2" opacity="0.18"/>
+  </g>
+</svg>

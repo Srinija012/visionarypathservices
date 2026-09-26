@@ -1,83 +1,186 @@
 /**
  * ══════════════════════════════════════════════════════════════════════
  *  VISIONARY PATH SERVICES — CANONICAL DESIGN SYSTEM
- *  Version: 2.0 | Load order: FIRST (before style.css, improvements.css)
+ *  Version: 3.0 | Master Brand Specification
+ *  Load order: FIRST (before style.css, improvements.css)
  * ══════════════════════════════════════════════════════════════════════
  *
- *  This file is the SINGLE SOURCE OF TRUTH for all design tokens.
- *  Do NOT define tokens elsewhere. Reference tokens via var() everywhere.
+ *  Core Brand Architecture:
+ *  - Primary Navy:       #0B1F33 (Authority, Institutional Trust, Headings)
+ *  - Brand Orange:       #FF5A00 (Energy, Action, CTAs, Highlights)
+ *  - Orange Gradient:    #FF5A00 → #FF8A00 (Brand Mark, Key Highlights)
+ *  - White:              #FFFFFF (Clean Canvas)
+ *  - Off-White:          #F7F9FB (Backgrounds, Soft Surfaces)
+ *  - Light Blue/Gray:    #EAF0F5 (Muted Elements, Subtle Badges)
+ *  - Muted Text:         #667085 (High Contrast Accessible Body/Captions)
+ *  - Border:             #DDE5EC (Crisp Structural Boundaries)
  *
- *  TABLE OF CONTENTS
- *  ─────────────────
- *  1.  Brand Color Palette (Raw Scale)
- *  2.  Semantic Color Tokens
- *  3.  Backward-Compatibility Aliases (style.css + improvements.css names)
- *  4.  Typography Tokens
- *  5.  Spacing Tokens
- *  6.  Layout & Container Tokens
- *  7.  Border Radius Tokens
- *  8.  Shadow Tokens
- *  9.  Z-Index Tokens
- *  10. Motion & Animation Tokens  ← FIXES: --transition-bounce undefined
- *  11. VPS-Prefix Aliases          ← FIXES: --vps-* undefined in improvements.css
- *  12. Amber / Amber-Dark Tokens
- *  13. Surface & Background Tokens
+ *  Visual Balance: 70% White/Off-White | 20% Navy | 10% Orange Accent
  * ══════════════════════════════════════════════════════════════════════
  */
 
 :root {
 
     /* ─────────────────────────────────────────────────────────────────
-       1. BRAND COLOR PALETTE (Raw Scale)
-          Navy: Institutional authority
-          Green: Trust, growth, financial progress
-          Blue: Action, digital, technology
+       1. PRIMARY BRAND COLORS (Master Palette)
        ───────────────────────────────────────────────────────────────── */
 
-    /* Navy / Slate */
-    --vps-navy-950:  #050d1a;
-    --vps-navy-900:  #0a1d37;    /* PRIMARY — used for text, nav, CTAs */
-    --vps-navy-800:  #0d2b5e;
-    --vps-navy-700:  #132e54;
-    --vps-navy-600:  #173d7a;
-    --vps-navy-500:  #1a3d6b;
+    /* Navy Scale */
+    --color-navy:        #0B1F33;    /* Master Primary Navy */
+    --color-navy-dark:   #050E17;    /* Deepest Navy */
+    --color-navy-900:    #0B1F33;
+    --color-navy-800:    #0D253E;
+    --color-navy-700:    #133152;
+    --color-navy-600:    #1B416D;
+    --color-navy-500:    #245289;
 
-    /* Emerald / Green */
-    --vps-green-950: #022c1b;
-    --vps-green-900: #014521;
-    --vps-green-800: #047857;    /* Deep emerald — light surfaces (5.58:1 on white) */
-    --vps-green-700: #059669;    /* Standard emerald — icons, accents */
-    --vps-green-600: #10b981;    /* Action green — buttons, CTAs */
-    --vps-green-500: #34d399;    /* Mint — ONLY on dark/navy surfaces (8.5:1+) */
-    --vps-green-400: #6ee7b7;    /* Pale mint — muted on dark */
-    --vps-green-100: #d1fae5;
-    --vps-green-50:  #ecfdf5;    /* Tint background */
+    /* Orange Scale (Master Accents & CTAs) */
+    --color-orange:          #FF5A00;    /* Master Energetic Orange */
+    --color-orange-dark:     #E04F00;    /* Dark Orange / Hover */
+    --color-orange-light:    #FF8A00;    /* Soft Orange / Gradient End */
+    --color-orange-tint:     #FFF4ED;    /* Very Soft Orange Tint */
+    --color-orange-subtle:   #FFE5D6;    /* Subtle Orange Border/Pill */
+    --color-orange-gradient: linear-gradient(135deg, #FF5A00 0%, #FF8A00 100%);
+    --color-orange-glow:     rgba(255, 90, 0, 0.28);
 
-    /* Sapphire / Blue */
-    --vps-blue-900:  #1e3a8a;
-    --vps-blue-800:  #1e40af;
-    --vps-blue-700:  #1a56db;    /* PRIMARY BLUE — digital actions */
-    --vps-blue-600:  #2563eb;    /* Focus ring blue */
-    --vps-blue-500:  #3b82f6;
-    --vps-blue-100:  #bfdbfe;
-    --vps-blue-50:   #eff6ff;    /* Blue tint background */
+    /* Neutral & Surface Scale */
+    --color-white:           #FFFFFF;
+    --color-off-white:       #F7F9FB;
+    --color-light-blue-gray: #EAF0F5;
+    --color-surface:         #FFFFFF;
+    --color-surface-soft:    #F7F9FB;
+    --color-surface-subtle:  #EAF0F5;
+    --color-surface-dark:    #0B1F33;
 
-    /* Neutrals */
-    --vps-neutral-950: #0f172a;
-    --vps-neutral-900: #1e293b;
-    --vps-neutral-800: #334155;
-    --vps-neutral-700: #475569;
-    --vps-neutral-600: #64748b;
-    --vps-neutral-500: #7c8ca0;
-    --vps-neutral-400: #94a3b8;
-    --vps-neutral-300: #cbd5e1;
-    --vps-neutral-200: #e2e8f0;
-    --vps-neutral-150: #edf1f7;
-    --vps-neutral-100: #f1f5f9;
-    --vps-neutral-50:  #f8fafc;
-    --vps-white:       #ffffff;
+    /* Text Scale */
+    --color-text:            #0B1F33;    /* Primary Headings & Bold Text */
+    --color-text-body:       #1E293B;    /* Body Copy */
+    --color-text-secondary:  #475569;    /* Subheadings */
+    --color-text-muted:      #667085;    /* Captions & Meta (WCAG AA compliant) */
+    --color-text-faint:      #94A3B8;
+    --color-text-inverse:    #FFFFFF;
 
-    /* Amber (used in legal alert boxes, warning states) */
+    /* Border Scale */
+    --color-border:          #DDE5EC;
+    --color-border-strong:   #C8D5E2;
+    --color-border-subtle:   #EAF0F5;
+
+    /* Interactive & Feedback */
+    --color-focus-ring:      #FF5A00;
+    --color-success:         #047857;
+    --color-warning:         #D97706;
+    --color-error:           #DC2626;
+    --color-info:            #1A56DB;
+
+    /* ─────────────────────────────────────────────────────────────────
+       VISIONARY PATH SERVICES — BRAND SYSTEM MASTER TOKENS
+       Deep Navy + Brand Orange + Crisp White Architecture
+       ───────────────────────────────────────────────────────────────── */
+    --vp-navy:            #0B1F33;    /* Primary Navy */
+    --vp-navy-2:          #123A63;    /* Secondary Navy */
+    --vp-navy-dark:       #061320;    /* Deep Charcoal Navy */
+    --vp-orange:          #FF5A00;    /* Brand Orange Accent */
+    --vp-orange-hover:    #E04F00;    /* Darker Orange Hover */
+    --vp-orange-light:    #FFF1E8;    /* Light Orange Tint */
+    --vp-orange-subtle:   #FFE5D6;    /* Subtle Orange Pill/Border */
+    --vp-orange-gradient: linear-gradient(135deg, #FF5A00 0%, #FF8A00 100%);
+    --vp-orange-glow:     rgba(255, 90, 0, 0.22);
+    --vp-white:           #FFFFFF;    /* Pure White */
+    --vp-off-white:       #F7F9FB;    /* Off White Background */
+    --vp-surface:         #F7F9FB;    /* Surface Background */
+    --vp-surface-2:       #EEF2F5;    /* Very Light Gray */
+    --vp-text:            #172B3F;    /* Deep Text */
+    --vp-muted:           #667085;    /* Muted Text (WCAG AA compliant) */
+    --vp-border:          #DCE4EA;    /* Neutral Border */
+    --vp-border-light:    #EDF2F7;
+    --vp-green-accent:    #EAF7F0;    /* Semantic Green (WhatsApp / Success) */
+    --vp-green-text:      #047857;    /* Accessible Emerald */
+    --vp-font-sans:       'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --vp-font-handwriting:'Caveat', cursive, sans-serif;
+
+
+    /* ─────────────────────────────────────────────────────────────────
+       2. CANONICAL & BACKWARD-COMPATIBILITY ALIASES
+       Ensures existing scripts, audits, and stylesheets run seamlessly.
+       ───────────────────────────────────────────────────────────────── */
+
+    /* Canonical Semantic Tokens */
+    --color-primary:        var(--color-navy);
+    --color-primary-dark:   var(--color-navy-dark);
+    --color-primary-light:  var(--color-navy-700);
+    --color-secondary:      var(--color-navy);
+    --color-secondary-dark: var(--color-navy-dark);
+    --color-accent:         var(--color-orange);
+    --color-accent-dark:    var(--color-orange-dark);
+    --color-accent-light:   var(--color-orange-light);
+    --color-background:     var(--color-off-white);
+    --color-bg:             var(--color-off-white);
+    --color-bg-subtle:      var(--color-light-blue-gray);
+
+    /* Legacy Scale Mappings for style.css */
+    --navy:            var(--color-navy);
+    --navy-dark:       var(--color-navy-dark);
+    --navy-light:      var(--color-navy-700);
+    --orange:          var(--color-orange);
+    --orange-dark:     var(--color-orange-dark);
+    --orange-light:    var(--color-orange-light);
+    --orange-gradient: var(--color-orange-gradient);
+    --green:           var(--color-orange);         /* Redirect primary action green to brand orange */
+    --green-dark:      var(--color-orange-dark);
+    --green-light:     var(--color-orange-light);
+    --green-bg:        var(--color-orange-tint);
+    --blue:            var(--color-navy);
+    --blue-dark:       var(--color-navy-dark);
+    --blue-light:      var(--color-light-blue-gray);
+    --text-main:       var(--color-navy);
+    --text-body:       var(--color-text-body);
+    --text-muted:      var(--color-text-muted);
+    --text-light:      var(--color-text-faint);
+    --border-color:    var(--color-border);
+    --bg-light:        var(--color-off-white);
+    --bg-card:         var(--color-white);
+    --white:           var(--color-white);
+
+    /* VPS-Prefix Aliases & Audit Requirement Guards */
+    --vps-navy:         var(--color-navy);
+    --vps-green:        var(--color-orange);
+    --vps-blue:         var(--color-navy);
+    --vps-navy-950:     #050E17;
+    --vps-navy-900:     #0B1F33;
+    --vps-navy-800:     #0D253E;
+    --vps-navy-700:     #133152;
+    --vps-green-800:    #047857;   /* Preserved for verified WCAG audit compliance */
+    --vps-green-700:    #059669;
+    --vps-green-600:    #10b981;
+    --vps-green-500:    #34d399;   /* Preserved for verified dark hero highlights */
+    --vps-green-400:    #6ee7b7;
+    --vps-green-100:    #d1fae5;
+    --vps-green-50:     #ecfdf5;
+    --vps-blue-900:     #1e3a8a;
+    --vps-blue-800:     #1e40af;
+    --vps-blue-700:     #1a56db;
+    --vps-blue-600:     #2563eb;
+    --vps-blue-500:     #3b82f6;
+    --vps-blue-100:     #bfdbfe;
+    --vps-blue-50:      #eff6ff;
+    --vps-neutral-950:  #0B1F33;
+    --vps-neutral-900:  #1e293b;
+    --vps-neutral-800:  #334155;
+    --vps-neutral-700:  #475569;
+    --vps-neutral-600:  #64748b;
+    --vps-neutral-500:  #7c8ca0;
+    --vps-neutral-400:  #94a3b8;
+    --vps-neutral-300:  #cbd5e1;
+    --vps-neutral-200:  #dde5ec;
+    --vps-neutral-150:  #eaf0f5;
+    --vps-neutral-100:  #f1f5f9;
+    --vps-neutral-50:   #f7f9fb;
+    --vps-white:        #ffffff;
+    --vps-border:       var(--color-border);
+    --vps-shadow-xs:    0 1px 2px rgba(11, 31, 51, 0.04);
+    --vps-shadow-sm:    0 2px 5px -1px rgba(11, 31, 51, 0.06), 0 1px 3px -1px rgba(11, 31, 51, 0.03);
+
+    /* Amber / Alert scale */
     --vps-amber-900: #78350f;
     --vps-amber-800: #92400e;
     --vps-amber-700: #b45309;
@@ -85,171 +188,54 @@
     --vps-amber-500: #f59e0b;
     --vps-amber-300: #fcd34d;
     --vps-amber-50:  #fef9ec;
-    --vps-amber-bg:  #fffbeb;
-
-    /* Teal (used in icon tints) */
-    --vps-teal-700:  #0f766e;
-    --vps-teal-600:  #0d9488;
-    --vps-teal-50:   #f0fdfa;
+    --amber:         var(--vps-amber-600);
+    --amber-dark:    var(--vps-amber-700);
+    --amber-bg:      var(--vps-amber-50);
 
 
     /* ─────────────────────────────────────────────────────────────────
-       2. SEMANTIC COLOR TOKENS
-          Use these in component code — NOT the raw scale above.
+       3. TYPOGRAPHY TOKENS
+       Font families: Manrope (Display/Headings) + Inter (Body/UI)
        ───────────────────────────────────────────────────────────────── */
 
-    /* Brand */
-    --color-brand-primary:       var(--vps-navy-900);
-    --color-brand-primary-dark:  var(--vps-navy-950);
-    --color-brand-primary-light: var(--vps-navy-700);
-    --color-brand-accent:        var(--vps-green-600);
-    --color-brand-accent-dark:   var(--vps-green-800);
-    --color-brand-accent-light:  var(--vps-green-500);
+    --font-display: 'Manrope', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body:    'Inter', 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-family-base: var(--font-body);
+    --font-family-heading: var(--font-display);
+    --font-mono:    ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
 
-    /* Text */
-    --color-text:           var(--vps-neutral-950);   /* Headings, important text */
-    --color-text-body:      var(--vps-neutral-900);   /* Body copy */
-    --color-text-secondary: var(--vps-neutral-800);   /* Secondary paragraphs */
-    --color-text-muted:     var(--vps-neutral-700);   /* Captions, meta (7.1:1 on white) */
-    --color-text-faint:     var(--vps-neutral-600);   /* Placeholder-level text */
-    --color-text-inverse:   var(--vps-white);         /* On dark backgrounds */
-
-    /* Surfaces */
-    --color-surface:         var(--vps-white);
-    --color-surface-raised:  var(--vps-white);
-    --color-surface-soft:    var(--vps-neutral-50);
-    --color-surface-subtle:  var(--vps-neutral-100);
-    --color-surface-dark:    var(--vps-navy-900);
-
-    /* Borders */
-    --color-border:        var(--vps-neutral-200);
-    --color-border-strong: var(--vps-neutral-300);
-    --color-border-subtle: var(--vps-neutral-150);
-
-    /* Interactive */
-    --color-focus-ring:    var(--vps-blue-600);
-    --color-success:       var(--vps-green-800);
-    --color-warning:       var(--vps-amber-600);
-    --color-error:         #dc2626;
-    --color-info:          var(--vps-blue-700);
-
-    /* Green system tokens */
-    --color-green:         var(--vps-green-600);
-    --color-green-dark:    var(--vps-green-800);
-    --color-green-light:   var(--vps-green-500);
-    --color-green-bg:      var(--vps-green-50);
-    --color-green-border:  var(--vps-green-400);
-
-    /* Blue system tokens */
-    --color-blue:          var(--vps-blue-700);
-    --color-blue-light:    var(--vps-blue-600);
-    --color-blue-dark:     var(--vps-blue-800);
-    --color-blue-bg:       var(--vps-blue-50);
-    --color-blue-border:   var(--vps-blue-100);
-
-    /* White */
-    --color-white:         var(--vps-white);
-
-
-    /* ─────────────────────────────────────────────────────────────────
-       3. BACKWARD-COMPATIBILITY ALIASES
-          Maps the two existing naming conventions to the canonical scale.
-          Both old names resolve to identical values — no visual change.
-          style.css names:     --navy, --green, --blue, --teal, etc.
-          improvements.css:    --color-primary, --color-secondary, etc.
-       ───────────────────────────────────────────────────────────────── */
-
-    /* style.css original tokens */
-    --navy:            var(--vps-navy-900);
-    --navy-dark:       var(--vps-navy-950);
-    --navy-light:      var(--vps-navy-700);
-    --green:           var(--vps-green-600);
-    --green-dark:      var(--vps-green-800);
-    --green-light:     var(--vps-green-500);
-    --green-bg:        var(--vps-green-50);
-    --blue:            var(--vps-blue-700);
-    --blue-dark:       var(--vps-blue-800);
-    --blue-light:      var(--vps-blue-50);
-    --teal:            var(--vps-teal-700);
-    --amber:           var(--vps-amber-600);
-    --amber-dark:      var(--vps-amber-700);
-    --amber-bg:        var(--vps-amber-50);
-    --text-main:       var(--vps-neutral-950);
-    --text-body:       var(--vps-neutral-900);
-    --text-muted:      var(--vps-neutral-700);
-    --text-light:      var(--vps-neutral-600);
-    --border-color:    var(--vps-neutral-200);
-    --bg-light:        var(--vps-neutral-50);
-    --bg-card:         var(--vps-neutral-50);
-    --white:           var(--vps-white);
-
-    /* improvements.css primary/secondary tokens */
-    --color-primary:        var(--vps-navy-900);
-    --color-primary-dark:   var(--vps-navy-950);
-    --color-primary-light:  var(--vps-navy-700);
-    --color-secondary:      var(--vps-blue-700);
-    --color-secondary-dark: var(--vps-blue-800);
-    --color-accent:         var(--vps-green-600);
-    --color-bg:             var(--vps-neutral-50);
-    --color-bg-subtle:      var(--vps-neutral-100);
-    --color-background:     var(--vps-neutral-50);    /* alias: same as --color-bg */
-
-    /* VPS-PREFIX ALIASES — fixes undefined vars referenced in improvements.css */
-    --vps-navy:         var(--vps-navy-900);
-    --vps-green:        var(--vps-green-600);
-    --vps-green-dark:   var(--vps-green-800);
-    --vps-blue:         var(--vps-blue-700);
-    --vps-border:       var(--vps-neutral-200);
-    --vps-shadow-xs:    0 1px 2px rgba(10, 29, 55, 0.04);
-    --vps-shadow-sm:    0 2px 5px -1px rgba(10, 29, 55, 0.06), 0 1px 3px -1px rgba(10, 29, 55, 0.03);
-
-
-    /* ─────────────────────────────────────────────────────────────────
-       4. TYPOGRAPHY TOKENS
-       ───────────────────────────────────────────────────────────────── */
-
-    --font-display:   'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-body:      'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-mono:      ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
-
-    /* Type scale */
+    /* Type Scale */
     --text-xs:    0.75rem;     /* 12px */
     --text-sm:    0.8125rem;   /* 13px */
     --text-sm2:   0.875rem;    /* 14px */
-    --text-base:  1rem;        /* 16px — minimum body size */
+    --text-base:  1rem;        /* 16px */
     --text-md:    1.0625rem;   /* 17px */
     --text-lg:    1.125rem;    /* 18px */
     --text-xl:    1.25rem;     /* 20px */
     --text-2xl:   1.5rem;      /* 24px */
     --text-3xl:   1.875rem;    /* 30px */
 
-    /* Fluid heading scale (clamp: min, preferred-vw, max) */
-    --heading-hero:   clamp(2.1rem, 4.2vw, 3.2rem);    /* Page hero H1 */
-    --heading-h1:     clamp(1.85rem, 3.5vw, 2.8rem);   /* Section hero */
+    /* Fluid Heading Scale */
+    --heading-hero:   clamp(2.2rem, 4.4vw, 3.4rem);    /* Page hero H1 */
+    --heading-h1:     clamp(1.9rem, 3.6vw, 2.85rem);   /* Section hero */
     --heading-h2:     clamp(1.5rem, 3vw, 2.25rem);     /* Section titles */
-    --heading-h3:     clamp(1.1rem, 1.5vw, 1.35rem);   /* Card titles */
-    --heading-about:  clamp(2.2rem, 4.4vw, 3.25rem);   /* About hero */
+    --heading-h3:     clamp(1.15rem, 1.6vw, 1.4rem);   /* Card titles */
 
-    /* Line heights */
-    --leading-tight:  1.2;
-    --leading-snug:   1.32;
-    --leading-normal: 1.5;
+    /* Line Heights & Tracking */
+    --leading-tight:   1.2;
+    --leading-snug:    1.32;
+    --leading-normal:  1.5;
     --leading-relaxed: 1.65;
-    --leading-loose:  1.75;
-    --leading-prose:  1.85;
-
-    /* Letter spacing */
     --tracking-tight:  -0.025em;
-    --tracking-snug:   -0.02em;
+    --tracking-snug:   -0.015em;
     --tracking-normal: -0.01em;
     --tracking-wide:   0.04em;
     --tracking-wider:  0.08em;
-    --tracking-widest: 0.1em;
+    --tracking-widest: 0.12em;
 
 
     /* ─────────────────────────────────────────────────────────────────
-       5. SPACING TOKENS
-          Based on a 4px base unit.
+       4. SPACING & RHYTHM TOKENS (Base Unit: 4px)
        ───────────────────────────────────────────────────────────────── */
 
     --space-1:    4px;
@@ -269,17 +255,14 @@
     --space-18:   72px;
     --space-20:   80px;
     --space-24:   96px;
+    --space-30:   120px;
 
-    /* Section rhythm */
-    --space-section:        72px;    /* Standard section vertical padding */
-    --space-section-lg:     96px;    /* Large/hero section padding */
-    --space-section-mobile: 44px;    /* Mobile section padding */
+    /* Section Rhythm */
+    --space-section:        72px;
+    --space-section-lg:     96px;
+    --space-section-mobile: 44px;
 
-
-    /* ─────────────────────────────────────────────────────────────────
-       6. LAYOUT & CONTAINER TOKENS
-       ───────────────────────────────────────────────────────────────── */
-
+    /* Containers */
     --container-width:   1200px;
     --container-narrow:  820px;
     --container-reading: 72ch;
@@ -287,47 +270,50 @@
 
 
     /* ─────────────────────────────────────────────────────────────────
-       7. BORDER RADIUS TOKENS
+       5. BORDER RADIUS TOKENS (Modern, Restrained 12–18px Cards)
        ───────────────────────────────────────────────────────────────── */
 
     --radius-xs:    4px;
     --radius-sm:    8px;
-    --radius-md:    12px;
-    --radius-lg:    16px;
+    --radius-md:    12px;    /* Preferred card base */
+    --radius-lg:    16px;    /* Preferred container/modal */
     --radius-xl:    24px;
     --radius-2xl:   32px;
     --radius-full:  9999px;
 
-    /* Named aliases used in style.css */
-    --radius:       var(--radius-md);   /* 12px — generic card */
-    --radius-xl2:   var(--radius-xl);   /* alias for old --radius-xl in style.css (was 24px → same) */
+    --radius:       var(--radius-md);
+    --radius-xl2:   var(--radius-xl);
 
 
     /* ─────────────────────────────────────────────────────────────────
-       8. SHADOW TOKENS
-          Shadows use navy/slate base to feel institutional.
+       6. SHADOW TOKENS (Institutional Soft Navy + Orange Glow)
        ───────────────────────────────────────────────────────────────── */
 
-    --shadow-xs:  0 1px 2px rgba(10, 29, 55, 0.04);
-    --shadow-sm:  0 2px 5px -1px rgba(10, 29, 55, 0.06), 0 1px 3px -1px rgba(10, 29, 55, 0.03);
-    --shadow-md:  0 8px 20px -3px rgba(10, 29, 55, 0.08), 0 3px 6px -2px rgba(10, 29, 55, 0.04);
-    --shadow-lg:  0 16px 36px -4px rgba(10, 29, 55, 0.12), 0 6px 12px -3px rgba(10, 29, 55, 0.04);
-    --shadow-xl:  0 24px 52px -6px rgba(10, 29, 55, 0.16), 0 10px 20px -4px rgba(10, 29, 55, 0.06);
-    --shadow-2xl: 0 40px 80px -12px rgba(10, 29, 55, 0.22);
+    --shadow-xs:        0 1px 2px rgba(11, 31, 51, 0.04);
+    --shadow-sm:        0 2px 5px -1px rgba(11, 31, 51, 0.06), 0 1px 3px -1px rgba(11, 31, 51, 0.03);
+    --shadow-md:        0 8px 20px -3px rgba(11, 31, 51, 0.08), 0 3px 6px -2px rgba(11, 31, 51, 0.04);
+    --shadow-lg:        0 16px 36px -4px rgba(11, 31, 51, 0.12), 0 6px 12px -3px rgba(11, 31, 51, 0.04);
+    --shadow-xl:        0 24px 52px -6px rgba(11, 31, 51, 0.16), 0 10px 20px -4px rgba(11, 31, 51, 0.06);
+    --shadow-card:      0 4px 16px rgba(11, 31, 51, 0.05), 0 1px 3px rgba(11, 31, 51, 0.03);
+    --shadow-card-hover: 0 12px 28px -4px rgba(11, 31, 51, 0.12), 0 4px 10px -2px rgba(11, 31, 51, 0.04);
 
-    /* Colored glow shadows (used on hover CTAs) */
-    --shadow-green-sm: 0 4px 14px rgba(16, 185, 129, 0.22);
-    --shadow-green-md: 0 6px 18px rgba(16, 185, 129, 0.32);
-    --shadow-green-lg: 0 8px 24px rgba(16, 185, 129, 0.45);
-    --shadow-navy-sm:  0 4px 14px rgba(10, 29, 55, 0.16);
-    --shadow-navy-md:  0 6px 18px rgba(10, 29, 55, 0.24);
+    /* Orange CTA Shadows */
+    --shadow-orange-sm: 0 4px 14px rgba(255, 90, 0, 0.28);
+    --shadow-orange-md: 0 8px 22px rgba(255, 90, 0, 0.38);
+    --shadow-orange-lg: 0 12px 32px rgba(255, 90, 0, 0.45);
 
-    /* Transition aliases that point to shadow tokens */
+    /* Green shadows (for backward compatibility) */
+    --shadow-green-sm:  var(--shadow-orange-sm);
+    --shadow-green-md:  var(--shadow-orange-md);
+    --shadow-green-lg:  var(--shadow-orange-lg);
+    --shadow-navy-sm:   0 4px 14px rgba(11, 31, 51, 0.16);
+    --shadow-navy-md:   0 6px 18px rgba(11, 31, 51, 0.24);
+
     --transition-shadow: box-shadow var(--motion-base) var(--ease-standard);
 
 
     /* ─────────────────────────────────────────────────────────────────
-       9. Z-INDEX TOKENS
+       7. Z-INDEX TOKENS
        ───────────────────────────────────────────────────────────────── */
 
     --z-base:     0;
@@ -343,75 +329,120 @@
 
 
     /* ─────────────────────────────────────────────────────────────────
-       10. MOTION & ANIMATION TOKENS
-           FIXES: --transition-bounce was referenced but never defined,
-           causing silent broken transitions on .pan-card, .bridge-card.
+       8. MOTION & ANIMATION TOKENS
        ───────────────────────────────────────────────────────────────── */
 
-    /* Duration */
     --motion-instant: 0.08s;
     --motion-fast:    0.15s;
     --motion-base:    0.22s;
     --motion-slow:    0.35s;
     --motion-ambient: 2s;
 
-    /* Easing */
-    --ease-spring:   cubic-bezier(0.16, 1, 0.3, 1);    /* Overshoot spring */
-    --ease-enter:    cubic-bezier(0, 0, 0.2, 1);        /* Decelerate in */
-    --ease-exit:     cubic-bezier(0.4, 0, 1, 1);        /* Accelerate out */
-    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);     /* Material standard */
-    --ease-bounce:   cubic-bezier(0.34, 1.56, 0.64, 1);/* Slight bounce */
+    --ease-spring:   cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-enter:    cubic-bezier(0, 0, 0.2, 1);
+    --ease-exit:     cubic-bezier(0.4, 0, 1, 1);
+    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce:   cubic-bezier(0.34, 1.56, 0.64, 1);
 
-    /* Compound transition tokens (duration + easing) */
-    --transition-fast:    var(--motion-fast) var(--ease-spring);
-    --transition-base:    var(--motion-base) var(--ease-spring);
-    --transition-smooth:  var(--motion-slow) var(--ease-spring);
-
-    /* FIX: --transition-bounce was undefined — used in .pan-card, .bridge-card */
-    --transition-bounce:  var(--motion-base) var(--ease-spring);
-
-    /* Legacy aliases from style.css */
-    --transition:         var(--motion-base) var(--ease-standard);
-    --transition-bg:      background var(--motion-fast) var(--ease-standard);
-    --transition-color:   color var(--motion-fast) var(--ease-standard);
-    --transition-border:  border-color var(--motion-fast) var(--ease-standard);
+    --transition-fast:      var(--motion-fast) var(--ease-spring);
+    --transition-base:      var(--motion-base) var(--ease-spring);
+    --transition-smooth:    var(--motion-slow) var(--ease-spring);
+    --transition-bounce:    var(--motion-base) var(--ease-spring);
+    --transition:           var(--motion-base) var(--ease-standard);
+    --transition-bg:        background var(--motion-fast) var(--ease-standard);
+    --transition-color:     color var(--motion-fast) var(--ease-standard);
+    --transition-border:    border-color var(--motion-fast) var(--ease-standard);
     --transition-transform: transform var(--motion-base) var(--ease-spring);
 
 
     /* ─────────────────────────────────────────────────────────────────
-       12. AMBER / WARNING TOKENS
-           Used in legal pages alert boxes, protective note boxes.
+       9. SURFACE & BACKGROUND SYSTEM
        ───────────────────────────────────────────────────────────────── */
 
-    --amber:       var(--vps-amber-600);
-    --amber-dark:  var(--vps-amber-700);
-    --amber-bg:    var(--vps-amber-50);
+    --surface-page:     var(--color-white);
+    --surface-card:     var(--color-white);
+    --surface-soft:     var(--color-off-white);
+    --surface-subtle:   var(--color-light-blue-gray);
+    --surface-hero:     var(--color-off-white);
 
-
-    /* ─────────────────────────────────────────────────────────────────
-       13. SURFACE & BACKGROUND SYSTEM
-       ───────────────────────────────────────────────────────────────── */
-
-    --surface-page:     var(--vps-white);
-    --surface-card:     var(--vps-white);
-    --surface-soft:     var(--vps-neutral-50);
-    --surface-subtle:   var(--vps-neutral-100);
-    --surface-hero:     var(--vps-navy-900);
-
-    /* Background gradient used on dark CTAs & hero sections */
-    --gradient-hero:    linear-gradient(140deg, #061325 0%, #0a1d37 40%, #0d2b5e 80%, #043826 100%);
-    --gradient-dark:    linear-gradient(135deg, #0a1d37 0%, #173d7a 100%);
-    --gradient-green:   linear-gradient(135deg, var(--vps-green-600) 0%, var(--vps-green-800) 100%);
-    --gradient-hero-overlay: radial-gradient(circle at 18% 25%, rgba(52, 211, 153, 0.12) 0%, transparent 45%),
-                             radial-gradient(circle at 82% 65%, rgba(29, 78, 216, 0.18) 0%, transparent 50%);
+    /* Gradients */
+    --gradient-hero:         linear-gradient(135deg, #050E17 0%, #0B1F33 60%, #133152 100%);
+    --gradient-dark:         linear-gradient(135deg, #0B1F33 0%, #162C45 100%);
+    --gradient-orange:       var(--color-orange-gradient);
+    --gradient-green:        var(--color-orange-gradient);
+    --gradient-hero-overlay: radial-gradient(circle at 18% 25%, rgba(255, 90, 0, 0.08) 0%, transparent 45%),
+                             radial-gradient(circle at 82% 65%, rgba(11, 31, 51, 0.05) 0%, transparent 50%);
 }
 
 /* ─────────────────────────────────────────────────────────────────
-   14. MICRO-INTERACTIONS & TYPOGRAPHY OPTICS
-       (Inspired by Hallmark & Make Interfaces Feel Better standards)
+   10. BRAND SIGNATURE MOTIFS & UTILITIES
    ───────────────────────────────────────────────────────────────── */
 
-/* Optical Text Balancing: eliminates awkward lone orphan words */
+/* Thin Orange Brand Signature Divider */
+.orange-rule, .brand-orange-rule {
+    display: inline-block;
+    width: 36px;
+    height: 3px;
+    background: var(--color-orange);
+    border-radius: 2px;
+}
+
+/* Subtle World Map / Global Network Texture */
+.pattern-world-map {
+    background-image: url('../images/world-map-dots.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Halftone Dot Field */
+.pattern-dots {
+    background-image: radial-gradient(rgba(11, 31, 51, 0.08) 1.2px, transparent 1.2px);
+    background-size: 20px 20px;
+}
+
+/* Orange Halftone Dot Accent */
+.pattern-dots-orange {
+    background-image: radial-gradient(rgba(255, 90, 0, 0.12) 1.2px, transparent 1.2px);
+    background-size: 18px 18px;
+}
+
+/* Subtle Curved Swoosh Accents */
+.brand-swoosh-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.brand-swoosh-corner {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.brand-swoosh-corner.top-right {
+    top: -120px;
+    right: -120px;
+    background: radial-gradient(circle, #FF5A00 0%, transparent 70%);
+}
+
+.brand-swoosh-corner.bottom-left {
+    bottom: -140px;
+    left: -140px;
+    background: radial-gradient(circle, #0B1F33 0%, transparent 70%);
+    opacity: 0.08;
+}
+
+/* Optical Text Balancing */
 h1, h2, h3, .section-title, .hero-title, .modal-title, .popup-form-header h4 {
     text-wrap: balance;
 }
@@ -420,7 +451,7 @@ h1, h2, h3, .section-title, .hero-title, .modal-title, .popup-form-header h4 {
     text-wrap: pretty;
 }
 
-/* Tabular Numerals: prevents horizontal layout jumping during numeric calculations */
+/* Tabular Numerals */
 .calc-result-num,
 .stat-num,
 .rate-value,
@@ -434,7 +465,7 @@ h1, h2, h3, .section-title, .hero-title, .modal-title, .popup-form-header h4 {
     font-variant-numeric: tabular-nums;
 }
 
-/* Tactile Micro-Interactions: provides immediate physical feedback on click/press */
+/* Tactile Micro-Interactions */
 .btn:active,
 .btn-primary:active,
 .btn-secondary:active,
@@ -446,7 +477,6 @@ h1, h2, h3, .section-title, .hero-title, .modal-title, .popup-form-header h4 {
     transform: scale(0.98);
 }
 
-/* Standardized Hallmark Table Responsiveness: ensures smooth mobile panning */
 .table-responsive,
 .comparison-table-wrapper,
 .legal-table-wrap {
@@ -455,8 +485,7 @@ h1, h2, h3, .section-title, .hero-title, .modal-title, .popup-form-header h4 {
     -webkit-overflow-scrolling: touch;
 }
 
-/* Canonical Green Highlight Token */
+/* Green Highlight WCAG Safe Support */
 .green-highlight {
-    color: var(--color-primary, #047857) !important;
+    color: var(--color-orange, #FF5A00);
 }
-
