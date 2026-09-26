@@ -4,17 +4,17 @@
 
 // --- Lead Vault & Headless Google Form Configuration ---
 // Paste your Google Form ID and entry IDs here to automatically capture all leads in a live Google Sheet:
-window.VPS_GOOGLE_FORM_CONFIG = window.VPS_GOOGLE_FORM_CONFIG || {
-    formId: '', // e.g. '1FAIpQLSc...' from your Google Form viewform URL
+window.VPS_GOOGLE_FORM_CONFIG = {
+    formId: '1FAIpQLSfPUsa4zwi2nROpDZfbkxnMAy7NPgvYjunz23kTtMuHJ0GfDw',
     entries: {
-        firstName: '', // e.g. 'entry.123456789'
-        lastName: '',  // e.g. 'entry.987654321'
-        phone: '',     // e.g. 'entry.111222333'
-        whatsapp: '',  // e.g. 'entry.444555666'
-        email: '',     // e.g. 'entry.777888999'
-        interest: '',  // e.g. 'entry.000111222'
-        notes: '',     // e.g. 'entry.333444555'
-        pageUrl: ''    // e.g. 'entry.666777888'
+        firstName: 'entry.1341360117',
+        lastName:  'entry.239502923',
+        phone:     'entry.685320406',
+        whatsapp:  'entry.1700795760',
+        email:     'entry.1971328408',
+        interest:  'entry.469251043',
+        notes:     'entry.1995462380',
+        pageUrl:   'entry.226006361'
     }
 };
 
