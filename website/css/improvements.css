@@ -5917,12 +5917,13 @@ html, body {
     background: #FFFFFF;
     border: 1.5px solid var(--color-border, #DCE4EA);
     border-radius: 18px;
-    padding: 30px 22px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 14px rgba(11, 31, 51, 0.03);
     transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.28s ease;
     position: relative;
+    overflow: visible;     /* icon floats over image */
 }
 
 .unified-service-card:hover {
@@ -5931,18 +5932,58 @@ html, body {
     border-color: var(--color-orange, #FF5A00);
 }
 
+/* ── Image banner ── */
+.unified-card-image {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 18px 18px 0 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.unified-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.unified-service-card:hover .unified-card-image img {
+    transform: scale(1.06);
+}
+
+.unified-card-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 35%, rgba(11,31,51,0.26) 100%);
+    pointer-events: none;
+}
+
+/* ── Icon ON the image ── */
 .service-card-icon-box {
-    width: 56px;
-    height: 56px;
-    border-radius: 16px;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
     background: #FFF1E8;
-    border: 1px solid #FFD8C2;
+    border: 1.5px solid #FFD8C2;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-orange, #FF5A00);
-    font-size: 22px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    /* Overlap image bottom */
+    margin-top: -26px;
+    margin-left: 20px;
+    margin-bottom: 14px;
+    align-self: flex-start;
+    position: relative;
+    z-index: 2;
+    /* White ring */
+    box-shadow: 0 0 0 3px #ffffff, 0 4px 12px rgba(11, 31, 51, 0.14);
     transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
 }
 
@@ -5953,51 +5994,56 @@ html, body {
     border-color: var(--color-orange, #FF5A00);
 }
 
+/* ── Per-element padding for card body ── */
 .unified-service-card h3 {
     font-family: var(--font-display, 'Manrope', sans-serif);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 800;
     color: var(--color-navy, #0B1F33);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     line-height: 1.25;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .unified-service-desc {
-    font-size: 13.5px;
+    font-size: 13px;
     line-height: 1.55;
     color: var(--color-muted, #667085);
-    margin-bottom: 20px;
-    min-height: 42px;
+    margin-bottom: 16px;
+    min-height: unset;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .service-checklist {
     list-style: none;
-    padding: 0;
-    margin: 0 0 24px 0;
+    padding: 0 20px;
+    margin: 0 0 20px 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     flex-grow: 1;
 }
 
 .service-checklist li {
-    font-size: 13.5px;
+    font-size: 13px;
     color: #1E293B;
     display: flex;
     align-items: flex-start;
-    gap: 9px;
+    gap: 8px;
     line-height: 1.4;
 }
 
 .service-checklist li i {
     color: var(--color-orange, #FF5A00);
     font-size: 13px;
-    margin-top: 3px;
+    margin-top: 2px;
     flex-shrink: 0;
 }
 
 .service-card-footer {
-    padding-top: 16px;
+    padding: 14px 20px 20px;
     border-top: 1px solid var(--color-border-subtle, #EAF0F5);
 }
 
