@@ -312,8 +312,16 @@ function toggleMenu() {
     const links = document.getElementById('navLinks');
     const hamburger = document.getElementById('hamburger');
     const navCta = document.querySelector('.nav-cta');
+    const navbar = document.getElementById('navbar');
     const isOpen = links ? links.classList.toggle('open') : false;
     
+    if (isOpen && navbar && links) {
+        const rect = navbar.getBoundingClientRect();
+        links.style.top = Math.max(0, Math.round(rect.bottom)) + 'px';
+    } else if (links) {
+        links.style.top = '';
+    }
+
     if (navCta) {
         navCta.classList.toggle('open', isOpen);
     }
@@ -328,7 +336,10 @@ function closeMenu() {
     const links = document.getElementById('navLinks');
     const hamburger = document.getElementById('hamburger');
     const navCta = document.querySelector('.nav-cta');
-    if (links) links.classList.remove('open');
+    if (links) {
+        links.classList.remove('open');
+        links.style.top = '';
+    }
     if (navCta) navCta.classList.remove('open');
     if (hamburger) {
         hamburger.classList.remove('open');
@@ -339,6 +350,12 @@ function closeMenu() {
 
 window.toggleMenu = toggleMenu;
 window.closeMenu = closeMenu;
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 960) {
+        closeMenu();
+    }
+}, { passive: true });
 
 // Mobile dropdown toggle
 document.addEventListener('DOMContentLoaded', () => {
