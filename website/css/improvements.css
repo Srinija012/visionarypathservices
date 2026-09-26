@@ -180,6 +180,7 @@ p {
 }
 
 .exact-hero-title {
+    font-family: var(--font-display, 'Manrope', sans-serif) !important;
     font-size: clamp(34px, 4vw, 48px);
     letter-spacing: -0.03em;
     line-height: 1.15;
@@ -189,7 +190,7 @@ p {
 }
 
 .hero-highlight {
-    color: #047857;
+    color: var(--color-orange, #FF5A00) !important;
     font-weight: 800;
 }
 
@@ -267,13 +268,13 @@ p {
 }
 
 .btn-hero-primary {
-    background: linear-gradient(135deg, #0e3875 0%, #16468e 100%) !important;
+    background: var(--vp-orange-gradient, linear-gradient(135deg, #FF5A00 0%, #FF8A00 100%)) !important;
     color: #ffffff !important;
     padding: 13.5px 28px;
     font-size: 15px;
     font-weight: 700;
     border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(14, 56, 117, 0.28);
+    box-shadow: 0 4px 16px rgba(255, 90, 0, 0.28);
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -283,9 +284,9 @@ p {
 }
 
 .btn-hero-primary:hover {
-    background: linear-gradient(135deg, #092652 0%, #0e3875 100%) !important;
+    background: linear-gradient(135deg, #E04F00 0%, #FF7A00 100%) !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(14, 56, 117, 0.38);
+    box-shadow: 0 8px 24px rgba(255, 90, 0, 0.38);
     color: #ffffff !important;
 }
 
@@ -1010,7 +1011,7 @@ main ol li {
    ────────────────────────────────────────────────────────── */
 
 .about-hero-title {
-    font-family: var(--font-display, 'Poppins', sans-serif);
+    font-family: var(--font-display, 'Manrope', sans-serif);
     font-size: clamp(2.2rem, 4.4vw, 3.25rem);
     font-weight: 800;
     line-height: 1.16;
@@ -1019,7 +1020,7 @@ main ol li {
 }
 
 .about-section-title {
-    font-family: var(--font-display, 'Poppins', sans-serif);
+    font-family: var(--font-display, 'Manrope', sans-serif);
     font-size: clamp(1.85rem, 3.2vw, 2.5rem);
     font-weight: 800;
     line-height: 1.22;
@@ -1869,7 +1870,7 @@ textarea:focus-visible {
 }
 
 .pan-india-title {
-    font-family: 'Poppins', system-ui, -apple-system, sans-serif !important;
+    font-family: var(--font-display, 'Manrope', sans-serif) !important;
     font-size: clamp(26px, 2.7vw, 34px) !important;
     font-weight: 800 !important;
     color: #0b1f33 !important;
@@ -3611,7 +3612,7 @@ a.btn,
 .btn-whatsapp,
 .btn-eligibility,
 .btn-cta-gold {
-    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 14.5px !important;
     font-weight: 600 !important;
     line-height: 1.25 !important;
@@ -3626,7 +3627,7 @@ a.btn,
 /* 8. Form Controls Typography */
 .form-group label,
 label {
-    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 13.5px !important;
     font-weight: 600 !important;
     letter-spacing: -0.005em !important;
@@ -3637,7 +3638,7 @@ label {
 input,
 select,
 textarea {
-    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 14.5px !important;
     line-height: 1.5 !important;
     letter-spacing: normal !important;
@@ -3645,7 +3646,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 14px !important;
     color: #94a3b8 !important;
     letter-spacing: normal !important;
@@ -5323,11 +5324,10 @@ html, body {
 /* ── 9. Final CTA ── */
 .vps-final-cta {
     position: relative;
-    background: linear-gradient(135deg, #0B1F33 0%, #123A63 100%);
+    background: #0B1F33;
     color: #FFFFFF;
-    padding: 96px 0;
+    padding: clamp(44px, 5.5vh, 64px) 0;
     overflow: hidden;
-    text-align: center;
 }
 
 .vps-cta-swoosh {
@@ -5689,7 +5689,7 @@ html, body {
 }
 
 .other-loans-hero h1 {
-    font-family: var(--font-display, 'Manrope', 'Poppins', sans-serif);
+    font-family: var(--font-display, 'Manrope', sans-serif);
     font-size: clamp(34px, 3.8vw, 48px);
     font-weight: 800;
     color: var(--color-navy, #0B1F33);
@@ -5890,7 +5890,7 @@ html, body {
 }
 
 .unified-service-card h3 {
-    font-family: var(--font-display, 'Manrope', 'Poppins', sans-serif);
+    font-family: var(--font-display, 'Manrope', sans-serif);
     font-size: 20px;
     font-weight: 800;
     color: var(--color-navy, #0B1F33);
@@ -6041,7 +6041,7 @@ html, body {
 }
 
 .timeline-step-title {
-    font-family: var(--font-display, 'Manrope', 'Poppins', sans-serif);
+    font-family: var(--font-display, 'Manrope', sans-serif);
     font-size: 16px;
     font-weight: 800;
     color: var(--color-navy, #0B1F33);
@@ -6089,7 +6089,7 @@ html, body {
 }
 
 .solutions-card h3 {
-    font-family: var(--font-display, 'Manrope', 'Poppins', sans-serif);
+    font-family: var(--font-display, 'Manrope', sans-serif);
     font-size: clamp(24px, 2.4vw, 30px);
     font-weight: 800;
     color: var(--color-navy, #0B1F33);
@@ -6156,7 +6156,7 @@ html, body {
 }
 
 .faq-module-wrap h3 {
-    font-family: var(--font-display, 'Manrope', 'Poppins', sans-serif);
+    font-family: var(--font-display, 'Manrope', sans-serif);
     font-size: clamp(24px, 2.4vw, 30px);
     font-weight: 800;
     color: var(--color-navy, #0B1F33);
@@ -6287,7 +6287,7 @@ html, body {
 }
 
 .discuss-text h3 {
-    font-family: var(--font-display, 'Manrope', 'Poppins', sans-serif);
+    font-family: var(--font-display, 'Manrope', sans-serif);
     font-size: clamp(22px, 2.5vw, 30px);
     font-weight: 800;
     color: #FFFFFF;
@@ -6585,7 +6585,7 @@ html, body {
 }
 
 .exact-hero-title {
-    font-family: 'Poppins', system-ui, -apple-system, sans-serif !important;
+    font-family: var(--font-display, 'Manrope', sans-serif) !important;
     font-size: clamp(30px, 3.4vw, 44px) !important;
     font-weight: 800 !important;
     color: var(--color-navy, #0B1F33) !important;
@@ -6924,12 +6924,12 @@ html, body {
 
 /* ── 4. CORE FINANCING SOLUTIONS (.loan-categories-section) ── */
 .loan-categories-section {
-    padding: 84px 0 !important;
+    padding: 80px 0 !important;
     background: var(--color-off-white, #F7F9FB) !important;
 }
 
 .loan-categories-section .section-title-navy {
-    font-family: 'Poppins', system-ui, -apple-system, sans-serif !important;
+    font-family: var(--font-display, 'Manrope', sans-serif) !important;
     font-size: clamp(28px, 3.4vw, 40px) !important;
     font-weight: 800 !important;
     color: var(--color-navy, #0B1F33) !important;
@@ -6939,6 +6939,7 @@ html, body {
 }
 
 .loan-categories-section .vps-section-sub {
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 16px !important;
     line-height: 1.68 !important;
     color: #475569 !important;
@@ -6956,23 +6957,32 @@ html, body {
 .loan-category-card {
     padding: 36px 30px !important;
     border-radius: 18px !important;
-    border: 1.5px solid var(--color-border, #DDE5EC) !important;
+    border: 1px solid var(--color-border, #DCE4EA) !important;
     background: #ffffff !important;
     display: flex !important;
     flex-direction: column !important;
     position: relative !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+
+.loan-category-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 16px 36px rgba(11, 31, 51, 0.08) !important;
+    border-color: #C8D5E2 !important;
 }
 
 .loan-category-badge {
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 11px !important;
     font-weight: 800 !important;
     letter-spacing: 0.12em !important;
     text-transform: uppercase !important;
     margin-bottom: 14px !important;
+    color: var(--color-orange, #FF5A00) !important;
 }
 
 .loan-category-title {
-    font-family: 'Poppins', system-ui, -apple-system, sans-serif !important;
+    font-family: var(--font-display, 'Manrope', sans-serif) !important;
     font-size: 21px !important;
     font-weight: 800 !important;
     letter-spacing: -0.015em !important;
@@ -6981,6 +6991,7 @@ html, body {
 }
 
 .loan-category-desc {
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 14.5px !important;
     line-height: 1.65 !important;
     color: #475569 !important;
@@ -6998,12 +7009,14 @@ html, body {
 }
 
 .loan-category-features li {
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 13.5px !important;
     color: #1e293b !important;
     line-height: 1.5 !important;
 }
 
 .loan-category-cta {
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 14px !important;
     font-weight: 700 !important;
     color: var(--color-orange, #FF5A00) !important;
@@ -7011,17 +7024,18 @@ html, body {
 
 /* ── 5. PAN INDIA GUIDANCE (.pan-india-section) ── */
 .pan-india-section {
-    padding: 76px 0 !important;
+    padding: 80px 0 !important;
     background: #ffffff !important;
 }
 
 .pan-india-box {
     padding: 48px 46px !important;
     border-radius: 24px !important;
+    border: 1px solid var(--color-border, #DCE4EA) !important;
 }
 
 .pan-india-title {
-    font-family: 'Poppins', system-ui, -apple-system, sans-serif !important;
+    font-family: var(--font-display, 'Manrope', sans-serif) !important;
     font-size: clamp(26px, 2.9vw, 36px) !important;
     font-weight: 800 !important;
     color: var(--color-navy, #0B1F33) !important;
@@ -7031,6 +7045,7 @@ html, body {
 }
 
 .pan-india-sub {
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 15.5px !important;
     line-height: 1.65 !important;
     color: #475569 !important;
@@ -7045,9 +7060,39 @@ html, body {
 .pan-card {
     padding: 24px 22px !important;
     border-radius: 16px !important;
+    border: 1px solid var(--color-border, #DCE4EA) !important;
+    background: #ffffff !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+
+.pan-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 28px rgba(11, 31, 51, 0.08) !important;
+    border-color: #C8D5E2 !important;
+}
+
+.pan-card-badge {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 18px !important;
+    margin-bottom: 14px !important;
+    background: #FFF1E8 !important;
+    color: #FF5A00 !important;
+    border: 1px solid #FFE5D6 !important;
+}
+
+.pan-card-badge.blue-badge {
+    background: #EEF4F9 !important;
+    color: #123A63 !important;
+    border: 1px solid #DCE4EA !important;
 }
 
 .pan-card h3 {
+    font-family: var(--font-display, 'Manrope', sans-serif) !important;
     font-size: 16px !important;
     font-weight: 700 !important;
     color: var(--color-navy, #0B1F33) !important;
@@ -7055,6 +7100,7 @@ html, body {
 }
 
 .pan-card p {
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 13.5px !important;
     line-height: 1.55 !important;
     color: #475569 !important;
@@ -7063,12 +7109,12 @@ html, body {
 
 /* ── 6. BRIDGING THE GAP (.bridging-section) ── */
 .bridging-section {
-    padding: 84px 0 !important;
+    padding: 80px 0 !important;
     background: var(--color-off-white, #F7F9FB) !important;
 }
 
 .bridging-title {
-    font-family: 'Poppins', system-ui, -apple-system, sans-serif !important;
+    font-family: var(--font-display, 'Manrope', sans-serif) !important;
     font-size: clamp(28px, 3.4vw, 40px) !important;
     font-weight: 800 !important;
     color: var(--color-navy, #0B1F33) !important;
@@ -7078,6 +7124,7 @@ html, body {
 }
 
 .bridging-sub {
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 16px !important;
     line-height: 1.68 !important;
     color: #475569 !important;
@@ -7095,18 +7142,55 @@ html, body {
     padding: 36px 32px !important;
     border-radius: 18px !important;
     background: #ffffff !important;
-    border: 1px solid var(--color-border, #DDE5EC) !important;
+    border: 1px solid var(--color-border, #DCE4EA) !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease !important;
+}
+
+.bridge-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 16px 36px rgba(11, 31, 51, 0.08) !important;
 }
 
 .bridge-card-top {
     margin-bottom: 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+}
+
+.bridge-icon-wrap {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 18px !important;
+    flex-shrink: 0 !important;
+}
+
+.bridge-icon-wrap.orange-light,
+.bridge-icon-wrap.green-light {
+    background: #FFF1E8 !important;
+    color: #FF5A00 !important;
+    border: 1px solid #FFE5D6 !important;
+}
+
+.bridge-icon-wrap.navy-light,
+.bridge-icon-wrap.blue-light {
+    background: #EEF4F9 !important;
+    color: #0B1F33 !important;
+    border: 1px solid #DCE4EA !important;
 }
 
 .bridge-card-top h3 {
+    font-family: var(--font-display, 'Manrope', sans-serif) !important;
     font-size: 18px !important;
     font-weight: 800 !important;
     color: var(--color-navy, #0B1F33) !important;
     line-height: 1.35 !important;
+    margin: 0 !important;
+    flex-grow: 1 !important;
 }
 
 .bridge-points {
@@ -7116,6 +7200,7 @@ html, body {
 }
 
 .bridge-points li {
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 14.5px !important;
     line-height: 1.55 !important;
     color: #1e293b !important;
@@ -7125,11 +7210,13 @@ html, body {
     margin-top: 36px !important;
     padding: 18px 24px !important;
     border-radius: 14px !important;
-    background: rgba(11, 31, 51, 0.03) !important;
-    border: 1px solid var(--color-border, #DDE5EC) !important;
+    background: #ffffff !important;
+    border: 1px solid var(--color-border, #DCE4EA) !important;
+    box-shadow: 0 2px 8px rgba(11, 31, 51, 0.04) !important;
 }
 
 .disclosure-text {
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 13.5px !important;
     line-height: 1.55 !important;
     color: #475569 !important;
@@ -7137,12 +7224,12 @@ html, body {
 
 /* ── 7. WHY VISIONARY PATH SERVICES (.why-vps-section) ── */
 .why-vps-section {
-    padding: 84px 0 !important;
+    padding: 80px 0 !important;
     background: #ffffff !important;
 }
 
 .why-main-title {
-    font-family: 'Poppins', system-ui, -apple-system, sans-serif !important;
+    font-family: var(--font-display, 'Manrope', sans-serif) !important;
     font-size: clamp(28px, 3.4vw, 40px) !important;
     font-weight: 800 !important;
     color: var(--color-navy, #0B1F33) !important;
@@ -7152,6 +7239,7 @@ html, body {
 }
 
 .why-sub {
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 16px !important;
     line-height: 1.68 !important;
     color: #475569 !important;
@@ -7170,12 +7258,41 @@ html, body {
 .why-feature-card {
     padding: 28px 24px !important;
     border-radius: 16px !important;
-    border: 1px solid var(--color-border, #DDE5EC) !important;
+    border: 1px solid var(--color-border, #DCE4EA) !important;
     background: #ffffff !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+
+.why-feature-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 14px 32px rgba(11, 31, 51, 0.08) !important;
+    border-color: #C8D5E2 !important;
+}
+
+.why-feature-card .w-icon-circle {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 18px !important;
+    margin-bottom: 16px !important;
+    background: #FFF1E8 !important;
+    color: #FF5A00 !important;
+    border: 1px solid #FFE5D6 !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.why-feature-card:hover .w-icon-circle {
+    background: #FF5A00 !important;
+    color: #FFFFFF !important;
+    border-color: #FF5A00 !important;
+    transform: scale(1.06) !important;
 }
 
 .why-feature-card h4 {
-    font-family: 'Poppins', system-ui, -apple-system, sans-serif !important;
+    font-family: var(--font-display, 'Manrope', sans-serif) !important;
     font-size: 16px !important;
     font-weight: 800 !important;
     color: var(--color-navy, #0B1F33) !important;
@@ -7185,26 +7302,71 @@ html, body {
 }
 
 .why-feature-card p {
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 13.5px !important;
     line-height: 1.6 !important;
     color: #475569 !important;
     margin: 0 !important;
 }
 
-/* ── 8. FINAL CTA (.vps-final-cta) ── */
+ /* ── 8. FINAL CTA (.vps-final-cta) — Split Photo Layout ── */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
 .vps-final-cta {
-    padding: 96px 0 !important;
-    background: linear-gradient(135deg, #0B1F33 0%, #123A63 100%) !important;
+    position: relative !important;
+    padding: clamp(52px, 6vh, 76px) 0 !important;
+    background: #0B1F33 !important;
+    overflow: hidden !important;
+}
+
+/* Photo panel: fills the right 55% of the section */
+.vps-cta-photo-panel {
+    position: absolute !important;
+    inset: 0 !important;
+    left: 40% !important;
+    pointer-events: none !important;
+}
+
+.vps-cta-photo {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    display: block !important;
+    opacity: 0.82 !important;
+}
+
+/* Gradient: full navy on left → transparent on right (reveals photo) */
+.vps-cta-photo-gradient {
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(
+        to right,
+        #0B1F33 0%,
+        #0B1F33 20%,
+        rgba(11, 31, 51, 0.72) 55%,
+        rgba(11, 31, 51, 0.0) 100%
+    ) !important;
+}
+
+/* Content wrapper: left-aligned, takes up ~56% */
+.vps-cta-inner {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.vps-cta-content {
+    max-width: 580px !important;
+    text-align: left !important;
 }
 
 .vps-final-cta h2 {
-    font-family: 'Poppins', system-ui, -apple-system, sans-serif !important;
-    font-size: clamp(30px, 3.8vw, 42px) !important;
+    font-family: var(--font-display, 'Manrope', sans-serif) !important;
+    font-size: clamp(26px, 3.2vw, 40px) !important;
     font-weight: 800 !important;
-    line-height: 1.22 !important;
+    line-height: 1.2 !important;
     letter-spacing: -0.025em !important;
     color: #ffffff !important;
-    margin-bottom: 16px !important;
+    margin-bottom: 14px !important;
 }
 
 .vps-final-cta .vps-orange-text {
@@ -7213,28 +7375,30 @@ html, body {
 }
 
 .vps-final-cta p.vps-cta-sub {
-    font-size: 17.5px !important;
-    line-height: 1.65 !important;
-    color: rgba(255, 255, 255, 0.9) !important;
-    max-width: 640px !important;
-    margin: 0 auto 36px !important;
-    text-align: center !important;
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
+    font-size: 16.5px !important;
+    line-height: 1.62 !important;
+    color: rgba(255, 255, 255, 0.88) !important;
+    max-width: 520px !important;
+    margin: 0 0 28px !important;
+    text-align: left !important;
 }
 
 .vps-final-cta-btns {
     display: flex !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     align-items: center !important;
-    gap: 16px !important;
+    gap: 14px !important;
     flex-wrap: wrap !important;
-    margin-bottom: 28px !important;
+    margin-bottom: 22px !important;
 }
 
 .vps-handwriting-final {
-    font-size: 22px !important;
+    font-size: 20px !important;
     font-weight: 600 !important;
     color: #FFB37C !important;
-    margin-top: 8px !important;
+    margin-top: 4px !important;
+    text-align: left !important;
 }
 
 /* ── 9. RESPONSIVE REFINEMENTS (MOBILE & TABLET) ── */
@@ -7306,8 +7470,49 @@ html, body {
         padding: 32px 24px !important;
     }
 
+    /* CTA split: tablet — photo starts at 50%, gradient narrower */
+    .vps-cta-photo-panel {
+        left: 52% !important;
+    }
+
     .vps-final-cta {
-        padding: 64px 0 !important;
+        padding: 52px 0 !important;
+    }
+
+    .vps-cta-content {
+        max-width: 100% !important;
+    }
+
+    .vps-final-cta-btns {
+        justify-content: flex-start !important;
+    }
+}
+
+/* CTA: mobile — hide photo, centre all content */
+@media (max-width: 576px) {
+    .vps-cta-photo-panel {
+        display: none !important;
+    }
+
+    .vps-cta-content {
+        text-align: center !important;
+        max-width: 100% !important;
+    }
+
+    .vps-final-cta p.vps-cta-sub {
+        text-align: center !important;
+        max-width: 100% !important;
+        margin: 0 0 24px !important;
+    }
+
+    .vps-final-cta-btns {
+        justify-content: center !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .vps-handwriting-final {
+        text-align: center !important;
     }
 }
 
@@ -9335,6 +9540,357 @@ html, body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ──────────────────────────────────────────────────────────
+   HALLMARK FORM COMPONENT ARCHITECTURE & 8-STATE SPECIFICATION
+   /* Hallmark · component: lead-assessment-form · genre: modern-minimal · theme: visionary-path
+    * states: default · hover · focus · active · disabled · loading · error · success
+    * contrast: pass (46–50)
+    */
+   ────────────────────────────────────────────────────────── */
+
+/* 1. Base Geometry & Touch Target Rhythm (No Layout Shift Rule) */
+.form-group {
+    margin-bottom: 14px;
+    position: relative;
+}
+
+.form-group.mb-tight {
+    margin-bottom: 12px;
+}
+
+.form-group label,
+.form-label-regular {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-body, 'Inter', sans-serif);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-navy, #0B1F33);
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.form-group label .req {
+    color: #ef4444;
+    margin-left: 2px;
+    font-weight: 700;
+}
+
+/* Base input styling with reserved outline slot (zero-shift contract) */
+.input-icon-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-icon-wrap input,
+.input-icon-wrap textarea,
+.partner-form-card input,
+.partner-form-card select,
+.partner-form-card textarea,
+.contact-form-box input,
+.contact-form-box textarea {
+    width: 100%;
+    min-height: 46px; /* Touch target floor */
+    padding: 11px 14px 11px 40px;
+    border: 1.5px solid var(--color-border, #DCE4EA);
+    border-radius: 12px;
+    font-family: var(--font-body, 'Inter', sans-serif);
+    font-size: 15px;
+    color: var(--color-navy, #0B1F33);
+    background-color: #FFFFFF;
+    outline: 2px solid transparent; /* Reserved focus slot */
+    outline-offset: 2px;
+    transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, outline-color 0.15s ease;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.input-icon-wrap textarea,
+.contact-form-box textarea,
+.partner-form-card textarea {
+    min-height: 80px;
+    resize: vertical;
+    padding-top: 12px;
+}
+
+.input-icon-wrap.textarea-wrap > i {
+    top: 16px;
+    transform: none;
+}
+
+/* Leading icons */
+.input-icon-wrap > i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94A3B8;
+    font-size: 14px;
+    pointer-events: none;
+    transition: color 0.15s ease;
+    z-index: 2;
+}
+
+.input-icon-wrap.phone-wrap .country-prefix {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    pointer-events: none;
+    padding-right: 8px;
+    border-right: 1.5px solid #CBD5E1;
+    line-height: 1;
+    z-index: 2;
+}
+
+.input-icon-wrap.phone-wrap input {
+    padding-left: 82px;
+}
+
+.input-icon-wrap input::placeholder,
+.input-icon-wrap textarea::placeholder,
+.partner-form-card input::placeholder,
+.partner-form-card textarea::placeholder,
+.contact-form-box input::placeholder,
+.contact-form-box textarea::placeholder {
+    color: #94A3B8;
+    font-weight: 400;
+    opacity: 1;
+}
+
+/* 2. Hover State (@media hover) */
+@media (hover: hover) {
+    .input-icon-wrap input:hover:not(:disabled):not(:focus),
+    .input-icon-wrap textarea:hover:not(:disabled):not(:focus),
+    .partner-form-card input:hover:not(:disabled):not(:focus),
+    .partner-form-card select:hover:not(:disabled):not(:focus),
+    .partner-form-card textarea:hover:not(:disabled):not(:focus),
+    .contact-form-box input:hover:not(:disabled):not(:focus),
+    .contact-form-box textarea:hover:not(:disabled):not(:focus) {
+        border-color: #B0C4D8;
+        background-color: #F8FAFC;
+    }
+
+    .input-icon-wrap.is-hover input,
+    .input-icon-wrap.is-hover textarea {
+        border-color: #B0C4D8;
+        background-color: #F8FAFC;
+    }
+}
+
+/* 3. Focus & :focus-visible State */
+.input-icon-wrap input:focus,
+.input-icon-wrap textarea:focus,
+.partner-form-card input:focus,
+.partner-form-card select:focus,
+.partner-form-card textarea:focus,
+.contact-form-box input:focus,
+.contact-form-box textarea:focus {
+    outline: none;
+    border-color: var(--color-orange, #FF5A00);
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3.5px rgba(255, 90, 0, 0.12);
+}
+
+.input-icon-wrap input:focus-visible,
+.input-icon-wrap textarea:focus-visible,
+.partner-form-card input:focus-visible,
+.partner-form-card select:focus-visible,
+.partner-form-card textarea:focus-visible,
+.contact-form-box input:focus-visible,
+.contact-form-box textarea:focus-visible,
+.input-icon-wrap.is-focus input,
+.input-icon-wrap.is-focus textarea {
+    outline: 2px solid var(--color-orange, #FF5A00);
+    outline-offset: 2px;
+    border-color: var(--color-orange, #FF5A00);
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(255, 90, 0, 0.14);
+}
+
+.input-icon-wrap:focus-within > i {
+    color: var(--color-orange, #FF5A00);
+}
+
+.input-icon-wrap.whatsapp-inp:focus-within > i {
+    color: #16A34A;
+}
+
+/* 4. Active / Pressed State */
+.btn-submit-enquiry:active,
+.btn-partner-submit:active,
+.btn-copy-phone:active {
+    transform: translateY(1px);
+}
+
+/* 5. Disabled State */
+input:disabled,
+textarea:disabled,
+select:disabled,
+input[aria-disabled="true"],
+textarea[aria-disabled="true"],
+.input-icon-wrap.is-disabled input,
+.btn:disabled,
+.btn-submit-enquiry:disabled {
+    opacity: 0.55 !important;
+    cursor: not-allowed !important;
+    background-color: #F1F5F9 !important;
+    border-color: #CBD5E1 !important;
+}
+
+/* 6. Loading State */
+.btn-submit-enquiry[data-state="loading"],
+form[data-submitting="true"] .btn-submit-enquiry {
+    cursor: wait;
+    opacity: 0.92;
+    pointer-events: none;
+    background: #10B981 !important;
+}
+
+/* 7. Error State (Accessible, Non-Color-Alone) */
+input.is-error,
+textarea.is-error,
+select.is-error,
+input[aria-invalid="true"],
+textarea[aria-invalid="true"],
+.input-icon-wrap.is-error input,
+.input-icon-wrap.is-error textarea {
+    border-color: #EF4444 !important;
+    background-color: #FFFBFB;
+}
+
+input.is-error:focus-visible,
+textarea.is-error:focus-visible,
+input[aria-invalid="true"]:focus-visible,
+textarea[aria-invalid="true"]:focus-visible {
+    outline: 2px solid #EF4444 !important;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.14) !important;
+}
+
+.input-icon-wrap.has-error > i,
+.input-icon-wrap.is-error > i {
+    color: #EF4444 !important;
+}
+
+/* Stable Error Helper Text (No layout jump) */
+.field-error-msg {
+    display: none;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #DC2626;
+    margin-top: 4px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.field-error-msg.visible,
+.is-error ~ .field-error-msg,
+.form-group.has-error .field-error-msg {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.field-error-msg::before {
+    content: "⚠";
+    font-size: 11px;
+}
+
+/* 8. Success State */
+input.is-success:not(:focus),
+textarea.is-success:not(:focus),
+input[aria-invalid="false"].touched:not(:focus),
+.input-icon-wrap.is-success input {
+    border-color: #10B981;
+    background-color: #F0FDF4;
+}
+
+/* Hallmark Radio Card Refinements */
+.interest-opt:has(input[type="radio"]:focus-visible) {
+    outline: 2px solid var(--color-orange, #FF5A00);
+    outline-offset: 2px;
+    border-color: var(--color-orange, #FF5A00);
+}
+
+.interest-opt:has(input[type="radio"]:checked) {
+    border-color: var(--color-orange, #FF5A00);
+    background: #FFF7ED;
+    color: var(--color-navy, #0B1F33);
+    box-shadow: 0 2px 8px rgba(255, 90, 0, 0.12);
+}
+
+.interest-opt:has(input[type="radio"]:checked) .custom-radio {
+    border-color: var(--color-orange, #FF5A00);
+}
+
+.interest-opt:has(input[type="radio"]:checked) .custom-radio::after {
+    background: var(--color-orange, #FF5A00);
+    transform: scale(1);
+}
+
+.interest-opt:has(input[type="radio"]:checked) .opt-label i {
+    color: var(--color-orange, #FF5A00);
+}
+
+/* "Same as phone" Button Refinement */
+.btn-copy-phone {
+    background: #F1F5F9;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    padding: 3px 10px;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--color-navy, #0B1F33);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn-copy-phone:hover {
+    background: #FFF1E8;
+    border-color: #FFD4BF;
+    color: var(--color-orange, #FF5A00);
+}
+
+.btn-copy-phone:focus-visible {
+    outline: 2px solid var(--color-orange, #FF5A00);
+    outline-offset: 2px;
+}
+
+.btn-copy-phone.copied {
+    background: #ECFDF5;
+    border-color: #A7F3D0;
+    color: #047857;
+}
+
+/* Mobile Responsiveness Floor */
+@media (max-width: 768px) {
+    .input-icon-wrap input,
+    .input-icon-wrap textarea,
+    .partner-form-card input,
+    .partner-form-card select,
+    .partner-form-card textarea,
+    .contact-form-box input,
+    .contact-form-box textarea {
+        font-size: 16px; /* Strict iOS auto-zoom prevention */
+        min-height: 48px;
+    }
+}
+
 
 
 

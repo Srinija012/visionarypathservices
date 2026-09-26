@@ -67,13 +67,129 @@ function closePopupOutside(e) {
     if (e.target === document.getElementById('popupOverlay')) closePopup();
 }
 
-// Helper to quickly copy Phone to WhatsApp input
+// --- Hallmark Accessible Form Validation Engine ---
+function getOrCreateErrorElement(input) {
+    const parent = input.closest('.form-group') || input.parentElement;
+    let errEl = parent ? parent.querySelector('.field-error-msg') : null;
+    if (!errEl && parent) {
+        errEl = document.createElement('div');
+        errEl.className = 'field-error-msg';
+        errEl.id = (input.id || input.name || 'field') + '-error';
+        errEl.setAttribute('role', 'alert');
+        errEl.setAttribute('aria-live', 'polite');
+        parent.appendChild(errEl);
+    }
+    if (errEl) {
+        input.setAttribute('aria-describedby', errEl.id);
+    }
+    return errEl;
+}
+
+function validateField(input) {
+    if (!input || input.type === 'hidden' || input.type === 'submit' || input.type === 'radio' || input.type === 'checkbox') return true;
+
+    const val = (input.value || '').trim();
+    const name = (input.name || '').toLowerCase();
+    const id = (input.id || '').toLowerCase();
+    const placeholder = (input.getAttribute('placeholder') || '').toLowerCase();
+    const isRequired = input.required || input.getAttribute('aria-required') === 'true';
+
+    let errorMsg = '';
+
+    if (isRequired && !val) {
+        if (name.includes('first') || id.includes('first')) {
+            errorMsg = 'First name is required. Please enter your given name.';
+        } else if (name.includes('last') || id.includes('last')) {
+            errorMsg = 'Last name is required. Please enter your family name.';
+        } else if (name.includes('phone') || id.includes('phone') || input.type === 'tel') {
+            errorMsg = 'Mobile number is required for your loan counselor consultation.';
+        } else if (name.includes('whatsapp') || id.includes('whatsapp')) {
+            errorMsg = 'WhatsApp number is required for instant pre-assessment updates.';
+        } else if (name.includes('email') || input.type === 'email') {
+            errorMsg = 'Email address is required for official lender comparison files.';
+        } else if (name.includes('company') || id.includes('firm')) {
+            errorMsg = 'Company or agency name is required.';
+        } else if (name.includes('city')) {
+            errorMsg = 'City and state are required.';
+        } else {
+            errorMsg = 'This field is required. Please provide your information.';
+        }
+    } else if (val) {
+        if (name.includes('first') || name.includes('last') || placeholder.includes('name')) {
+            if (val.length < 2) {
+                errorMsg = 'Name must be at least 2 characters.';
+            }
+        } else if (name.includes('phone') || id.includes('phone') || (input.type === 'tel' && !name.includes('whatsapp') && !id.includes('whatsapp'))) {
+            const digits = val.replace(/\D/g, '');
+            if (digits.length !== 10) {
+                errorMsg = 'Please enter a valid 10-digit mobile number.';
+            }
+        } else if (name.includes('whatsapp') || id.includes('whatsapp')) {
+            const digits = val.replace(/\D/g, '');
+            if (digits.length !== 10) {
+                errorMsg = 'Please enter a valid 10-digit WhatsApp number.';
+            }
+        } else if (name.includes('email') || input.type === 'email') {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(val)) {
+                errorMsg = 'Please enter a valid email format (e.g. aarav.sharma@gmail.com).';
+            }
+        }
+    }
+
+    const errEl = getOrCreateErrorElement(input);
+    const wrap = input.closest('.input-icon-wrap') || input;
+    const group = input.closest('.form-group');
+
+    if (errorMsg) {
+        input.classList.add('is-error');
+        input.classList.remove('is-success');
+        input.setAttribute('aria-invalid', 'true');
+        if (wrap) wrap.classList.add('has-error');
+        if (group) group.classList.add('has-error');
+        if (errEl) {
+            errEl.textContent = errorMsg;
+            errEl.classList.add('visible');
+        }
+        return false;
+    } else {
+        input.classList.remove('is-error');
+        if (val) {
+            input.classList.add('is-success');
+            input.classList.add('touched');
+        } else {
+            input.classList.remove('is-success');
+        }
+        input.setAttribute('aria-invalid', 'false');
+        if (wrap) wrap.classList.remove('has-error');
+        if (group) group.classList.remove('has-error');
+        if (errEl) {
+            errEl.textContent = '';
+            errEl.classList.remove('visible');
+        }
+        return true;
+    }
+}
+
+// Helper to quickly copy Phone to WhatsApp input with tactile confirmation & validation
 function copyPhoneToWhatsApp() {
-    const phone = document.getElementById('popupPhone');
-    const wa = document.getElementById('popupWhatsApp');
+    const phone = document.getElementById('popupPhone') || document.querySelector('input[name="phone"]');
+    const wa = document.getElementById('popupWhatsApp') || document.querySelector('input[name="whatsapp"]');
+    const copyBtns = document.querySelectorAll('.btn-copy-phone');
     if (phone && wa) {
         wa.value = phone.value;
         wa.focus();
+        wa.dataset.touched = 'true';
+        validateField(wa);
+        copyBtns.forEach(btn => {
+            const originalHTML = btn.innerHTML;
+            btn.classList.add('copied');
+            btn.innerHTML = '<i class="fas fa-check"></i> Copied';
+            setTimeout(() => {
+                btn.classList.remove('copied');
+                btn.innerHTML = originalHTML;
+            }, 1800);
+        });
     }
 }
 
@@ -269,6 +385,27 @@ function submitForm(e) {
     const form = e.target;
     if (form.dataset.submitting === 'true') return;
 
+    // Validate all interactive fields
+    const inputs = form.querySelectorAll('input:not([type="hidden"]), textarea, select');
+    let hasError = false;
+    let firstErrorField = null;
+
+    inputs.forEach(input => {
+        input.dataset.touched = 'true';
+        const isValid = validateField(input);
+        if (!isValid) {
+            hasError = true;
+            if (!firstErrorField) firstErrorField = input;
+        }
+    });
+
+    if (hasError) {
+        if (firstErrorField) {
+            firstErrorField.focus();
+        }
+        return;
+    }
+
     const btn = form.querySelector('button[type="submit"]');
     const originalContent = btn ? btn.innerHTML : '';
 
@@ -282,18 +419,10 @@ function submitForm(e) {
     const interest = formData.get('interest') || 'Abroad Education Loan';
     const message = (formData.get('message') || '').toString().trim();
 
-    if (phone.length < 10) {
-        const phoneInput = form.querySelector('input[name="phone"]');
-        if (phoneInput) {
-            phoneInput.focus();
-            phoneInput.reportValidity();
-        }
-        return;
-    }
-
     form.dataset.submitting = 'true';
     if (btn) {
         btn.disabled = true;
+        btn.setAttribute('data-state', 'loading');
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Connecting to Counselor...';
         btn.style.background = '#10b981';
     }
@@ -316,11 +445,22 @@ function submitForm(e) {
         closePopup();
         if (btn) {
             btn.innerHTML = originalContent || 'Submit Enquiry <i class="fas fa-arrow-right"></i>';
+            btn.removeAttribute('data-state');
             btn.style.background = '';
             btn.disabled = false;
         }
         form.dataset.submitting = 'false';
         form.reset();
+        inputs.forEach(input => {
+            input.classList.remove('is-success', 'is-error', 'touched');
+            input.removeAttribute('aria-invalid');
+            delete input.dataset.touched;
+            const err = input.closest('.form-group')?.querySelector('.field-error-msg');
+            if (err) {
+                err.textContent = '';
+                err.classList.remove('visible');
+            }
+        });
         // Seamlessly open WhatsApp lead thread in new tab so counselor receives immediate ping
         window.open(waUrl, '_blank');
     }, 1000);
@@ -389,23 +529,57 @@ function submitPartnerForm(e) {
     e.preventDefault();
     const form = e.target;
     if (form.dataset.submitting === 'true') return;
+
+    // Validate all interactive fields
+    const inputs = form.querySelectorAll('input:not([type="hidden"]), textarea, select');
+    let hasError = false;
+    let firstErrorField = null;
+
+    inputs.forEach(input => {
+        input.dataset.touched = 'true';
+        const isValid = validateField(input);
+        if (!isValid) {
+            hasError = true;
+            if (!firstErrorField) firstErrorField = input;
+        }
+    });
+
+    if (hasError) {
+        if (firstErrorField) {
+            firstErrorField.focus();
+        }
+        return;
+    }
+
     form.dataset.submitting = 'true';
 
     const btn = form.querySelector('button[type="submit"]');
     const originalText = btn ? btn.innerHTML : '';
     if (btn) {
         btn.disabled = true;
+        btn.setAttribute('data-state', 'loading');
         btn.innerHTML = '<i class="fas fa-check"></i> Application Received! Our Partnership Team Will Contact You.';
         btn.style.background = '#15803d';
     }
     setTimeout(() => {
         if (btn) {
             btn.innerHTML = originalText;
+            btn.removeAttribute('data-state');
             btn.style.background = '';
             btn.disabled = false;
         }
         form.dataset.submitting = 'false';
         form.reset();
+        inputs.forEach(input => {
+            input.classList.remove('is-success', 'is-error', 'touched');
+            input.removeAttribute('aria-invalid');
+            delete input.dataset.touched;
+            const err = input.closest('.form-group')?.querySelector('.field-error-msg');
+            if (err) {
+                err.textContent = '';
+                err.classList.remove('visible');
+            }
+        });
     }, 3500);
 }
 
@@ -414,6 +588,27 @@ function submitContactForm(e) {
     e.preventDefault();
     const form = e.target;
     if (form.dataset.submitting === 'true') return;
+
+    // Validate all interactive fields
+    const inputs = form.querySelectorAll('input:not([type="hidden"]), textarea, select');
+    let hasError = false;
+    let firstErrorField = null;
+
+    inputs.forEach(input => {
+        input.dataset.touched = 'true';
+        const isValid = validateField(input);
+        if (!isValid) {
+            hasError = true;
+            if (!firstErrorField) firstErrorField = input;
+        }
+    });
+
+    if (hasError) {
+        if (firstErrorField) {
+            firstErrorField.focus();
+        }
+        return;
+    }
 
     const btn = form.querySelector('button[type="submit"]');
     const originalText = btn ? btn.innerHTML : '';
@@ -425,18 +620,10 @@ function submitContactForm(e) {
     const whatsapp = (form.querySelector('input[name="whatsapp"]')?.value || phone).toString().replace(/[^0-9]/g, '');
     const message = (form.querySelector('textarea[name="message"]')?.value || form.querySelector('textarea')?.value || '').toString().trim();
 
-    if (phone.length < 10) {
-        const phoneInput = form.querySelector('input[type="tel"]');
-        if (phoneInput) {
-            phoneInput.focus();
-            phoneInput.reportValidity();
-        }
-        return;
-    }
-
     form.dataset.submitting = 'true';
     if (btn) {
         btn.disabled = true;
+        btn.setAttribute('data-state', 'loading');
         btn.innerHTML = '<i class="fas fa-check-circle"></i> Enquiry Sent! Connecting to Advisor...';
         btn.style.background = '#15803d';
     }
@@ -456,17 +643,59 @@ function submitContactForm(e) {
     setTimeout(() => {
         if (btn) {
             btn.innerHTML = originalText;
+            btn.removeAttribute('data-state');
             btn.style.background = '';
             btn.disabled = false;
         }
         form.dataset.submitting = 'false';
         form.reset();
+        inputs.forEach(input => {
+            input.classList.remove('is-success', 'is-error', 'touched');
+            input.removeAttribute('aria-invalid');
+            delete input.dataset.touched;
+            const err = input.closest('.form-group')?.querySelector('.field-error-msg');
+            if (err) {
+                err.textContent = '';
+                err.classList.remove('visible');
+            }
+        });
         window.open(waUrl, '_blank');
     }, 1200);
 }
 
 window.submitContactForm = submitContactForm;
 window.submitPartnerForm = submitPartnerForm;
+
+// --- Initialize Hallmark Form Validation on All Forms ---
+function initHallmarkFormEngine() {
+    document.querySelectorAll('form').forEach(form => {
+        form.querySelectorAll('input:not([type="hidden"]):not([type="submit"]):not([type="radio"]):not([type="checkbox"]), textarea, select').forEach(field => {
+            getOrCreateErrorElement(field);
+
+            field.addEventListener('blur', () => {
+                field.dataset.touched = 'true';
+                validateField(field);
+            });
+
+            field.addEventListener('input', () => {
+                if (field.dataset.touched === 'true') {
+                    validateField(field);
+                }
+            });
+
+            field.addEventListener('change', () => {
+                field.dataset.touched = 'true';
+                validateField(field);
+            });
+        });
+    });
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHallmarkFormEngine);
+} else {
+    initHallmarkFormEngine();
+}
 
 // --- Education Loan EMI Calculator ---
 function formatINR(val) {
