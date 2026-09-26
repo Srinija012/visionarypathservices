@@ -15,539 +15,55 @@
     <meta property="og:description" content="Compare 15+ premier banking and NBFC partners for domestic and international education loans with zero advisory fees.">
     <meta property="og:url" content="https://www.visionarypathservices.com/pages/partner-lenders.html">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.visionarypathservices.com/favicon.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.visionarypathservices.com/favicon.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/design-system.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/improvements.css">
-    <style>
-        /* ── PAGE HERO ────────────────────────── */
-        .page-hero {
-            background: linear-gradient(135deg, var(--navy) 0%, #1a4a8a 50%, var(--navy) 100%);
-            padding: 120px 0 70px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .page-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80') center/cover;
-            opacity: 0.10;
-        }
-        .page-hero-inner { position: relative; z-index: 1; }
-        .page-hero-eyebrow {
-            color: var(--green);
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: 14px;
-        }
-        .page-hero h1 {
-            color: var(--white);
-            font-size: clamp(1.9rem, 5vw, 3.2rem);
-            font-weight: 800;
-            margin-bottom: 16px;
-            line-height: 1.2;
-        }
-        .page-hero p {
-            color: rgba(255,255,255,0.82);
-            font-size: 1.05rem;
-            max-width: 600px;
-            margin: 0 auto 28px;
-            line-height: 1.7;
-        }
-        .hero-trust-pills {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .hero-trust-pill {
-            background: rgba(255,255,255,0.12);
-            border: 1px solid rgba(255,255,255,0.22);
-            color: var(--white);
-            border-radius: 50px;
-            padding: 7px 18px;
-            font-size: 0.82rem;
-            font-weight: 600;
-            backdrop-filter: blur(6px);
-            display: flex;
-            align-items: center;
-            gap: 7px;
-        }
-        .hero-trust-pill i { color: var(--green-light); }
+    
 
-        /* ── INFINITE MARQUEE STRIP ───────────── */
-        .marquee-section {
-            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-            padding: 44px 0 38px;
-            border-bottom: 1px solid var(--border-color);
-            overflow: hidden;
-            position: relative;
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "FinancialService",
+          "name": "Partner Lenders Network (15+ Banks & NBFCs)",
+          "url": "https://www.visionarypathservices.com/pages/partner-lenders.html",
+          "description": "Direct partner banking network of leading public banks, private lenders, and NBFCs for education financing.",
+          "provider": {
+            "@type": "FinancialService",
+            "name": "Visionary Path Services",
+            "url": "https://www.visionarypathservices.com"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.visionarypathservices.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Partner Lenders Network (15+ Banks & NBFCs)",
+              "item": "https://www.visionarypathservices.com/pages/partner-lenders.html"
+            }
+          ]
         }
-        .marquee-label {
-            text-align: center;
-            font-size: 0.82rem;
-            font-weight: 800;
-            letter-spacing: 0.08em;
-            color: var(--navy);
-            text-transform: uppercase;
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-        }
-        .marquee-label::before,
-        .marquee-label::after {
-            content: '';
-            display: inline-block;
-            width: 36px;
-            height: 1.5px;
-            background: linear-gradient(90deg, transparent, var(--green));
-        }
-        .marquee-label::after {
-            background: linear-gradient(90deg, var(--green), transparent);
-        }
-        .marquee-track {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            padding: 6px 0;
-            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-            mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-        }
-        .marquee-inner {
-            display: flex;
-            gap: 18px;
-            width: max-content;
-            animation: marquee-scroll 42s linear infinite;
-            will-change: transform;
-        }
-        .marquee-inner:hover { animation-play-state: paused; }
-        @keyframes marquee-scroll {
-            0%   { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .marquee-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 14px;
-            background: #ffffff;
-            border: 1.5px solid #e2e8f0;
-            border-radius: 14px;
-            padding: 10px 18px;
-            min-width: 220px;
-            height: 62px;
-            transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
-            cursor: pointer;
-            flex-shrink: 0;
-            box-shadow: 0 2px 8px rgba(13, 43, 94, 0.04);
-        }
-        .marquee-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 24px -2px rgba(13, 43, 94, 0.12), 0 0 0 1px rgba(0, 163, 137, 0.2);
-            border-color: var(--green);
-        }
-        .marquee-logo-wrap {
-            height: 38px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 145px;
-            flex-shrink: 0;
-        }
-        .marquee-logo-img {
-            max-height: 36px;
-            width: auto;
-            max-width: 140px;
-            object-fit: contain;
-            display: block;
-            transition: transform 0.25s ease;
-        }
-        .marquee-card:hover .marquee-logo-img {
-            transform: scale(1.04);
-        }
-        .marquee-card-badge {
-            font-size: 0.68rem;
-            font-weight: 700;
-            letter-spacing: 0.3px;
-            text-transform: uppercase;
-            padding: 3px 8px;
-            border-radius: 6px;
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-        .badge-nbfc {
-            background: #ecfdf5;
-            color: #065f46;
-            border: 1px solid #a7f3d0;
-        }
-        .badge-psu {
-            background: #eff6ff;
-            color: #1e40af;
-            border: 1px solid #bfdbfe;
-        }
-        .badge-pvt {
-            background: #f1f5f9;
-            color: #0a1d37;
-            border: 1px solid #cbd5e1;
-        }
-        .badge-intl {
-            background: #eff6ff;
-            color: #1a56db;
-            border: 1px solid #bfdbfe;
-        }
-
-        /* ── LENDERS GRID SECTION ─────────────── */
-        .lenders-section { padding: 80px 0; background: var(--bg-card); }
-        .section-eyebrow {
-            color: var(--green);
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-        .section-heading {
-            color: var(--navy);
-            font-size: clamp(1.6rem, 3vw, 2.4rem);
-            font-weight: 800;
-            margin-bottom: 14px;
-        }
-        .section-sub {
-            color: var(--text-muted);
-            font-size: 1rem;
-            max-width: 600px;
-            margin: 0 auto 52px;
-            line-height: 1.7;
-        }
-        .lender-category { margin-bottom: 56px; }
-        .lender-category:last-child { margin-bottom: 0; }
-        .category-header {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 28px;
-        }
-        .category-tag {
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            padding: 6px 14px;
-            border-radius: 6px;
-            text-transform: uppercase;
-            color: var(--white);
-            white-space: nowrap;
-        }
-        .ct-green  { background: var(--green); }
-        .ct-navy   { background: var(--navy); }
-        .ct-slate  { background: var(--slate); }
-        .category-line { flex: 1; height: 1px; background: var(--border-color); }
-        .lenders-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-            gap: 18px;
-        }
-        .lender-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 28px 20px;
-            text-align: center;
-            border: 1.5px solid #e8f0fe;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .lender-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--navy), var(--green));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-        .lender-card:hover::before { transform: scaleX(1); }
-        .lender-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 40px rgba(13,43,94,0.14);
-            border-color: var(--green);
-        }
-        .lender-logo-wrap {
-            height: 54px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 16px;
-            padding: 4px;
-        }
-        .lender-logo-img {
-            max-height: 48px;
-            max-width: 155px;
-            width: auto;
-            object-fit: contain;
-            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .lender-card:hover .lender-logo-img {
-            transform: scale(1.08);
-        }
-        .lender-name { color: var(--navy); font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
-        .lender-type { color: var(--slate-300); font-size: 0.77rem; }
-
-        /* ── LENDER DETAIL CARDS (Poonawalla style) ── */
-        .lenders-info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-            gap: 24px;
-        }
-        .lender-info-card {
-            background: #fff;
-            border-radius: 22px;
-            border: 1.5px solid #e4ecfb;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.32s cubic-bezier(0.16,1,0.3,1), box-shadow 0.32s ease, border-color 0.32s ease;
-            box-shadow: 0 4px 18px rgba(13,43,94,0.07);
-        }
-        .lender-info-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 22px 52px rgba(13,43,94,0.16);
-            border-color: var(--green);
-        }
-        /* header gradient band */
-        .lic-header {
-            background: linear-gradient(180deg, #d8ebfd 0%, #edf6fd 60%, #e1effd 100%);
-            padding: 20px 20px 18px;
-            border-bottom: 1.5px solid #dce9f7;
-            position: relative;
-            overflow: hidden;
-        }
-        .lic-illustration {
-            position: absolute;
-            right: 8px;
-            top: 10px;
-            width: 100px;
-            height: 90px;
-            pointer-events: none;
-            z-index: 1;
-        }
-        .lic-header-content {
-            position: relative;
-            z-index: 2;
-            max-width: calc(100% - 90px);
-        }
-        .lic-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 8px;
-        }
-        .lic-logo-wrap {
-            width: 52px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fff;
-            border-radius: 10px;
-            padding: 4px 6px;
-            flex-shrink: 0;
-            box-shadow: 0 2px 8px rgba(13,43,94,0.10);
-        }
-        .lic-logo {
-            max-height: 30px;
-            max-width: 44px;
-            object-fit: contain;
-            display: block;
-        }
-        .lic-name {
-            color: var(--navy);
-            font-weight: 800;
-            font-size: 0.98rem;
-            line-height: 1.25;
-        }
-        .lic-tagline {
-            color: #6b8ab5;
-            font-size: 0.72rem;
-            font-weight: 500;
-            margin-top: 2px;
-        }
-        .lic-quote {
-            color: #27496d;
-            font-size: 0.76rem;
-            font-weight: 500;
-            line-height: 1.35;
-            margin: 8px 0 12px;
-        }
-        /* dark royal navy rate pill */
-        .lic-rate-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: #003882;
-            color: #fff;
-            font-size: 0.8rem;
-            font-weight: 700;
-            padding: 7px 16px;
-            border-radius: 50px;
-            letter-spacing: 0.1px;
-            box-shadow: 0 4px 12px rgba(0,56,130,0.22);
-            white-space: nowrap;
-        }
-        .lic-rate-pill i { color: #6ee7b7; font-size: 0.72rem; }
-        /* detail rows */
-        .lic-body {
-            padding: 8px 20px 4px;
-            flex: 1;
-        }
-        .lic-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 11px 0;
-            border-bottom: 1px solid #f0f4f9;
-        }
-        .lic-row:last-child { border-bottom: none; }
-        .lic-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: #e0edfe;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            color: #0284c7;
-            font-size: 0.92rem;
-        }
-        .lic-label {
-            color: #4b627f;
-            font-size: 0.84rem;
-            font-weight: 600;
-            white-space: nowrap;
-            flex: 0 0 125px;
-        }
-        .lic-value {
-            color: #0b2545;
-            font-weight: 700;
-            font-size: 0.85rem;
-            text-align: right;
-            flex: 1;
-            line-height: 1.35;
-        }
-        /* CTA button inside footer */
-        .lic-footer {
-            padding: 12px 20px 20px;
-        }
-        .lic-cta {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: #0060cc;
-            color: #fff;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 0.93rem;
-            border: none;
-            border-radius: 12px;
-            padding: 13px 20px;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            width: 100%;
-            box-shadow: 0 4px 14px rgba(0,96,204,0.25);
-            letter-spacing: 0.1px;
-        }
-        .lic-cta:hover {
-            background: #004eb3;
-            box-shadow: 0 6px 18px rgba(0,96,204,0.35);
-            transform: translateY(-1px);
-            gap: 14px;
-        }
-        .lic-cta i { font-size: 0.9rem; }
-
-        /* ── STATS BAR ────────────────────────── */
-        .stats-bar { background: var(--navy); padding: 52px 0; }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 0;
-        }
-        .stat-item {
-            text-align: center;
-            padding: 20px 24px;
-            border-right: 1px solid rgba(255,255,255,0.1);
-        }
-        .stat-item:last-child { border-right: none; }
-        .stat-item-icon {
-            font-size: 1.8rem;
-            color: var(--green-light);
-            margin-bottom: 12px;
-        }
-        .stat-item-label {
-            color: rgba(255,255,255,0.85);
-            font-size: 0.92rem;
-            font-weight: 500;
-            line-height: 1.5;
-        }
-
-        /* ── CTA BAR ──────────────────────────── */
-        .cta-bar {
-            background: linear-gradient(135deg, var(--green), #0d7a3a);
-            padding: 64px 0;
-            text-align: center;
-        }
-        .cta-bar h2 {
-            color: var(--white);
-            font-size: clamp(1.4rem, 3vw, 2.1rem);
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-        .cta-bar p {
-            color: rgba(255,255,255,0.85);
-            font-size: 1rem;
-            margin-bottom: 28px;
-        }
-        .cta-btns {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* ── RESPONSIVE ───────────────────────── */
-        @media (max-width: 768px) {
-            .page-hero { padding: 100px 0 56px; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-            .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.1); }
-            .stat-item:last-child { border-bottom: none; }
-            .lenders-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
-            .lenders-info-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
-            .lender-logo-wrap { height: 44px; margin-bottom: 10px; }
-            .lender-logo-wrap { height: 44px; margin-bottom: 10px; }
-            .lender-logo-img { max-height: 40px; max-width: 130px; }
-            .marquee-card { min-width: 185px; height: 54px; padding: 8px 12px; gap: 10px; }
-            .marquee-logo-wrap { height: 32px; max-width: 115px; }
-            .marquee-logo-img { max-height: 28px; max-width: 110px; }
-            .marquee-card-badge { font-size: 0.62rem; padding: 2px 6px; }
-        }
-        @media (max-width: 480px) {
-            .stats-grid { grid-template-columns: 1fr; }
-            .stat-item { border-right: none !important; }
-            .hero-trust-pills { gap: 8px; }
-            .hero-trust-pill { font-size: 0.76rem; padding: 6px 13px; }
-        }
-    </style>
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -562,7 +78,7 @@
             <span class="top-bar-dash">—</span> Your Education Goals, Our Guidance
         </div>
         <div class="top-bar-right">
-            <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact:- 9063703038</a>
+            <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact: 9063703038</a>
             <span class="top-sep">|</span>
             <a href="https://instagram.com/visionarypathservices" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <span class="top-sep">|</span>
@@ -725,18 +241,101 @@
 
     <!-- HERO -->
     <section class="page-hero" id="mainContent">
-        <div class="container page-hero-inner">
-            <nav aria-label="Breadcrumb" class="breadcrumb">
-                <a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <span>Partner Lenders</span>
-            </nav>
-            <p class="page-hero-eyebrow">OUR LENDING NETWORK</p>
-            <h1>Trusted Partners for Your<br><span style="color:var(--green-light)">Education Journey</span></h1>
-            <p>We work with India's leading banks and NBFCs to bring you the best education loan options — matched to your profile.</p>
-            <div class="hero-trust-pills">
-                <span class="hero-trust-pill"><i class="fas fa-building-columns"></i> 15+ Partner Institutions</span>
-                <span class="hero-trust-pill"><i class="fas fa-shield-alt"></i> RBI Regulated Banks</span>
-                <span class="hero-trust-pill"><i class="fas fa-indian-rupee-sign"></i> Loans up to ₹2 Cr</span>
-                <span class="hero-trust-pill"><i class="fas fa-handshake"></i> 100% Free Advisory</span>
+        <div class="container">
+            <div class="page-hero-grid">
+                <!-- Left Content -->
+                <div class="page-hero-content" data-aos="fade-right">
+                    <nav aria-label="Breadcrumb" class="breadcrumb">
+                        <a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <span>Partner Lenders</span>
+                    </nav>
+                    <div class="brand-eyebrow">
+                        <span class="pulse-dot"></span>
+                        <span>15+ PREMIER FINANCIAL INSTITUTIONS</span>
+                    </div>
+                    <h1>India's Leading Banks &amp; NBFC <span class="green-highlight">Lending Network</span></h1>
+                    <p class="hero-desc">We work directly with India's most prestigious public sector banks, premier private lenders, and specialized education NBFCs to secure optimal interest rates and rapid sanctions for your higher education journey.</p>
+
+                    <div class="hero-action-group">
+                        <button class="btn btn-hero-primary" onclick="openPopup()">
+                            <span>Find Your Best Lender</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <a href="partner-with-us.html" class="btn btn-hero-secondary">
+                            <i class="fas fa-handshake"></i>
+                            <span>Become a Partner</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Strip -->
+                    <div class="hero-trust-strip">
+                        <div class="hero-trust-item">
+                            <i class="fas fa-building-columns trust-icon-blue"></i>
+                            <span><strong>15+</strong> Partner Banks</span>
+                        </div>
+                        <span class="hero-trust-sep">•</span>
+                        <div class="hero-trust-item">
+                            <i class="fas fa-shield-halved trust-icon-green"></i>
+                            <span>RBI Regulated Institutions</span>
+                        </div>
+                        <span class="hero-trust-sep">•</span>
+                        <div class="hero-trust-item">
+                            <i class="fas fa-check-circle trust-icon-green"></i>
+                            <span>100% Free Advisory</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Snapshot Card -->
+                <div class="page-hero-visual" data-aos="fade-left">
+                    <div class="hero-snapshot-card">
+                        <div class="snapshot-header">
+                            <div class="snapshot-badge">
+                                <span class="snapshot-pulse-dot"></span>
+                                <span>Multi-Lender Portal</span>
+                            </div>
+                            <span class="snapshot-highlight">Direct Partner Desks</span>
+                        </div>
+
+                        <div class="snapshot-stats-grid">
+                            <div class="snapshot-stat">
+                                <span class="snapshot-stat-label">PSU Banks</span>
+                                <span class="snapshot-stat-val">8.15%–9.50%</span>
+                                <span class="snapshot-stat-note">SBI, BoB, Canara, Union</span>
+                            </div>
+                            <div class="snapshot-stat">
+                                <span class="snapshot-stat-label">Private Banks</span>
+                                <span class="snapshot-stat-val">9.25%–11.25%</span>
+                                <span class="snapshot-stat-note">ICICI, Axis, IDFC FIRST</span>
+                            </div>
+                            <div class="snapshot-stat">
+                                <span class="snapshot-stat-label">Ed-Fin NBFCs</span>
+                                <span class="snapshot-stat-val">Up to ₹1 Cr Collateral-Free</span>
+                                <span class="snapshot-stat-note">HDFC Credila, Avanse, InCred</span>
+                            </div>
+                            <div class="snapshot-stat">
+                                <span class="snapshot-stat-label">International Lenders</span>
+                                <span class="snapshot-stat-val">USD / GBP</span>
+                                <span class="snapshot-stat-note">Prodigy Finance, MPOWER</span>
+                            </div>
+                        </div>
+
+                        <div class="snapshot-footer">
+                            <div class="snapshot-lenders">
+                                <span class="lenders-label">Institutional Status:</span>
+                                <div class="lenders-pill-row">
+                                    <span class="lender-tag">Public Sector</span>
+                                    <span class="lender-tag">Private Sector</span>
+                                    <span class="lender-tag">RBI-NBFC</span>
+                                    <span class="lender-tag">Cross-Border</span>
+                                </div>
+                            </div>
+                            <div class="snapshot-status">
+                                <i class="fas fa-lock"></i>
+                                <span>Zero Commission Deducted from Student</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -2491,12 +2090,52 @@
     </div>
 
     <!-- VPS_FOOTER_START -->
-<!-- INSTITUTIONAL REGULATORY DISCLAIMER STRIP -->
-<div class="site-disclaimer-strip">
+<!-- INSTITUTIONAL REGULATORY DISCLAIMER ACCORDION / DROPDOWN -->
+<div class="site-disclaimer-wrap">
     <div class="container">
-        <p>
-            <strong>Regulatory Transparency &amp; Operating Model:</strong> Visionary Path Services operates as an independent education loan consulting and assistance entity. We do not act as a direct lender, banking institution, or Non-Banking Financial Company (NBFC). We do not collect loan repayments, nor do we issue loan sanctions directly. All loan sanctions, interest rate assignments, margin money decisions, and disbursement schedules remain at the sole and independent discretion of our partner RBI-regulated Scheduled Commercial Banks and NBFCs. Services are subject to credit verification, applicant document clearance, and institutional guidelines. <a href="../pages/disclaimer.html">Read Full Regulatory Disclaimer</a>.
-        </p>
+        <details class="disclaimer-accordion">
+            <summary class="disclaimer-trigger">
+                <div class="disclaimer-trigger-left">
+                    <span class="disclaimer-badge">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>Regulatory Notice</span>
+                    </span>
+                    <span class="disclaimer-title">Operating Model &amp; Regulatory Disclosures</span>
+                    <span class="disclaimer-hint">• Independent Advisory Entity (Non-Lender Notice)</span>
+                </div>
+                <div class="disclaimer-toggle-pill">
+                    <span>View Regulatory Disclosure</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </summary>
+            <div class="disclaimer-content">
+                <div class="disclaimer-grid">
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-icon">
+                            <i class="fas fa-building-columns"></i>
+                        </div>
+                        <p class="disclaimer-item-text">
+                            <strong>Independent Advisory &amp; Non-Lender Status:</strong> Visionary Path Services operates exclusively as an education loan consulting and facilitation advisory. We are not a bank, Non-Banking Financial Company (NBFC), or direct credit provider. We do not issue loan sanctions directly, nor do we collect loan repayments or processing commissions from students.
+                        </p>
+                    </div>
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-icon">
+                            <i class="fas fa-scale-balanced"></i>
+                        </div>
+                        <p class="disclaimer-item-text">
+                            <strong>Lender Discretion &amp; Verification:</strong> All loan approvals, sanction limits, applicable interest rates, margin money requirements, and disbursement timelines remain at the sole and independent discretion of our partner RBI-regulated Scheduled Commercial Banks and NBFCs, subject to individual creditworthiness, CIBIL verification, and institutional eligibility guidelines.
+                        </p>
+                    </div>
+                </div>
+                <div class="disclaimer-footer-bar">
+                    <span class="disclaimer-footer-note"><i class="fas fa-check-circle" style="color:var(--green); margin-right:5px;"></i> 100% Free Consultation for Students &amp; Families</span>
+                    <a href="../pages/disclaimer.html" class="disclaimer-link-btn">
+                        <span>Read Full Regulatory &amp; Financial Disclaimer</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </details>
     </div>
 </div>
 
@@ -2601,28 +2240,77 @@
             </div>
             <div class="popup-right">
                 <div class="popup-form-header"><h4>Get Free Loan Assessment</h4><p>Share your details to connect with a senior education loan advisor</p></div>
-                <form class="popup-form" onsubmit="submitForm(event)">
+                                <form class="popup-form" onsubmit="submitForm(event)">
                     <div class="form-row name-row">
-                        <div class="form-group"><label>First Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="firstName" placeholder="e.g. Aarav" required></div></div>
-                        <div class="form-group"><label>Last Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="lastName" placeholder="e.g. Sharma" required></div></div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group"><label>Phone Number <span class="req">*</span></label><div class="input-icon-wrap phone-wrap"><span class="country-prefix"><i class="fas fa-phone"></i> +91</span><input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" required></div></div>
-                        <div class="form-group"><div class="label-with-action"><label>WhatsApp Number <span class="req">*</span></label><button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()">Same as phone</button></div><div class="input-icon-wrap whatsapp-inp"><i class="fab fa-whatsapp"></i><input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" required></div></div>
-                    </div>
-                    <div class="form-group"><label>Email Address <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="e.g. aarav.sharma@gmail.com" required></div></div>
-                    <div class="form-group mb-tight">
-                        <label class="form-label-regular">I'm interested in</label>
-                        <div class="interest-options">
-                            <label class="interest-opt"><input type="radio" name="interest" value="abroad" checked><span class="custom-radio"></span><span class="opt-label"><i class="fas fa-globe-americas"></i> Abroad Education Loan</span></label>
-                            <label class="interest-opt"><input type="radio" name="interest" value="domestic"><span class="custom-radio"></span><span class="opt-label"><i class="fas fa-graduation-cap"></i> Domestic Education Loan</span></label>
-                            <label class="interest-opt"><input type="radio" name="interest" value="mbbs"><span class="custom-radio"></span><span class="opt-label"><i class="fas fa-user-md"></i> MBBS Education Loan</span></label>
-                            <label class="interest-opt"><input type="radio" name="interest" value="other"><span class="custom-radio"></span><span class="opt-label"><i class="fas fa-coins"></i> Other Loan Options</span></label>
+                        <div class="form-group">
+                            <label for="popupFirstName">First Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupFirstName" name="firstName" placeholder="e.g. Aarav" aria-label="First Name" required autocomplete="given-name"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="popupLastName">Last Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupLastName" name="lastName" placeholder="e.g. Sharma" aria-label="Last Name" required autocomplete="family-name"></div>
                         </div>
                     </div>
-                    <div class="form-group mb-tight"><label class="form-label-regular">Additional Information (Optional)</label><div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea name="message" placeholder="Preferred bank/NBFC, university, loan amount needed..." rows="2"></textarea></div></div>
-                    <button type="submit" class="btn btn-submit-enquiry"><span>Submit Enquiry</span><i class="fas fa-arrow-right"></i></button>
-                    <div class="popup-safe"><i class="fas fa-shield-halved"></i><span>100% Confidential • Zero Spam Guarantee • Free Consultation</span></div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="popupPhone">Phone Number <span class="req">*</span></label>
+                            <div class="input-icon-wrap phone-wrap">
+                                <span class="country-prefix"><i class="fas fa-phone"></i> +91</span>
+                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit Phone Number" required autocomplete="tel-national">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="label-with-action">
+                                <label for="popupWhatsApp">WhatsApp Number <span class="req">*</span></label>
+                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()" aria-label="Copy Phone Number to WhatsApp Number">Same as phone</button>
+                            </div>
+                            <div class="input-icon-wrap whatsapp-inp">
+                                <i class="fab fa-whatsapp"></i>
+                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit WhatsApp Number" required autocomplete="tel-national">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="popupEmail">Email Address <span class="req">*</span></label>
+                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" id="popupEmail" name="email" placeholder="e.g. aarav.sharma@gmail.com" aria-label="Email Address" required autocomplete="email"></div>
+                    </div>
+                    <div class="form-group mb-tight">
+                        <span class="form-label-regular" id="popupInterestLabel">I'm interested in</span>
+                        <div class="interest-options" role="radiogroup" aria-labelledby="popupInterestLabel">
+                            <label class="interest-opt" for="popupInterestAbroad">
+                                <input type="radio" id="popupInterestAbroad" name="interest" value="abroad" aria-label="Abroad Education Loan" checked>
+                                <span class="custom-radio"></span>
+                                <span class="opt-label"><i class="fas fa-globe-americas"></i> Abroad Education Loan</span>
+                            </label>
+                            <label class="interest-opt" for="popupInterestDomestic">
+                                <input type="radio" id="popupInterestDomestic" name="interest" value="domestic" aria-label="Domestic Education Loan">
+                                <span class="custom-radio"></span>
+                                <span class="opt-label"><i class="fas fa-graduation-cap"></i> Domestic Education Loan</span>
+                            </label>
+                            <label class="interest-opt" for="popupInterestMbbs">
+                                <input type="radio" id="popupInterestMbbs" name="interest" value="mbbs" aria-label="MBBS Education Loan">
+                                <span class="custom-radio"></span>
+                                <span class="opt-label"><i class="fas fa-user-md"></i> MBBS Education Loan</span>
+                            </label>
+                            <label class="interest-opt" for="popupInterestOther">
+                                <input type="radio" id="popupInterestOther" name="interest" value="other" aria-label="Other Loan Options">
+                                <span class="custom-radio"></span>
+                                <span class="opt-label"><i class="fas fa-coins"></i> Other Loan Options</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group mb-tight">
+                        <label for="popupMessage" class="form-label-regular">Additional Information (Optional)</label>
+                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea id="popupMessage" name="message" placeholder="Target country, university, loan amount needed..." aria-label="Additional Information" rows="2"></textarea></div>
+                    </div>
+                    <button type="submit" class="btn btn-submit-enquiry">
+                        <span>Submit Enquiry</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <div class="popup-safe">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>100% Confidential • Zero Spam Guarantee • Free Consultation</span>
+                    </div>
                 </form>
             </div>
         </div>

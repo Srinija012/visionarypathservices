@@ -57,6 +57,9 @@
     function initScrollReveals() {
         if (prefersReducedMotion) return;
 
+        // NOTE: AOS library is NOT used — this IntersectionObserver system handles
+        // all scroll-based reveals site-wide via .motion-init / .motion-revealed classes.
+
         // Candidate sections to animate
         const revealTargets = document.querySelectorAll(`
             .pan-card,
@@ -67,8 +70,18 @@
             .mbbs-card,
             .lender-card,
             .process-step,
+            .process-card,
             .loan-card,
-            .faq-item
+            .loan-option-card,
+            .service-card,
+            .who-card,
+            .step-card,
+            .docs-card,
+            .faq-item,
+            .blog-card,
+            .contact-method-card,
+            .country-stat-box,
+            .uni-tag
         `);
 
         if (!revealTargets.length) return;
@@ -100,7 +113,14 @@
             .lenders-grid,
             .core-focus-grid,
             .process-steps,
-            .loan-grid
+            .process-grid,
+            .loan-grid,
+            .services-grid,
+            .loan-types-grid,
+            .blog-grid,
+            .contact-methods-list,
+            .country-stats-grid,
+            .universities-grid
         `);
 
         cardContainers.forEach(container => {
@@ -120,6 +140,7 @@
             }
         });
     }
+
 
     // 4. Subtle Tactile Microinteractions (Clean CSS-driven elevation, no dizzying 3D tilts)
     function initCardTilt() {

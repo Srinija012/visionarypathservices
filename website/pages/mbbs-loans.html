@@ -14,106 +14,54 @@
     <meta property="og:description" content="Tailored education financing solutions for MBBS students in India and top medical colleges abroad with flexible repayment structures.">
     <meta property="og:url" content="https://www.visionarypathservices.com/pages/mbbs-loans.html">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.visionarypathservices.com/favicon.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.visionarypathservices.com/favicon.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/design-system.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/improvements.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <style>
-        .page-hero { background: linear-gradient(135deg, var(--navy) 0%, #1a3a7e 50%, #0d3d1e 100%); padding: 120px 0 70px; text-align: center; position: relative; overflow: hidden; }
-        .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&q=80') center/cover; opacity: 0.13; }
-        .page-hero-inner { position: relative; z-index: 1; }
-        .page-hero-eyebrow { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px; }
-        .page-hero h1 { color: var(--white); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 16px; }
-        .page-hero p { color: rgba(255,255,255,0.82); font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; line-height: 1.7; }
-        .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-        .section-label { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
-        .section-title { color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 14px; }
-        .section-sub { color: var(--text-muted); font-size: 1rem; max-width: 620px; margin: 0 auto 50px; line-height: 1.7; }
-        .overview-section { padding: 80px 0; background: var(--bg-card); }
-        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        @media(max-width:768px){.two-col{grid-template-columns:1fr;}}
-        .intro-img { border-radius: 20px; overflow: hidden; box-shadow: 0 16px 48px rgba(13,43,94,0.18); }
-        .intro-img img { width: 100%; height: 380px; object-fit: cover; display: block; }
-        .intro-text h2 { color: var(--navy); font-size: clamp(1.4rem,3vw,2rem); font-weight: 800; margin-bottom: 16px; }
-        .intro-text p { color: var(--text-muted); font-size: 0.97rem; line-height: 1.75; margin-bottom: 20px; }
-        .check-list { list-style: none; padding: 0; margin: 0 0 28px; }
-        .check-list li { display: flex; align-items: flex-start; gap: 10px; color: var(--slate); font-size: 0.95rem; padding: 8px 0; border-bottom: 1px solid #f1f5f9; }
-        .check-list li i { color: var(--green); margin-top: 3px; flex-shrink: 0; }
-        .mbbs-options-section { padding: 80px 0; background: var(--white); }
-        .mbbs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 50px; }
-        .mbbs-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 36px 30px;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-            box-shadow: var(--shadow-xs);
-            text-align: left;
+    <link rel="stylesheet" href="../css/improvements.css">    
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "FinancialProduct",
+          "name": "MBBS Education Loans (India & Abroad)",
+          "url": "https://www.visionarypathservices.com/pages/mbbs-loans.html",
+          "description": "Comprehensive medical education financing covering government, private, and recognized international medical universities.",
+          "provider": {
+            "@type": "FinancialService",
+            "name": "Visionary Path Services",
+            "url": "https://www.visionarypathservices.com"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.visionarypathservices.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "MBBS Education Loans (India & Abroad)",
+              "item": "https://www.visionarypathservices.com/pages/mbbs-loans.html"
+            }
+          ]
         }
-        .mbbs-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            border-radius: 16px 16px 0 0;
-        }
-        .mbbs-card.india::before { background: var(--navy); }
-        .mbbs-card.abroad::before { background: var(--green); }
-        .mbbs-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-            border-color: #cbd5e1;
-        }
-        .mbbs-card .badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 6px;
-            letter-spacing: 0.5px;
-        }
-        .mbbs-card.india .badge { background: #eff6ff; color: var(--navy); border: 1px solid #bfdbfe; }
-        .mbbs-card.abroad .badge { background: #ecfdf5; color: var(--green-dark); border: 1px solid #a7f3d0; }
-        .mbbs-card .card-icon {
-            font-size: 2rem;
-            margin-bottom: 16px;
-            width: 52px;
-            height: 52px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .mbbs-card.india .card-icon { background: #eff6ff; color: var(--navy); }
-        .mbbs-card.abroad .card-icon { background: #ecfdf5; color: var(--green); }
-        .mbbs-card h3 { color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 12px; }
-        .mbbs-card p { color: #475569; font-size: 0.94rem; line-height: 1.65; margin-bottom: 20px; }
-        .mbbs-card ul { list-style: none; padding: 0; margin: 0; }
-        .mbbs-card ul li { color: #334155; font-size: 0.9rem; padding: 7px 0; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #f1f5f9; }
-        .mbbs-card ul li:last-child { border-bottom: none; }
-        .mbbs-card ul li i { color: var(--green); font-size: 0.8rem; }
-        .process-section { padding: 80px 0; background: var(--bg-card); }
-        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 50px; }
-        .process-step { background: var(--white); border-radius: 16px; padding: 28px 22px; border: 1.5px solid #e8f0fe; transition: all 0.3s; }
-        .process-step:hover { box-shadow: 0 8px 32px rgba(13,43,94,0.12); transform: translateY(-4px); border-color: var(--green); }
-        .step-icon { width: 56px; height: 56px; background: linear-gradient(135deg, #e8f4ee, #c6e8d6); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 16px; }
-        .process-step h3 { color: var(--navy); font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
-        .process-step p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; }
-        .cta-section { padding: 80px 0; background: linear-gradient(135deg, var(--navy), #1a4a8a); text-align: center; }
-        .cta-section h2 { color: var(--white); font-size: clamp(1.5rem,3vw,2.2rem); font-weight: 800; margin-bottom: 12px; }
-        .cta-section p { color: rgba(255,255,255,0.82); margin-bottom: 32px; }
-        .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    </style>
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -128,7 +76,7 @@
             <span class="top-bar-dash">—</span> Your Education Goals, Our Guidance
         </div>
         <div class="top-bar-right">
-            <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact:- 9063703038</a>
+            <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact: 9063703038</a>
             <span class="top-sep">|</span>
             <a href="https://instagram.com/visionarypathservices" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <span class="top-sep">|</span>
@@ -292,13 +240,94 @@
     <!-- HERO -->
     <section class="page-hero" id="mainContent">
         <div class="container page-hero-inner">
-            <nav aria-label="Breadcrumb" class="breadcrumb"><a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <a href="services.html">Services</a> <span class="breadcrumb-sep">/</span> <span>MBBS Loans</span></nav>
-            <p class="page-hero-eyebrow" data-aos="fade-up">MEDICAL ASPIRANTS</p>
-            <h1 data-aos="fade-up" data-aos-delay="100">MBBS <span style="color:var(--green)">Loans</span></h1>
-            <p data-aos="fade-up" data-aos-delay="200">Specialized support for MBBS aspirants in India and overseas. We guide you to the right loan option so you can focus on your medical career.</p>
-            <div class="hero-btns" data-aos="fade-up" data-aos-delay="300">
-                <button class="btn btn-primary btn-lg" onclick="openPopup()">Check Eligibility <i class="fas fa-arrow-right"></i></button>
-                <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+            <div class="page-hero-grid">
+                <div class="page-hero-content" data-aos="fade-right">
+                    <nav aria-label="Breadcrumb" class="breadcrumb">
+                        <a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <a href="services.html">Services</a> <span class="breadcrumb-sep">/</span> <span>MBBS Loans</span>
+                    </nav>
+                    <div class="brand-eyebrow">
+                        <span class="pulse-dot"></span>
+                        <span>SPECIALIZED MEDICAL DEGREE FINANCING</span>
+                    </div>
+                    <h1>
+                        MBBS <span class="green-highlight">Education Loans</span> in India &amp; Abroad
+                    </h1>
+                    <p class="page-hero-lead">
+                        Dedicated financing for government medical colleges, deemed universities, and MCI/NMC-recognized international medical institutions with 100% free guidance.
+                    </p>
+                    <div class="hero-btns">
+                        <button class="btn btn-hero-primary" onclick="openPopup()">
+                            Check My Eligibility <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn btn-hero-secondary">
+                            <i class="fab fa-whatsapp"></i> Talk to Expert
+                        </a>
+                    </div>
+                    <div class="hero-trust-strip">
+                        <div class="hero-trust-item">
+                            <i class="fas fa-shield-halved trust-icon-green"></i>
+                            <span><strong>100% Free</strong> Advisory</span>
+                        </div>
+                        <span class="hero-trust-sep">•</span>
+                        <div class="hero-trust-item">
+                            <i class="fas fa-building-columns trust-icon-blue"></i>
+                            <span><strong>15+</strong> Partner Lenders</span>
+                        </div>
+                        <span class="hero-trust-sep">•</span>
+                        <div class="hero-trust-item">
+                            <i class="fas fa-lock trust-icon-green"></i>
+                            <span>Safe &amp; Confidential</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Snapshot Card (Landing Page Grade Visual) -->
+                <div class="page-hero-visual" data-aos="fade-left">
+                    <div class="hero-snapshot-card">
+                        <div class="snapshot-header">
+                            <div class="snapshot-badge">
+                                <span class="snapshot-pulse-dot"></span>
+                                <span>Doctoral &amp; Medical Desk</span>
+                            </div>
+                            <span class="snapshot-highlight">Zero Advisory Fees</span>
+                        </div>
+
+                        <div class="snapshot-stats-grid">
+                            <div class="snapshot-stat">
+                                <span class="snapshot-stat-label">Max MBBS Limit</span>
+                                <span class="snapshot-stat-val">Up to ₹1.5 Cr</span>
+                                <span class="snapshot-stat-note">Tuition + Clinicals</span>
+                            </div>
+                            <div class="snapshot-stat">
+                                <span class="snapshot-stat-label">Global Coverage</span>
+                                <span class="snapshot-stat-val">India &amp; Abroad</span>
+                                <span class="snapshot-stat-note">NMC / WHO Listed</span>
+                            </div>
+                            <div class="snapshot-stat">
+                                <span class="snapshot-stat-label">Starting ROI</span>
+                                <span class="snapshot-stat-val">8.75% p.a.</span>
+                                <span class="snapshot-stat-note">Medical Concessions</span>
+                            </div>
+                            <div class="snapshot-stat">
+                                <span class="snapshot-stat-label">Moratorium</span>
+                                <span class="snapshot-stat-val">Up to 6 Yrs</span>
+                                <span class="snapshot-stat-note">Course + Internship</span>
+                            </div>
+                        </div>
+
+                        <div class="snapshot-lenders-footer">
+                            <span class="snapshot-footer-label">Partner Medical Lenders:</span>
+                            <div class="snapshot-lender-pills">
+                                <span class="snap-pill">SBI</span>
+                                <span class="snap-pill">Bank of Baroda</span>
+                                <span class="snap-pill">Avanse</span>
+                                <span class="snap-pill">Canara Bank</span>
+                                <span class="snap-pill">Auxilo</span>
+                                <span class="snap-pill">InCred</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -309,7 +338,7 @@
             <div class="two-col">
                 <div class="intro-text" data-aos="fade-right">
                     <p class="section-label">MEDICAL EDUCATION FINANCING</p>
-                    <h2>Support for Every <span style="color:var(--green)">MBBS Aspirant</span></h2>
+                    <h2>Support for Every <span class="green-highlight">MBBS Aspirant</span></h2>
                     <p>Medical education requires significant investment. We specialize in helping MBBS students navigate the loan landscape — whether you're pursuing a government medical college, private medical college in India, or an MBBS degree abroad.</p>
                     <ul class="check-list">
                         <li><i class="fas fa-check-circle"></i> Loans for government &amp; private medical colleges</li>
@@ -335,7 +364,7 @@
     <section class="mbbs-options-section">
         <div class="container" style="text-align:center">
             <p class="section-label">LOAN CATEGORIES</p>
-            <h2 class="section-title">MBBS Loan <span style="color:var(--green)">Options</span></h2>
+            <h2 class="section-title">MBBS Loan <span class="green-highlight">Options</span></h2>
             <p class="section-sub">Whether you're studying medicine in India or abroad, we help you find the right financing path.</p>
             <div class="mbbs-grid">
                 <div class="mbbs-card india" data-aos="fade-up" data-aos-delay="0">
@@ -372,10 +401,10 @@
     <section class="section" style="padding: 72px 0; background: #ffffff;">
         <div class="container" style="text-align:center">
             <p class="section-label">MEDICAL FINANCING GUIDE</p>
-            <h2 class="section-title">MBBS in India vs. Abroad <span style="color:var(--green)">Financing Matrix</span></h2>
+            <h2 class="section-title">MBBS in India vs. Abroad <span class="green-highlight">Financing Matrix</span></h2>
             <p class="section-sub">Compare key parameters across domestic and international medical education loans to make an informed choice.</p>
             
-            <div class="comparison-table-wrapper" data-aos="fade-up">
+            <div class="comparison-table-wrapper table-responsive" data-aos="fade-up">
                 <table class="comparison-table">
                     <thead>
                         <tr>
@@ -425,7 +454,7 @@
     <section class="process-section">
         <div class="container" style="text-align:center">
             <p class="section-label">HOW WE HELP</p>
-            <h2 class="section-title">Our MBBS Loan <span style="color:var(--green)">Support</span></h2>
+            <h2 class="section-title">Our MBBS Loan <span class="green-highlight">Support</span></h2>
             <p class="section-sub">Dedicated support through every stage of your MBBS loan journey.</p>
             <div class="process-steps">
                 <div class="process-step" data-aos="fade-up" data-aos-delay="0">
@@ -457,7 +486,7 @@
         <div class="container">
             <div style="text-align:center;margin-bottom:40px;">
                 <p class="section-label">CALCULATE YOUR REPAYMENTS</p>
-                <h2 class="section-title">Education Loan <span style="color:var(--green)">EMI Calculator</span></h2>
+                <h2 class="section-title">Education Loan <span class="green-highlight">EMI Calculator</span></h2>
                 <p class="section-sub">Estimate your monthly installments, total interest, and plan your medical education finances clearly.</p>
             </div>
             <div class="emi-box" data-aos="fade-up">
@@ -541,7 +570,7 @@
         <div class="container">
             <div style="text-align:center;margin-bottom:40px;">
                 <p class="section-label">FREQUENTLY ASKED QUESTIONS</p>
-                <h2 class="section-title">Common Questions About <span style="color:var(--green)">MBBS Loans</span></h2>
+                <h2 class="section-title">Common Questions About <span class="green-highlight">MBBS Loans</span></h2>
                 <p class="section-sub">Clear answers regarding medical education financing, collateral requirements, and disbursement.</p>
             </div>
             <div class="faq-list" data-aos="fade-up">
@@ -560,7 +589,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        For MBBS programs abroad exceeding ₹7.5 Lakhs in public banks, tangible collateral (residential/commercial property, fixed deposits) is generally required. However, select NBFCs and private partners offer partially collateralized or non-collateral options up to ₹40-50 Lakhs depending on the financial co-applicant's income and credit score.
+                        For MBBS programs abroad exceeding ₹7.5 Lakhs in public banks, tangible collateral (residential/commercial property, fixed deposits) is generally required. However, select NBFCs and private partners offer partially collateralized or non-collateral options up to ₹40–₹50 Lakhs depending on the financial co-applicant's income and credit score.
                     </div>
                 </div>
                 <div class="faq-item">
@@ -607,12 +636,52 @@
     </section>
 
     <!-- VPS_FOOTER_START -->
-<!-- INSTITUTIONAL REGULATORY DISCLAIMER STRIP -->
-<div class="site-disclaimer-strip">
+<!-- INSTITUTIONAL REGULATORY DISCLAIMER ACCORDION / DROPDOWN -->
+<div class="site-disclaimer-wrap">
     <div class="container">
-        <p>
-            <strong>Regulatory Transparency &amp; Operating Model:</strong> Visionary Path Services operates as an independent education loan consulting and assistance entity. We do not act as a direct lender, banking institution, or Non-Banking Financial Company (NBFC). We do not collect loan repayments, nor do we issue loan sanctions directly. All loan sanctions, interest rate assignments, margin money decisions, and disbursement schedules remain at the sole and independent discretion of our partner RBI-regulated Scheduled Commercial Banks and NBFCs. Services are subject to credit verification, applicant document clearance, and institutional guidelines. <a href="../pages/disclaimer.html">Read Full Regulatory Disclaimer</a>.
-        </p>
+        <details class="disclaimer-accordion">
+            <summary class="disclaimer-trigger">
+                <div class="disclaimer-trigger-left">
+                    <span class="disclaimer-badge">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>Regulatory Notice</span>
+                    </span>
+                    <span class="disclaimer-title">Operating Model &amp; Regulatory Disclosures</span>
+                    <span class="disclaimer-hint">• Independent Advisory Entity (Non-Lender Notice)</span>
+                </div>
+                <div class="disclaimer-toggle-pill">
+                    <span>View Regulatory Disclosure</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </summary>
+            <div class="disclaimer-content">
+                <div class="disclaimer-grid">
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-icon">
+                            <i class="fas fa-building-columns"></i>
+                        </div>
+                        <p class="disclaimer-item-text">
+                            <strong>Independent Advisory &amp; Non-Lender Status:</strong> Visionary Path Services operates exclusively as an education loan consulting and facilitation advisory. We are not a bank, Non-Banking Financial Company (NBFC), or direct credit provider. We do not issue loan sanctions directly, nor do we collect loan repayments or processing commissions from students.
+                        </p>
+                    </div>
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-icon">
+                            <i class="fas fa-scale-balanced"></i>
+                        </div>
+                        <p class="disclaimer-item-text">
+                            <strong>Lender Discretion &amp; Verification:</strong> All loan approvals, sanction limits, applicable interest rates, margin money requirements, and disbursement timelines remain at the sole and independent discretion of our partner RBI-regulated Scheduled Commercial Banks and NBFCs, subject to individual creditworthiness, CIBIL verification, and institutional eligibility guidelines.
+                        </p>
+                    </div>
+                </div>
+                <div class="disclaimer-footer-bar">
+                    <span class="disclaimer-footer-note"><i class="fas fa-check-circle" style="color:var(--green); margin-right:5px;"></i> 100% Free Consultation for Students &amp; Families</span>
+                    <a href="../pages/disclaimer.html" class="disclaimer-link-btn">
+                        <span>Read Full Regulatory &amp; Financial Disclaimer</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </details>
     </div>
 </div>
 
@@ -746,68 +815,68 @@
                     <h4>Get Free Loan Assessment</h4>
                     <p>Share your details to connect with a senior education loan advisor</p>
                 </div>
-                <form class="popup-form" onsubmit="submitForm(event)">
+                                <form class="popup-form" onsubmit="submitForm(event)">
                     <div class="form-row name-row">
                         <div class="form-group">
-                            <label>First Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="firstName" placeholder="e.g. Aarav" required></div>
+                            <label for="popupFirstName">First Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupFirstName" name="firstName" placeholder="e.g. Aarav" aria-label="First Name" required autocomplete="given-name"></div>
                         </div>
                         <div class="form-group">
-                            <label>Last Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="lastName" placeholder="e.g. Sharma" required></div>
+                            <label for="popupLastName">Last Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupLastName" name="lastName" placeholder="e.g. Sharma" aria-label="Last Name" required autocomplete="family-name"></div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Phone Number <span class="req">*</span></label>
+                            <label for="popupPhone">Phone Number <span class="req">*</span></label>
                             <div class="input-icon-wrap phone-wrap">
                                 <span class="country-prefix"><i class="fas fa-phone"></i> +91</span>
-                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" required>
+                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit Phone Number" required autocomplete="tel-national">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="label-with-action">
-                                <label>WhatsApp Number <span class="req">*</span></label>
-                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()">Same as phone</button>
+                                <label for="popupWhatsApp">WhatsApp Number <span class="req">*</span></label>
+                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()" aria-label="Copy Phone Number to WhatsApp Number">Same as phone</button>
                             </div>
                             <div class="input-icon-wrap whatsapp-inp">
                                 <i class="fab fa-whatsapp"></i>
-                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" required>
+                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit WhatsApp Number" required autocomplete="tel-national">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Email Address <span class="req">*</span></label>
-                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="e.g. aarav.sharma@gmail.com" required></div>
+                        <label for="popupEmail">Email Address <span class="req">*</span></label>
+                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" id="popupEmail" name="email" placeholder="e.g. aarav.sharma@gmail.com" aria-label="Email Address" required autocomplete="email"></div>
                     </div>
                     <div class="form-group mb-tight">
-                        <label class="form-label-regular">I'm interested in</label>
-                        <div class="interest-options">
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="abroad">
+                        <span class="form-label-regular" id="popupInterestLabel">I'm interested in</span>
+                        <div class="interest-options" role="radiogroup" aria-labelledby="popupInterestLabel">
+                            <label class="interest-opt" for="popupInterestAbroad">
+                                <input type="radio" id="popupInterestAbroad" name="interest" value="abroad" aria-label="Abroad Education Loan" checked>
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-globe-americas"></i> Abroad Education Loan</span>
                             </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="domestic">
+                            <label class="interest-opt" for="popupInterestDomestic">
+                                <input type="radio" id="popupInterestDomestic" name="interest" value="domestic" aria-label="Domestic Education Loan">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-graduation-cap"></i> Domestic Education Loan</span>
                             </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="mbbs" checked>
+                            <label class="interest-opt" for="popupInterestMbbs">
+                                <input type="radio" id="popupInterestMbbs" name="interest" value="mbbs" aria-label="MBBS Education Loan">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-user-md"></i> MBBS Education Loan</span>
                             </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="other">
+                            <label class="interest-opt" for="popupInterestOther">
+                                <input type="radio" id="popupInterestOther" name="interest" value="other" aria-label="Other Loan Options">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-coins"></i> Other Loan Options</span>
                             </label>
                         </div>
                     </div>
                     <div class="form-group mb-tight">
-                        <label class="form-label-regular">Additional Information (Optional)</label>
-                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea name="message" placeholder="Medical college, country/state, loan amount needed..." rows="2"></textarea></div>
+                        <label for="popupMessage" class="form-label-regular">Additional Information (Optional)</label>
+                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea id="popupMessage" name="message" placeholder="Target country, university, loan amount needed..." aria-label="Additional Information" rows="2"></textarea></div>
                     </div>
                     <button type="submit" class="btn btn-submit-enquiry">
                         <span>Submit Enquiry</span>

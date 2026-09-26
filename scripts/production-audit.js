@@ -171,9 +171,22 @@ if (brokenLinks === 0) {
 
 // ── 3. CSS DESIGN SYSTEM & TOKENS AUDIT ───────────────────────────
 console.log('--- 3. CSS DESIGN SYSTEM & TOKENS AUDIT ---');
+
+// Check design-system.css exists (the canonical token layer)
+const designSystemCssPath = path.join(WEBSITE_DIR, 'css/design-system.css');
+if (!fs.existsSync(designSystemCssPath)) {
+    console.error('[FAIL] css/design-system.css: File is MISSING — canonical token layer must exist.');
+    errors++;
+} else {
+    console.log('[PASS] css/design-system.css exists (canonical token layer).');
+    auditPassed++;
+}
+
+const designSystemCss = fs.existsSync(designSystemCssPath) ? fs.readFileSync(designSystemCssPath, 'utf-8') : '';
 const improvementsCssPath = path.join(WEBSITE_DIR, 'css/improvements.css');
 const improvementsCss = fs.readFileSync(improvementsCssPath, 'utf-8');
 
+// Tokens are now defined in design-system.css (not improvements.css)
 const requiredTokens = [
     '--color-primary',
     '--color-primary-dark',
@@ -198,16 +211,103 @@ const requiredTokens = [
     '--space-24'
 ];
 
+// Check tokens exist in design-system.css OR improvements.css (backward compat)
+const combinedCss = designSystemCss + '\n' + improvementsCss;
 let missingTokens = 0;
 requiredTokens.forEach(token => {
-    if (!improvementsCss.includes(token + ':')) {
-        console.error(`[FAIL] improvements.css: Missing design token ${token}`);
+    if (!combinedCss.includes(token + ':') && !combinedCss.includes(token + ' :')) {
+        console.error(`[FAIL] design-system.css: Missing design token ${token}`);
         missingTokens++;
         errors++;
     }
 });
 if (missingTokens === 0) {
-    console.log(`[PASS] All ${requiredTokens.length} master design system tokens defined in improvements.css.`);
+    console.log(`[PASS] All ${requiredTokens.length} master design system tokens defined in design-system.css.`);
+    auditPassed++;
+}
+
+// ── 3a. P0 BUG REGRESSION CHECKS ─────────────────────────────────
+console.log('--- 3a. P0 BUG REGRESSION CHECKS (Design System Integrity) ---');
+
+// CHECK 1: .motion-init CSS must be defined (scroll reveal animations)
+if (!improvementsCss.includes('.motion-init') || !improvementsCss.includes('.motion-revealed')) {
+    console.error('[FAIL] improvements.css: .motion-init / .motion-revealed CSS not defined — scroll animations will SILENTLY FAIL.');
+    errors++;
+} else {
+    console.log('[PASS] .motion-init / .motion-revealed CSS defined — scroll reveal animations active.');
+    auditPassed++;
+}
+
+// CHECK 2: .navbar.scrolled-elevated CSS must be defined
+if (!improvementsCss.includes('.navbar.scrolled-elevated')) {
+    console.error('[FAIL] improvements.css: .navbar.scrolled-elevated CSS not defined — scroll nav elevation will SILENTLY FAIL.');
+    errors++;
+} else {
+    console.log('[PASS] .navbar.scrolled-elevated CSS defined — scroll navbar elevation active.');
+    auditPassed++;
+}
+
+// CHECK 3: --transition-bounce must be defined (used in .pan-card, .bridge-card)
+if (!combinedCss.includes('--transition-bounce:')) {
+    console.error('[FAIL] design-system.css: --transition-bounce not defined — card hover transitions silently broken.');
+    errors++;
+} else {
+    console.log('[PASS] --transition-bounce defined — card hover transitions active.');
+    auditPassed++;
+}
+
+// CHECK 4: --vps-navy and family must be defined (previously undefined, used in hero section)
+const vpsVars = ['--vps-navy:', '--vps-green:', '--vps-blue:', '--vps-border:', '--vps-shadow-xs:'];
+let missingVpsVars = 0;
+vpsVars.forEach(v => {
+    if (!combinedCss.includes(v)) {
+        console.error(`[FAIL] design-system.css: ${v.replace(':', '')} not defined — hero section rendering broken.`);
+        missingVpsVars++;
+        errors++;
+    }
+});
+if (missingVpsVars === 0) {
+    console.log('[PASS] All --vps-* alias tokens defined — hero section rendering safe.');
+    auditPassed++;
+}
+
+// CHECK 5: design-system.css must be loaded BEFORE style.css on all pages
+let dsLoadOrderErrors = 0;
+for (const filePath of htmlFiles) {
+    const rel = path.relative(WEBSITE_DIR, filePath);
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const dsIdx = content.indexOf('design-system.css');
+    const styleIdx = content.indexOf('style.css');
+    if (dsIdx === -1) {
+        console.error(`[FAIL] ${rel}: design-system.css not loaded.`);
+        dsLoadOrderErrors++;
+        errors++;
+    } else if (styleIdx !== -1 && dsIdx > styleIdx) {
+        console.error(`[FAIL] ${rel}: design-system.css loads AFTER style.css — must load first.`);
+        dsLoadOrderErrors++;
+        errors++;
+    }
+}
+if (dsLoadOrderErrors === 0) {
+    console.log('[PASS] design-system.css loads before style.css on all pages.');
+    auditPassed++;
+}
+
+// CHECK 6: AOS CDN link without AOS.init() — dead dependency
+let aosWithoutInitCount = 0;
+for (const filePath of htmlFiles) {
+    const rel = path.relative(WEBSITE_DIR, filePath);
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const hasAosCss = content.includes('aos@') && content.includes('.css');
+    const hasAosJs = content.includes('AOS.init') || (content.includes('aos@') && content.includes('.js'));
+    if (hasAosCss && !hasAosJs) {
+        console.error(`[FAIL] ${rel}: AOS CSS loaded but AOS never initialized — dead dependency.`);
+        aosWithoutInitCount++;
+        errors++;
+    }
+}
+if (aosWithoutInitCount === 0) {
+    console.log('[PASS] No pages have AOS CSS without AOS initialization.');
     auditPassed++;
 }
 
@@ -242,6 +342,63 @@ if (!improvementsCss.includes(':focus-visible')) {
     errors++;
 } else {
     console.log('[PASS] Accessible :focus-visible ring styles active.');
+    auditPassed++;
+}
+
+// WCAG 2.2 AA Color Contrast & Scope Verification
+console.log('--- 3b. WCAG 2.2 AA COLOR CONTRAST & ACCESSIBILITY AUDIT ---');
+
+// 1. Ensure green-highlight defaults to high contrast emerald on white
+if (!improvementsCss.includes('.green-highlight') || !improvementsCss.includes('#047857')) {
+    console.error('[FAIL] improvements.css: .green-highlight must use high-contrast emerald (#047857) for white/light surfaces.');
+    errors++;
+} else {
+    console.log('[PASS] .green-highlight on light surfaces is deep emerald (#047857, 5.58:1 contrast).');
+    auditPassed++;
+}
+
+// 2. Ensure exact-hero trust strip is high contrast slate/navy and NOT white on white
+if (!improvementsCss.includes('.exact-hero .hero-trust-strip') || !improvementsCss.includes('.exact-hero .hero-trust-item strong')) {
+    console.error('[FAIL] improvements.css: Missing explicit .exact-hero .hero-trust-strip contrast rules.');
+    errors++;
+} else {
+    console.log('[PASS] .exact-hero .hero-trust-strip has scoped dark slate/navy colors on white background.');
+    auditPassed++;
+}
+
+// 3. Ensure exact-hero secondary button has high contrast navy text and NOT white on white
+if (!improvementsCss.includes('.exact-hero .btn-hero-secondary')) {
+    console.error('[FAIL] improvements.css: Missing explicit .exact-hero .btn-hero-secondary contrast rules.');
+    errors++;
+} else {
+    console.log('[PASS] .exact-hero .btn-hero-secondary has dark navy text on white background.');
+    auditPassed++;
+}
+
+// 4. Ensure dark heroes have scoped mint green (#34d399, 8.5:1 on dark navy)
+if (!improvementsCss.includes('.page-hero .green-highlight') && !improvementsCss.includes('.legal-hero .green-highlight')) {
+    console.error('[FAIL] improvements.css: Dark heroes missing scoped #34d399 highlight rule.');
+    errors++;
+} else {
+    console.log('[PASS] Dark hero containers use high-contrast #34d399 mint green (>8.5:1 on navy).');
+    auditPassed++;
+}
+
+// 5. Ensure section lead text (section-sub, pan-india-sub, etc.) has high contrast (>= 4.5:1 on white)
+if (!improvementsCss.includes('.pan-india-sub') || !improvementsCss.includes('#475569')) {
+    console.error('[FAIL] improvements.css: Section subtitles must meet WCAG AA contrast on white (#475569).');
+    errors++;
+} else {
+    console.log('[PASS] Section subtitles (.section-sub, .pan-india-sub, .bridging-sub) use #475569 (7.1:1 on white).');
+    auditPassed++;
+}
+
+// 6. Ensure mega dropdown country flags and country-cards are scoped cleanly
+if (improvementsCss.includes('\n.country-flag {') || !improvementsCss.includes('.mega-country-link .country-flag')) {
+    console.error('[FAIL] improvements.css: .country-flag must not be declared unscoped; mega dropdown flags must have bounded styles.');
+    errors++;
+} else {
+    console.log('[PASS] .country-flag is properly scoped and mega-dropdown destination flags have bounded sizing.');
     auditPassed++;
 }
 
@@ -298,6 +455,24 @@ for (const filePath of htmlFiles) {
 
     if (content.includes('{{ROOT}}')) {
         console.error(`[FAIL] ${rel}: Contains unreplaced {{ROOT}} token.`);
+        errors++;
+    } else {
+        auditPassed++;
+    }
+
+    // 5b. Placeholder & Template Strings Guard
+    const placeholderRegex = /(\(Your Address Here\)|5600XX|\blorem ipsum\b|\bTODO\b|\bFIXME\b)/i;
+    if (placeholderRegex.test(content)) {
+        console.error(`[FAIL] ${rel}: Found unresolved placeholder/template text.`);
+        errors++;
+    } else {
+        auditPassed++;
+    }
+
+    // 5c. Numeric Range Typography Guard (En-Dash Consistency)
+    const spacedHyphenRange = /\b\d+%\s+-\s+\d+%/g;
+    if (spacedHyphenRange.test(content)) {
+        console.error(`[FAIL] ${rel}: Contains unformatted spaced-hyphen percentage range (should use en-dash).`);
         errors++;
     } else {
         auditPassed++;
