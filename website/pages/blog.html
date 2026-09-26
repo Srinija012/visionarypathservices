@@ -261,15 +261,15 @@
     <!-- BLOG HUB HERO -->
     <section class="blog-hub-hero" id="mainContent">
         <div class="container">
-            <nav aria-label="Breadcrumb" class="breadcrumb" style="margin-bottom:18px;"><a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <span>Blog &amp; Knowledge Hub</span></nav>
+            <nav aria-label="Breadcrumb" class="breadcrumb"><a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <span>Blog &amp; Knowledge Hub</span></nav>
             <div class="brand-eyebrow">
                 <span class="pulse-dot"></span>
                 <span>RESEARCH &amp; EDITORIAL DESK</span>
             </div>
-            <h1 class="hub-title">Education Loan Guides &amp; <span class="green-highlight">Banking Insights</span></h1>
+            <h1 class="hub-title">Education Loan Guides &amp; <span class="vps-orange-text">Banking Insights</span></h1>
             <p class="hub-sub">Transparent, profile-first banking research, interest rate comparisons, and eligibility blueprints to finance your degree without hassle.</p>
             
-            <div class="hero-trust-strip" style="justify-content:center; margin-bottom: 24px;">
+            <div class="hero-trust-strip">
                 <div class="hero-trust-item">
                     <i class="fas fa-book-open trust-icon-blue"></i>
                     <span>In-Depth Editorial Guides</span>
@@ -286,22 +286,25 @@
                 </div>
             </div>
 
-            <div class="hub-categories">
-                <a href="#featured" class="hub-category-pill active">All Articles</a>
-                <a href="#featured" class="hub-category-pill">CIBIL &amp; Eligibility</a>
-                <a href="#featured" class="hub-category-pill">Study Abroad</a>
-                <a href="#featured" class="hub-category-pill">Collateral vs Non-Collateral</a>
-                <a href="#featured" class="hub-category-pill">MBBS Financing</a>
+            <!-- Dynamic Category Filter Pills -->
+            <div class="hub-categories" role="tablist" aria-label="Article Categories">
+                <button class="hub-category-pill active" role="tab" aria-selected="true" data-category="all" onclick="filterBlogCategory('all', this)">All Articles</button>
+                <button class="hub-category-pill" role="tab" aria-selected="false" data-category="cibil" onclick="filterBlogCategory('cibil', this)">CIBIL &amp; Eligibility</button>
+                <button class="hub-category-pill" role="tab" aria-selected="false" data-category="abroad" onclick="filterBlogCategory('abroad', this)">Study Abroad</button>
+                <button class="hub-category-pill" role="tab" aria-selected="false" data-category="collateral" onclick="filterBlogCategory('collateral', this)">Collateral vs Unsecured</button>
+                <button class="hub-category-pill" role="tab" aria-selected="false" data-category="mbbs" onclick="filterBlogCategory('mbbs', this)">MBBS Financing</button>
+                <button class="hub-category-pill" role="tab" aria-selected="false" data-category="domestic" onclick="filterBlogCategory('domestic', this)">Domestic Studies</button>
+                <button class="hub-category-pill" role="tab" aria-selected="false" data-category="banking" onclick="filterBlogCategory('banking', this)">Bank Rates &amp; NBFCs</button>
             </div>
         </div>
     </section>
 
     <!-- MAIN CONTENT -->
-    <main class="blog-hub-section">
+    <main class="blog-hub-section" id="articles">
         <div class="container">
             
             <!-- FEATURED ARTICLE BANNER -->
-            <div class="featured-wrap" id="featured" data-aos="fade-up">
+            <div class="featured-wrap" id="featured" data-aos="fade-up" data-category="cibil">
                 <div class="featured-card">
                     <div>
                         <span class="featured-badge"><i class="fas fa-star"></i> Featured Guide • High Impact</span>
@@ -316,35 +319,36 @@
                             <span>•</span>
                             <span><i class="fas fa-calendar-alt"></i> September 2026</span>
                             <span>•</span>
-                            <span><i class="fas fa-check-circle" style="color:var(--green);"></i> 100% Verified</span>
+                            <span><i class="fas fa-check-circle" style="color:var(--color-success, #16A765);"></i> 100% Verified</span>
                         </div>
                     </div>
-                    <div style="text-align: center; background: linear-gradient(135deg, #f0fdf4, #e8f4fd); border-radius: 16px; padding: 32px 24px; border: 1px solid #d1fae5;">
-                        <div style="font-size: 3.5rem; color: var(--navy); margin-bottom: 12px;">
+                    <div class="featured-cta-panel">
+                        <div class="panel-icon">
                             <i class="fas fa-tachometer-alt"></i>
                         </div>
-                        <h3 style="color: var(--navy); font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Check Your Bank Fit</h3>
-                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 20px;">Understand how banks categorize your CIBIL score before submitting an application.</p>
-                        <a href="blogs/how-does-cibil-score-affect-your-education-loan.html" class="btn btn-eligibility" style="display:inline-flex; justify-content:center;">
-                            Read Full Guide <i class="fas fa-arrow-right"></i>
+                        <h3>Check Your Bank Fit</h3>
+                        <p>Understand how partner banks categorize your co-applicant CIBIL score before submitting an application.</p>
+                        <a href="blogs/how-does-cibil-score-affect-your-education-loan.html" class="btn btn-primary">
+                            <span>Read Full Guide</span>
+                            <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- UPCOMING / CLUSTER GUIDES GRID -->
+            <!-- COMPREHENSIVE GUIDES GRID -->
             <div class="section-header-wrap">
                 <h2>Browse Comprehensive Loan Guides</h2>
-                <p style="color: var(--text-muted);">Curated by education loan officers with over 15+ partner banking networks.</p>
+                <p>Curated by education loan officers with direct access to 15+ partner banking networks.</p>
             </div>
 
-            <div class="posts-grid">
+            <div class="posts-grid" id="postsGrid">
                 
                 <!-- Card 1: USA Education Loans -->
-                <div class="post-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="post-card" data-category="abroad" data-aos="fade-up" data-aos-delay="100">
                     <div class="post-thumb">
                         <span class="post-thumb-flag">🇺🇸 Study in USA</span>
-                        <i class="fas fa-passport"></i>
+                        <i class="fas fa-passport post-thumb-bg-icon" aria-hidden="true"></i>
                     </div>
                     <div class="post-body">
                         <span class="post-category">Country Guides</span>
@@ -362,10 +366,10 @@
                 </div>
 
                 <!-- Card 2: Secured vs Unsecured Loans -->
-                <div class="post-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="post-thumb" style="background: linear-gradient(135deg, #0d7a3a, #1a9c4e);">
-                        <span class="post-thumb-flag">Comparison Matrix</span>
-                        <i class="fas fa-balance-scale"></i>
+                <div class="post-card" data-category="collateral" data-aos="fade-up" data-aos-delay="150">
+                    <div class="post-thumb">
+                        <span class="post-thumb-flag">⚖️ Comparison Matrix</span>
+                        <i class="fas fa-balance-scale post-thumb-bg-icon" aria-hidden="true"></i>
                     </div>
                     <div class="post-body">
                         <span class="post-category">Loan Architecture</span>
@@ -383,10 +387,10 @@
                 </div>
 
                 <!-- Card 3: MBBS Abroad -->
-                <div class="post-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="post-thumb" style="background: linear-gradient(135deg, #0f766e, #14b8a6);">
-                        <span class="post-thumb-flag">Medical Careers</span>
-                        <i class="fas fa-user-md"></i>
+                <div class="post-card" data-category="mbbs abroad" data-aos="fade-up" data-aos-delay="200">
+                    <div class="post-thumb">
+                        <span class="post-thumb-flag">🩺 Medical Careers</span>
+                        <i class="fas fa-user-md post-thumb-bg-icon" aria-hidden="true"></i>
                     </div>
                     <div class="post-body">
                         <span class="post-category">MBBS Financing</span>
@@ -403,6 +407,69 @@
                     </div>
                 </div>
 
+                <!-- Card 4: Domestic Higher Education -->
+                <div class="post-card" data-category="domestic" data-aos="fade-up" data-aos-delay="250">
+                    <div class="post-thumb">
+                        <span class="post-thumb-flag">🏛️ Premier Indian Institutes</span>
+                        <i class="fas fa-landmark post-thumb-bg-icon" aria-hidden="true"></i>
+                    </div>
+                    <div class="post-body">
+                        <span class="post-category">Domestic Studies</span>
+                        <h3 class="post-card-title">
+                            <a href="domestic-loans.html">Financing Premier Indian Colleges: IIT, IIM &amp; Top Tier Institutes</a>
+                        </h3>
+                        <p class="post-card-desc">
+                            Explore concessional Scholar Schemes, 100% fee coverage, flexible moratorium periods, and collateral waivers for top Indian universities.
+                        </p>
+                        <div class="post-footer-bar">
+                            <span><i class="fas fa-clock"></i> 7 min read</span>
+                            <a href="domestic-loans.html" class="read-more-link">Explore Guide <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Lender Benchmarks -->
+                <div class="post-card" data-category="banking" data-aos="fade-up" data-aos-delay="300">
+                    <div class="post-thumb">
+                        <span class="post-thumb-flag">📊 15+ Lenders Analyzed</span>
+                        <i class="fas fa-building-columns post-thumb-bg-icon" aria-hidden="true"></i>
+                    </div>
+                    <div class="post-body">
+                        <span class="post-category">Banking Network</span>
+                        <h3 class="post-card-title">
+                            <a href="partner-lenders.html">Public vs Private Banks &amp; NBFCs: Interest Rates &amp; Processing Benchmark</a>
+                        </h3>
+                        <p class="post-card-desc">
+                            Compare SBI, Bank of Baroda, HDFC Credila, Avanse, and InCred side by side on processing fees, interest margins, and disbursement speeds.
+                        </p>
+                        <div class="post-footer-bar">
+                            <span><i class="fas fa-clock"></i> 10 min read</span>
+                            <a href="partner-lenders.html" class="read-more-link">Explore Guide <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Living Costs & Forex -->
+                <div class="post-card" data-category="abroad" data-aos="fade-up" data-aos-delay="350">
+                    <div class="post-thumb">
+                        <span class="post-thumb-flag">💱 Living Costs &amp; Forex</span>
+                        <i class="fas fa-wallet post-thumb-bg-icon" aria-hidden="true"></i>
+                    </div>
+                    <div class="post-body">
+                        <span class="post-category">Extended Advisory</span>
+                        <h3 class="post-card-title">
+                            <a href="other-loans.html">Personal Loans &amp; Forex Assistance: Bridging Living Expenses Overseas</a>
+                        </h3>
+                        <p class="post-card-desc">
+                            Manage GIC deposits for Canada, German blocked accounts, foreign exchange cards, and short-term family financing for visa proof of funds.
+                        </p>
+                        <div class="post-footer-bar">
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                            <a href="other-loans.html" class="read-more-link">Explore Guide <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -413,12 +480,14 @@
         <div class="container">
             <h2>Ready to Fund Your Higher Education?</h2>
             <p>Skip the confusing bank queues. Get a personalized profile evaluation across 15+ banks and NBFCs with 100% zero service fees.</p>
-            <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-                <button class="btn btn-eligibility" style="background:#fff; color:var(--navy);" onclick="openPopup()">
-                    <i class="fas fa-file-signature"></i> Check My Eligibility
+            <div class="cta-group">
+                <button class="btn btn-primary" onclick="openPopup()">
+                    <i class="fas fa-file-signature"></i>
+                    <span>Check My Eligibility</span>
                 </button>
-                <a href="https://wa.me/919063703038" target="_blank" class="btn btn-whatsapp-nav">
-                    <i class="fab fa-whatsapp"></i> Chat with Senior Counselor
+                <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn btn-secondary btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Chat with Senior Counselor</span>
                 </a>
             </div>
         </div>
