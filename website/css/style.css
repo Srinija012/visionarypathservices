@@ -3450,12 +3450,14 @@ html, body { overflow-x: hidden; }
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 175px;
     max-width: 180px;
     flex-shrink: 0;
 }
 .marquee-logo-img {
-    max-height: 58px;
-    width: auto;
+    max-height: 52px;
+    width: 100%;
+    height: auto;
     max-width: 175px;
     object-fit: contain;
     display: block;
@@ -3535,11 +3537,14 @@ html, body { overflow-x: hidden; }
     }
     .marquee-logo-wrap {
         height: 50px;
+        width: 135px;
         max-width: 145px;
     }
     .marquee-logo-img {
-        max-height: 46px;
-        max-width: 140px;
+        max-height: 44px;
+        max-width: 135px;
+        width: 100%;
+        height: auto;
     }
     .marquee-card-badge {
         font-size: 0.62rem;

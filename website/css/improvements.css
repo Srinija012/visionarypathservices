@@ -8221,8 +8221,10 @@ html, body {
 }
 
 .vps-bank-logo-card img {
-    max-height: 28px;
-    max-width: 86%;
+    max-height: 36px;
+    max-width: 88%;
+    width: auto;
+    height: auto;
     object-fit: contain;
     filter: grayscale(15%);
     transition: filter 0.2s ease;
@@ -11062,22 +11064,24 @@ input[aria-invalid="false"].touched:not(:focus),
 }
 
 .lic-logo-wrap {
-    width: 52px;
-    height: 42px;
+    min-width: 88px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #FFFFFF;
     border-radius: 10px;
-    padding: 4px 8px;
+    padding: 4px 10px;
     flex-shrink: 0;
     border: 1px solid #E2E8F0;
     box-shadow: 0 2px 6px rgba(11, 31, 51, 0.06);
 }
 
 .lic-logo {
-    max-height: 32px;
-    max-width: 44px;
+    max-height: 34px;
+    max-width: 82px;
+    width: 100%;
+    height: auto;
     object-fit: contain;
     display: block;
 }
