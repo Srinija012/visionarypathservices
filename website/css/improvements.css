@@ -11200,11 +11200,16 @@ input[aria-invalid="false"].touched:not(:focus),
    All values reference design tokens via var(). No raw hex values.
    ══════════════════════════════════════════════════════════════════════ */
 
-/* ── Stat box icon colours ── */
-.stat-icon-navy   { color: var(--color-navy, #0B1F33); }
-.stat-icon-navy-deep { color: var(--color-navy-dark, #050E17); }
-.stat-icon-orange { color: var(--color-orange, #FF5A00); }
-.stat-icon-amber  { color: var(--color-warning, #D97706); }
+/* ── Stat box icon colours — 4 semantically distinct tokens ──
+   🎓 Tuition    → info blue    (academic / knowledge)
+   💰 Living     → success grn  (money / savings)
+   🤲 Max loan   → brand orange (primary value highlight)
+   📄 Visa req   → amber        (document / caution)
+── */
+.stat-icon-navy      { color: var(--color-info, #1A56DB); }       /* tuition / graduation cap */
+.stat-icon-orange    { color: var(--color-success, #047857); }    /* living cost / wallet */
+.stat-icon-navy-deep { color: var(--color-orange, #FF5A00); }     /* max loan / hand-holding-dollar */
+.stat-icon-amber     { color: var(--color-warning, #D97706); }    /* visa req / file-invoice */
 
 /* ── Country overview body paragraph ── */
 .country-overview-body {
