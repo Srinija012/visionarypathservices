@@ -1,0 +1,79 @@
+<!-- Hallmark · component: lead-assessment-form · genre: modern-minimal · theme: visionary-path -->
+<div class="lead-form-card">
+    <div class="lead-form-header">
+        <h3>Get Free Loan Assessment</h3>
+        <p>Share your academic details to connect with a senior education loan advisor.</p>
+    </div>
+
+    <form class="lead-form" onsubmit="submitForm(event)" novalidate>
+        <div class="lead-form-row">
+            <div class="lead-form-group">
+                <label class="lead-form-label" for="compFirstName">First Name <span class="req">*</span></label>
+                <div class="lead-input-wrap">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <input type="text" id="compFirstName" name="firstName" placeholder="e.g. Aarav" required aria-required="true" autocomplete="given-name">
+                </div>
+                <div class="field-error-msg" id="compFirstName-error" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="lead-form-group">
+                <label class="lead-form-label" for="compLastName">Last Name <span class="req">*</span></label>
+                <div class="lead-input-wrap">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <input type="text" id="compLastName" name="lastName" placeholder="e.g. Sharma" required aria-required="true" autocomplete="family-name">
+                </div>
+                <div class="field-error-msg" id="compLastName-error" role="alert" aria-live="polite"></div>
+            </div>
+        </div>
+
+        <div class="lead-form-row">
+            <div class="lead-form-group">
+                <label class="lead-form-label" for="compPhone">Phone Number <span class="req">*</span></label>
+                <div class="lead-input-wrap has-prefix">
+                    <span class="country-prefix"><i class="fas fa-phone" aria-hidden="true"></i> +91</span>
+                    <input type="tel" id="compPhone" name="phone" placeholder="98765 43210" pattern="[0-9]{10}" maxlength="10" required aria-required="true" autocomplete="tel-national">
+                </div>
+                <div class="field-error-msg" id="compPhone-error" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="lead-form-group">
+                <div class="lead-form-label">
+                    <span>WhatsApp Number <span class="req">*</span></span>
+                    <button type="button" class="lead-btn-copy" onclick="copyPhoneToWhatsApp()" aria-label="Copy Phone Number to WhatsApp">Same as phone</button>
+                </div>
+                <div class="lead-input-wrap">
+                    <i class="fab fa-whatsapp" style="color:#16A34A" aria-hidden="true"></i>
+                    <input type="tel" id="compWhatsApp" name="whatsapp" placeholder="98765 43210" pattern="[0-9]{10}" maxlength="10" required aria-required="true" autocomplete="tel-national">
+                </div>
+                <div class="field-error-msg" id="compWhatsApp-error" role="alert" aria-live="polite"></div>
+            </div>
+        </div>
+
+        <div class="lead-form-group">
+            <label class="lead-form-label" for="compEmail">Email Address <span class="req">*</span></label>
+            <div class="lead-input-wrap">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <input type="email" id="compEmail" name="email" placeholder="e.g. aarav.sharma@gmail.com" required aria-required="true" autocomplete="email">
+            </div>
+            <div class="field-error-msg" id="compEmail-error" role="alert" aria-live="polite"></div>
+        </div>
+
+        <div class="lead-form-group">
+            <label class="lead-form-label" for="compMessage">Additional Information (Optional)</label>
+            <div class="lead-input-wrap textarea-wrap">
+                <i class="fas fa-file-lines" aria-hidden="true"></i>
+                <textarea id="compMessage" name="message" placeholder="e.g. Target country, university, loan amount needed..." rows="2"></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="lead-btn-submit">
+            <span>Submit Loan Enquiry</span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </button>
+
+        <div class="lead-form-safe">
+            <i class="fas fa-shield-halved" aria-hidden="true"></i>
+            <span>100% Confidential • Zero Spam Guarantee • Free Consultation</span>
+        </div>
+    </form>
+</div>

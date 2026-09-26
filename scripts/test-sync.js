@@ -10,7 +10,7 @@ function getHtmlFiles(dir) {
         const fullPath = path.join(dir, file);
         const stat = fs.statSync(fullPath);
         if (stat.isDirectory()) {
-            if (file === 'includes' || file === 'node_modules') continue;
+            if (file === 'includes' || file === 'node_modules' || file === 'components') continue;
             results = results.concat(getHtmlFiles(fullPath));
         } else if (file.endsWith('.html')) {
             results.push(fullPath);
