@@ -607,22 +607,22 @@ template = """<!DOCTYPE html>
         <div class="container">
             <div class="country-stats-grid" data-aos="fade-up">
                 <div class="country-stat-box">
-                    <div class="country-stat-icon" style="color:var(--blue);"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="country-stat-icon stat-icon-navy"><i class="fas fa-graduation-cap"></i></div>
                     <div class="country-stat-val">{tuition}</div>
                     <div class="country-stat-lbl">Average Tuition / Year</div>
                 </div>
                 <div class="country-stat-box">
-                    <div class="country-stat-icon" style="color:var(--green);"><i class="fas fa-wallet"></i></div>
+                    <div class="country-stat-icon stat-icon-orange"><i class="fas fa-wallet"></i></div>
                     <div class="country-stat-val">{living}</div>
                     <div class="country-stat-lbl">Estimated Living Cost</div>
                 </div>
                 <div class="country-stat-box">
-                    <div class="country-stat-icon" style="color:var(--navy);"><i class="fas fa-hand-holding-dollar"></i></div>
+                    <div class="country-stat-icon stat-icon-navy-deep"><i class="fas fa-hand-holding-dollar"></i></div>
                     <div class="country-stat-val">{max_loan}</div>
                     <div class="country-stat-lbl">Available Loan Limit</div>
                 </div>
                 <div class="country-stat-box">
-                    <div class="country-stat-icon" style="color:#d97706;"><i class="fas fa-file-invoice"></i></div>
+                    <div class="country-stat-icon stat-icon-amber"><i class="fas fa-file-invoice"></i></div>
                     <div class="country-stat-val">{visa_req}</div>
                     <div class="country-stat-lbl">Key Visa Requirement</div>
                 </div>
@@ -631,31 +631,31 @@ template = """<!DOCTYPE html>
     </section>
 
     <!-- COUNTRY OVERVIEW -->
-    <section class="section" style="padding: 72px 0;">
+    <section class="section">
         <div class="container">
             <div class="two-col">
                 <div data-aos="fade-right">
                     <div class="section-label">{flag} DESTINATION INSIGHTS</div>
-                    <h2 class="section-title">Funding Your Education in <span style="color:var(--green)">{country_full}</span></h2>
-                    <p style="font-size:15.5px; color:#475569; line-height:1.75; margin-bottom:20px;">{intro}</p>
+                    <h2 class="section-title">Funding Your Education in <span class="green-highlight">{country_full}</span></h2>
+                    <p class="country-overview-body">{intro}</p>
                     
                     <div class="career-opp-card">
-                        <strong><i class="fas fa-briefcase" style="color:var(--green);"></i> Post-Study Career Opportunity:</strong>
+                        <strong><i class="fas fa-briefcase vps-orange-text"></i> Post-Study Career Opportunity:</strong>
                         <p>{stem_opt}</p>
                     </div>
 
-                    <h3 style="font-size:18px; color:var(--navy); margin-top:24px; font-weight:700;">Popular Universities We Support:</h3>
+                    <h3 class="country-unis-heading">Popular Universities We Support:</h3>
                     <div class="uni-tags-wrap">
                         {uni_tags}
                     </div>
                 </div>
                 <div data-aos="fade-left">
                     <div class="docs-card">
-                        <h3><i class="fas fa-shield-alt" style="color:var(--blue);"></i> What Lenders Offer for {country_name}</h3>
+                        <h3><i class="fas fa-shield-alt vps-navy-text"></i> What Lenders Offer for {country_name}</h3>
                         <ul class="check-bullet-list">
                             {loan_bullets}
                         </ul>
-                        <button class="btn btn-primary" style="width:100%; margin-top:8px;" onclick="openPopup()">Get Personalized Loan Options <i class="fas fa-arrow-right"></i></button>
+                        <button class="btn btn-primary btn-block-mt" onclick="openPopup()">Get Personalized Loan Options <i class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -663,16 +663,16 @@ template = """<!DOCTYPE html>
     </section>
 
     <!-- DOCUMENTATION CHECKLIST -->
-    <section class="section" style="background:#f8fafc; padding: 72px 0; border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0;">
+    <section class="section section-docs-bg">
         <div class="container">
-            <div style="text-align:center; max-width:700px; margin:0 auto 48px;">
+            <div class="section-header-center">
                 <div class="section-label">DOCUMENTATION CHECKLIST</div>
-                <h2 class="section-title">Required Documents for <span style="color:var(--green)">{country_short} Education Loans</span></h2>
+                <h2 class="section-title">Required Documents for <span class="green-highlight">{country_short} Education Loans</span></h2>
                 <p class="section-sub">We assist you in organizing all paperwork to ensure swift lender approval with zero hassle.</p>
             </div>
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;" data-aos="fade-up">
+            <div class="docs-cards-grid" data-aos="fade-up">
                 <div class="core-card">
-                    <div class="core-card-icon" style="background:#eff6ff; color:var(--blue);"><i class="fas fa-user-graduate"></i></div>
+                    <div class="core-card-icon card-icon-navy"><i class="fas fa-user-graduate"></i></div>
                     <h3>Student Documents</h3>
                     <ul class="doc-checklist">
                         <li><i class="fas fa-check-circle"></i> Valid Passport copy</li>
@@ -683,7 +683,7 @@ template = """<!DOCTYPE html>
                     </ul>
                 </div>
                 <div class="core-card">
-                    <div class="core-card-icon" style="background:#ecfdf5; color:var(--green);"><i class="fas fa-user-tie"></i></div>
+                    <div class="core-card-icon card-icon-green"><i class="fas fa-user-tie"></i></div>
                     <h3>Co-Applicant Financials</h3>
                     <ul class="doc-checklist">
                         <li><i class="fas fa-check-circle"></i> PAN &amp; Aadhaar Card</li>
@@ -693,7 +693,7 @@ template = """<!DOCTYPE html>
                     </ul>
                 </div>
                 <div class="core-card">
-                    <div class="core-card-icon" style="background:#fefce8; color:#b45309;"><i class="fas fa-building-circle-check"></i></div>
+                    <div class="core-card-icon card-icon-amber"><i class="fas fa-building-circle-check"></i></div>
                     <h3>Collateral (If Applicable)</h3>
                     <ul class="doc-checklist">
                         <li><i class="fas fa-check-circle"></i> Registered Title Deed / Sale Deed</li>
@@ -710,9 +710,9 @@ template = """<!DOCTYPE html>
     <!-- FAQs -->
     <section class="faq-section" id="faqs">
         <div class="container">
-            <div style="text-align:center; margin-bottom:44px;">
+            <div class="section-header-center-sm">
                 <div class="section-label">FREQUENTLY ASKED QUESTIONS</div>
-                <h2 class="section-title">{country_short} Education Loan <span style="color:var(--green)">FAQs</span></h2>
+                <h2 class="section-title">{country_short} Education Loan <span class="green-highlight">FAQs</span></h2>
                 <p class="section-sub">Clear answers regarding financial guidelines, lender eligibility, and visa procedures.</p>
             </div>
             <div class="faq-list" data-aos="fade-up">
@@ -724,7 +724,7 @@ template = """<!DOCTYPE html>
     <!-- CTA -->
     <section class="cta-section">
         <div class="container">
-            <h2 data-aos="fade-up">Ready to Begin Your Studies in <span style="color:#86efac;">{country_name}</span>?</h2>
+            <h2 data-aos="fade-up">Ready to Begin Your Studies in <span class="green-highlight">{country_name}</span>?</h2>
             <p data-aos="fade-up" data-aos-delay="80">Get free expert guidance on secured &amp; unsecured education loans suited to your profile.</p>
             <div class="cta-btns" data-aos="fade-up" data-aos-delay="160">
                 <button class="btn btn-primary btn-lg" onclick="openPopup()">Check Loan Eligibility Free <i class="fas fa-arrow-right"></i></button>
@@ -732,6 +732,7 @@ template = """<!DOCTYPE html>
             </div>
         </div>
     </section>
+
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -933,7 +934,7 @@ def generate():
         cid = c["id"]
         meta = COUNTRY_META.get(cid, {"country_name": c["title"], "country_short": c["title"], "country_full": c["title"]})
         
-        uni_tags_html = "\n".join([f'                        <span class="uni-tag"><i class="fas fa-building-columns" style="margin-right:4px;"></i> {u}</span>' for u in c["top_unis"]])
+        uni_tags_html = "\n".join([f'                        <span class="uni-tag"><i class="fas fa-building-columns"></i> {u}</span>' for u in c["top_unis"]])
         loan_bullets_html = "\n".join([f'                            <li><i class="fas fa-check-circle"></i> {b}</li>' for b in c["loan_highlights"]])
         
         faqs_html = []
