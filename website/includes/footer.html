@@ -1,9 +1,49 @@
-<!-- INSTITUTIONAL REGULATORY DISCLAIMER STRIP -->
-<div class="site-disclaimer-strip">
+<!-- INSTITUTIONAL REGULATORY DISCLAIMER ACCORDION / DROPDOWN -->
+<div class="site-disclaimer-wrap">
     <div class="container">
-        <p>
-            <strong>Regulatory Transparency &amp; Operating Model:</strong> Visionary Path Services operates as an independent education loan consulting and assistance entity. We do not act as a direct lender, banking institution, or Non-Banking Financial Company (NBFC). We do not collect loan repayments, nor do we issue loan sanctions directly. All loan sanctions, interest rate assignments, margin money decisions, and disbursement schedules remain at the sole and independent discretion of our partner RBI-regulated Scheduled Commercial Banks and NBFCs. Services are subject to credit verification, applicant document clearance, and institutional guidelines. <a href="{{ROOT}}pages/disclaimer.html">Read Full Regulatory Disclaimer</a>.
-        </p>
+        <details class="disclaimer-accordion">
+            <summary class="disclaimer-trigger">
+                <div class="disclaimer-trigger-left">
+                    <span class="disclaimer-badge">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>Regulatory Notice</span>
+                    </span>
+                    <span class="disclaimer-title">Operating Model &amp; Regulatory Disclosures</span>
+                    <span class="disclaimer-hint">• Independent Advisory Entity (Non-Lender Notice)</span>
+                </div>
+                <div class="disclaimer-toggle-pill">
+                    <span>View Regulatory Disclosure</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </summary>
+            <div class="disclaimer-content">
+                <div class="disclaimer-grid">
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-icon">
+                            <i class="fas fa-building-columns"></i>
+                        </div>
+                        <p class="disclaimer-item-text">
+                            <strong>Independent Advisory &amp; Non-Lender Status:</strong> Visionary Path Services operates exclusively as an education loan consulting and facilitation advisory. We are not a bank, Non-Banking Financial Company (NBFC), or direct credit provider. We do not issue loan sanctions directly, nor do we collect loan repayments or processing commissions from students.
+                        </p>
+                    </div>
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-icon">
+                            <i class="fas fa-scale-balanced"></i>
+                        </div>
+                        <p class="disclaimer-item-text">
+                            <strong>Lender Discretion &amp; Verification:</strong> All loan approvals, sanction limits, applicable interest rates, margin money requirements, and disbursement timelines remain at the sole and independent discretion of our partner RBI-regulated Scheduled Commercial Banks and NBFCs, subject to individual creditworthiness, CIBIL verification, and institutional eligibility guidelines.
+                        </p>
+                    </div>
+                </div>
+                <div class="disclaimer-footer-bar">
+                    <span class="disclaimer-footer-note"><i class="fas fa-check-circle" style="color:var(--green); margin-right:5px;"></i> 100% Free Consultation for Students &amp; Families</span>
+                    <a href="{{ROOT}}pages/disclaimer.html" class="disclaimer-link-btn">
+                        <span>Read Full Regulatory &amp; Financial Disclaimer</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </details>
     </div>
 </div>
 
@@ -12,8 +52,32 @@
     <div class="container footer-inner">
         <div class="footer-col brand-col">
             <div class="footer-logo">
-                <span class="logo-name">VISIONARY PATH SERVICES</span>
-                <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                <a href="{{ROOT}}index.html" class="logo logo-dark" aria-label="Visionary Path Services Home">
+                    <span class="vps-brand-mark">
+                        <svg class="vps-flash-svg" viewBox="0 0 100 120" width="34" height="41" fill="none" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="footerFlashGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+                                    <stop offset="0%" stop-color="#FF8A00" />
+                                    <stop offset="55%" stop-color="#FF5A00" />
+                                    <stop offset="100%" stop-color="#FF3800" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+                                  stroke="url(#footerFlashGrad)" 
+                                  stroke-width="14.5" 
+                                  stroke-linejoin="round" 
+                                  stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <div class="logo-text">
+                        <span class="logo-name">VISIONARY</span>
+                        <span class="logo-sub">
+                            <span class="logo-sub-line"></span>
+                            <span class="logo-sub-text">PATH SERVICES</span>
+                            <span class="logo-sub-line"></span>
+                        </span>
+                    </div>
+                </a>
             </div>
             <p class="footer-desc">
                 Pan-India premier education loan advisory service. We empower students to secure domestic and international academic financing from top banks and NBFCs with zero service charges.

@@ -46,7 +46,7 @@ countries = [
         "id": "uk",
         "title": "Study in the UK",
         "h1": "Education Loan for <span style=\"color:#1a9c4e\">Study in the UK</span>",
-        "subtitle": "Secure education loan options for 1-year Master's, undergraduate, and MBA programs across Russell Group and top British universities.",
+        "subtitle": "Secure education loan options for 1-year Master's, undergraduate, and MBA degrees across Russell Group and top British universities up to ₹1.5 Crores.",
         "flag": "🇬🇧",
         "currency": "GBP (£)",
         "tuition": "£15,000 – £35,000 / year",
@@ -120,7 +120,7 @@ countries = [
         "id": "germany",
         "title": "Study in Germany",
         "h1": "Education Loan for <span style=\"color:#1a9c4e\">Study in Germany</span>",
-        "subtitle": "Finance your German Blocked Account (Sperrkonto) and living expenses for world-renowned TU9 and public universities.",
+        "subtitle": "Finance your German Blocked Account (Sperrkonto) and living expenses for world-renowned TU9 and public universities with collateral-free loan options.",
         "flag": "🇩🇪",
         "currency": "EUR (€)",
         "tuition": "€0 – €3,000 / year (Public)",
@@ -194,7 +194,7 @@ countries = [
         "id": "ireland",
         "title": "Study in Ireland",
         "h1": "Education Loan for <span style=\"color:#1a9c4e\">Study in Ireland</span>",
-        "subtitle": "Finance your higher education in Europe's premier technology and pharma hub with fast, student-friendly loan options.",
+        "subtitle": "Secure education loans for top Irish universities in Dublin, Cork, and Galway covering 100% tuition, living expenses, and 2-year Stamp 1G stay-back visa.",
         "flag": "🇮🇪",
         "currency": "EUR (€)",
         "tuition": "€12,000 – €25,000 / year",
@@ -227,7 +227,7 @@ countries = [
         "id": "france",
         "title": "Study in France",
         "h1": "Education Loan for <span style=\"color:#1a9c4e\">Study in France</span>",
-        "subtitle": "Education loan assistance for elite Grandes Écoles, MBA programs, and English-taught Master's degrees in France.",
+        "subtitle": "Comprehensive education loan assistance for elite Grandes Écoles, top triple-accredited MBA programs, and English-taught Master's degrees across France.",
         "flag": "🇫🇷",
         "currency": "EUR (€)",
         "tuition": "€8,000 – €25,000 / year",
@@ -260,7 +260,7 @@ countries = [
         "id": "new-zealand",
         "title": "Study in New Zealand",
         "h1": "Education Loan for <span style=\"color:#1a9c4e\">Study in New Zealand</span>",
-        "subtitle": "Tailored education loan solutions covering tuition fees and the ANZ Bank Funds Transfer Scheme (FTS).",
+        "subtitle": "Tailored education loan solutions covering tuition fees, living expenses, and ANZ Bank Funds Transfer Scheme (FTS) for top New Zealand universities.",
         "flag": "🇳🇿",
         "currency": "NZD ($)",
         "tuition": "NZD 26,000 – 42,000 / year",
@@ -293,7 +293,7 @@ countries = [
         "id": "dubai",
         "title": "Study in Dubai (UAE)",
         "h1": "Education Loan for <span style=\"color:#1a9c4e\">Study in Dubai & UAE</span>",
-        "subtitle": "Education loan guidance for prestigious international branch campuses and universities in Dubai and Abu Dhabi.",
+        "subtitle": "Education loan guidance for prestigious international branch campuses and universities in Dubai and UAE with quick approvals and zero service charges.",
         "flag": "🇦🇪",
         "currency": "AED (د.إ)",
         "tuition": "AED 45,000 – 95,000 / year",
@@ -326,7 +326,7 @@ countries = [
         "id": "europe",
         "title": "Study in Europe",
         "h1": "Education Loan for <span style=\"color:#1a9c4e\">Study Across Europe</span>",
-        "subtitle": "Comprehensive loan support for top universities across Sweden, Netherlands, Italy, Spain, Switzerland, and the Schengen Area.",
+        "subtitle": "Comprehensive loan support for top European universities across Sweden, Netherlands, Italy, Switzerland, and Spain with competitive interest rates.",
         "flag": "🇪🇺",
         "currency": "EUR (€) / Local",
         "tuition": "€6,000 – €22,000 / year",
@@ -376,18 +376,28 @@ template = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="alternate icon" type="image/x-icon" href="../../favicon.svg">
     <title>{title} – Education Loan Guidance | Visionary Path Services</title>
     <meta name="description" content="{subtitle}">
     <link rel="canonical" href="https://www.visionarypathservices.com/pages/countries/{id}.html">
 
-    <!-- Open Graph -->
+    <!-- Open Graph & Social Cards -->
     <meta property="og:title" content="{title} – Education Loan Guidance | Visionary Path Services">
     <meta property="og:description" content="{subtitle}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.visionarypathservices.com/pages/countries/{id}.html">
+    <meta property="og:image" content="https://www.visionarypathservices.com/favicon.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{title} – Education Loan Guidance | Visionary Path Services">
+    <meta name="twitter:description" content="{subtitle}">
+    <meta name="twitter:image" content="https://www.visionarypathservices.com/favicon.svg">
 
     <!-- CSS & Fonts -->
+    <link rel="stylesheet" href="../../css/design-system.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/improvements.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
@@ -577,7 +587,7 @@ template = """<!DOCTYPE html>
     </header>
 
     <!-- PAGE HERO -->
-    <header class="page-hero">
+    <header class="page-hero" id="mainContent">
         <div class="container page-hero-inner">
             <div class="breadcrumb">
                 <a href="../../index.html">Home</a> / <a href="../abroad-loans.html">Study Abroad</a> / <span>{title}</span>
@@ -785,7 +795,7 @@ template = """<!DOCTYPE html>
     </footer>
 
     <!-- POPUP INQUIRY FORM -->
-    <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
+    <div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle" onclick="closePopupOutside(event)">
         <div class="popup-modal">
             <button class="popup-close" onclick="closePopup()" aria-label="Close Popup">✕</button>
             <div class="popup-left">
@@ -829,50 +839,50 @@ template = """<!DOCTYPE html>
             </div>
             <div class="popup-right">
                 <div class="popup-form-header">
-                    <h4>Get Free Loan Assessment</h4>
+                    <h4 id="popupTitle">Get Free Loan Assessment</h4>
                     <p>Connect with a senior counselor specializing in {country_short} education loans</p>
                 </div>
                 <form class="popup-form" onsubmit="submitForm(event)">
                     <div class="form-row name-row">
                         <div class="form-group">
-                            <label>First Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="firstName" placeholder="e.g. Aarav" required></div>
+                            <label for="popupFirstName">First Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupFirstName" name="firstName" placeholder="e.g. Aarav" aria-label="First Name" required autocomplete="given-name"></div>
                         </div>
                         <div class="form-group">
-                            <label>Last Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="lastName" placeholder="e.g. Sharma" required></div>
+                            <label for="popupLastName">Last Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupLastName" name="lastName" placeholder="e.g. Sharma" aria-label="Last Name" required autocomplete="family-name"></div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Phone Number <span class="req">*</span></label>
+                            <label for="popupPhone">Phone Number <span class="req">*</span></label>
                             <div class="input-icon-wrap phone-wrap">
                                 <span class="country-prefix"><i class="fas fa-phone"></i> +91</span>
-                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{{10}}" maxlength="10" required>
+                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{{10}}" maxlength="10" aria-label="10-digit Phone Number" required autocomplete="tel-national">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="label-with-action">
-                                <label>WhatsApp Number <span class="req">*</span></label>
-                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()">Same as phone</button>
+                                <label for="popupWhatsApp">WhatsApp Number <span class="req">*</span></label>
+                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()" aria-label="Copy Phone Number to WhatsApp Number">Same as phone</button>
                             </div>
                             <div class="input-icon-wrap whatsapp-inp">
                                 <i class="fab fa-whatsapp"></i>
-                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{{10}}" maxlength="10" required>
+                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{{10}}" maxlength="10" aria-label="10-digit WhatsApp Number" required autocomplete="tel-national">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Email Address <span class="req">*</span></label>
-                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="e.g. aarav.sharma@gmail.com" required></div>
+                        <label for="popupEmail">Email Address <span class="req">*</span></label>
+                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" id="popupEmail" name="email" placeholder="e.g. aarav.sharma@gmail.com" aria-label="Email Address" required autocomplete="email"></div>
                     </div>
                     <div class="form-group mb-tight">
-                        <label class="form-label-regular">Target Country / Destination</label>
-                        <div class="input-icon-wrap"><i class="fas fa-globe-americas"></i><input type="text" name="country" value="{country_short}" readonly style="background:#f8fafc; font-weight:600; color:#0b2545;"></div>
+                        <label for="popupCountry" class="form-label-regular">Target Country / Destination</label>
+                        <div class="input-icon-wrap"><i class="fas fa-globe-americas"></i><input type="text" id="popupCountry" name="country" value="{country_short}" readonly aria-label="Target Country" style="background:#f8fafc; font-weight:600; color:#0b2545;"></div>
                     </div>
                     <div class="form-group mb-tight">
-                        <label class="form-label-regular">Degree, Course &amp; Loan Amount</label>
-                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-graduation-cap"></i><textarea name="message" placeholder="e.g. Master's in CS, target budget ₹50 Lakhs..." rows="2"></textarea></div>
+                        <label for="popupMessage" class="form-label-regular">Degree, Course &amp; Loan Amount</label>
+                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-graduation-cap"></i><textarea id="popupMessage" name="message" placeholder="e.g. Master's in CS, target budget ₹50 Lakhs..." aria-label="Degree, Course and Loan Amount" rows="2"></textarea></div>
                     </div>
                     <button type="submit" class="btn btn-submit-enquiry">
                         <span>Check My Eligibility Free</span>

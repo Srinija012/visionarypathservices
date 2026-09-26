@@ -1,0 +1,491 @@
+/**
+ * ══════════════════════════════════════════════════════════════════════
+ *  VISIONARY PATH SERVICES — CANONICAL DESIGN SYSTEM
+ *  Version: 3.0 | Master Brand Specification
+ *  Load order: FIRST (before style.css, improvements.css)
+ * ══════════════════════════════════════════════════════════════════════
+ *
+ *  Core Brand Architecture:
+ *  - Primary Navy:       #0B1F33 (Authority, Institutional Trust, Headings)
+ *  - Brand Orange:       #FF5A00 (Energy, Action, CTAs, Highlights)
+ *  - Orange Gradient:    #FF5A00 → #FF8A00 (Brand Mark, Key Highlights)
+ *  - White:              #FFFFFF (Clean Canvas)
+ *  - Off-White:          #F7F9FB (Backgrounds, Soft Surfaces)
+ *  - Light Blue/Gray:    #EAF0F5 (Muted Elements, Subtle Badges)
+ *  - Muted Text:         #667085 (High Contrast Accessible Body/Captions)
+ *  - Border:             #DDE5EC (Crisp Structural Boundaries)
+ *
+ *  Visual Balance: 70% White/Off-White | 20% Navy | 10% Orange Accent
+ * ══════════════════════════════════════════════════════════════════════
+ */
+
+:root {
+
+    /* ─────────────────────────────────────────────────────────────────
+       1. PRIMARY BRAND COLORS (Master Palette)
+       ───────────────────────────────────────────────────────────────── */
+
+    /* Navy Scale */
+    --color-navy:        #0B1F33;    /* Master Primary Navy */
+    --color-navy-dark:   #050E17;    /* Deepest Navy */
+    --color-navy-900:    #0B1F33;
+    --color-navy-800:    #0D253E;
+    --color-navy-700:    #133152;
+    --color-navy-600:    #1B416D;
+    --color-navy-500:    #245289;
+
+    /* Orange Scale (Master Accents & CTAs) */
+    --color-orange:          #FF5A00;    /* Master Energetic Orange */
+    --color-orange-dark:     #E04F00;    /* Dark Orange / Hover */
+    --color-orange-light:    #FF8A00;    /* Soft Orange / Gradient End */
+    --color-orange-tint:     #FFF4ED;    /* Very Soft Orange Tint */
+    --color-orange-subtle:   #FFE5D6;    /* Subtle Orange Border/Pill */
+    --color-orange-gradient: linear-gradient(135deg, #FF5A00 0%, #FF8A00 100%);
+    --color-orange-glow:     rgba(255, 90, 0, 0.28);
+
+    /* Neutral & Surface Scale */
+    --color-white:           #FFFFFF;
+    --color-off-white:       #F7F9FB;
+    --color-light-blue-gray: #EAF0F5;
+    --color-surface:         #FFFFFF;
+    --color-surface-soft:    #F7F9FB;
+    --color-surface-subtle:  #EAF0F5;
+    --color-surface-dark:    #0B1F33;
+
+    /* Text Scale */
+    --color-text:            #0B1F33;    /* Primary Headings & Bold Text */
+    --color-text-body:       #1E293B;    /* Body Copy */
+    --color-text-secondary:  #475569;    /* Subheadings */
+    --color-text-muted:      #667085;    /* Captions & Meta (WCAG AA compliant) */
+    --color-text-faint:      #94A3B8;
+    --color-text-inverse:    #FFFFFF;
+
+    /* Border Scale */
+    --color-border:          #DDE5EC;
+    --color-border-strong:   #C8D5E2;
+    --color-border-subtle:   #EAF0F5;
+
+    /* Interactive & Feedback */
+    --color-focus-ring:      #FF5A00;
+    --color-success:         #047857;
+    --color-warning:         #D97706;
+    --color-error:           #DC2626;
+    --color-info:            #1A56DB;
+
+    /* ─────────────────────────────────────────────────────────────────
+       VISIONARY PATH SERVICES — BRAND SYSTEM MASTER TOKENS
+       Deep Navy + Brand Orange + Crisp White Architecture
+       ───────────────────────────────────────────────────────────────── */
+    --vp-navy:            #0B1F33;    /* Primary Navy */
+    --vp-navy-2:          #123A63;    /* Secondary Navy */
+    --vp-navy-dark:       #061320;    /* Deep Charcoal Navy */
+    --vp-orange:          #FF5A00;    /* Brand Orange Accent */
+    --vp-orange-hover:    #E04F00;    /* Darker Orange Hover */
+    --vp-orange-light:    #FFF1E8;    /* Light Orange Tint */
+    --vp-orange-subtle:   #FFE5D6;    /* Subtle Orange Pill/Border */
+    --vp-orange-gradient: linear-gradient(135deg, #FF5A00 0%, #FF8A00 100%);
+    --vp-orange-glow:     rgba(255, 90, 0, 0.22);
+    --vp-white:           #FFFFFF;    /* Pure White */
+    --vp-off-white:       #F7F9FB;    /* Off White Background */
+    --vp-surface:         #F7F9FB;    /* Surface Background */
+    --vp-surface-2:       #EEF2F5;    /* Very Light Gray */
+    --vp-text:            #172B3F;    /* Deep Text */
+    --vp-muted:           #667085;    /* Muted Text (WCAG AA compliant) */
+    --vp-border:          #DCE4EA;    /* Neutral Border */
+    --vp-border-light:    #EDF2F7;
+    --vp-green-accent:    #EAF7F0;    /* Semantic Green (WhatsApp / Success) */
+    --vp-green-text:      #047857;    /* Accessible Emerald */
+    --vp-font-sans:       'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --vp-font-handwriting:'Caveat', cursive, sans-serif;
+
+
+    /* ─────────────────────────────────────────────────────────────────
+       2. CANONICAL & BACKWARD-COMPATIBILITY ALIASES
+       Ensures existing scripts, audits, and stylesheets run seamlessly.
+       ───────────────────────────────────────────────────────────────── */
+
+    /* Canonical Semantic Tokens */
+    --color-primary:        var(--color-navy);
+    --color-primary-dark:   var(--color-navy-dark);
+    --color-primary-light:  var(--color-navy-700);
+    --color-secondary:      var(--color-navy);
+    --color-secondary-dark: var(--color-navy-dark);
+    --color-accent:         var(--color-orange);
+    --color-accent-dark:    var(--color-orange-dark);
+    --color-accent-light:   var(--color-orange-light);
+    --color-background:     var(--color-off-white);
+    --color-bg:             var(--color-off-white);
+    --color-bg-subtle:      var(--color-light-blue-gray);
+
+    /* Legacy Scale Mappings for style.css */
+    --navy:            var(--color-navy);
+    --navy-dark:       var(--color-navy-dark);
+    --navy-light:      var(--color-navy-700);
+    --orange:          var(--color-orange);
+    --orange-dark:     var(--color-orange-dark);
+    --orange-light:    var(--color-orange-light);
+    --orange-gradient: var(--color-orange-gradient);
+    --green:           var(--color-orange);         /* Redirect primary action green to brand orange */
+    --green-dark:      var(--color-orange-dark);
+    --green-light:     var(--color-orange-light);
+    --green-bg:        var(--color-orange-tint);
+    --blue:            var(--color-navy);
+    --blue-dark:       var(--color-navy-dark);
+    --blue-light:      var(--color-light-blue-gray);
+    --text-main:       var(--color-navy);
+    --text-body:       var(--color-text-body);
+    --text-muted:      var(--color-text-muted);
+    --text-light:      var(--color-text-faint);
+    --border-color:    var(--color-border);
+    --bg-light:        var(--color-off-white);
+    --bg-card:         var(--color-white);
+    --white:           var(--color-white);
+
+    /* VPS-Prefix Aliases & Audit Requirement Guards */
+    --vps-navy:         var(--color-navy);
+    --vps-green:        var(--color-orange);
+    --vps-blue:         var(--color-navy);
+    --vps-navy-950:     #050E17;
+    --vps-navy-900:     #0B1F33;
+    --vps-navy-800:     #0D253E;
+    --vps-navy-700:     #133152;
+    --vps-green-800:    #047857;   /* Preserved for verified WCAG audit compliance */
+    --vps-green-700:    #059669;
+    --vps-green-600:    #10b981;
+    --vps-green-500:    #34d399;   /* Preserved for verified dark hero highlights */
+    --vps-green-400:    #6ee7b7;
+    --vps-green-100:    #d1fae5;
+    --vps-green-50:     #ecfdf5;
+    --vps-blue-900:     #1e3a8a;
+    --vps-blue-800:     #1e40af;
+    --vps-blue-700:     #1a56db;
+    --vps-blue-600:     #2563eb;
+    --vps-blue-500:     #3b82f6;
+    --vps-blue-100:     #bfdbfe;
+    --vps-blue-50:      #eff6ff;
+    --vps-neutral-950:  #0B1F33;
+    --vps-neutral-900:  #1e293b;
+    --vps-neutral-800:  #334155;
+    --vps-neutral-700:  #475569;
+    --vps-neutral-600:  #64748b;
+    --vps-neutral-500:  #7c8ca0;
+    --vps-neutral-400:  #94a3b8;
+    --vps-neutral-300:  #cbd5e1;
+    --vps-neutral-200:  #dde5ec;
+    --vps-neutral-150:  #eaf0f5;
+    --vps-neutral-100:  #f1f5f9;
+    --vps-neutral-50:   #f7f9fb;
+    --vps-white:        #ffffff;
+    --vps-border:       var(--color-border);
+    --vps-shadow-xs:    0 1px 2px rgba(11, 31, 51, 0.04);
+    --vps-shadow-sm:    0 2px 5px -1px rgba(11, 31, 51, 0.06), 0 1px 3px -1px rgba(11, 31, 51, 0.03);
+
+    /* Amber / Alert scale */
+    --vps-amber-900: #78350f;
+    --vps-amber-800: #92400e;
+    --vps-amber-700: #b45309;
+    --vps-amber-600: #d97706;
+    --vps-amber-500: #f59e0b;
+    --vps-amber-300: #fcd34d;
+    --vps-amber-50:  #fef9ec;
+    --amber:         var(--vps-amber-600);
+    --amber-dark:    var(--vps-amber-700);
+    --amber-bg:      var(--vps-amber-50);
+
+
+    /* ─────────────────────────────────────────────────────────────────
+       3. TYPOGRAPHY TOKENS
+       Font families: Manrope (Display/Headings) + Inter (Body/UI)
+       ───────────────────────────────────────────────────────────────── */
+
+    --font-display: 'Manrope', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body:    'Inter', 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-family-base: var(--font-body);
+    --font-family-heading: var(--font-display);
+    --font-mono:    ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
+
+    /* Type Scale */
+    --text-xs:    0.75rem;     /* 12px */
+    --text-sm:    0.8125rem;   /* 13px */
+    --text-sm2:   0.875rem;    /* 14px */
+    --text-base:  1rem;        /* 16px */
+    --text-md:    1.0625rem;   /* 17px */
+    --text-lg:    1.125rem;    /* 18px */
+    --text-xl:    1.25rem;     /* 20px */
+    --text-2xl:   1.5rem;      /* 24px */
+    --text-3xl:   1.875rem;    /* 30px */
+
+    /* Fluid Heading Scale */
+    --heading-hero:   clamp(2.2rem, 4.4vw, 3.4rem);    /* Page hero H1 */
+    --heading-h1:     clamp(1.9rem, 3.6vw, 2.85rem);   /* Section hero */
+    --heading-h2:     clamp(1.5rem, 3vw, 2.25rem);     /* Section titles */
+    --heading-h3:     clamp(1.15rem, 1.6vw, 1.4rem);   /* Card titles */
+
+    /* Line Heights & Tracking */
+    --leading-tight:   1.2;
+    --leading-snug:    1.32;
+    --leading-normal:  1.5;
+    --leading-relaxed: 1.65;
+    --tracking-tight:  -0.025em;
+    --tracking-snug:   -0.015em;
+    --tracking-normal: -0.01em;
+    --tracking-wide:   0.04em;
+    --tracking-wider:  0.08em;
+    --tracking-widest: 0.12em;
+
+
+    /* ─────────────────────────────────────────────────────────────────
+       4. SPACING & RHYTHM TOKENS (Base Unit: 4px)
+       ───────────────────────────────────────────────────────────────── */
+
+    --space-1:    4px;
+    --space-2:    8px;
+    --space-3:    12px;
+    --space-4:    16px;
+    --space-5:    20px;
+    --space-6:    24px;
+    --space-7:    28px;
+    --space-8:    32px;
+    --space-9:    36px;
+    --space-10:   40px;
+    --space-11:   44px;
+    --space-12:   48px;
+    --space-14:   56px;
+    --space-16:   64px;
+    --space-18:   72px;
+    --space-20:   80px;
+    --space-24:   96px;
+    --space-30:   120px;
+
+    /* Section Rhythm */
+    --space-section:        72px;
+    --space-section-lg:     96px;
+    --space-section-mobile: 44px;
+
+    /* Containers */
+    --container-width:   1200px;
+    --container-narrow:  820px;
+    --container-reading: 72ch;
+    --container-sm:      640px;
+
+
+    /* ─────────────────────────────────────────────────────────────────
+       5. BORDER RADIUS TOKENS (Modern, Restrained 12–18px Cards)
+       ───────────────────────────────────────────────────────────────── */
+
+    --radius-xs:    4px;
+    --radius-sm:    8px;
+    --radius-md:    12px;    /* Preferred card base */
+    --radius-lg:    16px;    /* Preferred container/modal */
+    --radius-xl:    24px;
+    --radius-2xl:   32px;
+    --radius-full:  9999px;
+
+    --radius:       var(--radius-md);
+    --radius-xl2:   var(--radius-xl);
+
+
+    /* ─────────────────────────────────────────────────────────────────
+       6. SHADOW TOKENS (Institutional Soft Navy + Orange Glow)
+       ───────────────────────────────────────────────────────────────── */
+
+    --shadow-xs:        0 1px 2px rgba(11, 31, 51, 0.04);
+    --shadow-sm:        0 2px 5px -1px rgba(11, 31, 51, 0.06), 0 1px 3px -1px rgba(11, 31, 51, 0.03);
+    --shadow-md:        0 8px 20px -3px rgba(11, 31, 51, 0.08), 0 3px 6px -2px rgba(11, 31, 51, 0.04);
+    --shadow-lg:        0 16px 36px -4px rgba(11, 31, 51, 0.12), 0 6px 12px -3px rgba(11, 31, 51, 0.04);
+    --shadow-xl:        0 24px 52px -6px rgba(11, 31, 51, 0.16), 0 10px 20px -4px rgba(11, 31, 51, 0.06);
+    --shadow-card:      0 4px 16px rgba(11, 31, 51, 0.05), 0 1px 3px rgba(11, 31, 51, 0.03);
+    --shadow-card-hover: 0 12px 28px -4px rgba(11, 31, 51, 0.12), 0 4px 10px -2px rgba(11, 31, 51, 0.04);
+
+    /* Orange CTA Shadows */
+    --shadow-orange-sm: 0 4px 14px rgba(255, 90, 0, 0.28);
+    --shadow-orange-md: 0 8px 22px rgba(255, 90, 0, 0.38);
+    --shadow-orange-lg: 0 12px 32px rgba(255, 90, 0, 0.45);
+
+    /* Green shadows (for backward compatibility) */
+    --shadow-green-sm:  var(--shadow-orange-sm);
+    --shadow-green-md:  var(--shadow-orange-md);
+    --shadow-green-lg:  var(--shadow-orange-lg);
+    --shadow-navy-sm:   0 4px 14px rgba(11, 31, 51, 0.16);
+    --shadow-navy-md:   0 6px 18px rgba(11, 31, 51, 0.24);
+
+    --transition-shadow: box-shadow var(--motion-base) var(--ease-standard);
+
+
+    /* ─────────────────────────────────────────────────────────────────
+       7. Z-INDEX TOKENS
+       ───────────────────────────────────────────────────────────────── */
+
+    --z-base:     0;
+    --z-raised:   10;
+    --z-sticky:   100;
+    --z-header:   1000;
+    --z-dropdown: 1001;
+    --z-overlay:  9000;
+    --z-modal:    9001;
+    --z-toast:    9500;
+    --z-float:    9999;
+    --z-top:      10000;
+
+
+    /* ─────────────────────────────────────────────────────────────────
+       8. MOTION & ANIMATION TOKENS
+       ───────────────────────────────────────────────────────────────── */
+
+    --motion-instant: 0.08s;
+    --motion-fast:    0.15s;
+    --motion-base:    0.22s;
+    --motion-slow:    0.35s;
+    --motion-ambient: 2s;
+
+    --ease-spring:   cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-enter:    cubic-bezier(0, 0, 0.2, 1);
+    --ease-exit:     cubic-bezier(0.4, 0, 1, 1);
+    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce:   cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --transition-fast:      var(--motion-fast) var(--ease-spring);
+    --transition-base:      var(--motion-base) var(--ease-spring);
+    --transition-smooth:    var(--motion-slow) var(--ease-spring);
+    --transition-bounce:    var(--motion-base) var(--ease-spring);
+    --transition:           var(--motion-base) var(--ease-standard);
+    --transition-bg:        background var(--motion-fast) var(--ease-standard);
+    --transition-color:     color var(--motion-fast) var(--ease-standard);
+    --transition-border:    border-color var(--motion-fast) var(--ease-standard);
+    --transition-transform: transform var(--motion-base) var(--ease-spring);
+
+
+    /* ─────────────────────────────────────────────────────────────────
+       9. SURFACE & BACKGROUND SYSTEM
+       ───────────────────────────────────────────────────────────────── */
+
+    --surface-page:     var(--color-white);
+    --surface-card:     var(--color-white);
+    --surface-soft:     var(--color-off-white);
+    --surface-subtle:   var(--color-light-blue-gray);
+    --surface-hero:     var(--color-off-white);
+
+    /* Gradients */
+    --gradient-hero:         linear-gradient(135deg, #050E17 0%, #0B1F33 60%, #133152 100%);
+    --gradient-dark:         linear-gradient(135deg, #0B1F33 0%, #162C45 100%);
+    --gradient-orange:       var(--color-orange-gradient);
+    --gradient-green:        var(--color-orange-gradient);
+    --gradient-hero-overlay: radial-gradient(circle at 18% 25%, rgba(255, 90, 0, 0.08) 0%, transparent 45%),
+                             radial-gradient(circle at 82% 65%, rgba(11, 31, 51, 0.05) 0%, transparent 50%);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   10. BRAND SIGNATURE MOTIFS & UTILITIES
+   ───────────────────────────────────────────────────────────────── */
+
+/* Thin Orange Brand Signature Divider */
+.orange-rule, .brand-orange-rule {
+    display: inline-block;
+    width: 36px;
+    height: 3px;
+    background: var(--color-orange);
+    border-radius: 2px;
+}
+
+/* Subtle World Map / Global Network Texture */
+.pattern-world-map {
+    background-image: url('../images/world-map-dots.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Halftone Dot Field */
+.pattern-dots {
+    background-image: radial-gradient(rgba(11, 31, 51, 0.08) 1.2px, transparent 1.2px);
+    background-size: 20px 20px;
+}
+
+/* Orange Halftone Dot Accent */
+.pattern-dots-orange {
+    background-image: radial-gradient(rgba(255, 90, 0, 0.12) 1.2px, transparent 1.2px);
+    background-size: 18px 18px;
+}
+
+/* Subtle Curved Swoosh Accents */
+.brand-swoosh-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.brand-swoosh-corner {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.brand-swoosh-corner.top-right {
+    top: -120px;
+    right: -120px;
+    background: radial-gradient(circle, #FF5A00 0%, transparent 70%);
+}
+
+.brand-swoosh-corner.bottom-left {
+    bottom: -140px;
+    left: -140px;
+    background: radial-gradient(circle, #0B1F33 0%, transparent 70%);
+    opacity: 0.08;
+}
+
+/* Optical Text Balancing */
+h1, h2, h3, .section-title, .hero-title, .modal-title, .popup-form-header h4 {
+    text-wrap: balance;
+}
+
+.section-sub, .hero-sub, .pan-india-sub, .bridging-sub, .country-intro-lead, .blog-lead {
+    text-wrap: pretty;
+}
+
+/* Tabular Numerals */
+.calc-result-num,
+.stat-num,
+.rate-value,
+.country-meta-val,
+.lender-rate,
+.calc-val-input,
+.comparison-table th,
+.comparison-table td,
+.legal-table td,
+.data-table td {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Tactile Micro-Interactions */
+.btn:active,
+.btn-primary:active,
+.btn-secondary:active,
+.btn-hero-primary:active,
+.btn-submit-enquiry:active,
+.calc-tab:active,
+.btn-copy-phone:active,
+.floating-eligibility-btn:active {
+    transform: scale(0.98);
+}
+
+.table-responsive,
+.comparison-table-wrapper,
+.legal-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Green Highlight WCAG Safe Support */
+.green-highlight {
+    color: var(--color-orange, #FF5A00);
+}

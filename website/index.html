@@ -15,12 +15,16 @@
     <meta property="og:description" content="Find the right education loan for higher studies in India or abroad. 100% free guidance across 15+ top lending partners.">
     <meta property="og:url" content="https://www.visionarypathservices.com/">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.visionarypathservices.com/favicon.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.visionarypathservices.com/favicon.svg">
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/design-system.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/improvements.css">
 
@@ -60,16 +64,18 @@
 <body>
 
     <!-- VPS_NAVBAR_START -->
+<a href="#mainContent" class="skip-link">Skip to main content</a>
 <!-- TOPBAR -->
 <div class="top-bar">
     <div class="container top-bar-inner">
         <div class="top-bar-left">
-            <span class="pulse-dot"></span>
-            <span>Pan India Education Loan Assistance &amp; Guidance</span>
-            <span class="top-bar-dash">—</span> Your Education Goals, Our Guidance
+            <span class="orange-rule" style="width:18px; height:2px; margin-right:8px; vertical-align:middle; display:inline-block;"></span>
+            <span>Your Education Goals, Our Guidance</span>
+            <span class="top-bar-dash" style="color:var(--color-orange); margin: 0 6px;">•</span>
+            <span style="opacity: 0.88;">Pan India Loan Advisory</span>
         </div>
         <div class="top-bar-right">
-            <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact:- 9063703038</a>
+            <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact: 9063703038</a>
             <span class="top-sep">|</span>
             <a href="https://instagram.com/visionarypathservices" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <span class="top-sep">|</span>
@@ -81,15 +87,35 @@
 <!-- NAVBAR -->
 <header class="navbar" id="navbar">
     <div class="container nav-inner">
-        <a href="index.html" class="logo active-home">
+        <a href="index.html" class="logo active-home" aria-label="Visionary Path Services Home">
+            <span class="vps-brand-mark">
+                <svg class="vps-flash-svg" viewBox="0 0 100 120" width="34" height="41" fill="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="navFlashGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+                            <stop offset="0%" stop-color="#FF7A00" />
+                            <stop offset="55%" stop-color="#FF5A00" />
+                            <stop offset="100%" stop-color="#FF3800" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+                          stroke="url(#navFlashGrad)" 
+                          stroke-width="14.5" 
+                          stroke-linejoin="round" 
+                          stroke-linecap="round" />
+                </svg>
+            </span>
             <div class="logo-text">
-                <span class="logo-name">VISIONARY PATH SERVICES</span>
-                <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                <span class="logo-name">VISIONARY</span>
+                <span class="logo-sub">
+                    <span class="logo-sub-line"></span>
+                    <span class="logo-sub-text">PATH SERVICES</span>
+                    <span class="logo-sub-line"></span>
+                </span>
             </div>
         </a>
         <ul class="nav-links" id="navLinks">
             <li class="has-dropdown services-dropdown">
-                <a href="pages/services.html" class="nav-link-services">Services <i class="fas fa-chevron-down"></i></a>
+                <a href="pages/services.html" class="nav-link-services" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="dropdown mega-dropdown">
                     <div class="mega-body">
                         <!-- Left: Loan Programs -->
@@ -197,7 +223,7 @@
             <li><a href="pages/partner-with-us.html" class="nav-link-partner-with-us">Partner With Us</a></li>
             <!-- More dropdown -->
             <li class="has-dropdown">
-                <a href="#" class="nav-link-more">More <i class="fas fa-chevron-down"></i></a>
+                <a href="#" class="nav-link-more" aria-haspopup="true" aria-expanded="false">More <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="more-dropdown">
                     <a href="pages/about.html" class="more-dropdown-item">
                         <i class="fas fa-info-circle"></i> About Us
@@ -230,22 +256,48 @@
 </header>
 <!-- VPS_NAVBAR_END -->
 
-    <!-- 1. HERO SECTION (Matches Screenshot 1 / Image 2) -->
-    <section class="exact-hero">
+    <!-- 1. HERO SECTION (Master Brand System · Hallmark Refined) -->
+    <section class="exact-hero" id="mainContent">
         <div class="container exact-hero-container">
             <div class="exact-hero-grid">
+                
+                <!-- Left Content Column -->
                 <div class="exact-hero-content" data-aos="fade-right">
-                    <div class="brand-eyebrow">
-                        <span class="green-bar"></span>
-                        <span class="eyebrow-text">VISIONARY PATH SERVICES • PAN INDIA EDUCATION LOANS</span>
+                    <div class="vps-eyebrow brand-eyebrow">
+                        <span class="vps-eyebrow-dot"></span>
+                        <span class="eyebrow-text">VISIONARY PATH SERVICES</span>
                     </div>
+                    
                     <h1 class="exact-hero-title">
                         Turn Your Education<br>
-                        Dreams <span class="green-highlight">Into Reality</span>
+                        Dreams <span class="hero-highlight">Into Reality</span>
                     </h1>
+                    
                     <p class="exact-hero-lead">
-                        Right education loan — for India or abroad. Personalised guidance, zero hidden charges, end-to-end support from application to sanction.
+                        Compare secured and unsecured education loan offers across <strong>15+ leading partner banks &amp; NBFCs</strong>. Get 100% free guidance, pre-visa sanction support, and hassle-free disbursals.
                     </p>
+                    
+                    <div class="hero-supporting-block">
+                        <div class="hero-supporting-title"><i class="fas fa-check-circle" style="color: #16a34a; margin-right: 6px;"></i> Transparent, Profile-Based Advisory</div>
+                        <p class="hero-supporting-desc">
+                            Up to ₹2 Crore funding for domestic and overseas study with zero service charges and dedicated counselor support.
+                        </p>
+                    </div>
+
+                    <!-- Action Buttons matching Reference Design -->
+                    <div class="exact-hero-actions">
+                        <button class="btn btn-hero-primary" onclick="openPopup()">
+                            Check Eligibility – Free <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <a href="tel:9063703038" class="btn btn-hero-secondary">
+                            <i class="fas fa-phone-alt"></i> Call Now
+                        </a>
+                    </div>
+                    
+                    <div class="exact-hero-safety">
+                        <i class="fas fa-shield-halved"></i> 100% Free Consultation • Bank-Grade Confidentiality
+                    </div>
+
                     <!-- Loan type quick pills -->
                     <div class="hero-loan-pills">
                         <a href="pages/abroad-loans.html" class="hero-loan-pill">
@@ -258,48 +310,54 @@
                             <i class="fas fa-stethoscope"></i> MBBS Loans
                         </a>
                         <a href="pages/other-loans.html" class="hero-loan-pill">
-                            <i class="fas fa-briefcase"></i> Forex &amp; Other
+                            <i class="fas fa-briefcase"></i> Personal &amp; Home
                         </a>
                     </div>
-                    <div class="exact-hero-actions">
-                        <button class="btn btn-hero-primary" onclick="openPopup()">
-                            Check Eligibility – Free <i class="fas fa-arrow-right"></i>
-                        </button>
-                        <a href="tel:9063703038" class="btn btn-hero-secondary">
-                            <i class="fas fa-phone"></i> Talk to a Counselor
-                        </a>
-                    </div>
-                    <div class="exact-hero-safety">
-                        <i class="fas fa-shield-alt"></i> 100% Free Guidance • 15+ Partner Lenders &amp; NBFCs • Safe &amp; Confidential
+                    
+                    <!-- Trust Highlights Strip -->
+                    <div class="hero-trust-strip">
+                        <div class="hero-trust-item">
+                            <i class="fas fa-shield-halved trust-icon-green"></i>
+                            <span><strong>100% Free</strong> Advisory</span>
+                        </div>
+                        <span class="hero-trust-sep">•</span>
+                        <div class="hero-trust-item">
+                            <i class="fas fa-building-columns trust-icon-blue"></i>
+                            <span><strong>15+</strong> Partner Lenders</span>
+                        </div>
+                        <span class="hero-trust-sep">•</span>
+                        <div class="hero-trust-item">
+                            <i class="fas fa-user-check trust-icon-green"></i>
+                            <span><strong>Expert</strong> Guidance</span>
+                        </div>
+                        <span class="hero-trust-sep">•</span>
+                        <div class="hero-trust-item">
+                            <i class="fas fa-bolt trust-icon-blue"></i>
+                            <span><strong>Fast</strong> Assistance</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- 4 Pillars Bar (at the bottom of Hero) -->
-        <div class="hero-pillars-bar">
-            <div class="container">
-                <div class="pillars-grid">
-                    <div class="pillar-item">
-                        <div class="pillar-icon-circle"><i class="fas fa-users"></i></div>
-                        <span class="pillar-label">Personalized<br>Guidance</span>
-                    </div>
-                    <div class="pillar-divider"></div>
-                    <div class="pillar-item">
-                        <div class="pillar-icon-circle"><i class="fas fa-file-invoice"></i></div>
-                        <span class="pillar-label">Simplified<br>Loan Process</span>
-                    </div>
-                    <div class="pillar-divider"></div>
-                    <div class="pillar-item">
-                        <div class="pillar-icon-circle"><i class="fas fa-graduation-cap"></i></div>
-                        <span class="pillar-label">Support for<br>India &amp; Abroad</span>
-                    </div>
-                    <div class="pillar-divider"></div>
-                    <div class="pillar-item">
-                        <div class="pillar-icon-circle"><i class="fas fa-handshake"></i></div>
-                        <span class="pillar-label">End-to-End<br>Assistance</span>
+                <!-- Right Visual Column (Authentic Reference Image 2) -->
+                <div class="exact-hero-visual" data-aos="fade-left">
+                    <div class="hero-visual-frame">
+                        <img src="images/hero_student_clean.png" 
+                             alt="Student with notebooks and backpack planning study abroad" 
+                             class="hero-visual-img" 
+                             width="698" 
+                             height="505" 
+                             fetchpriority="high">
+                        <div class="hero-floating-pill pill-top" data-aos="fade-down" data-aos-delay="200">
+                            <span class="floating-icon"><i class="fas fa-plane-departure"></i></span>
+                            <span>USA &bull; UK &bull; Canada &bull; Europe</span>
+                        </div>
+                        <div class="hero-floating-pill pill-bottom" data-aos="fade-up" data-aos-delay="300">
+                            <span class="floating-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>15+ RBI &amp; Global Partner Lenders</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -416,12 +474,6 @@
                 </div>
                 <div class="marquee-card">
                     <div class="marquee-logo-wrap">
-                        <img src="images/logos/sallie-mae.svg" alt="Sallie Mae" class="marquee-logo-img" loading="lazy">
-                    </div>
-                    <span class="marquee-card-badge badge-intl">Global</span>
-                </div>
-                <div class="marquee-card">
-                    <div class="marquee-logo-wrap">
                         <img src="images/logos/kuhoo.png" alt="Kuhoo" class="marquee-logo-img" loading="lazy">
                     </div>
                     <span class="marquee-card-badge badge-nbfc">NBFC</span>
@@ -532,12 +584,6 @@
                 </div>
                 <div class="marquee-card">
                     <div class="marquee-logo-wrap">
-                        <img src="images/logos/sallie-mae.svg" alt="Sallie Mae" class="marquee-logo-img" loading="lazy">
-                    </div>
-                    <span class="marquee-card-badge badge-intl">Global</span>
-                </div>
-                <div class="marquee-card">
-                    <div class="marquee-logo-wrap">
                         <img src="images/logos/kuhoo.png" alt="Kuhoo" class="marquee-logo-img" loading="lazy">
                     </div>
                     <span class="marquee-card-badge badge-nbfc">NBFC</span>
@@ -546,435 +592,103 @@
         </div>
     </section>
 
-    <!-- ══ 1.6 FINANCIAL TOOLS & CALCULATORS SUITE (Interactive Conversion Engine) ══ -->
-    <section class="financial-tools-section" id="calculators">
+    <!-- ══ 1.55 THREE CORE LOAN SERVICE CATEGORIES (Master Brand System) ══ -->
+    <section class="loan-categories-section pattern-dots" id="loan-services">
         <div class="container">
-            <div class="tools-header-wrap" data-aos="fade-up">
-                <span class="tools-eyebrow">Financial Tools</span>
-                <h2 class="tools-heading">Calculators <span class="accent-calc">For Your Need</span></h2>
+            <div class="vps-section-header section-header-center" data-aos="fade-up">
+                <div class="vps-eyebrow brand-eyebrow" style="justify-content: center;">
+                    <span class="vps-eyebrow-dot"></span>
+                    <span class="eyebrow-text">OUR CORE FINANCING SOLUTIONS</span>
+                </div>
+                <h2 class="section-title-navy">
+                    Loan Solutions Tailored To <span class="vps-orange-text" style="color: var(--color-orange);">Your Vision</span>
+                </h2>
+                <div class="vps-header-divider">
+                    <span class="vps-divider-line"></span>
+                    <span class="vps-divider-dot"></span>
+                    <span class="vps-divider-line"></span>
+                </div>
+                <p class="vps-section-sub section-lead-text">
+                    Whether you are pursuing higher studies, managing personal aspirations, or investing in your home, Visionary Path Services provides transparent, end-to-end loan advisory.
+                </p>
             </div>
 
-            <div class="calc-tabs-wrapper" data-aos="fade-up" data-aos-delay="100">
-                <!-- Tab Navigation (Matching Reference Design) -->
-                <div class="calc-tabs-nav" role="tablist" aria-label="Financial Calculators">
-                    <button class="calc-tab-btn" data-tab="panel-curr-calc" role="tab" aria-selected="false" aria-controls="panel-curr-calc">
-                        INR/USD Calculator
-                    </button>
-                    <button class="calc-tab-btn active" data-tab="panel-loan-calc" role="tab" aria-selected="true" aria-controls="panel-loan-calc">
-                        Loan Calculator
-                    </button>
-                    <button class="calc-tab-btn" data-tab="panel-takeover-calc" role="tab" aria-selected="false" aria-controls="panel-takeover-calc">
-                        Loan Takeover Calculator
-                    </button>
-                    <button class="calc-tab-btn" data-tab="panel-tax-calc" role="tab" aria-selected="false" aria-controls="panel-tax-calc">
-                        Tax Rebate Calculator
-                    </button>
-                    <button class="calc-tab-btn" data-tab="panel-eligibility-calc" role="tab" aria-selected="false" aria-controls="panel-eligibility-calc">
-                        Loan Eligibility Checker
-                    </button>
+            <div class="loan-categories-grid">
+                <!-- 1. EDUCATION LOANS -->
+                <div class="loan-category-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="loan-circle-icon-wrap">
+                        <svg class="loan-geom-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M24 6L6 16L24 26L42 16L24 6Z"/>
+                            <path d="M12 20V32C12 37 17 41 24 41C31 41 36 37 36 32V20"/>
+                            <path d="M42 16V30"/>
+                        </svg>
+                    </div>
+                    <div class="loan-category-badge">CORE SPECIALTY</div>
+                    <h3 class="loan-category-title">EDUCATION LOANS</h3>
+                    <p class="loan-category-desc">
+                        Comprehensive domestic, study abroad, and MBBS financing up to ₹2 Crore. Secured and unsecured pathways with competitive interest rates and 100% cost-of-education coverage.
+                    </p>
+                    <ul class="loan-category-features">
+                        <li><i class="fas fa-check"></i> Study in USA, UK, Canada, Europe &amp; India</li>
+                        <li><i class="fas fa-check"></i> Collateral &amp; Non-collateral options</li>
+                        <li><i class="fas fa-check"></i> Pre-visa sanction &amp; disbursement support</li>
+                    </ul>
+                    <div class="loan-category-footer">
+                        <a href="pages/services.html" class="loan-category-cta">
+                            Explore Education Loans <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Main Card Container -->
-                <div class="calc-card-container">
-
-                    <!-- ── TAB 1: EDUCATION LOAN CALCULATOR (DEFAULT) ── -->
-                    <div class="calc-panel active" id="panel-loan-calc" role="tabpanel">
-                        <div class="calc-grid">
-                            <!-- Left Controls -->
-                            <div class="calc-controls-pane">
-                                <h3 class="calc-pane-title">Education Loan Calculator</h3>
-
-                                <!-- Loan Amount -->
-                                <div class="calc-control-group">
-                                    <div class="calc-label-row">
-                                        <span class="calc-label">Loan Amount</span>
-                                        <input type="text" class="calc-val-input" id="calcLoanAmountInput" value="₹7,03,222" aria-label="Loan Amount">
-                                    </div>
-                                    <input type="range" class="calc-slider" id="calcLoanAmountSlider" min="100000" max="10000000" step="25000" value="703222" aria-label="Loan Amount Slider">
-                                    <div class="calc-slider-limits">
-                                        <span>1L</span>
-                                        <span>1Cr</span>
-                                    </div>
-                                </div>
-
-                                <!-- Rate of Interest -->
-                                <div class="calc-control-group">
-                                    <div class="calc-label-row">
-                                        <span class="calc-label">Rate of Interest</span>
-                                        <input type="text" class="calc-val-input" id="calcInterestRateInput" value="12.5" aria-label="Rate of Interest">
-                                    </div>
-                                    <input type="range" class="calc-slider" id="calcInterestRateSlider" min="8.5" max="16.0" step="0.1" value="12.5" aria-label="Interest Rate Slider">
-                                    <div class="calc-slider-limits">
-                                        <span>9.5%</span>
-                                        <span>15%</span>
-                                    </div>
-                                </div>
-
-                                <!-- Loan Tenure -->
-                                <div class="calc-control-group">
-                                    <div class="calc-label-row">
-                                        <span class="calc-label">Loan Tenure</span>
-                                        <input type="text" class="calc-val-input" id="calcTenureInput" value="5Y" aria-label="Loan Tenure">
-                                    </div>
-                                    <input type="range" class="calc-slider" id="calcTenureSlider" min="1" max="10" step="1" value="5" aria-label="Loan Tenure Slider">
-                                    <div class="calc-slider-limits">
-                                        <span>1Y</span>
-                                        <span>10Y</span>
-                                    </div>
-                                </div>
-
-                                <!-- Course Duration -->
-                                <div class="calc-control-group">
-                                    <div class="calc-label-row">
-                                        <span class="calc-label">Course Duration</span>
-                                        <input type="text" class="calc-val-input" id="calcCourseDurationInput" value="3Y" aria-label="Course Duration">
-                                    </div>
-                                    <input type="range" class="calc-slider" id="calcCourseDurationSlider" min="1" max="5" step="1" value="3" aria-label="Course Duration Slider">
-                                    <div class="calc-slider-limits">
-                                        <span>1Y</span>
-                                        <span>5Y</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Right Result Card (Exact Match to Reference Design) -->
-                            <div class="calc-result-card">
-                                <div>
-                                    <p class="calc-result-sub">Your Monthly EMI Amount</p>
-                                    <div class="calc-result-hero" id="calcEmiResult">₹20,487</div>
-
-                                    <div class="calc-breakdown-table">
-                                        <div class="calc-breakdown-row">
-                                            <span>Principal Amount</span>
-                                            <span id="calcPrincipalResult">₹7,03,222</span>
-                                        </div>
-                                        <div class="calc-breakdown-row">
-                                            <span>Interest Amount</span>
-                                            <span id="calcInterestResult">₹5,25,999</span>
-                                        </div>
-                                        <div class="calc-breakdown-row total-row">
-                                            <span>Total Repayment</span>
-                                            <span id="calcTotalRepayResult">₹12,29,221</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <button class="btn-calc-deal" onclick="openPopup()" aria-label="Get The Deal">
-                                        <span>Get The Deal</span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </button>
-                                    <p class="calc-disclaimer">
-                                        This calculator is a self-help tool for illustrative purposes only. Figures shown above are indicative, and actual values may differ based on the applicant's profile. All loans are subject to the bank's policy and approval.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                <!-- 2. PERSONAL LOANS -->
+                <div class="loan-category-card highlight-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="loan-circle-icon-wrap">
+                        <svg class="loan-geom-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="24" cy="15" r="7"/>
+                            <path d="M10 39C10 32 16 27 24 27C32 27 38 32 38 39"/>
+                            <path d="M34 10L42 14V22C42 27 38 32 34 34"/>
+                        </svg>
                     </div>
-
-                    <!-- ── TAB 2: INR / USD CURRENCY PLANNER ── -->
-                    <div class="calc-panel" id="panel-curr-calc" role="tabpanel" hidden>
-                        <div class="calc-grid">
-                            <div class="calc-controls-pane">
-                                <h3 class="calc-pane-title">Study Abroad Budget Planner</h3>
-
-                                <div class="calc-control-group">
-                                    <span class="calc-label">Select Target Currency</span>
-                                    <select class="calc-select-input" id="currSelect" aria-label="Target Currency">
-                                        <option value="USD" selected>USD ($) - United States &amp; Global</option>
-                                        <option value="GBP">GBP (£) - United Kingdom</option>
-                                        <option value="CAD">CAD (C$) - Canada</option>
-                                        <option value="EUR">EUR (€) - Germany, France, Ireland &amp; Europe</option>
-                                        <option value="AUD">AUD (A$) - Australia &amp; New Zealand</option>
-                                    </select>
-                                </div>
-
-                                <div class="calc-control-group">
-                                    <div class="calc-label-row">
-                                        <span class="calc-label">Annual Tuition Fees (<span id="currSymbolDisplay">$</span>)</span>
-                                    </div>
-                                    <input type="number" class="calc-select-input" id="currTuitionInput" value="35000" placeholder="e.g. 35000" aria-label="Annual Tuition in foreign currency">
-                                </div>
-
-                                <div class="calc-control-group">
-                                    <div class="calc-label-row">
-                                        <span class="calc-label">Annual Living &amp; Health Expenses</span>
-                                    </div>
-                                    <input type="number" class="calc-select-input" id="currLivingInput" value="15000" placeholder="e.g. 15000" aria-label="Annual Living Expenses">
-                                </div>
-                            </div>
-
-                            <div class="calc-result-card">
-                                <div>
-                                    <p class="calc-result-sub">Total Estimated Funding (INR)</p>
-                                    <div class="calc-result-hero" id="currInrTotal">₹43,25,000</div>
-
-                                    <div class="calc-breakdown-table">
-                                        <div class="calc-breakdown-row">
-                                            <span>Tuition Component (INR)</span>
-                                            <span id="currTuitionInr">₹30,27,500</span>
-                                        </div>
-                                        <div class="calc-breakdown-row">
-                                            <span>Living &amp; Misc (INR)</span>
-                                            <span id="currLivingInr">₹12,97,500</span>
-                                        </div>
-                                        <div class="calc-breakdown-row total-row">
-                                            <span>Recommended Loan (w/ Buffer)</span>
-                                            <span id="currRecLoan">₹47,57,500</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <button class="btn-calc-deal" onclick="openPopup()" aria-label="Plan My Study Abroad Loan">
-                                        <span>Plan My Funding</span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </button>
-                                    <p class="calc-disclaimer">
-                                        Indicative forex benchmarks applied. Actual remittance and exchange rates vary based on real-time forex spot rates and card/wire charges.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="loan-category-badge">FLEXIBLE TENURE</div>
+                    <h3 class="loan-category-title">PERSONAL LOANS</h3>
+                    <p class="loan-category-desc">
+                        Speedy, uncollateralized personal financing for academic living expenses, overseas relocation, equipment, certifications, and planned family milestones with minimal paperwork.
+                    </p>
+                    <ul class="loan-category-features">
+                        <li><i class="fas fa-check"></i> High eligibility approvals &amp; quick disbursal</li>
+                        <li><i class="fas fa-check"></i> Zero collateral or security required</li>
+                        <li><i class="fas fa-check"></i> Flexible repayment tenures from 1 to 5 years</li>
+                    </ul>
+                    <div class="loan-category-footer">
+                        <a href="pages/other-loans.html" class="loan-category-cta">
+                            Explore Personal Loans <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
+                </div>
 
-                    <!-- ── TAB 3: LOAN TAKEOVER / REFINANCING CALCULATOR ── -->
-                    <div class="calc-panel" id="panel-takeover-calc" role="tabpanel" hidden>
-                        <div class="calc-grid">
-                            <div class="calc-controls-pane">
-                                <h3 class="calc-pane-title">Loan Refinancing Savings</h3>
-
-                                <div class="calc-control-group">
-                                    <div class="calc-label-row">
-                                        <span class="calc-label">Outstanding Loan Principal</span>
-                                        <input type="text" class="calc-val-input" id="toPrincipalInput" value="₹30,00,000" aria-label="Outstanding Principal">
-                                    </div>
-                                    <input type="range" class="calc-slider" id="toPrincipalSlider" min="500000" max="10000000" step="50000" value="3000000" aria-label="Principal Slider">
-                                    <div class="calc-slider-limits">
-                                        <span>5L</span>
-                                        <span>1Cr</span>
-                                    </div>
-                                </div>
-
-                                <div class="calc-control-group">
-                                    <div class="calc-label-row">
-                                        <span class="calc-label">Current Interest Rate</span>
-                                        <input type="text" class="calc-val-input" id="toCurrRateInput" value="13.5%" aria-label="Current Rate">
-                                    </div>
-                                    <input type="range" class="calc-slider" id="toCurrRateSlider" min="10.5" max="16.0" step="0.1" value="13.5" aria-label="Current Rate Slider">
-                                    <div class="calc-slider-limits">
-                                        <span>10.5%</span>
-                                        <span>16.0%</span>
-                                    </div>
-                                </div>
-
-                                <div class="calc-control-group">
-                                    <div class="calc-label-row">
-                                        <span class="calc-label">New Bank Rate (Refinanced)</span>
-                                        <input type="text" class="calc-val-input" id="toNewRateInput" value="9.5%" aria-label="New Rate">
-                                    </div>
-                                    <input type="range" class="calc-slider" id="toNewRateSlider" min="8.5" max="11.5" step="0.1" value="9.5" aria-label="New Rate Slider">
-                                    <div class="calc-slider-limits">
-                                        <span>8.5%</span>
-                                        <span>11.5%</span>
-                                    </div>
-                                </div>
-
-                                <div class="calc-control-group">
-                                    <div class="calc-label-row">
-                                        <span class="calc-label">Remaining Tenure</span>
-                                        <input type="text" class="calc-val-input" id="toTenureInput" value="7Y" aria-label="Remaining Tenure">
-                                    </div>
-                                    <input type="range" class="calc-slider" id="toTenureSlider" min="1" max="12" step="1" value="7" aria-label="Remaining Tenure Slider">
-                                    <div class="calc-slider-limits">
-                                        <span>1Y</span>
-                                        <span>12Y</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="calc-result-card">
-                                <div>
-                                    <p class="calc-result-sub">Your Monthly EMI Savings</p>
-                                    <div class="calc-result-hero" id="toMonthlySaved">₹6,845</div>
-
-                                    <div class="calc-breakdown-table">
-                                        <div class="calc-breakdown-row">
-                                            <span>Current EMI (NBFC/Existing)</span>
-                                            <span id="toOldEmi">₹55,595</span>
-                                        </div>
-                                        <div class="calc-breakdown-row">
-                                            <span>New Refinanced EMI</span>
-                                            <span id="toNewEmi">₹48,750</span>
-                                        </div>
-                                        <div class="calc-breakdown-row total-row">
-                                            <span>Total Lifetime Interest Saved</span>
-                                            <span id="toLifetimeSaved">₹5,74,980</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <button class="btn-calc-deal" onclick="openPopup()" aria-label="Switch Loan & Save">
-                                        <span>Switch &amp; Save Now</span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </button>
-                                    <p class="calc-disclaimer">
-                                        Refinancing subject to eligibility, credit track record, and receiving bank's loan takeover documentation policy.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                <!-- 3. HOME LOANS -->
+                <div class="loan-category-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="loan-circle-icon-wrap">
+                        <svg class="loan-geom-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 20L24 6L42 20V40C42 41.1 41.1 42 40 42H8C6.9 42 6 41.1 6 40V20Z"/>
+                            <path d="M18 42V26H30V42"/>
+                        </svg>
                     </div>
-
-                    <!-- ── TAB 4: SECTION 80E TAX REBATE CALCULATOR ── -->
-                    <div class="calc-panel" id="panel-tax-calc" role="tabpanel" hidden>
-                        <div class="calc-grid">
-                            <div class="calc-controls-pane">
-                                <h3 class="calc-pane-title">Section 80E Tax Deduction</h3>
-                                <p style="font-size:0.88rem; color:var(--slate-light); line-height:1.5;">Under Section 80E of the Indian Income Tax Act, 100% of interest paid on an education loan is deductible from taxable income with no upper ceiling for up to 8 years.</p>
-
-                                <div class="calc-control-group">
-                                    <div class="calc-label-row">
-                                        <span class="calc-label">Annual Interest Paid</span>
-                                        <input type="text" class="calc-val-input" id="taxInterestInput" value="₹1,50,000" aria-label="Annual Interest Paid">
-                                    </div>
-                                    <input type="range" class="calc-slider" id="taxInterestSlider" min="20000" max="800000" step="10000" value="150000" aria-label="Interest Slider">
-                                    <div class="calc-slider-limits">
-                                        <span>20K</span>
-                                        <span>8L</span>
-                                    </div>
-                                </div>
-
-                                <div class="calc-control-group">
-                                    <span class="calc-label">Your Income Tax Slab Rate</span>
-                                    <select class="calc-select-input" id="taxSlabSelect" aria-label="Tax Slab Rate">
-                                        <option value="30" selected>30% Tax Slab (Highest Savings)</option>
-                                        <option value="20">20% Tax Slab</option>
-                                        <option value="15">15% Tax Slab (New Regime)</option>
-                                        <option value="10">10% Tax Slab</option>
-                                        <option value="5">5% Tax Slab</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="calc-result-card">
-                                <div>
-                                    <p class="calc-result-sub">Annual Tax Saved (Sec 80E)</p>
-                                    <div class="calc-result-hero" id="taxAnnualSaved">₹45,000</div>
-
-                                    <div class="calc-breakdown-table">
-                                        <div class="calc-breakdown-row">
-                                            <span>Nominal Benchmark Rate</span>
-                                            <span>11.50%</span>
-                                        </div>
-                                        <div class="calc-breakdown-row">
-                                            <span>Effective Net Interest Rate</span>
-                                            <span id="taxNetRate">8.05%</span>
-                                        </div>
-                                        <div class="calc-breakdown-row total-row">
-                                            <span>8-Year Cumulative Tax Savings</span>
-                                            <span id="taxEightYearSaved">₹3,60,000</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <button class="btn-calc-deal" onclick="openPopup()" aria-label="Check Loan With Tax Benefits">
-                                        <span>Optimize My Tax Savings</span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </button>
-                                    <p class="calc-disclaimer">
-                                        Section 80E benefit applies to interest paid on loans borrowed for higher education for self, spouse, or children. Consult your tax advisor for filing guidelines.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="loan-category-badge">LONG-TERM ASSET</div>
+                    <h3 class="loan-category-title">HOME LOANS</h3>
+                    <p class="loan-category-desc">
+                        Attractive home purchasing, construction, and balance transfer solutions from premier Scheduled Commercial Banks with tenures up to 30 years and lowest market interest rates.
+                    </p>
+                    <ul class="loan-category-features">
+                        <li><i class="fas fa-check"></i> New purchases, resale &amp; plot construction</li>
+                        <li><i class="fas fa-check"></i> Balance takeover with lower interest rate</li>
+                        <li><i class="fas fa-check"></i> Transparent guidance on processing &amp; legal scrutiny</li>
+                    </ul>
+                    <div class="loan-category-footer">
+                        <a href="pages/other-loans.html" class="loan-category-cta">
+                            Explore Home Loans <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-
-                    <!-- ── TAB 5: LOAN ELIGIBILITY CHECKER ── -->
-                    <div class="calc-panel" id="panel-eligibility-calc" role="tabpanel" hidden>
-                        <div class="calc-grid">
-                            <div class="calc-controls-pane">
-                                <h3 class="calc-pane-title">Loan Eligibility Feasibility</h3>
-
-                                <div class="calc-control-group">
-                                    <span class="calc-label">Destination Country</span>
-                                    <select class="calc-select-input" id="eligCountry" aria-label="Destination Country">
-                                        <option value="USA" selected>United States (USA)</option>
-                                        <option value="UK">United Kingdom (UK)</option>
-                                        <option value="Canada">Canada</option>
-                                        <option value="Australia">Australia / New Zealand</option>
-                                        <option value="Germany">Germany / Europe</option>
-                                        <option value="India">Domestic Higher Education / MBBS</option>
-                                    </select>
-                                </div>
-
-                                <div class="calc-control-group">
-                                    <span class="calc-label">Degree Level</span>
-                                    <select class="calc-select-input" id="eligDegree" aria-label="Degree Level">
-                                        <option value="Masters" selected>Master's / Post Graduate Degree (STEM / Non-STEM)</option>
-                                        <option value="MBA">MBA / Executive Business School</option>
-                                        <option value="Bachelors">Undergraduate / Bachelor's</option>
-                                        <option value="MBBS">MBBS / Medical Degree</option>
-                                    </select>
-                                </div>
-
-                                <div class="calc-control-group">
-                                    <div class="calc-label-row">
-                                        <span class="calc-label">Co-Applicant Monthly Income</span>
-                                        <input type="text" class="calc-val-input" id="eligIncomeInput" value="₹80,000" aria-label="Monthly Income">
-                                    </div>
-                                    <input type="range" class="calc-slider" id="eligIncomeSlider" min="25000" max="500000" step="5000" value="80000" aria-label="Income Slider">
-                                    <div class="calc-slider-limits">
-                                        <span>25K</span>
-                                        <span>5L+</span>
-                                    </div>
-                                </div>
-
-                                <div class="calc-control-group">
-                                    <span class="calc-label">Collateral Security Available?</span>
-                                    <select class="calc-select-input" id="eligCollateral" aria-label="Collateral Available">
-                                        <option value="no" selected>No Collateral (Unsecured Loan Required)</option>
-                                        <option value="yes">Yes (Property / Land / Fixed Deposit Available)</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="calc-result-card">
-                                <div>
-                                    <p class="calc-result-sub">Estimated Maximum Loan Ceiling</p>
-                                    <div class="calc-result-hero" id="eligMaxLoan">₹20,00,000</div>
-
-                                    <div class="calc-breakdown-table">
-                                        <div class="calc-breakdown-row">
-                                            <span>Matched Lender Category</span>
-                                            <span id="eligLenderType" style="font-size:0.84rem; text-align:right;">Specialist NBFCs &amp; Global Lenders</span>
-                                        </div>
-                                        <div class="calc-breakdown-row">
-                                            <span>Sanction Probability</span>
-                                            <span style="color:var(--green); font-weight:800;">High (94%+)</span>
-                                        </div>
-                                        <div class="calc-breakdown-row total-row">
-                                            <span>Advisory Fee</span>
-                                            <span style="color:var(--green);">100% FREE</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <button class="btn-calc-deal" onclick="openPopup()" aria-label="Get Pre-Approved">
-                                        <span>Get Pre-Approved Now</span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </button>
-                                    <p class="calc-disclaimer">
-                                        Based on typical underwriting parameters across 15+ RBI regulated institutional partners.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -985,14 +699,14 @@
         <div class="container">
             <div class="pan-india-box" data-aos="fade-up">
                 <div class="pan-india-header">
-                    <div class="brand-eyebrow">
-                        <span class="green-bar"></span>
+                    <div class="vps-eyebrow brand-eyebrow">
+                        <span class="vps-eyebrow-dot"></span>
                         <span class="eyebrow-text">NATIONWIDE REACH</span>
                     </div>
                     <h2 class="pan-india-title">
                         Education Loan<br>
                         Guidance for<br>
-                        <span class="green-highlight">PAN India Students</span>
+                        <span class="vps-orange-text">PAN India Students</span>
                     </h2>
                     <p class="pan-india-sub">
                         Get reliable, expert guidance and personalized support to help you achieve your education goals, from anywhere in India.
@@ -1019,7 +733,7 @@
 
                     <!-- Card 03 -->
                     <div class="pan-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="pan-card-badge"><i class="fas fa-file-invoice"></i></div>
+                        <div class="pan-card-badge"><i class="fas fa-file-lines"></i></div>
                         <div class="pan-card-num">03</div>
                         <h3>Transparent Process</h3>
                         <p>Clear information at every step.</p>
@@ -1041,16 +755,23 @@
     <section class="bridging-section">
         <div class="container">
             <div class="bridging-inner" data-aos="fade-up">
-                <div class="brand-eyebrow">
-                    <span class="green-bar"></span>
-                    <span class="eyebrow-text">TRANSPARENT ADVISORY</span>
+                <div class="vps-section-header">
+                    <div class="vps-eyebrow brand-eyebrow" style="justify-content: center;">
+                        <span class="vps-eyebrow-dot"></span>
+                        <span class="eyebrow-text">TRANSPARENT ADVISORY</span>
+                    </div>
+                    <h2 class="bridging-title">
+                        Bridging the Gap Between <span class="vps-orange-text">Students and Lenders</span>
+                    </h2>
+                    <div class="vps-header-divider">
+                        <span class="vps-divider-line"></span>
+                        <span class="vps-divider-dot"></span>
+                        <span class="vps-divider-line"></span>
+                    </div>
+                    <p class="vps-section-sub bridging-sub">
+                        We act as a bridge between students and trusted lenders, helping you find, compare, and secure suitable education loan based on your profile and education needs.
+                    </p>
                 </div>
-                <h2 class="bridging-title">
-                    Bridging the Gap Between <span class="green-highlight">Students and Lenders</span>
-                </h2>
-                <p class="bridging-sub">
-                    We act as a bridge between students and trusted lenders, helping you find, compare, and secure suitable education loan based on your profile and education needs.
-                </p>
 
                 <div class="bridging-cards-grid">
                     <!-- Box 01 -->
@@ -1094,7 +815,7 @@
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <div class="disclosure-text">
-                        <strong>Disclosure:-</strong> Visionary Path Services is not a lender, we are not directly funding and does not collect or handle loan funds.
+                        <strong>Disclosure:</strong> Visionary Path Services is a premier loan advisory service and not a direct lender. We do not directly fund or handle loan disbursements.
                     </div>
                 </div>
             </div>
@@ -1104,25 +825,23 @@
     <!-- 4. WHY VISIONARY PATH SERVICES (Matches Screenshot 4 / Image 5) -->
     <section class="why-vps-section">
         <div class="container">
-            <div class="why-header-area" data-aos="fade-up">
-                <div class="why-top-eyebrow">— WHY VISIONARY PATH SERVICES? —</div>
-                <div class="why-header-flex">
-                    <div class="handwritten-note left-note">
-                        "Students Today<br>Brighter Tomorrows"
-                    </div>
-                    <div class="why-header-center">
-                        <h2 class="why-main-title">
-                            More Than Loan Assistance.<br>
-                            <span class="green-highlight">We Stand With You</span> at Every Step.
-                        </h2>
-                        <p class="why-sub">
-                            Not all platforms are built the same, here's why students trust Visionary Path Services.
-                        </p>
-                    </div>
-                    <div class="handwritten-note right-note">
-                        "Guiding Dreams<br>Financing Futures" <i class="fas fa-paper-plane"></i>
-                    </div>
+            <div class="vps-section-header why-header-area" data-aos="fade-up">
+                <div class="vps-eyebrow brand-eyebrow" style="justify-content: center;">
+                    <span class="vps-eyebrow-dot"></span>
+                    <span class="eyebrow-text">WHY VISIONARY PATH SERVICES</span>
                 </div>
+                <h2 class="why-main-title">
+                    More Than Loan Assistance.<br>
+                    <span class="vps-orange-text">We Stand With You</span> at Every Step.
+                </h2>
+                <div class="vps-header-divider">
+                    <span class="vps-divider-line"></span>
+                    <span class="vps-divider-dot"></span>
+                    <span class="vps-divider-line"></span>
+                </div>
+                <p class="vps-section-sub why-sub">
+                    Not all platforms are built the same, here's why students trust Visionary Path Services.
+                </p>
             </div>
 
             <!-- 9 Cards Grid -->
@@ -1200,54 +919,82 @@
                 </div>
             </div>
 
-            <!-- Bottom CTA Banner (from Screenshot 4) -->
-            <div class="bottom-dream-banner" data-aos="fade-up">
-                <div class="dream-banner-left">
-                    <img src="images/cta_books_clean.png" alt="Education Opportunity Success Books" class="dream-books-img" loading="lazy" decoding="async">
-                </div>
-                <div class="dream-banner-center">
-                    <span class="dream-top-tag">YOUR EDUCATION DREAM. OUR FUNDING SUPPORT.</span>
-                    <h3 class="dream-heading">Let's Build a Brighter Tomorrow Together.</h3>
-                    <div class="dream-buttons">
-                        <button class="btn btn-dream-primary" onclick="openPopup()">
-                            Check Your Eligibility <i class="fas fa-arrow-right"></i>
-                        </button>
-                        <a href="tel:9063703038" class="btn btn-dream-outline">
-                            Talk to an Expert <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="dream-banner-right">
-                    <div class="dream-pills-row">
-                        <div class="dream-pill">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Students'<br>Dreams</span>
-                        </div>
-                        <div class="dream-pill">
-                            <i class="fas fa-users"></i>
-                            <span>Expert<br>Support</span>
-                        </div>
-                        <div class="dream-pill">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Brighter<br>Futures</span>
-                        </div>
-                    </div>
-                    <div class="dream-note-text">
-                        "Because Education Changes Lives"
-                    </div>
-                </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA (Master Brand System matching abroad-loans.html) -->
+    <section class="vps-final-cta">
+        <div class="vps-cta-swoosh" aria-hidden="true"></div>
+        <div class="container vps-cta-inner">
+            <h2 data-aos="fade-up">
+                Not Sure Which Loan Option Suits You?<br>
+                <span class="vps-orange-text">Let Our Experts Guide You.</span>
+            </h2>
+            <p class="vps-cta-sub" data-aos="fade-up" data-aos-delay="80">
+                Get personalized, 100% free loan guidance comparing pre-approved offers across 15+ premier lending institutions.
+            </p>
+            <div class="vps-final-cta-btns" data-aos="fade-up" data-aos-delay="160">
+                <button class="btn btn-vps-primary btn-lg" onclick="openPopup()">
+                    Check Your Eligibility <i class="fas fa-arrow-right"></i>
+                </button>
+                <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn btn-vps-cta-secondary btn-lg">
+                    <i class="fab fa-whatsapp" style="color:#25D366;font-size:20px;"></i> Talk to an Expert
+                </a>
+            </div>
+            <div class="vps-handwriting vps-handwriting-final" data-aos="fade-up" data-aos-delay="240">
+                Same Dreams <span class="hw-accent">Bigger Horizons</span> 🚀
             </div>
         </div>
     </section>
 
     <!-- FOOTER (Matching Image 32 & Document) -->
     <!-- VPS_FOOTER_START -->
-<!-- INSTITUTIONAL REGULATORY DISCLAIMER STRIP -->
-<div class="site-disclaimer-strip">
+<!-- INSTITUTIONAL REGULATORY DISCLAIMER ACCORDION / DROPDOWN -->
+<div class="site-disclaimer-wrap">
     <div class="container">
-        <p>
-            <strong>Regulatory Transparency &amp; Operating Model:</strong> Visionary Path Services operates as an independent education loan consulting and assistance entity. We do not act as a direct lender, banking institution, or Non-Banking Financial Company (NBFC). We do not collect loan repayments, nor do we issue loan sanctions directly. All loan sanctions, interest rate assignments, margin money decisions, and disbursement schedules remain at the sole and independent discretion of our partner RBI-regulated Scheduled Commercial Banks and NBFCs. Services are subject to credit verification, applicant document clearance, and institutional guidelines. <a href="pages/disclaimer.html">Read Full Regulatory Disclaimer</a>.
-        </p>
+        <details class="disclaimer-accordion">
+            <summary class="disclaimer-trigger">
+                <div class="disclaimer-trigger-left">
+                    <span class="disclaimer-badge">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>Regulatory Notice</span>
+                    </span>
+                    <span class="disclaimer-title">Operating Model &amp; Regulatory Disclosures</span>
+                    <span class="disclaimer-hint">• Independent Advisory Entity (Non-Lender Notice)</span>
+                </div>
+                <div class="disclaimer-toggle-pill">
+                    <span>View Regulatory Disclosure</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </summary>
+            <div class="disclaimer-content">
+                <div class="disclaimer-grid">
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-icon">
+                            <i class="fas fa-building-columns"></i>
+                        </div>
+                        <p class="disclaimer-item-text">
+                            <strong>Independent Advisory &amp; Non-Lender Status:</strong> Visionary Path Services operates exclusively as an education loan consulting and facilitation advisory. We are not a bank, Non-Banking Financial Company (NBFC), or direct credit provider. We do not issue loan sanctions directly, nor do we collect loan repayments or processing commissions from students.
+                        </p>
+                    </div>
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-icon">
+                            <i class="fas fa-scale-balanced"></i>
+                        </div>
+                        <p class="disclaimer-item-text">
+                            <strong>Lender Discretion &amp; Verification:</strong> All loan approvals, sanction limits, applicable interest rates, margin money requirements, and disbursement timelines remain at the sole and independent discretion of our partner RBI-regulated Scheduled Commercial Banks and NBFCs, subject to individual creditworthiness, CIBIL verification, and institutional eligibility guidelines.
+                        </p>
+                    </div>
+                </div>
+                <div class="disclaimer-footer-bar">
+                    <span class="disclaimer-footer-note"><i class="fas fa-check-circle" style="color:var(--green); margin-right:5px;"></i> 100% Free Consultation for Students &amp; Families</span>
+                    <a href="pages/disclaimer.html" class="disclaimer-link-btn">
+                        <span>Read Full Regulatory &amp; Financial Disclaimer</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </details>
     </div>
 </div>
 
@@ -1256,8 +1003,32 @@
     <div class="container footer-inner">
         <div class="footer-col brand-col">
             <div class="footer-logo">
-                <span class="logo-name">VISIONARY PATH SERVICES</span>
-                <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                <a href="index.html" class="logo logo-dark" aria-label="Visionary Path Services Home">
+                    <span class="vps-brand-mark">
+                        <svg class="vps-flash-svg" viewBox="0 0 100 120" width="34" height="41" fill="none" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="footerFlashGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+                                    <stop offset="0%" stop-color="#FF8A00" />
+                                    <stop offset="55%" stop-color="#FF5A00" />
+                                    <stop offset="100%" stop-color="#FF3800" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+                                  stroke="url(#footerFlashGrad)" 
+                                  stroke-width="14.5" 
+                                  stroke-linejoin="round" 
+                                  stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <div class="logo-text">
+                        <span class="logo-name">VISIONARY</span>
+                        <span class="logo-sub">
+                            <span class="logo-sub-line"></span>
+                            <span class="logo-sub-text">PATH SERVICES</span>
+                            <span class="logo-sub-line"></span>
+                        </span>
+                    </div>
+                </a>
             </div>
             <p class="footer-desc">
                 Pan-India premier education loan advisory service. We empower students to secure domestic and international academic financing from top banks and NBFCs with zero service charges.
@@ -1334,7 +1105,7 @@
 <!-- VPS_FOOTER_END -->
 
     <!-- POPUP INQUIRY FORM (Industry-Grade Edition) -->
-    <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
+    <div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle" onclick="closePopupOutside(event)">
         <div class="popup-modal">
             <button class="popup-close" onclick="closePopup()" aria-label="Close Popup">✕</button>
             <div class="popup-left">
@@ -1343,7 +1114,7 @@
                         <span class="badge-dot"></span>
                         <span>100% FREE CONSULTATION</span>
                     </div>
-                    <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
+                    <h3 class="popup-title" id="popupTitle">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
                     <p class="popup-left-desc">Compare pre-approved loan options from 15+ top banks &amp; NBFCs with zero service fees.</p>
                     <div class="popup-features-list">
                         <div class="popup-feature-item">
@@ -1381,68 +1152,68 @@
                     <h4>Get Free Loan Assessment</h4>
                     <p>Share your details to connect with a senior education loan advisor</p>
                 </div>
-                <form class="popup-form" onsubmit="submitForm(event)">
+                                <form class="popup-form" onsubmit="submitForm(event)">
                     <div class="form-row name-row">
                         <div class="form-group">
-                            <label>First Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="firstName" placeholder="e.g. Aarav" required></div>
+                            <label for="popupFirstName">First Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupFirstName" name="firstName" placeholder="e.g. Aarav" aria-label="First Name" required autocomplete="given-name"></div>
                         </div>
                         <div class="form-group">
-                            <label>Last Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="lastName" placeholder="e.g. Sharma" required></div>
+                            <label for="popupLastName">Last Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupLastName" name="lastName" placeholder="e.g. Sharma" aria-label="Last Name" required autocomplete="family-name"></div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Phone Number <span class="req">*</span></label>
+                            <label for="popupPhone">Phone Number <span class="req">*</span></label>
                             <div class="input-icon-wrap phone-wrap">
                                 <span class="country-prefix"><i class="fas fa-phone"></i> +91</span>
-                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" required>
+                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit Phone Number" required autocomplete="tel-national">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="label-with-action">
-                                <label>WhatsApp Number <span class="req">*</span></label>
-                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()">Same as phone</button>
+                                <label for="popupWhatsApp">WhatsApp Number <span class="req">*</span></label>
+                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()" aria-label="Copy Phone Number to WhatsApp Number">Same as phone</button>
                             </div>
                             <div class="input-icon-wrap whatsapp-inp">
                                 <i class="fab fa-whatsapp"></i>
-                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" required>
+                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit WhatsApp Number" required autocomplete="tel-national">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Email Address <span class="req">*</span></label>
-                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="e.g. aarav.sharma@gmail.com" required></div>
+                        <label for="popupEmail">Email Address <span class="req">*</span></label>
+                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" id="popupEmail" name="email" placeholder="e.g. aarav.sharma@gmail.com" aria-label="Email Address" required autocomplete="email"></div>
                     </div>
                     <div class="form-group mb-tight">
-                        <label class="form-label-regular">I'm interested in</label>
-                        <div class="interest-options">
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="abroad" checked>
+                        <span class="form-label-regular" id="popupInterestLabel">I'm interested in</span>
+                        <div class="interest-options" role="radiogroup" aria-labelledby="popupInterestLabel">
+                            <label class="interest-opt" for="popupInterestAbroad">
+                                <input type="radio" id="popupInterestAbroad" name="interest" value="abroad" aria-label="Abroad Education Loan" checked>
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-globe-americas"></i> Abroad Education Loan</span>
                             </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="domestic">
+                            <label class="interest-opt" for="popupInterestDomestic">
+                                <input type="radio" id="popupInterestDomestic" name="interest" value="domestic" aria-label="Domestic Education Loan">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-graduation-cap"></i> Domestic Education Loan</span>
                             </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="mbbs">
+                            <label class="interest-opt" for="popupInterestMbbs">
+                                <input type="radio" id="popupInterestMbbs" name="interest" value="mbbs" aria-label="MBBS Education Loan">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-user-md"></i> MBBS Education Loan</span>
                             </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="other">
+                            <label class="interest-opt" for="popupInterestOther">
+                                <input type="radio" id="popupInterestOther" name="interest" value="other" aria-label="Other Loan Options">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-coins"></i> Other Loan Options</span>
                             </label>
                         </div>
                     </div>
                     <div class="form-group mb-tight">
-                        <label class="form-label-regular">Additional Information (Optional)</label>
-                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea name="message" placeholder="Target country, university, loan amount needed..." rows="2"></textarea></div>
+                        <label for="popupMessage" class="form-label-regular">Additional Information (Optional)</label>
+                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea id="popupMessage" name="message" placeholder="Target country, university, loan amount needed..." aria-label="Additional Information" rows="2"></textarea></div>
                     </div>
                     <button type="submit" class="btn btn-submit-enquiry">
                         <span>Submit Enquiry</span>
@@ -1472,8 +1243,6 @@
     <!-- Framer Motion & UI/UX Animation Engine -->
     <script src="js/vendor/motion.js"></script>
     <script src="js/motion-ux.js"></script>
-    
-    <!-- Financial Calculators Engine -->
     <script src="js/calculators.js" defer></script>
     <script src="js/main.js"></script>
 </body>

@@ -57,6 +57,9 @@
     function initScrollReveals() {
         if (prefersReducedMotion) return;
 
+        // NOTE: AOS library is NOT used — this IntersectionObserver system handles
+        // all scroll-based reveals site-wide via .motion-init / .motion-revealed classes.
+
         // Candidate sections to animate
         const revealTargets = document.querySelectorAll(`
             .pan-card,
@@ -67,8 +70,18 @@
             .mbbs-card,
             .lender-card,
             .process-step,
+            .process-card,
             .loan-card,
-            .faq-item
+            .loan-option-card,
+            .service-card,
+            .who-card,
+            .step-card,
+            .docs-card,
+            .faq-item,
+            .blog-card,
+            .contact-method-card,
+            .country-stat-box,
+            .uni-tag
         `);
 
         if (!revealTargets.length) return;
@@ -100,7 +113,14 @@
             .lenders-grid,
             .core-focus-grid,
             .process-steps,
-            .loan-grid
+            .process-grid,
+            .loan-grid,
+            .services-grid,
+            .loan-types-grid,
+            .blog-grid,
+            .contact-methods-list,
+            .country-stats-grid,
+            .universities-grid
         `);
 
         cardContainers.forEach(container => {
@@ -120,6 +140,7 @@
             }
         });
     }
+
 
     // 4. Subtle Tactile Microinteractions (Clean CSS-driven elevation, no dizzying 3D tilts)
     function initCardTilt() {
@@ -196,9 +217,16 @@
         const images = document.querySelectorAll('img');
         if (!images.length) return;
 
-        // Apply native lazy loading & async decoding to all images
+        // Apply native lazy loading below fold & eager priority to above-the-fold hero images
         images.forEach(img => {
-            if (!img.getAttribute('loading')) {
+            const isAboveTheFold = img.closest('.hero, .page-hero, .exact-hero, .blog-hub-hero, .blog-header, .top-bar, .navbar, .logo') || img.hasAttribute('data-no-lazy');
+            if (isAboveTheFold) {
+                if (img.getAttribute('loading') === 'lazy') {
+                    img.removeAttribute('loading');
+                }
+                img.setAttribute('loading', 'eager');
+                img.setAttribute('fetchpriority', 'high');
+            } else if (!img.getAttribute('loading')) {
                 img.setAttribute('loading', 'lazy');
             }
             if (!img.getAttribute('decoding')) {

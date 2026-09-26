@@ -48,12 +48,14 @@ for (const filePath of htmlFiles) {
     const currentRelPath = relativeToWebsite.replace(/\\/g, '/');
     if (currentRelPath === 'index.html') {
         fileNavbar = fileNavbar.replace(/class="logo"/, 'class="logo active-home"');
-    } else if (currentRelPath === 'pages/services.html') {
+    } else if (currentRelPath === 'pages/services.html' || currentRelPath.includes('loans.html') || currentRelPath.startsWith('pages/countries/')) {
         fileNavbar = fileNavbar.replace(/class="nav-link-services"/, 'class="nav-link-services active"');
     } else if (currentRelPath === 'pages/partner-lenders.html') {
         fileNavbar = fileNavbar.replace(/class="nav-link-partner-lenders"/, 'class="nav-link-partner-lenders active"');
     } else if (currentRelPath === 'pages/partner-with-us.html') {
         fileNavbar = fileNavbar.replace(/class="nav-link-partner-with-us"/, 'class="nav-link-partner-with-us active"');
+    } else if (currentRelPath === 'pages/about.html' || currentRelPath === 'pages/contact.html' || currentRelPath.startsWith('pages/blog')) {
+        fileNavbar = fileNavbar.replace(/class="nav-link-more"/, 'class="nav-link-more active"');
     }
 
     const wrappedNavbar = `<!-- VPS_NAVBAR_START -->\n${fileNavbar}\n<!-- VPS_NAVBAR_END -->`;
@@ -96,6 +98,22 @@ for (const filePath of htmlFiles) {
         }
     }
 
+    // 3. Ensure design-system.css is loaded FIRST (before style.css and improvements.css)
+    //    This injects the canonical token layer on every page automatically.
+    const dsLinkPattern = new RegExp(`<link[^>]+href="${rootPrefix}css/design-system\\.css"[^>]*>`);
+    const styleLinkPattern = new RegExp(`(<link[^>]+href="${rootPrefix}css/style\\.css"[^>]*>)`);
+
+    if (!dsLinkPattern.test(content)) {
+        // design-system.css is not yet in this page — inject it before style.css
+        if (styleLinkPattern.test(content)) {
+            const dsLink = `<link rel="stylesheet" href="${rootPrefix}css/design-system.css">`;
+            content = content.replace(styleLinkPattern, `${dsLink}\n    $1`);
+            modified = true;
+        } else {
+            console.warn(`[WARN] Could not find style.css link in ${relativeToWebsite} — design-system.css not injected`);
+        }
+    }
+
     if (modified) {
         fs.writeFileSync(filePath, content, 'utf-8');
         updatedCount++;
@@ -103,3 +121,4 @@ for (const filePath of htmlFiles) {
 }
 
 console.log(`\nSuccessfully synchronized ${updatedCount} HTML files with includes/navbar.html and includes/footer.html!`);
+

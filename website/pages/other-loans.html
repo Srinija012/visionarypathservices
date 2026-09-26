@@ -7,75 +7,77 @@
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="alternate icon" type="image/x-icon" href="../favicon.svg">
     <title>Other Loans – Visionary Path Services</title>
-    <meta name="description" content="Guidance for personal loans, home loans, loan against property (LAP), and student forex card assistance across India.">
+    <meta name="description" content="Explore comprehensive financing guidance for personal loans, home loans, loan against property (LAP), and student forex card assistance across India.">
     <link rel="canonical" href="https://www.visionarypathservices.com/pages/other-loans.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Other Loans & Financial Solutions – Visionary Path Services">
+    <meta property="og:description" content="Explore personal loans, home loans, business loans, and forex card assistance with institutional partners and transparent advisory.">
+    <meta property="og:url" content="https://www.visionarypathservices.com/pages/other-loans.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.visionarypathservices.com/favicon.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.visionarypathservices.com/favicon.svg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/design-system.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/improvements.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <style>
-        .page-hero { background: linear-gradient(135deg, var(--navy) 0%, #1a4a8a 50%, var(--navy) 100%); padding: 120px 0 70px; text-align: center; position: relative; overflow: hidden; }
-        .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1600&q=80') center/cover; opacity: 0.12; }
-        .page-hero-inner { position: relative; z-index: 1; }
-        .page-hero-eyebrow { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
-        .page-hero h1 { color: var(--white); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 16px; }
-        .page-hero p { color: rgba(255,255,255,0.82); font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; line-height: 1.7; }
-        .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-        .section-label { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
-        .section-title { color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 14px; }
-        .section-sub { color: var(--text-muted); font-size: 1rem; max-width: 620px; margin: 0 auto 50px; line-height: 1.7; }
-        .loans-section { padding: 80px 0; background: var(--bg-card); }
-        .loans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 50px; }
-        .loan-card { background: var(--white); border-radius: 20px; padding: 36px 28px; border: 1.5px solid #e8f0fe; transition: all 0.35s; position: relative; overflow: hidden; }
-        .loan-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
-        .loan-card.personal::before { background: linear-gradient(90deg, var(--navy), #1a4a8a); }
-        .loan-card.business::before { background: linear-gradient(90deg, var(--green), #0d7a3a); }
-        .loan-card.car::before { background: linear-gradient(90deg, #7c3aed, #5b21b6); }
-        .loan-card.home::before { background: linear-gradient(90deg, #ea580c, #c2410c); }
-        .loan-card.forex::before { background: linear-gradient(90deg, #0369a1, #075985); }
-        .loan-card:hover { transform: translateY(-8px); box-shadow: 0 20px 56px rgba(13,43,94,0.15); }
-        .loan-icon { width: 70px; height: 70px; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 22px; }
-        .loan-card.personal .loan-icon { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
-        .loan-card.business .loan-icon { background: linear-gradient(135deg, #dcfce7, #bbf7d0); }
-        .loan-card.car .loan-icon { background: linear-gradient(135deg, #ede9fe, #ddd6fe); }
-        .loan-card.home .loan-icon { background: linear-gradient(135deg, #ffedd5, #fed7aa); }
-        .loan-card.forex .loan-icon { background: linear-gradient(135deg, #e0f2fe, #bae6fd); }
-        .loan-card h3 { color: var(--navy); font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; }
-        .loan-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; }
-        .loan-card ul { list-style: none; padding: 0; margin: 0 0 24px; }
-        .loan-card ul li { display: flex; align-items: flex-start; gap: 8px; color: var(--slate-light); font-size: 0.88rem; padding: 5px 0; }
-        .loan-card ul li i { color: var(--green); margin-top: 3px; font-size: 0.8rem; }
-        .loan-card .card-link { color: var(--green); font-weight: 600; font-size: 0.88rem; display: flex; align-items: center; gap: 6px; text-decoration: none; }
-        .loan-card .card-link:hover { gap: 10px; }
-        .intro-section { padding: 80px 0; background: var(--white); }
-        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        @media(max-width:768px){.two-col{grid-template-columns:1fr;} .loans-grid{grid-template-columns:1fr;} }
-        .intro-img { border-radius: 20px; overflow: hidden; box-shadow: 0 16px 48px rgba(13,43,94,0.18); }
-        .intro-img img { width: 100%; height: 380px; object-fit: cover; display: block; }
-        .intro-text h2 { color: var(--navy); font-size: clamp(1.4rem,3vw,2rem); font-weight: 800; margin-bottom: 16px; }
-        .intro-text p { color: var(--text-muted); font-size: 0.97rem; line-height: 1.75; margin-bottom: 20px; }
-        .cta-section { padding: 80px 0; background: linear-gradient(135deg, var(--navy), #1a4a8a); text-align: center; }
-        .cta-section h2 { color: var(--white); font-size: clamp(1.5rem,3vw,2.2rem); font-weight: 800; margin-bottom: 12px; }
-        .cta-section p { color: rgba(255,255,255,0.82); margin-bottom: 32px; }
-        .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    </style>
+    <link rel="stylesheet" href="../css/improvements.css">    
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Comprehensive Financing & Forex Solutions",
+          "url": "https://www.visionarypathservices.com/pages/other-loans.html",
+          "description": "Student forex cards, international remittances, loan against property, and personal loan guidance.",
+          "provider": {
+            "@type": "FinancialService",
+            "name": "Visionary Path Services",
+            "url": "https://www.visionarypathservices.com"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.visionarypathservices.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Comprehensive Financing & Forex Solutions",
+              "item": "https://www.visionarypathservices.com/pages/other-loans.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
         <!-- VPS_NAVBAR_START -->
+<a href="#mainContent" class="skip-link">Skip to main content</a>
 <!-- TOPBAR -->
 <div class="top-bar">
     <div class="container top-bar-inner">
         <div class="top-bar-left">
-            <span class="pulse-dot"></span>
-            <span>Pan India Education Loan Assistance &amp; Guidance</span>
-            <span class="top-bar-dash">—</span> Your Education Goals, Our Guidance
+            <span class="orange-rule" style="width:18px; height:2px; margin-right:8px; vertical-align:middle; display:inline-block;"></span>
+            <span>Your Education Goals, Our Guidance</span>
+            <span class="top-bar-dash" style="color:var(--color-orange); margin: 0 6px;">•</span>
+            <span style="opacity: 0.88;">Pan India Loan Advisory</span>
         </div>
         <div class="top-bar-right">
-            <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact:- 9063703038</a>
+            <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact: 9063703038</a>
             <span class="top-sep">|</span>
             <a href="https://instagram.com/visionarypathservices" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <span class="top-sep">|</span>
@@ -87,15 +89,35 @@
 <!-- NAVBAR -->
 <header class="navbar" id="navbar">
     <div class="container nav-inner">
-        <a href="../index.html" class="logo">
+        <a href="../index.html" class="logo" aria-label="Visionary Path Services Home">
+            <span class="vps-brand-mark">
+                <svg class="vps-flash-svg" viewBox="0 0 100 120" width="34" height="41" fill="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="navFlashGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+                            <stop offset="0%" stop-color="#FF7A00" />
+                            <stop offset="55%" stop-color="#FF5A00" />
+                            <stop offset="100%" stop-color="#FF3800" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+                          stroke="url(#navFlashGrad)" 
+                          stroke-width="14.5" 
+                          stroke-linejoin="round" 
+                          stroke-linecap="round" />
+                </svg>
+            </span>
             <div class="logo-text">
-                <span class="logo-name">VISIONARY PATH SERVICES</span>
-                <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                <span class="logo-name">VISIONARY</span>
+                <span class="logo-sub">
+                    <span class="logo-sub-line"></span>
+                    <span class="logo-sub-text">PATH SERVICES</span>
+                    <span class="logo-sub-line"></span>
+                </span>
             </div>
         </a>
         <ul class="nav-links" id="navLinks">
             <li class="has-dropdown services-dropdown">
-                <a href="../pages/services.html" class="nav-link-services">Services <i class="fas fa-chevron-down"></i></a>
+                <a href="../pages/services.html" class="nav-link-services active" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="dropdown mega-dropdown">
                     <div class="mega-body">
                         <!-- Left: Loan Programs -->
@@ -203,7 +225,7 @@
             <li><a href="../pages/partner-with-us.html" class="nav-link-partner-with-us">Partner With Us</a></li>
             <!-- More dropdown -->
             <li class="has-dropdown">
-                <a href="#" class="nav-link-more">More <i class="fas fa-chevron-down"></i></a>
+                <a href="#" class="nav-link-more" aria-haspopup="true" aria-expanded="false">More <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="more-dropdown">
                     <a href="../pages/about.html" class="more-dropdown-item">
                         <i class="fas fa-info-circle"></i> About Us
@@ -236,130 +258,489 @@
 </header>
 <!-- VPS_NAVBAR_END -->
 
-    <!-- HERO -->
-    <section class="page-hero">
-        <div class="container page-hero-inner">
-            <p class="page-hero-eyebrow" data-aos="fade-up">MORE FINANCIAL SOLUTIONS</p>
-            <h1 data-aos="fade-up" data-aos-delay="100">Other <span style="color:var(--green)">Loans</span></h1>
-            <p data-aos="fade-up" data-aos-delay="200">Beyond Education Loans — we also guide you through a range of other financial products to support your goals.</p>
-            <div class="hero-btns" data-aos="fade-up" data-aos-delay="300">
-                <button class="btn btn-primary btn-lg" onclick="openPopup()">Enquire Now <i class="fas fa-arrow-right"></i></button>
-                <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- INTRO -->
-    <section class="intro-section">
+    <!-- HERO SECTION -->
+    <section class="other-loans-hero" id="mainContent">
         <div class="container">
-            <div class="two-col">
-                <div class="intro-text" data-aos="fade-right">
-                    <p class="section-label">BEYOND EDUCATION</p>
-                    <h2>Complete Financial <span style="color:var(--green)">Guidance</span></h2>
-                    <p>At Visionary Path Services, we understand that financial needs extend beyond education. Whether you need a personal loan for immediate requirements, a business loan to fuel your enterprise, or a home loan to realize your housing dream, our expert team is here to guide you through the right options.</p>
-                    <p>We help you understand available loan products from leading banks and NBFCs, assess your eligibility, and navigate the application process with confidence.</p>
-                    <div style="display:flex;gap:12px;flex-wrap:wrap">
-                        <button class="btn btn-primary" onclick="openPopup()">Get Guidance <i class="fas fa-arrow-right"></i></button>
-                        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+            <div class="other-loans-hero-grid">
+                <!-- Left Content -->
+                <div class="other-loans-hero-content" data-aos="fade-right">
+                    <nav aria-label="Breadcrumb" class="breadcrumb">
+                        <a href="../index.html">Home</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <span>Other Loans</span>
+                    </nav>
+
+                    <div class="brand-eyebrow">
+                        <span class="pulse-dot"></span>
+                        <span>PAN-INDIA MULTI-PRODUCT LOAN ADVISORY</span>
+                    </div>
+
+                    <h1>
+                        Financial Support for <span class="text-orange">Life's Important Moments</span>
+                    </h1>
+
+                    <p class="other-loans-hero-lead">
+                        Beyond education, we help individuals and families find suitable loan options for personal and professional needs. Get expert guidance, compare options, and choose the right loan that fits your goals.
+                    </p>
+
+                    <div class="hero-btns">
+                        <button class="btn btn-hero-primary" onclick="openPopup()">
+                            <span>Get a Free Consultation</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn btn-hero-secondary">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Talk to a Loan Expert</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Feature Row / Chips -->
+                    <div class="other-loans-trust-row">
+                        <div class="other-loans-trust-chip">
+                            <i class="fas fa-certificate"></i>
+                            <span>Genuine Guidance</span>
+                        </div>
+                        <div class="other-loans-trust-chip">
+                            <i class="fas fa-building-columns"></i>
+                            <span>Multiple Lender Options</span>
+                        </div>
+                        <div class="other-loans-trust-chip">
+                            <i class="fas fa-hand-holding-dollar"></i>
+                            <span>End-to-End Support</span>
+                        </div>
                     </div>
                 </div>
-                <div class="intro-img" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1565514158740-064f34bd6cfd?w=800&q=80" alt="Financial services" loading="lazy" decoding="async">
+
+                <!-- Right Visual Composition -->
+                <div class="other-loans-hero-visual" data-aos="fade-left">
+                    <div class="other-loans-visual-wrap">
+                        <div class="handwritten-hero-accent">Expert Guidance For Your Goals</div>
+                        <div class="other-loans-img-box">
+                            <img src="../images/other-loans/hero-advisor.jpg" alt="Visionary Path Services Senior Financial Advisor" width="600" height="510" loading="eager" fetchpriority="high">
+                        </div>
+
+                        <!-- Floating Life-Goal Tags -->
+                        <div class="floating-goal-tag tag-personal">
+                            <div class="floating-goal-icon"><i class="fas fa-user"></i></div>
+                            <span>Personal Goals</span>
+                        </div>
+
+                        <div class="floating-goal-tag tag-home">
+                            <div class="floating-goal-icon"><i class="fas fa-house"></i></div>
+                            <span>Dream Home</span>
+                        </div>
+
+                        <div class="floating-goal-tag tag-car">
+                            <div class="floating-goal-icon"><i class="fas fa-car-side"></i></div>
+                            <span>Your Dream Car</span>
+                        </div>
+
+                        <div class="floating-goal-tag tag-business">
+                            <div class="floating-goal-icon"><i class="fas fa-chart-line"></i></div>
+                            <span>Business Growth</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- LOAN TYPES -->
-    <section class="loans-section">
-        <div class="container" style="text-align:center">
-            <p class="section-label">WHAT WE OFFER</p>
-            <h2 class="section-title">Our Other <span style="color:var(--green)">Financial Services</span></h2>
-            <p class="section-sub">We guide you across a wide spectrum of loan products to help you meet all your financial needs.</p>
-            <div class="loans-grid">
-                <div class="loan-card personal" data-aos="fade-up" data-aos-delay="0">
-                    <div class="loan-icon"><i class="fas fa-user-tie"></i></div>
-                    <h3>Personal Loans</h3>
-                    <p>Quick, collateral-free loans for personal expenses, emergencies, travel, weddings, or any immediate financial need.</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> No collateral required</li>
-                        <li><i class="fas fa-check"></i> Flexible repayment tenures</li>
-                        <li><i class="fas fa-check"></i> Quick processing</li>
-                        <li><i class="fas fa-check"></i> Multiple lender options</li>
-                    </ul>
-                    <button class="card-link" onclick="openPopup()">Enquire Now <i class="fas fa-arrow-right"></i></button>
-                </div>
-                <div class="loan-card business" data-aos="fade-up" data-aos-delay="80">
-                    <div class="loan-icon"><i class="fas fa-briefcase"></i></div>
-                    <h3>Business Loans</h3>
-                    <p>Fuel your business growth with the right financing — from working capital to expansion funding for SMEs and startups.</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Working capital solutions</li>
-                        <li><i class="fas fa-check"></i> Business expansion funding</li>
-                        <li><i class="fas fa-check"></i> SME &amp; startup-friendly options</li>
-                        <li><i class="fas fa-check"></i> Secured &amp; unsecured variants</li>
-                    </ul>
-                    <button class="card-link" onclick="openPopup()">Enquire Now <i class="fas fa-arrow-right"></i></button>
-                </div>
-                <div class="loan-card car" data-aos="fade-up" data-aos-delay="160">
-                    <div class="loan-icon"><i class="fas fa-car"></i></div>
-                    <h3>Car Loans</h3>
-                    <p>Drive your dream car with the best car loan options. We help you compare and choose the most suitable lender for new or used vehicles.</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> New &amp; used vehicle loans</li>
-                        <li><i class="fas fa-check"></i> Competitive interest rates</li>
-                        <li><i class="fas fa-check"></i> Minimal documentation</li>
-                        <li><i class="fas fa-check"></i> Fast approval support</li>
-                    </ul>
-                    <button class="card-link" onclick="openPopup()">Enquire Now <i class="fas fa-arrow-right"></i></button>
-                </div>
-                <div class="loan-card home" data-aos="fade-up" data-aos-delay="240">
-                    <div class="loan-icon"><i class="fas fa-house-chimney"></i></div>
-                    <h3>Home Loans</h3>
-                    <p>Turn your housing dream into reality. We guide you through home loan options from leading banks and NBFCs for new purchase, construction, or renovation.</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Purchase, construction &amp; renovation</li>
-                        <li><i class="fas fa-check"></i> Guidance on best interest rates</li>
-                        <li><i class="fas fa-check"></i> Documentation assistance</li>
-                        <li><i class="fas fa-check"></i> Multiple lender matching</li>
-                    </ul>
-                    <button class="card-link" onclick="openPopup()">Enquire Now <i class="fas fa-arrow-right"></i></button>
-                </div>
-                <div class="loan-card forex" data-aos="fade-up" data-aos-delay="320">
-                    <div class="loan-icon"><i class="fas fa-money-bill-transfer"></i></div>
-                    <h3>Forex</h3>
-                    <p>Foreign exchange services for students and individuals traveling abroad — currency exchange, remittance, and forex card guidance.</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Currency exchange assistance</li>
-                        <li><i class="fas fa-check"></i> International remittance</li>
-                        <li><i class="fas fa-check"></i> Forex card guidance</li>
-                        <li><i class="fas fa-check"></i> Student travel forex support</li>
-                    </ul>
-                    <button class="card-link" onclick="openPopup()">Enquire Now <i class="fas fa-arrow-right"></i></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section">
+    <!-- OUR OTHER LOAN SERVICES -->
+    <section class="other-services-section">
         <div class="container">
-            <h2 data-aos="fade-up">Looking for a Specific Loan?</h2>
-            <p data-aos="fade-up" data-aos-delay="80">Talk to our experts and find the right financial solution tailored to your needs.</p>
-            <div class="cta-btns" data-aos="fade-up" data-aos-delay="160">
-                <button class="btn btn-primary btn-lg" onclick="openPopup()">Enquire Now <i class="fas fa-arrow-right"></i></button>
-                <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Chat with Expert</a>
+            <div class="section-head text-center" style="max-width: 760px; margin: 0 auto 52px;" data-aos="fade-up">
+                <p class="section-label">OUR OTHER LOAN SERVICES</p>
+                <h2 class="section-title">Explore Loan Options for <span class="green-highlight">Every Goal</span></h2>
+                <p class="section-sub">
+                    Explore loan options for your personal and professional needs. We provide guidance to help you find suitable options from leading banks and NBFCs.
+                </p>
+            </div>
+
+            <div class="services-unified-grid">
+                <!-- 1. Personal Loans -->
+                <div class="unified-service-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="service-card-icon-box">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Personal Loans</h3>
+                    <p class="unified-service-desc">Meet your personal needs with flexible loan options and quick processing.</p>
+                    <ul class="service-checklist">
+                        <li><i class="fas fa-check-circle"></i> Medical emergencies</li>
+                        <li><i class="fas fa-check-circle"></i> Travel &amp; marriage</li>
+                        <li><i class="fas fa-check-circle"></i> Debt consolidation</li>
+                        <li><i class="fas fa-check-circle"></i> Other personal expenses</li>
+                    </ul>
+                    <div class="service-card-footer">
+                        <button class="btn-service-action" onclick="openPopup()">
+                            <span>Explore Personal Loans</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. Home Loans -->
+                <div class="unified-service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card-icon-box">
+                        <i class="fas fa-house-chimney"></i>
+                    </div>
+                    <h3>Home Loans</h3>
+                    <p class="unified-service-desc">Turn your dream of owning a home into reality with institutional interest rates.</p>
+                    <ul class="service-checklist">
+                        <li><i class="fas fa-check-circle"></i> Purchase a new home</li>
+                        <li><i class="fas fa-check-circle"></i> Construct your dream home</li>
+                        <li><i class="fas fa-check-circle"></i> Home renovation &amp; upgrade</li>
+                        <li><i class="fas fa-check-circle"></i> Balance transfer options</li>
+                    </ul>
+                    <div class="service-card-footer">
+                        <button class="btn-service-action" onclick="openPopup()">
+                            <span>Explore Home Loans</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3. Car Loans -->
+                <div class="unified-service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-icon-box">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <h3>Car Loans</h3>
+                    <p class="unified-service-desc">Drive your dreams with hassle-free new and used vehicle financing solutions.</p>
+                    <ul class="service-checklist">
+                        <li><i class="fas fa-check-circle"></i> New car purchase</li>
+                        <li><i class="fas fa-check-circle"></i> Used car purchase</li>
+                        <li><i class="fas fa-check-circle"></i> Flexible repayment options</li>
+                        <li><i class="fas fa-check-circle"></i> Competitive interest rates</li>
+                    </ul>
+                    <div class="service-card-footer">
+                        <button class="btn-service-action" onclick="openPopup()">
+                            <span>Explore Car Loans</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4. Business Loans -->
+                <div class="unified-service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card-icon-box">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Business Loans</h3>
+                    <p class="unified-service-desc">Fuel your business growth with structured working capital and expansion capital.</p>
+                    <ul class="service-checklist">
+                        <li><i class="fas fa-check-circle"></i> Working capital</li>
+                        <li><i class="fas fa-check-circle"></i> Business expansion</li>
+                        <li><i class="fas fa-check-circle"></i> Purchase of equipment</li>
+                        <li><i class="fas fa-check-circle"></i> Other business needs</li>
+                    </ul>
+                    <div class="service-card-footer">
+                        <button class="btn-service-action" onclick="openPopup()">
+                            <span>Explore Business Loans</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works-section">
+        <div class="container">
+            <div class="section-head text-center" style="max-width: 680px; margin: 0 auto;" data-aos="fade-up">
+                <p class="section-label">HOW IT WORKS</p>
+                <h2 class="section-title">How It <span class="green-highlight">Works?</span></h2>
+                <p class="section-sub">
+                    A simple process to help you get started with your loan application.
+                </p>
+            </div>
+
+            <div class="timeline-horizontal" data-aos="fade-up" data-aos-delay="100">
+                <!-- 01 -->
+                <div class="timeline-step-item">
+                    <div class="timeline-step-circle">
+                        <span class="timeline-step-num">01</span>
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3 class="timeline-step-title">Share Your Requirement</h3>
+                    <p class="timeline-step-desc">Tell us about your loan need and basic details.</p>
+                </div>
+
+                <!-- 02 -->
+                <div class="timeline-step-item">
+                    <div class="timeline-step-circle">
+                        <span class="timeline-step-num">02</span>
+                        <i class="fas fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h3 class="timeline-step-title">Explore Options</h3>
+                    <p class="timeline-step-desc">We help you explore suitable options from our lending partners.</p>
+                </div>
+
+                <!-- 03 -->
+                <div class="timeline-step-item">
+                    <div class="timeline-step-circle">
+                        <span class="timeline-step-num">03</span>
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <h3 class="timeline-step-title">Documentation Support</h3>
+                    <p class="timeline-step-desc">Guidance on the required documents.</p>
+                </div>
+
+                <!-- 04 -->
+                <div class="timeline-step-item">
+                    <div class="timeline-step-circle">
+                        <span class="timeline-step-num">04</span>
+                        <i class="fas fa-gears"></i>
+                    </div>
+                    <h3 class="timeline-step-title">Application Assistance</h3>
+                    <p class="timeline-step-desc">We assist in the application process.</p>
+                </div>
+
+                <!-- 05 -->
+                <div class="timeline-step-item">
+                    <div class="timeline-step-circle">
+                        <span class="timeline-step-num">05</span>
+                        <i class="fas fa-circle-check"></i>
+                    </div>
+                    <h3 class="timeline-step-title">Approval &amp; Disbursement</h3>
+                    <p class="timeline-step-desc">Support until loan approval and disbursement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINANCIAL SOLUTIONS & FAQS TWO-COLUMN SECTION -->
+    <section class="solutions-faq-section">
+        <div class="container">
+            <div class="solutions-faq-grid">
+                <!-- Left: Financial Solutions for a Brighter Tomorrow -->
+                <div class="solutions-card" data-aos="fade-right">
+                    <div class="solutions-card-header">
+                        <div class="brand-eyebrow">
+                            <span class="pulse-dot"></span>
+                            <span>LONG-TERM VALUE</span>
+                        </div>
+                        <h3>Financial Solutions for a <span class="text-orange">Brighter Tomorrow</span></h3>
+                        <p class="solutions-card-desc">
+                            Whether it's a personal need, your dream home, a new car, or your business growth – we are here to guide you with genuine support and the right options.
+                        </p>
+                    </div>
+
+                    <div class="solutions-visual-box">
+                        <img src="../images/other-loans/financial-solutions-milestones.jpg" alt="Life Milestones - Home, Vehicle, Savings and Investment Planning" width="600" height="390" loading="lazy" decoding="async">
+                        <div class="solutions-handwriting-badge">
+                            Your Goals, <span>Our Support</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="btn btn-hero-primary" onclick="openPopup()" style="width:100%; justify-content:center;">
+                            <span>Talk to a Loan Expert</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Frequently Asked Questions (Structured Module) -->
+                <div class="faq-module-wrap" data-aos="fade-left">
+                    <div class="brand-eyebrow">
+                        <span class="pulse-dot"></span>
+                        <span>CLEAR ANSWERS</span>
+                    </div>
+                    <h3>Frequently Asked <span class="text-orange">Questions</span></h3>
+                    
+                    <div class="other-loans-accordion">
+                        <details class="faq-item-card" open>
+                            <summary class="faq-trigger">
+                                <span>Can I apply for a personal loan without providing collateral?</span>
+                                <span class="faq-trigger-icon"><i class="fas fa-chevron-down"></i></span>
+                            </summary>
+                            <div class="faq-body-text">
+                                Yes. Personal loans offered by our partner banks and NBFCs are 100% unsecured and do not require any physical asset or collateral security. Eligibility is based on your income, employer profile, and CIBIL credit score.
+                            </div>
+                        </details>
+
+                        <details class="faq-item-card">
+                            <summary class="faq-trigger">
+                                <span>What is the maximum tenure available for Home Loans?</span>
+                                <span class="faq-trigger-icon"><i class="fas fa-chevron-down"></i></span>
+                            </summary>
+                            <div class="faq-body-text">
+                                Home loans offer flexible repayment tenures of up to 30 years depending on the applicant's age and income profile. We help compare EMI plans across major public and private banks to minimize your overall interest outgo.
+                            </div>
+                        </details>
+
+                        <details class="faq-item-card">
+                            <summary class="faq-trigger">
+                                <span>Can I finance both new and pre-owned (used) vehicles?</span>
+                                <span class="faq-trigger-icon"><i class="fas fa-chevron-down"></i></span>
+                            </summary>
+                            <div class="faq-body-text">
+                                Yes, our lending network includes options for both brand new cars and certified pre-owned passenger vehicles, with funding up to 85%–90% of the vehicle value and flexible tenures up to 7 years.
+                            </div>
+                        </details>
+
+                        <details class="faq-item-card">
+                            <summary class="faq-trigger">
+                                <span>What are the key criteria for Business Loans?</span>
+                                <span class="faq-trigger-icon"><i class="fas fa-chevron-down"></i></span>
+                            </summary>
+                            <div class="faq-body-text">
+                                For business loans (working capital, machinery purchase, or expansion), lenders typically review business vintage (minimum 1–2 years), annual turnover, GST returns, and bank statements. Both collateral-free MSME loans and secured options are available.
+                            </div>
+                        </details>
+
+                        <details class="faq-item-card">
+                            <summary class="faq-trigger">
+                                <span>Does Visionary Path Services charge any upfront advisory fee?</span>
+                                <span class="faq-trigger-icon"><i class="fas fa-chevron-down"></i></span>
+                            </summary>
+                            <div class="faq-body-text">
+                                No. Visionary Path Services provides 100% free loan advisory and facilitation. We never charge any upfront fees or consulting commission from our clients.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT MATRIX / ANCILLARY FINANCIAL SERVICES -->
+    <section class="section" style="padding: 72px 0; background: #ffffff;">
+        <div class="container text-center">
+            <p class="section-label">PRODUCT MATRIX</p>
+            <h2 class="section-title">Loan Options <span class="green-highlight">Comparison</span></h2>
+            <p class="section-sub">Transparent summary of eligibility parameters, tenure caps, and processing requirements across our advisory portfolio.</p>
+            
+            <div class="comparison-table-wrapper table-responsive" data-aos="fade-up" style="margin-top: 36px;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Maximum Cap</th>
+                            <th>Collateral Needed</th>
+                            <th>Tenure Range</th>
+                            <th>Ideal Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-cell-highlight">Personal Loan</td>
+                            <td>Up to ₹40 Lakhs</td>
+                            <td><span class="table-badge-green">No Collateral</span></td>
+                            <td>1 – 5 Years</td>
+                            <td>Emergency funding, marriage, relocation &amp; personal needs</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-highlight">Business Loan</td>
+                            <td>Up to ₹1 – 5+ Crores</td>
+                            <td>Unsecured &amp; Secured</td>
+                            <td>1 – 7 Years</td>
+                            <td>SME working capital, commercial expansion &amp; equipment</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-highlight">Home Loan</td>
+                            <td>Up to ₹5+ Crores</td>
+                            <td>Property Mortgaged</td>
+                            <td>Up to 30 Years</td>
+                            <td>Home purchase, flat construction &amp; balance transfer</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-highlight">Car Loan</td>
+                            <td>Up to 90% On-Road</td>
+                            <td>Hypothecation of Vehicle</td>
+                            <td>1 – 7 Years</td>
+                            <td>New &amp; certified pre-owned passenger vehicles</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-highlight">Forex Card &amp; Wire</td>
+                            <td>As per RBI LRS (Up to $250k)</td>
+                            <td>Nil (KYC &amp; Visa verified)</td>
+                            <td>Same-day / Express</td>
+                            <td>Student tuition remittance &amp; multi-currency forex card</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- LET'S DISCUSS YOUR LOAN REQUIREMENT -->
+    <section class="discuss-requirement-section">
+        <div class="container">
+            <div class="discuss-requirement-card" data-aos="fade-up">
+                <div class="discuss-left">
+                    <div class="discuss-phone-icon">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <div class="discuss-text">
+                        <h3>Let's Discuss Your Loan Requirement</h3>
+                        <p>Get expert guidance and explore the right loan options today.</p>
+                    </div>
+                </div>
+
+                <div class="discuss-ctas">
+                    <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn-whatsapp-pill">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Chat on WhatsApp</span>
+                    </a>
+                    <a href="tel:9063703038" class="btn-call-pill">
+                        <i class="fas fa-phone"></i>
+                        <span>Call Now: 9063703038</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- VPS_FOOTER_START -->
-<!-- INSTITUTIONAL REGULATORY DISCLAIMER STRIP -->
-<div class="site-disclaimer-strip">
+<!-- INSTITUTIONAL REGULATORY DISCLAIMER ACCORDION / DROPDOWN -->
+<div class="site-disclaimer-wrap">
     <div class="container">
-        <p>
-            <strong>Regulatory Transparency &amp; Operating Model:</strong> Visionary Path Services operates as an independent education loan consulting and assistance entity. We do not act as a direct lender, banking institution, or Non-Banking Financial Company (NBFC). We do not collect loan repayments, nor do we issue loan sanctions directly. All loan sanctions, interest rate assignments, margin money decisions, and disbursement schedules remain at the sole and independent discretion of our partner RBI-regulated Scheduled Commercial Banks and NBFCs. Services are subject to credit verification, applicant document clearance, and institutional guidelines. <a href="../pages/disclaimer.html">Read Full Regulatory Disclaimer</a>.
-        </p>
+        <details class="disclaimer-accordion">
+            <summary class="disclaimer-trigger">
+                <div class="disclaimer-trigger-left">
+                    <span class="disclaimer-badge">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>Regulatory Notice</span>
+                    </span>
+                    <span class="disclaimer-title">Operating Model &amp; Regulatory Disclosures</span>
+                    <span class="disclaimer-hint">• Independent Advisory Entity (Non-Lender Notice)</span>
+                </div>
+                <div class="disclaimer-toggle-pill">
+                    <span>View Regulatory Disclosure</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </summary>
+            <div class="disclaimer-content">
+                <div class="disclaimer-grid">
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-icon">
+                            <i class="fas fa-building-columns"></i>
+                        </div>
+                        <p class="disclaimer-item-text">
+                            <strong>Independent Advisory &amp; Non-Lender Status:</strong> Visionary Path Services operates exclusively as an education loan consulting and facilitation advisory. We are not a bank, Non-Banking Financial Company (NBFC), or direct credit provider. We do not issue loan sanctions directly, nor do we collect loan repayments or processing commissions from students.
+                        </p>
+                    </div>
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-icon">
+                            <i class="fas fa-scale-balanced"></i>
+                        </div>
+                        <p class="disclaimer-item-text">
+                            <strong>Lender Discretion &amp; Verification:</strong> All loan approvals, sanction limits, applicable interest rates, margin money requirements, and disbursement timelines remain at the sole and independent discretion of our partner RBI-regulated Scheduled Commercial Banks and NBFCs, subject to individual creditworthiness, CIBIL verification, and institutional eligibility guidelines.
+                        </p>
+                    </div>
+                </div>
+                <div class="disclaimer-footer-bar">
+                    <span class="disclaimer-footer-note"><i class="fas fa-check-circle" style="color:var(--green); margin-right:5px;"></i> 100% Free Consultation for Students &amp; Families</span>
+                    <a href="../pages/disclaimer.html" class="disclaimer-link-btn">
+                        <span>Read Full Regulatory &amp; Financial Disclaimer</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </details>
     </div>
 </div>
 
@@ -368,8 +749,32 @@
     <div class="container footer-inner">
         <div class="footer-col brand-col">
             <div class="footer-logo">
-                <span class="logo-name">VISIONARY PATH SERVICES</span>
-                <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                <a href="../index.html" class="logo logo-dark" aria-label="Visionary Path Services Home">
+                    <span class="vps-brand-mark">
+                        <svg class="vps-flash-svg" viewBox="0 0 100 120" width="34" height="41" fill="none" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="footerFlashGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+                                    <stop offset="0%" stop-color="#FF8A00" />
+                                    <stop offset="55%" stop-color="#FF5A00" />
+                                    <stop offset="100%" stop-color="#FF3800" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+                                  stroke="url(#footerFlashGrad)" 
+                                  stroke-width="14.5" 
+                                  stroke-linejoin="round" 
+                                  stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <div class="logo-text">
+                        <span class="logo-name">VISIONARY</span>
+                        <span class="logo-sub">
+                            <span class="logo-sub-line"></span>
+                            <span class="logo-sub-text">PATH SERVICES</span>
+                            <span class="logo-sub-line"></span>
+                        </span>
+                    </div>
+                </a>
             </div>
             <p class="footer-desc">
                 Pan-India premier education loan advisory service. We empower students to secure domestic and international academic financing from top banks and NBFCs with zero service charges.
@@ -446,7 +851,7 @@
 <!-- VPS_FOOTER_END -->
 
     <!-- POPUP INQUIRY FORM (Industry-Grade Edition) -->
-    <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
+    <div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle" onclick="closePopupOutside(event)">
         <div class="popup-modal">
             <button class="popup-close" onclick="closePopup()" aria-label="Close Popup">✕</button>
             <div class="popup-left">
@@ -455,7 +860,7 @@
                         <span class="badge-dot"></span>
                         <span>100% FREE CONSULTATION</span>
                     </div>
-                    <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
+                    <h3 class="popup-title" id="popupTitle">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
                     <p class="popup-left-desc">Compare pre-approved loan options from 15+ top banks &amp; NBFCs with zero service fees.</p>
                     <div class="popup-features-list">
                         <div class="popup-feature-item">
@@ -493,68 +898,68 @@
                     <h4>Get Free Loan Assessment</h4>
                     <p>Share your details to connect with a senior education loan advisor</p>
                 </div>
-                <form class="popup-form" onsubmit="submitForm(event)">
+                                <form class="popup-form" onsubmit="submitForm(event)">
                     <div class="form-row name-row">
                         <div class="form-group">
-                            <label>First Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="firstName" placeholder="e.g. Aarav" required></div>
+                            <label for="popupFirstName">First Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupFirstName" name="firstName" placeholder="e.g. Aarav" aria-label="First Name" required autocomplete="given-name"></div>
                         </div>
                         <div class="form-group">
-                            <label>Last Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="lastName" placeholder="e.g. Sharma" required></div>
+                            <label for="popupLastName">Last Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupLastName" name="lastName" placeholder="e.g. Sharma" aria-label="Last Name" required autocomplete="family-name"></div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Phone Number <span class="req">*</span></label>
+                            <label for="popupPhone">Phone Number <span class="req">*</span></label>
                             <div class="input-icon-wrap phone-wrap">
                                 <span class="country-prefix"><i class="fas fa-phone"></i> +91</span>
-                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" required>
+                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit Phone Number" required autocomplete="tel-national">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="label-with-action">
-                                <label>WhatsApp Number <span class="req">*</span></label>
-                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()">Same as phone</button>
+                                <label for="popupWhatsApp">WhatsApp Number <span class="req">*</span></label>
+                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()" aria-label="Copy Phone Number to WhatsApp Number">Same as phone</button>
                             </div>
                             <div class="input-icon-wrap whatsapp-inp">
                                 <i class="fab fa-whatsapp"></i>
-                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" required>
+                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit WhatsApp Number" required autocomplete="tel-national">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Email Address <span class="req">*</span></label>
-                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="e.g. aarav.sharma@gmail.com" required></div>
+                        <label for="popupEmail">Email Address <span class="req">*</span></label>
+                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" id="popupEmail" name="email" placeholder="e.g. aarav.sharma@gmail.com" aria-label="Email Address" required autocomplete="email"></div>
                     </div>
                     <div class="form-group mb-tight">
-                        <label class="form-label-regular">I'm interested in</label>
-                        <div class="interest-options">
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="abroad">
+                        <span class="form-label-regular" id="popupInterestLabel">I'm interested in</span>
+                        <div class="interest-options" role="radiogroup" aria-labelledby="popupInterestLabel">
+                            <label class="interest-opt" for="popupInterestAbroad">
+                                <input type="radio" id="popupInterestAbroad" name="interest" value="abroad" aria-label="Abroad Education Loan" checked>
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-globe-americas"></i> Abroad Education Loan</span>
                             </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="domestic">
+                            <label class="interest-opt" for="popupInterestDomestic">
+                                <input type="radio" id="popupInterestDomestic" name="interest" value="domestic" aria-label="Domestic Education Loan">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-graduation-cap"></i> Domestic Education Loan</span>
                             </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="mbbs">
+                            <label class="interest-opt" for="popupInterestMbbs">
+                                <input type="radio" id="popupInterestMbbs" name="interest" value="mbbs" aria-label="MBBS Education Loan">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-user-md"></i> MBBS Education Loan</span>
                             </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="other" checked>
+                            <label class="interest-opt" for="popupInterestOther">
+                                <input type="radio" id="popupInterestOther" name="interest" value="other" aria-label="Other Loan Options">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-coins"></i> Other Loan Options</span>
                             </label>
                         </div>
                     </div>
                     <div class="form-group mb-tight">
-                        <label class="form-label-regular">Additional Information (Optional)</label>
-                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea name="message" placeholder="Type of loan (Personal, Business, Home, Forex), required amount..." rows="2"></textarea></div>
+                        <label for="popupMessage" class="form-label-regular">Additional Information (Optional)</label>
+                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea id="popupMessage" name="message" placeholder="Target country, university, loan amount needed..." aria-label="Additional Information" rows="2"></textarea></div>
                     </div>
                     <button type="submit" class="btn btn-submit-enquiry">
                         <span>Submit Enquiry</span>

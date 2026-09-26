@@ -3,6 +3,12 @@
    UI/UX Pro Max · Anti-AI-Slop Industry Edition
    ========================================== */
 
+/* ─────────────────────────────────────────────────────────────────────
+   DESIGN TOKENS — All CSS custom properties are defined in
+   css/design-system.css which loads before this file.
+   Do NOT re-define tokens here. Use var() to reference them.
+   ───────────────────────────────────────────────────────────────────── */
+
 /* --- CSS Reset & Base --- */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -10,68 +16,6 @@
     padding: 0;
 }
 
-:root {
-    /* Reference Design Typography System */
-    --font-display: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-body: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
-
-    /* Core Brand Colors (Institutional FinTech Authority) */
-    --navy: #0a1d37;
-    --navy-dark: #061325;
-    --navy-light: #132e54;
-    --green: #059669;
-    --green-light: #10b981;
-    --green-dark: #047857;
-    --green-bg: #ecfdf5;
-    --blue: #1d4ed8;
-    --blue-dark: #1e40af;
-    --blue-light: #eff6ff;
-    --teal: #0f766e;
-
-    /* Extended Palette — Warm Amber / Highlights */
-    --amber: #d97706;
-    --amber-dark: #b45309;
-    --amber-light: #f59e0b;
-    --amber-bg: #fef3c7;
-
-    /* Text Scale */
-    --text-main: #0f172a;
-    --text-body: #334155;
-    --text-muted: #64748b;
-    --slate: #1e293b;
-    --slate-light: #475569;
-    --slate-200: #e2e8f0;
-    --slate-300: #cbd5e1;
-
-    /* Surfaces & Backgrounds */
-    --bg-light: #f8fafc;
-    --bg-card: #f8fafc;
-    --white: #ffffff;
-    --border-color: #e2e8f0;
-    --border-subtle: rgba(226, 232, 240, 0.8);
-    --border-focus: #3b82f6;
-
-    /* Layered Multi-Stop Elevation Shadows (No flat AI tells) */
-    --shadow-xs: 0 1px 2px rgba(10, 29, 55, 0.04);
-    --shadow-sm: 0 2px 5px -1px rgba(10, 29, 55, 0.06), 0 1px 3px -1px rgba(10, 29, 55, 0.03);
-    --shadow: 0 4px 14px -2px rgba(10, 29, 55, 0.06), 0 2px 6px -1px rgba(10, 29, 55, 0.03);
-    --shadow-md: 0 10px 24px -4px rgba(10, 29, 55, 0.08), 0 4px 8px -2px rgba(10, 29, 55, 0.04);
-    --shadow-lg: 0 18px 40px -6px rgba(10, 29, 55, 0.12), 0 6px 14px -3px rgba(10, 29, 55, 0.05);
-    --shadow-xl: 0 26px 60px -10px rgba(10, 29, 55, 0.16), 0 12px 24px -5px rgba(10, 29, 55, 0.07);
-
-    /* Concentric Corner Radii */
-    --radius-sm: 8px;
-    --radius: 14px;
-    --radius-md: 18px;
-    --radius-lg: 24px;
-    --radius-full: 9999px;
-
-    /* Scoped Transitions (Strictly no transition: all) */
-    --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-    --transition: 0.24s cubic-bezier(0.16, 1, 0.3, 1);
-    --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
 
 html {
     scroll-behavior: smooth;
@@ -216,32 +160,64 @@ img { max-width: 100%; display: block; }
 .logo {
     display: flex;
     align-items: center;
+    gap: 12px;
     text-decoration: none;
     flex-shrink: 0;
 }
-.logo-badge, .logo-icon {
-    display: none !important;
+.vps-brand-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform var(--transition-bounce);
+}
+.logo:hover .vps-brand-mark {
+    transform: scale(1.06) translateY(-1px);
+}
+.vps-flash-svg {
+    display: block;
+    filter: drop-shadow(0 2px 6px rgba(255, 90, 0, 0.28));
 }
 .logo-text { display: flex; flex-direction: column; }
 .logo-name {
-    font-size: 15.5px;
+    font-family: var(--font-display);
+    font-size: 18.5px;
     font-weight: 800;
-    color: var(--navy);
-    letter-spacing: -0.015em;
-    line-height: 1.15;
+    color: var(--color-navy);
+    letter-spacing: 0.06em;
+    line-height: 1.1;
+    text-transform: uppercase;
     transition: var(--transition);
 }
 .logo:hover .logo-name {
-    color: var(--blue);
+    color: var(--color-navy);
 }
 .logo-sub, .logo-tagline {
-    font-size: 9.5px;
-    color: var(--green);
+    font-family: var(--font-display);
+    font-size: 9px;
+    color: var(--color-orange);
     font-weight: 700;
-    letter-spacing: 0.45px;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     line-height: 1.2;
-    margin-top: 1px;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.logo-sub-line {
+    display: inline-block;
+    height: 1.5px;
+    width: 14px;
+    background: var(--color-orange);
+    border-radius: 1px;
+    opacity: 0.75;
+}
+.logo-dark .logo-name {
+    color: #ffffff;
+}
+.logo-dark:hover .logo-name {
+    color: #ffffff;
 }
 
 .nav-links {
@@ -810,12 +786,7 @@ img { max-width: 100%; display: block; }
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: 
-        linear-gradient(to right, #ffffff 0%, #ffffff 28%, rgba(255, 255, 255, 0.96) 42%, rgba(255, 255, 255, 0.35) 62%, transparent 78%),
-        url('../images/hero_banner.png');
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: radial-gradient(ellipse 750px 550px at 85% 45%, rgba(14, 165, 233, 0.08) 0%, rgba(16, 185, 129, 0.05) 45%, transparent 70%);
     z-index: 0;
     pointer-events: none;
 }
@@ -1007,38 +978,38 @@ img { max-width: 100%; display: block; }
    2. PAN INDIA SECTION (Screenshot 2 / Image 3)
    ========================================== */
 .pan-india-section {
-    padding: 44px 0;
+    padding: 60px 0;
     background: #ffffff;
 }
 .pan-india-box {
-    background: linear-gradient(135deg, #f0fdf4 0%, #f0f9ff 100%);
+    background: #f1fdf6;
     border-radius: var(--radius-xl);
-    padding: 34px 32px;
-    border: 1px solid rgba(5, 150, 105, 0.15);
+    padding: 48px 46px;
+    border: 1px solid rgba(22, 163, 74, 0.22);
     display: flex;
-    gap: 32px;
+    gap: 40px;
     align-items: center;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 10px 30px -5px rgba(16, 185, 129, 0.06);
     overflow: hidden;
 }
 .pan-india-header {
-    flex: 0 0 310px;
-    max-width: 320px;
+    flex: 0 0 340px;
+    max-width: 360px;
     min-width: 0;
 }
 .pan-india-title {
-    font-size: clamp(22px, 2.5vw, 29px);
+    font-size: clamp(26px, 2.7vw, 34px);
     font-weight: 800;
     color: var(--navy);
-    line-height: 1.24;
+    line-height: 1.22;
     letter-spacing: -0.02em;
-    margin-bottom: 8px;
+    margin-bottom: 14px;
     text-wrap: balance;
 }
 .pan-india-sub {
-    font-size: 13.5px;
+    font-size: 14.5px;
     color: var(--text-muted);
-    line-height: 1.6;
+    line-height: 1.62;
     margin-bottom: 0;
     text-wrap: pretty;
 }
@@ -1048,54 +1019,57 @@ img { max-width: 100%; display: block; }
 .pan-india-cards {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    gap: 20px;
     flex: 1;
     min-width: 0;
 }
 .pan-card {
     background: #ffffff;
-    border-radius: var(--radius-lg);
-    padding: 22px 20px;
+    border-radius: 18px;
+    padding: 24px 22px;
     position: relative;
-    box-shadow: var(--shadow-xs);
-    border: 1px solid #e2e8f0;
-    border-bottom: 3px solid transparent;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     transition: transform var(--transition-bounce), box-shadow var(--transition-base), border-color var(--transition-base);
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .pan-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-    border-bottom-color: var(--green);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px -4px rgba(11, 31, 51, 0.09);
+    border-color: rgba(22, 163, 74, 0.25);
 }
 .pan-card-badge {
     width: 44px;
     height: 44px;
-    border-radius: var(--radius-md);
-    background: #ecfdf5;
-    color: var(--green);
+    border-radius: 12px;
+    background: #ecfdf6;
+    color: #16a34a;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    margin-bottom: 14px;
-    box-shadow: var(--shadow-xs);
+    margin-bottom: 16px;
+    flex-shrink: 0;
 }
 .pan-card-badge.blue-badge {
-    background: #eff6ff;
-    color: var(--blue);
+    background: #eff5fd;
+    color: #215bdc;
 }
 .pan-card-num {
     position: absolute;
-    top: 14px;
-    right: 14px;
+    top: 22px;
+    right: 22px;
     font-size: 18px;
-    font-weight: 800;
+    font-weight: 700;
     font-variant-numeric: tabular-nums;
-    color: #cbd5e1;
+    color: #cfd8e3;
+    line-height: 1;
 }
 .pan-card h3 {
-    font-size: 15px;
+    font-size: 16.5px;
     font-weight: 700;
     color: var(--navy);
     margin-bottom: 6px;
@@ -1103,10 +1077,11 @@ img { max-width: 100%; display: block; }
     letter-spacing: -0.01em;
 }
 .pan-card p {
-    font-size: 12.5px;
+    font-size: 13.5px;
     color: var(--text-muted);
     line-height: 1.5;
     text-wrap: pretty;
+    margin: 0;
 }
 
 /* ==========================================
@@ -1749,10 +1724,8 @@ img { max-width: 100%; display: block; }
     box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
     animation: pulseDot 2s infinite;
 }
-@keyframes pulseDot {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.2); opacity: 0.7; }
-}
+/* @keyframes pulseDot is defined in improvements.css — canonical location */
+
 .popup-title {
     font-size: 27px;
     font-weight: 800;
@@ -2350,11 +2323,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 768px) {
     /* --- Hero Section Mobile --- */
     .exact-hero::before {
-        background-image: 
-            linear-gradient(to bottom, rgba(248, 251, 254, 0.94) 0%, rgba(248, 251, 254, 0.88) 55%, rgba(248, 251, 254, 0.98) 100%),
-            url('../images/hero_banner.png');
-        background-position: right top;
-        background-size: cover;
+        background: radial-gradient(circle at 50% 20%, rgba(14, 165, 233, 0.08) 0%, rgba(16, 185, 129, 0.04) 50%, transparent 80%);
     }
     .exact-hero-grid {
         min-height: auto;
@@ -3410,11 +3379,13 @@ html, body { overflow-x: hidden; }
     letter-spacing: 2px;
     color: var(--navy);
     text-transform: uppercase;
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
+    width: 100%;
+    max-width: 100%;
 }
 .home-marquee-label::before,
 .home-marquee-label::after,
@@ -3425,6 +3396,7 @@ html, body { overflow-x: hidden; }
     width: 36px;
     height: 1.5px;
     background: linear-gradient(90deg, transparent, var(--green));
+    flex-shrink: 0;
 }
 .home-marquee-label::after,
 .marquee-label::after {
@@ -3513,14 +3485,14 @@ html, body { overflow-x: hidden; }
     border: 1px solid #bfdbfe;
 }
 .badge-pvt {
-    background: #fdf2f8;
-    color: #9d174d;
-    border: 1px solid #fbcfe8;
+    background: #f1f5f9;
+    color: #0a1d37;
+    border: 1px solid #cbd5e1;
 }
 .badge-intl {
-    background: #f0fdfa;
-    color: #0f766e;
-    border: 1px solid #99f6e4;
+    background: #eff6ff;
+    color: #1a56db;
+    border: 1px solid #bfdbfe;
 }
 
 /* Lenders Grid Page Logos */

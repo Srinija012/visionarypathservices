@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 64" width="200" height="64" fill="none">
+  <defs>
+    <linearGradient id="vpsFlashGradCompact" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#FF7A00" />
+      <stop offset="55%" stop-color="#FF5A00" />
+      <stop offset="100%" stop-color="#FF3800" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(4, 4) scale(0.46)">
+    <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+          stroke="url(#vpsFlashGradCompact)" 
+          stroke-width="14.5" 
+          stroke-linejoin="round" 
+          stroke-linecap="round" />
+  </g>
+
+  <g transform="translate(56, 0)">
+    <text x="0" y="32" 
+          font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" 
+          font-size="20" 
+          font-weight="800" 
+          letter-spacing="1.2" 
+          fill="#0B1F33">VPS</text>
+    <text x="0" y="47" 
+          font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" 
+          font-size="9" 
+          font-weight="700" 
+          letter-spacing="2" 
+          fill="#FF5A00">ADVISORY</text>
+  </g>
+</svg>

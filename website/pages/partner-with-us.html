@@ -9,109 +9,75 @@
     <title>Partner With Us – Visionary Path Services</title>
     <meta name="description" content="Partner with Visionary Path Services as an education consultant, university representative, or lending institution to help students fund their education.">
     <link rel="canonical" href="https://www.visionarypathservices.com/pages/partner-with-us.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Partner With Us – Visionary Path Services">
+    <meta property="og:description" content="Join our growing network of educational consultants, DSAs, and institutions to provide seamless education loan advisory to students.">
+    <meta property="og:url" content="https://www.visionarypathservices.com/pages/partner-with-us.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.visionarypathservices.com/favicon.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.visionarypathservices.com/favicon.svg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/design-system.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/improvements.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <style>
-        .page-hero { background: linear-gradient(135deg, var(--navy) 0%, #1a4a8a 50%, #0d3d1e 100%); padding: 120px 0 70px; text-align: center; position: relative; overflow: hidden; }
-        .page-hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80') center/cover; opacity: 0.12; }
-        .page-hero-inner { position: relative; z-index: 1; }
-        .page-hero-eyebrow { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
-        .page-hero h1 { color: var(--white); font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; margin-bottom: 16px; }
-        .page-hero p { color: rgba(255,255,255,0.82); font-size: 1.05rem; max-width: 600px; margin: 0 auto; line-height: 1.7; }
-        .section-label { color: var(--green); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
-        .section-title { color: var(--navy); font-size: clamp(1.5rem, 3vw, 2.3rem); font-weight: 800; margin-bottom: 14px; }
-        .section-sub { color: var(--text-muted); font-size: 1rem; max-width: 600px; margin: 0 auto 50px; line-height: 1.7; }
-        .stats-bar { background: var(--navy); padding: 40px 0; }
-        .stats-row { display: flex; gap: 0; justify-content: center; flex-wrap: wrap; }
-        .stat-pill { padding: 16px 36px; text-align: center; border-right: 1px solid rgba(255,255,255,0.12); }
-        .stat-pill:last-child { border-right: none; }
-        .stat-pill .num { color: var(--green); font-size: 1.6rem; font-weight: 800; display: block; }
-        .stat-pill .lbl { color: rgba(255,255,255,0.8); font-size: 0.85rem; }
-        .partner-section { padding: 80px 0; background: var(--bg-card); }
-        .partner-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-        @media(max-width:900px){.partner-inner{grid-template-columns:1fr;}}
-        .partner-form-col h2 { color: var(--navy); font-size: clamp(1.4rem,3vw,2rem); font-weight: 800; margin-bottom: 8px; }
-        .partner-form-col p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 28px; line-height: 1.6; }
-        .partner-form { background: var(--white); border-radius: 20px; padding: 36px 32px; box-shadow: 0 8px 32px rgba(13,43,94,0.1); border: 1.5px solid #e8f0fe; }
-        .form-group { margin-bottom: 18px; }
-        .form-group label { display: block; color: var(--text-body); font-size: 0.88rem; font-weight: 600; margin-bottom: 7px; }
-        .form-group .req { color: #ef4444; }
-        .input-icon-wrap { position: relative; }
-        .input-icon-wrap i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--slate-300); font-size: 0.9rem; }
-        .input-icon-wrap input, .input-icon-wrap textarea { width: 100%; padding: 12px 14px 12px 40px; border: 1.5px solid var(--border-color); border-radius: 10px; font-size: 0.9rem; color: var(--text-main); font-family: inherit; background: var(--bg-card); transition: all 0.2s; box-sizing: border-box; }
-        .input-icon-wrap input:focus, .input-icon-wrap textarea:focus { outline: none; border-color: var(--green); background: var(--white); box-shadow: 0 0 0 3px rgba(26,156,78,0.1); }
-        .input-icon-wrap textarea { padding-top: 14px; resize: vertical; }
-        .input-icon-wrap.textarea-wrap i { top: 18px; transform: none; }
-        .why-col { }
-        .why-col h2 { color: var(--navy); font-size: clamp(1.3rem,3vw,1.9rem); font-weight: 800; margin-bottom: 20px; }
-        .why-list { list-style: none; padding: 0; margin: 0 0 32px; }
-        .why-item { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid #e8f0fe; }
-        .why-item:last-child { border-bottom: none; }
-        .why-icon { width: 48px; height: 48px; background: linear-gradient(135deg, #e8f4ee, #c6e8d6); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
-        .why-item h4 { color: var(--navy); font-size: 0.98rem; font-weight: 700; margin-bottom: 5px; }
-        .why-item p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin: 0; }
-        .together-card { background: linear-gradient(135deg, var(--navy), #1a4a8a); border-radius: 20px; padding: 36px 32px; margin-top: 8px; }
-        .together-card p { color: rgba(255,255,255,0.9); font-size: 1.1rem; font-weight: 600; line-height: 1.6; margin: 0; }
-        .who-section { padding: 80px 0; background: var(--white); }
-        .who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 50px; }
-        .who-card { background: var(--bg-card); border-radius: 16px; padding: 28px 22px; text-align: center; border: 1.5px solid #e8f0fe; transition: all 0.3s; }
-        .who-card:hover { background: var(--navy); border-color: var(--navy); transform: translateY(-6px); box-shadow: 0 12px 36px rgba(13,43,94,0.2); }
-        .who-card:hover .who-icon-wrap, .who-card:hover h3, .who-card:hover p { color: var(--white); }
-        .who-card:hover .who-icon-wrap { background: rgba(255,255,255,0.15); }
-        .who-icon-wrap { width: 64px; height: 64px; background: linear-gradient(135deg, #e8f4ee, #c6e8d6); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 16px; transition: all 0.3s; }
-        .who-card h3 { color: var(--navy); font-size: 1rem; font-weight: 700; margin-bottom: 6px; transition: all 0.3s; }
-        .who-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; transition: all 0.3s; }
-        .cta-section { padding: 70px 0; background: linear-gradient(135deg, var(--green), #0d7a3a); text-align: center; }
-        .cta-section h2 { color: var(--white); font-size: clamp(1.4rem,3vw,2rem); font-weight: 800; margin-bottom: 28px; }
-        .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    <link rel="stylesheet" href="../css/improvements.css">    
 
-        /* --- Partner Page Mobile Responsive --- */
-        @media (max-width: 768px) {
-            .partner-section { padding: 50px 0; }
-            .partner-inner { gap: 32px; }
-            .partner-form { padding: 24px 18px; border-radius: 16px; }
-            .partner-form-col h2 { font-size: 1.3rem; }
-            .partner-form-col p { margin-bottom: 18px; }
-            .input-icon-wrap input, .input-icon-wrap textarea {
-                font-size: 16px;
-                min-height: 46px;
-                padding: 12px 14px 12px 40px;
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Partner Network Onboarding for Consultancies & Agents",
+          "url": "https://www.visionarypathservices.com/pages/partner-with-us.html",
+          "description": "Partner with Visionary Path Services to provide end-to-end loan fulfillment to your students.",
+          "provider": {
+            "@type": "FinancialService",
+            "name": "Visionary Path Services",
+            "url": "https://www.visionarypathservices.com"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.visionarypathservices.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Partner Network Onboarding for Consultancies & Agents",
+              "item": "https://www.visionarypathservices.com/pages/partner-with-us.html"
             }
-            .who-section { padding: 50px 0; }
-            .who-grid { margin-top: 32px; gap: 16px; }
-            .who-icon-wrap { width: 52px; height: 52px; border-radius: 14px; font-size: 1.5rem; }
-            .why-item { padding: 12px 0; gap: 10px; }
-            .why-icon { width: 42px; height: 42px; border-radius: 10px; font-size: 1.1rem; }
-            .together-card { padding: 28px 22px; }
-            .together-card p { font-size: 1rem; }
-            .cta-section { padding: 50px 0; }
-            .stats-bar { padding: 28px 0; }
+          ]
         }
-        @media (max-width: 480px) {
-            .partner-form { padding: 20px 14px; }
-            .page-hero { padding: 80px 0 50px; }
-            .who-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+      ]
+    }
+    </script>
 </head>
 <body>
 
         <!-- VPS_NAVBAR_START -->
+<a href="#mainContent" class="skip-link">Skip to main content</a>
 <!-- TOPBAR -->
 <div class="top-bar">
     <div class="container top-bar-inner">
         <div class="top-bar-left">
-            <span class="pulse-dot"></span>
-            <span>Pan India Education Loan Assistance &amp; Guidance</span>
-            <span class="top-bar-dash">—</span> Your Education Goals, Our Guidance
+            <span class="orange-rule" style="width:18px; height:2px; margin-right:8px; vertical-align:middle; display:inline-block;"></span>
+            <span>Your Education Goals, Our Guidance</span>
+            <span class="top-bar-dash" style="color:var(--color-orange); margin: 0 6px;">•</span>
+            <span style="opacity: 0.88;">Pan India Loan Advisory</span>
         </div>
         <div class="top-bar-right">
-            <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact:- 9063703038</a>
+            <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact: 9063703038</a>
             <span class="top-sep">|</span>
             <a href="https://instagram.com/visionarypathservices" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <span class="top-sep">|</span>
@@ -123,15 +89,35 @@
 <!-- NAVBAR -->
 <header class="navbar" id="navbar">
     <div class="container nav-inner">
-        <a href="../index.html" class="logo">
+        <a href="../index.html" class="logo" aria-label="Visionary Path Services Home">
+            <span class="vps-brand-mark">
+                <svg class="vps-flash-svg" viewBox="0 0 100 120" width="34" height="41" fill="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="navFlashGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+                            <stop offset="0%" stop-color="#FF7A00" />
+                            <stop offset="55%" stop-color="#FF5A00" />
+                            <stop offset="100%" stop-color="#FF3800" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+                          stroke="url(#navFlashGrad)" 
+                          stroke-width="14.5" 
+                          stroke-linejoin="round" 
+                          stroke-linecap="round" />
+                </svg>
+            </span>
             <div class="logo-text">
-                <span class="logo-name">VISIONARY PATH SERVICES</span>
-                <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                <span class="logo-name">VISIONARY</span>
+                <span class="logo-sub">
+                    <span class="logo-sub-line"></span>
+                    <span class="logo-sub-text">PATH SERVICES</span>
+                    <span class="logo-sub-line"></span>
+                </span>
             </div>
         </a>
         <ul class="nav-links" id="navLinks">
             <li class="has-dropdown services-dropdown">
-                <a href="../pages/services.html" class="nav-link-services">Services <i class="fas fa-chevron-down"></i></a>
+                <a href="../pages/services.html" class="nav-link-services" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="dropdown mega-dropdown">
                     <div class="mega-body">
                         <!-- Left: Loan Programs -->
@@ -239,7 +225,7 @@
             <li><a href="../pages/partner-with-us.html" class="nav-link-partner-with-us active">Partner With Us</a></li>
             <!-- More dropdown -->
             <li class="has-dropdown">
-                <a href="#" class="nav-link-more">More <i class="fas fa-chevron-down"></i></a>
+                <a href="#" class="nav-link-more" aria-haspopup="true" aria-expanded="false">More <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="more-dropdown">
                     <a href="../pages/about.html" class="more-dropdown-item">
                         <i class="fas fa-info-circle"></i> About Us
@@ -272,180 +258,531 @@
 </header>
 <!-- VPS_NAVBAR_END -->
 
-    <!-- HERO -->
-    <section class="page-hero">
-        <div class="container page-hero-inner">
-            <p class="page-hero-eyebrow" data-aos="fade-up">JOIN OUR NETWORK</p>
-            <h1 data-aos="fade-up" data-aos-delay="100">Grow Your Business with <span style="color:var(--green)">Visionary Path Services</span></h1>
-            <p data-aos="fade-up" data-aos-delay="200">Partner with us and be a part of thousands of students' success stories through education financing.</p>
-        </div>
-    </section>
-
-    <!-- STATS BAR -->
-    <div class="stats-bar">
-        <div class="container">
-            <div class="stats-row">
-                <div class="stat-pill" data-aos="fade-up" data-aos-delay="0">
-                    <span class="num">10,000+</span>
-                    <span class="lbl">Students Supported</span>
+    <!-- MAIN CONTENT -->
+    <main id="mainContent" class="partner-page-wrap">
+        <!-- HERO -->
+        <section class="partner-hero">
+            <div class="container partner-hero-inner">
+                <nav aria-label="Breadcrumb" class="hero-breadcrumb-nav" data-aos="fade-down">
+                    <a href="../index.html">Home</a>
+                    <span class="hero-breadcrumb-sep"><i class="fas fa-chevron-right"></i></span>
+                    <span>Partner With Us</span>
+                </nav>
+                <div class="hero-eyebrow-badge" data-aos="fade-up">
+                    <span class="hero-pulse-dot"></span>
+                    <span>Official Channel Partnership Program</span>
                 </div>
-                <div class="stat-pill" data-aos="fade-up" data-aos-delay="80">
-                    <span class="num">500+</span>
-                    <span class="lbl">Channel Partners</span>
-                </div>
-                <div class="stat-pill" data-aos="fade-up" data-aos-delay="160">
-                    <span class="num"><i class="fas fa-globe"></i></span>
-                    <span class="lbl">Global Study Destinations</span>
-                </div>
-                <div class="stat-pill" data-aos="fade-up" data-aos-delay="240">
-                    <span class="num"><i class="fas fa-handshake"></i></span>
-                    <span class="lbl">Stronger Together For a Brighter Tomorrow</span>
+                <h1 data-aos="fade-up" data-aos-delay="80">Grow Your Advisory Business with <span class="hero-emerald-gradient">Visionary Path Services</span></h1>
+                <p class="hero-lead" data-aos="fade-up" data-aos-delay="160">
+                    Empower your students with seamless collateral and non-collateral education loans from 15+ premier banks &amp; NBFCs. Fast-track approvals, zero student charges, and dedicated partner desks across India.
+                </p>
+                <div class="hero-trust-strip" data-aos="fade-up" data-aos-delay="240">
+                    <span class="hero-trust-pill"><i class="fas fa-shield-halved"></i> Zero Registration Fee</span>
+                    <span class="hero-trust-pill"><i class="fas fa-building-columns"></i> 15+ Partner Banks &amp; NBFCs</span>
+                    <span class="hero-trust-pill"><i class="fas fa-bolt"></i> 24–48h Assessment TAT</span>
+                    <span class="hero-trust-pill"><i class="fas fa-user-check"></i> Dedicated Relationship Manager</span>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- PARTNER FORM + WHY -->
-    <section class="partner-section">
-        <div class="container">
-            <div class="partner-inner">
-                <!-- FORM -->
-                <div class="partner-form-col" data-aos="fade-right">
-                    <p class="section-label">BECOME A PARTNER</p>
-                    <h2>Let's Create More Success <span style="color:var(--green)">Stories Together</span></h2>
-                    <p>Fill in your details below and our partnership team will reach out to discuss how we can grow together.</p>
-                    <div class="partner-form">
-                        <form onsubmit="submitPartnerForm(event)">
-                            <div class="form-group">
-                                <label>Name of Consultancy / DSA / Agent <span class="req">*</span></label>
-                                <div class="input-icon-wrap"><i class="fas fa-building"></i><input type="text" placeholder="Enter your company / agency name" required></div>
-                            </div>
-                            <div class="form-group">
-                                <label>Your Email <span class="req">*</span></label>
-                                <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" placeholder="Enter your email address" required></div>
-                            </div>
-                            <div class="form-group">
-                                <label>Your Phone <span class="req">*</span></label>
-                                <div class="input-icon-wrap"><i class="fas fa-phone"></i><input type="tel" placeholder="Enter your phone number" required></div>
-                            </div>
-                            <div class="form-group">
-                                <label>Primary Contact Person</label>
-                                <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" placeholder="Name of primary contact person"></div>
-                            </div>
-                            <div class="form-group">
-                                <label>Designation</label>
-                                <div class="input-icon-wrap"><i class="fas fa-id-badge"></i><input type="text" placeholder="Your designation / role"></div>
-                            </div>
-                            <div class="form-group">
-                                <label>Notes (Optional)</label>
-                                <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-alt"></i><textarea placeholder="Tell us about your business and how you'd like to partner..." rows="3"></textarea></div>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-full">Submit Your Details <i class="fas fa-arrow-right"></i></button>
-                        </form>
+        <!-- STATS BAR -->
+        <section class="stats-bar" aria-label="Key Partnership Metrics">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card-item" data-aos="fade-up" data-aos-delay="0">
+                        <span class="stat-num">10,000+</span>
+                        <span class="stat-lbl">Students Assisted</span>
+                        <span class="stat-sub">Domestic &amp; study abroad</span>
                     </div>
-                </div>
-
-                <!-- WHY PARTNER -->
-                <div class="why-col" data-aos="fade-left">
-                    <p class="section-label">ADVANTAGES</p>
-                    <h2>Why Partner <span style="color:var(--green)">With Us?</span></h2>
-                    <ul class="why-list">
-                        <li class="why-item">
-                            <div class="why-icon"><i class="fas fa-award"></i></div>
-                            <div>
-                                <h4>High Approval Rate</h4>
-                                <p>Better chances for successful loan approvals with trusted lenders.</p>
-                            </div>
-                        </li>
-                        <li class="why-item">
-                            <div class="why-icon"><i class="fas fa-handshake"></i></div>
-                            <div>
-                                <h4>Dedicated Partner Support</h4>
-                                <p>Get end-to-end guidance at every step of the partnership journey.</p>
-                            </div>
-                        </li>
-                        <li class="why-item">
-                            <div class="why-icon"><i class="fas fa-building-columns"></i></div>
-                            <div>
-                                <h4>Wide Range of Lenders</h4>
-                                <p>Access top banks &amp; NBFCs under one roof for all loan categories.</p>
-                            </div>
-                        </li>
-                        <li class="why-item">
-                            <div class="why-icon"><i class="fas fa-clock"></i></div>
-                            <div>
-                                <h4>Faster Processing</h4>
-                                <p>Quick updates and hassle-free coordination with our expert team.</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="together-card">
-                        <p>Together We Empower Students' Dreams. Your Business Growth.</p>
+                    <div class="stat-card-item" data-aos="fade-up" data-aos-delay="60">
+                        <span class="stat-num">500+</span>
+                        <span class="stat-lbl">Channel Partners</span>
+                        <span class="stat-sub">Consultants &amp; DSAs pan-India</span>
+                    </div>
+                    <div class="stat-card-item" data-aos="fade-up" data-aos-delay="120">
+                        <span class="stat-num">15+</span>
+                        <span class="stat-lbl">Lending Institutions</span>
+                        <span class="stat-sub">Top public, private &amp; NBFCs</span>
+                    </div>
+                    <div class="stat-card-item" data-aos="fade-up" data-aos-delay="180">
+                        <span class="stat-num">₹500 Cr+</span>
+                        <span class="stat-lbl">Sanctions Facilitated</span>
+                        <span class="stat-sub">100% Free student advisory</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- WHO CAN PARTNER -->
-    <section class="who-section">
-        <div class="container" style="text-align:center">
-            <p class="section-label">WHO CAN JOIN</p>
-            <h2 class="section-title">Who Can Partner <span style="color:var(--green)">With Us?</span></h2>
-            <p class="section-sub">We welcome a wide range of partners who are passionate about helping students achieve their education goals.</p>
-            <div class="who-grid">
-                <div class="who-card" data-aos="zoom-in" data-aos-delay="0">
-                    <div class="who-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
-                    <h3>Education Consultants</h3>
-                    <p>Counsellors guiding students toward the right courses and institutions.</p>
-                </div>
-                <div class="who-card" data-aos="zoom-in" data-aos-delay="60">
-                    <div class="who-icon-wrap"><i class="fas fa-plane-departure"></i></div>
-                    <h3>Study Abroad Consultants</h3>
-                    <p>Experts helping students plan and execute their international study dreams.</p>
-                </div>
-                <div class="who-card" data-aos="zoom-in" data-aos-delay="120">
-                    <div class="who-icon-wrap"><i class="fas fa-credit-card"></i></div>
-                    <h3>DSA / Loan Partners</h3>
-                    <p>Direct selling agents with experience in financial products and loans.</p>
-                </div>
-                <div class="who-card" data-aos="zoom-in" data-aos-delay="180">
-                    <div class="who-icon-wrap"><i class="fas fa-user-tie"></i></div>
-                    <h3>Freelance Counsellors</h3>
-                    <p>Independent education advisors helping students choose the right path.</p>
-                </div>
-                <div class="who-card" data-aos="zoom-in" data-aos-delay="240">
-                    <div class="who-icon-wrap"><i class="fas fa-globe"></i></div>
-                    <h3>Overseas Education Agents</h3>
-                    <p>Agents facilitating student admissions at international universities.</p>
-                </div>
-                <div class="who-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="who-icon-wrap"><i class="fas fa-handshake"></i></div>
-                    <h3>Referral Partners</h3>
-                    <p>Individuals and organizations who can refer students seeking education loans.</p>
+        <!-- PARTNER SECTION: FORM + ADVANTAGES -->
+        <section class="partner-section" id="partnerFormContainer">
+            <div class="container">
+                <div class="partner-inner">
+                    <!-- REGISTRATION FORM COLUMN -->
+                    <div class="partner-form-col" data-aos="fade-right">
+                        <div class="partner-form-card">
+                            <div class="form-card-header">
+                                <span class="section-badge-chip"><i class="fas fa-file-signature"></i> Fast-Track Onboarding</span>
+                                <h2>Register as an <span style="color:var(--green)">Official Partner</span></h2>
+                                <p>Fill in your details below and our partnership team will reach out within 24 business hours to complete your desk onboarding.</p>
+                            </div>
+
+                            <form onsubmit="submitPartnerForm(event)" novalidate>
+                                <div class="form-grid-2">
+                                    <div class="form-group">
+                                        <label for="partnerFirmName">Company / Agency Name <span class="req">*</span></label>
+                                        <div class="input-icon-wrap">
+                                            <i class="fas fa-building"></i>
+                                            <input type="text" id="partnerFirmName" name="companyName" placeholder="e.g. Apex Global Education" required autocomplete="organization">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="partnerType">Partner Category <span class="req">*</span></label>
+                                        <div class="input-icon-wrap">
+                                            <i class="fas fa-id-badge"></i>
+                                            <select id="partnerType" name="partnerType" required>
+                                                <option value="" disabled selected>Select partner type</option>
+                                                <option value="Study Abroad Consultant">Study Abroad Consultant</option>
+                                                <option value="Domestic Education Consultant">Domestic Education Consultant</option>
+                                                <option value="DSA / Loan Agent">DSA / Loan Agent</option>
+                                                <option value="Freelance Career Counsellor">Freelance Career Counsellor</option>
+                                                <option value="University / College Rep">University / College Representative</option>
+                                                <option value="Test Prep & Coaching Center">Test Prep &amp; Coaching Center</option>
+                                                <option value="Other">Other Referral Partner</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-grid-2">
+                                    <div class="form-group">
+                                        <label for="partnerContactName">Contact Person Name <span class="req">*</span></label>
+                                        <div class="input-icon-wrap">
+                                            <i class="fas fa-user"></i>
+                                            <input type="text" id="partnerContactName" name="contactPerson" placeholder="e.g. Rajesh Kumar" required autocomplete="name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="partnerDesignation">Designation / Role</label>
+                                        <div class="input-icon-wrap">
+                                            <i class="fas fa-briefcase"></i>
+                                            <input type="text" id="partnerDesignation" name="designation" placeholder="e.g. Founder / Senior Counsellor" autocomplete="organization-title">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-grid-2">
+                                    <div class="form-group">
+                                        <label for="partnerEmail">Official Email Address <span class="req">*</span></label>
+                                        <div class="input-icon-wrap">
+                                            <i class="fas fa-envelope"></i>
+                                            <input type="email" id="partnerEmail" name="email" placeholder="e.g. contact@apexedu.com" required autocomplete="email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="partnerPhone">Contact Phone Number <span class="req">*</span></label>
+                                        <div class="input-icon-wrap">
+                                            <i class="fas fa-phone"></i>
+                                            <input type="tel" id="partnerPhone" name="phone" placeholder="e.g. 9876543210" pattern="[0-9]{10}" maxlength="10" required autocomplete="tel">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-grid-2">
+                                    <div class="form-group">
+                                        <label for="partnerCity">City &amp; State <span class="req">*</span></label>
+                                        <div class="input-icon-wrap">
+                                            <i class="fas fa-location-dot"></i>
+                                            <input type="text" id="partnerCity" name="city" placeholder="e.g. Hyderabad, Telangana" required autocomplete="address-level2">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="partnerReferrals">Expected Monthly Students</label>
+                                        <div class="input-icon-wrap">
+                                            <i class="fas fa-users"></i>
+                                            <select id="partnerReferrals" name="expectedReferrals">
+                                                <option value="1-5 students">1 – 5 students / month</option>
+                                                <option value="6-15 students" selected>6 – 15 students / month</option>
+                                                <option value="16-40 students">16 – 40 students / month</option>
+                                                <option value="40+ students">40+ students / month</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="partnerNotes">Partnership Scope / Queries (Optional)</label>
+                                    <div class="input-icon-wrap textarea-wrap">
+                                        <i class="fas fa-file-lines"></i>
+                                        <textarea id="partnerNotes" name="notes" placeholder="Tell us about your target destinations, student profile base, or specific partnership requirements..." rows="3"></textarea>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn-partner-submit">
+                                    <span>Submit Partnership Request</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+
+                                <div class="form-trust-banner">
+                                    <i class="fas fa-lock"></i>
+                                    <span>100% Confidential • Zero Registration Fee • Direct Bank Desk Access</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- VALUE PROPOSITION COLUMN -->
+                    <div class="why-col" data-aos="fade-left">
+                        <div class="why-col-header">
+                            <span class="section-badge-chip"><i class="fas fa-chart-line"></i> Institutional Advantages</span>
+                            <h2>Why Partner <span style="color:var(--green)">With VPS?</span></h2>
+                            <p>Give your students the highest chance of loan sanction with comprehensive multi-lender comparison, zero service charges, and fast-track processing.</p>
+                        </div>
+
+                        <div class="why-cards-stack">
+                            <div class="why-benefit-card">
+                                <div class="why-benefit-icon-wrap icon-emerald">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="why-benefit-body">
+                                    <div class="benefit-title-row">
+                                        <h3>Industry-Leading Approval Rate</h3>
+                                        <span class="benefit-tag emerald">Up to 92% Sanction</span>
+                                    </div>
+                                    <p class="why-benefit-desc">Our algorithmic profile matching pairs each applicant with the lender most likely to sanction their loan, both collateral and non-collateral.</p>
+                                </div>
+                            </div>
+
+                            <div class="why-benefit-card">
+                                <div class="why-benefit-icon-wrap icon-blue">
+                                    <i class="fas fa-building-columns"></i>
+                                </div>
+                                <div class="why-benefit-body">
+                                    <div class="benefit-title-row">
+                                        <h3>Access to 15+ Top Lenders</h3>
+                                        <span class="benefit-tag blue">Single Window</span>
+                                    </div>
+                                    <p class="why-benefit-desc">Direct tie-ups with SBI, HDFC Credila, Avanse, Auxilo, InCred, ICICI Bank, Axis Bank, and USD lenders Prodigy Finance and MPower.</p>
+                                </div>
+                            </div>
+
+                            <div class="why-benefit-card">
+                                <div class="why-benefit-icon-wrap icon-teal">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="why-benefit-body">
+                                    <div class="benefit-title-row">
+                                        <h3>Dedicated Relationship Manager</h3>
+                                        <span class="benefit-tag teal">Priority Desk</span>
+                                    </div>
+                                    <p class="why-benefit-desc">Say goodbye to slow customer-care queues. Your firm gets assigned a senior loan specialist who manages file logins and expedites sanction letters.</p>
+                                </div>
+                            </div>
+
+                            <div class="why-benefit-card">
+                                <div class="why-benefit-icon-wrap icon-amber">
+                                    <i class="fas fa-hand-holding-dollar"></i>
+                                </div>
+                                <div class="why-benefit-body">
+                                    <div class="benefit-title-row">
+                                        <h3>100% Free Advisory for Students</h3>
+                                        <span class="benefit-tag amber">Zero Student Fee</span>
+                                    </div>
+                                    <p class="why-benefit-desc">We never charge students for loan advisory, document verification, or comparison assistance, safeguarding your consultancy's goodwill.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TOGETHER HIGHLIGHT BANNER -->
+                        <div class="together-callout">
+                            <div class="together-badge">
+                                <i class="fas fa-handshake"></i>
+                                <span>Mutual Success Promise</span>
+                            </div>
+                            <p class="together-quote">"Together We Empower Students' Academic Dreams While Accelerating Your Firm's Revenue &amp; Reputation."</p>
+                            <p class="together-sub">
+                                <i class="fas fa-circle-check" style="color:#34d399"></i>
+                                <span>Pan-India partner desks supporting domestic and study abroad files.</span>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <h2 data-aos="fade-up">Ready to Grow Together?</h2>
-            <div class="cta-btns" data-aos="fade-up" data-aos-delay="80">
-                <a href="#partner-form" class="btn btn-primary btn-lg" onclick="document.querySelector('.partner-form-col').scrollIntoView({behavior:'smooth'});return false;">Become a Partner <i class="fas fa-arrow-right"></i></a>
-                <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+        <!-- HOW PARTNERSHIP WORKS (4-STEP PROCESS) -->
+        <section class="process-section" aria-labelledby="processSectionTitle">
+            <div class="container">
+                <div class="section-title-wrap text-center" data-aos="fade-up">
+                    <span class="section-badge-chip"><i class="fas fa-route"></i> Streamlined Workflow</span>
+                    <h2 class="section-heading" id="processSectionTitle">How Our Partnership Works</h2>
+                    <p class="section-subheading">A transparent, reliable 4-step workflow that ensures student files move from intake to disbursement smoothly.</p>
+                </div>
+
+                <div class="process-grid">
+                    <div class="process-card" data-aos="fade-up" data-aos-delay="0">
+                        <span class="process-step-num">Step 01</span>
+                        <div class="process-icon"><i class="fas fa-clipboard-list"></i></div>
+                        <h3>Register Your Agency</h3>
+                        <p class="process-desc">Submit your agency details via our simple onboarding form with zero registration fees or complex paperwork.</p>
+                    </div>
+
+                    <div class="process-card" data-aos="fade-up" data-aos-delay="80">
+                        <span class="process-step-num">Step 02</span>
+                        <div class="process-icon"><i class="fas fa-handshake"></i></div>
+                        <h3>Meet Your Dedicated RM</h3>
+                        <p class="process-desc">Get introduced to your personal Partner Relationship Manager who provides loan checklists and priority desk support.</p>
+                    </div>
+
+                    <div class="process-card" data-aos="fade-up" data-aos-delay="160">
+                        <span class="process-step-num">Step 03</span>
+                        <div class="process-icon"><i class="fas fa-share-nodes"></i></div>
+                        <h3>Refer Student Files</h3>
+                        <p class="process-desc">Connect students needing domestic or abroad funding. We evaluate credit profiles and apply across multiple matching lenders.</p>
+                    </div>
+
+                    <div class="process-card" data-aos="fade-up" data-aos-delay="240">
+                        <span class="process-step-num">Step 04</span>
+                        <div class="process-icon"><i class="fas fa-file-circle-check"></i></div>
+                        <h3>Sanction &amp; Timely Disbursal</h3>
+                        <p class="process-desc">Track real-time progress as students secure optimum interest rates, sanction letters, and seamless tuition disbursals.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- WHO CAN PARTNER SECTION -->
+        <section class="who-section" aria-labelledby="whoSectionTitle">
+            <div class="container">
+                <div class="section-title-wrap text-center" data-aos="fade-up">
+                    <span class="section-badge-chip"><i class="fas fa-users-viewfinder"></i> Partner Ecosystem</span>
+                    <h2 class="section-heading" id="whoSectionTitle">Who Can Partner <span style="color:var(--green)">With Us?</span></h2>
+                    <p class="section-subheading">We welcome an extensive network of education professionals, distributors, and advisors aiming to support students with ethical loan guidance.</p>
+                </div>
+
+                <div class="who-grid">
+                    <div class="who-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="who-card-top">
+                            <div class="who-icon-wrap"><i class="fas fa-plane-departure"></i></div>
+                            <span class="who-pill">Global Studies</span>
+                        </div>
+                        <h3>Study Abroad Consultants</h3>
+                        <p class="who-desc">Specialists guiding students toward international universities in the USA, UK, Canada, Germany, Australia, and Europe needing foreign currency loans.</p>
+                        <div class="who-card-features">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Collateral &amp; Non-Collateral Abroad Loans</span>
+                        </div>
+                    </div>
+
+                    <div class="who-card" data-aos="fade-up" data-aos-delay="60">
+                        <div class="who-card-top">
+                            <div class="who-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+                            <span class="who-pill">Pan-India Higher Ed</span>
+                        </div>
+                        <h3>Domestic Education Advisors</h3>
+                        <p class="who-desc">Counsellors placing students into top Indian universities, engineering institutes, MBA programs, and national law colleges requiring fee financing.</p>
+                        <div class="who-card-features">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Fast-Track Indian College Sanctions</span>
+                        </div>
+                    </div>
+
+                    <div class="who-card" data-aos="fade-up" data-aos-delay="120">
+                        <div class="who-card-top">
+                            <div class="who-icon-wrap"><i class="fas fa-credit-card"></i></div>
+                            <span class="who-pill">Finance &amp; Banking</span>
+                        </div>
+                        <h3>DSAs &amp; Financial Partners</h3>
+                        <p class="who-desc">Direct Selling Agents and loan professionals expanding their portfolio with high-ticket education loans from leading national banks and NBFCs.</p>
+                        <div class="who-card-features">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Higher File Conversions &amp; Fast TAT</span>
+                        </div>
+                    </div>
+
+                    <div class="who-card" data-aos="fade-up" data-aos-delay="180">
+                        <div class="who-card-top">
+                            <div class="who-icon-wrap"><i class="fas fa-stethoscope"></i></div>
+                            <span class="who-pill">Medical Studies</span>
+                        </div>
+                        <h3>MBBS &amp; Medical Counsellors</h3>
+                        <p class="who-desc">Advisors helping medical aspirants secure high-value financing for MBBS, BDS, and clinical specializations in India and overseas medical colleges.</p>
+                        <div class="who-card-features">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Specialized High-Value Medical Loan Slabs</span>
+                        </div>
+                    </div>
+
+                    <div class="who-card" data-aos="fade-up" data-aos-delay="240">
+                        <div class="who-card-top">
+                            <div class="who-icon-wrap"><i class="fas fa-user-tie"></i></div>
+                            <span class="who-pill">Independent</span>
+                        </div>
+                        <h3>Freelance Career Coaches</h3>
+                        <p class="who-desc">Individual advisors and independent counsellors who want a trusted lending partner so their students never drop out due to lack of funds.</p>
+                        <div class="who-card-features">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Zero Operational Burden on You</span>
+                        </div>
+                    </div>
+
+                    <div class="who-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="who-card-top">
+                            <div class="who-icon-wrap"><i class="fas fa-school"></i></div>
+                            <span class="who-pill">Institutions</span>
+                        </div>
+                        <h3>Test-Prep &amp; Coaching Academies</h3>
+                        <p class="who-desc">GRE, GMAT, IELTS, CAT, and NEET preparation centers looking to offer value-added student loan assistance directly on campus.</p>
+                        <div class="who-card-features">
+                            <i class="fas fa-check-circle"></i>
+                            <span>End-to-End Financing Support for Batches</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARTNER FAQ SECTION -->
+        <section class="faq-section" aria-labelledby="faqSectionTitle">
+            <div class="container">
+                <div class="section-title-wrap text-center" data-aos="fade-up">
+                    <span class="section-badge-chip"><i class="fas fa-circle-question"></i> Clear Answers</span>
+                    <h2 class="section-heading" id="faqSectionTitle">Frequently Asked Questions</h2>
+                    <p class="section-subheading">Common queries from education consultants, DSAs, and institutions exploring partnership with VPS.</p>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-list">
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+                            <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+                                <span>Is there any onboarding fee or cost to partner with Visionary Path Services?</span>
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>No. Partnering with Visionary Path Services is 100% free of charge. There are zero registration fees, onboarding costs, or hidden maintenance charges for any consultancy or DSA partner.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="60">
+                            <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+                                <span>Which lending institutions and banks do you work with?</span>
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We work with 15+ premier RBI-regulated Scheduled Commercial Banks, leading NBFCs, and global dollar lenders. Key partners include State Bank of India (SBI), Bank of Baroda, HDFC Credila, Avanse Financial Services, Auxilo Finserve, InCred, ICICI Bank, Axis Bank, IDFC First Bank, as well as international lenders Prodigy Finance and MPower Financing for collateral-free foreign study loans.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="120">
+                            <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+                                <span>Can you assist students who require non-collateral (unsecured) loans?</span>
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes. Non-collateral education loans are one of our core specialties. We assist eligible students in securing unsecured financing up to ₹1.5 Cr+ for premier institutions in the USA, UK, Canada, Ireland, Australia, and India based on academic pedigree, test scores, and co-applicant profile.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="180">
+                            <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+                                <span>How quickly will a loan advisor contact our referred students?</span>
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Referred student applications receive priority desk treatment. An assigned Senior Loan Officer connects with the student within 2 to 4 business hours to conduct an initial profile assessment and outline document requirements.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="240">
+                            <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+                                <span>Do students have to pay any fees to Visionary Path Services?</span>
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely zero. Our advisory, eligibility analysis, multi-bank comparison, and filing assistance are completely free for students. Official processing fees and valuation fees (if any) are paid directly to the respective lending banks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-section" aria-labelledby="ctaSectionHeading">
+            <div class="container">
+                <div class="cta-inner">
+                    <span class="hero-eyebrow-badge" data-aos="fade-up">
+                        <span class="hero-pulse-dot"></span>
+                        <span>Join 500+ Partner Institutions</span>
+                    </span>
+                    <h2 id="ctaSectionHeading" data-aos="fade-up" data-aos-delay="80">Ready to Expand Your Student Advisory Reach?</h2>
+                    <p data-aos="fade-up" data-aos-delay="160">
+                        Join India's fastest-growing education loan advisory network. Partner with Visionary Path Services and offer institutional financing authority to all your students.
+                    </p>
+                    <div class="cta-btns" data-aos="fade-up" data-aos-delay="240">
+                        <a href="#partnerFormContainer" class="btn-cta-primary" onclick="document.getElementById('partnerFormContainer').scrollIntoView({behavior:'smooth'});return false;">
+                            <span>Register as Partner</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn-cta-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Partner Desk WhatsApp</span>
+                        </a>
+                    </div>
+                    <p class="cta-call-direct" data-aos="fade-up" data-aos-delay="300">
+                        Prefer a direct phone conversation? Call our Partner Onboarding Desk at <a href="tel:9063703038">+91 9063703038</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- VPS_FOOTER_START -->
-<!-- INSTITUTIONAL REGULATORY DISCLAIMER STRIP -->
-<div class="site-disclaimer-strip">
+<!-- INSTITUTIONAL REGULATORY DISCLAIMER ACCORDION / DROPDOWN -->
+<div class="site-disclaimer-wrap">
     <div class="container">
-        <p>
-            <strong>Regulatory Transparency &amp; Operating Model:</strong> Visionary Path Services operates as an independent education loan consulting and assistance entity. We do not act as a direct lender, banking institution, or Non-Banking Financial Company (NBFC). We do not collect loan repayments, nor do we issue loan sanctions directly. All loan sanctions, interest rate assignments, margin money decisions, and disbursement schedules remain at the sole and independent discretion of our partner RBI-regulated Scheduled Commercial Banks and NBFCs. Services are subject to credit verification, applicant document clearance, and institutional guidelines. <a href="../pages/disclaimer.html">Read Full Regulatory Disclaimer</a>.
-        </p>
+        <details class="disclaimer-accordion">
+            <summary class="disclaimer-trigger">
+                <div class="disclaimer-trigger-left">
+                    <span class="disclaimer-badge">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>Regulatory Notice</span>
+                    </span>
+                    <span class="disclaimer-title">Operating Model &amp; Regulatory Disclosures</span>
+                    <span class="disclaimer-hint">• Independent Advisory Entity (Non-Lender Notice)</span>
+                </div>
+                <div class="disclaimer-toggle-pill">
+                    <span>View Regulatory Disclosure</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </summary>
+            <div class="disclaimer-content">
+                <div class="disclaimer-grid">
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-icon">
+                            <i class="fas fa-building-columns"></i>
+                        </div>
+                        <p class="disclaimer-item-text">
+                            <strong>Independent Advisory &amp; Non-Lender Status:</strong> Visionary Path Services operates exclusively as an education loan consulting and facilitation advisory. We are not a bank, Non-Banking Financial Company (NBFC), or direct credit provider. We do not issue loan sanctions directly, nor do we collect loan repayments or processing commissions from students.
+                        </p>
+                    </div>
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-icon">
+                            <i class="fas fa-scale-balanced"></i>
+                        </div>
+                        <p class="disclaimer-item-text">
+                            <strong>Lender Discretion &amp; Verification:</strong> All loan approvals, sanction limits, applicable interest rates, margin money requirements, and disbursement timelines remain at the sole and independent discretion of our partner RBI-regulated Scheduled Commercial Banks and NBFCs, subject to individual creditworthiness, CIBIL verification, and institutional eligibility guidelines.
+                        </p>
+                    </div>
+                </div>
+                <div class="disclaimer-footer-bar">
+                    <span class="disclaimer-footer-note"><i class="fas fa-check-circle" style="color:var(--green); margin-right:5px;"></i> 100% Free Consultation for Students &amp; Families</span>
+                    <a href="../pages/disclaimer.html" class="disclaimer-link-btn">
+                        <span>Read Full Regulatory &amp; Financial Disclaimer</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </details>
     </div>
 </div>
 
@@ -454,8 +791,32 @@
     <div class="container footer-inner">
         <div class="footer-col brand-col">
             <div class="footer-logo">
-                <span class="logo-name">VISIONARY PATH SERVICES</span>
-                <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                <a href="../index.html" class="logo logo-dark" aria-label="Visionary Path Services Home">
+                    <span class="vps-brand-mark">
+                        <svg class="vps-flash-svg" viewBox="0 0 100 120" width="34" height="41" fill="none" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="footerFlashGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+                                    <stop offset="0%" stop-color="#FF8A00" />
+                                    <stop offset="55%" stop-color="#FF5A00" />
+                                    <stop offset="100%" stop-color="#FF3800" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+                                  stroke="url(#footerFlashGrad)" 
+                                  stroke-width="14.5" 
+                                  stroke-linejoin="round" 
+                                  stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <div class="logo-text">
+                        <span class="logo-name">VISIONARY</span>
+                        <span class="logo-sub">
+                            <span class="logo-sub-line"></span>
+                            <span class="logo-sub-text">PATH SERVICES</span>
+                            <span class="logo-sub-line"></span>
+                        </span>
+                    </div>
+                </a>
             </div>
             <p class="footer-desc">
                 Pan-India premier education loan advisory service. We empower students to secure domestic and international academic financing from top banks and NBFCs with zero service charges.
@@ -532,7 +893,7 @@
 <!-- VPS_FOOTER_END -->
 
     <!-- POPUP INQUIRY FORM (Industry-Grade Edition) -->
-    <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
+    <div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle" onclick="closePopupOutside(event)">
         <div class="popup-modal">
             <button class="popup-close" onclick="closePopup()" aria-label="Close Popup">✕</button>
             <div class="popup-left">
@@ -541,7 +902,7 @@
                         <span class="badge-dot"></span>
                         <span>100% FREE CONSULTATION</span>
                     </div>
-                    <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
+                    <h3 class="popup-title" id="popupTitle">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
                     <p class="popup-left-desc">Compare pre-approved loan options from 15+ top banks &amp; NBFCs with zero service fees.</p>
                     <div class="popup-features-list">
                         <div class="popup-feature-item">
@@ -579,68 +940,68 @@
                     <h4>Get Free Loan Assessment</h4>
                     <p>Share your details to connect with a senior education loan advisor</p>
                 </div>
-                <form class="popup-form" onsubmit="submitForm(event)">
+                                <form class="popup-form" onsubmit="submitForm(event)">
                     <div class="form-row name-row">
                         <div class="form-group">
-                            <label>First Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="firstName" placeholder="e.g. Aarav" required></div>
+                            <label for="popupFirstName">First Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupFirstName" name="firstName" placeholder="e.g. Aarav" aria-label="First Name" required autocomplete="given-name"></div>
                         </div>
                         <div class="form-group">
-                            <label>Last Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="lastName" placeholder="e.g. Sharma" required></div>
+                            <label for="popupLastName">Last Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupLastName" name="lastName" placeholder="e.g. Sharma" aria-label="Last Name" required autocomplete="family-name"></div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Phone Number <span class="req">*</span></label>
+                            <label for="popupPhone">Phone Number <span class="req">*</span></label>
                             <div class="input-icon-wrap phone-wrap">
                                 <span class="country-prefix"><i class="fas fa-phone"></i> +91</span>
-                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" required>
+                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit Phone Number" required autocomplete="tel-national">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="label-with-action">
-                                <label>WhatsApp Number <span class="req">*</span></label>
-                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()">Same as phone</button>
+                                <label for="popupWhatsApp">WhatsApp Number <span class="req">*</span></label>
+                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()" aria-label="Copy Phone Number to WhatsApp Number">Same as phone</button>
                             </div>
                             <div class="input-icon-wrap whatsapp-inp">
                                 <i class="fab fa-whatsapp"></i>
-                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" required>
+                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit WhatsApp Number" required autocomplete="tel-national">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Email Address <span class="req">*</span></label>
-                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="e.g. aarav.sharma@gmail.com" required></div>
+                        <label for="popupEmail">Email Address <span class="req">*</span></label>
+                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" id="popupEmail" name="email" placeholder="e.g. aarav.sharma@gmail.com" aria-label="Email Address" required autocomplete="email"></div>
                     </div>
                     <div class="form-group mb-tight">
-                        <label class="form-label-regular">I'm interested in</label>
-                        <div class="interest-options">
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="abroad" checked>
+                        <span class="form-label-regular" id="popupInterestLabel">I'm interested in</span>
+                        <div class="interest-options" role="radiogroup" aria-labelledby="popupInterestLabel">
+                            <label class="interest-opt" for="popupInterestAbroad">
+                                <input type="radio" id="popupInterestAbroad" name="interest" value="abroad" aria-label="Abroad Education Loan" checked>
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-globe-americas"></i> Abroad Education Loan</span>
                             </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="domestic">
+                            <label class="interest-opt" for="popupInterestDomestic">
+                                <input type="radio" id="popupInterestDomestic" name="interest" value="domestic" aria-label="Domestic Education Loan">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-graduation-cap"></i> Domestic Education Loan</span>
                             </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="mbbs">
+                            <label class="interest-opt" for="popupInterestMbbs">
+                                <input type="radio" id="popupInterestMbbs" name="interest" value="mbbs" aria-label="MBBS Education Loan">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-user-md"></i> MBBS Education Loan</span>
                             </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="other">
+                            <label class="interest-opt" for="popupInterestOther">
+                                <input type="radio" id="popupInterestOther" name="interest" value="other" aria-label="Other Loan Options">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-coins"></i> Other Loan Options</span>
                             </label>
                         </div>
                     </div>
                     <div class="form-group mb-tight">
-                        <label class="form-label-regular">Additional Information (Optional)</label>
-                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea name="message" placeholder="Partner type, target students, queries..." rows="2"></textarea></div>
+                        <label for="popupMessage" class="form-label-regular">Additional Information (Optional)</label>
+                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea id="popupMessage" name="message" placeholder="Target country, university, loan amount needed..." aria-label="Additional Information" rows="2"></textarea></div>
                     </div>
                     <button type="submit" class="btn btn-submit-enquiry">
                         <span>Submit Enquiry</span>
@@ -663,13 +1024,6 @@
     </button>
 
     <a href="https://wa.me/918150949070" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
-    <script>
-        function submitPartnerForm(e) {
-            e.preventDefault();
-            alert('Thank you for your interest! Our partnership team will contact you shortly.');
-            e.target.reset();
-        }
-    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init({ duration: 700, once: false });</script>
     <!-- Framer Motion & UI/UX Animation Engine -->

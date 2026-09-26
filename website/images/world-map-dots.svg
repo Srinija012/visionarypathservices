@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" fill="none">
+  <defs>
+    <radialGradient id="dotGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0B1F33" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0B1F33" stop-opacity="0.02"/>
+    </radialGradient>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#0B1F33" fill-opacity="0.07" />
+    </pattern>
+  </defs>
+  <!-- Base subtle grid -->
+  <rect width="1200" height="600" fill="url(#dotGrid)" />
+  
+  <!-- Stylized world continent clusters with dots and connection lines -->
+  <g fill="#0B1F33" fill-opacity="0.10">
+    <!-- North America -->
+    <circle cx="220" cy="180" r="3.5" fill="#FF5A00" fill-opacity="0.22"/>
+    <circle cx="250" cy="150" r="2.5"/>
+    <circle cx="190" cy="190" r="2.5"/>
+    <circle cx="280" cy="210" r="3"/>
+    <circle cx="240" cy="220" r="2"/>
+    <circle cx="310" cy="170" r="3.5"/>
+    <circle cx="340" cy="200" r="2.5"/>
+    <!-- South America -->
+    <circle cx="360" cy="350" r="3"/>
+    <circle cx="380" cy="400" r="3.5"/>
+    <circle cx="390" cy="440" r="2"/>
+    <circle cx="340" cy="380" r="2.5"/>
+    <!-- Europe & UK -->
+    <circle cx="580" cy="150" r="3.5" fill="#FF5A00" fill-opacity="0.3"/>
+    <circle cx="610" cy="140" r="3"/>
+    <circle cx="630" cy="160" r="2.5"/>
+    <circle cx="600" cy="180" r="3"/>
+    <!-- Africa -->
+    <circle cx="620" cy="270" r="3"/>
+    <circle cx="650" cy="320" r="3.5"/>
+    <circle cx="660" cy="380" r="2.5"/>
+    <circle cx="600" cy="330" r="2"/>
+    <!-- Asia & India (Focal Hub) -->
+    <circle cx="750" cy="170" r="3"/>
+    <circle cx="800" cy="190" r="3.5"/>
+    <circle cx="850" cy="220" r="3"/>
+    <!-- India Anchor -->
+    <circle cx="780" cy="270" r="6" fill="#FF5A00" fill-opacity="0.45"/>
+    <circle cx="780" cy="270" r="12" stroke="#FF5A00" stroke-width="1" stroke-opacity="0.2" fill="none"/>
+    <circle cx="770" cy="250" r="3.5" fill="#FF5A00" fill-opacity="0.35"/>
+    <circle cx="800" cy="280" r="3" fill="#FF5A00" fill-opacity="0.3"/>
+    <!-- East Asia -->
+    <circle cx="900" cy="190" r="3.5"/>
+    <circle cx="930" cy="230" r="3"/>
+    <circle cx="880" cy="270" r="2.5"/>
+    <!-- Australia & NZ -->
+    <circle cx="980" cy="420" r="4" fill="#FF5A00" fill-opacity="0.25"/>
+    <circle cx="1020" cy="440" r="3"/>
+    <circle cx="1060" cy="470" r="2.5"/>
+  </g>
+
+  <!-- Flight & Financial Route Curved Arcs radiating from India -->
+  <g stroke="#FF5A00" stroke-opacity="0.15" stroke-width="1.5" fill="none" stroke-dasharray="4 4">
+    <!-- India to USA/Canada -->
+    <path d="M 780 270 Q 500 60 280 210" />
+    <!-- India to UK/Europe -->
+    <path d="M 780 270 Q 690 170 580 150" />
+    <!-- India to Australia -->
+    <path d="M 780 270 Q 890 360 980 420" />
+  </g>
+</svg>

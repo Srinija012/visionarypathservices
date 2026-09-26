@@ -9,25 +9,75 @@
     <title>About Us – Visionary Path Services</title>
     <meta name="description" content="Learn about Visionary Path Services, our mission, student-first philosophy, and pan-India team offering 100% free education loan counseling.">
     <link rel="canonical" href="https://www.visionarypathservices.com/pages/about.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="About Us – Visionary Path Services">
+    <meta property="og:description" content="Discover Visionary Path Services – leading pan-India education loan advisory guiding students with free, unbiased domestic and overseas education financing.">
+    <meta property="og:url" content="https://www.visionarypathservices.com/pages/about.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.visionarypathservices.com/favicon.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.visionarypathservices.com/favicon.svg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/design-system.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/improvements.css">
+    
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "AboutPage",
+          "name": "About Us – Visionary Path Services",
+          "url": "https://www.visionarypathservices.com/pages/about.html",
+          "description": "Learn about Visionary Path Services, our mission, student-first education financing guidance, and leadership team.",
+          "provider": {
+            "@type": "FinancialService",
+            "name": "Visionary Path Services",
+            "url": "https://www.visionarypathservices.com"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.visionarypathservices.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About Us",
+              "item": "https://www.visionarypathservices.com/pages/about.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- VPS_NAVBAR_START -->
+<a href="#mainContent" class="skip-link">Skip to main content</a>
 <!-- TOPBAR -->
 <div class="top-bar">
     <div class="container top-bar-inner">
         <div class="top-bar-left">
-            <span class="pulse-dot"></span>
-            <span>Pan India Education Loan Assistance &amp; Guidance</span>
-            <span class="top-bar-dash">—</span> Your Education Goals, Our Guidance
+            <span class="orange-rule" style="width:18px; height:2px; margin-right:8px; vertical-align:middle; display:inline-block;"></span>
+            <span>Your Education Goals, Our Guidance</span>
+            <span class="top-bar-dash" style="color:var(--color-orange); margin: 0 6px;">•</span>
+            <span style="opacity: 0.88;">Pan India Loan Advisory</span>
         </div>
         <div class="top-bar-right">
-            <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact:- 9063703038</a>
+            <a href="tel:9063703038" class="contact-num"><i class="fas fa-phone"></i> Contact: 9063703038</a>
             <span class="top-sep">|</span>
             <a href="https://instagram.com/visionarypathservices" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <span class="top-sep">|</span>
@@ -39,15 +89,35 @@
 <!-- NAVBAR -->
 <header class="navbar" id="navbar">
     <div class="container nav-inner">
-        <a href="../index.html" class="logo">
+        <a href="../index.html" class="logo" aria-label="Visionary Path Services Home">
+            <span class="vps-brand-mark">
+                <svg class="vps-flash-svg" viewBox="0 0 100 120" width="34" height="41" fill="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="navFlashGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+                            <stop offset="0%" stop-color="#FF7A00" />
+                            <stop offset="55%" stop-color="#FF5A00" />
+                            <stop offset="100%" stop-color="#FF3800" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+                          stroke="url(#navFlashGrad)" 
+                          stroke-width="14.5" 
+                          stroke-linejoin="round" 
+                          stroke-linecap="round" />
+                </svg>
+            </span>
             <div class="logo-text">
-                <span class="logo-name">VISIONARY PATH SERVICES</span>
-                <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                <span class="logo-name">VISIONARY</span>
+                <span class="logo-sub">
+                    <span class="logo-sub-line"></span>
+                    <span class="logo-sub-text">PATH SERVICES</span>
+                    <span class="logo-sub-line"></span>
+                </span>
             </div>
         </a>
         <ul class="nav-links" id="navLinks">
             <li class="has-dropdown services-dropdown">
-                <a href="../pages/services.html" class="nav-link-services">Services <i class="fas fa-chevron-down"></i></a>
+                <a href="../pages/services.html" class="nav-link-services" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="dropdown mega-dropdown">
                     <div class="mega-body">
                         <!-- Left: Loan Programs -->
@@ -155,7 +225,7 @@
             <li><a href="../pages/partner-with-us.html" class="nav-link-partner-with-us">Partner With Us</a></li>
             <!-- More dropdown -->
             <li class="has-dropdown">
-                <a href="#" class="nav-link-more">More <i class="fas fa-chevron-down"></i></a>
+                <a href="#" class="nav-link-more active" aria-haspopup="true" aria-expanded="false">More <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="more-dropdown">
                     <a href="../pages/about.html" class="more-dropdown-item">
                         <i class="fas fa-info-circle"></i> About Us
@@ -189,139 +259,419 @@
 <!-- VPS_NAVBAR_END -->
 
     <!-- HERO -->
-    <section class="page-hero">
-        <div class="container page-hero-inner">
-            <div data-aos="fade-right">
-                <p class="breadcrumb"><a href="../index.html">Home</a> &gt; <strong>About Us</strong></p>
-                <p class="hero-eyebrow"><span class="eyebrow-line"></span> ABOUT US</p>
-                <h1>Visionary Path Services<br><span class="green-text">Guiding Today for a Brighter Tomorrow</span></h1>
-                <p>Visionary Path Services is an education loan assistance and guidance company focused on helping students with Domestic, International, and MBBS Education Loans.</p>
-                <p>We provide genuine, transparent, and profile-based guidance throughout the education-loan journey—from eligibility assessment and documentation to application processing, sanction, and disbursement support.</p>
-                <div class="belief-box" style="background:#f0fff8;border-left:4px solid var(--green);border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0;display:flex;align-items:center;gap:14px;">
-                    <div style="width:44px;height:44px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:18px;flex-shrink:0;"><i class="fas fa-handshake"></i></div>
-                    <p style="margin:0;font-weight:600;color:var(--navy);font-size:14px;">We believe in clear guidance, honest communication, and step-by-step support—not false promises.</p>
+    <section class="about-hero" id="mainContent">
+        <div class="container">
+            <div class="about-hero-grid">
+                <div class="about-hero-content" data-aos="fade-right">
+                    <nav aria-label="Breadcrumb" class="breadcrumb"><a href="../index.html">Home</a> <span class="breadcrumb-sep">/</span> <span>About Us</span></nav>
+                    <div class="about-eyebrow-tag">
+                        <span class="badge-dot"></span> PAN-INDIA EDUCATION LOAN ADVISORY
+                    </div>
+                    <h1 class="about-hero-title">
+                        Visionary Path Services<br>
+                        <span class="hero-green-highlight">Guiding Today for a Brighter Tomorrow</span>
+                    </h1>
+                    <p class="about-hero-lead">
+                        Visionary Path Services is an independent education loan assistance and guidance advisory dedicated to helping students secure optimal Domestic, International, and MBBS higher education financing.
+                    </p>
+                    <p class="about-hero-sub">
+                        We deliver genuine, transparent, and profile-based guidance throughout every phase of the education loan lifecycle—from preliminary eligibility assessment and documentation packaging to lender negotiation, sanction, and final disbursement.
+                    </p>
+                    
+                    <div class="about-belief-card">
+                        <div class="belief-icon-box"><i class="fas fa-handshake"></i></div>
+                        <p class="belief-text">
+                            <strong>Our Foundational Promise:</strong> We believe in clear guidance, honest communication, and step-by-step support—never false promises.
+                        </p>
+                    </div>
+
+                    <div class="about-hero-actions">
+                        <button class="btn-hero-cta" onclick="openPopup()">
+                            <i class="fas fa-file-signature"></i> Check My Eligibility <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn-hero-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Talk to an Expert
+                        </a>
+                    </div>
+                    <div class="hero-trust-micro">
+                        <span><i class="fas fa-check-circle"></i> 100% Free Advisory</span>
+                        <span><i class="fas fa-check-circle"></i> 15+ Partner Lenders</span>
+                        <span><i class="fas fa-check-circle"></i> Zero Service Markup</span>
+                    </div>
                 </div>
-                <div class="hero-btns" style="margin-top:24px;">
-                    <button class="btn btn-primary" onclick="openPopup()">Check Eligibility – Free <i class="fas fa-arrow-right"></i></button>
-                    <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+
+                <div class="about-hero-media" data-aos="fade-left">
+                    <div class="about-hero-image-card">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80" alt="Students receiving higher education guidance at Visionary Path Services" loading="lazy" decoding="async">
+                        <div class="about-floating-badge floating-badge-tr">
+                            <div class="floating-badge-icon icon-blue"><i class="fas fa-building-columns"></i></div>
+                            <div class="floating-badge-content">
+                                <span class="floating-badge-val">15+ Partners</span>
+                                <span class="floating-badge-lbl">Banks &amp; NBFCs</span>
+                            </div>
+                        </div>
+                        <div class="about-floating-badge floating-badge-bl">
+                            <div class="floating-badge-icon icon-green"><i class="fas fa-hand-holding-dollar"></i></div>
+                            <div class="floating-badge-content">
+                                <span class="floating-badge-val">₹0 Fees</span>
+                                <span class="floating-badge-lbl">100% Free Guidance</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="page-hero-img" data-aos="fade-left">
-                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=700&q=80" alt="About Visionary Path Services" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
 
-    <!-- OUR PURPOSE -->
-    <section class="section-pad">
+    <!-- STATS TRUST STRIP -->
+    <div class="about-stats-bar">
         <div class="container">
-            <div class="about-purpose" data-aos="fade-up">
-                <div class="about-purpose-inner">
-                    <div class="our-purpose-label">
-                        <h2>Our<br>Purpose</h2>
-                    </div>
-                    <div class="purpose-text" style="flex:1;">
-                        <p>At Visionary Path Services, we believe that financial limitations should not stand in the way of a student's education and career aspirations. We are an Education Loan Assistance and Guidance company helping students and parents navigate the education-loan process for higher education in <strong>India and abroad.</strong></p>
-                    </div>
+            <div class="about-stats-grid">
+                <div class="about-stat-item" data-aos="fade-up" data-aos-delay="0">
+                    <span class="about-stat-number green-accent">10,000+</span>
+                    <span class="about-stat-label">Students Guided Pan-India</span>
+                </div>
+                <div class="about-stat-item" data-aos="fade-up" data-aos-delay="80">
+                    <span class="about-stat-number">15+</span>
+                    <span class="about-stat-label">Scheduled Banks &amp; NBFCs</span>
+                </div>
+                <div class="about-stat-item" data-aos="fade-up" data-aos-delay="160">
+                    <span class="about-stat-number green-accent">₹0</span>
+                    <span class="about-stat-label">Counseling &amp; Advisory Fee</span>
+                </div>
+                <div class="about-stat-item" data-aos="fade-up" data-aos-delay="240">
+                    <span class="about-stat-number">100%</span>
+                    <span class="about-stat-label">Transparent Process</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OUR PURPOSE & PHILOSOPHY -->
+    <section class="about-purpose-section">
+        <div class="container">
+            <div class="section-header-center" data-aos="fade-up">
+                <span class="section-label"><i class="fas fa-compass"></i> OUR PURPOSE &amp; PHILOSOPHY</span>
+                <h2 class="about-section-title">Empowering Academic Dreams Beyond <span class="green-text">Financial Boundaries</span></h2>
+                <p class="about-section-sub">We believe financial constraints should never stand in the way of a student's education, ambition, and career aspirations.</p>
+            </div>
+
+            <div class="about-manifesto-card" data-aos="fade-up">
+                <div class="manifesto-quote-icon"><i class="fas fa-quote-left"></i></div>
+                <div class="manifesto-content">
+                    <h3>Democratizing Higher Education Financing Across India</h3>
+                    <p>At Visionary Path Services, our purpose is simple: ensure no deserving student is held back from their dreams due to financial complexity. We are an Education Loan Assistance and Guidance company dedicated to helping students and parents navigate the education loan process for premier institutions in <strong>India and abroad</strong>. Through personalized, profile-driven counseling, we transform an overwhelming banking procedure into a smooth, transparent, and confidence-inspiring journey.</p>
+                </div>
+            </div>
+
+            <div class="about-philosophy-grid">
+                <div class="philosophy-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="philosophy-card-icon" style="background:#eff6ff;color:var(--blue-dark);"><i class="fas fa-scale-balanced"></i></div>
+                    <h4>Unbiased Multi-Lender Guidance</h4>
+                    <p>We work for you, not for any single bank. We objectively compare options across 15+ RBI-regulated lenders to ensure you secure the most favorable interest rates and repayment terms.</p>
+                </div>
+                <div class="philosophy-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="philosophy-card-icon" style="background:#dcfce7;color:#166534;"><i class="fas fa-user-check"></i></div>
+                    <h4>Profile-First Advisory</h4>
+                    <p>Every student's academic background, family finances, and future career potential are distinct. We tailor funding strategies specifically to your profile rather than pushing generic formulas.</p>
+                </div>
+                <div class="philosophy-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="philosophy-card-icon" style="background:#fef3c7;color:#b45309;"><i class="fas fa-shield-halved"></i></div>
+                    <h4>Zero False Promises</h4>
+                    <p>We provide accurate loan eligibility forecasts, honest documentation requirements, and upfront clarity on collateral vs. non-collateral prospects from day one.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- OUR CORE FOCUS -->
-    <section class="section-pad bg-light">
+    <section class="about-focus-section">
         <div class="container">
-            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:40px;margin-bottom:36px;" data-aos="fade-up">
-                <div>
-                    <div class="section-eyebrow-line"></div>
-                    <h2 style="font-size:36px;font-weight:800;color:var(--navy);">Our Core <span class="green-text">Focus</span></h2>
-                </div>
-                <p style="max-width:400px;font-size:15px;color:var(--text-muted);line-height:1.7;">We assist students with a wide range of education loan options to support their academic and career goals.</p>
+            <div class="section-header-center" data-aos="fade-up">
+                <span class="section-label"><i class="fas fa-layer-group"></i> OUR CORE SPECIALIZATIONS</span>
+                <h2 class="about-section-title">Comprehensive Financing Solutions <span class="green-text">For Every Dream</span></h2>
+                <p class="about-section-sub">We assist students with specialized education loan advisory across three major educational sectors.</p>
             </div>
-            <p style="font-size:15px;color:var(--text-body);margin-bottom:12px;" data-aos="fade-up">Our core focus is on:</p>
-            <div class="core-focus-grid">
-                <div class="core-card" data-aos="fade-up" data-aos-delay="0">
-                    <div class="core-card-num">01</div>
-                    <div class="core-card-icon" style="background:#dbeafe;color:var(--blue-dark);"><i class="fas fa-graduation-cap"></i></div>
+
+            <div class="about-focus-grid">
+                <!-- Card 1: Domestic -->
+                <div class="focus-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="focus-card-top">
+                        <div class="focus-card-icon" style="background:#dbeafe;color:var(--blue-dark);"><i class="fas fa-landmark"></i></div>
+                        <span class="focus-card-num">01</span>
+                    </div>
                     <h3>Domestic Education Loans</h3>
-                    <p>Assistance for higher education within India, across top universities and institutions.</p>
+                    <p>Assistance for higher education within India across top universities, IITs, IIMs, NITs, and leading accredited institutions.</p>
+                    <ul class="focus-features-list">
+                        <li><i class="fas fa-circle-check"></i> Public, Private &amp; NBFC Lenders</li>
+                        <li><i class="fas fa-circle-check"></i> Collateral &amp; Non-Collateral Options</li>
+                        <li><i class="fas fa-circle-check"></i> Tax Deductions under Section 80E</li>
+                    </ul>
+                    <a href="domestic-loans.html" class="focus-card-link">Explore Domestic Loans <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="core-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="core-card-num">02</div>
-                    <div class="core-card-icon" style="background:#dcfce7;color:#166534;"><i class="fas fa-globe"></i></div>
+
+                <!-- Card 2: International -->
+                <div class="focus-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="focus-card-top">
+                        <div class="focus-card-icon" style="background:#dcfce7;color:#166534;"><i class="fas fa-globe-americas"></i></div>
+                        <span class="focus-card-num">02</span>
+                    </div>
                     <h3>International Education Loans</h3>
-                    <p>Guidance for students planning to study abroad, with access to multiple lender options.</p>
+                    <p>Guidance for students aspiring to study abroad, with direct access to tailored international funding packages from leading lenders.</p>
+                    <ul class="focus-features-list">
+                        <li><i class="fas fa-circle-check"></i> USA, UK, Canada, Australia &amp; Europe</li>
+                        <li><i class="fas fa-circle-check"></i> Up to ₹2 Cr+ with Pre-Visa Sanction</li>
+                        <li><i class="fas fa-circle-check"></i> Tuition, Living &amp; Travel Expenses</li>
+                    </ul>
+                    <a href="abroad-loans.html" class="focus-card-link">Explore Abroad Loans <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="core-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="core-card-num">03</div>
-                    <div class="core-card-icon" style="background:#fce7f3;color:#9d174d;"><i class="fas fa-stethoscope"></i></div>
+
+                <!-- Card 3: MBBS -->
+                <div class="focus-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="focus-card-top">
+                        <div class="focus-card-icon" style="background:#ccfbf1;color:#0f766e;"><i class="fas fa-stethoscope"></i></div>
+                        <span class="focus-card-num">03</span>
+                    </div>
                     <h3>MBBS Education Loans — India &amp; Abroad</h3>
-                    <p>Specialized support for MBBS aspirants in India and overseas.</p>
+                    <p>Specialized high-quantum loan assistance specifically structured for undergraduate and postgraduate medical aspirants.</p>
+                    <ul class="focus-features-list">
+                        <li><i class="fas fa-circle-check"></i> Premier Medical Colleges in India</li>
+                        <li><i class="fas fa-circle-check"></i> Overseas Universities (NMC Compliant)</li>
+                        <li><i class="fas fa-circle-check"></i> Extended Moratorium Periods</li>
+                    </ul>
+                    <a href="mbbs-loans.html" class="focus-card-link">Explore MBBS Loans <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            <p style="font-size:15px;color:var(--text-body);line-height:1.8;margin-top:16px;" data-aos="fade-up">From understanding your financial and academic profile to guiding you through documentation, application processing and the next steps toward sanction and disbursement, we aim to make the education-loan journey simpler, clearer and more organized.</p>
+
+            <div class="focus-summary-box" data-aos="fade-up">
+                <div class="focus-summary-icon"><i class="fas fa-circle-info"></i></div>
+                <p class="focus-summary-text">From understanding your financial and academic profile to guiding you through documentation, application processing, and the next steps toward sanction and disbursement, we aim to make the education loan journey simpler, clearer, and thoroughly organized.</p>
+            </div>
         </div>
     </section>
 
-    <!-- OUR MISSION -->
-    <section class="section-pad">
+    <!-- THE 6-STEP ADVISORY JOURNEY -->
+    <section class="about-journey-section">
         <div class="container">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
-                <div data-aos="fade-right">
-                    <div class="section-eyebrow-line"></div>
-                    <h2 style="font-size:48px;font-weight:800;line-height:1.1;margin-bottom:8px;color:var(--navy);">Our<br><span class="green-text">Mission</span></h2>
-                    <h3 style="font-size:20px;font-weight:700;color:var(--navy);margin-bottom:16px;">Making Education Funding Simpler for Every Student</h3>
-                    <p style="font-size:15px;color:var(--text-body);line-height:1.8;margin-bottom:16px;">Our mission is to provide students and parents with <strong>clear, practical and personalized education-loan guidance</strong> so they can make informed decisions about financing their education.</p>
-                    <p style="font-size:15px;color:var(--text-body);line-height:1.8;margin-bottom:32px;">We focus on understanding each student's profile rather than suggesting the same solution to everyone.</p>
-                    <div style="display:flex;gap:24px;flex-wrap:wrap;">
-                        <div style="text-align:center;">
-                            <div style="width:52px;height:52px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--green);margin:0 auto 10px;"><i class="fas fa-user-check"></i></div>
-                            <p style="font-size:12px;font-weight:700;color:var(--navy);">Personalized<br>Guidance</p>
+            <div class="section-header-center" data-aos="fade-up">
+                <span class="section-label"><i class="fas fa-route"></i> HOW WE GUIDE YOU</span>
+                <h2 class="about-section-title">The 6-Step Advisory <span class="green-text">Roadmap</span></h2>
+                <p class="about-section-sub">Our step-by-step guidance protocol eliminates guesswork, prevents documentation rejections, and accelerates loan sanctions.</p>
+            </div>
+
+            <div class="about-journey-grid">
+                <!-- Step 1 -->
+                <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="step-card-header">
+                        <span class="step-pill">Step 01</span>
+                        <div class="step-icon-wrap"><i class="fas fa-bullseye"></i></div>
+                    </div>
+                    <h3>Profile Assessment</h3>
+                    <p>We analyze the student's target degree, college/university, destination country, required funding amount, and financial profile to identify potential education loan pathways.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-card" data-aos="fade-up" data-aos-delay="80">
+                    <div class="step-card-header">
+                        <span class="step-pill">Step 02</span>
+                        <div class="step-icon-wrap"><i class="fas fa-building-columns"></i></div>
+                    </div>
+                    <h3>Loan Option Guidance</h3>
+                    <p>We help students and parents compare suitable options available across partner public banks, private banks, NBFCs, and international lending institutions.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="step-card-header">
+                        <span class="step-pill">Step 03</span>
+                        <div class="step-icon-wrap"><i class="fas fa-file-lines"></i></div>
+                    </div>
+                    <h3>Documentation Assistance</h3>
+                    <p>We provide comprehensive guidance on required paperwork and assist applicants in organizing their academic, KYC, and financial documents to avoid processing delays.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-card" data-aos="fade-up" data-aos-delay="240">
+                    <div class="step-card-header">
+                        <span class="step-pill">Step 04</span>
+                        <div class="step-icon-wrap"><i class="fas fa-magnifying-glass-chart"></i></div>
+                    </div>
+                    <h3>Eligibility Guidance</h3>
+                    <p>We walk applicants through all factors that influence loan eligibility—including CIBIL health, co-borrower income, and collateral evaluation—before submitting an application.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step-card" data-aos="fade-up" data-aos-delay="320">
+                    <div class="step-card-header">
+                        <span class="step-pill">Step 05</span>
+                        <div class="step-icon-wrap"><i class="fas fa-handshake-angle"></i></div>
+                    </div>
+                    <h3>Application Support</h3>
+                    <p>We assist applicants throughout the formal application process and proactively coordinate with bank credit underwriters to address queries rapidly.</p>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="step-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-card-header">
+                        <span class="step-pill">Step 06</span>
+                        <div class="step-icon-wrap"><i class="fas fa-money-check-dollar"></i></div>
+                    </div>
+                    <h3>Sanction &amp; Disbursement Support</h3>
+                    <p>We continue to assist through the subsequent stages of the loan journey, coordinating sanction letter verification, margin money, and timely disbursement schedules.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR MISSION & VALUES -->
+    <section class="about-mission-section">
+        <div class="container">
+            <div class="about-mission-layout">
+                <div class="mission-text-col" data-aos="fade-right">
+                    <span class="section-label"><i class="fas fa-bullseye"></i> OUR CORE MISSION</span>
+                    <h2 class="about-section-title">Making Education Funding <span class="green-text">Simpler for Every Student</span></h2>
+                    <p class="mission-lead">Our mission is to provide students and parents with clear, practical, and personalized education loan guidance so they can make informed decisions about financing their education.</p>
+                    <p class="mission-body">We reject generic, one-size-fits-all loan solutions. By understanding each family's individual requirements and academic merits, we open the door to legitimate, structured, and affordable financing options.</p>
+                    
+                    <div class="mission-values-grid">
+                        <div class="mission-value-card">
+                            <div class="mission-value-icon" style="background:#dcfce7;color:var(--green);"><i class="fas fa-user-check"></i></div>
+                            <h4>Personalized Guidance</h4>
+                            <span>Tailored solutions for your profile</span>
                         </div>
-                        <div style="width:1px;background:#e5e7eb;"></div>
-                        <div style="text-align:center;">
-                            <div style="width:52px;height:52px;background:#dbeafe;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--blue-dark);margin:0 auto 10px;"><i class="fas fa-lightbulb"></i></div>
-                            <p style="font-size:12px;font-weight:700;color:var(--navy);">Informed<br>Decisions</p>
+                        <div class="mission-value-card">
+                            <div class="mission-value-icon" style="background:#dbeafe;color:var(--blue-dark);"><i class="fas fa-lightbulb"></i></div>
+                            <h4>Informed Decisions</h4>
+                            <span>Transparent terms &amp; zero hidden fees</span>
                         </div>
-                        <div style="width:1px;background:#e5e7eb;"></div>
-                        <div style="text-align:center;">
-                            <div style="width:52px;height:52px;background:#fef9c3;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:#92400e;margin:0 auto 10px;"><i class="fas fa-chart-bar"></i></div>
-                            <p style="font-size:12px;font-weight:700;color:var(--navy);">Brighter<br>Futures</p>
+                        <div class="mission-value-card">
+                            <div class="mission-value-icon" style="background:#eff6ff;color:var(--navy);"><i class="fas fa-chart-line"></i></div>
+                            <h4>Brighter Futures</h4>
+                            <span>Empowering career aspirations</span>
                         </div>
                     </div>
                 </div>
-                <div data-aos="fade-left">
-                    <div style="border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.12);">
-                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80" alt="Our Mission" style="width:100%;height:400px;object-fit:cover;" loading="lazy" decoding="async">
+
+                <div class="mission-media-col" data-aos="fade-left">
+                    <div class="mission-image-card">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80" alt="Students collaborating during an education loan consultation" loading="lazy" decoding="async">
+                        <div class="mission-image-badge">
+                            <p>"Guiding Today for a Brighter Tomorrow"</p>
+                            <span>Visionary Path Services Motto</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- YOUR EDUCATION OUR SUPPORT CTA -->
-    <section class="section-pad" style="background:linear-gradient(135deg,var(--navy),#1a3a7c);">
-        <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
-            <div data-aos="fade-right">
-                <div style="width:40px;height:3px;background:var(--green);margin-bottom:16px;"></div>
-                <h2 style="font-size:40px;font-weight:800;color:var(--white);line-height:1.2;">Your Education.<br><span style="color:#34d399;">Our Support.</span></h2>
-                <p style="font-size:15px;color:rgba(255,255,255,0.75);margin:16px 0 28px;line-height:1.8;">We are here to make your education-loan journey simpler, clearer and more organized—so you can focus on what truly matters, your future.</p>
-                <a href="contact.html" class="btn btn-primary" style="background:#34d399;border-color:#34d399;color:var(--navy);font-weight:700;">Talk to Our Team <i class="fas fa-arrow-right"></i></a>
+    <!-- WHY STUDENTS & PARENTS TRUST US -->
+    <section class="about-trust-section">
+        <div class="container">
+            <div class="section-header-center" data-aos="fade-up">
+                <span class="section-label"><i class="fas fa-shield-halved"></i> WHY VISIONARY PATH SERVICES</span>
+                <h2 class="about-section-title">The Trusted Partner for <span class="green-text">Education Financing</span></h2>
+                <p class="about-section-sub">We combine institutional banking expertise with student-first ethics to ensure your education financing experience is seamless.</p>
             </div>
-            <div data-aos="fade-left">
-                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Students" style="width:100%;border-radius:20px;height:300px;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,0.3);" loading="lazy" decoding="async">
+
+            <div class="about-trust-grid">
+                <div class="trust-pillar-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="trust-pillar-icon" style="background:#dcfce7;color:#166534;"><i class="fas fa-hand-holding-dollar"></i></div>
+                    <h3>100% Free Service</h3>
+                    <p>Our counseling, document review, and application assistance are completely free for students. We never charge any processing or consulting fees.</p>
+                </div>
+                <div class="trust-pillar-card" data-aos="fade-up" data-aos-delay="80">
+                    <div class="trust-pillar-icon" style="background:#dbeafe;color:var(--blue-dark);"><i class="fas fa-network-wired"></i></div>
+                    <h3>15+ Lending Partners</h3>
+                    <p>We partner with premier Scheduled Commercial Banks, leading NBFCs, and international lenders to bring you the widest selection of competitive loan options.</p>
+                </div>
+                <div class="trust-pillar-card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="trust-pillar-icon" style="background:#eff6ff;color:var(--navy);"><i class="fas fa-user-shield"></i></div>
+                    <h3>Dedicated Loan Advisor</h3>
+                    <p>Every student is paired with a seasoned education loan specialist who stays with you from initial eligibility review until funds reach your university.</p>
+                </div>
+                <div class="trust-pillar-card" data-aos="fade-up" data-aos-delay="240">
+                    <div class="trust-pillar-icon" style="background:#fef3c7;color:#b45309;"><i class="fas fa-location-dot"></i></div>
+                    <h3>Pan-India Assistance</h3>
+                    <p>Seamless digital support across all states in India, ensuring that high-quality education loan guidance is accessible no matter where you reside.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLOSING CTA SECTION -->
+    <section class="about-cta-section">
+        <div class="container">
+            <div class="about-cta-layout">
+                <div data-aos="fade-right">
+                    <div style="width:40px;height:3px;background:var(--green);margin-bottom:16px;"></div>
+                    <h2 class="about-cta-title">Your Education.<br><span style="color:#34d399;">Our Support.</span></h2>
+                    <p class="about-cta-sub">We are here to make your education loan journey simpler, clearer, and more organized—so you can focus on what truly matters: your future.</p>
+                    <div class="about-cta-btns">
+                        <button class="btn-hero-cta" onclick="openPopup()">Check My Eligibility <i class="fas fa-arrow-right"></i></button>
+                        <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn-hero-whatsapp"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+                    </div>
+                    <p class="about-cta-direct">
+                        Prefer to speak directly? Call our advisory desk at <a href="tel:9063703038">+91 9063703038</a> or email <a href="mailto:Visionarypathservises@gmail.com">Visionarypathservises@gmail.com</a>.
+                    </p>
+                </div>
+                <div class="about-cta-media" data-aos="fade-left">
+                    <div class="about-cta-image-card">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80" alt="Empowered students who secured education loans through Visionary Path Services" loading="lazy" decoding="async">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- INSTITUTIONAL DISCLAIMER PROTECTIVE STRIP -->
     <!-- VPS_FOOTER_START -->
-<!-- INSTITUTIONAL REGULATORY DISCLAIMER STRIP -->
-<div class="site-disclaimer-strip">
+<!-- INSTITUTIONAL REGULATORY DISCLAIMER ACCORDION / DROPDOWN -->
+<div class="site-disclaimer-wrap">
     <div class="container">
-        <p>
-            <strong>Regulatory Transparency &amp; Operating Model:</strong> Visionary Path Services operates as an independent education loan consulting and assistance entity. We do not act as a direct lender, banking institution, or Non-Banking Financial Company (NBFC). We do not collect loan repayments, nor do we issue loan sanctions directly. All loan sanctions, interest rate assignments, margin money decisions, and disbursement schedules remain at the sole and independent discretion of our partner RBI-regulated Scheduled Commercial Banks and NBFCs. Services are subject to credit verification, applicant document clearance, and institutional guidelines. <a href="../pages/disclaimer.html">Read Full Regulatory Disclaimer</a>.
-        </p>
+        <details class="disclaimer-accordion">
+            <summary class="disclaimer-trigger">
+                <div class="disclaimer-trigger-left">
+                    <span class="disclaimer-badge">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>Regulatory Notice</span>
+                    </span>
+                    <span class="disclaimer-title">Operating Model &amp; Regulatory Disclosures</span>
+                    <span class="disclaimer-hint">• Independent Advisory Entity (Non-Lender Notice)</span>
+                </div>
+                <div class="disclaimer-toggle-pill">
+                    <span>View Regulatory Disclosure</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </summary>
+            <div class="disclaimer-content">
+                <div class="disclaimer-grid">
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-icon">
+                            <i class="fas fa-building-columns"></i>
+                        </div>
+                        <p class="disclaimer-item-text">
+                            <strong>Independent Advisory &amp; Non-Lender Status:</strong> Visionary Path Services operates exclusively as an education loan consulting and facilitation advisory. We are not a bank, Non-Banking Financial Company (NBFC), or direct credit provider. We do not issue loan sanctions directly, nor do we collect loan repayments or processing commissions from students.
+                        </p>
+                    </div>
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-icon">
+                            <i class="fas fa-scale-balanced"></i>
+                        </div>
+                        <p class="disclaimer-item-text">
+                            <strong>Lender Discretion &amp; Verification:</strong> All loan approvals, sanction limits, applicable interest rates, margin money requirements, and disbursement timelines remain at the sole and independent discretion of our partner RBI-regulated Scheduled Commercial Banks and NBFCs, subject to individual creditworthiness, CIBIL verification, and institutional eligibility guidelines.
+                        </p>
+                    </div>
+                </div>
+                <div class="disclaimer-footer-bar">
+                    <span class="disclaimer-footer-note"><i class="fas fa-check-circle" style="color:var(--green); margin-right:5px;"></i> 100% Free Consultation for Students &amp; Families</span>
+                    <a href="../pages/disclaimer.html" class="disclaimer-link-btn">
+                        <span>Read Full Regulatory &amp; Financial Disclaimer</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </details>
     </div>
 </div>
 
@@ -330,8 +680,32 @@
     <div class="container footer-inner">
         <div class="footer-col brand-col">
             <div class="footer-logo">
-                <span class="logo-name">VISIONARY PATH SERVICES</span>
-                <span class="logo-sub">Guiding Dreams, Financing Futures</span>
+                <a href="../index.html" class="logo logo-dark" aria-label="Visionary Path Services Home">
+                    <span class="vps-brand-mark">
+                        <svg class="vps-flash-svg" viewBox="0 0 100 120" width="34" height="41" fill="none" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="footerFlashGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+                                    <stop offset="0%" stop-color="#FF8A00" />
+                                    <stop offset="55%" stop-color="#FF5A00" />
+                                    <stop offset="100%" stop-color="#FF3800" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 55 18 L 55 50 L 82 50 L 45 102 L 45 70 L 18 70 Z" 
+                                  stroke="url(#footerFlashGrad)" 
+                                  stroke-width="14.5" 
+                                  stroke-linejoin="round" 
+                                  stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <div class="logo-text">
+                        <span class="logo-name">VISIONARY</span>
+                        <span class="logo-sub">
+                            <span class="logo-sub-line"></span>
+                            <span class="logo-sub-text">PATH SERVICES</span>
+                            <span class="logo-sub-line"></span>
+                        </span>
+                    </div>
+                </a>
             </div>
             <p class="footer-desc">
                 Pan-India premier education loan advisory service. We empower students to secure domestic and international academic financing from top banks and NBFCs with zero service charges.
@@ -408,7 +782,7 @@
 <!-- VPS_FOOTER_END -->
 
     <!-- POPUP INQUIRY FORM (Industry-Grade Edition) -->
-    <div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
+    <div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle" onclick="closePopupOutside(event)">
         <div class="popup-modal">
             <button class="popup-close" onclick="closePopup()" aria-label="Close Popup">✕</button>
             <div class="popup-left">
@@ -417,7 +791,7 @@
                         <span class="badge-dot"></span>
                         <span>100% FREE CONSULTATION</span>
                     </div>
-                    <h3 class="popup-title">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
+                    <h3 class="popup-title" id="popupTitle">Let's Take<br>The First Step<br><span class="green-highlight">Together!</span></h3>
                     <p class="popup-left-desc">Compare pre-approved loan options from 15+ top banks &amp; NBFCs with zero service fees.</p>
                     <div class="popup-features-list">
                         <div class="popup-feature-item">
@@ -455,68 +829,68 @@
                     <h4>Get Free Loan Assessment</h4>
                     <p>Share your details to connect with a senior education loan advisor</p>
                 </div>
-                <form class="popup-form" onsubmit="submitForm(event)">
+                                <form class="popup-form" onsubmit="submitForm(event)">
                     <div class="form-row name-row">
                         <div class="form-group">
-                            <label>First Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="firstName" placeholder="e.g. Aarav" required></div>
+                            <label for="popupFirstName">First Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupFirstName" name="firstName" placeholder="e.g. Aarav" aria-label="First Name" required autocomplete="given-name"></div>
                         </div>
                         <div class="form-group">
-                            <label>Last Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" name="lastName" placeholder="e.g. Sharma" required></div>
+                            <label for="popupLastName">Last Name <span class="req">*</span></label>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupLastName" name="lastName" placeholder="e.g. Sharma" aria-label="Last Name" required autocomplete="family-name"></div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Phone Number <span class="req">*</span></label>
+                            <label for="popupPhone">Phone Number <span class="req">*</span></label>
                             <div class="input-icon-wrap phone-wrap">
                                 <span class="country-prefix"><i class="fas fa-phone"></i> +91</span>
-                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" required>
+                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit Phone Number" required autocomplete="tel-national">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="label-with-action">
-                                <label>WhatsApp Number <span class="req">*</span></label>
-                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()">Same as phone</button>
+                                <label for="popupWhatsApp">WhatsApp Number <span class="req">*</span></label>
+                                <button type="button" class="btn-copy-phone" onclick="copyPhoneToWhatsApp()" aria-label="Copy Phone Number to WhatsApp Number">Same as phone</button>
                             </div>
                             <div class="input-icon-wrap whatsapp-inp">
                                 <i class="fab fa-whatsapp"></i>
-                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" required>
+                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit WhatsApp Number" required autocomplete="tel-national">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Email Address <span class="req">*</span></label>
-                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="e.g. aarav.sharma@gmail.com" required></div>
+                        <label for="popupEmail">Email Address <span class="req">*</span></label>
+                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" id="popupEmail" name="email" placeholder="e.g. aarav.sharma@gmail.com" aria-label="Email Address" required autocomplete="email"></div>
                     </div>
                     <div class="form-group mb-tight">
-                        <label class="form-label-regular">I'm interested in</label>
-                        <div class="interest-options">
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="abroad" checked>
+                        <span class="form-label-regular" id="popupInterestLabel">I'm interested in</span>
+                        <div class="interest-options" role="radiogroup" aria-labelledby="popupInterestLabel">
+                            <label class="interest-opt" for="popupInterestAbroad">
+                                <input type="radio" id="popupInterestAbroad" name="interest" value="abroad" aria-label="Abroad Education Loan" checked>
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-globe-americas"></i> Abroad Education Loan</span>
                             </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="domestic">
+                            <label class="interest-opt" for="popupInterestDomestic">
+                                <input type="radio" id="popupInterestDomestic" name="interest" value="domestic" aria-label="Domestic Education Loan">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-graduation-cap"></i> Domestic Education Loan</span>
                             </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="mbbs">
+                            <label class="interest-opt" for="popupInterestMbbs">
+                                <input type="radio" id="popupInterestMbbs" name="interest" value="mbbs" aria-label="MBBS Education Loan">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-user-md"></i> MBBS Education Loan</span>
                             </label>
-                            <label class="interest-opt">
-                                <input type="radio" name="interest" value="other">
+                            <label class="interest-opt" for="popupInterestOther">
+                                <input type="radio" id="popupInterestOther" name="interest" value="other" aria-label="Other Loan Options">
                                 <span class="custom-radio"></span>
                                 <span class="opt-label"><i class="fas fa-coins"></i> Other Loan Options</span>
                             </label>
                         </div>
                     </div>
                     <div class="form-group mb-tight">
-                        <label class="form-label-regular">Additional Information (Optional)</label>
-                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea name="message" placeholder="Target country, university, loan amount needed..." rows="2"></textarea></div>
+                        <label for="popupMessage" class="form-label-regular">Additional Information (Optional)</label>
+                        <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-lines"></i><textarea id="popupMessage" name="message" placeholder="Target country, university, loan amount needed..." aria-label="Additional Information" rows="2"></textarea></div>
                     </div>
                     <button type="submit" class="btn btn-submit-enquiry">
                         <span>Submit Enquiry</span>
