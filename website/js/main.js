@@ -2,6 +2,22 @@
 // VISIONARY PATH SERVICES - Main JavaScript
 // ==========================================
 
+// --- Lead Vault & Headless Google Form Configuration ---
+// Paste your Google Form ID and entry IDs here to automatically capture all leads in a live Google Sheet:
+window.VPS_GOOGLE_FORM_CONFIG = window.VPS_GOOGLE_FORM_CONFIG || {
+    formId: '', // e.g. '1FAIpQLSc...' from your Google Form viewform URL
+    entries: {
+        firstName: '', // e.g. 'entry.123456789'
+        lastName: '',  // e.g. 'entry.987654321'
+        phone: '',     // e.g. 'entry.111222333'
+        whatsapp: '',  // e.g. 'entry.444555666'
+        email: '',     // e.g. 'entry.777888999'
+        interest: '',  // e.g. 'entry.000111222'
+        notes: '',     // e.g. 'entry.333444555'
+        pageUrl: ''    // e.g. 'entry.666777888'
+    }
+};
+
 // --- Polished Lead Generation Popup Engine ---
 const POPUP_COOLDOWN_MS = 15 * 60 * 1000; // 15-minute cool-down after dismissal
 
@@ -450,6 +466,30 @@ function submitForm(e) {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(leadRecord),
                 mode: 'no-cors'
+            }).catch(() => {});
+        } catch (_) {}
+    }
+
+    // Headless Google Form Integration (Live Google Sheet Auto-Sync)
+    if (window.VPS_GOOGLE_FORM_CONFIG && window.VPS_GOOGLE_FORM_CONFIG.formId) {
+        try {
+            const gcfg = window.VPS_GOOGLE_FORM_CONFIG;
+            const gUrl = `https://docs.google.com/forms/d/e/${gcfg.formId}/formResponse`;
+            const gData = new URLSearchParams();
+            if (gcfg.entries?.firstName && firstName) gData.append(gcfg.entries.firstName, firstName);
+            if (gcfg.entries?.lastName && lastName) gData.append(gcfg.entries.lastName, lastName);
+            if (gcfg.entries?.phone && phone) gData.append(gcfg.entries.phone, phone);
+            if (gcfg.entries?.whatsapp && whatsapp) gData.append(gcfg.entries.whatsapp, whatsapp);
+            if (gcfg.entries?.email && email) gData.append(gcfg.entries.email, email);
+            if (gcfg.entries?.interest && interest) gData.append(gcfg.entries.interest, interest);
+            if (gcfg.entries?.notes && message) gData.append(gcfg.entries.notes, message);
+            if (gcfg.entries?.pageUrl) gData.append(gcfg.entries.pageUrl, window.location.href);
+
+            fetch(gUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: gData.toString()
             }).catch(() => {});
         } catch (_) {}
     }
