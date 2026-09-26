@@ -2687,9 +2687,9 @@ header.page-hero .green-highlight,
     gap: 7px !important;
     font-size: 11.5px !important;
     font-weight: 700 !important;
-    color: #15803d !important;
-    background: #ecfdf5 !important;
-    border: 1px solid #a7f3d0 !important;
+    color: var(--color-orange, #FF5A00) !important;
+    background: #FFF1E8 !important;
+    border: 1px solid rgba(255, 90, 0, 0.25) !important;
     border-radius: 9999px !important;
     padding: 4px 10px !important;
 }
@@ -2697,7 +2697,7 @@ header.page-hero .green-highlight,
 .snapshot-highlight {
     font-size: 12px !important;
     font-weight: 700 !important;
-    color: #1a56db !important;
+    color: var(--color-navy, #0B1F33) !important;
 }
 
 .snapshot-stats-grid {
@@ -2736,7 +2736,7 @@ header.page-hero .green-highlight,
 
 .snapshot-stat-note {
     font-size: 11px !important;
-    color: #15803d !important;
+    color: #475569 !important;
     font-weight: 600 !important;
 }
 
@@ -2793,7 +2793,7 @@ header.page-hero .green-highlight,
     left: 0 !important;
     right: 0 !important;
     height: 4px !important;
-    background: linear-gradient(90deg, #0a1d37, #10b981) !important;
+    background: linear-gradient(90deg, #0B1F33, #FF5A00) !important;
 }
 
 .service-card:hover,
