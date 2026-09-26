@@ -846,11 +846,13 @@ template = """<!DOCTYPE html>
                     <div class="form-row name-row">
                         <div class="form-group">
                             <label for="popupFirstName">First Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupFirstName" name="firstName" placeholder="e.g. Aarav" aria-label="First Name" required autocomplete="given-name"></div>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupFirstName" name="firstName" placeholder="e.g. Aarav" aria-label="First Name" required aria-required="true" autocomplete="given-name"></div>
+                            <div class="field-error-msg" id="popupFirstName-error" role="alert" aria-live="polite"></div>
                         </div>
                         <div class="form-group">
                             <label for="popupLastName">Last Name <span class="req">*</span></label>
-                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupLastName" name="lastName" placeholder="e.g. Sharma" aria-label="Last Name" required autocomplete="family-name"></div>
+                            <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="popupLastName" name="lastName" placeholder="e.g. Sharma" aria-label="Last Name" required aria-required="true" autocomplete="family-name"></div>
+                            <div class="field-error-msg" id="popupLastName-error" role="alert" aria-live="polite"></div>
                         </div>
                     </div>
                     <div class="form-row">
@@ -858,8 +860,9 @@ template = """<!DOCTYPE html>
                             <label for="popupPhone">Phone Number <span class="req">*</span></label>
                             <div class="input-icon-wrap phone-wrap">
                                 <span class="country-prefix"><i class="fas fa-phone"></i> +91</span>
-                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{{10}}" maxlength="10" aria-label="10-digit Phone Number" required autocomplete="tel-national">
+                                <input type="tel" name="phone" id="popupPhone" placeholder="98765 43210" pattern="[0-9]{{10}}" maxlength="10" aria-label="10-digit Phone Number" required aria-required="true" autocomplete="tel-national">
                             </div>
+                            <div class="field-error-msg" id="popupPhone-error" role="alert" aria-live="polite"></div>
                         </div>
                         <div class="form-group">
                             <div class="label-with-action">
@@ -868,13 +871,15 @@ template = """<!DOCTYPE html>
                             </div>
                             <div class="input-icon-wrap whatsapp-inp">
                                 <i class="fab fa-whatsapp"></i>
-                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{{10}}" maxlength="10" aria-label="10-digit WhatsApp Number" required autocomplete="tel-national">
+                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="98765 43210" pattern="[0-9]{{10}}" maxlength="10" aria-label="10-digit WhatsApp Number" required aria-required="true" autocomplete="tel-national">
                             </div>
+                            <div class="field-error-msg" id="popupWhatsApp-error" role="alert" aria-live="polite"></div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="popupEmail">Email Address <span class="req">*</span></label>
-                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" id="popupEmail" name="email" placeholder="e.g. aarav.sharma@gmail.com" aria-label="Email Address" required autocomplete="email"></div>
+                        <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" id="popupEmail" name="email" placeholder="e.g. aarav.sharma@gmail.com" aria-label="Email Address" required aria-required="true" autocomplete="email"></div>
+                        <div class="field-error-msg" id="popupEmail-error" role="alert" aria-live="polite"></div>
                     </div>
                     <div class="form-group mb-tight">
                         <label for="popupCountry" class="form-label-regular">Target Country / Destination</label>

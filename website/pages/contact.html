@@ -409,13 +409,36 @@
                     <div class="contact-form-box">
                         <form id="contactForm" onsubmit="submitContactForm(event)">
                             <div class="form-row">
-                                <div class="form-group"><label for="contactFirstName">First Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="contactFirstName" name="firstName" placeholder="First name" aria-label="First Name" required autocomplete="given-name"></div></div>
-                                <div class="form-group"><label for="contactLastName">Last Name <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="contactLastName" name="lastName" placeholder="Last name" aria-label="Last Name" required autocomplete="family-name"></div></div>
+                                <div class="form-group">
+                                    <label for="contactFirstName">First Name <span class="req">*</span></label>
+                                    <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="contactFirstName" name="firstName" placeholder="e.g. Aarav" aria-label="First Name" required aria-required="true" autocomplete="given-name"></div>
+                                    <div class="field-error-msg" id="contactFirstName-error" role="alert" aria-live="polite"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactLastName">Last Name <span class="req">*</span></label>
+                                    <div class="input-icon-wrap"><i class="fas fa-user"></i><input type="text" id="contactLastName" name="lastName" placeholder="e.g. Sharma" aria-label="Last Name" required aria-required="true" autocomplete="family-name"></div>
+                                    <div class="field-error-msg" id="contactLastName-error" role="alert" aria-live="polite"></div>
+                                </div>
                             </div>
-                            <div class="form-group"><label for="contactPhone">Phone Number <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-phone"></i><input type="tel" id="contactPhone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit Phone Number" required autocomplete="tel-national"></div></div>
-                            <div class="form-group"><label for="contactEmail">Email ID <span class="req">*</span></label><div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" id="contactEmail" name="email" placeholder="Enter your email ID" aria-label="Email Address" required autocomplete="email"></div></div>
-                            <div class="form-group"><label for="contactWhatsApp">WhatsApp Number <span class="req">*</span></label><div class="input-icon-wrap"><i class="fab fa-whatsapp" style="color:var(--green)"></i><input type="tel" id="contactWhatsApp" name="whatsapp" placeholder="Enter your WhatsApp number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit WhatsApp Number" required autocomplete="tel-national"></div></div>
-                            <div class="form-group"><label for="contactMessage">Additional Information (Optional)</label><div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-alt"></i><textarea id="contactMessage" name="message" placeholder="Tell us about your education loan requirements..." aria-label="Additional Information" rows="4"></textarea></div></div>
+                            <div class="form-group">
+                                <label for="contactPhone">Phone Number <span class="req">*</span></label>
+                                <div class="input-icon-wrap"><i class="fas fa-phone"></i><input type="tel" id="contactPhone" name="phone" placeholder="98765 43210" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit Phone Number" required aria-required="true" autocomplete="tel-national"></div>
+                                <div class="field-error-msg" id="contactPhone-error" role="alert" aria-live="polite"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email ID <span class="req">*</span></label>
+                                <div class="input-icon-wrap"><i class="fas fa-envelope"></i><input type="email" id="contactEmail" name="email" placeholder="e.g. aarav.sharma@gmail.com" aria-label="Email Address" required aria-required="true" autocomplete="email"></div>
+                                <div class="field-error-msg" id="contactEmail-error" role="alert" aria-live="polite"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactWhatsApp">WhatsApp Number <span class="req">*</span></label>
+                                <div class="input-icon-wrap"><i class="fab fa-whatsapp" style="color:var(--green)"></i><input type="tel" id="contactWhatsApp" name="whatsapp" placeholder="98765 43210" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit WhatsApp Number" required aria-required="true" autocomplete="tel-national"></div>
+                                <div class="field-error-msg" id="contactWhatsApp-error" role="alert" aria-live="polite"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Additional Information (Optional)</label>
+                                <div class="input-icon-wrap textarea-wrap"><i class="fas fa-file-alt"></i><textarea id="contactMessage" name="message" placeholder="e.g. Target country, university, loan amount needed..." aria-label="Additional Information" rows="4"></textarea></div>
+                            </div>
                             <button type="submit" class="btn btn-primary btn-full">Submit Enquiry <i class="fas fa-arrow-right"></i></button>
                             <p style="text-align:center;color:var(--slate-300);font-size:0.8rem;margin-top:12px;"><i class="fas fa-lock"></i> Your information is safe with us and will be used only for consultation purposes.</p>
                         </form>
@@ -710,7 +733,7 @@
                             <label for="popupPhone">Phone Number <span class="req">*</span></label>
                             <div class="input-icon-wrap phone-wrap">
                                 <span class="country-prefix"><i class="fas fa-phone"></i> +91</span>
-                                <input type="tel" name="phone" id="popupPhone" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit Phone Number" required autocomplete="tel-national">
+                                <input type="tel" name="phone" id="popupPhone" placeholder="98765 43210" aria-required="true" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit Phone Number" required autocomplete="tel-national">
                             </div>
                         </div>
                         <div class="form-group">
@@ -720,7 +743,7 @@
                             </div>
                             <div class="input-icon-wrap whatsapp-inp">
                                 <i class="fab fa-whatsapp"></i>
-                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="WhatsApp number" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit WhatsApp Number" required autocomplete="tel-national">
+                                <input type="tel" name="whatsapp" id="popupWhatsApp" placeholder="98765 43210" aria-required="true" pattern="[0-9]{10}" maxlength="10" aria-label="10-digit WhatsApp Number" required autocomplete="tel-national">
                             </div>
                         </div>
                     </div>
