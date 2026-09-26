@@ -3459,9 +3459,9 @@ html, body { overflow-x: hidden; }
 }
 .marquee-logo-img {
     max-height: 52px;
-    width: 100%;
+    width: auto;
     height: auto;
-    max-width: 175px;
+    max-width: 165px;
     object-fit: contain;
     display: block;
     transition: transform 0.25s ease;
@@ -3546,7 +3546,7 @@ html, body { overflow-x: hidden; }
     .marquee-logo-img {
         max-height: 44px;
         max-width: 135px;
-        width: 100%;
+        width: auto;
         height: auto;
     }
     .marquee-card-badge {
