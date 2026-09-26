@@ -658,6 +658,36 @@ function submitPartnerForm(e) {
         btn.innerHTML = '<i class="fas fa-check"></i> Application Received! Our Partnership Team Will Contact You.';
         btn.style.background = '#15803d';
     }
+
+    const companyName = (form.querySelector('input[name="companyName"]')?.value || '').toString().trim();
+    const partnerType = (form.querySelector('select[name="partnerType"]')?.value || '').toString().trim();
+    const contactPerson = (form.querySelector('input[name="contactPerson"]')?.value || '').toString().trim();
+    const designation = (form.querySelector('input[name="designation"]')?.value || '').toString().trim();
+    const email = (form.querySelector('input[name="email"]')?.value || '').toString().trim();
+    const phone = (form.querySelector('input[name="phone"]')?.value || '').toString().replace(/[^0-9]/g, '');
+    const city = (form.querySelector('input[name="city"]')?.value || '').toString().trim();
+    const annualReferrals = (form.querySelector('select[name="annualReferrals"]')?.value || '').toString().trim();
+    const message = (form.querySelector('textarea[name="message"]')?.value || '').toString().trim();
+
+    const nameParts = contactPerson.split(' ');
+    const firstName = nameParts[0] || contactPerson;
+    const lastName = nameParts.slice(1).join(' ') || companyName;
+
+    const leadRecord = {
+        id: 'vps_' + Date.now(),
+        submittedAt: new Date().toISOString(),
+        source: 'Partner Registration',
+        firstName,
+        lastName,
+        phone,
+        whatsapp: phone,
+        email,
+        interest: `Partner: ${partnerType || 'General'} (${companyName})`,
+        notes: `Designation: ${designation} | City: ${city} | Expected Volume: ${annualReferrals} | Notes: ${message}`,
+        pageUrl: window.location.href
+    };
+    dispatchLeadCapture(leadRecord);
+
     setTimeout(() => {
         if (btn) {
             btn.innerHTML = originalText;
@@ -725,6 +755,21 @@ function submitContactForm(e) {
         btn.style.background = '#15803d';
     }
 
+    const leadRecord = {
+        id: 'vps_' + Date.now(),
+        submittedAt: new Date().toISOString(),
+        source: 'Contact Page Form',
+        firstName,
+        lastName,
+        phone,
+        whatsapp,
+        email,
+        interest: 'Contact Page Inquiry',
+        notes: message,
+        pageUrl: window.location.href
+    };
+    dispatchLeadCapture(leadRecord);
+
     const leadMsg = encodeURIComponent(
         `*New Contact Message - Visionary Path Services*\n\n` +
         `👤 *Name:* ${firstName} ${lastName}\n` +
@@ -756,7 +801,10 @@ function submitContactForm(e) {
                 err.classList.remove('visible');
             }
         });
-        window.open(waUrl, '_blank');
+        try {
+            const win = window.open(waUrl, '_blank');
+            if (!win) window.location.href = waUrl;
+        } catch (_) {}
     }, 1200);
 }
 
