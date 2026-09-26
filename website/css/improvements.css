@@ -2858,6 +2858,19 @@ header.page-hero .green-highlight,
     width: 680px !important;
 }
 
+@media (max-width: 991px) {
+    .mega-dropdown {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+    }
+    .mega-body {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+}
+
 .mega-body {
     display: grid !important;
     grid-template-columns: 1.1fr 1fr !important;
