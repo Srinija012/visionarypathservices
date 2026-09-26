@@ -5545,6 +5545,7 @@ html, body {
     overflow: hidden;
     position: relative;
     flex-shrink: 0;
+    background: #D6E4F0;   /* fallback if photo fails */
 }
 
 .loan-card-image img {
@@ -5946,6 +5947,7 @@ html, body {
     overflow: hidden;
     position: relative;
     flex-shrink: 0;
+    background: #D6E4F0;   /* fallback if photo fails */
 }
 
 .unified-card-image img {
