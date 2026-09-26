@@ -457,10 +457,13 @@ function submitForm(e) {
         btn.disabled = true;
         btn.setAttribute('data-state', 'loading');
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Connecting to Counselor...';
-    // Dual-Capture Resilience: Persist lead locally + optional CRM webhook forwarding
+    }
+
+    // Dual-Capture Resilience: Persist lead locally + optional CRM webhook forwarding + Google Forms
     const leadRecord = {
         id: 'vps_' + Date.now(),
         submittedAt: new Date().toISOString(),
+        source: 'Popup / Lead Form',
         firstName,
         lastName,
         phone,
@@ -470,46 +473,7 @@ function submitForm(e) {
         notes: message,
         pageUrl: window.location.href
     };
-    try {
-        const storedLeads = JSON.parse(localStorage.getItem('vps_lead_vault') || '[]');
-        storedLeads.unshift(leadRecord);
-        localStorage.setItem('vps_lead_vault', JSON.stringify(storedLeads.slice(0, 100)));
-    } catch (_) {}
-
-    if (window.VPS_LEAD_WEBHOOK_URL) {
-        try {
-            fetch(window.VPS_LEAD_WEBHOOK_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(leadRecord),
-                mode: 'no-cors'
-            }).catch(() => {});
-        } catch (_) {}
-    }
-
-    // Headless Google Form Integration (Live Google Sheet Auto-Sync)
-    if (window.VPS_GOOGLE_FORM_CONFIG && window.VPS_GOOGLE_FORM_CONFIG.formId) {
-        try {
-            const gcfg = window.VPS_GOOGLE_FORM_CONFIG;
-            const gUrl = `https://docs.google.com/forms/d/e/${gcfg.formId}/formResponse`;
-            const gData = new URLSearchParams();
-            if (gcfg.entries?.firstName && firstName) gData.append(gcfg.entries.firstName, firstName);
-            if (gcfg.entries?.lastName && lastName) gData.append(gcfg.entries.lastName, lastName);
-            if (gcfg.entries?.phone && phone) gData.append(gcfg.entries.phone, phone);
-            if (gcfg.entries?.whatsapp && whatsapp) gData.append(gcfg.entries.whatsapp, whatsapp);
-            if (gcfg.entries?.email && email) gData.append(gcfg.entries.email, email);
-            if (gcfg.entries?.interest && interest) gData.append(gcfg.entries.interest, interest);
-            if (gcfg.entries?.notes && message) gData.append(gcfg.entries.notes, message);
-            if (gcfg.entries?.pageUrl) gData.append(gcfg.entries.pageUrl, window.location.href);
-
-            fetch(gUrl, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: gData.toString()
-            }).catch(() => {});
-        } catch (_) {}
-    }
+    dispatchLeadCapture(leadRecord);
 
     // Construct formatted WhatsApp message
     const leadMsg = encodeURIComponent(
@@ -538,6 +502,20 @@ function submitForm(e) {
         inputs.forEach(input => {
             input.classList.remove('is-success', 'is-error', 'touched');
             input.removeAttribute('aria-invalid');
+            delete input.dataset.touched;
+            const err = input.closest('.form-group')?.querySelector('.field-error-msg');
+            if (err) {
+                err.textContent = '';
+                err.classList.remove('visible');
+            }
+        });
+        // Seamlessly open WhatsApp lead thread in new tab so counselor receives immediate ping
+        try {
+            const win = window.open(waUrl, '_blank');
+            if (!win) window.location.href = waUrl;
+        } catch (_) {}
+    }, 1000);
+}
             delete input.dataset.touched;
             const err = input.closest('.form-group')?.querySelector('.field-error-msg');
             if (err) {
