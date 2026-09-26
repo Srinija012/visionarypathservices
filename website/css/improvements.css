@@ -13026,7 +13026,8 @@ input[aria-invalid="false"].touched:not(:focus),
     line-height: 1.6 !important;
 }
 
-.svc-loan-list li i.fa-circle-check {
+.svc-loan-list li i.fa-circle-check,
+.svc-loan-list li i.fa-check-circle {
     color: #16A765 !important;
     font-size: 0.9rem !important;
     margin-top: 3px !important;
