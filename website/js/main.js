@@ -424,7 +424,34 @@ function submitForm(e) {
         btn.disabled = true;
         btn.setAttribute('data-state', 'loading');
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Connecting to Counselor...';
-        btn.style.background = '#10b981';
+    // Dual-Capture Resilience: Persist lead locally + optional CRM webhook forwarding
+    const leadRecord = {
+        id: 'vps_' + Date.now(),
+        submittedAt: new Date().toISOString(),
+        firstName,
+        lastName,
+        phone,
+        whatsapp,
+        email,
+        interest,
+        notes: message,
+        pageUrl: window.location.href
+    };
+    try {
+        const storedLeads = JSON.parse(localStorage.getItem('vps_lead_vault') || '[]');
+        storedLeads.unshift(leadRecord);
+        localStorage.setItem('vps_lead_vault', JSON.stringify(storedLeads.slice(0, 100)));
+    } catch (_) {}
+
+    if (window.VPS_LEAD_WEBHOOK_URL) {
+        try {
+            fetch(window.VPS_LEAD_WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(leadRecord),
+                mode: 'no-cors'
+            }).catch(() => {});
+        } catch (_) {}
     }
 
     // Construct formatted WhatsApp message
