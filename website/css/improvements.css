@@ -1339,17 +1339,19 @@ textarea:focus-visible {
 
 .btn-whatsapp,
 .btn-whatsapp-nav {
-    background: #15803d !important;
-    color: var(--color-white) !important;
-    border-color: #15803d !important;
-    box-shadow: 0 4px 12px rgba(21, 128, 61, 0.2);
+    background: #17803d !important;
+    color: #ffffff !important;
+    border-radius: 12px !important;
+    border: none !important;
+    box-shadow: 0 3px 10px rgba(23, 128, 61, 0.28) !important;
 }
 
 .btn-whatsapp:hover,
 .btn-whatsapp-nav:hover {
-    background: #166534 !important;
-    border-color: #166534 !important;
-    box-shadow: 0 6px 16px rgba(21, 128, 61, 0.3);
+    background: #15803d !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 6px 18px rgba(23, 128, 61, 0.4) !important;
 }
 
 /* ──────────────────────────────────────────────────────────
