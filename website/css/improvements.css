@@ -2097,7 +2097,7 @@ section.page-hero,
 .legal-hero,
 .blog-hub-hero,
 .blog-header {
-    background: linear-gradient(140deg, #061325 0%, #0a1d37 40%, #0d2b5e 80%, #043826 100%) !important;
+    background: linear-gradient(140deg, #071524 0%, #0B1F33 45%, #123A63 85%, #0B1F33 100%) !important;
     padding: 72px 0 60px !important;
     position: relative !important;
     overflow: hidden !important;
@@ -2113,8 +2113,8 @@ section.page-hero::before,
     content: '' !important;
     position: absolute !important;
     inset: 0 !important;
-    background: radial-gradient(circle at 18% 25%, rgba(52, 211, 153, 0.12) 0%, transparent 45%),
-                radial-gradient(circle at 82% 65%, rgba(29, 78, 216, 0.18) 0%, transparent 50%) !important;
+    background: radial-gradient(circle at 18% 25%, rgba(255, 90, 0, 0.08) 0%, transparent 45%),
+                radial-gradient(circle at 82% 65%, rgba(18, 58, 99, 0.22) 0%, transparent 50%) !important;
     pointer-events: none !important;
     z-index: 1 !important;
 }
@@ -2532,13 +2532,13 @@ header.page-hero .green-highlight,
 .about-hero .btn-hero-primary,
 .legal-hero .btn-hero-primary,
 .blog-hub-hero .btn-hero-primary {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    background: linear-gradient(135deg, #FF5A00 0%, #E04E00 100%) !important;
     color: #ffffff !important;
     padding: 13px 28px !important;
     font-size: 14.5px !important;
     font-weight: 700 !important;
     border-radius: var(--radius-full, 9999px) !important;
-    box-shadow: 0 4px 18px rgba(16, 185, 129, 0.35) !important;
+    box-shadow: 0 4px 18px rgba(255, 90, 0, 0.35) !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -2554,9 +2554,9 @@ header.page-hero .green-highlight,
 .about-hero .btn-hero-primary:hover,
 .legal-hero .btn-hero-primary:hover,
 .blog-hub-hero .btn-hero-primary:hover {
-    background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+    background: linear-gradient(135deg, #E04E00 0%, #C43E00 100%) !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.45) !important;
+    box-shadow: 0 8px 24px rgba(255, 90, 0, 0.45) !important;
     color: #ffffff !important;
 }
 
