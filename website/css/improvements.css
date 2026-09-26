@@ -5521,35 +5521,21 @@ html, body {
     background: #ffffff;
     border: 1.5px solid var(--color-border, #DDE5EC);
     border-radius: 16px;
-    padding: 0 0 0 0;           /* image handles top spacing; body padding applied to inner wrapper */
+    padding: 0;
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 16px rgba(11, 31, 51, 0.04);
     position: relative;
-    overflow: hidden;           /* clips image to rounded corners */
+    overflow: visible;    /* icon allowed to sit on image without clipping */
     transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.28s ease;
-}
-
-/* Card body (everything below the image) gets its own padding */
-.loan-category-card .loan-card-image ~ * {
-    padding-left: 30px;
-    padding-right: 30px;
-}
-.loan-category-card .loan-card-image ~ .loan-category-footer {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-}
-.loan-category-card .loan-card-image ~ .loan-category-features {
-    padding-left: 30px;
-    padding-right: 30px;
 }
 
 /* ── Image banner ── */
 .loan-card-image {
     width: 100%;
-    height: 170px;
+    height: 145px;          /* compact — ~20% of card */
     overflow: hidden;
+    border-radius: 16px 16px 0 0;   /* clip image corners independently */
     position: relative;
     flex-shrink: 0;
 }
@@ -5564,15 +5550,15 @@ html, body {
 }
 
 .loan-category-card:hover .loan-card-image img {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
-/* Subtle dark gradient at the bottom of the image so the card content reads clearly */
+/* Gradient vignette at bottom of image */
 .loan-card-image::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, transparent 40%, rgba(11,31,51,0.30) 100%);
+    background: linear-gradient(to bottom, transparent 35%, rgba(11,31,51,0.28) 100%);
     pointer-events: none;
 }
 
@@ -5582,9 +5568,10 @@ html, body {
     border-color: #FF8A00;
 }
 
+/* ── Icon sits ON the image ── */
 .loan-circle-icon-wrap {
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: 2px solid var(--color-orange, #FF5A00);
     display: flex;
@@ -5592,8 +5579,15 @@ html, body {
     justify-content: center;
     background: #FFF4ED;
     color: var(--color-orange, #FF5A00);
-    margin-top: 24px;
-    margin-bottom: 18px;
+    /* Pull icon up to overlap image bottom */
+    margin-top: -30px;
+    margin-left: 24px;
+    margin-bottom: 14px;
+    align-self: flex-start;
+    position: relative;
+    z-index: 2;
+    /* White ring separates icon from photo */
+    box-shadow: 0 0 0 3px #ffffff, 0 4px 14px rgba(11, 31, 51, 0.16);
     transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
 }
 
@@ -5601,6 +5595,28 @@ html, body {
     transform: scale(1.08);
     background: var(--color-orange, #FF5A00);
     color: #ffffff;
+}
+
+/* ── Per-element padding for card body ── */
+.loan-category-card .loan-category-badge {
+    padding-left: 24px;
+}
+.loan-category-card .loan-category-title {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.loan-category-card .loan-category-desc {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.loan-category-card .loan-category-features {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.loan-category-card .loan-category-footer {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
 }
 
 .loan-geom-icon {
@@ -7010,14 +7026,14 @@ html, body {
     display: flex !important;
     flex-direction: column !important;
     position: relative !important;
-    overflow: hidden !important;
+    overflow: visible !important;   /* icon must overlap image top */
     transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease !important;
 }
 
 .loan-category-card:hover {
     transform: translateY(-4px) !important;
     box-shadow: 0 16px 36px rgba(11, 31, 51, 0.08) !important;
-    border-color: #C8D5E2 !important;
+    border-color: #FF8A00 !important;
 }
 
 .loan-category-badge {
