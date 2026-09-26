@@ -19,6 +19,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
     overflow-x: clip;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -32,6 +33,7 @@ body {
     background: var(--white);
     line-height: 1.6;
     letter-spacing: -0.011em;
+    overflow-x: hidden;
     overflow-x: clip;
 }
 
