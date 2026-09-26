@@ -18,6 +18,52 @@ window.VPS_GOOGLE_FORM_CONFIG = {
     }
 };
 
+// --- Lead Vault & Multi-Destination Dispatcher ---
+function dispatchLeadCapture(leadRecord) {
+    // 1. Dual-Capture Resilience: Persist lead locally in browser localStorage
+    try {
+        const storedLeads = JSON.parse(localStorage.getItem('vps_lead_vault') || '[]');
+        storedLeads.unshift(leadRecord);
+        localStorage.setItem('vps_lead_vault', JSON.stringify(storedLeads.slice(0, 100)));
+    } catch (_) {}
+
+    // 2. Forward to Webhook if configured (CRM / Zapier / Make / Slack)
+    if (window.VPS_LEAD_WEBHOOK_URL) {
+        try {
+            fetch(window.VPS_LEAD_WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(leadRecord),
+                mode: 'no-cors'
+            }).catch(() => {});
+        } catch (_) {}
+    }
+
+    // 3. Headless Google Form Integration (Live Google Sheet Auto-Sync)
+    if (window.VPS_GOOGLE_FORM_CONFIG && window.VPS_GOOGLE_FORM_CONFIG.formId) {
+        try {
+            const gcfg = window.VPS_GOOGLE_FORM_CONFIG;
+            const gUrl = `https://docs.google.com/forms/d/e/${gcfg.formId}/formResponse`;
+            const gData = new URLSearchParams();
+            if (gcfg.entries?.firstName && leadRecord.firstName) gData.append(gcfg.entries.firstName, leadRecord.firstName);
+            if (gcfg.entries?.lastName && leadRecord.lastName) gData.append(gcfg.entries.lastName, leadRecord.lastName);
+            if (gcfg.entries?.phone && leadRecord.phone) gData.append(gcfg.entries.phone, leadRecord.phone);
+            if (gcfg.entries?.whatsapp && leadRecord.whatsapp) gData.append(gcfg.entries.whatsapp, leadRecord.whatsapp);
+            if (gcfg.entries?.email && leadRecord.email) gData.append(gcfg.entries.email, leadRecord.email);
+            if (gcfg.entries?.interest && leadRecord.interest) gData.append(gcfg.entries.interest, leadRecord.interest);
+            if (gcfg.entries?.notes && leadRecord.notes) gData.append(gcfg.entries.notes, leadRecord.notes);
+            if (gcfg.entries?.pageUrl) gData.append(gcfg.entries.pageUrl, leadRecord.pageUrl || window.location.href);
+
+            fetch(gUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: gData.toString()
+            }).catch(() => {});
+        } catch (_) {}
+    }
+}
+
 // --- Polished Lead Generation Popup Engine ---
 const POPUP_COOLDOWN_MS = 15 * 60 * 1000; // 15-minute cool-down after dismissal
 
@@ -514,17 +560,6 @@ function submitForm(e) {
             const win = window.open(waUrl, '_blank');
             if (!win) window.location.href = waUrl;
         } catch (_) {}
-    }, 1000);
-}
-            delete input.dataset.touched;
-            const err = input.closest('.form-group')?.querySelector('.field-error-msg');
-            if (err) {
-                err.textContent = '';
-                err.classList.remove('visible');
-            }
-        });
-        // Seamlessly open WhatsApp lead thread in new tab so counselor receives immediate ping
-        window.open(waUrl, '_blank');
     }, 1000);
 }
 
