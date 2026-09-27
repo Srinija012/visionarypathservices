@@ -14199,12 +14199,18 @@ input[aria-invalid="false"].touched:not(:focus),
     }
     .about-hero-actions,
     .about-cta-btns {
-        flex-direction: column !important;
+        display: flex !important;
+        flex-direction: row !important;
         align-items: stretch !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
     }
     .btn-hero-cta,
     .btn-hero-whatsapp {
-        width: 100% !important;
+        flex: 1 1 0px !important;
+        width: auto !important;
+        min-width: 0 !important;
         text-align: center !important;
     }
     .focus-summary-box {
@@ -15012,12 +15018,18 @@ input[aria-invalid="false"].touched:not(:focus),
         border-bottom: none !important;
     }
     .svc-cta-btns {
-        flex-direction: column !important;
+        display: flex !important;
+        flex-direction: row !important;
         align-items: stretch !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
     }
     .svc-cta-btns button,
     .svc-cta-btns a {
-        width: 100% !important;
+        flex: 1 1 0px !important;
+        width: auto !important;
+        min-width: 0 !important;
         text-align: center !important;
     }
     .svc-loan-col {
@@ -16332,12 +16344,18 @@ input[aria-invalid="false"].touched:not(:focus),
     }
     .hub-help-strip .cta-group,
     .office-cta-col .cta-btns {
-        flex-direction: column !important;
+        display: flex !important;
+        flex-direction: row !important;
         align-items: stretch !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
     }
     .hub-help-strip .cta-group .btn,
     .office-cta-col .cta-btns .btn {
-        width: 100% !important;
+        flex: 1 1 0px !important;
+        width: auto !important;
+        min-width: 0 !important;
         text-align: center !important;
         justify-content: center !important;
     }
@@ -17215,18 +17233,22 @@ body.menu-open .navbar.scrolled-elevated {
 
 @media (max-width: 576px) {
     .exact-hero-actions {
-        flex-direction: column !important;
+        display: flex !important;
+        flex-direction: row !important;
         align-items: stretch !important;
+        justify-content: center !important;
         width: 100% !important;
-        gap: 10px !important;
+        gap: 8px !important;
     }
     .exact-hero-actions .btn-hero-primary,
     .exact-hero-actions .btn-hero-secondary {
-        width: 100% !important;
+        flex: 1 1 0px !important;
+        width: auto !important;
+        min-width: 0 !important;
         justify-content: center !important;
-        min-height: 48px !important;
-        font-size: 14.5px !important;
-        padding: 0 16px !important;
+        min-height: 44px !important;
+        font-size: clamp(11.5px, 3.2vw, 13.5px) !important;
+        padding: 0 8px !important;
         border-radius: 9999px !important;
         text-align: center !important;
         white-space: nowrap !important;
