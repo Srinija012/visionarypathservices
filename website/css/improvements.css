@@ -10427,11 +10427,13 @@ html, body {
 
     .mbbs-options-grid,
     .mbbs-checklist-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
     }
 
     .mbbs-expenses-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
     }
 
     .mbbs-eligibility-wrap,
@@ -10458,7 +10460,8 @@ html, body {
 @media (max-width: 480px) {
     .mbbs-benefits-grid,
     .mbbs-expenses-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
     }
 }
 
