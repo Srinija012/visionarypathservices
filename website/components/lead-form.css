@@ -169,9 +169,16 @@
 }
 
 .lead-input-wrap textarea {
-    min-height: 84px;
-    padding-top: 12px;
+    min-height: 52px;
+    height: 52px;
+    padding-top: 10px;
     resize: vertical;
+    transition: min-height 0.2s ease, height 0.2s ease;
+}
+
+.lead-input-wrap textarea:focus {
+    min-height: 76px;
+    height: 76px;
 }
 
 .lead-input-wrap.textarea-wrap > i {
