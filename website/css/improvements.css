@@ -16407,9 +16407,9 @@ body.menu-open .nav-backdrop {
         height: 32px !important;
     }
     .hamburger {
-        width: 46px !important;
-        height: 46px !important;
-        padding: 11px 9px !important;
+        width: 44px !important;
+        height: 44px !important;
+        padding: 0 !important;
     }
 }
 
@@ -16426,7 +16426,45 @@ body.menu-open .nav-backdrop {
     }
 }
 
-/* ── 5. MOBILE NAVIGATION DRAWER & MEGA-MENU ACCORDION ── */
+/* ── 5. MOBILE NAVIGATION DRAWER & MEGA-MENU ACCORDION (Hallmark Responsive Architecture) ── */
+/* Stacking context safety floor: when mobile drawer is open, keep navbar fixed and strip backdrop-filter containing block trap */
+body.menu-open .navbar,
+body.menu-open .navbar.scrolled-elevated {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    filter: none !important;
+    transform: none !important;
+    box-shadow: 0 2px 12px rgba(11, 31, 51, 0.08) !important;
+    z-index: 1000 !important;
+}
+
+@keyframes vpsMenuSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes vpsFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 960px) {
     .nav-links, .nav-cta {
         display: none;
@@ -16435,24 +16473,104 @@ body.menu-open .nav-backdrop {
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        border-radius: 8px !important;
+        cursor: pointer !important;
+        -webkit-tap-highlight-color: transparent !important;
+        transition: background-color 0.18s ease, transform 0.14s ease, outline-color 0.18s ease !important;
+    }
+    .hamburger:hover,
+    .hamburger.is-hover {
+        background: rgba(11, 31, 51, 0.06) !important;
+    }
+    .hamburger:focus-visible,
+    .hamburger.is-focus {
+        outline: 2px solid var(--color-orange, #FF5A00) !important;
+        outline-offset: 2px !important;
+        background: rgba(255, 90, 0, 0.08) !important;
+    }
+    .hamburger:active,
+    .hamburger.is-active {
+        transform: scale(0.92) !important;
+        background: rgba(11, 31, 51, 0.10) !important;
+    }
+    .hamburger:disabled,
+    .hamburger[disabled],
+    .hamburger.is-disabled {
+        opacity: 0.4 !important;
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+    }
+    .hamburger[data-state="loading"],
+    .hamburger.is-loading {
+        opacity: 0.65 !important;
+        pointer-events: none !important;
+    }
+    .hamburger[data-state="error"],
+    .hamburger.is-error {
+        outline: 2px solid #EF4444 !important;
+        outline-offset: 2px !important;
+    }
+    .hamburger[data-state="success"],
+    .hamburger.is-success {
+        outline: 2px solid #10B981 !important;
+        outline-offset: 2px !important;
+    }
+    .hamburger span {
+        display: block !important;
+        width: 22px !important;
+        height: 2.5px !important;
+        background: var(--navy, #0B1F33) !important;
+        border-radius: 2px !important;
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease, background-color 0.2s ease !important;
+        transform-origin: center !important;
+    }
+    .hamburger.open {
+        background: rgba(11, 31, 51, 0.05) !important;
+    }
+    .hamburger.open:hover,
+    .hamburger.open.is-hover {
+        background: rgba(255, 90, 0, 0.10) !important;
+    }
+    .hamburger.open span {
+        background: var(--color-orange, #FF5A00) !important;
+    }
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg) !important;
+    }
+    .hamburger.open span:nth-child(2) {
+        opacity: 0 !important;
+        transform: scaleX(0) !important;
+    }
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg) !important;
     }
     .nav-links.open {
         display: flex !important;
         flex-direction: column !important;
         position: fixed !important;
+        top: var(--nav-height, 56px) !important;
         left: 0 !important;
         right: 0 !important;
         bottom: 0 !important;
         background: #ffffff !important;
-        padding: 16px 16px calc(130px + env(safe-area-inset-bottom, 0px)) 16px !important;
+        padding: 16px 16px calc(140px + env(safe-area-inset-bottom, 0px)) 16px !important;
         box-sizing: border-box !important;
         overflow-y: auto !important;
         -webkit-overflow-scrolling: touch !important;
-        overscroll-behavior: contain !important;
+        overscroll-behavior-y: contain !important;
         touch-action: pan-y !important;
         z-index: 998 !important;
         box-shadow: 0 20px 48px -12px rgba(11, 31, 51, 0.25) !important;
         border-top: 1px solid #E2E8F0 !important;
+        animation: vpsMenuSlideDown 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
     }
     .nav-links > li {
         width: 100% !important;
@@ -16615,6 +16733,7 @@ body.menu-open .nav-backdrop {
         box-shadow: 0 -4px 20px rgba(11, 31, 51, 0.1) !important;
         gap: 8px !important;
         box-sizing: border-box !important;
+        animation: vpsFadeInUp 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
     }
     .nav-cta.open .btn-eligibility {
         width: 100% !important;
