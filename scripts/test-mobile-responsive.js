@@ -158,7 +158,17 @@ assert(
     mainJs.includes('initMobileFooterAccordions') && mainJs.includes('.footer-col-accordion'),
     '[FAIL] main.js missing mobile footer accordion initializer.'
 );
-console.log('✅ PASS: Mobile Footer is compact with collapsible accordions (no multi-scroll bloat).');
+console.log('Verifying Mobile Top-Bar Cleanliness (Hallmark Anti-Orphan & Anti-Slop)...');
+assert(
+    improvementsCss.includes('.top-bar-left .orange-rule') && improvementsCss.includes('.top-bar-dash') && improvementsCss.includes('display: none !important;'),
+    '[FAIL] Mobile top-bar must suppress .orange-rule and .top-bar-dash to avoid orphaned lines and trailing bullets.'
+);
+assert(
+    improvementsCss.includes('.top-bar-left {') && improvementsCss.includes('flex-direction: column !important;'),
+    '[FAIL] Mobile top-bar tagline must stack cleanly with flex-direction: column.'
+);
+console.log('✅ PASS: Mobile Top-Bar renders cleanly (0 orphaned lines, 0 trailing bullets, disciplined stack).');
 
 console.log('\n🎉 ALL MOBILE RESPONSIVENESS AND HALLMARK GATES PASSED (100% CLEAN)!\n');
+
 

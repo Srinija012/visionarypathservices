@@ -2270,6 +2270,7 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 960px) {
     .top-bar-inner { flex-direction: column; gap: 6px; text-align: center; }
+    .top-bar-orange-rule, .top-bar-left .orange-rule { display: none; }
     .nav-links, .nav-cta { display: none; }
     .hamburger { display: flex; }
     .nav-links.open {
