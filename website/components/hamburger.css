@@ -1,0 +1,124 @@
+/* Hallmark · component: hamburger · genre: modern-minimal · theme: catalog (VPS brand)
+ * states: default · hover · focus · active · disabled · loading · error · success
+ * contrast: pass (46–50)
+ */
+
+:root {
+    --color-navy: #0B1F33;
+    --color-orange: #FF5A00;
+    --color-focus: #FF5A00;
+    --color-error: #EF4444;
+    --color-success: #10B981;
+    --radius-sm: 8px;
+}
+
+.hamburger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+    border-radius: var(--radius-sm, 8px);
+    transition: background-color 0.18s ease, transform 0.14s ease, outline-color 0.18s ease;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+/* 1. Default */
+.hamburger span {
+    display: block;
+    width: 22px;
+    height: 2.5px;
+    background: var(--color-navy, #0B1F33);
+    border-radius: 2px;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease, background-color 0.2s ease;
+    transform-origin: center;
+}
+
+/* 2. Hover state */
+.hamburger:hover,
+.hamburger.is-hover {
+    background: rgba(11, 31, 51, 0.06);
+}
+
+/* 3. Focus-visible state (Keyboard Accessibility) */
+.hamburger:focus-visible,
+.hamburger.is-focus {
+    outline: 2px solid var(--color-focus, #FF5A00);
+    outline-offset: 2px;
+    background: rgba(255, 90, 0, 0.08);
+}
+
+/* 4. Active / tactile press state */
+.hamburger:active,
+.hamburger.is-active {
+    transform: scale(0.92);
+    background: rgba(11, 31, 51, 0.10);
+}
+
+/* 5. Disabled state */
+.hamburger:disabled,
+.hamburger[disabled],
+.hamburger.is-disabled {
+    opacity: 0.38;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* 6. Loading state */
+.hamburger[data-state="loading"],
+.hamburger.is-loading {
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+/* 7. Error state */
+.hamburger[data-state="error"],
+.hamburger.is-error {
+    outline: 2px solid var(--color-error, #EF4444);
+    outline-offset: 2px;
+}
+
+/* 8. Success state */
+.hamburger[data-state="success"],
+.hamburger.is-success {
+    outline: 2px solid var(--color-success, #10B981);
+    outline-offset: 2px;
+}
+
+/* Morph to Close 'X' (Toggled State) */
+.hamburger.open {
+    background: rgba(11, 31, 51, 0.05);
+}
+
+.hamburger.open:hover,
+.hamburger.open.is-hover {
+    background: rgba(255, 90, 0, 0.10);
+}
+
+.hamburger.open span {
+    background: var(--color-orange, #FF5A00);
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+}

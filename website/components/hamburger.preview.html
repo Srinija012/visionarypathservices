@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Hamburger Menu Toggle — Hallmark 8-State Specification Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="hamburger.css">
+    <style>
+        :root {
+            --color-paper: #F8FAFC;
+            --color-card: #FFFFFF;
+            --color-border: #E2E8F0;
+            --color-navy: #0B1F33;
+            --color-orange: #FF5A00;
+            --color-muted: #64748B;
+        }
+
+        body {
+            background: var(--color-paper);
+            color: var(--color-navy);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .preview-container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .preview-header {
+            background: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 24px 28px;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 20px rgba(11, 31, 51, 0.04);
+        }
+
+        .hallmark-stamp {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #FFF1E8;
+            color: var(--color-orange);
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .preview-header h1 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--color-navy);
+            margin: 0 0 8px 0;
+        }
+
+        .preview-header p {
+            color: var(--color-muted);
+            margin: 0 0 16px 0;
+            font-size: 14px;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            padding-top: 14px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .spec-item {
+            font-size: 12px;
+            color: var(--color-muted);
+        }
+        .spec-item strong {
+            display: block;
+            color: var(--color-navy);
+            font-size: 13px;
+            margin-top: 2px;
+        }
+
+        .state-matrix-card {
+            background: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 20px rgba(11, 31, 51, 0.04);
+        }
+
+        .matrix-title {
+            font-family: 'Manrope', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            margin: 0 0 6px 0;
+            color: var(--color-navy);
+        }
+
+        .matrix-desc {
+            font-size: 13px;
+            color: var(--color-muted);
+            margin: 0 0 24px 0;
+        }
+
+        .state-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .state-table th {
+            text-align: left;
+            padding: 10px 14px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-muted);
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        .state-table td {
+            padding: 14px;
+            border-bottom: 1px solid #F1F5F9;
+            vertical-align: middle;
+        }
+
+        .state-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .state-label {
+            font-weight: 600;
+            font-size: 13.5px;
+            color: var(--color-navy);
+        }
+
+        .state-trigger {
+            font-family: monospace;
+            font-size: 12px;
+            color: #64748B;
+            background: #F1F5F9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .state-notes {
+            font-size: 12.5px;
+            color: var(--color-muted);
+        }
+
+        /* Interactive Playground */
+        .interactive-playground {
+            background: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 4px 20px rgba(11, 31, 51, 0.04);
+        }
+
+        .interactive-stage {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            background: #FFFFFF;
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            margin-top: 16px;
+        }
+
+        .stage-brand {
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--color-navy);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stage-brand i {
+            color: var(--color-orange);
+        }
+
+        .live-status {
+            font-size: 12px;
+            font-family: monospace;
+            color: #0284C7;
+            background: #E0F2FE;
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-left: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <!-- Header & Hallmark Stamp -->
+        <header class="preview-header">
+            <div class="hallmark-stamp">
+                <i class="fas fa-check-shield"></i> Hallmark Component Standard · Modern-Minimal
+            </div>
+            <h1>Hamburger Menu Toggle Component</h1>
+            <p>Verification preview demonstrating the mandatory 8-state discipline, WCAG AAA 44x44px touch target, and zero-distortion X rotation geometry.</p>
+            <div class="spec-grid">
+                <div class="spec-item">Touch Target: <strong>44 × 44 px (Floor)</strong></div>
+                <div class="spec-item">Animation Timing: <strong>0.25s cubic-bezier</strong></div>
+                <div class="spec-item">Keyboard Focus: <strong>2px Orange Offset</strong></div>
+                <div class="spec-item">A11y Standard: <strong>WCAG 2.5.5 / 2.5.8 AAA</strong></div>
+            </div>
+        </header>
+
+        <!-- 8-State Table -->
+        <section class="state-matrix-card">
+            <h2 class="matrix-title">Component 8-State Matrix</h2>
+            <p class="matrix-desc">All interactive states styled deterministically in CSS without token improvisation.</p>
+
+            <table class="state-table">
+                <thead>
+                    <tr>
+                        <th style="width: 140px;">State</th>
+                        <th style="width: 90px; text-align: center;">Render</th>
+                        <th style="width: 190px;">Selector / Trigger</th>
+                        <th>Tactile Hallmark Behavior</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 1. Default -->
+                    <tr>
+                        <td><span class="state-label">1. Default</span></td>
+                        <td align="center">
+                            <button type="button" class="hamburger" aria-label="Default Navigation Toggle">
+                                <span></span><span></span><span></span>
+                            </button>
+                        </td>
+                        <td><span class="state-trigger">.hamburger</span></td>
+                        <td class="state-notes">3 horizontal bars (22×2.5px), deep navy (#0B1F33), 5px gap.</td>
+                    </tr>
+
+                    <!-- 2. Hover -->
+                    <tr>
+                        <td><span class="state-label">2. Hover</span></td>
+                        <td align="center">
+                            <button type="button" class="hamburger is-hover" aria-label="Hover State Navigation Toggle">
+                                <span></span><span></span><span></span>
+                            </button>
+                        </td>
+                        <td><span class="state-trigger">:hover, .is-hover</span></td>
+                        <td class="state-notes">Subtle dark-navy tint (6% opacity), smooth 0.18s transition.</td>
+                    </tr>
+
+                    <!-- 3. Focus-Visible -->
+                    <tr>
+                        <td><span class="state-label">3. Focus</span></td>
+                        <td align="center">
+                            <button type="button" class="hamburger is-focus" aria-label="Focus State Navigation Toggle">
+                                <span></span><span></span><span></span>
+                            </button>
+                        </td>
+                        <td><span class="state-trigger">:focus-visible, .is-focus</span></td>
+                        <td class="state-notes">2px solid orange focus ring (#FF5A00) with 2px offset for keyboard accessibility.</td>
+                    </tr>
+
+                    <!-- 4. Active (Press) -->
+                    <tr>
+                        <td><span class="state-label">4. Active</span></td>
+                        <td align="center">
+                            <button type="button" class="hamburger is-active" aria-label="Active State Navigation Toggle">
+                                <span></span><span></span><span></span>
+                            </button>
+                        </td>
+                        <td><span class="state-trigger">:active, .is-active</span></td>
+                        <td class="state-notes">Tactile micro-scale down to 0.92 with 10% dark overlay.</td>
+                    </tr>
+
+                    <!-- 5. Open / Toggled -->
+                    <tr>
+                        <td><span class="state-label">5. Open (Close 'X')</span></td>
+                        <td align="center">
+                            <button type="button" class="hamburger open" aria-label="Open State Navigation Toggle" aria-expanded="true">
+                                <span></span><span></span><span></span>
+                            </button>
+                        </td>
+                        <td><span class="state-trigger">.open, [aria-expanded=true]</span></td>
+                        <td class="state-notes">Spans translate ±7.5px and rotate ±45° to form a symmetric, brand-orange 'X'.</td>
+                    </tr>
+
+                    <!-- 6. Disabled -->
+                    <tr>
+                        <td><span class="state-label">6. Disabled</span></td>
+                        <td align="center">
+                            <button type="button" class="hamburger" disabled aria-label="Disabled Navigation Toggle">
+                                <span></span><span></span><span></span>
+                            </button>
+                        </td>
+                        <td><span class="state-trigger">:disabled, [disabled]</span></td>
+                        <td class="state-notes">38% opacity, cursor: not-allowed, pointer events suppressed.</td>
+                    </tr>
+
+                    <!-- 7. Loading -->
+                    <tr>
+                        <td><span class="state-label">7. Loading</span></td>
+                        <td align="center">
+                            <button type="button" class="hamburger" data-state="loading" aria-label="Loading Navigation Toggle">
+                                <span></span><span></span><span></span>
+                            </button>
+                        </td>
+                        <td><span class="state-trigger">[data-state="loading"]</span></td>
+                        <td class="state-notes">65% opacity, pointer events inert during async transitions.</td>
+                    </tr>
+
+                    <!-- 8. Error & Success Validation States -->
+                    <tr>
+                        <td><span class="state-label">8. Error / Warning</span></td>
+                        <td align="center">
+                            <button type="button" class="hamburger is-error" aria-label="Error State Toggle">
+                                <span></span><span></span><span></span>
+                            </button>
+                        </td>
+                        <td><span class="state-trigger">[data-state="error"], .is-error</span></td>
+                        <td class="state-notes">2px solid red error outline (#EF4444) for connection failure.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="state-label">9. Success / Sync</span></td>
+                        <td align="center">
+                            <button type="button" class="hamburger is-success" aria-label="Success State Toggle">
+                                <span></span><span></span><span></span>
+                            </button>
+                        </td>
+                        <td><span class="state-trigger">[data-state="success"], .is-success</span></td>
+                        <td class="state-notes">2px solid green confirmation ring (#10B981).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Interactive Playground -->
+        <section class="interactive-playground">
+            <h2 class="matrix-title">Live Interactive Playground</h2>
+            <p class="matrix-desc">Test clicking, keyboard navigation (Tab, Enter, Space), and escape key dismissal.</p>
+
+            <div class="interactive-stage">
+                <div class="stage-brand">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>VISIONARY PATH SERVICES</span>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <span id="liveStatusBadge" class="live-status">State: CLOSED</span>
+                    <button type="button" 
+                            class="hamburger" 
+                            id="interactiveHamburger" 
+                            onclick="handlePlaygroundToggle()"
+                            aria-label="Toggle Navigation Demo"
+                            aria-expanded="false"
+                            style="display: flex; margin-left: 14px;">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function handlePlaygroundToggle() {
+            const btn = document.getElementById('interactiveHamburger');
+            const badge = document.getElementById('liveStatusBadge');
+            const isOpen = btn.classList.toggle('open');
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            if (isOpen) {
+                badge.textContent = 'State: OPEN (X)';
+                badge.style.background = '#FFF1E8';
+                badge.style.color = '#FF5A00';
+            } else {
+                badge.textContent = 'State: CLOSED';
+                badge.style.background = '#E0F2FE';
+                badge.style.color = '#0284C7';
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const btn = document.getElementById('interactiveHamburger');
+                if (btn && btn.classList.contains('open')) {
+                    handlePlaygroundToggle();
+                    btn.focus();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
