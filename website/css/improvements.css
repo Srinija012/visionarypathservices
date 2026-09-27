@@ -18688,7 +18688,7 @@ h1, h2,
     }
 }
 
-/* ── 2. FULL-WIDTH SINGLE-COLUMN LEAD FORMS (48-52PX INPUTS) ── */
+/* ── 2. FULL-WIDTH SINGLE-COLUMN LEAD FORMS (COMPACT ZERO-BLOAT 44PX INPUTS) ── */
 @media (max-width: 768px) {
     .lead-form,
     .popup-form,
@@ -18700,7 +18700,7 @@ h1, h2,
         max-width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
-        gap: 14px !important;
+        gap: 9px !important;
         box-sizing: border-box !important;
     }
 
@@ -18714,7 +18714,16 @@ h1, h2,
         display: flex !important;
         flex-direction: column !important;
         width: 100% !important;
-        gap: 14px !important;
+        gap: 8px !important;
+    }
+
+    /* Preserve 2 columns for First Name & Last Name to prevent needless scroll */
+    .lead-form-row.name-row,
+    .form-row.name-row,
+    .lead-form-row:first-of-type {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
     }
 
     .lead-form-group,
@@ -18724,6 +18733,7 @@ h1, h2,
     .contact-form-group {
         width: 100% !important;
         min-width: 0 !important;
+        margin-bottom: 0 !important; /* CRITICAL: Prevent double-spacing when gap is applied */
     }
 
     input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]),
@@ -18735,13 +18745,18 @@ h1, h2,
     .contact-form input,
     .contact-form select {
         width: 100% !important;
-        min-height: 48px !important;
-        height: 50px !important;
+        min-height: 44px !important;
+        height: 44px !important;
         font-size: 16px !important; /* CRITICAL: Eliminates iOS Safari zoom-in on focus */
         line-height: 1.4 !important;
-        padding: 12px 16px !important;
+        padding: 9px 14px 9px 38px !important;
         border-radius: 10px !important;
         box-sizing: border-box !important;
+    }
+
+    .input-icon-wrap.phone-wrap input,
+    .lead-input-wrap.has-prefix input {
+        padding-left: 78px !important; /* Keep country prefix clearance */
     }
 
     textarea,
@@ -18749,24 +18764,34 @@ h1, h2,
     .popup-form textarea,
     .contact-form textarea {
         width: 100% !important;
-        min-height: 100px !important;
-        height: auto !important;
-        font-size: 16px !important;
-        line-height: 1.5 !important;
-        padding: 12px 16px !important;
+        min-height: 52px !important;
+        height: 52px !important;
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        padding: 9px 14px 9px 38px !important;
         border-radius: 10px !important;
         box-sizing: border-box !important;
+        resize: vertical !important;
+    }
+
+    textarea:focus,
+    .lead-form textarea:focus,
+    .popup-form textarea:focus,
+    .contact-form textarea:focus {
+        min-height: 74px !important;
+        height: 74px !important;
     }
 
     .lead-btn-submit,
     .popup-submit-btn,
     .btn-submit,
     .btn-partner-submit,
-    .calc-action-btn {
+    .calc-action-btn,
+    .btn-submit-enquiry {
         width: 100% !important;
-        min-height: 50px !important;
-        height: 52px !important;
-        font-size: 16px !important;
+        min-height: 44px !important;
+        height: 46px !important;
+        font-size: 15px !important;
         font-weight: 700 !important;
         border-radius: 10px !important;
         display: flex !important;
