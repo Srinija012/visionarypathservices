@@ -680,16 +680,31 @@ window.addEventListener('resize', () => {
     }
 }, { passive: true });
 
-// Mobile dropdown toggle
+// Mobile dropdown toggle & drawer destination link auto-close
 document.addEventListener('DOMContentLoaded', () => {
+    // Dropdown toggles inside mobile drawer
     document.querySelectorAll('.has-dropdown > a').forEach(item => {
         item.addEventListener('click', function(e) {
             if (window.innerWidth <= 960) {
                 e.preventDefault();
-                this.parentElement.classList.toggle('open');
+                const parent = this.parentElement;
+                const wasOpen = parent.classList.contains('open');
+                parent.classList.toggle('open');
+                this.setAttribute('aria-expanded', !wasOpen ? 'true' : 'false');
             }
         });
     });
+
+    // Auto-close mobile drawer when tapping any navigation destination link
+    const navLinks = document.getElementById('navLinks');
+    if (navLinks) {
+        navLinks.addEventListener('click', function(e) {
+            const anchor = e.target.closest('a');
+            if (anchor && !anchor.closest('.has-dropdown > a')) {
+                closeMenu();
+            }
+        });
+    }
 });
 
 // --- Navbar & Floating CTA scroll effect ---
@@ -712,7 +727,8 @@ window.addEventListener('scroll', () => {
                 isNearBottom = true;
             }
         }
-        if (window.scrollY > 400 && !isNearBottom) {
+        const threshold = window.innerWidth <= 768 ? 160 : 380;
+        if (window.scrollY > threshold && !isNearBottom) {
             floatBtn.classList.add('is-active-scrolled');
             floatBtn.classList.remove('hide');
         } else {
