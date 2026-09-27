@@ -10413,6 +10413,124 @@ input[aria-invalid="false"].touched:not(:focus),
     margin-top: 4px;
 }
 
+/* Institutional Trust & Stats Bar Item High-Contrast Styling */
+.stats-bar .stat-item {
+    text-align: center !important;
+    padding: 16px 14px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: transform 0.22s ease !important;
+}
+
+.stats-bar .stat-item:hover {
+    transform: translateY(-2px) !important;
+}
+
+.stats-bar .stat-item-icon {
+    font-size: 1.75rem !important;
+    color: var(--color-orange, #FF5A00) !important;
+    margin-bottom: 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 12px !important;
+    background: rgba(255, 90, 0, 0.12) !important;
+    border: 1px solid rgba(255, 90, 0, 0.28) !important;
+}
+
+.stats-bar .stat-item-icon i {
+    color: var(--color-orange, #FF5A00) !important;
+}
+
+.stats-bar .stat-item-label {
+    color: #ffffff !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    line-height: 1.45 !important;
+    letter-spacing: -0.01em !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Institutional CTA Bar Styling */
+.cta-bar {
+    background: #ffffff !important;
+    padding: 60px 0 !important;
+    text-align: center !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.cta-bar h2 {
+    font-family: var(--font-display, "Manrope", sans-serif) !important;
+    font-size: clamp(1.6rem, 2.8vw, 2.2rem) !important;
+    font-weight: 800 !important;
+    color: var(--color-navy, #0B1F33) !important;
+    margin-bottom: 12px !important;
+    letter-spacing: -0.02em !important;
+}
+
+.cta-bar p {
+    font-size: 1.05rem !important;
+    color: #475569 !important;
+    max-width: 620px !important;
+    margin: 0 auto 28px !important;
+    line-height: 1.6 !important;
+}
+
+.cta-bar .cta-btns {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+}
+
+.cta-bar .cta-btns .btn-primary {
+    background: var(--color-orange, #FF5A00) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    padding: 13px 28px !important;
+    border-radius: 9999px !important;
+    border: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    box-shadow: 0 4px 16px rgba(255, 90, 0, 0.28) !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+
+.cta-bar .cta-btns .btn-primary:hover {
+    background: #e04f00 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(255, 90, 0, 0.35) !important;
+}
+
+.cta-bar .cta-btns .btn-whatsapp {
+    background: #16a34a !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    padding: 13px 28px !important;
+    border-radius: 9999px !important;
+    border: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 16px rgba(22, 163, 74, 0.25) !important;
+    transition: all 0.2s ease !important;
+}
+
+.cta-bar .cta-btns .btn-whatsapp:hover {
+    background: #15803d !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(22, 163, 74, 0.35) !important;
+}
+
 /* Section Header Chips */
 .section-badge-chip {
     display: inline-flex;

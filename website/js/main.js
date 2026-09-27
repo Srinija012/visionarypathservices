@@ -427,7 +427,15 @@ window.addEventListener('scroll', () => {
     }
     const floatBtn = document.getElementById('floatingEligibilityBtn');
     if (floatBtn && !document.getElementById('popupOverlay')?.classList.contains('active')) {
-        if (window.scrollY > 400) {
+        const disclaimer = document.querySelector('.site-disclaimer-wrap') || document.querySelector('.footer');
+        let isNearBottom = false;
+        if (disclaimer) {
+            const rect = disclaimer.getBoundingClientRect();
+            if (rect.top <= window.innerHeight - 20) {
+                isNearBottom = true;
+            }
+        }
+        if (window.scrollY > 400 && !isNearBottom) {
             floatBtn.classList.add('is-active-scrolled');
             floatBtn.classList.remove('hide');
         } else {
