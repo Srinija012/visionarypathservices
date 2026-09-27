@@ -577,7 +577,7 @@ template = """<!DOCTYPE html>
                 <button class="btn btn-eligibility" onclick="openPopup()">
                     <i class="fas fa-file-signature"></i> Check Eligibility
                 </button>
-                <a href="https://wa.me/918150949070" target="_blank" class="btn-whatsapp-nav">
+                <a href="https://wa.me/918150949070?text=Hello%20Visionary%20Path%20Services%2C%20I%20would%20like%20to%20get%20expert%20guidance%20regarding%20education%20loan%20options%20and%20eligibility.%20Please%20assist%20me." target="_blank" class="btn-whatsapp-nav">
                     <i class="fab fa-whatsapp"></i> Talk to Expert
                 </a>
             </div>
