@@ -20258,3 +20258,356 @@ body {
 
 /* Hallmark · mobile: pass (34, 49, 50–57) · viewports: 320px · 375px · 414px · 768px */
 
+/* ==========================================================================
+   NEGATIVE SPACE & SECTION RHYTHM OPTIMIZER (Anti-Slop / Zero Empty Voids)
+   Eliminates excessive empty gaps between sections and hero visual blocks
+   ========================================================================== */
+
+/* ── 1. DESKTOP & TABLET CADENCE (Crisp, Proportional 40-48px Paddings) ── */
+.exact-hero {
+    padding: 32px 0 18px !important;
+}
+
+.exact-hero-grid {
+    min-height: auto !important;
+    padding: 0 !important;
+    gap: clamp(20px, 3vw, 36px) !important;
+}
+
+.exact-hero-content {
+    margin-bottom: 0 !important;
+}
+
+.exact-hero-desc {
+    margin-bottom: 14px !important;
+}
+
+.exact-hero-actions {
+    margin-bottom: 10px !important;
+}
+
+.exact-hero-safety {
+    margin-bottom: 10px !important;
+}
+
+.hero-loan-pills {
+    margin-bottom: 10px !important;
+    gap: 6px !important;
+}
+
+.exact-hero .hero-trust-strip {
+    padding-top: 10px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.exact-hero-visual {
+    margin-bottom: 0 !important;
+}
+
+.hero-visual-frame {
+    margin: 0 auto !important;
+}
+
+/* ── 2. HERO-TO-MARQUEE TRANSITION & MARQUEE SECTION ── */
+.home-marquee-section {
+    padding: 18px 0 20px !important;
+}
+
+.home-marquee-label {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+}
+
+/* ── 3. CORE HOMEPAGE SECTIONS TIGHTENING ── */
+.pan-india-section {
+    padding: 40px 0 !important;
+}
+
+.pan-india-box {
+    padding: 32px 28px !important;
+    gap: 22px !important;
+}
+
+.pan-india-header {
+    margin-bottom: 22px !important;
+}
+
+.pan-india-cards {
+    gap: 16px !important;
+}
+
+.pan-india-suitability-box {
+    margin-top: 22px !important;
+    padding: 22px 20px !important;
+}
+
+.bridging-section {
+    padding: 40px 0 !important;
+}
+
+.bridging-inner {
+    padding: 32px 28px !important;
+}
+
+.bridging-header {
+    margin-bottom: 22px !important;
+}
+
+.bridging-cards-grid {
+    gap: 16px !important;
+}
+
+.disclosure-banner {
+    margin-top: 18px !important;
+    padding: 16px 20px !important;
+}
+
+.why-vps-section {
+    padding: 40px 0 !important;
+}
+
+.why-header-area {
+    margin-bottom: 22px !important;
+}
+
+.why-nine-grid {
+    gap: 16px !important;
+}
+
+.vps-final-cta,
+.vps-final-cta-domestic,
+.mbbs-final-cta-section {
+    padding: 36px 0 !important;
+}
+
+.vps-cta-content {
+    margin-bottom: 0 !important;
+}
+
+.vps-final-cta-btns {
+    margin-top: 18px !important;
+}
+
+.site-disclaimer-wrap {
+    padding: 18px 0 !important;
+}
+
+.footer {
+    padding-top: 48px !important;
+}
+
+/* ── 4. ALL SUBPAGE HERO & CONTENT SECTIONS ── */
+.page-hero,
+.about-hero,
+.partner-hero,
+.services-hero,
+.blog-hub-hero,
+.legal-hero,
+.mbbs-hero,
+.vps-hero,
+.vps-hero-domestic,
+.other-loans-hero {
+    padding: 44px 0 32px !important;
+}
+
+.about-purpose-section,
+.about-mission-section,
+.about-focus-section,
+.about-journey-section,
+.about-trust-section,
+.about-cta-section,
+.svc-programs-section,
+.svc-process-section,
+.svc-loan-types-section,
+.svc-cta-strip,
+.contact-section,
+.office-section,
+.lenders-section,
+.partner-section,
+.services-section,
+.vps-journey-section,
+.vps-apply-section,
+.vps-lenders-section,
+.vps-docs-section,
+.vps-comparison-section,
+.vps-dest-section,
+.vps-cosigner-section,
+.vps-domestic-info-section,
+.vps-expenses-courses-section,
+.vps-partners-process-section,
+.vps-proof-faq-section,
+.vps-streams-section,
+.vps-why-section,
+.blog-hub-section,
+.blog-layout-wrap,
+.country-stats-section,
+.legal-section-wrap,
+.legal-article-block,
+.financial-tools-section,
+.faq-section,
+.solutions-faq-section {
+    padding: 40px 0 !important;
+}
+
+.section-header,
+.section-head,
+.section-header-wrap,
+.vps-section-header {
+    margin-bottom: 22px !important;
+}
+
+/* ── 5. MOBILE & TABLET ZERO-VOID TIGHTENING (<= 768px) ── */
+@media (max-width: 768px) {
+    .exact-hero {
+        padding: 16px 0 10px !important;
+    }
+
+    .exact-hero-grid {
+        gap: 14px !important;
+        padding: 0 !important;
+    }
+
+    .exact-hero-visual {
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 440px !important;
+    }
+
+    .hero-visual-frame {
+        margin: 0 auto !important;
+        border-radius: 18px !important;
+        padding: 6px !important;
+    }
+
+    .hero-visual-img {
+        max-height: 290px !important;
+        border-radius: 14px !important;
+    }
+
+    .home-marquee-section {
+        padding: 12px 0 14px !important;
+    }
+
+    .home-marquee-label {
+        margin-bottom: 8px !important;
+        font-size: 11px !important;
+    }
+
+    .pan-india-section,
+    .bridging-section,
+    .why-vps-section,
+    .vps-final-cta,
+    .vps-final-cta-domestic,
+    .mbbs-final-cta-section,
+    .about-purpose-section,
+    .about-mission-section,
+    .about-focus-section,
+    .about-journey-section,
+    .about-trust-section,
+    .about-cta-section,
+    .svc-programs-section,
+    .svc-process-section,
+    .svc-loan-types-section,
+    .svc-cta-strip,
+    .contact-section,
+    .office-section,
+    .lenders-section,
+    .partner-section,
+    .services-section,
+    .vps-journey-section,
+    .vps-apply-section,
+    .vps-lenders-section,
+    .vps-docs-section,
+    .vps-comparison-section,
+    .vps-dest-section,
+    .vps-cosigner-section,
+    .vps-domestic-info-section,
+    .vps-expenses-courses-section,
+    .vps-partners-process-section,
+    .vps-proof-faq-section,
+    .vps-streams-section,
+    .vps-why-section,
+    .blog-hub-section,
+    .blog-layout-wrap,
+    .country-stats-section,
+    .legal-section-wrap,
+    .legal-article-block,
+    .financial-tools-section,
+    .faq-section,
+    .solutions-faq-section {
+        padding: 22px 0 !important;
+    }
+
+    .page-hero,
+    .about-hero,
+    .partner-hero,
+    .services-hero,
+    .blog-hub-hero,
+    .legal-hero,
+    .mbbs-hero,
+    .vps-hero,
+    .vps-hero-domestic,
+    .other-loans-hero {
+        padding: 24px 0 16px !important;
+    }
+
+    .section-header,
+    .section-head,
+    .section-header-wrap,
+    .vps-section-header,
+    .why-header-area,
+    .pan-india-header,
+    .bridging-header {
+        margin-bottom: 14px !important;
+    }
+
+    .pan-india-box,
+    .bridging-inner {
+        padding: 16px 14px !important;
+        gap: 14px !important;
+    }
+
+    .pan-india-suitability-box,
+    .disclosure-banner {
+        margin-top: 14px !important;
+        padding: 14px !important;
+    }
+
+    .site-disclaimer-wrap {
+        padding: 12px 0 !important;
+    }
+
+    .footer {
+        padding-top: 28px !important;
+    }
+}
+
+/* ── 6. ULTRA-COMPACT MOBILE TIGHTENING (<= 480px) ── */
+@media (max-width: 480px) {
+    .exact-hero {
+        padding: 12px 0 8px !important;
+    }
+
+    .exact-hero-grid {
+        gap: 10px !important;
+        padding: 0 !important;
+    }
+
+    .hero-visual-img {
+        max-height: 250px !important;
+    }
+
+    .home-marquee-section {
+        padding: 10px 0 12px !important;
+    }
+
+    .pan-india-section,
+    .bridging-section,
+    .why-vps-section,
+    .vps-final-cta {
+        padding: 18px 0 !important;
+    }
+}
+
+
