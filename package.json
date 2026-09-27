@@ -11,6 +11,7 @@
     "test": "node scripts/test-sync.js && node scripts/test-leads.js && node scripts/test-thankyou.js",
     "test:leads": "node scripts/test-leads.js",
     "test:thankyou": "node scripts/test-thankyou.js",
+    "push:leads": "node scripts/push-test-leads.js",
     "audit": "node scripts/production-audit.js"
   },
   "repository": {
