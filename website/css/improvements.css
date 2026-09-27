@@ -2911,7 +2911,8 @@ header.page-hero .green-highlight,
 }
 
 .mega-country-link .country-flag img,
-.country-flag .flag-icon {
+.country-flag .flag-icon,
+.flag-icon {
     width: 20px !important;
     height: 14px !important;
     object-fit: cover !important;
