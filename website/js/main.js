@@ -110,7 +110,239 @@ function resetPopupState() {
     console.log('VPS Popup state reset. Auto-triggers active.');
 }
 
+// --- VPS Lead Thank You Confirmation Screen (5-Second Auto-Dismiss) ---
+let _vpsThankYouTimer = null;
+let _vpsCountdownInterval = null;
+let _vpsActiveRestoreFn = null;
+
+function vpsDismissThankYou(triggerClose) {
+    if (_vpsThankYouTimer) {
+        clearTimeout(_vpsThankYouTimer);
+        _vpsThankYouTimer = null;
+    }
+    if (_vpsCountdownInterval) {
+        clearInterval(_vpsCountdownInterval);
+        _vpsCountdownInterval = null;
+    }
+    if (typeof _vpsActiveRestoreFn === 'function') {
+        const restore = _vpsActiveRestoreFn;
+        _vpsActiveRestoreFn = null;
+        restore();
+    }
+    if (triggerClose) {
+        const overlay = document.getElementById('popupOverlay');
+        if (overlay && overlay.classList.contains('active')) {
+            overlay.classList.remove('active');
+            overlay.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+            const floatBtn = document.getElementById('floatingEligibilityBtn');
+            if (floatBtn) floatBtn.classList.remove('hide');
+        }
+    }
+}
+window.vpsDismissThankYou = vpsDismissThankYou;
+
+function showLeadThankYouScreen(opts) {
+    const {
+        form,
+        firstName = '',
+        lastName = '',
+        phone = '',
+        whatsapp = '',
+        email = '',
+        interest = '',
+        durationMs = 5000,
+        waUrl = ''
+    } = opts;
+
+    if (!form) return;
+
+    // Dismiss any previously active screen cleanly
+    vpsDismissThankYou(false);
+
+    const modalEl = form.closest('.popup-modal');
+    const isModal = Boolean(modalEl);
+    const parentContainer = form.parentElement;
+
+    const originalFormDisplay = form.style.display;
+    form.style.display = 'none';
+
+    let headerEl = null;
+    let originalHeaderDisplay = '';
+    if (parentContainer) {
+        headerEl = parentContainer.querySelector('.popup-form-header');
+        if (headerEl) {
+            originalHeaderDisplay = headerEl.style.display;
+            headerEl.style.display = 'none';
+        }
+    }
+
+    if (modalEl) {
+        modalEl.classList.add('has-thankyou');
+    }
+
+    const cleanPhone = String(phone).replace(/\D/g, '');
+    const phoneDisplay = cleanPhone.length === 10
+        ? `${cleanPhone.slice(0, 5)} ${cleanPhone.slice(5)}`
+        : (cleanPhone || 'Registered Mobile');
+
+    const fullName = [firstName, lastName].filter(Boolean).join(' ').trim();
+
+    let targetWaUrl = waUrl;
+    if (!targetWaUrl) {
+        const leadMsg = encodeURIComponent(
+            `*New Education Loan Inquiry - Visionary Path Services*\n\n` +
+            `👤 *Name:* ${fullName || 'Student'}\n` +
+            `📞 *Phone:* +91 ${cleanPhone}\n` +
+            (whatsapp ? `💬 *WhatsApp:* +91 ${whatsapp}\n` : '') +
+            (email ? `✉️ *Email:* ${email}\n` : '') +
+            `🎯 *Interested In:* ${interest || 'Education Loan'}\n\n` +
+            `_Sent via visionarypathservices.com_`
+        );
+        targetWaUrl = `https://wa.me/918150949070?text=${leadMsg}`;
+    }
+
+    const screenEl = document.createElement('div');
+    screenEl.className = 'vps-thankyou-screen';
+    screenEl.setAttribute('role', 'status');
+    screenEl.setAttribute('aria-live', 'polite');
+
+    screenEl.innerHTML = `
+        <div class="vps-thankyou-icon-wrap">
+            <div class="vps-thankyou-icon-pulse"></div>
+            <div class="vps-thankyou-icon">
+                <svg viewBox="0 0 52 52" class="vps-checkmark-svg" aria-hidden="true">
+                    <circle class="vps-checkmark-circle" cx="26" cy="26" r="24" fill="none"/>
+                    <path class="vps-checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="vps-thankyou-badge">
+            <i class="fas fa-check-circle"></i> Application Received
+        </div>
+
+        <h3 class="vps-thankyou-title">Thank You for Submitting!</h3>
+        <p class="vps-thankyou-subtitle">Our team will contact you shortly</p>
+
+        <div class="vps-thankyou-card">
+            <div class="vps-thankyou-info-row">
+                <div class="vps-thankyou-info-icon"><i class="fas fa-phone-volume"></i></div>
+                <div class="vps-thankyou-info-text">
+                    <span class="vps-info-label">Advisory Call Scheduled</span>
+                    <span class="vps-info-val">+91 ${phoneDisplay}</span>
+                </div>
+            </div>
+            ${fullName ? `
+            <div class="vps-thankyou-info-row">
+                <div class="vps-thankyou-info-icon"><i class="fas fa-user-check"></i></div>
+                <div class="vps-thankyou-info-text">
+                    <span class="vps-info-label">Applicant Name</span>
+                    <span class="vps-info-val">${fullName}</span>
+                </div>
+            </div>` : ''}
+            <div class="vps-thankyou-info-row">
+                <div class="vps-thankyou-info-icon"><i class="fas fa-clock"></i></div>
+                <div class="vps-thankyou-info-text">
+                    <span class="vps-info-label">Expected Response</span>
+                    <span class="vps-info-val">Within 15–30 Minutes</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="vps-thankyou-steps">
+            <span class="vps-step-pill"><i class="fas fa-check"></i> Profile Check</span>
+            <span class="vps-step-arrow"><i class="fas fa-arrow-right"></i></span>
+            <span class="vps-step-pill"><i class="fas fa-building-columns"></i> 15+ Banks Comparison</span>
+            <span class="vps-step-arrow"><i class="fas fa-arrow-right"></i></span>
+            <span class="vps-step-pill"><i class="fas fa-percent"></i> Best Rate Sanction</span>
+        </div>
+
+        <div class="vps-thankyou-timer-box">
+            <div class="vps-timer-bar-track">
+                <div class="vps-timer-bar-fill"></div>
+            </div>
+            <div class="vps-timer-meta">
+                <span class="vps-timer-caption">
+                    <i class="fas fa-stopwatch"></i> Auto-closing in <strong class="vps-seconds-left">5</strong>s...
+                </span>
+                <button type="button" class="vps-timer-skip-btn" onclick="vpsDismissThankYou(true)">Close Now</button>
+            </div>
+        </div>
+
+        <div class="vps-thankyou-fasttrack">
+            <span>Need an immediate response?</span>
+            <a href="${targetWaUrl}" target="_blank" rel="noopener" class="vps-thankyou-wa-link">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+    `;
+
+    parentContainer.appendChild(screenEl);
+
+    // Prepare restore function
+    _vpsActiveRestoreFn = function() {
+        if (screenEl.parentNode) {
+            screenEl.parentNode.removeChild(screenEl);
+        }
+        if (modalEl) {
+            modalEl.classList.remove('has-thankyou');
+        }
+        form.style.display = originalFormDisplay;
+        if (headerEl) {
+            headerEl.style.display = originalHeaderDisplay;
+        }
+        form.reset();
+        form.dataset.submitting = 'false';
+        const inputs = form.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.classList.remove('is-success', 'is-error', 'touched');
+            input.removeAttribute('aria-invalid');
+            delete input.dataset.touched;
+            const err = input.closest('.form-group')?.querySelector('.field-error-msg');
+            if (err) {
+                err.textContent = '';
+                err.classList.remove('visible');
+            }
+        });
+        const btn = form.querySelector('button[type="submit"]');
+        if (btn) {
+            btn.removeAttribute('data-state');
+            btn.disabled = false;
+            btn.style.background = '';
+        }
+    };
+
+    // 5-second countdown timer and visual progress bar
+    const startTime = Date.now();
+    const endTime = startTime + durationMs;
+    const fillEl = screenEl.querySelector('.vps-timer-bar-fill');
+    const secEl = screenEl.querySelector('.vps-seconds-left');
+
+    _vpsCountdownInterval = setInterval(() => {
+        const now = Date.now();
+        const remaining = Math.max(0, endTime - now);
+        const sec = Math.max(1, Math.ceil(remaining / 1000));
+        const pct = Math.max(0, (remaining / durationMs) * 100);
+
+        if (secEl) secEl.textContent = String(sec);
+        if (fillEl) fillEl.style.width = pct.toFixed(1) + '%';
+
+        if (remaining <= 0) {
+            clearInterval(_vpsCountdownInterval);
+            _vpsCountdownInterval = null;
+        }
+    }, 40);
+
+    _vpsThankYouTimer = setTimeout(() => {
+        _vpsThankYouTimer = null;
+        vpsDismissThankYou(isModal);
+    }, durationMs);
+}
+window.showLeadThankYouScreen = showLeadThankYouScreen;
+
 function openPopup() {
+    vpsDismissThankYou(false);
     const overlay = document.getElementById('popupOverlay');
     if (overlay) {
         overlay.classList.add('active');
@@ -132,6 +364,7 @@ function openPopup() {
 }
 
 function closePopup() {
+    vpsDismissThankYou(false);
     const overlay = document.getElementById('popupOverlay');
     if (overlay) {
         overlay.classList.remove('active');
@@ -535,7 +768,7 @@ function submitForm(e) {
     if (btn) {
         btn.disabled = true;
         btn.setAttribute('data-state', 'loading');
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Connecting to Counselor...';
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
     }
 
     // Dual-Capture Resilience: Persist lead locally + optional CRM webhook forwarding + Google Forms
@@ -568,32 +801,18 @@ function submitForm(e) {
 
     const waUrl = `https://wa.me/918150949070?text=${leadMsg}`;
 
-    setTimeout(() => {
-        closePopup();
-        if (btn) {
-            btn.innerHTML = originalContent || 'Submit Enquiry <i class="fas fa-arrow-right"></i>';
-            btn.removeAttribute('data-state');
-            btn.style.background = '';
-            btn.disabled = false;
-        }
-        form.dataset.submitting = 'false';
-        form.reset();
-        inputs.forEach(input => {
-            input.classList.remove('is-success', 'is-error', 'touched');
-            input.removeAttribute('aria-invalid');
-            delete input.dataset.touched;
-            const err = input.closest('.form-group')?.querySelector('.field-error-msg');
-            if (err) {
-                err.textContent = '';
-                err.classList.remove('visible');
-            }
-        });
-        // Seamlessly open WhatsApp lead thread in new tab so counselor receives immediate ping
-        try {
-            const win = window.open(waUrl, '_blank');
-            if (!win) window.location.href = waUrl;
-        } catch (_) {}
-    }, 1000);
+    // Show Thank You Screen for exactly 5 seconds
+    showLeadThankYouScreen({
+        form,
+        firstName,
+        lastName,
+        phone,
+        whatsapp,
+        email,
+        interest,
+        durationMs: 5000,
+        waUrl
+    });
 }
 
 // --- Counter animation ---
