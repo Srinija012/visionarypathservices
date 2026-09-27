@@ -8017,8 +8017,11 @@ html, body {
 
     .btn-pan-action {
         width: 100% !important;
-        white-space: normal !important;
+        white-space: nowrap !important;
         text-align: center !important;
+        justify-content: center !important;
+        min-height: 48px !important;
+        padding: 0 16px !important;
     }
 }
 
@@ -15585,8 +15588,8 @@ input[aria-invalid="false"].touched:not(:focus),
     font-size: 13.5px !important;
     font-weight: 700 !important;
     color: #ffffff !important;
-    word-break: normal !important;
-    overflow-wrap: break-word !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
     line-height: 1.3 !important;
 }
 
@@ -16251,9 +16254,9 @@ input[aria-invalid="false"].touched:not(:focus),
    - 1024px : Tablet Landscape / Small Laptops
    ========================================================================== */
 
-/* ── 1. GLOBAL MOBILE-FIRST OVERFLOW GUARD & TOUCH DEFAULTS ── */
+/* ── 1. GLOBAL MOBILE-FIRST OVERFLOW GUARD & TOUCH DEFAULTS (Hallmark Gate 34, 51) ── */
 html, body {
-    overflow-x: hidden !important;
+    overflow-x: clip !important;
     width: 100% !important;
     max-width: 100% !important;
     position: relative !important;
@@ -16277,13 +16280,17 @@ a, button, input, select, textarea, [role="button"], [role="tab"] {
     touch-action: manipulation;
 }
 
-/* Global text wrap & overflow protection for headings and long words */
+/* Global text wrap & overflow protection for headings, long words & URLs (Hallmark Gate 51) */
 h1, h2, h3, h4, h5, h6, 
 .section-title, .exact-hero-title, .tools-heading, 
 .vps-thankyou-title, .hero-desc, p, .brand-eyebrow,
-.country-stat-val, .calc-pane-title, .disclaimer-title {
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
+.country-stat-val, .calc-pane-title, .disclaimer-title,
+.snapshot-stat-val, .method-info a, .contact-list a,
+.featured-title, .post-title, .card-title, .disclaimer-item-text,
+.exact-hero-lead, .exact-hero-desc, .country-overview-body {
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+    min-width: 0 !important;
 }
 
 /* Container responsive fluid padding */

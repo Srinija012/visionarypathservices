@@ -19,7 +19,6 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
     overflow-x: clip;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -33,7 +32,6 @@ body {
     background: var(--white);
     line-height: 1.6;
     letter-spacing: -0.011em;
-    overflow-x: hidden;
     overflow-x: clip;
 }
 
@@ -3284,8 +3282,8 @@ img.vps-lazy.vps-lazy-loaded {
    - overflow-x protection
    ========================================== */
 
-/* Prevent horizontal scroll globally */
-html, body { overflow-x: hidden; }
+/* Prevent horizontal scroll globally (Hallmark Gate 34) */
+html, body { overflow-x: clip; }
 * { min-width: 0; }
 
 /* Country page inner grids — responsive */
