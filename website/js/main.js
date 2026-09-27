@@ -1702,6 +1702,127 @@ function initLenderFilters() {
     }
 })();
 
+// --- Mobile Interactive Carousel Controller for Why VPS Cards ---
+(function initMobileWhyCarousel() {
+    function setupCarousel() {
+        const grid = document.querySelector('.why-nine-grid');
+        if (!grid) return;
+
+        // Check if controls already exist
+        if (grid.parentElement.querySelector('.why-carousel-controls')) return;
+
+        const cards = grid.querySelectorAll('.why-feature-card');
+        if (!cards.length) return;
+
+        const controls = document.createElement('div');
+        controls.className = 'why-carousel-controls';
+        controls.setAttribute('role', 'region');
+        controls.setAttribute('aria-label', 'Why Choose Us carousel controls');
+
+        // Hint Badge
+        const hint = document.createElement('div');
+        hint.className = 'why-carousel-hint';
+        hint.innerHTML = '<i class="fas fa-hand-pointer" aria-hidden="true"></i> <span>Swipe cards (' + cards.length + ')</span>';
+        controls.appendChild(hint);
+
+        // Dots Container
+        const dotsWrap = document.createElement('div');
+        dotsWrap.className = 'why-carousel-dots';
+        dotsWrap.setAttribute('role', 'tablist');
+
+        const dots = [];
+        cards.forEach((card, idx) => {
+            const dot = document.createElement('button');
+            dot.className = 'why-carousel-dot' + (idx === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', 'Go to card ' + (idx + 1));
+            dot.setAttribute('type', 'button');
+            dot.addEventListener('click', () => {
+                const cardLeft = card.offsetLeft - grid.offsetLeft;
+                grid.scrollTo({ left: cardLeft - 16, behavior: 'smooth' });
+            });
+            dotsWrap.appendChild(dot);
+            dots.push(dot);
+        });
+        controls.appendChild(dotsWrap);
+
+        // Arrows Container
+        const arrowsWrap = document.createElement('div');
+        arrowsWrap.className = 'why-carousel-arrows';
+
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'why-carousel-btn prev';
+        prevBtn.setAttribute('aria-label', 'Previous benefit card');
+        prevBtn.setAttribute('type', 'button');
+        prevBtn.innerHTML = '<i class="fas fa-chevron-left" aria-hidden="true"></i>';
+
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'why-carousel-btn next';
+        nextBtn.setAttribute('aria-label', 'Next benefit card');
+        nextBtn.setAttribute('type', 'button');
+        nextBtn.innerHTML = '<i class="fas fa-chevron-right" aria-hidden="true"></i>';
+
+        function getCardStep() {
+            if (cards.length > 1) {
+                return (cards[1].offsetLeft - cards[0].offsetLeft) || 280;
+            }
+            return 280;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            grid.scrollBy({ left: -getCardStep(), behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            grid.scrollBy({ left: getCardStep(), behavior: 'smooth' });
+        });
+
+        arrowsWrap.appendChild(prevBtn);
+        arrowsWrap.appendChild(nextBtn);
+        controls.appendChild(arrowsWrap);
+
+        // Insert controls right under the why-nine-grid
+        grid.parentNode.insertBefore(controls, grid.nextSibling);
+
+        // Scroll listener with RAF throttling to update active dot
+        let ticking = false;
+        grid.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrollCenter = grid.scrollLeft + (grid.clientWidth / 2);
+                    let closestIdx = 0;
+                    let minDiff = Infinity;
+
+                    cards.forEach((card, idx) => {
+                        const cardCenter = (card.offsetLeft - grid.offsetLeft) + (card.offsetWidth / 2);
+                        const diff = Math.abs(scrollCenter - cardCenter);
+                        if (diff < minDiff) {
+                            minDiff = diff;
+                            closestIdx = idx;
+                        }
+                    });
+
+                    dots.forEach((dot, idx) => {
+                        if (idx === closestIdx) {
+                            dot.classList.add('active');
+                        } else {
+                            dot.classList.remove('active');
+                        }
+                    });
+
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupCarousel);
+    } else {
+        setupCarousel();
+    }
+})();
+
 
 
 

@@ -2550,13 +2550,12 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 600px) {
-    .why-nine-grid { grid-template-columns: 1fr; }
     .pan-india-section { padding: 18px 0; }
     .pan-india-box { padding: 20px 14px; gap: 16px; }
     .pan-india-header { flex: none; width: 100%; max-width: 100%; text-align: center; margin: 0; }
     .pan-india-title { font-size: 21px; margin-bottom: 6px; }
     .pan-india-sub { font-size: 13px; line-height: 1.5; }
-    .pan-india-cards { grid-template-columns: 1fr; gap: 12px; }
+    .pan-india-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 
     /* Popup features list single column on very small screens */
     .popup-features-list {
@@ -3362,10 +3361,10 @@ html, body { overflow-x: clip; }
     .core-focus-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* 480px: pan-india cards stack to 1 col */
+/* 480px: pan-india cards compact 2-col */
 @media (max-width: 480px) {
-    .pan-india-cards { grid-template-columns: 1fr !important; gap: 12px; }
-    .why-nine-grid { grid-template-columns: 1fr; }
+    .pan-india-cards { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 10px; }
+
 
     /* Hero loan pills — wrap tighter */
     .hero-loan-pills { gap: 6px; }

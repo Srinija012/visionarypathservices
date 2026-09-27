@@ -1,2 +1,3 @@
-2026/09/27-21:25:10.590 1323b42 Creating DB /Users/nani/Downloads/visionary path/scratch/chrome-profile/Default/shared_proto_db/metadata since it was missing.
-2026/09/27-21:25:10.596 1323b42 Reusing MANIFEST /Users/nani/Downloads/visionary path/scratch/chrome-profile/Default/shared_proto_db/metadata/MANIFEST-000001
+2026/09/27-21:29:44.353 1324e01 Reusing MANIFEST /Users/nani/Downloads/visionary path/scratch/chrome-profile/Default/shared_proto_db/metadata/MANIFEST-000001
+2026/09/27-21:29:44.353 1324e01 Recovering log #3
+2026/09/27-21:29:44.354 1324e01 Reusing old log /Users/nani/Downloads/visionary path/scratch/chrome-profile/Default/shared_proto_db/metadata/000003.log 

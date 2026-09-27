@@ -206,6 +206,9 @@ async function runAudit() {
                         const style = window.getComputedStyle(el);
                         if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') return;
 
+                        // Intentional marquee tracks are infinite animated strips contained by parent
+                        if (el.closest('.marquee, .marquee-track, .partners-marquee')) return;
+
                         const rect = el.getBoundingClientRect();
                         // Check if right edge exceeds viewport by more than 1px
                         if (rect.width > 0 && rect.right > winW + 1) {
@@ -225,7 +228,8 @@ async function runAudit() {
                     const interactives = document.querySelectorAll('button, .btn, input[type="submit"], input[type="button"], a.btn, .nav-links a, .hamburger, .floating-eligibility-btn, .whatsapp-float, select');
                     interactives.forEach(el => {
                         const style = window.getComputedStyle(el);
-                        if (style.display === 'none' || style.visibility === 'hidden') return;
+                        if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0' || style.pointerEvents === 'none') return;
+                        if (el.classList.contains('hide')) return;
                         const rect = el.getBoundingClientRect();
                         if (rect.width > 0 && rect.height > 0 && (rect.width < 43 || rect.height < 43)) {
                             smallTouchTargets.push({

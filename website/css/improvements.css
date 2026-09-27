@@ -3090,7 +3090,7 @@ textarea:focus {
     .page-hero h1,
     header.page-hero h1,
     .legal-hero h1 {
-        font-size: 1.85rem !important;
+        font-size: clamp(2rem, 5vw + 0.8rem, 2.5rem) !important;
     }
 
     .section-title {
@@ -6103,10 +6103,12 @@ html, body {
 
 @media (max-width: 480px) {
     .vps-dest-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
     }
     .vps-expenses-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
     }
     .vps-hero-actions,
     .vps-final-cta-btns {
@@ -8378,7 +8380,6 @@ html, body {
     }
 
     .loan-categories-grid,
-    .why-nine-grid,
     .bridging-cards-grid {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
@@ -16440,11 +16441,14 @@ h1, h2, h3, h4, h5, h6,
 .nav-backdrop {
     display: none;
     position: fixed;
-    inset: 0;
+    top: var(--nav-height, 56px) !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(11, 31, 51, 0.48);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    z-index: 997;
+    z-index: 996 !important;
     opacity: 0;
     transition: opacity 0.25s ease;
     cursor: pointer;
@@ -16453,6 +16457,26 @@ h1, h2, h3, h4, h5, h6,
 body.menu-open .nav-backdrop {
     display: block !important;
     opacity: 1 !important;
+}
+
+.nav-inner {
+    position: relative !important;
+    z-index: 1002 !important;
+}
+
+body.menu-open .nav-inner {
+    position: relative !important;
+    z-index: 1002 !important;
+}
+
+body.menu-open .logo,
+body.menu-open .hamburger {
+    position: relative !important;
+    z-index: 1003 !important;
+}
+
+.mobile-drawer-footer {
+    display: none !important;
 }
 
 @media (max-width: 480px) {
@@ -16510,8 +16534,9 @@ body.menu-open .navbar.scrolled-elevated {
     -webkit-backdrop-filter: none !important;
     filter: none !important;
     transform: none !important;
-    box-shadow: 0 2px 12px rgba(11, 31, 51, 0.08) !important;
-    z-index: 1000 !important;
+    box-shadow: 0 1px 4px rgba(11, 31, 51, 0.08) !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+    z-index: 1001 !important;
 }
 
 @keyframes vpsMenuSlideDown {
@@ -16649,19 +16674,21 @@ body.menu-open .navbar.scrolled-elevated {
     }
     .nav-links > li > a {
         width: 100% !important;
-        font-size: 15px !important;
+        font-size: 15.5px !important;
         font-weight: 600 !important;
         color: var(--color-navy, #0B1F33) !important;
-        padding: 12px 14px !important;
+        padding: 13px 14px !important;
         min-height: 48px !important;
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
-        border-radius: 10px !important;
+        border-radius: 8px !important;
         background: transparent !important;
+        border-bottom: 1px solid #F1F5F9 !important;
         transition: background 0.15s ease, color 0.15s ease !important;
     }
     .nav-links > li > a:hover,
+    .nav-links > li > a:active,
     .nav-links > li > a.active {
         background: #F1F5F9 !important;
         color: var(--color-orange, #FF5A00) !important;
@@ -16821,6 +16848,108 @@ body.menu-open .navbar.scrolled-elevated {
         font-size: 14.5px !important;
         font-weight: 600 !important;
         border-radius: 10px !important;
+    }
+
+    /* Mobile Drawer Advisory & Contact Card */
+    .mobile-drawer-footer {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 14px !important;
+        padding-top: 4px !important;
+        border-top: none !important;
+    }
+    .mobile-drawer-card {
+        background: linear-gradient(145deg, #F8FAFC 0%, #EFF6FF 100%) !important;
+        border: 1px solid #DCE4EA !important;
+        border-radius: 14px !important;
+        padding: 14px 16px !important;
+        box-shadow: 0 2px 10px rgba(11, 31, 51, 0.04) !important;
+        box-sizing: border-box !important;
+    }
+    .mobile-drawer-card-badge {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        font-size: 11.5px !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        color: #0369A1 !important;
+        background: rgba(14, 165, 233, 0.12) !important;
+        padding: 4px 10px !important;
+        border-radius: 9999px !important;
+        margin-bottom: 12px !important;
+    }
+    .mobile-drawer-contact-links {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        margin-bottom: 10px !important;
+    }
+    .mobile-drawer-contact-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+        padding: 10px 12px !important;
+        background: #ffffff !important;
+        border: 1px solid #E2E8F0 !important;
+        border-radius: 10px !important;
+        text-decoration: none !important;
+        transition: border-color 0.2s ease, transform 0.15s ease !important;
+    }
+    .mobile-drawer-contact-item:hover,
+    .mobile-drawer-contact-item:active {
+        border-color: var(--color-orange, #FF5A00) !important;
+    }
+    .contact-item-icon {
+        width: 34px !important;
+        height: 34px !important;
+        min-width: 34px !important;
+        border-radius: 8px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 14px !important;
+    }
+    .contact-item-icon.bg-call {
+        background: rgba(255, 90, 0, 0.1) !important;
+        color: var(--color-orange, #FF5A00) !important;
+    }
+    .contact-item-icon.bg-mail {
+        background: rgba(14, 165, 233, 0.1) !important;
+        color: #0284C7 !important;
+    }
+    .contact-item-text {
+        display: flex !important;
+        flex-direction: column !important;
+        min-width: 0 !important;
+    }
+    .contact-item-label {
+        font-size: 11px !important;
+        font-weight: 600 !important;
+        color: #64748B !important;
+        line-height: 1.2 !important;
+    }
+    .contact-item-val {
+        font-size: 13.5px !important;
+        font-weight: 700 !important;
+        color: var(--color-navy, #0B1F33) !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    .mobile-drawer-meta {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        font-size: 11px !important;
+        color: #64748B !important;
+        font-weight: 500 !important;
+        padding-top: 4px !important;
+    }
+    .mobile-drawer-meta .meta-dot {
+        color: var(--color-orange, #FF5A00) !important;
     }
 }
 
@@ -17048,7 +17177,7 @@ body.menu-open .navbar.scrolled-elevated {
     .about-hero h1,
     .legal-hero h1,
     .blog-hub-hero h1 {
-        font-size: clamp(1.6rem, 7vw, 2.15rem) !important;
+        font-size: clamp(2rem, 5vw + 0.8rem, 2.5rem) !important;
     }
     .snapshot-stats-grid {
         grid-template-columns: 1fr !important;
@@ -17212,14 +17341,12 @@ body.menu-open .navbar.scrolled-elevated {
 }
 
 @media (max-width: 600px) {
-    .why-nine-grid,
     .loan-categories-grid,
     .bridging-cards-grid,
     .services-grid,
     .services-unified-grid,
     .core-focus-grid,
     .docs-cards-grid,
-    .pan-india-cards,
     .posts-grid,
     .blog-grid,
     .trust-grid,
@@ -17228,17 +17355,10 @@ body.menu-open .navbar.scrolled-elevated {
     .about-journey-grid,
     .about-philosophy-grid,
     .mission-values-grid,
-    .svc-programs-grid,
-    .svc-process-grid,
     .process-grid,
     .who-grid,
     .students-get-grid,
-    .vps-streams-5grid,
     .vps-eligibility-grid,
-    .vps-expenses-5grid,
-    .vps-topcourses-6grid,
-    .mbbs-benefits-grid,
-    .mbbs-expenses-grid,
     .grid-3,
     .grid-4 {
         grid-template-columns: 1fr !important;
@@ -18344,9 +18464,27 @@ h1, h2,
         box-sizing: border-box !important;
     }
 
+    .btn-lg,
+    .btn-primary.btn-lg,
+    .btn-whatsapp.btn-lg,
+    .btn-secondary.btn-whatsapp,
+    a.btn.btn-whatsapp,
+    button.btn.btn-primary,
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        min-height: 48px !important;
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+        box-sizing: border-box !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
     .floating-eligibility-btn {
-        min-height: 44px !important;
-        padding: 10px 18px !important;
+        min-height: 48px !important;
+        height: 48px !important;
+        padding: 0 20px !important;
         font-size: 13.5px !important;
         font-weight: 700 !important;
         display: inline-flex !important;
@@ -18358,6 +18496,7 @@ h1, h2,
         left: 14px !important;
         max-width: calc(100vw - 84px) !important;
         box-shadow: 0 4px 18px rgba(11, 31, 51, 0.28) !important;
+        box-sizing: border-box !important;
     }
 
     .whatsapp-float {
@@ -18528,6 +18667,8 @@ h1, h2,
 /* ── 3. RESPONSIVE CLAMP TYPOGRAPHY (32-40PX HERO HEADINGS) ── */
 h1,
 .page-hero h1,
+header.page-hero h1,
+.page-hero-content h1,
 .exact-hero-title,
 .hero-title,
 .about-hero h1,
@@ -18545,6 +18686,8 @@ h1,
 @media (min-width: 1024px) {
     h1,
     .page-hero h1,
+    header.page-hero h1,
+    .page-hero-content h1,
     .exact-hero-title,
     .hero-title,
     .about-hero h1,
@@ -18576,6 +18719,7 @@ body {
 }
 
 .vps-hero-swoosh,
+.vps-cta-swoosh,
 .hero-bg-accent,
 .page-hero-pattern,
 .hero-bg-shapes {
@@ -18585,49 +18729,54 @@ body {
 }
 
 @media (max-width: 768px) {
-    .vps-hero-swoosh {
+    .vps-hero-swoosh,
+    .vps-cta-swoosh {
         display: none !important;
     }
     .vps-hero,
-    .vps-hero-domestic {
+    .vps-hero-domestic,
+    .vps-final-cta {
         overflow: hidden !important;
         position: relative !important;
     }
 }
 
-/* Calculator tabs native horizontal swipe bar with scroll snap */
+/* Calculator tabs mobile responsive grid layout */
 @media (max-width: 768px) {
     .calc-tabs-wrapper {
         width: 100% !important;
         max-width: 100% !important;
-        overflow: hidden !important;
+        overflow: visible !important;
     }
-    .calc-tabs-nav,
-    .calc-tabs {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch !important;
-        scroll-snap-type: x mandatory !important;
+    .calc-tabs-nav {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 8px !important;
-        padding: 6px 4px 12px 4px !important;
-        scrollbar-width: none !important;
         width: 100% !important;
         max-width: 100% !important;
+        padding: 6px 0 12px 0 !important;
         box-sizing: border-box !important;
     }
-    .calc-tabs-nav::-webkit-scrollbar,
-    .calc-tabs::-webkit-scrollbar {
-        display: none !important;
+    .calc-tabs-nav .calc-tab-btn:last-child {
+        grid-column: 1 / -1 !important;
     }
     .calc-tab-btn {
-        flex: 0 0 auto !important;
-        min-width: auto !important;
-        min-height: 44px !important;
-        padding: 10px 16px !important;
-        font-size: 13.5px !important;
-        scroll-snap-align: start !important;
-        white-space: nowrap !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 48px !important;
+        padding: 10px 14px !important;
+        font-size: 13px !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+    }
+}
+
+@media (max-width: 440px) {
+    .calc-tabs-nav {
+        grid-template-columns: 1fr !important;
+    }
+    .calc-tabs-nav .calc-tab-btn:last-child {
+        grid-column: auto !important;
     }
 }
 
@@ -18801,6 +18950,394 @@ body {
     .snapshot-stat-card {
         padding: 12px 10px !important;
         border-radius: 10px !important;
+    }
+}
+
+/* ── 8. COMPACT & ENGAGING MOBILE CARD UX (ANTI-SCROLL BLOAT) ── */
+/* 
+   Solves repetitive, endless scrolling on mobile viewports:
+   - Why VPS (9 cards): Converted from 2,000px vertical stack to a sleek, hardware-accelerated horizontal snap track (Carousel) with peek indicators, swipe dots & arrows.
+   - PAN India (4 cards): Converted from 800px stack to a tight 2x2 micro-card matrix (~220px height).
+   - Destinations (8 cards): Kept in a crisp 2-column catalog grid (~450px) instead of 2,400px vertical doom-scroll.
+   - Streams, Top Courses, Benefits, & Expenses: Retained in 2-column compact matrices.
+   - Bridging Cards: Streamlined internal padding and tight check items.
+*/
+
+/* 1. Why VPS 9-Card Mobile Carousel */
+@media (max-width: 768px) {
+    .why-vps-section {
+        overflow: hidden !important;
+    }
+
+    .why-nine-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 14px !important;
+        padding: 8px 16px 20px !important;
+        margin-left: -16px !important;
+        margin-right: -16px !important;
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+        cursor: grab !important;
+    }
+
+    .why-nine-grid::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+
+    .why-feature-card {
+        flex: 0 0 82% !important;
+        max-width: 310px !important;
+        min-width: 260px !important;
+        scroll-snap-align: center !important;
+        scroll-snap-stop: normal !important;
+        padding: 20px 18px !important;
+        border-radius: 16px !important;
+        background: #ffffff !important;
+        border: 1px solid #E2E8F0 !important;
+        border-top: 3px solid #FF5A00 !important;
+        box-shadow: 0 6px 20px rgba(11, 31, 51, 0.06) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        position: relative !important;
+        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    }
+
+    .why-feature-card:active {
+        transform: scale(0.985) !important;
+    }
+
+    .why-feature-card .w-icon-circle {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 16px !important;
+        margin-bottom: 12px !important;
+        border-radius: 10px !important;
+    }
+
+    .why-feature-card .w-num {
+        position: absolute !important;
+        top: 16px !important;
+        right: 16px !important;
+        font-size: 18px !important;
+        font-weight: 800 !important;
+        color: #0B1F33 !important;
+        opacity: 0.25 !important;
+        margin: 0 !important;
+    }
+
+    .why-feature-card h4 {
+        font-size: 15px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 6px !important;
+        font-weight: 800 !important;
+        color: #0B1F33 !important;
+    }
+
+    .why-feature-card p {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+        color: #475569 !important;
+    }
+}
+
+/* Dynamic Carousel Controls Bar for Why VPS */
+.why-carousel-controls {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .why-carousel-controls {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 6px 2px 0 !important;
+        margin-bottom: 12px !important;
+        gap: 8px !important;
+    }
+
+    .why-carousel-hint {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        font-size: 11.5px !important;
+        font-weight: 700 !important;
+        color: #FF5A00 !important;
+        background: #FFF1E8 !important;
+        padding: 4px 10px !important;
+        border-radius: 9999px !important;
+        border: 1px solid #FFE5D6 !important;
+    }
+
+    .why-carousel-dots {
+        display: flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+    }
+
+    .why-carousel-dot {
+        width: 6px !important;
+        height: 6px !important;
+        border-radius: 9999px !important;
+        background: #CBD5E1 !important;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        cursor: pointer !important;
+        border: none !important;
+        padding: 0 !important;
+    }
+
+    .why-carousel-dot.active {
+        width: 18px !important;
+        background: #FF5A00 !important;
+    }
+
+    .why-carousel-arrows {
+        display: flex !important;
+        gap: 6px !important;
+    }
+
+    .why-carousel-btn {
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 50% !important;
+        background: #FFFFFF !important;
+        border: 1px solid #CBD5E1 !important;
+        color: #0B1F33 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 12px !important;
+        cursor: pointer !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+        transition: all 0.2s ease !important;
+    }
+
+    .why-carousel-btn:active {
+        transform: scale(0.92) !important;
+        background: #F8FAFC !important;
+    }
+}
+
+/* 2. PAN India 4-Card Compact 2x2 Matrix */
+@media (max-width: 640px) {
+    .pan-india-cards {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .pan-card {
+        padding: 14px 12px !important;
+        border-radius: 14px !important;
+        min-height: 124px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        box-shadow: 0 4px 14px rgba(11, 31, 51, 0.04) !important;
+        border: 1px solid rgba(0, 0, 0, 0.06) !important;
+        position: relative !important;
+        transition: transform 0.2s ease !important;
+    }
+
+    .pan-card:active {
+        transform: scale(0.985) !important;
+    }
+
+    .pan-card-badge {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 13px !important;
+        margin-bottom: 8px !important;
+        border-radius: 8px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .pan-card-num {
+        position: absolute !important;
+        font-size: 13px !important;
+        top: 12px !important;
+        right: 12px !important;
+        opacity: 0.3 !important;
+        font-weight: 700 !important;
+    }
+
+    .pan-card h3 {
+        font-size: 13px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 4px !important;
+        font-weight: 700 !important;
+        color: #0B1F33 !important;
+    }
+
+    .pan-card p {
+        font-size: 11px !important;
+        line-height: 1.35 !important;
+        color: #64748b !important;
+    }
+}
+
+/* 3. Bridging the Gap Streamlined Mobile Cards */
+@media (max-width: 768px) {
+    .bridging-cards-grid {
+        gap: 14px !important;
+    }
+
+    .bridge-card {
+        padding: 18px 16px !important;
+        border-radius: 14px !important;
+        box-shadow: 0 4px 16px rgba(11, 31, 51, 0.05) !important;
+    }
+
+    .bridge-card:first-child {
+        border-top: 3px solid #FF5A00 !important;
+    }
+
+    .bridge-card:last-child {
+        border-top: 3px solid #0B1F33 !important;
+    }
+
+    .bridge-card-top {
+        margin-bottom: 12px !important;
+        gap: 10px !important;
+    }
+
+    .bridge-icon-wrap {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 15px !important;
+        border-radius: 10px !important;
+    }
+
+    .bridge-card-top h3 {
+        font-size: 15px !important;
+        line-height: 1.3 !important;
+    }
+
+    .bridge-number {
+        font-size: 18px !important;
+    }
+
+    .bridge-points {
+        margin-top: 8px !important;
+        gap: 0 !important;
+    }
+
+    .bridge-points li {
+        padding: 6px 0 !important;
+        font-size: 13px !important;
+        line-height: 1.35 !important;
+        gap: 8px !important;
+    }
+
+    .circle-check {
+        width: 20px !important;
+        height: 20px !important;
+        font-size: 10px !important;
+        flex-shrink: 0 !important;
+    }
+}
+
+/* 4. Destination Cards 2-Column Compact Catalog */
+@media (max-width: 640px) {
+    .vps-dest-grid,
+    .mbbs-dest-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .vps-dest-card,
+    .mbbs-dest-card {
+        border-radius: 12px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
+        box-shadow: 0 4px 12px rgba(11, 31, 51, 0.05) !important;
+        background: #ffffff !important;
+    }
+
+    .vps-dest-img-wrap,
+    .mbbs-dest-img-wrap {
+        height: 95px !important;
+        overflow: hidden !important;
+    }
+
+    .vps-dest-content,
+    .mbbs-dest-content {
+        padding: 10px 8px !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 !important;
+        justify-content: space-between !important;
+    }
+
+    .vps-dest-content h3,
+    .mbbs-dest-content h3 {
+        font-size: 13.5px !important;
+        font-weight: 700 !important;
+        margin-bottom: 2px !important;
+    }
+
+    .vps-dest-content p,
+    .mbbs-dest-content p {
+        font-size: 11px !important;
+        margin-bottom: 8px !important;
+        line-height: 1.25 !important;
+        color: #64748b !important;
+    }
+
+    .vps-dest-btn,
+    .mbbs-dest-btn {
+        padding: 6px 8px !important;
+        font-size: 11px !important;
+        min-height: 32px !important;
+        width: 100% !important;
+        border-radius: 8px !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+    }
+}
+
+/* 5. Inner Pages Multi-Item Cards (Streams, Courses, Benefits, Expenses) */
+@media (max-width: 640px) {
+    .vps-streams-5grid,
+    .vps-topcourses-6grid,
+    .vps-expenses-5grid,
+    .vps-expenses-grid,
+    .mbbs-benefits-grid,
+    .mbbs-expenses-grid,
+    .vps-why-grid,
+    .svc-programs-grid,
+    .svc-process-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .vps-expense-card,
+    .vps-course-card,
+    .vps-stream-card,
+    .mbbs-benefit-card,
+    .vps-why-card {
+        padding: 14px 10px !important;
+        border-radius: 12px !important;
+    }
+
+    .vps-card-icon-box {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 14px !important;
+        margin-bottom: 8px !important;
     }
 }
 
