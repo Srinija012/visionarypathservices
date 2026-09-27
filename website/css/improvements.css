@@ -20087,5 +20087,173 @@ body {
     }
 }
 
+/* ══════════════════════════════════════════════════════════════════
+   MOBILE DUAL ACTION BUTTONS SIDE-BY-SIDE ARCHITECTURE (Space Optimization)
+   Ensures Primary & Secondary CTAs ("Check Eligibility" & "Talk to an Expert")
+   remain side-by-side everywhere on mobile view to eliminate vertical scroll bloat.
+   ══════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .exact-hero-actions,
+    .vps-hero-actions,
+    .hero-btns,
+    .hero-action-group,
+    .vps-final-cta-btns,
+    .mbbs-hero-ctas,
+    .mbbs-final-btns,
+    .about-hero-actions,
+    .about-cta-btns,
+    .svc-cta-btns,
+    .cta-bar .cta-btns,
+    .office-cta-col .cta-btns,
+    .cta-strip .cta-btns,
+    .partner-page-wrap .cta-btns {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: stretch !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        gap: 8px !important;
+    }
+
+    .exact-hero-actions > button,
+    .exact-hero-actions > a,
+    .vps-hero-actions > button,
+    .vps-hero-actions > a,
+    .hero-btns > button,
+    .hero-btns > a,
+    .hero-action-group > button,
+    .hero-action-group > a,
+    .vps-final-cta-btns > button,
+    .vps-final-cta-btns > a,
+    .mbbs-hero-ctas > button,
+    .mbbs-hero-ctas > a,
+    .mbbs-final-btns > button,
+    .mbbs-final-btns > a,
+    .about-hero-actions > button,
+    .about-hero-actions > a,
+    .about-cta-btns > button,
+    .about-cta-btns > a,
+    .svc-cta-btns > button,
+    .svc-cta-btns > a,
+    .cta-bar .cta-btns > button,
+    .cta-bar .cta-btns > a,
+    .office-cta-col .cta-btns > button,
+    .office-cta-col .cta-btns > a,
+    .cta-strip .cta-btns > button,
+    .cta-strip .cta-btns > a,
+    .partner-page-wrap .cta-btns > button,
+    .partner-page-wrap .cta-btns > a {
+        flex: 1 1 0px !important;
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        min-height: 44px !important;
+        padding: 0 6px !important;
+        font-size: clamp(11px, 3.1vw, 13px) !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.2px !important;
+        white-space: nowrap !important;
+        border-radius: 9999px !important;
+        margin: 0 !important;
+    }
+
+    .exact-hero-actions i,
+    .vps-hero-actions i,
+    .hero-btns i,
+    .hero-action-group i,
+    .vps-final-cta-btns i,
+    .mbbs-hero-ctas i,
+    .mbbs-final-btns i,
+    .about-hero-actions i,
+    .about-cta-btns i,
+    .svc-cta-btns i,
+    .cta-bar .cta-btns i,
+    .office-cta-col .cta-btns i,
+    .cta-strip .cta-btns i,
+    .partner-page-wrap .cta-btns i {
+        font-size: 13px !important;
+        flex-shrink: 0 !important;
+        margin: 0 3px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .exact-hero-actions,
+    .vps-hero-actions,
+    .hero-btns,
+    .hero-action-group,
+    .vps-final-cta-btns,
+    .mbbs-hero-ctas,
+    .mbbs-final-btns,
+    .about-hero-actions,
+    .about-cta-btns,
+    .svc-cta-btns,
+    .cta-bar .cta-btns,
+    .office-cta-col .cta-btns,
+    .cta-strip .cta-btns,
+    .partner-page-wrap .cta-btns {
+        gap: 5px !important;
+    }
+
+    .exact-hero-actions > button,
+    .exact-hero-actions > a,
+    .vps-hero-actions > button,
+    .vps-hero-actions > a,
+    .hero-btns > button,
+    .hero-btns > a,
+    .hero-action-group > button,
+    .hero-action-group > a,
+    .vps-final-cta-btns > button,
+    .vps-final-cta-btns > a,
+    .mbbs-hero-ctas > button,
+    .mbbs-hero-ctas > a,
+    .mbbs-final-btns > button,
+    .mbbs-final-btns > a,
+    .about-hero-actions > button,
+    .about-hero-actions > a,
+    .about-cta-btns > button,
+    .about-cta-btns > a,
+    .svc-cta-btns > button,
+    .svc-cta-btns > a,
+    .cta-bar .cta-btns > button,
+    .cta-bar .cta-btns > a,
+    .office-cta-col .cta-btns > button,
+    .office-cta-col .cta-btns > a,
+    .cta-strip .cta-btns > button,
+    .cta-strip .cta-btns > a,
+    .partner-page-wrap .cta-btns > button,
+    .partner-page-wrap .cta-btns > a {
+        font-size: 10.5px !important;
+        padding: 0 3px !important;
+        min-height: 42px !important;
+    }
+
+    .exact-hero-actions i,
+    .vps-hero-actions i,
+    .hero-btns i,
+    .hero-action-group i,
+    .vps-final-cta-btns i,
+    .mbbs-hero-ctas i,
+    .mbbs-final-btns i,
+    .about-hero-actions i,
+    .about-cta-btns i,
+    .svc-cta-btns i,
+    .cta-bar .cta-btns i,
+    .office-cta-col .cta-btns i,
+    .cta-strip .cta-btns i,
+    .partner-page-wrap .cta-btns i {
+        font-size: 11px !important;
+        margin: 0 2px !important;
+    }
+}
+
 /* Hallmark · mobile: pass (34, 49, 50–57) · viewports: 320px · 375px · 414px · 768px */
 
