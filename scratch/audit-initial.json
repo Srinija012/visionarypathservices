@@ -1,0 +1,7290 @@
+[
+  {
+    "page": "404.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [],
+        "sub48Inputs": [],
+        "h1Size": 35,
+        "stickyButtons": []
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [],
+        "sub48Inputs": [],
+        "h1Size": 35,
+        "stickyButtons": []
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [],
+        "sub48Inputs": [],
+        "h1Size": 35,
+        "stickyButtons": []
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [],
+        "sub48Inputs": [],
+        "h1Size": 35,
+        "stickyButtons": []
+      }
+    }
+  },
+  {
+    "page": "index.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-inner",
+            "width": 9738,
+            "right": 9738,
+            "overflowPx": 9363
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 227,
+            "right": 518,
+            "overflowPx": 143
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 443,
+            "overflowPx": 68
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-nbfc",
+            "width": 46,
+            "right": 501,
+            "overflowPx": 126
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 279,
+            "right": 815,
+            "overflowPx": 440
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 688,
+            "overflowPx": 313
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-pvt",
+            "width": 98,
+            "right": 798,
+            "overflowPx": 423
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 227,
+            "right": 1060,
+            "overflowPx": 685
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 985,
+            "overflowPx": 610
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-nbfc",
+            "width": 46,
+            "right": 1043,
+            "overflowPx": 668
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn",
+            "width": 134,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 28,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-inner",
+            "width": 9738,
+            "right": 9738,
+            "overflowPx": 9348
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 227,
+            "right": 518,
+            "overflowPx": 128
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 443,
+            "overflowPx": 53
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-nbfc",
+            "width": 46,
+            "right": 501,
+            "overflowPx": 111
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 279,
+            "right": 815,
+            "overflowPx": 425
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 688,
+            "overflowPx": 298
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-pvt",
+            "width": 98,
+            "right": 798,
+            "overflowPx": 408
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 227,
+            "right": 1060,
+            "overflowPx": 670
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 985,
+            "overflowPx": 595
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-nbfc",
+            "width": 46,
+            "right": 1043,
+            "overflowPx": 653
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn",
+            "width": 134,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 29,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-inner",
+            "width": 9738,
+            "right": 9738,
+            "overflowPx": 9308
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 227,
+            "right": 518,
+            "overflowPx": 88
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 443,
+            "overflowPx": 13
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-nbfc",
+            "width": 46,
+            "right": 501,
+            "overflowPx": 71
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 279,
+            "right": 815,
+            "overflowPx": 385
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 688,
+            "overflowPx": 258
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-pvt",
+            "width": 98,
+            "right": 798,
+            "overflowPx": 368
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 227,
+            "right": 1060,
+            "overflowPx": 630
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 985,
+            "overflowPx": 555
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-nbfc",
+            "width": 46,
+            "right": 1043,
+            "overflowPx": 613
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn",
+            "width": 134,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 32,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-inner",
+            "width": 9738,
+            "right": 9738,
+            "overflowPx": 8970
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 279,
+            "right": 815,
+            "overflowPx": 47
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-pvt",
+            "width": 98,
+            "right": 798,
+            "overflowPx": 30
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 227,
+            "right": 1060,
+            "overflowPx": 292
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 985,
+            "overflowPx": 217
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-nbfc",
+            "width": 46,
+            "right": 1043,
+            "overflowPx": 275
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 279,
+            "right": 1357,
+            "overflowPx": 589
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 1230,
+            "overflowPx": 462
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-pvt",
+            "width": 98,
+            "right": 1340,
+            "overflowPx": 572
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 273,
+            "right": 1648,
+            "overflowPx": 880
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn",
+            "width": 200,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 40,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/about.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn",
+            "width": 143,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 26,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 143,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 27,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 143,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 209,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 35,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/abroad-loans.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "vps-comparison-table",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 224,
+            "right": 401,
+            "overflowPx": 26
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 194,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 224,
+            "right": 401,
+            "overflowPx": 26
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 194,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "strong",
+            "id": "",
+            "className": "",
+            "width": 102,
+            "right": 516,
+            "overflowPx": 141
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 143,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 28,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "vps-comparison-table",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 224,
+            "right": 401,
+            "overflowPx": 11
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 194,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 224,
+            "right": 401,
+            "overflowPx": 11
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 194,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "strong",
+            "id": "",
+            "className": "",
+            "width": 102,
+            "right": 516,
+            "overflowPx": 126
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 143,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 29,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "vps-comparison-table",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 192,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 192,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "strong",
+            "id": "",
+            "className": "",
+            "width": 98,
+            "right": 513,
+            "overflowPx": 83
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 192,
+            "right": 595,
+            "overflowPx": 165
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 32,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "",
+            "className": "vps-cta-swoosh",
+            "width": 360,
+            "right": 868,
+            "overflowPx": 100
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 40,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/blog.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "All Articles",
+            "className": "hub-category-pill active",
+            "width": 82,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "CIBIL & Eligibility",
+            "className": "hub-category-pill",
+            "width": 115,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "Study Abroad",
+            "className": "hub-category-pill",
+            "width": 98,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "Collateral vs Unsecured",
+            "className": "hub-category-pill",
+            "width": 154,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "MBBS Financing",
+            "className": "hub-category-pill",
+            "width": 113,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "Domestic Studies",
+            "className": "hub-category-pill",
+            "width": 119,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "Bank Rates & NBFCs",
+            "className": "hub-category-pill",
+            "width": 135,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 26,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "All Articles",
+            "className": "hub-category-pill active",
+            "width": 89,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "CIBIL & Eligibility",
+            "className": "hub-category-pill",
+            "width": 123,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "Study Abroad",
+            "className": "hub-category-pill",
+            "width": 106,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "Collateral vs Unsecured",
+            "className": "hub-category-pill",
+            "width": 164,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "MBBS Financing",
+            "className": "hub-category-pill",
+            "width": 120,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "Domestic Studies",
+            "className": "hub-category-pill",
+            "width": 128,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "Bank Rates & NBFCs",
+            "className": "hub-category-pill",
+            "width": 144,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 27,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "All Articles",
+            "className": "hub-category-pill active",
+            "width": 89,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "CIBIL & Eligibility",
+            "className": "hub-category-pill",
+            "width": 123,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "Study Abroad",
+            "className": "hub-category-pill",
+            "width": 106,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "Collateral vs Unsecured",
+            "className": "hub-category-pill",
+            "width": 164,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "MBBS Financing",
+            "className": "hub-category-pill",
+            "width": 120,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "Domestic Studies",
+            "className": "hub-category-pill",
+            "width": 128,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "Bank Rates & NBFCs",
+            "className": "hub-category-pill",
+            "width": 144,
+            "height": 34
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "All Articles",
+            "className": "hub-category-pill active",
+            "width": 106,
+            "height": 38
+          },
+          {
+            "tag": "button",
+            "text": "CIBIL & Eligibility",
+            "className": "hub-category-pill",
+            "width": 143,
+            "height": 38
+          },
+          {
+            "tag": "button",
+            "text": "Study Abroad",
+            "className": "hub-category-pill",
+            "width": 124,
+            "height": 38
+          },
+          {
+            "tag": "button",
+            "text": "Collateral vs Unsecured",
+            "className": "hub-category-pill",
+            "width": 188,
+            "height": 38
+          },
+          {
+            "tag": "button",
+            "text": "MBBS Financing",
+            "className": "hub-category-pill",
+            "width": 140,
+            "height": 38
+          },
+          {
+            "tag": "button",
+            "text": "Domestic Studies",
+            "className": "hub-category-pill",
+            "width": 148,
+            "height": 38
+          },
+          {
+            "tag": "button",
+            "text": "Bank Rates & NBFCs",
+            "className": "hub-category-pill",
+            "width": 166,
+            "height": 38
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 32,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/blogs/collateral-vs-non-collateral-education-loan.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "custom-loan-table",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 154
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 154
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 154
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 94,
+            "right": 440,
+            "overflowPx": 65
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 89,
+            "right": 529,
+            "overflowPx": 154
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 154
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 154
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 94,
+            "right": 440,
+            "overflowPx": 65
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 89,
+            "right": 529,
+            "overflowPx": 154
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 154
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "custom-loan-table",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 139
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 139
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 139
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 94,
+            "right": 440,
+            "overflowPx": 50
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 89,
+            "right": 529,
+            "overflowPx": 139
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 139
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 139
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 94,
+            "right": 440,
+            "overflowPx": 50
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 89,
+            "right": 529,
+            "overflowPx": 139
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 139
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "custom-loan-table",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 99
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 99
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 99
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 94,
+            "right": 440,
+            "overflowPx": 10
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 89,
+            "right": 529,
+            "overflowPx": 99
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 99
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 99
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 94,
+            "right": 440,
+            "overflowPx": 10
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 89,
+            "right": 529,
+            "overflowPx": 99
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 495,
+            "right": 529,
+            "overflowPx": 99
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Get Free Property & Loan ",
+            "className": "btn-cta-gold",
+            "width": 360,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/blogs/education-loan-for-study-in-usa.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "custom-loan-table",
+            "width": 345,
+            "right": 379,
+            "overflowPx": 4
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 345,
+            "right": 379,
+            "overflowPx": 4
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 345,
+            "right": 379,
+            "overflowPx": 4
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 107,
+            "right": 379,
+            "overflowPx": 4
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 345,
+            "right": 379,
+            "overflowPx": 4
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 345,
+            "right": 379,
+            "overflowPx": 4
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 107,
+            "right": 379,
+            "overflowPx": 4
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 345,
+            "right": 379,
+            "overflowPx": 4
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 107,
+            "right": 379,
+            "overflowPx": 4
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 345,
+            "right": 379,
+            "overflowPx": 4
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Apply for US Loan Pre-San",
+            "className": "btn-cta-gold",
+            "width": 338,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/blogs/how-does-cibil-score-affect-your-education-loan.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "custom-loan-table",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 114
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 114
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 114
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 118,
+            "right": 489,
+            "overflowPx": 114
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 114
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 114
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 118,
+            "right": 489,
+            "overflowPx": 114
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 114
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 118,
+            "right": 489,
+            "overflowPx": 114
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 114
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "custom-loan-table",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 99
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 99
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 99
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 118,
+            "right": 489,
+            "overflowPx": 99
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 99
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 99
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 118,
+            "right": 489,
+            "overflowPx": 99
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 99
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 118,
+            "right": 489,
+            "overflowPx": 99
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 99
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility Free No",
+            "className": "btn-cta-gold",
+            "width": 255,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "custom-loan-table",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 59
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 59
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 59
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 118,
+            "right": 489,
+            "overflowPx": 59
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 59
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 59
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 118,
+            "right": 489,
+            "overflowPx": 59
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 59
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 118,
+            "right": 489,
+            "overflowPx": 59
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 455,
+            "right": 489,
+            "overflowPx": 59
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility Free No",
+            "className": "btn-cta-gold",
+            "width": 255,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility Free No",
+            "className": "btn-cta-gold",
+            "width": 255,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/calculators.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "button",
+            "id": "",
+            "className": "calc-tab-btn",
+            "width": 140,
+            "right": 452,
+            "overflowPx": 77
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "className": "calc-tab-btn",
+            "width": 140,
+            "right": 600,
+            "overflowPx": 225
+          },
+          {
+            "tag": "i",
+            "id": "",
+            "className": "fas fa-receipt",
+            "width": 10,
+            "right": 494,
+            "overflowPx": 119
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "className": "calc-tab-btn",
+            "width": 140,
+            "right": 748,
+            "overflowPx": 373
+          },
+          {
+            "tag": "i",
+            "id": "",
+            "className": "fas fa-check-double",
+            "width": 1,
+            "right": 625,
+            "overflowPx": 250
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 26,
+        "stickyButtons": [
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          },
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "button",
+            "id": "",
+            "className": "calc-tab-btn",
+            "width": 140,
+            "right": 452,
+            "overflowPx": 62
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "className": "calc-tab-btn",
+            "width": 140,
+            "right": 600,
+            "overflowPx": 210
+          },
+          {
+            "tag": "i",
+            "id": "",
+            "className": "fas fa-receipt",
+            "width": 10,
+            "right": 494,
+            "overflowPx": 104
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "className": "calc-tab-btn",
+            "width": 140,
+            "right": 748,
+            "overflowPx": 358
+          },
+          {
+            "tag": "i",
+            "id": "",
+            "className": "fas fa-check-double",
+            "width": 1,
+            "right": 625,
+            "overflowPx": 235
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 27,
+        "stickyButtons": [
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          },
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "button",
+            "id": "",
+            "className": "calc-tab-btn",
+            "width": 140,
+            "right": 452,
+            "overflowPx": 22
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "className": "calc-tab-btn",
+            "width": 140,
+            "right": 600,
+            "overflowPx": 170
+          },
+          {
+            "tag": "i",
+            "id": "",
+            "className": "fas fa-receipt",
+            "width": 10,
+            "right": 494,
+            "overflowPx": 64
+          },
+          {
+            "tag": "button",
+            "id": "",
+            "className": "calc-tab-btn",
+            "width": 140,
+            "right": 748,
+            "overflowPx": 318
+          },
+          {
+            "tag": "i",
+            "id": "",
+            "className": "fas fa-check-double",
+            "width": 1,
+            "right": 625,
+            "overflowPx": 195
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          },
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 32,
+        "stickyButtons": [
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          },
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/contact.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 26,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-secondary btn-whatsapp btn-lg",
+            "width": 308,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 27,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-secondary btn-whatsapp btn-lg",
+            "width": 665,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 32,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/countries/australia.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Loan Eligibility Fr",
+            "className": "btn btn-primary btn-lg",
+            "width": 226,
+            "height": 42
+          },
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 178,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 140,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 184,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 140,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 198,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/countries/canada.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/countries/dubai.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 198,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/countries/europe.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 198,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/countries/france.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 185,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 198,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/countries/germany.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/countries/ireland.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 198,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/countries/new-zealand.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 198,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/countries/uk.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 198,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/countries/usa.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Loan Eligibility Fr",
+            "className": "btn btn-primary btn-lg",
+            "width": 233,
+            "height": 43
+          },
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 184,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 186,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "a",
+            "text": "Chat on WhatsApp",
+            "className": "btn btn-whatsapp btn-lg",
+            "width": 198,
+            "height": 43
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/disclaimer.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 26,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 27,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/domestic-loans.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "",
+            "className": "vps-hero-swoosh",
+            "width": 320,
+            "right": 455,
+            "overflowPx": 80
+          },
+          {
+            "tag": "table",
+            "id": "",
+            "className": "vps-comparison-table",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 128,
+            "right": 457,
+            "overflowPx": 82
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 138,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 128,
+            "right": 457,
+            "overflowPx": 82
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 138,
+            "right": 595,
+            "overflowPx": 220
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "",
+            "className": "vps-hero-swoosh",
+            "width": 320,
+            "right": 470,
+            "overflowPx": 80
+          },
+          {
+            "tag": "table",
+            "id": "",
+            "className": "vps-comparison-table",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 128,
+            "right": 457,
+            "overflowPx": 67
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 138,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 128,
+            "right": 457,
+            "overflowPx": 67
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 138,
+            "right": 595,
+            "overflowPx": 205
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "",
+            "className": "vps-hero-swoosh",
+            "width": 320,
+            "right": 510,
+            "overflowPx": 80
+          },
+          {
+            "tag": "table",
+            "id": "",
+            "className": "vps-comparison-table",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 128,
+            "right": 457,
+            "overflowPx": 27
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 138,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 128,
+            "right": 457,
+            "overflowPx": 27
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 138,
+            "right": 595,
+            "overflowPx": 165
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "",
+            "className": "vps-hero-swoosh",
+            "width": 320,
+            "right": 848,
+            "overflowPx": 80
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "vps-cta-swoosh",
+            "width": 360,
+            "right": 868,
+            "overflowPx": 100
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Explore",
+            "className": "btn-stream-cta",
+            "width": 97,
+            "height": 32
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/mbbs-loans.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "India",
+            "className": "mbbs-dest-tab-btn active",
+            "width": 71,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "UK",
+            "className": "mbbs-dest-tab-btn",
+            "width": 58,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "USA",
+            "className": "mbbs-dest-tab-btn",
+            "width": 67,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Canada",
+            "className": "mbbs-dest-tab-btn",
+            "width": 90,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Russia",
+            "className": "mbbs-dest-tab-btn",
+            "width": 83,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Georgia",
+            "className": "mbbs-dest-tab-btn",
+            "width": 91,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Philippines",
+            "className": "mbbs-dest-tab-btn",
+            "width": 112,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Other Countries",
+            "className": "mbbs-dest-tab-btn",
+            "width": 146,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "₹15L",
+            "className": "mbbs-preset-btn",
+            "width": 43,
+            "height": 22
+          },
+          {
+            "tag": "button",
+            "text": "₹25L",
+            "className": "mbbs-preset-btn",
+            "width": 45,
+            "height": 22
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "India",
+            "className": "mbbs-dest-tab-btn active",
+            "width": 71,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "UK",
+            "className": "mbbs-dest-tab-btn",
+            "width": 58,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "USA",
+            "className": "mbbs-dest-tab-btn",
+            "width": 67,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Canada",
+            "className": "mbbs-dest-tab-btn",
+            "width": 90,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Russia",
+            "className": "mbbs-dest-tab-btn",
+            "width": 83,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Georgia",
+            "className": "mbbs-dest-tab-btn",
+            "width": 91,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Philippines",
+            "className": "mbbs-dest-tab-btn",
+            "width": 112,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Other Countries",
+            "className": "mbbs-dest-tab-btn",
+            "width": 146,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "₹15L",
+            "className": "mbbs-preset-btn",
+            "width": 43,
+            "height": 22
+          },
+          {
+            "tag": "button",
+            "text": "₹25L",
+            "className": "mbbs-preset-btn",
+            "width": 45,
+            "height": 22
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "India",
+            "className": "mbbs-dest-tab-btn active",
+            "width": 71,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "UK",
+            "className": "mbbs-dest-tab-btn",
+            "width": 58,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "USA",
+            "className": "mbbs-dest-tab-btn",
+            "width": 67,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Canada",
+            "className": "mbbs-dest-tab-btn",
+            "width": 90,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Russia",
+            "className": "mbbs-dest-tab-btn",
+            "width": 83,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Georgia",
+            "className": "mbbs-dest-tab-btn",
+            "width": 91,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Philippines",
+            "className": "mbbs-dest-tab-btn",
+            "width": 112,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Other Countries",
+            "className": "mbbs-dest-tab-btn",
+            "width": 146,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "₹15L",
+            "className": "mbbs-preset-btn",
+            "width": 43,
+            "height": 22
+          },
+          {
+            "tag": "button",
+            "text": "₹25L",
+            "className": "mbbs-preset-btn",
+            "width": 45,
+            "height": 22
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "India",
+            "className": "mbbs-dest-tab-btn active",
+            "width": 71,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "UK",
+            "className": "mbbs-dest-tab-btn",
+            "width": 58,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "USA",
+            "className": "mbbs-dest-tab-btn",
+            "width": 67,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Canada",
+            "className": "mbbs-dest-tab-btn",
+            "width": 90,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Russia",
+            "className": "mbbs-dest-tab-btn",
+            "width": 83,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Georgia",
+            "className": "mbbs-dest-tab-btn",
+            "width": 91,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Philippines",
+            "className": "mbbs-dest-tab-btn",
+            "width": 112,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Other Countries",
+            "className": "mbbs-dest-tab-btn",
+            "width": 146,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "₹15L",
+            "className": "mbbs-preset-btn",
+            "width": 43,
+            "height": 22
+          },
+          {
+            "tag": "button",
+            "text": "₹25L",
+            "className": "mbbs-preset-btn",
+            "width": 45,
+            "height": 22
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/other-loans.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "comparison-table",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 92,
+            "right": 449,
+            "overflowPx": 74
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 146,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 92,
+            "right": 449,
+            "overflowPx": 74
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 146,
+            "right": 595,
+            "overflowPx": 220
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 220
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Explore Personal Loans",
+            "className": "btn-service-action",
+            "width": 305,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Explore Home Loans",
+            "className": "btn-service-action",
+            "width": 305,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Explore Car Loans",
+            "className": "btn-service-action",
+            "width": 305,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Explore Business Loans",
+            "className": "btn-service-action",
+            "width": 305,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "comparison-table",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 92,
+            "right": 449,
+            "overflowPx": 59
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 146,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 92,
+            "right": 449,
+            "overflowPx": 59
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 146,
+            "right": 595,
+            "overflowPx": 205
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 205
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Explore Personal Loans",
+            "className": "btn-service-action",
+            "width": 320,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Explore Home Loans",
+            "className": "btn-service-action",
+            "width": 320,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Explore Car Loans",
+            "className": "btn-service-action",
+            "width": 320,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Explore Business Loans",
+            "className": "btn-service-action",
+            "width": 320,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "comparison-table",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "thead",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 92,
+            "right": 449,
+            "overflowPx": 19
+          },
+          {
+            "tag": "th",
+            "id": "",
+            "className": "",
+            "width": 146,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 92,
+            "right": 449,
+            "overflowPx": 19
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 146,
+            "right": 595,
+            "overflowPx": 165
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 595,
+            "overflowPx": 165
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Explore Personal Loans",
+            "className": "btn-service-action",
+            "width": 360,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Explore Home Loans",
+            "className": "btn-service-action",
+            "width": 360,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Explore Car Loans",
+            "className": "btn-service-action",
+            "width": 360,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Explore Business Loans",
+            "className": "btn-service-action",
+            "width": 360,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Explore Personal Loans",
+            "className": "btn-service-action",
+            "width": 313,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Explore Home Loans",
+            "className": "btn-service-action",
+            "width": 313,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Explore Car Loans",
+            "className": "btn-service-action",
+            "width": 313,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Explore Business Loans",
+            "className": "btn-service-action",
+            "width": 313,
+            "height": 39
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/partner-lenders.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "marqueeInner",
+            "className": "marquee-inner",
+            "width": 9689,
+            "right": 9627,
+            "overflowPx": 9252
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 226,
+            "right": 454,
+            "overflowPx": 79
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 380,
+            "overflowPx": 5
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-nbfc",
+            "width": 45,
+            "right": 437,
+            "overflowPx": 62
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 278,
+            "right": 749,
+            "overflowPx": 374
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 624,
+            "overflowPx": 249
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-pvt",
+            "width": 97,
+            "right": 732,
+            "overflowPx": 357
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 226,
+            "right": 993,
+            "overflowPx": 618
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 919,
+            "overflowPx": 544
+          },
+          {
+            "tag": "img",
+            "id": "",
+            "className": "marquee-logo-img vps-lazy",
+            "width": 133,
+            "right": 918,
+            "overflowPx": 543
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "All Lenders",
+            "className": "lender-filter-btn active",
+            "width": 98,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Public Banks (PSU)",
+            "className": "lender-filter-btn",
+            "width": 145,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Private Banks",
+            "className": "lender-filter-btn",
+            "width": 113,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Specialist NBFCs",
+            "className": "lender-filter-btn",
+            "width": 133,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Global / USD Lenders",
+            "className": "lender-filter-btn",
+            "width": 158,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "All Security Types",
+            "className": "lender-filter-btn active",
+            "width": 140,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "No Collateral (Unsecured)",
+            "className": "lender-filter-btn",
+            "width": 186,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "With Collateral (Secured)",
+            "className": "lender-filter-btn",
+            "width": 182,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "All Destinations",
+            "className": "lender-filter-btn active",
+            "width": 124,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Abroad / Global",
+            "className": "lender-filter-btn",
+            "width": 124,
+            "height": 42
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 26,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "marqueeInner",
+            "className": "marquee-inner",
+            "width": 9689,
+            "right": 9627,
+            "overflowPx": 9237
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 226,
+            "right": 454,
+            "overflowPx": 64
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-nbfc",
+            "width": 45,
+            "right": 437,
+            "overflowPx": 47
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 278,
+            "right": 749,
+            "overflowPx": 359
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 624,
+            "overflowPx": 234
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-pvt",
+            "width": 97,
+            "right": 732,
+            "overflowPx": 342
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 226,
+            "right": 993,
+            "overflowPx": 603
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 919,
+            "overflowPx": 529
+          },
+          {
+            "tag": "img",
+            "id": "",
+            "className": "marquee-logo-img vps-lazy",
+            "width": 133,
+            "right": 918,
+            "overflowPx": 528
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-nbfc",
+            "width": 45,
+            "right": 976,
+            "overflowPx": 586
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "All Lenders",
+            "className": "lender-filter-btn active",
+            "width": 98,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Public Banks (PSU)",
+            "className": "lender-filter-btn",
+            "width": 145,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Private Banks",
+            "className": "lender-filter-btn",
+            "width": 113,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Specialist NBFCs",
+            "className": "lender-filter-btn",
+            "width": 133,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Global / USD Lenders",
+            "className": "lender-filter-btn",
+            "width": 158,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "All Security Types",
+            "className": "lender-filter-btn active",
+            "width": 140,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "No Collateral (Unsecured)",
+            "className": "lender-filter-btn",
+            "width": 186,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "With Collateral (Secured)",
+            "className": "lender-filter-btn",
+            "width": 182,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "All Destinations",
+            "className": "lender-filter-btn active",
+            "width": 124,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Abroad / Global",
+            "className": "lender-filter-btn",
+            "width": 124,
+            "height": 42
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 27,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "marqueeInner",
+            "className": "marquee-inner",
+            "width": 9689,
+            "right": 9629,
+            "overflowPx": 9199
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 226,
+            "right": 456,
+            "overflowPx": 26
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-nbfc",
+            "width": 45,
+            "right": 439,
+            "overflowPx": 9
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 278,
+            "right": 751,
+            "overflowPx": 321
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 626,
+            "overflowPx": 196
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-pvt",
+            "width": 97,
+            "right": 734,
+            "overflowPx": 304
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 226,
+            "right": 995,
+            "overflowPx": 565
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 921,
+            "overflowPx": 491
+          },
+          {
+            "tag": "img",
+            "id": "",
+            "className": "marquee-logo-img vps-lazy",
+            "width": 133,
+            "right": 920,
+            "overflowPx": 490
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-nbfc",
+            "width": 45,
+            "right": 978,
+            "overflowPx": 548
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "All Lenders",
+            "className": "lender-filter-btn active",
+            "width": 98,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Public Banks (PSU)",
+            "className": "lender-filter-btn",
+            "width": 145,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Private Banks",
+            "className": "lender-filter-btn",
+            "width": 113,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Specialist NBFCs",
+            "className": "lender-filter-btn",
+            "width": 133,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Global / USD Lenders",
+            "className": "lender-filter-btn",
+            "width": 158,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "All Security Types",
+            "className": "lender-filter-btn active",
+            "width": 140,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "No Collateral (Unsecured)",
+            "className": "lender-filter-btn",
+            "width": 186,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "With Collateral (Secured)",
+            "className": "lender-filter-btn",
+            "width": 182,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "All Destinations",
+            "className": "lender-filter-btn active",
+            "width": 124,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Abroad / Global",
+            "className": "lender-filter-btn",
+            "width": 124,
+            "height": 42
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "marqueeInner",
+            "className": "marquee-inner",
+            "width": 9689,
+            "right": 9629,
+            "overflowPx": 8861
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 226,
+            "right": 995,
+            "overflowPx": 227
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 921,
+            "overflowPx": 153
+          },
+          {
+            "tag": "img",
+            "id": "",
+            "className": "marquee-logo-img vps-lazy",
+            "width": 133,
+            "right": 920,
+            "overflowPx": 152
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-nbfc",
+            "width": 45,
+            "right": 978,
+            "overflowPx": 210
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 278,
+            "right": 1291,
+            "overflowPx": 523
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 1165,
+            "overflowPx": 397
+          },
+          {
+            "tag": "span",
+            "id": "",
+            "className": "marquee-card-badge badge-pvt",
+            "width": 97,
+            "right": 1274,
+            "overflowPx": 506
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-card",
+            "width": 271,
+            "right": 1580,
+            "overflowPx": 812
+          },
+          {
+            "tag": "div",
+            "id": "",
+            "className": "marquee-logo-wrap",
+            "width": 135,
+            "right": 1461,
+            "overflowPx": 693
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "All Lenders",
+            "className": "lender-filter-btn active",
+            "width": 98,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Public Banks (PSU)",
+            "className": "lender-filter-btn",
+            "width": 145,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Private Banks",
+            "className": "lender-filter-btn",
+            "width": 113,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Specialist NBFCs",
+            "className": "lender-filter-btn",
+            "width": 133,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Global / USD Lenders",
+            "className": "lender-filter-btn",
+            "width": 158,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "All Security Types",
+            "className": "lender-filter-btn active",
+            "width": 140,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "No Collateral (Unsecured)",
+            "className": "lender-filter-btn",
+            "width": 186,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "With Collateral (Secured)",
+            "className": "lender-filter-btn",
+            "width": 182,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "All Destinations",
+            "className": "lender-filter-btn active",
+            "width": 124,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Abroad / Global",
+            "className": "lender-filter-btn",
+            "width": 124,
+            "height": 42
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 32,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/partner-with-us.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Submit Partnership Reques",
+            "className": "btn-partner-submit",
+            "width": 305,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 32,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Submit Partnership Reques",
+            "className": "btn-partner-submit",
+            "width": 320,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 32,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Submit Partnership Reques",
+            "className": "btn-partner-submit",
+            "width": 360,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 32,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Submit Partnership Reques",
+            "className": "btn-partner-submit",
+            "width": 686,
+            "height": 42
+          },
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/privacy-policy.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "legal-table",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 243
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 243
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 243
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 380,
+            "right": 618,
+            "overflowPx": 243
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 243
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 380,
+            "right": 618,
+            "overflowPx": 243
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 243
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 380,
+            "right": 618,
+            "overflowPx": 243
+          },
+          {
+            "tag": "a",
+            "id": "",
+            "className": "",
+            "width": 222,
+            "right": 478,
+            "overflowPx": 103
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 243
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 26,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "legal-table",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 228
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 228
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 228
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 380,
+            "right": 618,
+            "overflowPx": 228
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 228
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 380,
+            "right": 618,
+            "overflowPx": 228
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 228
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 380,
+            "right": 618,
+            "overflowPx": 228
+          },
+          {
+            "tag": "a",
+            "id": "",
+            "className": "",
+            "width": 222,
+            "right": 478,
+            "overflowPx": 88
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 228
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 27,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": "",
+            "className": "legal-table",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 188
+          },
+          {
+            "tag": "tbody",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 188
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 188
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 380,
+            "right": 618,
+            "overflowPx": 188
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 188
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 380,
+            "right": 618,
+            "overflowPx": 188
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 188
+          },
+          {
+            "tag": "td",
+            "id": "",
+            "className": "",
+            "width": 380,
+            "right": 618,
+            "overflowPx": 188
+          },
+          {
+            "tag": "a",
+            "id": "",
+            "className": "",
+            "width": 222,
+            "right": 478,
+            "overflowPx": 48
+          },
+          {
+            "tag": "tr",
+            "id": "",
+            "className": "",
+            "width": 580,
+            "right": 618,
+            "overflowPx": 188
+          }
+        ],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/services.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 26,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 27,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 32,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "page": "pages/terms-and-conditions.html",
+    "viewports": {
+      "375": {
+        "winW": 375,
+        "maxW": 375,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 26,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "390": {
+        "winW": 390,
+        "maxW": 390,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 27,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "430": {
+        "winW": 430,
+        "maxW": 430,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility",
+            "className": "floating-eligibility-btn hide",
+            "width": 141,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 30,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "74px",
+            "zIndex": "990",
+            "paddingBottom": "8px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "16px",
+            "zIndex": "990",
+            "paddingBottom": "0px"
+          }
+        ]
+      },
+      "768": {
+        "winW": 768,
+        "maxW": 768,
+        "hasOverflow": false,
+        "overflowingElements": [],
+        "smallTouchTargets": [
+          {
+            "tag": "button",
+            "text": "Check Eligibility FREE",
+            "className": "floating-eligibility-btn hide",
+            "width": 207,
+            "height": 40
+          }
+        ],
+        "sub48Inputs": [],
+        "h1Size": 34,
+        "stickyButtons": [
+          {
+            "className": "floating-eligibility-btn hide",
+            "bottom": "26px",
+            "zIndex": "9999",
+            "paddingBottom": "11px"
+          },
+          {
+            "className": "whatsapp-float",
+            "bottom": "26px",
+            "zIndex": "9000",
+            "paddingBottom": "0px"
+          }
+        ]
+      }
+    }
+  }
+]
