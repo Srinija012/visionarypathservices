@@ -74,8 +74,12 @@
 }
 
 @media (max-width: 640px) {
-    .lead-form-row {
+    .lead-form-row:not(:first-of-type) {
         grid-template-columns: 1fr;
+    }
+    .lead-form-row:first-of-type {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
     }
 }
 
