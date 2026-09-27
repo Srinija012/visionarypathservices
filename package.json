@@ -8,11 +8,12 @@
     "start": "python3 -m http.server 3000 --directory website",
     "sync": "node scripts/sync-components.js",
     "build": "node scripts/sync-components.js",
-    "test": "node scripts/test-sync.js && node scripts/test-leads.js && node scripts/test-thankyou.js && node scripts/test-motion.js && node scripts/test-mobile-responsive.js",
+    "test": "node scripts/test-sync.js && node scripts/test-leads.js && node scripts/test-thankyou.js && node scripts/test-motion.js && node scripts/test-mobile-responsive.js && node scripts/test-hamburger.js",
     "test:leads": "node scripts/test-leads.js",
     "test:thankyou": "node scripts/test-thankyou.js",
     "test:motion": "node scripts/test-motion.js",
     "test:mobile": "node scripts/test-mobile-responsive.js",
+    "test:hamburger": "node scripts/test-hamburger.js",
     "push:leads": "node scripts/push-test-leads.js",
     "audit": "node scripts/production-audit.js"
   },
