@@ -3054,12 +3054,18 @@ textarea:focus {
     }
 
     .hero-btns {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         align-items: stretch;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
     }
 
     .hero-btns .btn {
-        width: 100%;
+        flex: 1 1 0px;
+        width: auto;
+        min-width: 0;
         justify-content: center;
     }
 
