@@ -17454,24 +17454,6 @@ body.menu-open .navbar.scrolled-elevated {
 }
 
 @media (max-width: 600px) {
-    .loan-categories-grid,
-    .bridging-cards-grid,
-    .services-grid,
-    .services-unified-grid,
-    .core-focus-grid,
-    .docs-cards-grid,
-    .posts-grid,
-    .blog-grid,
-    .trust-grid,
-    .about-trust-grid,
-    .about-focus-grid,
-    .about-journey-grid,
-    .about-philosophy-grid,
-    .mission-values-grid,
-    .process-grid,
-    .who-grid,
-    .students-get-grid,
-    .vps-eligibility-grid,
     .grid-3,
     .grid-4 {
         grid-template-columns: 1fr !important;
@@ -19468,36 +19450,575 @@ body {
     }
 }
 
-/* 5. Inner Pages Multi-Item Cards (Streams, Courses, Benefits, Expenses) */
-@media (max-width: 640px) {
+/* 5. Universal 2-Column Card Alignment Across All Pages in Mobile View */
+@media (max-width: 768px) {
+    /* 5.1 Universal 2-Column Grid Containers */
+    .mbbs-expenses-grid,
+    .mbbs-benefits-grid,
+    .mbbs-options-grid,
+    .mbbs-checklist-grid,
+    .mbbs-dest-grid,
+    .mbbs-dest-meta-grid,
+    .vps-expenses-grid,
+    .vps-expenses-5grid,
     .vps-streams-5grid,
     .vps-topcourses-6grid,
-    .vps-expenses-5grid,
-    .vps-expenses-grid,
-    .mbbs-benefits-grid,
-    .mbbs-expenses-grid,
     .vps-why-grid,
+    .vps-eligibility-grid,
+    .vps-dest-grid,
+    .vps-loan-options-grid,
+    .vps-cosigner-grid,
+    .vps-apply-grid,
+    .vps-docs-grid,
+    .vps-lenders-grid,
+    .vps-pp-grid,
+    .vps-proof-faq-grid,
+    .vps-bank-logo-grid,
+    .services-grid,
     .svc-programs-grid,
-    .svc-process-grid {
+    .process-grid,
+    .svc-process-grid,
+    .loan-types-grid,
+    .svc-loan-types-grid,
+    .services-unified-grid,
+    .about-philosophy-grid,
+    .about-focus-grid,
+    .about-journey-grid,
+    .mission-values-grid,
+    .about-trust-grid,
+    .about-static-lenders-grid,
+    .about-stats-grid,
+    .lenders-info-grid,
+    .snapshot-stats-grid,
+    .stats-grid,
+    .why-cards-stack,
+    .who-grid,
+    .students-get-grid,
+    .trust-grid,
+    .docs-cards-grid,
+    .country-stats-grid,
+    .core-grid,
+    .core-cards-grid,
+    .pan-india-cards,
+    .bridging-cards-grid,
+    .posts-grid,
+    .blog-grid,
+    .comparison-cards-grid,
+    .score-cards-grid,
+    .loan-categories-grid,
+    .core-focus-grid {
         display: grid !important;
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 10px !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    .vps-expense-card,
-    .vps-course-card,
-    .vps-stream-card,
+    /* 5.2 Universal Card Components Styling */
+    .mbbs-expense-item,
+    .mbbs-benefit-item,
     .mbbs-benefit-card,
-    .vps-why-card {
-        padding: 14px 10px !important;
+    .mbbs-option-card,
+    .mbbs-check-item,
+    .mbbs-checklist-card,
+    .mbbs-dest-card,
+    .mbbs-dest-meta-item,
+    .vps-expense-card,
+    .vps-exp-item,
+    .vps-stream-card,
+    .vps-course-card,
+    .vps-course-item,
+    .vps-why-card,
+    .vps-elig-card,
+    .vps-dest-card,
+    .vps-loan-card,
+    .vps-cosigner-card,
+    .vps-apply-card,
+    .vps-docs-col,
+    .vps-doc-card,
+    .vps-lender-card,
+    .vps-pp-card,
+    .vps-proof-card,
+    .vps-bank-logo-card,
+    .service-card,
+    .svc-program-card,
+    .process-card,
+    .svc-process-card,
+    .loan-col,
+    .svc-loan-col,
+    .loan-type-card,
+    .unified-service-card,
+    .philosophy-card,
+    .focus-card,
+    .step-card,
+    .mission-value-card,
+    .trust-pillar-card,
+    .about-lender-logo-card,
+    .about-stat-item,
+    .about-stat-card,
+    .lender-info-card,
+    .snapshot-stat,
+    .stat-item,
+    .stat-card-item,
+    .why-benefit-card,
+    .who-card,
+    .students-get-card,
+    .trust-card,
+    .docs-card,
+    .core-card,
+    .country-stat-box,
+    .country-stat-card,
+    .pan-card,
+    .bridge-card,
+    .post-card,
+    .comparison-card,
+    .score-card {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        height: 100% !important;
+        background: #FFFFFF !important;
+        border: 1px solid #DCE4EA !important;
         border-radius: 12px !important;
+        padding: 14px 10px !important;
+        text-align: left !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        box-shadow: 0 2px 8px rgba(11, 31, 51, 0.04) !important;
     }
 
-    .vps-card-icon-box {
-        width: 34px !important;
-        height: 34px !important;
+    /* 5.3 Card Icons & Icon Badges */
+    .mbbs-expense-icon,
+    .vps-expense-icon,
+    .vps-apply-icon,
+    .vps-cosigner-icon {
+        font-size: 18px !important;
+        color: #FF5A00 !important;
+        margin-bottom: 8px !important;
+        display: block !important;
+        text-align: left !important;
+    }
+
+    .vps-card-icon-box,
+    .why-benefit-icon-wrap,
+    .svc-program-icon,
+    .svc-step-icon-wrap,
+    .philosophy-card-icon,
+    .focus-card-icon,
+    .step-icon-wrap,
+    .who-icon-wrap,
+    .core-card-icon,
+    .vps-loan-icon-box,
+    .vps-docs-badge-icon,
+    .bridge-icon-wrap,
+    .service-card-icon-box {
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        min-height: 32px !important;
         font-size: 14px !important;
         margin-bottom: 8px !important;
+        border-radius: 8px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* 5.4 Card Headings */
+    .mbbs-expenses-grid h3,
+    .mbbs-benefits-grid h3,
+    .vps-expenses-grid h4,
+    .vps-expenses-5grid h3,
+    .vps-streams-5grid h3,
+    .vps-topcourses-6grid h3,
+    .vps-why-grid h3,
+    .vps-eligibility-grid h3,
+    .vps-loan-options-grid h3,
+    .vps-cosigner-grid h3,
+    .vps-apply-grid h3,
+    .vps-docs-grid h3,
+    .svc-programs-grid h3,
+    .svc-process-grid h3,
+    .services-unified-grid h3,
+    .about-philosophy-grid h4,
+    .about-focus-grid h3,
+    .about-journey-grid h3,
+    .mission-values-grid h3,
+    .about-trust-grid h3,
+    .who-grid h3,
+    .students-get-grid h3,
+    .why-cards-stack h3,
+    .process-grid h3,
+    .trust-grid h3,
+    .docs-cards-grid h3,
+    .core-cards-grid h3,
+    .bridging-cards-grid h3,
+    .pan-india-cards h3,
+    .mbbs-expense-title,
+    .vps-expense-title,
+    .post-card-title,
+    .students-get-card-title {
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        line-height: 1.25 !important;
+        color: #123A63 !important;
+        margin-top: 0 !important;
+        margin-bottom: 4px !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    /* 5.5 Card Body Text & Descriptions */
+    .mbbs-expenses-grid p,
+    .mbbs-benefits-grid p,
+    .vps-expenses-grid p,
+    .vps-expenses-5grid p,
+    .vps-streams-5grid p,
+    .vps-topcourses-6grid p,
+    .vps-why-grid p,
+    .vps-eligibility-grid p,
+    .vps-loan-options-grid p,
+    .vps-cosigner-grid p,
+    .vps-apply-grid p,
+    .svc-programs-grid p,
+    .svc-process-grid p,
+    .services-unified-grid p,
+    .about-philosophy-grid p,
+    .about-focus-grid p,
+    .about-journey-grid p,
+    .mission-values-grid p,
+    .about-trust-grid p,
+    .who-grid p,
+    .students-get-grid p,
+    .why-cards-stack p,
+    .process-grid p,
+    .trust-grid p,
+    .docs-cards-grid p,
+    .core-cards-grid p,
+    .bridging-cards-grid p,
+    .pan-india-cards p,
+    .mbbs-expense-desc,
+    .vps-expense-desc,
+    .who-desc,
+    .students-get-card-desc,
+    .why-benefit-desc,
+    .post-card-desc,
+    .vps-loan-desc {
+        font-size: 11px !important;
+        line-height: 1.35 !important;
+        color: #5A6E7F !important;
+        margin-top: 0 !important;
+        margin-bottom: 6px !important;
+    }
+
+    /* 5.6 Card Checklists & Points */
+    .vps-checklist,
+    .doc-checklist,
+    .service-checklist,
+    .focus-features-list,
+    .bridge-points,
+    .who-card-features,
+    .mbbs-checklist-grid ul,
+    .svc-loan-list {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 4px 0 0 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 3px !important;
+    }
+
+    .vps-checklist li,
+    .doc-checklist li,
+    .service-checklist li,
+    .focus-features-list li,
+    .bridge-points li,
+    .mbbs-checklist-grid li,
+    .svc-loan-list li {
+        font-size: 10px !important;
+        line-height: 1.25 !important;
+        color: #475569 !important;
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 4px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .vps-checklist li i,
+    .doc-checklist li i,
+    .service-checklist li i,
+    .focus-features-list li i,
+    .bridge-points li i,
+    .svc-loan-list li i,
+    .circle-check {
+        font-size: 9px !important;
+        margin-top: 2px !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* 5.7 Card Badges, Pills & Step Counters */
+    .svc-program-tag,
+    .svc-step-badge,
+    .step-pill,
+    .who-pill,
+    .benefit-tag,
+    .vps-docs-tag,
+    .mbbs-option-badge,
+    .pan-card-badge {
+        font-size: 9.5px !important;
+        padding: 2px 6px !important;
+        border-radius: 6px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        width: fit-content !important;
+        max-width: 100% !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    .focus-card-top,
+    .step-card-header,
+    .bridge-card-top,
+    .who-card-top,
+    .benefit-title-row {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        margin-bottom: 6px !important;
+        gap: 6px !important;
+    }
+
+    .focus-card-num,
+    .bridge-number {
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        color: #94A3B8 !important;
+    }
+
+    /* 5.8 Buttons & Links inside Cards */
+    .service-link,
+    .focus-card-link,
+    .btn-service-action,
+    .vps-dest-btn,
+    .lic-cta,
+    .vps-loan-card button,
+    .mbbs-option-card button {
+        margin-top: auto !important;
+        width: 100% !important;
+        min-height: 36px !important;
+        height: 36px !important;
+        font-size: 11px !important;
+        padding: 6px 8px !important;
+        border-radius: 8px !important;
+        white-space: nowrap !important;
+        justify-content: center !important;
+        text-align: center !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 5.9 Cards with Top Images */
+    .unified-card-image,
+    .vps-dest-img-wrap,
+    .mbbs-dest-img-wrap,
+    .post-card-img-wrap {
+        height: 85px !important;
+        min-height: 85px !important;
+        max-height: 85px !important;
+        width: calc(100% + 20px) !important;
+        margin: -14px -10px 8px -10px !important;
+        border-radius: 11px 11px 0 0 !important;
+        overflow: hidden !important;
+    }
+
+    .unified-card-image img,
+    .vps-dest-img-wrap img,
+    .mbbs-dest-img-wrap img,
+    .post-card-img-wrap img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+    /* 5.10 Partner Lender Info Cards in 2 Columns */
+    .lender-info-card {
+        padding: 12px 9px !important;
+    }
+
+    .lender-info-card .lic-header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 4px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .lender-info-card .lic-brand {
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+    }
+
+    .lender-info-card .lic-logo-wrap {
+        width: 26px !important;
+        height: 26px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .lender-info-card .lic-logo {
+        max-height: 20px !important;
+        max-width: 26px !important;
+    }
+
+    .lender-info-card .lic-name {
+        font-size: 11.5px !important;
+        font-weight: 700 !important;
+        line-height: 1.2 !important;
+    }
+
+    .lender-info-card .lic-tagline {
+        display: none !important;
+    }
+
+    .lender-info-card .lic-rate-pill {
+        font-size: 8.5px !important;
+        padding: 2px 5px !important;
+        border-radius: 4px !important;
+    }
+
+    .lender-info-card .lic-body {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 3px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .lender-info-card .lic-row {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        font-size: 9.5px !important;
+        line-height: 1.25 !important;
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.06) !important;
+        padding-bottom: 2px !important;
+    }
+
+    .lender-info-card .lic-label {
+        color: #64748B !important;
+    }
+
+    .lender-info-card .lic-value {
+        font-weight: 600 !important;
+        color: #0F172A !important;
+        text-align: right !important;
+    }
+
+    /* 5.11 Secured & Unsecured Comparison Cards */
+    .vps-loan-card,
+    .mbbs-option-card {
+        padding: 14px 10px !important;
+    }
+
+    .vps-loan-card-header,
+    .mbbs-option-header {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .vps-loan-suitable {
+        font-size: 10px !important;
+        line-height: 1.3 !important;
+        color: #475569 !important;
+        margin-bottom: 8px !important;
+        background: #F8FAFC !important;
+        padding: 6px 8px !important;
+        border-radius: 6px !important;
+    }
+
+    /* 5.12 Stat Cards */
+    .country-stat-box,
+    .snapshot-stat,
+    .stat-item,
+    .stat-card-item,
+    .about-stat-item {
+        padding: 10px 8px !important;
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .country-stat-val,
+    .snapshot-stat-val,
+    .stat-number,
+    .about-stat-num {
+        font-size: 18px !important;
+        font-weight: 800 !important;
+        line-height: 1.15 !important;
+        margin-bottom: 2px !important;
+    }
+
+    .country-stat-lbl,
+    .snapshot-stat-label,
+    .stat-label,
+    .about-stat-label {
+        font-size: 10px !important;
+        line-height: 1.25 !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .mbbs-expenses-grid,
+    .mbbs-benefits-grid,
+    .vps-expenses-grid,
+    .vps-expenses-5grid,
+    .vps-streams-5grid,
+    .vps-topcourses-6grid,
+    .vps-why-grid,
+    .vps-eligibility-grid,
+    .vps-dest-grid,
+    .vps-loan-options-grid,
+    .vps-cosigner-grid,
+    .vps-apply-grid,
+    .vps-docs-grid,
+    .services-grid,
+    .svc-programs-grid,
+    .process-grid,
+    .svc-process-grid,
+    .services-unified-grid,
+    .about-philosophy-grid,
+    .about-focus-grid,
+    .about-journey-grid,
+    .mission-values-grid,
+    .about-trust-grid,
+    .lenders-info-grid,
+    .why-cards-stack,
+    .who-grid,
+    .students-get-grid,
+    .trust-grid,
+    .docs-cards-grid,
+    .pan-india-cards,
+    .bridging-cards-grid {
+        gap: 8px !important;
+    }
+
+    .mbbs-expense-item,
+    .vps-expense-card,
+    .vps-why-card,
+    .service-card,
+    .process-card,
+    .philosophy-card,
+    .focus-card,
+    .who-card,
+    .trust-card,
+    .core-card {
+        padding: 10px 8px !important;
     }
 }
 
