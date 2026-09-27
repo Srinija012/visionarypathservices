@@ -596,7 +596,7 @@ template = """<!DOCTYPE html>
             <h1 data-aos="fade-up" data-aos-delay="100">{h1}</h1>
             <p data-aos="fade-up" data-aos-delay="200">{subtitle}</p>
             <div class="hero-btns" data-aos="fade-up" data-aos-delay="300">
-                <button class="btn btn-primary btn-lg" onclick="openPopup()">Check Eligibility – Free <i class="fas fa-arrow-right"></i></button>
+                <button class="btn btn-primary btn-lg" onclick="openPopup()">Check Eligibility <span class="btn-subtext-free">– Free</span> <i class="fas fa-arrow-right"></i></button>
                 <a href="https://wa.me/918150949070?text={wa_country_msg}" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp Advisor</a>
             </div>
         </div>
