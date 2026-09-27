@@ -16593,4 +16593,398 @@ body.modal-open .whatsapp-float {
     display: none !important;
 }
 
+/* ==========================================================================
+   13. LEAD SUBMISSION THANK YOU CONFIRMATION SCREEN (5-SECOND TIMER)
+   ========================================================================== */
+.popup-modal.has-thankyou {
+    max-width: 580px !important;
+    width: 92% !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(22, 163, 74, 0.25) !important;
+    box-shadow: 0 25px 60px -15px rgba(11, 31, 51, 0.28), 0 0 0 1px rgba(22, 163, 74, 0.15) !important;
+    border-radius: 22px !important;
+    animation: vpsModalScaleIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.popup-modal.has-thankyou .popup-left {
+    display: none !important;
+}
+
+.popup-modal.has-thankyou .popup-right {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 36px 32px 30px 32px !important;
+    box-sizing: border-box !important;
+    display: block !important;
+}
+
+@keyframes vpsModalScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.vps-thankyou-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    animation: vpsFadeSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes vpsFadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Checkmark Icon With Halo Glow */
+.vps-thankyou-icon-wrap {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 14px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vps-thankyou-icon-pulse {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(22, 163, 74, 0.3) 0%, rgba(22, 163, 74, 0) 70%);
+    animation: vpsPulseHalo 2s infinite ease-out;
+}
+
+@keyframes vpsPulseHalo {
+    0% {
+        transform: scale(0.85);
+        opacity: 0.9;
+    }
+    50% {
+        transform: scale(1.25);
+        opacity: 0.25;
+    }
+    100% {
+        transform: scale(0.85);
+        opacity: 0.9;
+    }
+}
+
+.vps-thankyou-icon {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #16A765 0%, #0F7646 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 24px -4px rgba(22, 163, 74, 0.45);
+}
+
+.vps-checkmark-svg {
+    width: 44px;
+    height: 44px;
+    stroke-width: 3.5;
+    stroke: #ffffff;
+    stroke-miterlimit: 10;
+}
+
+.vps-checkmark-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 3.5;
+    stroke: rgba(255, 255, 255, 0.35);
+    fill: none;
+    animation: vpsStroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.vps-checkmark-check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: vpsStroke 0.4s cubic-bezier(0.65, 0, 0.45, 1) 0.35s forwards;
+}
+
+@keyframes vpsStroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Badge */
+.vps-thankyou-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #DCFCE7;
+    color: #15803D;
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    border: 1px solid rgba(22, 163, 74, 0.25);
+}
+
+/* Headings */
+.vps-thankyou-title {
+    font-family: 'Manrope', -apple-system, sans-serif !important;
+    font-size: 25px !important;
+    font-weight: 800 !important;
+    color: #0B1F33 !important;
+    margin: 0 0 6px 0 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.vps-thankyou-subtitle {
+    font-family: 'Inter', -apple-system, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #FF5A00 !important;
+    margin: 0 0 18px 0 !important;
+    line-height: 1.45 !important;
+}
+
+/* Details Card */
+.vps-thankyou-card {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 14px 18px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.vps-thankyou-info-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.vps-thankyou-info-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(11, 31, 51, 0.06);
+    color: #0B1F33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.vps-thankyou-info-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.vps-info-label {
+    font-size: 10.5px;
+    color: #64748B;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.vps-info-val {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0B1F33;
+}
+
+/* Trust / Next Steps Pills */
+.vps-thankyou-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.vps-step-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #334155;
+    background: #F1F5F9;
+    padding: 4px 9px;
+    border-radius: 6px;
+}
+
+.vps-step-pill i {
+    color: #16A765;
+    font-size: 10px;
+}
+
+.vps-step-arrow {
+    color: #94A3B8;
+    font-size: 9px;
+}
+
+/* 5-Second Countdown Timer Bar */
+.vps-thankyou-timer-box {
+    width: 100%;
+    background: #FFF7ED;
+    border: 1px solid rgba(255, 90, 0, 0.25);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    box-sizing: border-box;
+}
+
+.vps-timer-bar-track {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 90, 0, 0.15);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.vps-timer-bar-fill {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #FF5A00 0%, #FF8A00 100%);
+    border-radius: 999px;
+    transform-origin: left;
+    transition: width 0.05s linear;
+}
+
+.vps-timer-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.vps-timer-caption {
+    color: #9A3412;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vps-timer-caption strong {
+    color: #EA580C;
+    font-weight: 800;
+}
+
+.vps-timer-skip-btn {
+    background: transparent;
+    border: 1px solid rgba(154, 52, 18, 0.35);
+    color: #9A3412;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.vps-timer-skip-btn:hover {
+    background: #EA580C;
+    color: #ffffff;
+    border-color: #EA580C;
+}
+
+/* WhatsApp Fast-Track */
+.vps-thankyou-fasttrack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 12px;
+    color: #64748B;
+    margin-top: 2px;
+    flex-wrap: wrap;
+}
+
+.vps-thankyou-wa-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #16A765;
+    color: #ffffff !important;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+.vps-thankyou-wa-link:hover {
+    background: #128C53;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(22, 167, 101, 0.35);
+}
+
+/* Inline card support (e.g. contact page) */
+.contact-form-box .vps-thankyou-screen {
+    padding: 24px 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .popup-modal.has-thankyou {
+        width: 95% !important;
+        max-width: 420px !important;
+        margin: 16px auto !important;
+        border-radius: 18px !important;
+    }
+    .popup-modal.has-thankyou .popup-right {
+        padding: 24px 18px 20px 18px !important;
+    }
+    .vps-thankyou-title {
+        font-size: 21px !important;
+    }
+    .vps-thankyou-subtitle {
+        font-size: 13.5px !important;
+    }
+    .vps-thankyou-steps {
+        gap: 4px !important;
+    }
+    .vps-step-pill {
+        font-size: 10px !important;
+        padding: 3px 7px !important;
+    }
+    .vps-timer-meta {
+        flex-direction: column !important;
+        gap: 6px !important;
+        align-items: center !important;
+    }
+}
+
+
 
