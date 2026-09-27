@@ -144,4 +144,21 @@ assert(
 );
 console.log('✅ PASS: Viewports 320px, 375px, 414px, and 768px explicitly covered and verified.');
 
+console.log('Verifying Mobile Footer Architecture & Short Footprint...');
+assert(
+    improvementsCss.includes('.footer-col-accordion') && improvementsCss.includes('.footer-brand-header'),
+    '[FAIL] Missing footer-col-accordion or footer-brand-header classes in improvements.css'
+);
+assert(
+    improvementsCss.includes('.footer-desc {\n        display: none !important;'),
+    '[FAIL] .footer-desc should be concealed on mobile to eliminate multi-screen scroll bloat.'
+);
+const mainJs = fs.readFileSync(path.join(WEBSITE_DIR, 'js/main.js'), 'utf8');
+assert(
+    mainJs.includes('initMobileFooterAccordions') && mainJs.includes('.footer-col-accordion'),
+    '[FAIL] main.js missing mobile footer accordion initializer.'
+);
+console.log('✅ PASS: Mobile Footer is compact with collapsible accordions (no multi-scroll bloat).');
+
 console.log('\n🎉 ALL MOBILE RESPONSIVENESS AND HALLMARK GATES PASSED (100% CLEAN)!\n');
+

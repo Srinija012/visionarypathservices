@@ -1591,5 +1591,48 @@ function initLenderFilters() {
     }
 })();
 
+// --- Mobile Footer Collapsible Accordions (Hallmark Compact Architecture) ---
+(function initMobileFooterAccordions() {
+    function setupFooter() {
+        const accordions = document.querySelectorAll('.footer-col-accordion');
+        if (!accordions.length) return;
+
+        function updateState() {
+            const isMobile = window.innerWidth <= 768;
+            accordions.forEach(acc => {
+                if (isMobile) {
+                    if (!acc.dataset.userToggled) {
+                        acc.removeAttribute('open');
+                    }
+                } else {
+                    acc.setAttribute('open', '');
+                }
+            });
+        }
+
+        accordions.forEach(acc => {
+            acc.addEventListener('toggle', () => {
+                if (window.innerWidth <= 768) {
+                    acc.dataset.userToggled = 'true';
+                }
+            });
+        });
+
+        updateState();
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(updateState, 150);
+        }, { passive: true });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupFooter);
+    } else {
+        setupFooter();
+    }
+})();
+
+
 
 
