@@ -734,7 +734,10 @@ img { max-width: 100%; display: block; }
     width: 100%;
 }
 
-/* Accessible Animated Hamburger Button */
+/* Hallmark · component: hamburger · genre: modern-minimal · theme: catalog (VPS brand)
+ * states: default · hover · focus · active · disabled · loading · error · success
+ * contrast: pass (46–50)
+ */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -742,35 +745,83 @@ img { max-width: 100%; display: block; }
     align-items: center;
     width: 44px;
     height: 44px;
-    background: none;
+    min-width: 44px;
+    min-height: 44px;
+    background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
+    margin: 0;
     gap: 5px;
-    border-radius: var(--radius-sm);
-    transition: background-color 0.2s ease;
+    border-radius: var(--radius-sm, 8px);
+    transition: background-color 0.18s ease, transform 0.14s ease, outline-color 0.18s ease;
+    -webkit-tap-highlight-color: transparent;
 }
-.hamburger:hover {
-    background: rgba(10, 29, 55, 0.05);
+.hamburger:hover,
+.hamburger.is-hover {
+    background: rgba(11, 31, 51, 0.06);
+}
+.hamburger:focus-visible,
+.hamburger.is-focus {
+    outline: 2px solid var(--color-orange, #FF5A00);
+    outline-offset: 2px;
+    background: rgba(255, 90, 0, 0.08);
+}
+.hamburger:active,
+.hamburger.is-active {
+    transform: scale(0.92);
+    background: rgba(11, 31, 51, 0.10);
+}
+.hamburger:disabled,
+.hamburger[disabled],
+.hamburger.is-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.hamburger[data-state="loading"],
+.hamburger.is-loading {
+    opacity: 0.65;
+    pointer-events: none;
+}
+.hamburger[data-state="error"],
+.hamburger.is-error {
+    outline: 2px solid #EF4444;
+    outline-offset: 2px;
+}
+.hamburger[data-state="success"],
+.hamburger.is-success {
+    outline: 2px solid #10B981;
+    outline-offset: 2px;
 }
 .hamburger span {
     display: block;
     width: 22px;
-    height: 2px;
-    background: var(--navy);
+    height: 2.5px;
+    background: var(--navy, #0B1F33);
     border-radius: 2px;
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease, background-color 0.2s ease;
     transform-origin: center;
 }
+.hamburger.open {
+    background: rgba(11, 31, 51, 0.05);
+}
+.hamburger.open:hover,
+.hamburger.open.is-hover {
+    background: rgba(255, 90, 0, 0.10);
+}
+.hamburger.open span {
+    background: var(--color-orange, #FF5A00);
+}
 .hamburger.open span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+    transform: translateY(7.5px) rotate(45deg);
 }
 .hamburger.open span:nth-child(2) {
     opacity: 0;
     transform: scaleX(0);
 }
 .hamburger.open span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-7.5px) rotate(-45deg);
 }
 
 /* ==========================================
@@ -2302,7 +2353,6 @@ img { max-width: 100%; display: block; }
     }
     body.menu-open {
         overflow: hidden !important;
-        touch-action: none;
     }
     .nav-cta.open {
         display: flex;
