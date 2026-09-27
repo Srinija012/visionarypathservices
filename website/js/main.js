@@ -3,9 +3,9 @@
 // ==========================================
 
 // --- Lead Vault & Headless Google Form Configuration ---
-// Paste your Google Form ID and entry IDs here to automatically capture all leads in a live Google Sheet:
+// Form 1: Student Loan Leads (General)
 window.VPS_GOOGLE_FORM_CONFIG = {
-    formId: '1FAIpQLSfPUsa4zwi2nROpDZfbkxnMAy7NPgvYjunz23kTtMuHJ0GfDw',
+    formId: '1FAIpQLSfQjdvAG5JwF8iwmmxh0WujoLmcUSqn5YTeY0pYay4Mt9wQCA',
     entries: {
         firstName: 'entry.1341360117',
         lastName:  'entry.239502923',
@@ -18,6 +18,23 @@ window.VPS_GOOGLE_FORM_CONFIG = {
     }
 };
 
+// Form 2: Partner With Us Form
+window.VPS_PARTNER_FORM_CONFIG = {
+    formId: '1FAIpQLSeDbbs5yIifQLn4rsF6qM59C9wsfaYfPwAzPFzQPqU_qcxe3Q',
+    entries: {
+        companyName:       'entry.companyName',
+        partnerType:       'entry.partnerType',
+        contactPerson:     'entry.contactPerson',
+        designation:       'entry.designation',
+        email:             'entry.email',
+        phone:             'entry.phone',
+        city:              'entry.city',
+        expectedReferrals: 'entry.expectedReferrals',
+        message:           'entry.message',
+        pageUrl:           'entry.pageUrl'
+    }
+};
+
 // --- Lead Vault & Multi-Destination Dispatcher ---
 function dispatchLeadCapture(leadRecord) {
     // 1. Dual-Capture Resilience: Persist lead locally in browser localStorage
@@ -25,6 +42,7 @@ function dispatchLeadCapture(leadRecord) {
         const storedLeads = JSON.parse(localStorage.getItem('vps_lead_vault') || '[]');
         storedLeads.unshift(leadRecord);
         localStorage.setItem('vps_lead_vault', JSON.stringify(storedLeads.slice(0, 100)));
+        console.log('✅ VPS Lead Vault: Lead stored successfully (' + leadRecord.source + '):', leadRecord);
     } catch (_) {}
 
     // 2. Forward to Webhook if configured (CRM / Zapier / Make / Slack)
@@ -40,19 +58,26 @@ function dispatchLeadCapture(leadRecord) {
     }
 
     // 3. Headless Google Form Integration (Live Google Sheet Auto-Sync)
-    if (window.VPS_GOOGLE_FORM_CONFIG && window.VPS_GOOGLE_FORM_CONFIG.formId) {
+    const isPartner = leadRecord.source === 'Partner Registration';
+    const targetGcfg = isPartner ? window.VPS_PARTNER_FORM_CONFIG : window.VPS_GOOGLE_FORM_CONFIG;
+
+    if (targetGcfg && targetGcfg.formId) {
         try {
-            const gcfg = window.VPS_GOOGLE_FORM_CONFIG;
-            const gUrl = `https://docs.google.com/forms/d/e/${gcfg.formId}/formResponse`;
+            const gUrl = `https://docs.google.com/forms/d/e/${targetGcfg.formId}/formResponse`;
             const gData = new URLSearchParams();
-            if (gcfg.entries?.firstName && leadRecord.firstName) gData.append(gcfg.entries.firstName, leadRecord.firstName);
-            if (gcfg.entries?.lastName && leadRecord.lastName) gData.append(gcfg.entries.lastName, leadRecord.lastName);
-            if (gcfg.entries?.phone && leadRecord.phone) gData.append(gcfg.entries.phone, leadRecord.phone);
-            if (gcfg.entries?.whatsapp && leadRecord.whatsapp) gData.append(gcfg.entries.whatsapp, leadRecord.whatsapp);
-            if (gcfg.entries?.email && leadRecord.email) gData.append(gcfg.entries.email, leadRecord.email);
-            if (gcfg.entries?.interest && leadRecord.interest) gData.append(gcfg.entries.interest, leadRecord.interest);
-            if (gcfg.entries?.notes && leadRecord.notes) gData.append(gcfg.entries.notes, leadRecord.notes);
-            if (gcfg.entries?.pageUrl) gData.append(gcfg.entries.pageUrl, leadRecord.pageUrl || window.location.href);
+            
+            if (targetGcfg.entries) {
+                for (const [key, entryId] of Object.entries(targetGcfg.entries)) {
+                    if (entryId && entryId.startsWith('entry.') && leadRecord[key] !== undefined) {
+                        gData.append(entryId, String(leadRecord[key]));
+                    }
+                }
+            }
+
+            // Fallback parameters if specific keys aren't mapped
+            if (leadRecord.phone && targetGcfg.entries?.phone?.startsWith('entry.')) {
+                gData.set(targetGcfg.entries.phone, leadRecord.phone);
+            }
 
             fetch(gUrl, {
                 method: 'POST',
@@ -819,11 +844,43 @@ function submitContactForm(e) {
 window.submitContactForm = submitContactForm;
 window.submitPartnerForm = submitPartnerForm;
 
-// --- Initialize Hallmark Form Validation on All Forms ---
+// --- Initialize Hallmark Form Validation & Numbers-Only Enforcer on All Forms ---
 function initHallmarkFormEngine() {
     document.querySelectorAll('form').forEach(form => {
         form.querySelectorAll('input:not([type="hidden"]):not([type="submit"]):not([type="radio"]):not([type="checkbox"]), textarea, select').forEach(field => {
             getOrCreateErrorElement(field);
+
+            // Strict Numbers-Only Enforcement for Mobile / Phone / WhatsApp fields
+            const fieldName = (field.name || '').toLowerCase();
+            const fieldId = (field.id || '').toLowerCase();
+            const isNumericPhone = field.type === 'tel' ||
+                fieldName.includes('phone') || fieldName.includes('whatsapp') || fieldName.includes('mobile') ||
+                fieldId.includes('phone') || fieldId.includes('whatsapp') || fieldId.includes('mobile') ||
+                field.hasAttribute('data-numeric-only');
+
+            if (isNumericPhone && field.tagName === 'INPUT') {
+                field.setAttribute('inputmode', 'numeric');
+                field.setAttribute('pattern', '[0-9]*');
+                field.setAttribute('maxlength', '10');
+
+                // Block any key that is not a numeric digit (0-9) while allowing control keys
+                field.addEventListener('keydown', (e) => {
+                    const allowedNavKeys = ['Backspace', 'Delete', 'Tab', 'Escape', 'Enter', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End'];
+                    if (allowedNavKeys.includes(e.key)) return;
+                    if (e.ctrlKey || e.metaKey) return; // Allow Copy/Paste/Cut shortcuts
+                    if (!/^\d$/.test(e.key)) {
+                        e.preventDefault();
+                    }
+                });
+
+                // Real-time sanitizer on input or paste: strip non-digits and cap at 10 digits
+                field.addEventListener('input', () => {
+                    const cleaned = field.value.replace(/\D/g, '').slice(0, 10);
+                    if (field.value !== cleaned) {
+                        field.value = cleaned;
+                    }
+                });
+            }
 
             field.addEventListener('blur', () => {
                 field.dataset.touched = 'true';
@@ -843,6 +900,30 @@ function initHallmarkFormEngine() {
         });
     });
 }
+
+// Test Helper: Available in browser console or test runners to verify lead submission
+window.testLeadCapture = function(customData) {
+    const testLead = Object.assign({
+        id: 'test_lead_' + Date.now(),
+        submittedAt: new Date().toISOString(),
+        source: 'Test Verification Harness',
+        firstName: 'Test',
+        lastName: 'Student',
+        phone: '9876543210',
+        whatsapp: '9876543210',
+        email: 'test.student@example.com',
+        interest: 'Abroad Education Loan',
+        notes: 'Verification test lead submission',
+        pageUrl: window.location.href
+    }, customData || {});
+    
+    dispatchLeadCapture(testLead);
+    return {
+        status: 'success',
+        lead: testLead,
+        vault: JSON.parse(localStorage.getItem('vps_lead_vault') || '[]')
+    };
+};
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initHallmarkFormEngine);
