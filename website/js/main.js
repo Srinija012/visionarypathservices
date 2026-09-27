@@ -1096,11 +1096,49 @@ function initHallmarkFormEngine() {
 }
 
 // Test Helper: Available in browser console or test runners to verify lead submission
-window.testLeadCapture = function(customData) {
+window.testLeadCapture = function(typeOrData) {
+    if (typeOrData === 'both') {
+        const student = window.testLeadCapture('student');
+        const partner = window.testLeadCapture('partner');
+        return {
+            status: 'success',
+            leads: [student.lead, partner.lead],
+            vault: JSON.parse(localStorage.getItem('vps_lead_vault') || '[]')
+        };
+    }
+
+    if (typeOrData === 'partner') {
+        const testPartnerLead = {
+            id: 'test_partner_' + Date.now(),
+            submittedAt: new Date().toISOString(),
+            source: 'Partner Registration',
+            companyName: 'Apex Global Overseas Consultancy',
+            partnerType: 'Study Abroad Consultant',
+            contactPerson: 'Rajesh Kumar',
+            firstName: 'Rajesh',
+            lastName: 'Kumar',
+            designation: 'Managing Director',
+            email: 'partner.test@example.com',
+            phone: '9876543210',
+            whatsapp: '9876543210',
+            city: 'Hyderabad, Telangana',
+            expectedReferrals: '20-50 Students / Year',
+            interest: 'Partner: Study Abroad Consultant (Apex Global Overseas Consultancy)',
+            notes: 'Designation: Managing Director | City: Hyderabad, Telangana | Expected Volume: 20-50 Students / Year | Notes: Automated test lead',
+            pageUrl: window.location.href
+        };
+        dispatchLeadCapture(testPartnerLead);
+        return {
+            status: 'success',
+            lead: testPartnerLead,
+            vault: JSON.parse(localStorage.getItem('vps_lead_vault') || '[]')
+        };
+    }
+
     const testLead = Object.assign({
-        id: 'test_lead_' + Date.now(),
+        id: 'test_student_' + Date.now(),
         submittedAt: new Date().toISOString(),
-        source: 'Test Verification Harness',
+        source: 'Lead Capture Form',
         firstName: 'Test',
         lastName: 'Student',
         phone: '9876543210',
@@ -1109,7 +1147,7 @@ window.testLeadCapture = function(customData) {
         interest: 'Abroad Education Loan',
         notes: 'Verification test lead submission',
         pageUrl: window.location.href
-    }, customData || {});
+    }, typeof typeOrData === 'object' ? typeOrData : {});
     
     dispatchLeadCapture(testLead);
     return {
