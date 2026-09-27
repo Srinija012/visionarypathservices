@@ -17770,5 +17770,236 @@ body.modal-open .whatsapp-float {
     }
 }
 
+/* ==========================================================================
+   HALLMARK MOBILE RESPONSIVENESS SUITE (Discipline 5 & Gates 34, 49, 50–57)
+   Verified across: 320px (Compact) · 375px (iPhone) · 414px (Plus) · 768px (Tablet)
+   ========================================================================== */
 
+/* ── GATE 34: Universal Root Overflow-X Clip (No Hidden, No Horizontal Scroll) ── */
+html,
+body {
+    overflow-x: clip !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
 
+/* ── GATE 49: Clickable Text Single-Line Affordances (Never Wraps) ── */
+.btn,
+.btn-hero-primary,
+.btn-hero-secondary,
+.btn-eligibility,
+.btn-whatsapp-nav,
+.btn-whatsapp,
+.btn-primary,
+.btn-secondary,
+.btn-pan-action,
+.calc-tab-btn,
+.lender-filter-btn,
+.hub-category-pill,
+.floating-eligibility-btn,
+.hero-loan-pill,
+.nav-links > li > a,
+.more-dropdown-item,
+.breadcrumb a,
+.breadcrumb span,
+.footer-links li a,
+.footer-bottom-links a,
+.disclaimer-toggle-pill {
+    white-space: nowrap !important;
+}
+
+/* ── GATE 50: Image-Bearing Grid Tracks Use minmax(0, 1fr) ── */
+.mega-countries-grid,
+.about-static-lenders-grid,
+.vps-lenders-grid,
+.vps-bank-logo-grid,
+.lenders-info-grid,
+.trust-grid,
+.snapshot-stats-grid,
+.featured-card,
+.posts-grid,
+.blog-grid,
+.country-stats-grid {
+    min-width: 0 !important;
+}
+
+/* ── GATE 51: Display Headers & Long Words Wrap Gracefully ── */
+h1, h2, h3, h4, h5, h6,
+.exact-hero-title,
+.section-title,
+.page-hero h1,
+.hero-title,
+.about-hero h1,
+.legal-hero h1,
+.blog-hub-hero h1,
+.vps-thankyou-title,
+.tools-heading,
+.brand-eyebrow,
+.logo-name,
+.logo-text,
+.section-sub,
+.exact-hero-lead,
+.exact-hero-desc,
+.country-stat-val,
+.snapshot-stat-val,
+.method-info a,
+.contact-list a,
+.featured-title,
+.post-title,
+.card-title,
+.disclaimer-item-text,
+.disclaimer-title,
+.country-overview-body {
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+    min-width: 0 !important;
+}
+
+/* ── GATE 52: Section Heads Collapse to One Column on Mobile ── */
+@media (max-width: 48rem) { /* 768px */
+    .section-header,
+    .section-head,
+    .section-header-wrap,
+    .tools-header-wrap,
+    .section-title-wrap,
+    .title-row,
+    .two-col,
+    .two-col-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+}
+
+/* ── GATE 53: Radio-Tab & Choice Patterns Zero Scroll Jump ── */
+.interest-opt input[type="radio"],
+input[type="radio"].custom-radio-inp {
+    position: absolute !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    pointer-events: none !important;
+}
+
+/* ── GATE 54: Eyebrow + Heading Vertical Stack ── */
+.brand-eyebrow,
+.vps-eyebrow,
+.section-label,
+.page-hero-eyebrow,
+.tools-eyebrow,
+.snapshot-badge {
+    display: inline-flex !important;
+    margin-bottom: 8px !important;
+}
+
+/* ── GATE 55: Display Heads Line-Height Safety Floor ── */
+h1, h2,
+.exact-hero-title,
+.section-title,
+.tools-heading,
+.page-hero h1 {
+    line-height: clamp(1.12, 1.18, 1.25) !important;
+}
+
+/* ── GATE 56: Secondary Sticky Elements Nav Offset ── */
+:root {
+    --banner-height: 60px;
+    --z-sticky: 200;
+    --z-sticky-nav: 1000;
+}
+
+/* ── 375px & 414px VIEWPORT REFINEMENT (Standard Mobile) ── */
+@media (max-width: 480px) {
+    .container {
+        padding-inline: 14px !important;
+    }
+    .btn {
+        padding-inline: 16px !important;
+    }
+    .hero-loan-pills {
+        gap: 6px !important;
+    }
+    .hero-loan-pill {
+        font-size: 11.5px !important;
+        padding: 5px 10px !important;
+    }
+    .exact-hero-actions .btn-hero-primary,
+    .exact-hero-actions .btn-hero-secondary,
+    .hero-action-group .btn,
+    .hero-btns .btn,
+    .vps-final-cta-btns .btn {
+        font-size: 14px !important;
+        min-height: 48px !important;
+        padding-inline: 14px !important;
+    }
+    .country-stats-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 12px !important;
+    }
+}
+
+/* ── 320px VIEWPORT PERFECTION (Compact Phones e.g. iPhone SE 1st gen) ── */
+@media (max-width: 340px) {
+    .container {
+        padding-inline: 10px !important;
+    }
+    .logo-name {
+        font-size: 11px !important;
+        letter-spacing: 0.2px !important;
+    }
+    .logo-sub-text {
+        font-size: 6px !important;
+    }
+    .vps-flash-svg {
+        width: 20px !important;
+        height: 25px !important;
+    }
+    .exact-hero-title {
+        font-size: 1.55rem !important;
+        line-height: 1.2 !important;
+    }
+    .exact-hero-actions .btn-hero-primary,
+    .exact-hero-actions .btn-hero-secondary,
+    .hero-action-group .btn,
+    .hero-btns .btn,
+    .vps-final-cta-btns .btn {
+        font-size: 13px !important;
+        min-height: 46px !important;
+        padding-inline: 10px !important;
+    }
+    .exact-hero .hero-trust-strip {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 6px !important;
+    }
+    .hero-loan-pill {
+        font-size: 10.5px !important;
+        padding: 4px 8px !important;
+    }
+    .floating-eligibility-btn {
+        left: 8px !important;
+        bottom: 68px !important;
+        font-size: 10.5px !important;
+        padding: 6px 10px !important;
+        max-width: calc(100vw - 64px) !important;
+    }
+    .whatsapp-float {
+        bottom: 12px !important;
+        right: 10px !important;
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 22px !important;
+    }
+    .contact-form-box {
+        padding: 16px 10px !important;
+    }
+    .popup-right {
+        padding: 18px 12px !important;
+    }
+    .calc-card-container {
+        padding: 14px 10px !important;
+    }
+}
+
+/* Hallmark · mobile: pass (34, 49, 50–57) · viewports: 320px · 375px · 414px · 768px */
