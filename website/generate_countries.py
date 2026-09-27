@@ -1,4 +1,5 @@
 import os
+import urllib.parse
 
 countries = [
     {
@@ -597,7 +598,7 @@ template = """<!DOCTYPE html>
             <p data-aos="fade-up" data-aos-delay="200">{subtitle}</p>
             <div class="hero-btns" data-aos="fade-up" data-aos-delay="300">
                 <button class="btn btn-primary btn-lg" onclick="openPopup()">Check Eligibility – Free <i class="fas fa-arrow-right"></i></button>
-                <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp Advisor</a>
+                <a href="https://wa.me/918150949070?text={wa_country_msg}" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp Advisor</a>
             </div>
         </div>
     </header>
@@ -728,7 +729,7 @@ template = """<!DOCTYPE html>
             <p data-aos="fade-up" data-aos-delay="80">Get free expert guidance on secured &amp; unsecured education loans suited to your profile.</p>
             <div class="cta-btns" data-aos="fade-up" data-aos-delay="160">
                 <button class="btn btn-primary btn-lg" onclick="openPopup()">Check Loan Eligibility Free <i class="fas fa-arrow-right"></i></button>
-                <a href="https://wa.me/918150949070" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                <a href="https://wa.me/918150949070?text={wa_country_msg}" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
             </div>
         </div>
     </section>
@@ -911,7 +912,7 @@ template = """<!DOCTYPE html>
     </button>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/918150949070" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/918150949070?text={wa_country_msg}" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -950,6 +951,8 @@ def generate():
                 </div>""")
         faq_items_html = "\n".join(faqs_html)
 
+        wa_country_msg = urllib.parse.quote(f"Hello Visionary Path Services, I am planning to study in {meta['country_name']} and would like expert guidance on education loan options and eligibility. Please assist me.")
+
         html_content = template.format(
             id=cid,
             title=c["title"],
@@ -968,7 +971,8 @@ def generate():
             country_full=meta["country_full"],
             uni_tags=uni_tags_html,
             loan_bullets=loan_bullets_html,
-            faq_items=faq_items_html
+            faq_items=faq_items_html,
+            wa_country_msg=wa_country_msg
         )
 
         filepath = os.path.join(output_dir, f"{cid}.html")
