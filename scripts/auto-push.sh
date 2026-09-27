@@ -46,9 +46,11 @@ while true; do
         log "Merged $CURRENT_BRANCH → $BRANCH"
       fi
 
-      # Push to origin
+      # Push to both origin and srinija remotes
       git push origin "$BRANCH" 2>&1 | tee -a "$LOG_FILE"
       log "Pushed to origin/$BRANCH ✓"
+      git push srinija "$BRANCH" 2>&1 | tee -a "$LOG_FILE"
+      log "Pushed to srinija/$BRANCH ✓"
     else
       log "⚠ Tests failed — skipping push. Fix errors first."
       echo "$TEST_RESULT" >> "$LOG_FILE"
