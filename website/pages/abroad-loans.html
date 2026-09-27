@@ -256,16 +256,13 @@
 </header>
 <!-- VPS_NAVBAR_END -->
 
-    <!-- HERO SECTION -->
-    <section class="vps-hero" id="mainContent">
-        <div class="vps-hero-worldmap" aria-hidden="true"></div>
-        <div class="vps-halftone-motif top-left" aria-hidden="true"></div>
-        <div class="vps-halftone-motif bottom-right" aria-hidden="true"></div>
-        <div class="vps-hero-swoosh" aria-hidden="true"></div>
-        
-        <div class="container">
-            <div class="vps-hero-grid">
-                <div class="vps-hero-content" data-aos="fade-right">
+    <!-- HERO SECTION (Homepage & MBBS Master Hero System) -->
+    <section class="exact-hero" id="mainContent">
+        <div class="container exact-hero-container">
+            <div class="exact-hero-grid">
+                
+                <!-- Left Content Column -->
+                <div class="exact-hero-content" data-aos="fade-right">
                     <nav aria-label="Breadcrumb" class="vps-breadcrumb">
                         <a href="../index.html">Home</a>
                         <span class="vps-breadcrumb-sep">/</span>
@@ -274,70 +271,78 @@
                         <span>Abroad Education Loans</span>
                     </nav>
                     
-                    <div class="vps-eyebrow">
+                    <div class="vps-eyebrow brand-eyebrow">
                         <span class="vps-eyebrow-dot"></span>
-                        <span>ABROAD EDUCATION LOANS</span>
+                        <span class="eyebrow-text">ABROAD EDUCATION LOANS</span>
                     </div>
                     
-                    <h1 class="vps-hero-title">
-                        Abroad <span class="vps-orange-text">Education Loans</span><br>
-                        Turn Your Global Education Dream Into Reality
+                    <h1 class="exact-hero-title">
+                        Abroad <span class="hero-highlight">Education Loans</span><br>
+                        Turn Your Global Dream Into Reality
                     </h1>
                     
-                    <p class="vps-hero-lead">
+                    <p class="exact-hero-lead">
                         Get personalized education-loan guidance for studying abroad from profile assessment and loan options to documentation, application, sanction and disbursement support.
                     </p>
-                    
-                    <div class="vps-hero-actions">
-                        <button class="btn btn-vps-primary" onclick="openPopup()">
-                            Check Eligibility <i class="fas fa-arrow-right"></i>
+
+                    <!-- Action Buttons matching Reference Design -->
+                    <div class="exact-hero-actions">
+                        <button class="btn btn-hero-primary" onclick="openPopup()">
+                            Check Eligibility – Free <i class="fas fa-arrow-right"></i>
                         </button>
-                        <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn btn-vps-secondary">
+                        <a href="https://wa.me/918150949070" target="_blank" rel="noopener" class="btn btn-hero-secondary">
                             <i class="fab fa-whatsapp" style="color:#25D366;font-size:18px;"></i> Talk to an Expert
                         </a>
                     </div>
                     
-                    <div class="vps-dest-ticker">
-                        <i class="fas fa-plane-departure vps-dest-ticker-icon"></i>
-                        <span>USA | UK | Canada | Australia | Germany | Ireland | Europe &amp; More</span>
+                    <div class="exact-hero-safety">
+                        <i class="fas fa-plane-departure" style="color:var(--color-orange);"></i> <strong>Study Destinations:</strong> USA &bull; UK &bull; Canada &bull; Australia &bull; Germany &bull; Ireland &bull; Europe &amp; More
                     </div>
-                    
-                    <div class="vps-hero-trust">
-                        <div class="vps-trust-item">
-                            <i class="fas fa-shield-halved"></i>
+
+                    <!-- Trust Highlights Strip -->
+                    <div class="hero-trust-strip">
+                        <div class="hero-trust-item">
+                            <i class="fas fa-shield-halved trust-icon-green"></i>
                             <span><strong>100% Free</strong> Advisory</span>
                         </div>
-                        <span class="vps-trust-sep">•</span>
-                        <div class="vps-trust-item">
-                            <i class="fas fa-building-columns"></i>
+                        <span class="hero-trust-sep">•</span>
+                        <div class="hero-trust-item">
+                            <i class="fas fa-building-columns trust-icon-blue"></i>
                             <span><strong>15+</strong> Partner Lenders</span>
                         </div>
-                        <span class="vps-trust-sep">•</span>
-                        <div class="vps-trust-item">
-                            <i class="fas fa-lock"></i>
-                            <span>Safe &amp; Confidential</span>
+                        <span class="hero-trust-sep">•</span>
+                        <div class="hero-trust-item">
+                            <i class="fas fa-bolt trust-icon-green"></i>
+                            <span><strong>Up to ₹2 Cr</strong> Collateral &amp; Non-Collateral</span>
+                        </div>
+                        <span class="hero-trust-sep">•</span>
+                        <div class="hero-trust-item">
+                            <i class="fas fa-user-check trust-icon-blue"></i>
+                            <span><strong>Fast</strong> Sanction</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Visual -->
-                <div class="vps-hero-visual" data-aos="fade-left">
-                    <div class="vps-hero-img-wrap">
-                        <div class="vps-handwriting vps-handwriting-hero">
-                            Explore Learn Grow Globally <span class="hw-accent">✈️</span>
+                <!-- Right Visual Column (Matching Homepage Reference Frame) -->
+                <div class="exact-hero-visual" data-aos="fade-left">
+                    <div class="hero-visual-frame">
+                        <img src="../images/hero_student_clean.png" 
+                             alt="International student smiling with study passport and university documents" 
+                             class="hero-visual-img" 
+                             width="698" 
+                             height="505" 
+                             fetchpriority="high">
+                        <div class="hero-floating-pill pill-top" data-aos="fade-down" data-aos-delay="200">
+                            <span class="floating-icon"><i class="fas fa-plane-departure"></i></span>
+                            <span>Explore &bull; Learn &bull; Grow Globally</span>
                         </div>
-                        <img src="../images/hero_student_clean.png" alt="International student smiling with study passport and university documents" width="698" height="505" fetchpriority="high">
-                        <div class="vps-hero-float-badge">
-                            <div class="vps-float-badge-icon">
-                                <i class="fas fa-bolt"></i>
-                            </div>
-                            <div>
-                                <span class="vps-float-badge-title">Up to ₹2 Crores</span>
-                                <span class="vps-float-badge-sub">Collateral &amp; Non-Collateral</span>
-                            </div>
+                        <div class="hero-floating-pill pill-bottom" data-aos="fade-up" data-aos-delay="300">
+                            <span class="floating-icon"><i class="fas fa-bolt"></i></span>
+                            <span>Up to ₹2 Cr &bull; Collateral &amp; Non-Collateral</span>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
