@@ -1100,4 +1100,140 @@ function initLenderFilters() {
     window.resetLenderFilters = resetLenderFilters;
 }
 
+// ==========================================
+// WHATSAPP CTA PROFESSIONAL PRE-TYPED MESSAGE ENGINE
+// ==========================================
+(function() {
+    const VPS_WA_PHONE = '918150949070';
+
+    const CONTEXT_MESSAGES = {
+        'usa': 'Hello Visionary Path Services, I am planning to study in the USA and would like expert guidance on education loan options (secured / unsecured) and eligibility. Please assist me.',
+        'uk': 'Hello Visionary Path Services, I am planning to study in the UK and would like expert guidance on education loan options and eligibility. Please assist me.',
+        'canada': 'Hello Visionary Path Services, I am planning to study in Canada and would like expert guidance on education loan options and GIC / living cost financing. Please assist me.',
+        'germany': 'Hello Visionary Path Services, I am planning to study in Germany and would like expert guidance on education loans and blocked account financing. Please assist me.',
+        'australia': 'Hello Visionary Path Services, I am planning to study in Australia and would like expert guidance on education loan options and eligibility. Please assist me.',
+        'ireland': 'Hello Visionary Path Services, I am planning to study in Ireland and would like expert guidance on education loan options and visa financial requirements. Please assist me.',
+        'france': 'Hello Visionary Path Services, I am planning to study in France and would like expert guidance on education loan options and eligibility. Please assist me.',
+        'new-zealand': 'Hello Visionary Path Services, I am planning to study in New Zealand and would like expert guidance on education loan options and FTS financing. Please assist me.',
+        'dubai': 'Hello Visionary Path Services, I am planning to study in Dubai (UAE) and would like expert guidance on education loan options and eligibility. Please assist me.',
+        'europe': 'Hello Visionary Path Services, I am planning to study in Europe and would like expert guidance on education loan options and eligibility. Please assist me.',
+        'abroad-loans': 'Hello Visionary Path Services, I am looking for an education loan for my study abroad plans (secured & unsecured options). Could you please help me check my eligibility and interest rates?',
+        'domestic-loans': 'Hello Visionary Path Services, I am looking for an education loan for higher studies in India. Could you please guide me on bank options, interest rates, and eligibility?',
+        'mbbs-loans': 'Hello Visionary Path Services, I am seeking guidance on an education loan for MBBS studies (India / Abroad). Could you please share the eligible lenders and financing details?',
+        'calculators': 'Hello Visionary Path Services, I used the education loan calculators on your website and would like a personalized eligibility assessment and lender comparison. Please guide me.',
+        'partner-lenders': 'Hello Visionary Path Services, I would like to know which partner bank or NBFC is best suited for my education loan profile. Could you please advise me?',
+        'partner-with-us': 'Hello Visionary Path Services, I am interested in partnering with Visionary Path Services as an education consultant / institutional partner. Could we connect?',
+        'other-loans': 'Hello Visionary Path Services, I am looking for assistance with education loan services and forex/ancillary support. Could you please guide me?',
+        'contact': 'Hello Visionary Path Services, I visited your website and would like to speak directly with an education loan counselor. Please assist me.',
+        'about': 'Hello Visionary Path Services, I would like to consult with an education loan advisor regarding higher education financing options and eligibility. Please assist me.',
+        'blog-cibil': 'Hello Visionary Path Services, I read your article on CIBIL scores and would like an expert assessment of my loan eligibility.',
+        'blog-collateral': 'Hello Visionary Path Services, I want to compare secured vs unsecured education loan options for my higher studies.',
+        'blog-usa': 'Hello Visionary Path Services, I was reading your USA education loan guide and would like to check my loan eligibility for US universities.',
+        'blog': 'Hello Visionary Path Services, I was browsing your education loan blog and would like to consult with an advisor regarding my loan requirements.',
+        'default': 'Hello Visionary Path Services, I would like to get expert guidance regarding education loan options and eligibility for higher studies. Please assist me.'
+    };
+
+    function resolveContextualMessage(el) {
+        if (el && el.dataset && el.dataset.waMessage) {
+            return el.dataset.waMessage;
+        }
+
+        const pathname = window.location.pathname.toLowerCase();
+
+        if (pathname.includes('/usa') || pathname.endsWith('usa.html')) {
+            if (pathname.includes('/blogs/')) return CONTEXT_MESSAGES['blog-usa'];
+            return CONTEXT_MESSAGES['usa'];
+        }
+        if (pathname.includes('/cibil')) return CONTEXT_MESSAGES['blog-cibil'];
+        if (pathname.includes('/collateral')) return CONTEXT_MESSAGES['blog-collateral'];
+        if (pathname.includes('/uk') || pathname.endsWith('uk.html')) return CONTEXT_MESSAGES['uk'];
+        if (pathname.includes('/canada') || pathname.endsWith('canada.html')) return CONTEXT_MESSAGES['canada'];
+        if (pathname.includes('/germany') || pathname.endsWith('germany.html')) return CONTEXT_MESSAGES['germany'];
+        if (pathname.includes('/australia') || pathname.endsWith('australia.html')) return CONTEXT_MESSAGES['australia'];
+        if (pathname.includes('/ireland') || pathname.endsWith('ireland.html')) return CONTEXT_MESSAGES['ireland'];
+        if (pathname.includes('/france') || pathname.endsWith('france.html')) return CONTEXT_MESSAGES['france'];
+        if (pathname.includes('/new-zealand') || pathname.endsWith('new-zealand.html')) return CONTEXT_MESSAGES['new-zealand'];
+        if (pathname.includes('/dubai') || pathname.endsWith('dubai.html')) return CONTEXT_MESSAGES['dubai'];
+        if (pathname.includes('/europe') || pathname.endsWith('europe.html')) return CONTEXT_MESSAGES['europe'];
+
+        if (pathname.includes('abroad-loans')) return CONTEXT_MESSAGES['abroad-loans'];
+        if (pathname.includes('domestic-loans')) return CONTEXT_MESSAGES['domestic-loans'];
+        if (pathname.includes('mbbs-loans')) return CONTEXT_MESSAGES['mbbs-loans'];
+        if (pathname.includes('calculators')) return CONTEXT_MESSAGES['calculators'];
+        if (pathname.includes('partner-lenders')) return CONTEXT_MESSAGES['partner-lenders'];
+        if (pathname.includes('partner-with-us')) return CONTEXT_MESSAGES['partner-with-us'];
+        if (pathname.includes('other-loans')) return CONTEXT_MESSAGES['other-loans'];
+        if (pathname.includes('contact')) return CONTEXT_MESSAGES['contact'];
+        if (pathname.includes('about')) return CONTEXT_MESSAGES['about'];
+        if (pathname.includes('blog')) return CONTEXT_MESSAGES['blog'];
+
+        return CONTEXT_MESSAGES['default'];
+    }
+
+    function buildWhatsAppUrl(message) {
+        return `https://wa.me/${VPS_WA_PHONE}?text=${encodeURIComponent(message)}`;
+    }
+
+    function initWhatsAppCTAs() {
+        const waLinks = document.querySelectorAll('a[href*="wa.me"]');
+        waLinks.forEach(link => {
+            const href = link.getAttribute('href') || '';
+            let hasMessage = false;
+            try {
+                const url = new URL(href, window.location.origin);
+                const text = url.searchParams.get('text');
+                if (text && text.trim().length > 0) {
+                    hasMessage = true;
+                }
+            } catch (_) {
+                hasMessage = href.includes('text=');
+            }
+
+            if (!hasMessage) {
+                const msg = resolveContextualMessage(link);
+                link.setAttribute('href', buildWhatsAppUrl(msg));
+            }
+
+            if (!link.getAttribute('target')) link.setAttribute('target', '_blank');
+            if (!link.getAttribute('rel')) link.setAttribute('rel', 'noopener');
+        });
+    }
+
+    // Delegated click handler to intercept any dynamically created or un-hydrated WhatsApp CTA
+    document.addEventListener('click', function(e) {
+        const link = e.target.closest('a[href*="wa.me"]');
+        if (!link) return;
+
+        const href = link.getAttribute('href') || '';
+        let hasMessage = false;
+        try {
+            const url = new URL(href, window.location.origin);
+            const text = url.searchParams.get('text');
+            if (text && text.trim().length > 0) {
+                hasMessage = true;
+            }
+        } catch (_) {
+            hasMessage = href.includes('text=');
+        }
+
+        if (!hasMessage) {
+            const msg = resolveContextualMessage(link);
+            link.setAttribute('href', buildWhatsAppUrl(msg));
+        }
+    }, true);
+
+    // Global utility for triggering WhatsApp consultation from anywhere
+    window.openWhatsAppChat = function(customMessage) {
+        const msg = customMessage || resolveContextualMessage();
+        window.open(buildWhatsAppUrl(msg), '_blank', 'noopener,noreferrer');
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initWhatsAppCTAs);
+    } else {
+        initWhatsAppCTAs();
+    }
+})();
+
+
 
