@@ -1327,12 +1327,20 @@ function initLenderFilters() {
 
         card.dataset.type = type;
 
-        const text = card.textContent.toLowerCase();
-        let security = 'both';
-        if (text.includes('collateral & no-collateral') || text.includes('both')) security = 'both';
-        else if (text.includes('no-collateral') || text.includes('unsecured')) security = 'unsecured';
-        else if (text.includes('collateral')) security = 'secured';
-        card.dataset.security = security;
+        let security = card.dataset.security || '';
+        if (!security) {
+            const text = card.textContent.toLowerCase();
+            if (text.includes('collateral & no-collateral') || text.includes('both') || text.includes('secured & unsecured')) {
+                security = 'both';
+            } else if (text.includes('no-collateral') || text.includes('unsecured') || text.includes('non-collateral')) {
+                security = 'unsecured';
+            } else if (text.includes('collateral') || text.includes('secured')) {
+                security = 'secured';
+            } else {
+                security = 'both';
+            }
+            card.dataset.security = security;
+        }
 
         let dest = 'both';
         if (type === 'intl') dest = 'abroad';
