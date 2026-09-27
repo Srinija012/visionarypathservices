@@ -497,6 +497,7 @@
         calculateTakeover();
         calculateTax();
         calculateEligibility();
+        handleHashNavigation();
     });
 
     // Run immediately as well if script loads post-DOM
@@ -505,5 +506,6 @@
     calculateTakeover();
     calculateTax();
     calculateEligibility();
+    handleHashNavigation();
 
 })();
