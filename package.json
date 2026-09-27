@@ -8,8 +8,9 @@
     "start": "python3 -m http.server 3000 --directory website",
     "sync": "node scripts/sync-components.js",
     "build": "node scripts/sync-components.js",
-    "test": "node scripts/test-sync.js && node scripts/test-leads.js",
+    "test": "node scripts/test-sync.js && node scripts/test-leads.js && node scripts/test-thankyou.js",
     "test:leads": "node scripts/test-leads.js",
+    "test:thankyou": "node scripts/test-thankyou.js",
     "audit": "node scripts/production-audit.js"
   },
   "repository": {

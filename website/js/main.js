@@ -940,26 +940,16 @@ function submitPartnerForm(e) {
     };
     dispatchLeadCapture(leadRecord);
 
-    setTimeout(() => {
-        if (btn) {
-            btn.innerHTML = originalText;
-            btn.removeAttribute('data-state');
-            btn.style.background = '';
-            btn.disabled = false;
-        }
-        form.dataset.submitting = 'false';
-        form.reset();
-        inputs.forEach(input => {
-            input.classList.remove('is-success', 'is-error', 'touched');
-            input.removeAttribute('aria-invalid');
-            delete input.dataset.touched;
-            const err = input.closest('.form-group')?.querySelector('.field-error-msg');
-            if (err) {
-                err.textContent = '';
-                err.classList.remove('visible');
-            }
-        });
-    }, 3500);
+    showLeadThankYouScreen({
+        form,
+        firstName: contactPerson,
+        lastName: companyName,
+        phone,
+        whatsapp: phone,
+        email,
+        interest: `Partner: ${partnerType || 'General'} (${companyName})`,
+        durationMs: 5000
+    });
 }
 
 // --- Contact Form Submit ---
@@ -990,7 +980,6 @@ function submitContactForm(e) {
     }
 
     const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn ? btn.innerHTML : '';
 
     const firstName = (form.querySelector('input[name="firstName"]')?.value || form.querySelector('input[placeholder*="First"]')?.value || '').toString().trim();
     const lastName = (form.querySelector('input[name="lastName"]')?.value || form.querySelector('input[placeholder*="Last"]')?.value || '').toString().trim();
@@ -1003,8 +992,7 @@ function submitContactForm(e) {
     if (btn) {
         btn.disabled = true;
         btn.setAttribute('data-state', 'loading');
-        btn.innerHTML = '<i class="fas fa-check-circle"></i> Enquiry Sent! Connecting to Advisor...';
-        btn.style.background = '#15803d';
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
     }
 
     const leadRecord = {
@@ -1034,30 +1022,17 @@ function submitContactForm(e) {
 
     const waUrl = `https://wa.me/918150949070?text=${leadMsg}`;
 
-    setTimeout(() => {
-        if (btn) {
-            btn.innerHTML = originalText;
-            btn.removeAttribute('data-state');
-            btn.style.background = '';
-            btn.disabled = false;
-        }
-        form.dataset.submitting = 'false';
-        form.reset();
-        inputs.forEach(input => {
-            input.classList.remove('is-success', 'is-error', 'touched');
-            input.removeAttribute('aria-invalid');
-            delete input.dataset.touched;
-            const err = input.closest('.form-group')?.querySelector('.field-error-msg');
-            if (err) {
-                err.textContent = '';
-                err.classList.remove('visible');
-            }
-        });
-        try {
-            const win = window.open(waUrl, '_blank');
-            if (!win) window.location.href = waUrl;
-        } catch (_) {}
-    }, 1200);
+    showLeadThankYouScreen({
+        form,
+        firstName,
+        lastName,
+        phone,
+        whatsapp,
+        email,
+        interest: 'Contact Page Inquiry',
+        durationMs: 5000,
+        waUrl
+    });
 }
 
 window.submitContactForm = submitContactForm;
