@@ -12126,30 +12126,30 @@ input[aria-invalid="false"].touched:not(:focus),
 
 .lenders-info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+    gap: 12px;
 }
 
 .lender-info-card {
     background: #FFFFFF;
-    border-radius: 14px;
+    border-radius: 10px;
     border: 1px solid #E2E8F0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease, border-color 0.22s ease;
-    box-shadow: 0 2px 8px rgba(11, 31, 51, 0.04);
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 1px 3px rgba(11, 31, 51, 0.04);
 }
 
 .lender-info-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 24px -4px rgba(11, 31, 51, 0.10);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px -3px rgba(11, 31, 51, 0.08);
     border-color: var(--color-orange, #FF5A00);
 }
 
 .lic-header {
     background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
-    padding: 14px 16px 12px;
+    padding: 10px 12px 8px;
     border-bottom: 1px solid #EDF2F7;
     position: relative;
 }
@@ -12161,27 +12161,28 @@ input[aria-invalid="false"].touched:not(:focus),
 .lic-brand {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
+    gap: 8px;
+    margin-bottom: 4px;
 }
 
 .lic-logo-wrap {
-    min-width: 66px;
-    height: 34px;
+    min-width: 48px;
+    width: 48px;
+    height: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #FFFFFF;
-    border-radius: 8px;
-    padding: 3px 8px;
+    border-radius: 5px;
+    padding: 2px 4px;
     flex-shrink: 0;
     border: 1px solid #E2E8F0;
-    box-shadow: 0 1px 3px rgba(11, 31, 51, 0.04);
+    box-shadow: 0 1px 2px rgba(11, 31, 51, 0.03);
 }
 
 .lic-logo {
-    max-height: 24px;
-    max-width: 54px;
+    max-height: 18px;
+    max-width: 40px;
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -12192,58 +12193,58 @@ input[aria-invalid="false"].touched:not(:focus),
     color: var(--color-navy, #0B1F33);
     font-family: var(--font-display, 'Manrope', sans-serif);
     font-weight: 700;
-    font-size: 0.92rem;
-    line-height: 1.25;
+    font-size: 0.82rem;
+    line-height: 1.2;
 }
 
 .lic-tagline {
     color: #64748B;
     font-family: var(--font-body, 'Inter', sans-serif);
-    font-size: 0.68rem;
+    font-size: 0.62rem;
     font-weight: 500;
-    margin-top: 2px;
+    margin-top: 1px;
 }
 
 .lic-quote {
     color: #475569;
-    font-size: 0.74rem;
+    font-size: 0.68rem;
     font-style: italic;
     font-weight: 500;
-    line-height: 1.35;
-    margin: 6px 0 10px;
+    line-height: 1.3;
+    margin: 4px 0 6px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    min-height: 32px;
+    min-height: 27px;
 }
 
 .lic-rate-pill {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
     background: #0B1F33;
     color: #FFFFFF;
     font-family: var(--font-display, 'Manrope', sans-serif);
-    font-size: 0.72rem;
+    font-size: 0.66rem;
     font-weight: 700;
-    padding: 3px 10px;
+    padding: 2px 7px;
     border-radius: 50px;
     white-space: nowrap;
     border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .lic-body {
-    padding: 6px 16px 2px;
+    padding: 4px 12px 2px;
     flex: 1;
 }
 
 .lic-row {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 0;
-    border-bottom: 1px solid #F1F5F9;
+    gap: 6px;
+    padding: 3.5px 0;
+    border-bottom: 1px solid #F8FAFC;
 }
 
 .lic-row:last-child {
@@ -12251,71 +12252,71 @@ input[aria-invalid="false"].touched:not(:focus),
 }
 
 .lic-icon {
-    width: 24px;
-    height: 24px;
-    border-radius: 6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
     background: #FFF1E8;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     color: var(--color-orange, #FF5A00);
-    font-size: 0.72rem;
+    font-size: 0.60rem;
 }
 
 .lic-label {
     color: #64748B;
-    font-size: 0.74rem;
+    font-size: 0.68rem;
     font-weight: 500;
     white-space: nowrap;
-    flex: 0 0 105px;
+    flex: 0 0 88px;
 }
 
 .lic-value {
     color: var(--color-navy, #0B1F33);
     font-weight: 700;
-    font-size: 0.77rem;
+    font-size: 0.70rem;
     text-align: right;
     flex: 1;
-    line-height: 1.3;
+    line-height: 1.25;
 }
 
 .lic-footer {
-    padding: 8px 16px 14px;
+    padding: 6px 12px 10px;
 }
 
 .lic-cta {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 5px;
     background: linear-gradient(135deg, #FF7A00 0%, #FF5A00 55%, #FF3800 100%);
     color: #FFFFFF !important;
     font-family: var(--font-display, 'Manrope', sans-serif);
     font-weight: 700;
-    font-size: 0.80rem;
+    font-size: 0.74rem;
     border: none;
-    border-radius: 8px;
-    padding: 8px 14px;
+    border-radius: 6px;
+    padding: 6px 12px;
     cursor: pointer;
     transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.18s ease;
     width: 100%;
-    box-shadow: 0 2px 8px rgba(255, 90, 0, 0.22);
+    box-shadow: 0 1px 4px rgba(255, 90, 0, 0.20);
 }
 
 .lic-cta:hover {
-    box-shadow: 0 6px 18px -2px rgba(255, 90, 0, 0.38);
-    transform: translateY(-1.5px);
+    box-shadow: 0 4px 12px -1px rgba(255, 90, 0, 0.35);
+    transform: translateY(-1px);
     color: #FFFFFF !important;
 }
 
 .lic-cta i {
-    font-size: 0.76rem;
+    font-size: 0.68rem;
     transition: transform 0.2s ease;
 }
 
 .lic-cta:hover i {
-    transform: translateX(3px);
+    transform: translateX(2px);
 }
 
 
@@ -16762,8 +16763,8 @@ img, video, svg, canvas, iframe {
 /* ── 7. PARTNER LENDERS GRID & FILTER ENGINE ── */
 @media (max-width: 768px) {
     .lenders-info-grid {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
-        gap: 12px !important;
+        grid-template-columns: repeat(auto-fill, minmax(185px, 1fr)) !important;
+        gap: 10px !important;
     }
     .lender-filters-top {
         flex-direction: column !important;
@@ -16789,7 +16790,7 @@ img, video, svg, canvas, iframe {
 @media (max-width: 480px) {
     .lenders-info-grid {
         grid-template-columns: 1fr !important;
-        gap: 12px !important;
+        gap: 10px !important;
     }
     .lender-info-card {
         width: 100% !important;
