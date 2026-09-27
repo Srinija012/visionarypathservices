@@ -20136,35 +20136,22 @@ body {
         gap: 8px !important;
     }
 
-    .exact-hero-actions > button,
-    .exact-hero-actions > a,
-    .vps-hero-actions > button,
-    .vps-hero-actions > a,
-    .hero-btns > button,
-    .hero-btns > a,
-    .hero-action-group > button,
-    .hero-action-group > a,
-    .vps-final-cta-btns > button,
-    .vps-final-cta-btns > a,
-    .mbbs-hero-ctas > button,
-    .mbbs-hero-ctas > a,
-    .mbbs-final-btns > button,
-    .mbbs-final-btns > a,
-    .about-hero-actions > button,
-    .about-hero-actions > a,
-    .about-cta-btns > button,
-    .about-cta-btns > a,
-    .svc-cta-btns > button,
-    .svc-cta-btns > a,
-    .cta-bar .cta-btns > button,
-    .cta-bar .cta-btns > a,
-    .office-cta-col .cta-btns > button,
-    .office-cta-col .cta-btns > a,
-    .cta-strip .cta-btns > button,
-    .cta-strip .cta-btns > a,
-    .partner-page-wrap .cta-btns > button,
-    .partner-page-wrap .cta-btns > a {
-        flex: 1 1 0px !important;
+    /* Primary CTA (Check Eligibility – Free) gets 56% proportional share */
+    .exact-hero-actions > :first-child,
+    .vps-hero-actions > :first-child,
+    .hero-btns > :first-child,
+    .hero-action-group > :first-child,
+    .vps-final-cta-btns > :first-child,
+    .mbbs-hero-ctas > :first-child,
+    .mbbs-final-btns > :first-child,
+    .about-hero-actions > :first-child,
+    .about-cta-btns > :first-child,
+    .svc-cta-btns > :first-child,
+    .cta-bar .cta-btns > :first-child,
+    .office-cta-col .cta-btns > :first-child,
+    .cta-strip .cta-btns > :first-child,
+    .partner-page-wrap .cta-btns > :first-child {
+        flex: 1.25 1 0px !important;
         width: auto !important;
         min-width: 0 !important;
         max-width: 100% !important;
@@ -20174,84 +20161,51 @@ body {
         justify-content: center !important;
         text-align: center !important;
         min-height: 44px !important;
-        padding: 0 6px !important;
-        font-size: clamp(11px, 3.1vw, 13px) !important;
+        padding: 0 8px !important;
+        font-size: clamp(10.5px, 2.7vw, 12px) !important;
         font-weight: 700 !important;
-        letter-spacing: -0.2px !important;
+        letter-spacing: -0.25px !important;
         white-space: nowrap !important;
         border-radius: 9999px !important;
         margin: 0 !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
     }
 
-    .exact-hero-actions i,
-    .vps-hero-actions i,
-    .hero-btns i,
-    .hero-action-group i,
-    .vps-final-cta-btns i,
-    .mbbs-hero-ctas i,
-    .mbbs-final-btns i,
-    .about-hero-actions i,
-    .about-cta-btns i,
-    .svc-cta-btns i,
-    .cta-bar .cta-btns i,
-    .office-cta-col .cta-btns i,
-    .cta-strip .cta-btns i,
-    .partner-page-wrap .cta-btns i {
-        font-size: 13px !important;
-        flex-shrink: 0 !important;
-        margin: 0 3px !important;
-    }
-}
-
-@media (max-width: 360px) {
-    .exact-hero-actions,
-    .vps-hero-actions,
-    .hero-btns,
-    .hero-action-group,
-    .vps-final-cta-btns,
-    .mbbs-hero-ctas,
-    .mbbs-final-btns,
-    .about-hero-actions,
-    .about-cta-btns,
-    .svc-cta-btns,
-    .cta-bar .cta-btns,
-    .office-cta-col .cta-btns,
-    .cta-strip .cta-btns,
-    .partner-page-wrap .cta-btns {
-        gap: 5px !important;
-    }
-
-    .exact-hero-actions > button,
-    .exact-hero-actions > a,
-    .vps-hero-actions > button,
-    .vps-hero-actions > a,
-    .hero-btns > button,
-    .hero-btns > a,
-    .hero-action-group > button,
-    .hero-action-group > a,
-    .vps-final-cta-btns > button,
-    .vps-final-cta-btns > a,
-    .mbbs-hero-ctas > button,
-    .mbbs-hero-ctas > a,
-    .mbbs-final-btns > button,
-    .mbbs-final-btns > a,
-    .about-hero-actions > button,
-    .about-hero-actions > a,
-    .about-cta-btns > button,
-    .about-cta-btns > a,
-    .svc-cta-btns > button,
-    .svc-cta-btns > a,
-    .cta-bar .cta-btns > button,
-    .cta-bar .cta-btns > a,
-    .office-cta-col .cta-btns > button,
-    .office-cta-col .cta-btns > a,
-    .cta-strip .cta-btns > button,
-    .cta-strip .cta-btns > a,
-    .partner-page-wrap .cta-btns > button,
-    .partner-page-wrap .cta-btns > a {
-        font-size: 10.5px !important;
-        padding: 0 3px !important;
-        min-height: 42px !important;
+    /* Secondary CTA (Call Now / Talk to an Expert / WhatsApp) */
+    .exact-hero-actions > :last-child,
+    .vps-hero-actions > :last-child,
+    .hero-btns > :last-child,
+    .hero-action-group > :last-child,
+    .vps-final-cta-btns > :last-child,
+    .mbbs-hero-ctas > :last-child,
+    .mbbs-final-btns > :last-child,
+    .about-hero-actions > :last-child,
+    .about-cta-btns > :last-child,
+    .svc-cta-btns > :last-child,
+    .cta-bar .cta-btns > :last-child,
+    .office-cta-col .cta-btns > :last-child,
+    .cta-strip .cta-btns > :last-child,
+    .partner-page-wrap .cta-btns > :last-child {
+        flex: 0.95 1 0px !important;
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        min-height: 44px !important;
+        padding: 0 8px !important;
+        font-size: clamp(10.5px, 2.7vw, 12px) !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.25px !important;
+        white-space: nowrap !important;
+        border-radius: 9999px !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
     }
 
     .exact-hero-actions i,
@@ -20269,6 +20223,88 @@ body {
     .cta-strip .cta-btns i,
     .partner-page-wrap .cta-btns i {
         font-size: 11px !important;
+        flex-shrink: 0 !important;
+        margin: 0 3px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .btn-subtext-free {
+        display: none !important;
+    }
+
+    .exact-hero-actions,
+    .vps-hero-actions,
+    .hero-btns,
+    .hero-action-group,
+    .vps-final-cta-btns,
+    .mbbs-hero-ctas,
+    .mbbs-final-btns,
+    .about-hero-actions,
+    .about-cta-btns,
+    .svc-cta-btns,
+    .cta-bar .cta-btns,
+    .office-cta-col .cta-btns,
+    .cta-strip .cta-btns,
+    .partner-page-wrap .cta-btns {
+        gap: 5px !important;
+    }
+
+    .exact-hero-actions > :first-child,
+    .vps-hero-actions > :first-child,
+    .hero-btns > :first-child,
+    .hero-action-group > :first-child,
+    .vps-final-cta-btns > :first-child,
+    .mbbs-hero-ctas > :first-child,
+    .mbbs-final-btns > :first-child,
+    .about-hero-actions > :first-child,
+    .about-cta-btns > :first-child,
+    .svc-cta-btns > :first-child,
+    .cta-bar .cta-btns > :first-child,
+    .office-cta-col .cta-btns > :first-child,
+    .cta-strip .cta-btns > :first-child,
+    .partner-page-wrap .cta-btns > :first-child {
+        flex: 1.2 1 0px !important;
+        font-size: 10px !important;
+        padding: 0 4px !important;
+        min-height: 42px !important;
+    }
+
+    .exact-hero-actions > :last-child,
+    .vps-hero-actions > :last-child,
+    .hero-btns > :last-child,
+    .hero-action-group > :last-child,
+    .vps-final-cta-btns > :last-child,
+    .mbbs-hero-ctas > :last-child,
+    .mbbs-final-btns > :last-child,
+    .about-hero-actions > :last-child,
+    .about-cta-btns > :last-child,
+    .svc-cta-btns > :last-child,
+    .cta-bar .cta-btns > :last-child,
+    .office-cta-col .cta-btns > :last-child,
+    .cta-strip .cta-btns > :last-child,
+    .partner-page-wrap .cta-btns > :last-child {
+        flex: 0.9 1 0px !important;
+        font-size: 10px !important;
+        padding: 0 4px !important;
+        min-height: 42px !important;
+    }
+
+    .exact-hero-actions i,
+    .vps-hero-actions i,
+    .hero-btns i,
+    .hero-action-group i,
+    .vps-final-cta-btns i,
+    .mbbs-hero-ctas i,
+    .mbbs-final-btns i,
+    .about-hero-actions i,
+    .about-cta-btns i,
+    .svc-cta-btns i,
+    .cta-bar .cta-btns i,
+    .office-cta-col .cta-btns i,
+    .cta-strip .cta-btns i,
+    .partner-page-wrap .cta-btns i {
+        font-size: 10.5px !important;
         margin: 0 2px !important;
     }
 }
