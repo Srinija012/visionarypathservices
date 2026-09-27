@@ -3967,15 +3967,64 @@ html, body {
 .motion-init {
     opacity: 0;
     transform: translateY(18px);
-    transition:
-        opacity var(--motion-base, 0.22s) var(--ease-enter, cubic-bezier(0, 0, 0.2, 1)),
-        transform var(--motion-base, 0.22s) var(--ease-enter, cubic-bezier(0, 0, 0.2, 1));
     will-change: opacity, transform;
 }
 
 .motion-revealed {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Framer Motion Reading Progress Bar */
+#scrollProgressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    transform-origin: 0% 50%;
+    transform: scaleX(0);
+    background: linear-gradient(90deg, #10b981 0%, #059669 40%, #1d4ed8 100%);
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.45);
+    z-index: 10005;
+    pointer-events: none;
+    will-change: transform;
+}
+
+/* Hardware accelerated elements for silky 120fps motion */
+.pan-card,
+.pillar-item,
+.why-feature-card,
+.country-card,
+.core-card,
+.mbbs-card,
+.lender-card,
+.process-step,
+.process-card,
+.loan-card,
+.loan-option-card,
+.service-card,
+.who-card,
+.step-card,
+.docs-card,
+.faq-item,
+.blog-card,
+.contact-method-card,
+.country-stat-box,
+.uni-tag {
+    will-change: transform, opacity;
+}
+
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-consultation,
+.btn-submit-enquiry,
+.calc-tab-btn,
+.emi-preset-btn,
+.floating-eligibility-btn {
+    will-change: transform, box-shadow;
+    touch-action: manipulation;
 }
 
 @media (prefers-reduced-motion: reduce) {

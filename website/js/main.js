@@ -280,6 +280,10 @@ function showLeadThankYouScreen(opts) {
 
     parentContainer.appendChild(screenEl);
 
+    if (window.VPSMotion && typeof window.VPSMotion.animateThankYouScreen === 'function') {
+        window.VPSMotion.animateThankYouScreen(screenEl);
+    }
+
     // Prepare restore function
     _vpsActiveRestoreFn = function() {
         if (screenEl.parentNode) {
@@ -351,6 +355,11 @@ function openPopup() {
         overlay.setAttribute('aria-modal', 'true');
         overlay.setAttribute('aria-labelledby', 'popupTitle');
         document.body.classList.add('modal-open');
+
+        if (window.VPSMotion && typeof window.VPSMotion.animateModalOpen === 'function') {
+            window.VPSMotion.animateModalOpen(overlay);
+        }
+
         // Focus first field
         setTimeout(() => {
             const firstInput = overlay.querySelector('input:not([type="hidden"]):not([readonly])');
@@ -366,11 +375,19 @@ function openPopup() {
 function closePopup() {
     vpsDismissThankYou(false);
     const overlay = document.getElementById('popupOverlay');
-    if (overlay) {
-        overlay.classList.remove('active');
-        overlay.setAttribute('aria-hidden', 'true');
+    const completeClose = () => {
+        if (overlay) {
+            overlay.classList.remove('active');
+            overlay.setAttribute('aria-hidden', 'true');
+        }
+        document.body.classList.remove('modal-open');
+    };
+
+    if (overlay && window.VPSMotion && typeof window.VPSMotion.animateModalClose === 'function') {
+        window.VPSMotion.animateModalClose(overlay, completeClose);
+    } else {
+        completeClose();
     }
-    document.body.classList.remove('modal-open');
     try {
         sessionStorage.setItem('vps_popup_dismissed_time', Date.now().toString());
         sessionStorage.setItem('vps_popup_dismissed', 'true');
