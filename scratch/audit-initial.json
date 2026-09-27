@@ -81,84 +81,52 @@
         "hasOverflow": false,
         "overflowingElements": [
           {
-            "tag": "div",
+            "tag": "button",
             "id": "",
-            "className": "why-nine-grid",
-            "width": 379,
-            "right": 377,
-            "overflowPx": 2
+            "className": "why-carousel-dot",
+            "width": 44,
+            "right": 379,
+            "overflowPx": 4
           },
           {
-            "tag": "div",
+            "tag": "button",
             "id": "",
-            "className": "why-feature-card",
-            "width": 285,
-            "right": 597,
-            "overflowPx": 222
+            "className": "why-carousel-dot",
+            "width": 44,
+            "right": 427,
+            "overflowPx": 52
           },
           {
-            "tag": "span",
+            "tag": "button",
             "id": "",
-            "className": "w-num",
-            "width": 23,
-            "right": 580,
-            "overflowPx": 205
+            "className": "why-carousel-dot",
+            "width": 44,
+            "right": 475,
+            "overflowPx": 100
           },
           {
-            "tag": "h4",
+            "tag": "button",
             "id": "",
-            "className": "",
-            "width": 247,
-            "right": 578,
-            "overflowPx": 203
+            "className": "why-carousel-dot",
+            "width": 44,
+            "right": 523,
+            "overflowPx": 148
           },
           {
-            "tag": "p",
+            "tag": "button",
             "id": "",
-            "className": "",
-            "width": 247,
-            "right": 578,
-            "overflowPx": 203
-          },
-          {
-            "tag": "div",
-            "id": "",
-            "className": "why-feature-card",
-            "width": 285,
-            "right": 896,
-            "overflowPx": 521
-          },
-          {
-            "tag": "div",
-            "id": "",
-            "className": "w-icon-circle",
-            "width": 40,
-            "right": 670,
-            "overflowPx": 295
+            "className": "why-carousel-btn next",
+            "width": 44,
+            "right": 407,
+            "overflowPx": 32
           },
           {
             "tag": "i",
             "id": "",
-            "className": "fas fa-clock",
-            "width": 20,
-            "right": 660,
-            "overflowPx": 285
-          },
-          {
-            "tag": "span",
-            "id": "",
-            "className": "w-num",
-            "width": 23,
-            "right": 879,
-            "overflowPx": 504
-          },
-          {
-            "tag": "h4",
-            "id": "",
-            "className": "",
-            "width": 247,
-            "right": 877,
-            "overflowPx": 502
+            "className": "fas fa-chevron-right",
+            "width": 8,
+            "right": 389,
+            "overflowPx": 14
           }
         ],
         "smallTouchTargets": [],
@@ -185,84 +153,44 @@
         "hasOverflow": false,
         "overflowingElements": [
           {
-            "tag": "div",
+            "tag": "button",
             "id": "",
-            "className": "why-nine-grid",
-            "width": 394,
-            "right": 392,
-            "overflowPx": 2
+            "className": "why-carousel-dot",
+            "width": 44,
+            "right": 430,
+            "overflowPx": 40
           },
           {
-            "tag": "div",
+            "tag": "button",
             "id": "",
-            "className": "why-feature-card",
-            "width": 297,
-            "right": 622,
-            "overflowPx": 232
+            "className": "why-carousel-dot",
+            "width": 44,
+            "right": 478,
+            "overflowPx": 88
           },
           {
-            "tag": "span",
+            "tag": "button",
             "id": "",
-            "className": "w-num",
-            "width": 23,
-            "right": 605,
-            "overflowPx": 215
+            "className": "why-carousel-dot",
+            "width": 44,
+            "right": 526,
+            "overflowPx": 136
           },
           {
-            "tag": "h4",
+            "tag": "button",
             "id": "",
-            "className": "",
-            "width": 259,
-            "right": 603,
-            "overflowPx": 213
-          },
-          {
-            "tag": "p",
-            "id": "",
-            "className": "",
-            "width": 259,
-            "right": 603,
-            "overflowPx": 213
-          },
-          {
-            "tag": "div",
-            "id": "",
-            "className": "why-feature-card",
-            "width": 297,
-            "right": 932,
-            "overflowPx": 542
-          },
-          {
-            "tag": "div",
-            "id": "",
-            "className": "w-icon-circle",
-            "width": 40,
-            "right": 695,
-            "overflowPx": 305
+            "className": "why-carousel-btn next",
+            "width": 44,
+            "right": 420,
+            "overflowPx": 30
           },
           {
             "tag": "i",
             "id": "",
-            "className": "fas fa-clock",
-            "width": 20,
-            "right": 685,
-            "overflowPx": 295
-          },
-          {
-            "tag": "span",
-            "id": "",
-            "className": "w-num",
-            "width": 23,
-            "right": 915,
-            "overflowPx": 525
-          },
-          {
-            "tag": "h4",
-            "id": "",
-            "className": "",
-            "width": 259,
-            "right": 913,
-            "overflowPx": 523
+            "className": "fas fa-chevron-right",
+            "width": 8,
+            "right": 401,
+            "overflowPx": 11
           }
         ],
         "smallTouchTargets": [],
@@ -289,84 +217,44 @@
         "hasOverflow": false,
         "overflowingElements": [
           {
-            "tag": "div",
+            "tag": "button",
             "id": "",
-            "className": "why-nine-grid",
-            "width": 434,
-            "right": 432,
-            "overflowPx": 2
+            "className": "why-carousel-dot",
+            "width": 44,
+            "right": 436,
+            "overflowPx": 6
           },
           {
-            "tag": "div",
+            "tag": "button",
             "id": "",
-            "className": "why-feature-card",
-            "width": 310,
-            "right": 648,
-            "overflowPx": 218
+            "className": "why-carousel-dot",
+            "width": 44,
+            "right": 484,
+            "overflowPx": 54
           },
           {
-            "tag": "span",
+            "tag": "button",
             "id": "",
-            "className": "w-num",
-            "width": 23,
-            "right": 631,
-            "overflowPx": 201
+            "className": "why-carousel-dot",
+            "width": 44,
+            "right": 532,
+            "overflowPx": 102
           },
           {
-            "tag": "h4",
+            "tag": "button",
             "id": "",
-            "className": "",
-            "width": 272,
-            "right": 629,
-            "overflowPx": 199
-          },
-          {
-            "tag": "p",
-            "id": "",
-            "className": "",
-            "width": 272,
-            "right": 629,
-            "overflowPx": 199
-          },
-          {
-            "tag": "div",
-            "id": "",
-            "className": "why-feature-card",
-            "width": 310,
-            "right": 972,
-            "overflowPx": 542
-          },
-          {
-            "tag": "div",
-            "id": "",
-            "className": "w-icon-circle",
-            "width": 40,
-            "right": 721,
-            "overflowPx": 291
+            "className": "why-carousel-btn next",
+            "width": 44,
+            "right": 454,
+            "overflowPx": 24
           },
           {
             "tag": "i",
             "id": "",
-            "className": "fas fa-clock",
-            "width": 20,
-            "right": 711,
-            "overflowPx": 281
-          },
-          {
-            "tag": "span",
-            "id": "",
-            "className": "w-num",
-            "width": 23,
-            "right": 955,
-            "overflowPx": 525
-          },
-          {
-            "tag": "h4",
-            "id": "",
-            "className": "",
-            "width": 272,
-            "right": 953,
-            "overflowPx": 523
+            "className": "fas fa-chevron-right",
+            "width": 8,
+            "right": 435,
+            "overflowPx": 5
           }
         ],
         "smallTouchTargets": [],
@@ -391,88 +279,7 @@
         "winW": 768,
         "maxW": 768,
         "hasOverflow": false,
-        "overflowingElements": [
-          {
-            "tag": "div",
-            "id": "",
-            "className": "why-feature-card",
-            "width": 310,
-            "right": 978,
-            "overflowPx": 210
-          },
-          {
-            "tag": "span",
-            "id": "",
-            "className": "w-num",
-            "width": 23,
-            "right": 961,
-            "overflowPx": 193
-          },
-          {
-            "tag": "h4",
-            "id": "",
-            "className": "",
-            "width": 272,
-            "right": 959,
-            "overflowPx": 191
-          },
-          {
-            "tag": "p",
-            "id": "",
-            "className": "",
-            "width": 272,
-            "right": 959,
-            "overflowPx": 191
-          },
-          {
-            "tag": "div",
-            "id": "",
-            "className": "why-feature-card",
-            "width": 310,
-            "right": 1302,
-            "overflowPx": 534
-          },
-          {
-            "tag": "div",
-            "id": "",
-            "className": "w-icon-circle",
-            "width": 40,
-            "right": 1051,
-            "overflowPx": 283
-          },
-          {
-            "tag": "i",
-            "id": "",
-            "className": "fas fa-laptop",
-            "width": 25,
-            "right": 1043,
-            "overflowPx": 275
-          },
-          {
-            "tag": "span",
-            "id": "",
-            "className": "w-num",
-            "width": 23,
-            "right": 1285,
-            "overflowPx": 517
-          },
-          {
-            "tag": "h4",
-            "id": "",
-            "className": "",
-            "width": 272,
-            "right": 1283,
-            "overflowPx": 515
-          },
-          {
-            "tag": "p",
-            "id": "",
-            "className": "",
-            "width": 272,
-            "right": 1283,
-            "overflowPx": 515
-          }
-        ],
+        "overflowingElements": [],
         "smallTouchTargets": [],
         "sub48Inputs": [],
         "h1Size": 40,
@@ -598,64 +405,7 @@
         "maxW": 375,
         "hasOverflow": false,
         "overflowingElements": [],
-        "smallTouchTargets": [
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 151,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 151,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 151,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 151,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 151,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 151,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 151,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 151,
-            "height": 32
-          }
-        ],
+        "smallTouchTargets": [],
         "sub48Inputs": [],
         "h1Size": 32,
         "stickyButtons": [
@@ -678,64 +428,7 @@
         "maxW": 390,
         "hasOverflow": false,
         "overflowingElements": [],
-        "smallTouchTargets": [
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 158,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 158,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 158,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 158,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 158,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 158,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 158,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 158,
-            "height": 32
-          }
-        ],
+        "smallTouchTargets": [],
         "sub48Inputs": [],
         "h1Size": 32,
         "stickyButtons": [
@@ -758,64 +451,7 @@
         "maxW": 430,
         "hasOverflow": false,
         "overflowingElements": [],
-        "smallTouchTargets": [
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 178,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 178,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 178,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 178,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 178,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 178,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 178,
-            "height": 32
-          },
-          {
-            "tag": "a",
-            "text": "Explore",
-            "className": "btn btn-vps-navy vps-dest-btn",
-            "width": 178,
-            "height": 32
-          }
-        ],
+        "smallTouchTargets": [],
         "sub48Inputs": [],
         "h1Size": 34,
         "stickyButtons": [
@@ -1255,7 +891,64 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "calcLoanAmountInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcLoanAmountSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          },
+          {
+            "tag": "input",
+            "name": "calcInterestRateInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcInterestRateSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          },
+          {
+            "tag": "input",
+            "name": "calcTenureInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcTenureSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          },
+          {
+            "tag": "input",
+            "name": "calcCourseDurationInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcCourseDurationSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          }
+        ],
         "h1Size": 32,
         "stickyButtons": [
           {
@@ -1278,7 +971,64 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "calcLoanAmountInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcLoanAmountSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          },
+          {
+            "tag": "input",
+            "name": "calcInterestRateInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcInterestRateSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          },
+          {
+            "tag": "input",
+            "name": "calcTenureInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcTenureSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          },
+          {
+            "tag": "input",
+            "name": "calcCourseDurationInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcCourseDurationSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          }
+        ],
         "h1Size": 32,
         "stickyButtons": [
           {
@@ -1301,7 +1051,64 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "calcLoanAmountInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcLoanAmountSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          },
+          {
+            "tag": "input",
+            "name": "calcInterestRateInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcInterestRateSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          },
+          {
+            "tag": "input",
+            "name": "calcTenureInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcTenureSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          },
+          {
+            "tag": "input",
+            "name": "calcCourseDurationInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcCourseDurationSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          }
+        ],
         "h1Size": 34,
         "stickyButtons": [
           {
@@ -1324,7 +1131,64 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "calcLoanAmountInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcLoanAmountSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          },
+          {
+            "tag": "input",
+            "name": "calcInterestRateInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcInterestRateSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          },
+          {
+            "tag": "input",
+            "name": "calcTenureInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcTenureSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          },
+          {
+            "tag": "input",
+            "name": "calcCourseDurationInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-val-input"
+          },
+          {
+            "tag": "input",
+            "name": "calcCourseDurationSlider",
+            "height": 44,
+            "fontSize": 16,
+            "className": "calc-slider"
+          }
+        ],
         "h1Size": 40,
         "stickyButtons": [
           {
@@ -1352,7 +1216,43 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "firstName",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "lastName",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "phone",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "email",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "whatsapp",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          }
+        ],
         "h1Size": 32,
         "stickyButtons": [
           {
@@ -1375,7 +1275,43 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "firstName",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "lastName",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "phone",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "email",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "whatsapp",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          }
+        ],
         "h1Size": 32,
         "stickyButtons": [
           {
@@ -1398,7 +1334,43 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "firstName",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "lastName",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "phone",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "email",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "whatsapp",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          }
+        ],
         "h1Size": 34,
         "stickyButtons": [
           {
@@ -1421,7 +1393,43 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "firstName",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "lastName",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "phone",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "email",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "whatsapp",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          }
+        ],
         "h1Size": 40,
         "stickyButtons": [
           {
@@ -2613,7 +2621,29 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "emiAmountRange",
+            "height": 44,
+            "fontSize": 16,
+            "className": "emi-slider"
+          },
+          {
+            "tag": "input",
+            "name": "emiRateRange",
+            "height": 44,
+            "fontSize": 16,
+            "className": "emi-slider"
+          },
+          {
+            "tag": "input",
+            "name": "emiTenureRange",
+            "height": 44,
+            "fontSize": 16,
+            "className": "emi-slider"
+          }
+        ],
         "h1Size": 32,
         "stickyButtons": [
           {
@@ -2636,7 +2666,29 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "emiAmountRange",
+            "height": 44,
+            "fontSize": 16,
+            "className": "emi-slider"
+          },
+          {
+            "tag": "input",
+            "name": "emiRateRange",
+            "height": 44,
+            "fontSize": 16,
+            "className": "emi-slider"
+          },
+          {
+            "tag": "input",
+            "name": "emiTenureRange",
+            "height": 44,
+            "fontSize": 16,
+            "className": "emi-slider"
+          }
+        ],
         "h1Size": 32,
         "stickyButtons": [
           {
@@ -2659,7 +2711,29 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "emiAmountRange",
+            "height": 44,
+            "fontSize": 16,
+            "className": "emi-slider"
+          },
+          {
+            "tag": "input",
+            "name": "emiRateRange",
+            "height": 44,
+            "fontSize": 16,
+            "className": "emi-slider"
+          },
+          {
+            "tag": "input",
+            "name": "emiTenureRange",
+            "height": 44,
+            "fontSize": 16,
+            "className": "emi-slider"
+          }
+        ],
         "h1Size": 34,
         "stickyButtons": [
           {
@@ -2682,7 +2756,29 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "emiAmountRange",
+            "height": 44,
+            "fontSize": 16,
+            "className": "emi-slider"
+          },
+          {
+            "tag": "input",
+            "name": "emiRateRange",
+            "height": 44,
+            "fontSize": 16,
+            "className": "emi-slider"
+          },
+          {
+            "tag": "input",
+            "name": "emiTenureRange",
+            "height": 44,
+            "fontSize": 16,
+            "className": "emi-slider"
+          }
+        ],
         "h1Size": 40,
         "stickyButtons": [
           {
@@ -2807,7 +2903,15 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "lenderSearchInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          }
+        ],
         "h1Size": 32,
         "stickyButtons": [
           {
@@ -2830,7 +2934,15 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "lenderSearchInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          }
+        ],
         "h1Size": 32,
         "stickyButtons": [
           {
@@ -2853,7 +2965,15 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "lenderSearchInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          }
+        ],
         "h1Size": 34,
         "stickyButtons": [
           {
@@ -2876,7 +2996,15 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "lenderSearchInput",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          }
+        ],
         "h1Size": 40,
         "stickyButtons": [
           {
@@ -2904,7 +3032,64 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "companyName",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "select",
+            "name": "partnerType",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "contactPerson",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "designation",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "email",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "phone",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "city",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "select",
+            "name": "expectedReferrals",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          }
+        ],
         "h1Size": 32,
         "stickyButtons": [
           {
@@ -2927,7 +3112,64 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "companyName",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "select",
+            "name": "partnerType",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "contactPerson",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "designation",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "email",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "phone",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "city",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "select",
+            "name": "expectedReferrals",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          }
+        ],
         "h1Size": 32,
         "stickyButtons": [
           {
@@ -2950,7 +3192,64 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "companyName",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "select",
+            "name": "partnerType",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "contactPerson",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "designation",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "email",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "phone",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "city",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "select",
+            "name": "expectedReferrals",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          }
+        ],
         "h1Size": 34,
         "stickyButtons": [
           {
@@ -2973,7 +3272,64 @@
         "hasOverflow": false,
         "overflowingElements": [],
         "smallTouchTargets": [],
-        "sub48Inputs": [],
+        "sub48Inputs": [
+          {
+            "tag": "input",
+            "name": "companyName",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "select",
+            "name": "partnerType",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "contactPerson",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "designation",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "email",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "phone",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "input",
+            "name": "city",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          },
+          {
+            "tag": "select",
+            "name": "expectedReferrals",
+            "height": 44,
+            "fontSize": 16,
+            "className": ""
+          }
+        ],
         "h1Size": 40,
         "stickyButtons": [
           {
