@@ -41,31 +41,124 @@
         slider.style.background = `linear-gradient(to right, #1a9c4e 0%, #1a9c4e ${pct}%, #e2e8f0 ${pct}%, #e2e8f0 100%)`;
     }
 
-    // --- Tab Switching ---
+    // --- Tab Switching & Navigation Engine ---
     const tabButtons = document.querySelectorAll('.calc-tab-btn');
     const tabPanels = document.querySelectorAll('.calc-panel');
+    const heroPills = document.querySelectorAll('.hero-loan-pills a');
+
+    function switchTab(targetId, shouldScroll) {
+        if (!targetId) return;
+
+        // 1. Update Tab Buttons in navigation
+        let activeTabBtn = null;
+        tabButtons.forEach(b => {
+            const isMatch = b.getAttribute('data-tab') === targetId;
+            b.classList.toggle('active', isMatch);
+            b.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+            if (isMatch) activeTabBtn = b;
+        });
+
+        // 2. Update Tab Panels
+        tabPanels.forEach(p => {
+            const isMatch = p.id === targetId;
+            p.classList.toggle('active', isMatch);
+            p.hidden = !isMatch;
+        });
+
+        // 3. Update Hero Quick-Access Pills active state
+        heroPills.forEach(pill => {
+            const href = pill.getAttribute('href') || '';
+            const pillTarget = href.replace('#', '');
+            pill.classList.toggle('active', pillTarget === targetId);
+        });
+
+        // 4. Center active tab button horizontally on mobile / overflow
+        if (activeTabBtn) {
+            try {
+                activeTabBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            } catch (_) {}
+        }
+
+        // 5. Trigger calculation for target panel to recalculate & paint slider tracks
+        if (targetId === 'panel-loan-calc' && typeof calculateLoan === 'function') {
+            calculateLoan();
+        } else if (targetId === 'panel-curr-calc' && typeof calculateCurrency === 'function') {
+            calculateCurrency();
+        } else if (targetId === 'panel-takeover-calc' && typeof calculateTakeover === 'function') {
+            calculateTakeover();
+        } else if (targetId === 'panel-tax-calc' && typeof calculateTax === 'function') {
+            calculateTax();
+        } else if (targetId === 'panel-eligibility-calc' && typeof calculateEligibility === 'function') {
+            calculateEligibility();
+        }
+
+        // 6. Smoothly scroll down to the calculators section
+        if (shouldScroll) {
+            const targetElem = document.querySelector('.calc-tabs-wrapper') || document.getElementById('calculators');
+            if (targetElem) {
+                const nav = document.querySelector('.navbar');
+                const navHeight = nav ? nav.offsetHeight : 70;
+                const offset = navHeight + 20;
+                const elementTop = targetElem.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({
+                    top: Math.max(0, elementTop),
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }
 
     tabButtons.forEach(btn => {
         btn.addEventListener('click', function () {
             const targetId = this.getAttribute('data-tab');
-            tabButtons.forEach(b => {
-                b.classList.remove('active');
-                b.setAttribute('aria-selected', 'false');
-            });
-            tabPanels.forEach(p => {
-                p.classList.remove('active');
-                p.hidden = true;
-            });
-
-            this.classList.add('active');
-            this.setAttribute('aria-selected', 'true');
-            const targetPanel = document.getElementById(targetId);
-            if (targetPanel) {
-                targetPanel.classList.add('active');
-                targetPanel.hidden = false;
+            switchTab(targetId, false);
+            if (window.history && window.history.replaceState) {
+                window.history.replaceState(null, null, '#' + targetId);
             }
         });
     });
+
+    // Handle clicks on hero quick-access calculator pills
+    heroPills.forEach(pill => {
+        pill.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#panel-')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                switchTab(targetId, true);
+                if (window.history && window.history.pushState) {
+                    window.history.pushState(null, null, href);
+                }
+            }
+        });
+    });
+
+    // Handle URL hash on initial load and popstate/hashchange
+    function handleHashNavigation() {
+        const hash = window.location.hash;
+        if (hash && hash.startsWith('#panel-')) {
+            const targetId = hash.substring(1);
+            const targetPanel = document.getElementById(targetId);
+            if (targetPanel) {
+                switchTab(targetId, false);
+                setTimeout(() => {
+                    const targetElem = document.querySelector('.calc-tabs-wrapper') || document.getElementById('calculators');
+                    if (targetElem) {
+                        const nav = document.querySelector('.navbar');
+                        const navHeight = nav ? nav.offsetHeight : 70;
+                        const offset = navHeight + 20;
+                        const elementTop = targetElem.getBoundingClientRect().top + window.pageYOffset - offset;
+                        window.scrollTo({
+                            top: Math.max(0, elementTop),
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 300);
+            }
+        }
+    }
+
+    window.addEventListener('hashchange', handleHashNavigation);
 
     // ========================================================
     // 1. EDUCATION LOAN CALCULATOR
