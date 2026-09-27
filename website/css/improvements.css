@@ -17546,27 +17546,30 @@ body.menu-open .navbar.scrolled-elevated {
     .popup-overlay {
         padding: 12px !important;
         align-items: center !important;
+        justify-content: center !important;
         overflow-y: auto !important;
         -webkit-overflow-scrolling: touch !important;
     }
     .popup-modal {
         flex-direction: column !important;
         width: 100% !important;
-        max-width: 500px !important;
-        max-height: 90dvh !important;
+        max-width: 480px !important;
+        max-height: 92dvh !important;
         overflow-y: auto !important;
+        overflow-x: hidden !important;
         -webkit-overflow-scrolling: touch !important;
         overscroll-behavior: contain !important;
-        border-radius: 20px !important;
+        border-radius: 18px !important;
         margin: auto !important;
         position: relative !important;
+        scrollbar-width: thin !important;
     }
     .popup-close {
         top: 10px !important;
         right: 10px !important;
-        width: 44px !important;
-        height: 44px !important;
-        font-size: 16px !important;
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 15px !important;
         border-radius: 50% !important;
         z-index: 20 !important;
         background: #ffffff !important;
@@ -17575,34 +17578,34 @@ body.menu-open .navbar.scrolled-elevated {
         align-items: center !important;
         justify-content: center !important;
     }
+    /* Hide duplicate promo banner so form is instantly visible */
     .popup-left {
-        width: 100% !important;
-        min-width: 0 !important;
-        padding: 16px 18px 12px !important;
-        border-right: none !important;
-        border-bottom: 1px solid rgba(22, 163, 74, 0.15) !important;
+        display: none !important;
     }
     .popup-left .popup-features {
-        display: none !important; /* Conceal bulky bullets on mobile for faster form access */
+        display: none !important;
     }
     .popup-left-footer {
-        margin-top: 6px !important;
+        display: none !important;
     }
     .popup-right {
-        padding: 18px 18px 24px !important;
+        padding: 16px 16px 14px !important;
         width: 100% !important;
         box-sizing: border-box !important;
     }
-    .popup-form .form-row,
+    /* Keep name inputs 2 columns to prevent needless scroll */
     .popup-form .form-row.name-row,
-    .contact-form-box .form-row,
+    .contact-form-box .form-row {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+    }
     .form-grid-2 {
         grid-template-columns: 1fr !important;
         gap: 8px !important;
     }
     .contact-inner {
         grid-template-columns: 1fr !important;
-        gap: 32px !important;
+        gap: 28px !important;
     }
 }
 
