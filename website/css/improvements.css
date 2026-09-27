@@ -17315,17 +17315,22 @@ body.menu-open .navbar.scrolled-elevated {
     }
     .hero-action-group,
     .hero-btns {
-        flex-direction: column !important;
+        display: flex !important;
+        flex-direction: row !important;
         align-items: stretch !important;
+        justify-content: center !important;
         width: 100% !important;
-        gap: 10px !important;
+        gap: 8px !important;
     }
     .hero-action-group .btn,
     .hero-btns .btn {
-        width: 100% !important;
+        flex: 1 1 0px !important;
+        width: auto !important;
+        min-width: 0 !important;
         justify-content: center !important;
-        min-height: 48px !important;
-        padding: 0 16px !important;
+        min-height: 44px !important;
+        padding: 0 8px !important;
+        font-size: clamp(11.5px, 3.2vw, 13.5px) !important;
         white-space: nowrap !important;
         text-align: center !important;
     }
@@ -17531,16 +17536,21 @@ body.menu-open .navbar.scrolled-elevated {
         max-width: 100% !important;
     }
     .vps-final-cta-btns {
-        flex-direction: column !important;
+        display: flex !important;
+        flex-direction: row !important;
         align-items: stretch !important;
+        justify-content: center !important;
         width: 100% !important;
-        gap: 10px !important;
+        gap: 8px !important;
     }
     .vps-final-cta-btns .btn {
-        width: 100% !important;
+        flex: 1 1 0px !important;
+        width: auto !important;
+        min-width: 0 !important;
         justify-content: center !important;
-        min-height: 48px !important;
-        padding: 0 16px !important;
+        min-height: 44px !important;
+        padding: 0 8px !important;
+        font-size: clamp(11.5px, 3.2vw, 13.5px) !important;
         white-space: nowrap !important;
         text-align: center !important;
     }
@@ -18513,9 +18523,9 @@ h1, h2,
     .hero-action-group .btn,
     .hero-btns .btn,
     .vps-final-cta-btns .btn {
-        font-size: 14px !important;
-        min-height: 48px !important;
-        padding-inline: 14px !important;
+        font-size: clamp(11px, 2.9vw, 13px) !important;
+        min-height: 44px !important;
+        padding-inline: 6px !important;
     }
     .country-stats-grid {
         grid-template-columns: minmax(0, 1fr) !important;
@@ -18548,9 +18558,9 @@ h1, h2,
     .hero-action-group .btn,
     .hero-btns .btn,
     .vps-final-cta-btns .btn {
-        font-size: 13px !important;
-        min-height: 46px !important;
-        padding-inline: 10px !important;
+        font-size: 10.5px !important;
+        min-height: 42px !important;
+        padding-inline: 4px !important;
     }
     .exact-hero .hero-trust-strip {
         grid-template-columns: minmax(0, 1fr) !important;
