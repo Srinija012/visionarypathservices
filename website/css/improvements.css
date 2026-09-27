@@ -2854,7 +2854,10 @@ header.page-hero .green-highlight,
 
 /* Services Dropdown Mega-Menu Destinations Grid */
 .mega-dropdown {
-    width: 680px !important;
+    width: 724px !important;
+    max-width: calc(100vw - 32px) !important;
+    padding: 18px 24px 0 24px !important;
+    box-sizing: border-box !important;
 }
 
 @media (max-width: 991px) {
@@ -2863,6 +2866,7 @@ header.page-hero .green-highlight,
         max-width: 100% !important;
         min-width: 0 !important;
         box-sizing: border-box !important;
+        padding: 16px 14px !important;
     }
     .mega-body {
         grid-template-columns: 1fr !important;
@@ -2872,30 +2876,46 @@ header.page-hero .green-highlight,
 
 .mega-body {
     display: grid !important;
-    grid-template-columns: 1.1fr 1fr !important;
-    gap: 22px !important;
+    grid-template-columns: 275px 1fr !important;
+    gap: 24px !important;
+}
+
+.mega-col-loans {
+    border-right: 1px solid #f1f5f9 !important;
+    padding-right: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.mega-col-countries {
+    padding-right: 2px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 0 !important;
 }
 
 .mega-countries-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 4px 8px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 4px 10px !important;
+    width: 100% !important;
 }
 
 .mega-country-link {
     display: flex !important;
     align-items: center !important;
     gap: 8px !important;
-    padding: 7px 8px !important;
+    padding: 7px 9px !important;
     border-radius: 8px !important;
     text-decoration: none !important;
     background: transparent !important;
-    transition: background var(--transition-fast), transform var(--transition-fast) !important;
+    transition: background var(--transition-fast) !important;
+    box-sizing: border-box !important;
 }
 
 .mega-country-link:hover {
     background: #f1f5f9 !important;
-    transform: translateX(2px) !important;
+    transform: none !important;
 }
 
 .mega-country-link .country-flag {
@@ -2936,6 +2956,11 @@ header.page-hero .green-highlight,
 
 .mega-country-link:hover .country-name {
     color: var(--color-secondary, #1a56db) !important;
+}
+
+.mega-footer {
+    margin: 16px -24px 0 -24px !important;
+    padding: 12px 24px !important;
 }
 
 /* Master Universal High-Impact CTA Banner */
