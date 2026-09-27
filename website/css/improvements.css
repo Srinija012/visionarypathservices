@@ -6118,13 +6118,19 @@ html, body {
     }
     .vps-hero-actions,
     .vps-final-cta-btns {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        gap: 8px;
         width: 100%;
     }
     .btn-vps-primary,
     .btn-vps-secondary,
     .btn-vps-cta-secondary {
-        width: 100%;
+        flex: 1 1 0px;
+        width: auto;
+        min-width: 0;
         justify-content: center;
     }
     .vps-dest-ticker {
@@ -8432,7 +8438,10 @@ html, body {
 
     .vps-final-cta-btns {
         justify-content: center !important;
-        flex-direction: column !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: stretch !important;
+        gap: 8px !important;
         width: 100% !important;
     }
 
@@ -9324,22 +9333,34 @@ html, body {
     }
 
     .vps-hero-actions {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        gap: 8px;
         width: 100%;
     }
 
     .vps-hero-actions .btn {
-        width: 100%;
+        flex: 1 1 0px;
+        width: auto;
+        min-width: 0;
         justify-content: center;
     }
 
     .vps-final-cta-btns {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        gap: 8px;
         width: 100%;
     }
 
     .vps-final-cta-btns .btn {
-        width: 100%;
+        flex: 1 1 0px;
+        width: auto;
+        min-width: 0;
         justify-content: center;
     }
 }
@@ -10450,7 +10471,11 @@ html, body {
 
     .mbbs-hero-ctas,
     .mbbs-final-btns {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        gap: 8px;
         width: 100%;
     }
 
@@ -10458,7 +10483,9 @@ html, body {
     .mbbs-hero-ctas .mbbs-btn-secondary,
     .mbbs-final-btns .mbbs-btn-primary,
     .mbbs-final-btns .mbbs-btn-secondary {
-        width: 100%;
+        flex: 1 1 0px;
+        width: auto;
+        min-width: 0;
         justify-content: center;
     }
 }
