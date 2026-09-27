@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <path fill="#00247d" d="M0 0h1200v600H0z"/>
+  <!-- Union Jack -->
+  <g transform="scale(0.5)">
+    <clipPath id="s-nz">
+      <path d="M0 0v600h1200V0z"/>
+    </clipPath>
+    <clipPath id="t-nz">
+      <path d="M600 300h600v300z m0 300h-600v-300z m-600 -300h-600v-300z m0 -300h600v300z"/>
+    </clipPath>
+    <g clip-path="url(#s-nz)">
+      <path d="M0 0v600h1200V0z" fill="#012169"/>
+      <path d="M0 0L1200 600M1200 0L0 600" stroke="#fff" stroke-width="120"/>
+      <path d="M0 0L1200 600M1200 0L0 600" clip-path="url(#t-nz)" stroke="#C8102E" stroke-width="80"/>
+      <path d="M600 0v600M0 300h1200" stroke="#fff" stroke-width="200"/>
+      <path d="M600 0v600M0 300h1200" stroke="#C8102E" stroke-width="120"/>
+    </g>
+  </g>
+  <!-- 4 Southern Cross Stars: red with white border -->
+  <g>
+    <polygon points="900,90 907,112 930,112 911,126 918,148 900,134 882,148 889,126 870,112 893,112" fill="#c8102e" stroke="#fff" stroke-width="6"/>
+    <polygon points="1020,210 1027,232 1050,232 1031,246 1038,268 1020,254 1002,268 1009,246 990,232 1013,232" fill="#c8102e" stroke="#fff" stroke-width="6"/>
+    <polygon points="900,450 907,472 930,472 911,486 918,508 900,494 882,508 889,486 870,472 893,472" fill="#c8102e" stroke="#fff" stroke-width="6"/>
+    <polygon points="780,240 786,258 805,258 789,270 795,288 780,276 765,288 771,270 755,258 774,258" fill="#c8102e" stroke="#fff" stroke-width="5"/>
+  </g>
+</svg>
