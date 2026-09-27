@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640">
+  <path fill="#00008b" d="M0 0h1280v640H0z"/>
+  <!-- Union Jack in Canton -->
+  <g transform="scale(0.5)">
+    <clipPath id="s-au">
+      <path d="M0 0v640h1280V0z"/>
+    </clipPath>
+    <clipPath id="t-au">
+      <path d="M640 320h640v320z m0 320h-640v-320z m-640 -320h-640v-320z m0 -320h640v320z"/>
+    </clipPath>
+    <g clip-path="url(#s-au)">
+      <path d="M0 0v640h1280V0z" fill="#012169"/>
+      <path d="M0 0L1280 640M1280 0L0 640" stroke="#fff" stroke-width="120"/>
+      <path d="M0 0L1280 640M1280 0L0 640" clip-path="url(#t-au)" stroke="#C8102E" stroke-width="80"/>
+      <path d="M640 0v640M0 320h1280" stroke="#fff" stroke-width="200"/>
+      <path d="M640 0v640M0 320h1280" stroke="#C8102E" stroke-width="120"/>
+    </g>
+  </g>
+  <!-- Commonwealth Star -->
+  <g fill="#fff">
+    <polygon points="320,380 335,430 380,410 350,450 395,475 345,485 365,535 320,500 275,535 295,485 245,475 290,450 260,410 305,430"/>
+    <!-- Southern Cross -->
+    <polygon points="960,110 968,135 995,135 972,150 981,175 960,160 939,175 948,150 925,135 952,135" transform="scale(0.9) translate(100,20)"/>
+    <polygon points="1120,240 1128,265 1155,265 1132,280 1141,305 1120,290 1099,305 1108,280 1085,265 1112,265" transform="scale(0.9) translate(130,20)"/>
+    <polygon points="960,500 968,525 995,525 972,540 981,565 960,550 939,565 948,540 925,525 952,525" transform="scale(0.9) translate(100,5)"/>
+    <polygon points="800,240 808,265 835,265 812,280 821,305 800,290 779,305 788,280 765,265 792,265" transform="scale(0.9) translate(80,20)"/>
+  </g>
+</svg>

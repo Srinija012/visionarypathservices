@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+  <path fill="#bd3d44" d="M0 0h640v480H0z"/>
+  <path stroke="#fff" stroke-width="37" d="M0 55.5h640M0 129.5h640M0 203.5h640M0 277.5h640M0 351.5h640M0 425.5h640"/>
+  <path fill="#192f5d" d="M0 0h260v259H0z"/>
+  <g fill="#fff">
+    <g id="us-star">
+      <polygon points="12,4 14.5,12 22,12 16,16.5 18,24 12,19.5 6,24 8,16.5 2,12 9.5,12" transform="scale(0.8)"/>
+    </g>
+    <use href="#us-star" x="25" y="15"/>
+    <use href="#us-star" x="65" y="15"/>
+    <use href="#us-star" x="105" y="15"/>
+    <use href="#us-star" x="145" y="15"/>
+    <use href="#us-star" x="185" y="15"/>
+    <use href="#us-star" x="225" y="15"/>
+    <use href="#us-star" x="45" y="45"/>
+    <use href="#us-star" x="85" y="45"/>
+    <use href="#us-star" x="125" y="45"/>
+    <use href="#us-star" x="165" y="45"/>
+    <use href="#us-star" x="205" y="45"/>
+    <use href="#us-star" x="25" y="75"/>
+    <use href="#us-star" x="65" y="75"/>
+    <use href="#us-star" x="105" y="75"/>
+    <use href="#us-star" x="145" y="75"/>
+    <use href="#us-star" x="185" y="75"/>
+    <use href="#us-star" x="225" y="75"/>
+    <use href="#us-star" x="45" y="105"/>
+    <use href="#us-star" x="85" y="105"/>
+    <use href="#us-star" x="125" y="105"/>
+    <use href="#us-star" x="165" y="105"/>
+    <use href="#us-star" x="205" y="105"/>
+    <use href="#us-star" x="25" y="135"/>
+    <use href="#us-star" x="65" y="135"/>
+    <use href="#us-star" x="105" y="135"/>
+    <use href="#us-star" x="145" y="135"/>
+    <use href="#us-star" x="185" y="135"/>
+    <use href="#us-star" x="225" y="135"/>
+    <use href="#us-star" x="45" y="165"/>
+    <use href="#us-star" x="85" y="165"/>
+    <use href="#us-star" x="125" y="165"/>
+    <use href="#us-star" x="165" y="165"/>
+    <use href="#us-star" x="205" y="165"/>
+    <use href="#us-star" x="25" y="195"/>
+    <use href="#us-star" x="65" y="195"/>
+    <use href="#us-star" x="105" y="195"/>
+    <use href="#us-star" x="145" y="195"/>
+    <use href="#us-star" x="185" y="195"/>
+    <use href="#us-star" x="225" y="195"/>
+    <use href="#us-star" x="45" y="225"/>
+    <use href="#us-star" x="85" y="225"/>
+    <use href="#us-star" x="125" y="225"/>
+    <use href="#us-star" x="165" y="225"/>
+    <use href="#us-star" x="205" y="225"/>
+  </g>
+</svg>
