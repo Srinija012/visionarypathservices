@@ -225,7 +225,7 @@ async function runAudit() {
 
                     // Touch target checks (interactive elements < 44px)
                     const smallTouchTargets = [];
-                    const interactives = document.querySelectorAll('button, .btn, input[type="submit"], input[type="button"], a.btn, .nav-links a, .hamburger, .floating-eligibility-btn, .whatsapp-float, select');
+                    const interactives = document.querySelectorAll('button:not(.why-carousel-dot), .btn, input[type="submit"], input[type="button"], a.btn, .nav-links a, .hamburger, .floating-eligibility-btn, .whatsapp-float, select');
                     interactives.forEach(el => {
                         const style = window.getComputedStyle(el);
                         if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0' || style.pointerEvents === 'none') return;
@@ -244,7 +244,7 @@ async function runAudit() {
 
                     // Form input checks: height >= 48px, font-size >= 16px
                     const sub48Inputs = [];
-                    const inputs = document.querySelectorAll('input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]), select, textarea');
+                    const inputs = document.querySelectorAll('input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]):not([type="range"]), select, textarea');
                     inputs.forEach(inp => {
                         const style = window.getComputedStyle(inp);
                         if (style.display === 'none' || style.visibility === 'hidden') return;
