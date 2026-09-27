@@ -23,15 +23,16 @@
 
 .section,
 .section-pad {
-    padding: var(--space-section, 72px) 0;
+    padding: var(--space-section, 44px) 0;
 }
 
 @media (max-width: 768px) {
     .section,
     .section-pad {
-        padding: var(--space-section-mobile, 44px) 0;
+        padding: var(--space-section-mobile, 22px) 0;
     }
 }
+
 
 
 

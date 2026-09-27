@@ -257,10 +257,12 @@
     --space-24:   96px;
     --space-30:   120px;
 
-    /* Section Rhythm */
-    --space-section:        72px;
-    --space-section-lg:     96px;
-    --space-section-mobile: 44px;
+    /* Section Rhythm (Tight, modern cadence - eliminates excessive empty negative space) */
+    --space-section:        44px;
+    --space-section-lg:     60px;
+    --space-section-compact:24px;
+    --space-section-mobile: 22px;
+    --space-section-mobile-compact: 14px;
 
     /* Containers */
     --container-width:   1200px;
