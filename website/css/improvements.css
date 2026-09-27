@@ -6965,8 +6965,8 @@ html, body {
     margin-top: 0 !important;
     display: flex !important;
     align-items: center !important;
-    gap: clamp(8px, 1.2vw, 14px) !important;
-    flex-wrap: nowrap !important;
+    gap: 6px 12px !important;
+    flex-wrap: wrap !important;
     font-size: 12px !important;
     color: #475569 !important;
 }
@@ -6977,6 +6977,7 @@ html, body {
     gap: 5px !important;
     color: #475569 !important;
     white-space: nowrap !important;
+    flex-shrink: 0 !important;
 }
 
 .exact-hero .hero-trust-item strong {
@@ -7005,6 +7006,7 @@ html, body {
 .exact-hero .hero-trust-sep {
     color: #cbd5e1 !important;
     font-size: 10px !important;
+    flex-shrink: 0 !important;
 }
 
 /* Right Visual Container */
