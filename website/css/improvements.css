@@ -10713,8 +10713,7 @@ input[aria-invalid="false"].touched:not(:focus),
 /* Process Section */
 .process-section {
     padding: 85px 0;
-    background: #FFFFFF;
-    border-top: 1px solid #E2E8F0;
+    background: #F8FAFC;
     border-bottom: 1px solid #E2E8F0;
 }
 
@@ -10740,7 +10739,7 @@ input[aria-invalid="false"].touched:not(:focus),
 }
 
 .process-card {
-    background: #F8FAFC;
+    background: #FFFFFF;
     border: 1.5px solid #E2E8F0;
     border-radius: 18px;
     padding: 28px 22px;
@@ -10771,7 +10770,7 @@ input[aria-invalid="false"].touched:not(:focus),
 .process-icon {
     width: 48px;
     height: 48px;
-    background: #FFFFFF;
+    background: #F8FAFC;
     border: 1.5px solid #E2E8F0;
     border-radius: 12px;
     display: flex;
@@ -10800,7 +10799,9 @@ input[aria-invalid="false"].touched:not(:focus),
 /* Who Can Partner Section */
 .who-section {
     padding: 85px 0;
-    background: #F8FAFC;
+    background: #FFFFFF;
+    border-top: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
 }
 
 .who-grid {
