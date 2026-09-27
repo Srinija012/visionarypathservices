@@ -346,6 +346,7 @@ function showLeadThankYouScreen(opts) {
 window.showLeadThankYouScreen = showLeadThankYouScreen;
 
 function openPopup() {
+    closeMenu();
     vpsDismissThankYou(false);
     const overlay = document.getElementById('popupOverlay');
     if (overlay) {
@@ -546,7 +547,8 @@ function ensureFloatingButton() {
         btn.innerHTML = '<span class="floating-btn-pulse"></span><i class="fas fa-bolt"></i><span>Check Eligibility <strong class="badge-free">FREE</strong></span>';
         document.body.appendChild(btn);
     }
-    if (window.scrollY <= 400) {
+    const threshold = window.innerWidth <= 768 ? 160 : 380;
+    if (window.scrollY <= threshold) {
         btn.classList.add('hide');
         btn.classList.remove('is-active-scrolled');
     }
