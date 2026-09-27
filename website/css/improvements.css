@@ -16243,18 +16243,26 @@ input[aria-invalid="false"].touched:not(:focus),
 }
 
 /* ==========================================================================
-   VPS MASTER RESPONSIVE ARCHITECTURE & VIEWPORT ADAPTATION SYSTEM
-   Standardized breakpoints: 1024px (tablet-landscape), 960px (tablet-nav),
-   768px (tablet-portrait), 576px (large phone), 480px (phone), 360px (compact)
+   VPS MASTER MOBILE-FIRST & RESPONSIVE ARCHITECTURE (MOBILE-OPTIMIZED)
+   Breakpoints:
+   - 320px  : Compact / Ultra-small phones (iPhone SE 1st gen, Galaxy Fold)
+   - 360px  : Small modern mobile (standard Android small)
+   - 480px  : Mobile Portrait (iPhone 12/13/14/15/16, Galaxy S-series)
+   - 576px  : Large Mobile / Phablet Landscape
+   - 768px  : Tablet Portrait (iPad Mini, tablet vertical)
+   - 960px  : Tablet / Mobile Navigation Drawer Boundary
+   - 1024px : Tablet Landscape / Small Laptops
    ========================================================================== */
 
-/* ── 1. GLOBAL OVERFLOW & VIEWPORT GUARD ── */
+/* ── 1. GLOBAL MOBILE-FIRST OVERFLOW GUARD & TOUCH DEFAULTS ── */
 html, body {
     overflow-x: hidden !important;
-    max-width: 100vw !important;
     width: 100% !important;
+    max-width: 100% !important;
     position: relative !important;
     -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(255, 90, 0, 0.15);
 }
 
 *, *::before, *::after {
@@ -16262,20 +16270,33 @@ html, body {
     min-width: 0;
 }
 
-img, video, svg, canvas, iframe {
+img, video, svg, canvas, iframe, picture {
     max-width: 100% !important;
     height: auto;
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        margin-inline: auto !important;
-        box-sizing: border-box !important;
-    }
+/* Eliminate tap delay on interactive controls */
+a, button, input, select, textarea, [role="button"], [role="tab"] {
+    touch-action: manipulation;
+}
+
+/* Global text wrap & overflow protection for headings and long words */
+h1, h2, h3, h4, h5, h6, 
+.section-title, .exact-hero-title, .tools-heading, 
+.vps-thankyou-title, .hero-desc, p, .brand-eyebrow,
+.country-stat-val, .calc-pane-title, .disclaimer-title {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+}
+
+/* Container responsive fluid padding */
+.container {
+    width: 100% !important;
+    max-width: 1200px;
+    margin-inline: auto !important;
+    box-sizing: border-box !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
 }
 
 @media (max-width: 480px) {
@@ -16292,31 +16313,71 @@ img, video, svg, canvas, iframe {
     }
 }
 
-/* ── 2. HEADER & TOPBAR RESPONSIVENESS ── */
+/* ── 2. MOBILE INPUT FONT-SIZE & iOS ZOOM PREVENTION ── */
+@media (max-width: 768px) {
+    input:not([type="checkbox"]):not([type="radio"]),
+    select,
+    textarea {
+        font-size: 16px !important; /* Critical: Stops iOS Safari auto-zoom */
+        min-height: 48px !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* ── 3. TOP-BAR MOBILE REFINEMENT ── */
 @media (max-width: 600px) {
     .top-bar {
-        padding: 5px 0 !important;
+        padding: 6px 0 !important;
         font-size: 11px !important;
     }
     .top-bar-inner {
         flex-direction: column !important;
-        gap: 3px !important;
+        gap: 4px !important;
         text-align: center !important;
         padding: 0 4px !important;
     }
     .top-bar-left {
         font-size: 11px !important;
-        line-height: 1.3 !important;
+        line-height: 1.35 !important;
+        justify-content: center !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
     }
     .top-bar-right {
         font-size: 11.5px !important;
-        gap: 10px !important;
+        gap: 12px !important;
         justify-content: center !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    .top-bar-right a {
+        min-height: 28px !important;
+        display: inline-flex !important;
+        align-items: center !important;
     }
     .top-sep {
         margin: 0 4px !important;
-        opacity: 0.25 !important;
+        opacity: 0.3 !important;
     }
+}
+
+/* ── 4. NAVBAR, BRAND & BACKDROP ON MOBILE ── */
+.nav-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 31, 51, 0.48);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 997;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    cursor: pointer;
+}
+
+body.menu-open .nav-backdrop {
+    display: block !important;
+    opacity: 1 !important;
 }
 
 @media (max-width: 480px) {
@@ -16324,7 +16385,7 @@ img, video, svg, canvas, iframe {
         padding: 8px 0 !important;
     }
     .nav-inner {
-        gap: 10px !important;
+        gap: 8px !important;
     }
     .logo {
         gap: 8px !important;
@@ -16342,13 +16403,26 @@ img, video, svg, canvas, iframe {
         height: 32px !important;
     }
     .hamburger {
-        width: 44px !important;
-        height: 44px !important;
+        width: 46px !important;
+        height: 46px !important;
         padding: 11px 9px !important;
     }
 }
 
-/* ── 3. MOBILE NAVIGATION DRAWER & MEGA-MENU REFINEMENT ── */
+@media (max-width: 360px) {
+    .logo-name {
+        font-size: 11.5px !important;
+    }
+    .logo-sub-text {
+        font-size: 6.5px !important;
+    }
+    .vps-flash-svg {
+        width: 22px !important;
+        height: 28px !important;
+    }
+}
+
+/* ── 5. MOBILE NAVIGATION DRAWER & MEGA-MENU ACCORDION ── */
 @media (max-width: 960px) {
     .nav-links, .nav-cta {
         display: none;
@@ -16366,18 +16440,19 @@ img, video, svg, canvas, iframe {
         right: 0 !important;
         bottom: 0 !important;
         background: #ffffff !important;
-        padding: 16px 16px 130px 16px !important;
+        padding: 16px 16px calc(130px + env(safe-area-inset-bottom, 0px)) 16px !important;
         box-sizing: border-box !important;
         overflow-y: auto !important;
         -webkit-overflow-scrolling: touch !important;
         overscroll-behavior: contain !important;
+        touch-action: pan-y !important;
         z-index: 998 !important;
         box-shadow: 0 20px 48px -12px rgba(11, 31, 51, 0.25) !important;
         border-top: 1px solid #E2E8F0 !important;
     }
     .nav-links > li {
         width: 100% !important;
-        margin: 0 0 2px 0 !important;
+        margin: 0 0 3px 0 !important;
     }
     .nav-links > li > a {
         width: 100% !important;
@@ -16385,17 +16460,24 @@ img, video, svg, canvas, iframe {
         font-weight: 600 !important;
         color: var(--color-navy, #0B1F33) !important;
         padding: 12px 14px !important;
-        min-height: 44px !important;
+        min-height: 48px !important;
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
         border-radius: 10px !important;
         background: transparent !important;
-        transition: background 0.15s ease !important;
+        transition: background 0.15s ease, color 0.15s ease !important;
     }
     .nav-links > li > a:hover,
     .nav-links > li > a.active {
         background: #F1F5F9 !important;
+        color: var(--color-orange, #FF5A00) !important;
+    }
+    .has-dropdown > a .fa-chevron-down {
+        transition: transform 0.25s ease !important;
+    }
+    .has-dropdown.open > a .fa-chevron-down {
+        transform: rotate(180deg) !important;
         color: var(--color-orange, #FF5A00) !important;
     }
     .has-dropdown {
@@ -16432,6 +16514,21 @@ img, video, svg, canvas, iframe {
         flex-direction: column !important;
         gap: 4px !important;
     }
+    .more-dropdown-item {
+        padding: 10px 12px !important;
+        min-height: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        border-radius: 8px !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        color: var(--color-navy, #0B1F33) !important;
+    }
+    .more-dropdown-item:hover {
+        background: #EDF2F7 !important;
+        color: var(--color-orange, #FF5A00) !important;
+    }
     .mega-body {
         display: grid !important;
         grid-template-columns: 1fr !important;
@@ -16446,11 +16543,13 @@ img, video, svg, canvas, iframe {
     }
     .mega-loan-card {
         padding: 10px 12px !important;
-        min-height: 44px !important;
+        min-height: 48px !important;
         background: #ffffff !important;
         border-radius: 10px !important;
         border: 1px solid #E2E8F0 !important;
         margin-bottom: 6px !important;
+        display: flex !important;
+        align-items: center !important;
     }
     .mega-countries-grid {
         display: grid !important;
@@ -16460,7 +16559,7 @@ img, video, svg, canvas, iframe {
     }
     .mega-country-link {
         padding: 8px 10px !important;
-        min-height: 40px !important;
+        min-height: 44px !important;
         background: #ffffff !important;
         border: 1px solid #E2E8F0 !important;
         border-radius: 8px !important;
@@ -16489,6 +16588,9 @@ img, video, svg, canvas, iframe {
     .mega-footer-cta {
         justify-content: center !important;
         width: 100% !important;
+        min-height: 42px !important;
+        display: inline-flex !important;
+        align-items: center !important;
     }
     .nav-cta.open {
         display: flex !important;
@@ -16510,16 +16612,16 @@ img, video, svg, canvas, iframe {
     .nav-cta.open .btn-eligibility {
         width: 100% !important;
         justify-content: center !important;
-        min-height: 44px !important;
-        font-size: 14.5px !important;
+        min-height: 48px !important;
+        font-size: 15px !important;
         font-weight: 700 !important;
         border-radius: 10px !important;
     }
     .nav-cta.open .btn-whatsapp-nav {
         width: 100% !important;
         justify-content: center !important;
-        min-height: 44px !important;
-        font-size: 14px !important;
+        min-height: 46px !important;
+        font-size: 14.5px !important;
         font-weight: 600 !important;
         border-radius: 10px !important;
     }
@@ -16528,11 +16630,11 @@ img, video, svg, canvas, iframe {
 @media (max-width: 440px) {
     .mega-countries-grid {
         grid-template-columns: 1fr !important;
-        gap: 4px !important;
+        gap: 5px !important;
     }
 }
 
-/* ── 4. HOMEPAGE HERO SECTION RESPONSIVE PERFECTION ── */
+/* ── 6. HERO SECTION MOBILE PERFECTION ── */
 @media (max-width: 960px) {
     .exact-hero {
         padding: 0 !important;
@@ -16540,8 +16642,8 @@ img, video, svg, canvas, iframe {
     .exact-hero-grid {
         flex-direction: column !important;
         align-items: stretch !important;
-        gap: 32px !important;
-        padding: 28px 0 36px !important;
+        gap: 28px !important;
+        padding: 24px 0 32px !important;
         min-height: auto !important;
     }
     .exact-hero-content {
@@ -16577,8 +16679,8 @@ img, video, svg, canvas, iframe {
 
 @media (max-width: 768px) {
     .exact-hero-title {
-        font-size: clamp(1.85rem, 6.5vw, 2.5rem) !important;
-        line-height: 1.2 !important;
+        font-size: clamp(1.8rem, 6.5vw, 2.5rem) !important;
+        line-height: 1.22 !important;
         margin-bottom: 12px !important;
     }
     .exact-hero-lead {
@@ -16612,7 +16714,7 @@ img, video, svg, canvas, iframe {
     }
     .exact-hero .hero-trust-strip {
         border-top: 1px solid #E2E8F0 !important;
-        padding-top: 12px !important;
+        padding-top: 14px !important;
         display: flex !important;
         align-items: center !important;
         gap: 8px 14px !important;
@@ -16651,9 +16753,10 @@ img, video, svg, canvas, iframe {
         width: 100% !important;
         justify-content: center !important;
         min-height: 48px !important;
-        font-size: 14.5px !important;
+        font-size: 15px !important;
         border-radius: 9999px !important;
         text-align: center !important;
+        white-space: normal !important;
     }
     .exact-hero-safety {
         justify-content: center !important;
@@ -16686,14 +16789,14 @@ img, video, svg, canvas, iframe {
     }
 }
 
-/* ── 5. INNER PAGE HEROES RESPONSIVE REFINEMENT ── */
+/* ── 7. INNER PAGE HEROES & BREADCRUMBS ── */
 @media (max-width: 960px) {
     .page-hero,
     .about-hero,
     .legal-hero,
     .blog-hub-hero,
     .other-loans-hero {
-        padding: 44px 0 36px !important;
+        padding: 38px 0 32px !important;
     }
     .page-hero-grid {
         grid-template-columns: 1fr !important;
@@ -16709,21 +16812,26 @@ img, video, svg, canvas, iframe {
     }
     .breadcrumb {
         justify-content: center !important;
+        flex-wrap: wrap !important;
     }
     .page-hero .brand-eyebrow {
         justify-content: center !important;
         margin-inline: auto !important;
     }
-    .hero-action-group {
+    .hero-action-group,
+    .hero-btns {
         flex-direction: column !important;
         align-items: stretch !important;
         width: 100% !important;
         gap: 10px !important;
     }
-    .hero-action-group .btn {
+    .hero-action-group .btn,
+    .hero-btns .btn {
         width: 100% !important;
         justify-content: center !important;
         min-height: 48px !important;
+        white-space: normal !important;
+        text-align: center !important;
     }
     .hero-snapshot-card {
         padding: 20px 16px !important;
@@ -16739,8 +16847,9 @@ img, video, svg, canvas, iframe {
 @media (max-width: 480px) {
     .page-hero h1,
     .about-hero h1,
-    .legal-hero h1 {
-        font-size: clamp(1.6rem, 7vw, 2.2rem) !important;
+    .legal-hero h1,
+    .blog-hub-hero h1 {
+        font-size: clamp(1.6rem, 7vw, 2.15rem) !important;
     }
     .snapshot-stats-grid {
         grid-template-columns: 1fr !important;
@@ -16748,20 +16857,34 @@ img, video, svg, canvas, iframe {
     }
 }
 
-/* ── 6. FINANCIAL CALCULATORS RESPONSIVENESS ── */
+/* ── 8. FINANCIAL CALCULATORS TOUCH & RESPONSIVENESS ── */
 .calc-tabs-nav {
     display: flex !important;
-    gap: 6px !important;
+    gap: 8px !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
     scrollbar-width: none !important;
     width: 100% !important;
-    padding: 0 4px 6px 4px !important;
-    margin-bottom: 2px !important;
+    padding: 2px 2px 8px 2px !important;
+    margin-bottom: 4px !important;
+    touch-action: pan-x !important;
 }
 
 .calc-tabs-nav::-webkit-scrollbar {
     display: none !important;
+}
+
+.calc-tab-btn {
+    padding: 10px 16px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    min-height: 44px !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
 }
 
 @media (max-width: 768px) {
@@ -16773,12 +16896,18 @@ img, video, svg, canvas, iframe {
         grid-template-columns: 1fr !important;
         gap: 24px !important;
     }
-    .calc-tab-btn {
-        padding: 8px 12px !important;
-        font-size: 12px !important;
-        min-width: auto !important;
-        flex-shrink: 0 !important;
-        white-space: nowrap !important;
+    .calc-slider {
+        width: 100% !important;
+        min-height: 44px !important;
+        touch-action: pan-y !important;
+    }
+    .calc-slider::-webkit-slider-thumb {
+        width: 28px !important;
+        height: 28px !important;
+    }
+    .calc-slider::-moz-range-thumb {
+        width: 28px !important;
+        height: 28px !important;
     }
 }
 
@@ -16789,8 +16918,10 @@ img, video, svg, canvas, iframe {
         align-items: center !important;
     }
     .calc-val-input {
-        max-width: 130px !important;
-        font-size: 1rem !important;
+        max-width: 140px !important;
+        font-size: 16px !important;
+        min-height: 44px !important;
+        padding: 6px 10px !important;
     }
     .calc-result-hero {
         font-size: clamp(1.75rem, 6.5vw, 2.25rem) !important;
@@ -16798,27 +16929,26 @@ img, video, svg, canvas, iframe {
     .calc-card-container {
         padding: 16px 12px !important;
     }
-    .calc-slider {
-        width: 100% !important;
-        min-height: 40px !important;
-        touch-action: pan-y !important;
-    }
     .calc-breakdown-row {
         font-size: 12px !important;
-        padding: 5px 0 !important;
+        padding: 6px 0 !important;
     }
 }
 
-/* ── 7. PARTNER LENDERS GRID & FILTER ENGINE ── */
+/* ── 9. PARTNER LENDERS GRID & FILTER ENGINE ── */
 @media (max-width: 768px) {
     .lenders-info-grid {
         grid-template-columns: repeat(auto-fill, minmax(185px, 1fr)) !important;
-        gap: 10px !important;
+        gap: 12px !important;
     }
     .lender-filters-top {
         flex-direction: column !important;
         align-items: stretch !important;
         gap: 10px !important;
+    }
+    .lender-search-box input {
+        font-size: 16px !important;
+        min-height: 48px !important;
     }
     .filter-row {
         flex-direction: column !important;
@@ -16831,15 +16961,17 @@ img, video, svg, canvas, iframe {
         gap: 6px !important;
     }
     .lender-filter-btn {
-        padding: 7px 12px !important;
-        font-size: 12px !important;
+        padding: 8px 14px !important;
+        font-size: 12.5px !important;
+        min-height: 42px !important;
+        border-radius: 999px !important;
     }
 }
 
 @media (max-width: 480px) {
     .lenders-info-grid {
         grid-template-columns: 1fr !important;
-        gap: 10px !important;
+        gap: 12px !important;
     }
     .lender-info-card {
         width: 100% !important;
@@ -16848,16 +16980,35 @@ img, video, svg, canvas, iframe {
     }
 }
 
-/* ── 8. GRIDS & RESPONSIVE CARDS ACROSS PAGES ── */
+/* ── 10. UNIVERSAL RESPONSIVE GRID COLLAPSING ── */
 @media (max-width: 960px) {
     .why-nine-grid,
     .loan-categories-grid,
     .bridging-cards-grid,
     .services-grid,
+    .services-unified-grid,
     .core-focus-grid,
-    .docs-cards-grid {
+    .docs-cards-grid,
+    .about-focus-grid,
+    .about-journey-grid,
+    .about-philosophy-grid,
+    .svc-programs-grid,
+    .svc-process-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 18px !important;
+    }
+    .timeline-horizontal,
+    .mbbs-timeline {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    .timeline-horizontal::before,
+    .mbbs-timeline::before {
+        display: none !important;
+    }
+    .two-col {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
     }
 }
 
@@ -16866,19 +17017,42 @@ img, video, svg, canvas, iframe {
     .loan-categories-grid,
     .bridging-cards-grid,
     .services-grid,
+    .services-unified-grid,
     .core-focus-grid,
     .docs-cards-grid,
     .pan-india-cards,
     .posts-grid,
-    .blog-grid {
+    .blog-grid,
+    .trust-grid,
+    .about-trust-grid,
+    .about-focus-grid,
+    .about-journey-grid,
+    .about-philosophy-grid,
+    .mission-values-grid,
+    .svc-programs-grid,
+    .svc-process-grid,
+    .process-grid,
+    .who-grid,
+    .students-get-grid,
+    .vps-streams-5grid,
+    .vps-eligibility-grid,
+    .vps-expenses-5grid,
+    .vps-topcourses-6grid,
+    .mbbs-benefits-grid,
+    .mbbs-expenses-grid,
+    .grid-3,
+    .grid-4 {
         grid-template-columns: 1fr !important;
         gap: 14px !important;
     }
-}
-
-@media (max-width: 576px) {
+    .about-static-lenders-grid,
+    .vps-lenders-grid,
+    .vps-bank-logo-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+    }
     .vps-final-cta {
-        padding: 40px 0 !important;
+        padding: 36px 0 !important;
     }
     .vps-cta-photo-panel {
         display: none !important;
@@ -16896,10 +17070,13 @@ img, video, svg, canvas, iframe {
     .vps-final-cta-btns .btn {
         width: 100% !important;
         justify-content: center !important;
+        min-height: 48px !important;
+        white-space: normal !important;
+        text-align: center !important;
     }
 }
 
-/* ── 9. TABLES & COMPARISON GRIDS ── */
+/* ── 11. RESPONSIVE TABLES & HORIZONTAL SCROLL ── */
 .table-responsive,
 .table-container,
 .table-wrap,
@@ -16909,9 +17086,10 @@ img, video, svg, canvas, iframe {
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
     position: relative !important;
-    margin: 18px 0 !important;
+    margin: 16px 0 !important;
     border-radius: 12px !important;
     border: 1px solid #E2E8F0 !important;
+    touch-action: pan-x !important;
 }
 
 .comparison-table,
@@ -16919,33 +17097,78 @@ img, video, svg, canvas, iframe {
 .data-table,
 .legal-table {
     width: 100% !important;
+    min-width: 580px !important;
     margin: 0 !important;
+    border-collapse: collapse !important;
 }
 
-/* ── 10. FORMS & POPUP MODAL OVERLAY ── */
+.comparison-table th,
+.comparison-table td,
+.vps-comparison-table th,
+.vps-comparison-table td {
+    padding: 11px 13px !important;
+    font-size: 13px !important;
+    vertical-align: middle !important;
+}
+
+/* ── 12. POPUP MODAL & FORM RESPONSIVE SHEET ── */
 @media (max-width: 768px) {
     .popup-overlay {
         padding: 12px !important;
-        align-items: flex-start !important;
+        align-items: center !important;
         overflow-y: auto !important;
         -webkit-overflow-scrolling: touch !important;
     }
     .popup-modal {
         flex-direction: column !important;
         width: 100% !important;
-        max-width: 520px !important;
-        margin: 12px auto !important;
-        border-radius: 16px !important;
+        max-width: 500px !important;
+        max-height: 90dvh !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        overscroll-behavior: contain !important;
+        border-radius: 20px !important;
+        margin: auto !important;
+        position: relative !important;
+    }
+    .popup-close {
+        top: 10px !important;
+        right: 10px !important;
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 16px !important;
+        border-radius: 50% !important;
+        z-index: 20 !important;
+        background: #ffffff !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.12) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
     .popup-left {
         width: 100% !important;
         min-width: 0 !important;
-        padding: 20px 16px 14px !important;
+        padding: 16px 18px 12px !important;
         border-right: none !important;
         border-bottom: 1px solid rgba(22, 163, 74, 0.15) !important;
     }
+    .popup-left .popup-features {
+        display: none !important; /* Conceal bulky bullets on mobile for faster form access */
+    }
+    .popup-left-footer {
+        margin-top: 6px !important;
+    }
     .popup-right {
-        padding: 18px 16px 20px !important;
+        padding: 18px 18px 24px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .popup-form .form-row,
+    .popup-form .form-row.name-row,
+    .contact-form-box .form-row,
+    .form-grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
     }
     .contact-inner {
         grid-template-columns: 1fr !important;
@@ -16958,17 +17181,13 @@ img, video, svg, canvas, iframe {
         padding: 18px 14px !important;
         border-radius: 14px !important;
     }
-    input, textarea, select {
-        font-size: 16px !important;
-        min-height: 46px !important;
-        box-sizing: border-box !important;
-    }
-    .input-icon-wrap.phone-wrap input {
-        padding-left: 76px !important;
+    .input-icon-wrap.phone-wrap input,
+    .lead-input-wrap.has-prefix input {
+        padding-left: 78px !important;
     }
 }
 
-/* ── 11. REGULATORY ACCORDION & COMPACT MOBILE FOOTER ── */
+/* ── 13. REGULATORY ACCORDION & MOBILE FOOTER ── */
 @media (max-width: 576px) {
     .site-disclaimer-wrap {
         padding: 6px 0 !important;
@@ -16978,6 +17197,7 @@ img, video, svg, canvas, iframe {
         align-items: flex-start !important;
         gap: 8px !important;
         padding: 10px 0 !important;
+        min-height: 48px !important;
     }
     .disclaimer-badge {
         font-size: 10.5px !important;
@@ -16991,7 +17211,8 @@ img, video, svg, canvas, iframe {
         width: 100% !important;
         justify-content: center !important;
         font-size: 11px !important;
-        padding: 5px 10px !important;
+        padding: 6px 10px !important;
+        min-height: 38px !important;
     }
     .disclaimer-footer-bar {
         flex-direction: column !important;
@@ -17008,6 +17229,7 @@ img, video, svg, canvas, iframe {
 @media (max-width: 768px) {
     .footer {
         padding: 30px 0 0 !important;
+        padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
     }
     .footer-inner,
     .footer-grid {
@@ -17027,24 +17249,19 @@ img, video, svg, canvas, iframe {
         line-height: 1.5 !important;
         margin-bottom: 10px !important;
         max-width: 540px !important;
-        display: -webkit-box !important;
-        -webkit-line-clamp: 2 !important;
-        -webkit-box-orient: vertical !important;
-        overflow: hidden !important;
     }
     .footer-social {
-        gap: 8px !important;
+        gap: 10px !important;
         margin-top: 2px !important;
     }
     .footer-social a {
-        width: 32px !important;
-        height: 32px !important;
-        font-size: 13px !important;
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 14px !important;
     }
     .footer-col h4 {
         font-size: 13.5px !important;
         margin-bottom: 10px !important;
-        letter-spacing: 0.1px !important;
     }
     .footer-col h4::after {
         width: 18px !important;
@@ -17053,12 +17270,15 @@ img, video, svg, canvas, iframe {
     }
     .footer-col ul li,
     .footer-links li {
-        margin-bottom: 5px !important;
+        margin-bottom: 6px !important;
     }
     .footer-col ul li a,
     .footer-links li a {
         font-size: 12.5px !important;
         line-height: 1.35 !important;
+        min-height: 28px !important;
+        display: inline-flex !important;
+        align-items: center !important;
     }
     .footer-col .two-col-list {
         display: flex !important;
@@ -17082,15 +17302,9 @@ img, video, svg, canvas, iframe {
         align-items: center !important;
         gap: 7px !important;
     }
-    .contact-list li i {
-        font-size: 11.5px !important;
-        margin-top: 0 !important;
-    }
     .contact-list li a {
         font-size: 12px !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
+        word-break: break-all !important;
     }
     .footer-bottom {
         padding: 12px 0 !important;
@@ -17103,49 +17317,45 @@ img, video, svg, canvas, iframe {
     }
     .footer-bottom-links {
         font-size: 11px !important;
-        gap: 6px !important;
+        gap: 8px !important;
     }
 }
 
 @media (max-width: 480px) {
     .footer {
         padding: 24px 0 0 !important;
+        padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
     }
     .footer-inner,
     .footer-grid {
-        gap: 16px 12px !important;
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
         margin-bottom: 16px !important;
-    }
-    .footer-col ul li a,
-    .footer-links li a {
-        font-size: 12px !important;
     }
     .contact-list {
         grid-template-columns: 1fr !important;
-        gap: 6px !important;
-    }
-    .contact-list li {
-        font-size: 11.5px !important;
+        gap: 8px !important;
     }
 }
 
-/* ── 12. FLOATING CTA CONTROLS ── */
+/* ── 14. FLOATING CTA CONTROLS & SAFE AREA CLEARANCE ── */
 @media (max-width: 480px) {
     .floating-eligibility-btn {
-        bottom: 82px !important;
+        bottom: 74px !important;
         left: 12px !important;
         right: auto !important;
         max-width: calc(100vw - 84px) !important;
-        font-size: 11px !important;
-        padding: 8px 12px !important;
+        font-size: 11.5px !important;
+        padding: 8px 13px !important;
         z-index: 990 !important;
+        border-radius: 999px !important;
     }
     .whatsapp-float {
         bottom: 16px !important;
         right: 14px !important;
-        width: 48px !important;
-        height: 48px !important;
-        font-size: 24px !important;
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 26px !important;
         z-index: 990 !important;
     }
 }
