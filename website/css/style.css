@@ -2407,105 +2407,136 @@ img { max-width: 100%; display: block; }
     .dream-banner-left { display: block; margin-top: 10px; margin-bottom: -10px; }
     .dream-books-img { max-height: 110px; transform: translateY(-20px); }
 
-    /* --- POPUP MODAL MOBILE (Full Fix) --- */
+    /* --- POPUP MODAL MOBILE (Zero Scroll Architecture) --- */
     .popup-overlay {
         padding: 12px;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
     .popup-modal {
         flex-direction: column;
-        max-width: 100%;
-        max-height: none;
+        max-width: 480px;
+        width: 100%;
+        max-height: 92dvh;
         margin: auto;
-        border-radius: 20px;
+        border-radius: 18px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+        scrollbar-width: thin;
     }
     .popup-close {
-        top: 12px;
-        right: 12px;
-        width: 32px;
-        height: 32px;
-        font-size: 12px;
+        top: 10px;
+        right: 10px;
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
         z-index: 20;
     }
+    /* Hide duplicate promo left column so form is instantly visible */
     .popup-left {
-        width: 100%;
-        min-width: unset;
-        padding: 22px 20px 16px 20px;
-        border-right: none;
-        border-bottom: 1px solid rgba(22, 163, 74, 0.15);
-    }
-    .popup-left::before { display: none; }
-    .popup-left-brand h3 { font-size: 17px; }
-    .popup-left-brand p { font-size: 12px; }
-    .popup-features-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-    }
-    .popup-feature-item {
-        padding: 8px 10px;
-        font-size: 11.5px;
+        display: none !important;
     }
     .popup-left-footer { display: none; }
 
     .popup-right {
-        padding: 20px 18px 22px 18px;
+        padding: 16px 16px 14px 16px;
+        width: 100%;
+        box-sizing: border-box;
     }
     .popup-form-header {
-        margin-bottom: 12px;
+        margin-bottom: 8px;
+        padding-right: 36px;
     }
     .popup-form-header h4 {
-        font-size: 17px;
+        font-size: 18px;
+        line-height: 1.25;
+        margin-bottom: 2px;
     }
     .popup-form-header p {
-        font-size: 11.5px;
+        font-size: 11px;
+        line-height: 1.35;
+        color: #64748b;
+        margin: 0;
     }
 
-    /* Form rows stack vertically */
-    .form-row,
+    /* Preserve 2-column side-by-side for First Name & Last Name to save 65px vertical scroll */
     .form-row.name-row {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+    .form-row:not(.name-row) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
     }
 
-    /* Enlarge touch targets — 44px minimum (Apple HIG) */
-    .input-icon-wrap input,
-    .input-icon-wrap textarea {
-        padding: 12px 14px 12px 38px;
+    /* Inputs — 42px touch target (Apple HIG) without vertical bloat */
+    .input-icon-wrap input {
+        padding: 8px 12px 8px 36px;
         font-size: 16px; /* Prevents iOS zoom on focus */
-        min-height: 46px;
-        border-radius: 12px;
+        min-height: 42px;
+        height: 42px;
+        border-radius: 9px;
+    }
+    .input-icon-wrap textarea {
+        padding: 7px 12px 7px 34px;
+        font-size: 13px;
+        min-height: 44px;
+        height: 44px;
+        border-radius: 9px;
+        resize: vertical;
+    }
+    .input-icon-wrap textarea:focus {
+        min-height: 66px;
+        height: 66px;
     }
     .input-icon-wrap.phone-wrap input {
-        padding-left: 78px;
+        padding-left: 76px;
     }
     .form-group {
-        margin-bottom: 10px;
+        margin-bottom: 7px;
     }
     .form-group label,
     .form-label-regular {
-        font-size: 12px;
+        font-size: 11px;
+        font-weight: 700;
+        margin-bottom: 2px;
     }
 
-    /* Interest radio tiles stack */
+    /* Interest radio tiles in 2x2 grid */
     .interest-options {
-        grid-template-columns: 1fr;
-        gap: 8px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5px;
     }
     .interest-opt {
-        padding: 12px 14px;
-        font-size: 13px;
-        min-height: 44px;
+        padding: 6px 8px;
+        font-size: 11px;
+        min-height: 36px;
+        border-radius: 8px;
+        gap: 6px;
+    }
+    .interest-opt .custom-radio {
+        width: 14px;
+        height: 14px;
+    }
+    .interest-opt .opt-label {
+        font-size: 10.5px;
     }
 
-    /* Submit button bigger touch target */
+    /* Submit button */
     .btn-submit-enquiry {
-        padding: 14px 20px;
-        font-size: 15px;
-        min-height: 48px;
-        border-radius: 14px;
+        padding: 9px 18px;
+        font-size: 14px;
+        min-height: 42px;
+        height: 44px;
+        border-radius: 10px;
+        margin-top: 3px;
     }
     .popup-safe {
         font-size: 10.5px;

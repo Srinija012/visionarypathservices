@@ -206,8 +206,8 @@ async function runAudit() {
                         const style = window.getComputedStyle(el);
                         if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') return;
 
-                        // Intentional marquee tracks are infinite animated strips contained by parent
-                        if (el.closest('.marquee, .marquee-track, .partners-marquee')) return;
+                        // Intentional marquee tracks and carousels with horizontal swipe
+                        if (el.closest('.marquee, .marquee-track, .partners-marquee, .why-nine-grid')) return;
 
                         const rect = el.getBoundingClientRect();
                         // Check if right edge exceeds viewport by more than 1px
