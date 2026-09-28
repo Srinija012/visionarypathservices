@@ -167,7 +167,15 @@ assert(
     improvementsCss.includes('.top-bar-left {') && improvementsCss.includes('flex-direction: column !important;'),
     '[FAIL] Mobile top-bar tagline must stack cleanly with flex-direction: column.'
 );
-console.log('✅ PASS: Mobile Top-Bar renders cleanly (0 orphaned lines, 0 trailing bullets, disciplined stack).');
+assert(
+    mainJs.includes('initTopBarTicker') && mainJs.includes('10000') && mainJs.includes('20000'),
+    '[FAIL] main.js missing initTopBarTicker rotator engine with 10s Tagline / 20s Contact durations.'
+);
+assert(
+    improvementsCss.includes('.top-bar-track') && improvementsCss.includes('.top-bar-slide') && improvementsCss.includes('.top-bar-slide.is-active'),
+    '[FAIL] improvements.css missing .top-bar-track and .top-bar-slide rotator styles.'
+);
+console.log('✅ PASS: Mobile Top-Bar renders cleanly as slim two-liner with 10s/20s rotator engine.');
 
 console.log('\n🎉 ALL MOBILE RESPONSIVENESS AND HALLMARK GATES PASSED (100% CLEAN)!\n');
 
