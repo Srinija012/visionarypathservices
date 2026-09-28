@@ -20540,6 +20540,7 @@ body {
         margin: 0 !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
+        gap: 6px !important;
     }
 
     /* Secondary CTA (Call Now / Talk to an Expert / WhatsApp) */
@@ -20576,6 +20577,14 @@ body {
         margin: 0 !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
+        gap: 6px !important;
+    }
+
+    .btn-subtext-free {
+        display: inline-block !important;
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+        margin-left: 2px !important;
     }
 
     .exact-hero-actions i,
@@ -20594,11 +20603,14 @@ body {
     .partner-page-wrap .cta-btns i {
         font-size: 11px !important;
         flex-shrink: 0 !important;
-        margin: 0 3px !important;
+        margin: 0 !important;
+        margin-left: 4px !important;
+        display: inline-flex !important;
+        align-items: center !important;
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
     .btn-subtext-free {
         display: none !important;
     }
