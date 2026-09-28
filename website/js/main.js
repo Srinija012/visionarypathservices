@@ -1823,6 +1823,77 @@ function initLenderFilters() {
     }
 })();
 
+/* ============================================================
+   VPS SLIM TOP-BAR ROTATOR ENGINE (10s Tagline / 20s Contact)
+   Cycles between:
+   - Slide 1: Mission & Tagline (10 seconds stop)
+   - Slide 2: Direct Hotline & Email (20 seconds display)
+   Includes hover/focus pause for seamless user interaction.
+   ============================================================ */
+function initTopBarTicker() {
+    const slideTagline = document.getElementById('topBarSlideTagline');
+    const slideContact = document.getElementById('topBarSlideContact');
+    if (!slideTagline || !slideContact) return;
+
+    let timer = null;
+    let currentSlide = 1; // 1 = Tagline (10s), 2 = Contact (20s)
+    let isPaused = false;
+
+    function showSlide(slideNum) {
+        if (slideNum === 1) {
+            slideContact.classList.remove('is-active');
+            slideTagline.classList.add('is-active');
+            currentSlide = 1;
+            if (!isPaused) {
+                if (timer) clearTimeout(timer);
+                timer = setTimeout(() => showSlide(2), 10000); // 10s Tagline
+            }
+        } else {
+            slideTagline.classList.remove('is-active');
+            slideContact.classList.add('is-active');
+            currentSlide = 2;
+            if (!isPaused) {
+                if (timer) clearTimeout(timer);
+                timer = setTimeout(() => showSlide(1), 20000); // 20s Number & Mail
+            }
+        }
+    }
+
+    const topBar = document.querySelector('.top-bar');
+    if (topBar) {
+        topBar.addEventListener('mouseenter', () => {
+            isPaused = true;
+            if (timer) clearTimeout(timer);
+        });
+        topBar.addEventListener('mouseleave', () => {
+            isPaused = false;
+            const remaining = currentSlide === 1 ? 10000 : 20000;
+            if (timer) clearTimeout(timer);
+            timer = setTimeout(() => showSlide(currentSlide === 1 ? 2 : 1), remaining);
+        });
+        topBar.addEventListener('focusin', () => {
+            isPaused = true;
+            if (timer) clearTimeout(timer);
+        });
+        topBar.addEventListener('focusout', () => {
+            isPaused = false;
+            const remaining = currentSlide === 1 ? 10000 : 20000;
+            if (timer) clearTimeout(timer);
+            timer = setTimeout(() => showSlide(currentSlide === 1 ? 2 : 1), remaining);
+        });
+    }
+
+    // Start with Slide 1 (Tagline), schedule switch to Slide 2 (Contact) after 10 seconds
+    timer = setTimeout(() => showSlide(2), 10000);
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTopBarTicker);
+} else {
+    initTopBarTicker();
+}
+
+
 
 
 
