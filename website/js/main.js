@@ -135,6 +135,8 @@ function vpsDismissThankYou(triggerClose) {
             overlay.classList.remove('active');
             overlay.setAttribute('aria-hidden', 'true');
             document.body.classList.remove('modal-open');
+            const bottomBar = document.getElementById('bottomCtaBar');
+            if (bottomBar) bottomBar.classList.remove('hide');
             const floatBtn = document.getElementById('floatingEligibilityBtn');
             if (floatBtn) floatBtn.classList.remove('hide');
         }
@@ -367,6 +369,10 @@ function openPopup() {
             if (firstInput) firstInput.focus();
         }, 150);
     }
+    const bottomBar = document.getElementById('bottomCtaBar');
+    if (bottomBar) {
+        bottomBar.classList.add('hide');
+    }
     const floatBtn = document.getElementById('floatingEligibilityBtn');
     if (floatBtn) {
         floatBtn.classList.add('hide');
@@ -394,7 +400,11 @@ function closePopup() {
         sessionStorage.setItem('vps_popup_dismissed', 'true');
     } catch (err) {}
 
-    // Show floating quick-access button so interested users can re-open anytime
+    // Show quick-access bottom CTA bar / button so interested users can re-open anytime
+    const bottomBar = document.getElementById('bottomCtaBar');
+    if (bottomBar) {
+        bottomBar.classList.remove('hide');
+    }
     const floatBtn = document.getElementById('floatingEligibilityBtn');
     if (floatBtn) {
         floatBtn.classList.remove('hide');
@@ -535,23 +545,44 @@ function syncWhatsApp(inputEl) {
     // Optional live sync
 }
 
-// Ensures floating quick-access CTA button exists on the page
+// Ensures modern quick-access bottom CTA bar exists on the page
+function ensureBottomCtaBar() {
+    let bar = document.getElementById('bottomCtaBar');
+    if (!bar) {
+        bar = document.createElement('nav');
+        bar.id = 'bottomCtaBar';
+        bar.className = 'bottom-cta-bar';
+        bar.setAttribute('aria-label', 'Quick Actions');
+        bar.innerHTML = `
+            <div class="bottom-cta-container">
+                <a href="tel:9063703038" class="cta-bar-btn cta-btn-call" aria-label="Call Desk">
+                    <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <span class="cta-label">Call Desk</span>
+                </a>
+                <a href="https://wa.me/918150949070?text=Hello%20Visionary%20Path%20Services%2C%20I%20would%20like%20to%20get%20expert%20guidance%20regarding%20education%20loan%20options%20and%20eligibility.%20Please%20assist%20me." target="_blank" rel="noopener" class="cta-bar-btn cta-btn-whatsapp" aria-label="WhatsApp">
+                    <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                    </svg>
+                    <span class="cta-label">WhatsApp</span>
+                </a>
+                <button type="button" class="cta-bar-btn cta-btn-book" onclick="openPopup()" aria-label="Book Visit">
+                    <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="4" width="18" height="18" rx="3" ry="3"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span class="cta-label">Book Visit</span>
+                </button>
+            </div>
+        `;
+        document.body.appendChild(bar);
+    }
+}
 function ensureFloatingButton() {
-    let btn = document.getElementById('floatingEligibilityBtn');
-    if (!btn) {
-        btn = document.createElement('button');
-        btn.id = 'floatingEligibilityBtn';
-        btn.className = 'floating-eligibility-btn';
-        btn.setAttribute('onclick', 'openPopup()');
-        btn.setAttribute('aria-label', 'Check Loan Eligibility Free');
-        btn.innerHTML = '<span class="floating-btn-pulse"></span><i class="fas fa-bolt"></i><span>Check Eligibility <strong class="badge-free">FREE</strong></span>';
-        document.body.appendChild(btn);
-    }
-    const threshold = window.innerWidth <= 768 ? 160 : 380;
-    if (window.scrollY <= threshold) {
-        btn.classList.add('hide');
-        btn.classList.remove('is-active-scrolled');
-    }
+    ensureBottomCtaBar();
 }
 
 // High-Intent Respectful Engagement Trigger Engine:
