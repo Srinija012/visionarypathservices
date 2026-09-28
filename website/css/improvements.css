@@ -977,7 +977,6 @@ p {
    ────────────────────────────────────────────────────────── */
 
 .legal-section p,
-.disclaimer-content p,
 .privacy-content p,
 .terms-content p,
 main p {
@@ -3795,7 +3794,7 @@ textarea::placeholder {
 }
 
 .disclaimer-hint {
-    color: #94a3b8;
+    color: #E2E8F0 !important;
     font-size: 0.8rem;
     display: inline-flex;
     align-items: center;
@@ -3805,9 +3804,9 @@ textarea::placeholder {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #F8FAFC !important;
     padding: 6px 14px;
     border-radius: 8px;
     font-size: 0.78rem;
@@ -3890,16 +3889,19 @@ textarea::placeholder {
     margin-top: 2px;
 }
 
-.disclaimer-item-text {
-    color: #cbd5e1;
-    font-size: 0.83rem;
-    line-height: 1.6;
-    margin: 0;
+.disclaimer-item-text,
+.disclaimer-content p,
+.disclaimer-content {
+    color: #F8FAFC !important;
+    font-size: 0.84rem !important;
+    line-height: 1.65 !important;
+    margin: 0 !important;
 }
 
-.disclaimer-item-text strong {
-    color: #ffffff;
-    font-weight: 600;
+.disclaimer-item-text strong,
+.disclaimer-content strong {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
 }
 
 .disclaimer-footer-bar {
@@ -3914,8 +3916,9 @@ textarea::placeholder {
 }
 
 .disclaimer-footer-note {
-    color: #94a3b8;
-    font-size: 0.78rem;
+    color: #F1F5F9 !important;
+    font-size: 0.82rem !important;
+    font-weight: 500 !important;
 }
 
 .disclaimer-link-btn {
