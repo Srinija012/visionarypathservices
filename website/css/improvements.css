@@ -18677,6 +18677,15 @@ h1, h2, h3, h4, h5, h6,
     min-width: 0 !important;
 }
 
+.contact-list a[href^="mailto:"],
+.contact-list a[href^="tel:"],
+.contact-col a {
+    overflow-wrap: normal !important;
+    word-break: keep-all !important;
+    white-space: nowrap !important;
+    font-size: clamp(11.5px, 0.95vw, 13px) !important;
+}
+
 /* ── GATE 52: Section Heads Collapse to One Column on Mobile ── */
 @media (max-width: 48rem) { /* 768px */
     .section-header,

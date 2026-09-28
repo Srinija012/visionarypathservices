@@ -1814,6 +1814,70 @@ function initLenderFilters() {
                 ticking = true;
             }
         }, { passive: true });
+
+        // Auto-Scroll Marquee for Mobile View (5s pause then smooth scroll to next card)
+        let autoMarqueeTimer = null;
+        let isUserInteracting = false;
+        let interactionCooldown = null;
+
+        function startAutoMarquee() {
+            stopAutoMarquee();
+            if (window.innerWidth > 992) return;
+
+            autoMarqueeTimer = setInterval(() => {
+                if (isUserInteracting) return;
+
+                const scrollCenter = grid.scrollLeft + (grid.clientWidth / 2);
+                let currentIdx = 0;
+                let minDiff = Infinity;
+                cards.forEach((card, idx) => {
+                    const cardCenter = (card.offsetLeft - grid.offsetLeft) + (card.offsetWidth / 2);
+                    const diff = Math.abs(scrollCenter - cardCenter);
+                    if (diff < minDiff) {
+                        minDiff = diff;
+                        currentIdx = idx;
+                    }
+                });
+
+                const nextIdx = (currentIdx + 1) % cards.length;
+                const nextCard = cards[nextIdx];
+                if (nextCard) {
+                    const targetLeft = nextCard.offsetLeft - grid.offsetLeft - 16;
+                    grid.scrollTo({ left: targetLeft, behavior: 'smooth' });
+                }
+            }, 5000); // 5 seconds stop then scroll
+        }
+
+        function stopAutoMarquee() {
+            if (autoMarqueeTimer) {
+                clearInterval(autoMarqueeTimer);
+                autoMarqueeTimer = null;
+            }
+        }
+
+        function pauseOnInteraction() {
+            isUserInteracting = true;
+            if (interactionCooldown) clearTimeout(interactionCooldown);
+            interactionCooldown = setTimeout(() => {
+                isUserInteracting = false;
+            }, 5000);
+        }
+
+        grid.addEventListener('touchstart', pauseOnInteraction, { passive: true });
+        grid.addEventListener('pointerdown', pauseOnInteraction, { passive: true });
+        prevBtn.addEventListener('click', pauseOnInteraction);
+        nextBtn.addEventListener('click', pauseOnInteraction);
+        dots.forEach(d => d.addEventListener('click', pauseOnInteraction));
+
+        startAutoMarquee();
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 992) {
+                if (!autoMarqueeTimer) startAutoMarquee();
+            } else {
+                stopAutoMarquee();
+            }
+        });
     }
 
     if (document.readyState === 'loading') {
