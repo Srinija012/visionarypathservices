@@ -8136,6 +8136,10 @@ html, body {
     flex-grow: 1 !important;
 }
 
+.bridge-number {
+    display: none !important;
+}
+
 .bridge-points {
     display: flex !important;
     flex-direction: column !important;
