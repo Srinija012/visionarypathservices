@@ -1822,7 +1822,7 @@ function initLenderFilters() {
 
         function startAutoMarquee() {
             stopAutoMarquee();
-            if (window.innerWidth > 992) return;
+            if (window.innerWidth > 768) return;
 
             autoMarqueeTimer = setInterval(() => {
                 if (isUserInteracting) return;
@@ -1872,7 +1872,7 @@ function initLenderFilters() {
         startAutoMarquee();
 
         window.addEventListener('resize', () => {
-            if (window.innerWidth <= 992) {
+            if (window.innerWidth <= 768) {
                 if (!autoMarqueeTimer) startAutoMarquee();
             } else {
                 stopAutoMarquee();
