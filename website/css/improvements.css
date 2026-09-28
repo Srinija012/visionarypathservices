@@ -20510,43 +20510,98 @@ body {
     margin-bottom: 22px !important;
 }
 
-/* ── 5. MOBILE & TABLET ZERO-VOID TIGHTENING (<= 768px) ── */
-@media (max-width: 768px) {
-    .exact-hero {
-        padding: 16px 0 10px !important;
-    }
-
-    .exact-hero-grid {
-        gap: 14px !important;
-        padding: 0 !important;
+/* ── 5. TABLET & DESKTOP COLLAPSE (<= 992px) ── */
+@media (max-width: 992px) {
+    .exact-hero-content {
+        flex: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
     }
 
     .exact-hero-visual {
+        flex: none !important;
+        width: 100% !important;
+        max-width: 480px !important;
+        height: auto !important;
+        min-height: auto !important;
+    }
+
+    .pan-india-box {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .pan-india-header {
+        flex: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+    }
+}
+
+/* ── 6. MOBILE & TABLET ZERO-VOID TIGHTENING (<= 768px) ── */
+@media (max-width: 768px) {
+    .exact-hero {
+        padding: 16px 0 6px !important;
+    }
+
+    .exact-hero-grid {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 14px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .exact-hero-content {
+        flex: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin-bottom: 0 !important;
+    }
+
+    .exact-hero-visual {
+        flex: none !important;
         margin: 0 auto !important;
         width: 100% !important;
-        max-width: 440px !important;
+        max-width: 420px !important;
+        height: auto !important;
+        min-height: auto !important;
     }
 
     .hero-visual-frame {
         margin: 0 auto !important;
         border-radius: 18px !important;
         padding: 6px !important;
+        height: auto !important;
+        min-height: auto !important;
     }
 
     .hero-visual-img {
-        max-height: 290px !important;
+        max-height: 280px !important;
         border-radius: 14px !important;
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
     }
 
     .home-marquee-section {
         padding: 12px 0 14px !important;
+        margin-top: 0 !important;
     }
 
     .home-marquee-label {
+        margin-top: 0 !important;
         margin-bottom: 8px !important;
         font-size: 11px !important;
     }
 
+    .loan-categories-section,
     .pan-india-section,
     .bridging-section,
     .why-vps-section,
@@ -20610,15 +20665,40 @@ body {
     .section-header-wrap,
     .vps-section-header,
     .why-header-area,
-    .pan-india-header,
     .bridging-header {
         margin-bottom: 14px !important;
+    }
+
+    .pan-india-header {
+        flex: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin-bottom: 14px !important;
+        text-align: center !important;
+    }
+
+    .pan-india-sub {
+        margin-bottom: 0 !important;
+        max-width: 100% !important;
     }
 
     .pan-india-box,
     .bridging-inner {
         padding: 16px 14px !important;
         gap: 14px !important;
+        min-height: auto !important;
+    }
+
+    .pan-india-box {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .pan-india-cards {
+        width: 100% !important;
+        margin-top: 0 !important;
     }
 
     .pan-india-suitability-box,
@@ -20636,23 +20716,38 @@ body {
     }
 }
 
-/* ── 6. ULTRA-COMPACT MOBILE TIGHTENING (<= 480px) ── */
+/* ── 7. ULTRA-COMPACT MOBILE TIGHTENING (<= 480px) ── */
 @media (max-width: 480px) {
     .exact-hero {
-        padding: 12px 0 8px !important;
+        padding: 12px 0 4px !important;
     }
 
     .exact-hero-grid {
         gap: 10px !important;
         padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .exact-hero-visual {
+        max-width: 350px !important;
     }
 
     .hero-visual-img {
-        max-height: 250px !important;
+        max-height: 240px !important;
     }
 
     .home-marquee-section {
         padding: 10px 0 12px !important;
+        margin-top: 0 !important;
+    }
+
+    .pan-india-header {
+        margin-bottom: 10px !important;
+    }
+
+    .pan-india-box {
+        padding: 14px 12px !important;
+        gap: 12px !important;
     }
 
     .pan-india-section,
@@ -20662,5 +20757,6 @@ body {
         padding: 18px 0 !important;
     }
 }
+
 
 
