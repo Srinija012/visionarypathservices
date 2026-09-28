@@ -21266,6 +21266,203 @@ body {
     }
 }
 
+/* ==========================================================================
+   14. BOTTOM FIXED/STICKY CTA BAR (Modern High-Converting Action Bar)
+   Replaces standalone floating WhatsApp and Eligibility buttons with unified 3-button bar
+   ========================================================================== */
+.bottom-cta-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #FFFFFF;
+    border-top: 1px solid #E5E7EB;
+    box-shadow: 0 -4px 20px rgba(11, 31, 51, 0.08);
+    z-index: 990;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px)) 14px;
+    box-sizing: border-box;
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
 
+.bottom-cta-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
 
+/* Individual CTA button */
+.cta-bar-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: 60px;
+    padding: 8px 6px;
+    border-radius: 16px;
+    text-decoration: none !important;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    border: 1.5px solid transparent;
+}
 
+.cta-bar-btn:active {
+    transform: scale(0.97) !important;
+}
+
+.cta-bar-btn .cta-icon {
+    width: 22px;
+    height: 22px;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    display: block;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.cta-bar-btn:hover .cta-icon {
+    transform: scale(1.08);
+}
+
+.cta-bar-btn .cta-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Button 1: Call Desk (Warm ivory cream with wine/magenta icon) */
+.cta-btn-call {
+    background-color: #FAF7F2;
+    border-color: #F1E5D8;
+    color: #172B3F !important;
+}
+
+.cta-btn-call .cta-icon {
+    stroke: #B01258;
+}
+
+.cta-btn-call:hover {
+    background-color: #F4EDE2;
+    border-color: #E6D4BF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(176, 18, 88, 0.12);
+}
+
+/* Button 2: WhatsApp (Mint seafoam green with emerald/teal icon) */
+.cta-btn-whatsapp {
+    background-color: #E8F8F5;
+    border-color: #BFEFE4;
+    color: #064E3B !important;
+}
+
+.cta-btn-whatsapp .cta-icon {
+    stroke: #00897B;
+}
+
+.cta-btn-whatsapp:hover {
+    background-color: #DCF6EF;
+    border-color: #A2E6D5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0, 137, 123, 0.14);
+}
+
+/* Button 3: Book Visit (Vibrant rich magenta brand berry with white icon) */
+.cta-btn-book {
+    background-color: #B01258;
+    border-color: #B01258;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 14px rgba(176, 18, 88, 0.28);
+}
+
+.cta-btn-book .cta-icon {
+    stroke: #FFFFFF;
+}
+
+.cta-btn-book:hover {
+    background-color: #9A0E4B;
+    border-color: #9A0E4B;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(176, 18, 88, 0.42);
+}
+
+/* Desktop Floating Action Dock */
+@media (min-width: 769px) {
+    .bottom-cta-bar {
+        bottom: 22px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: 440px;
+        max-width: calc(100vw - 32px);
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(226, 232, 240, 0.9);
+        border-radius: 20px;
+        box-shadow: 0 12px 36px rgba(11, 31, 51, 0.14), 0 2px 8px rgba(0, 0, 0, 0.04);
+        padding: 10px 12px;
+    }
+    .bottom-cta-container {
+        gap: 10px;
+        max-width: 100%;
+    }
+    .cta-bar-btn {
+        min-height: 62px;
+        padding: 9px 8px;
+    }
+}
+
+/* Responsive downscaling for compact viewports */
+@media (max-width: 380px) {
+    .bottom-cta-bar {
+        padding: 8px 10px calc(8px + env(safe-area-inset-bottom, 0px)) 10px;
+    }
+    .bottom-cta-container {
+        gap: 8px;
+    }
+    .cta-bar-btn {
+        min-height: 56px;
+        padding: 7px 4px;
+        font-size: 12px;
+        border-radius: 12px;
+    }
+    .cta-bar-btn .cta-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Hide bar when mobile menu or modal popup is active */
+body.menu-open .bottom-cta-bar,
+body.modal-open .bottom-cta-bar,
+.bottom-cta-bar.hide {
+    display: none !important;
+}
+
+/* Completely suppress legacy floating icons across all screens */
+.floating-eligibility-btn,
+.whatsapp-float {
+    display: none !important;
+}
+
+/* Ensure footer and page content have comfortable clearance */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: calc(78px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+}

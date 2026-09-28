@@ -501,7 +501,8 @@
             .btn-submit-enquiry,
             .calc-tab-btn,
             .emi-preset-btn,
-            .floating-eligibility-btn
+            .floating-eligibility-btn,
+            .cta-bar-btn
         `);
 
         buttons.forEach(btn => {
