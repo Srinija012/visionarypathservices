@@ -116,6 +116,15 @@ for (const [relPath, msgs] of Object.entries(PAGE_MESSAGES)) {
         modified = true;
     }
 
+    // Update bottom CTA bar WhatsApp button
+    const ctaBarWaRegex = /<a\s+href="https:\/\/wa\.me\/918150949070(?:\?[^"]*)?"([^>]*class="[^"]*cta-btn-whatsapp[^"]*"[^>]*)>/gi;
+    if (ctaBarWaRegex.test(content)) {
+        content = content.replace(ctaBarWaRegex, (match, rest) => {
+            return `<a href="https://wa.me/918150949070?text=${floatEnc}"${rest}>`;
+        });
+        modified = true;
+    }
+
     // 2. Also check if blog sidebar wa link with 9063703038 exists
     const blogSidebarRegex = /<a\s+href="https:\/\/wa\.me\/919063703038(?:\?[^"]*)?"([^>]*class="[^"]*sidebar-wa-btn[^"]*"[^>]*)>/gi;
     if (blogSidebarRegex.test(content)) {
