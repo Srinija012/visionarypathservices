@@ -20909,5 +20909,75 @@ body {
     }
 }
 
+/* ── 4 CRITICAL FACTORS GRID: FOUR CARDS IN ONE LINE ON DESKTOP ── */
+.factors-four-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 18px !important;
+    align-items: stretch !important;
+}
+
+.factors-four-grid .factor-card {
+    background: #ffffff !important;
+    border: 1px solid var(--color-border, #DCE4EA) !important;
+    border-radius: 14px !important;
+    padding: 22px 18px !important;
+    box-shadow: 0 4px 16px rgba(11, 31, 51, 0.04) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: transform 0.22s ease, box-shadow 0.22s ease !important;
+}
+
+.factors-four-grid .factor-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 24px rgba(11, 31, 51, 0.08) !important;
+}
+
+.factors-four-grid .factor-icon-wrap {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.15rem !important;
+    margin-bottom: 16px !important;
+    flex-shrink: 0 !important;
+}
+
+.factors-four-grid .factor-card h3 {
+    font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+    font-size: 1.05rem !important;
+    color: var(--color-navy, #0B1F33) !important;
+    margin-bottom: 10px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+}
+
+.factors-four-grid .factor-card p {
+    font-size: 0.88rem !important;
+    color: var(--color-muted, #64748B) !important;
+    line-height: 1.58 !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 1024px) {
+    .factors-four-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .factors-four-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+    .factors-four-grid .factor-card {
+        padding: 18px 16px !important;
+    }
+}
+
+
 
 
