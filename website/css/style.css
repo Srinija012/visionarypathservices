@@ -1550,8 +1550,8 @@ img { max-width: 100%; display: block; }
 .footer-inner,
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.35fr 0.9fr 1.35fr 1.1fr;
-    gap: 32px;
+    grid-template-columns: 1.2fr 0.8fr 1.25fr 1.35fr;
+    gap: 28px;
     margin-bottom: 36px;
 }
 .footer-logo {
