@@ -16681,12 +16681,14 @@ h1, h2, h3, h4, h5, h6,
     font-size: 11.5px !important;
     line-height: 1.2 !important;
     white-space: nowrap !important;
+    max-width: 100% !important;
 }
 
 .top-bar-contact-phone {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+    flex-shrink: 0 !important;
 }
 
 .top-bar-contact-phone a,
@@ -16699,6 +16701,7 @@ h1, h2, h3, h4, h5, h6,
     gap: 5px !important;
     text-decoration: none !important;
     white-space: nowrap !important;
+    flex-shrink: 0 !important;
     transition: color 0.15s ease !important;
 }
 
@@ -16706,6 +16709,7 @@ h1, h2, h3, h4, h5, h6,
 .contact-num i {
     color: #38bdf8 !important;
     font-size: 10.5px !important;
+    flex-shrink: 0 !important;
 }
 
 .top-bar-contact-phone a:hover,
@@ -16717,9 +16721,10 @@ h1, h2, h3, h4, h5, h6,
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 8px !important;
+    gap: 6px !important;
     font-size: 11px !important;
     white-space: nowrap !important;
+    flex-shrink: 0 !important;
 }
 
 .top-bar-contact-email a {
@@ -16728,6 +16733,7 @@ h1, h2, h3, h4, h5, h6,
     display: inline-flex !important;
     align-items: center !important;
     gap: 5px !important;
+    flex-shrink: 0 !important;
     transition: color 0.15s ease !important;
 }
 
@@ -16735,13 +16741,34 @@ h1, h2, h3, h4, h5, h6,
     color: #FFA043 !important;
 }
 
+.contact-email-full {
+    display: inline !important;
+}
+
+.contact-email-short {
+    display: none !important;
+}
+
+.contact-label {
+    display: inline !important;
+}
+
+.top-sep-mid {
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 10px !important;
+    margin: 0 4px !important;
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+}
+
 .top-bar-contact-email .top-sep {
     color: rgba(255, 255, 255, 0.3) !important;
     font-size: 10px !important;
     margin: 0 4px !important;
+    flex-shrink: 0 !important;
 }
 
-/* Compact viewports: keep strictly single-line, scaled cleanly */
+/* Compact viewports: keep strictly single-line, scaled cleanly, zero overlapping */
 @media (max-width: 600px) {
     .top-bar {
         padding: 4px 0 !important;
@@ -16760,31 +16787,62 @@ h1, h2, h3, h4, h5, h6,
         gap: 3px !important;
         flex-direction: row !important;
         white-space: nowrap !important;
+        flex-shrink: 0 !important;
     }
     .top-bar-tagline {
         font-size: 10.5px !important;
+        flex-shrink: 0 !important;
     }
     .top-bar-sub {
         font-size: 10px !important;
+        flex-shrink: 0 !important;
     }
     .top-bar .orange-rule,
     .top-bar-left .orange-rule,
     .top-bar-orange-rule {
         width: 10px !important;
         margin-right: 2px !important;
+        flex-shrink: 0 !important;
     }
     .top-bar-right {
         gap: 8px !important;
         font-size: 10.5px !important;
         flex-direction: row !important;
         white-space: nowrap !important;
+        flex-shrink: 0 !important;
+    }
+    .top-bar-contact-phone,
+    .top-bar-contact-email {
+        flex-shrink: 0 !important;
     }
     .top-bar-contact-phone a,
     .contact-num {
         font-size: 10.5px !important;
+        gap: 4px !important;
+        flex-shrink: 0 !important;
+    }
+    .contact-label {
+        display: none !important;
+    }
+    .contact-email-full {
+        display: none !important;
+    }
+    .contact-email-short {
+        display: inline !important;
+    }
+    .top-sep-mid {
+        margin: 0 2px !important;
+        font-size: 9px !important;
     }
     .top-bar-contact-email {
-        font-size: 10px !important;
+        font-size: 10.5px !important;
+        gap: 4px !important;
+        flex-shrink: 0 !important;
+    }
+    .top-bar-contact-email a {
+        font-size: 10.5px !important;
+        gap: 4px !important;
+        flex-shrink: 0 !important;
     }
 }
 
@@ -16799,6 +16857,20 @@ h1, h2, h3, h4, h5, h6,
     .top-bar-sub {
         font-size: 9.5px !important;
     }
+    .top-bar-right {
+        gap: 6px !important;
+        font-size: 10px !important;
+    }
+    .top-bar-contact-phone a,
+    .contact-num {
+        font-size: 10px !important;
+    }
+    .top-bar-contact-email {
+        font-size: 10px !important;
+    }
+    .top-bar-contact-email a {
+        font-size: 10px !important;
+    }
 }
 
 @media (max-width: 340px) {
@@ -16810,7 +16882,7 @@ h1, h2, h3, h4, h5, h6,
         padding: 0 4px !important;
     }
     .top-bar-left {
-        font-size: 10px !important;
+        font-size: 9.5px !important;
         gap: 1px !important;
     }
     .top-bar-sub,
@@ -16819,11 +16891,11 @@ h1, h2, h3, h4, h5, h6,
         font-size: 9px !important;
     }
     .top-bar-right {
-        font-size: 10px !important;
-        gap: 2px !important;
+        font-size: 9.5px !important;
+        gap: 4px !important;
     }
     .top-bar-right a {
-        font-size: 10.5px !important;
+        font-size: 9.5px !important;
     }
 }
 
@@ -21477,12 +21549,26 @@ body.modal-open .bottom-cta-bar,
 
 /* ==========================================================================
    15. NAVBAR CTA BUTTONS: IDENTICAL HEIGHT, SIZING, AND CORNER RADIUS
-   Harmonizes Check Eligibility and Chat on WhatsApp to exact same size
+   Desktop: Harmonizes Check Eligibility and Chat on WhatsApp to exact same size
+   Mobile (< 960px): Explicitly hidden from header navbar; Hamburger menu takes prominence
    ========================================================================== */
-.nav-cta {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 10px !important;
+@media (min-width: 961px) {
+    .nav-cta {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+}
+
+@media (max-width: 960px) {
+    .nav-cta:not(.open) {
+        display: none !important;
+    }
+    .hamburger {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
 }
 
 .nav-cta .btn-eligibility,
