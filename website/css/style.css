@@ -141,8 +141,8 @@ img { max-width: 100%; display: block; }
 .contact-num i { color: #38bdf8; }
 .top-sep { opacity: 0.3; }
 
-/* Fix fa-phone icon direction — mirrors it to match fa-phone-alt orientation */
-.fa-phone { transform: scaleX(-1); }
+/* Standard upright call icon direction — ensures all phone icons face natural (up-right ↗) orientation */
+.fa-phone-alt { transform: scaleX(-1); display: inline-block; }
 
 /* --- NAVBAR --- */
 .navbar {
