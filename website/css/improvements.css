@@ -16563,17 +16563,19 @@ h1, h2, h3, h4, h5, h6,
     }
 }
 
-/* ── 3. TOP-BAR SLIM TWO-LINER ROTATOR (HALLMARK COMPLIANT) ── */
+/* ── 3. TOP-BAR SLIM SINGLE-LINE ROTATOR (HALLMARK COMPLIANT) ── */
 .top-bar {
     background: #0B1F33 !important;
     color: #FFFFFF !important;
     padding: 5px 0 !important;
     font-size: 11.5px !important;
-    line-height: 1.3 !important;
+    line-height: 1.2 !important;
     position: relative !important;
     z-index: 1001 !important;
     overflow: hidden !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    min-height: 28px !important;
+    box-sizing: border-box !important;
 }
 
 .top-bar-inner {
@@ -16581,15 +16583,15 @@ h1, h2, h3, h4, h5, h6,
     justify-content: center !important;
     align-items: center !important;
     position: relative !important;
-    min-height: 30px !important;
+    min-height: 20px !important;
     text-align: center !important;
 }
 
 .top-bar-track {
     width: 100% !important;
-    max-width: 680px !important;
+    max-width: 800px !important;
     position: relative !important;
-    min-height: 30px !important;
+    min-height: 20px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -16599,15 +16601,16 @@ h1, h2, h3, h4, h5, h6,
     position: absolute !important;
     inset: 0 !important;
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
+    white-space: nowrap !important;
     opacity: 0 !important;
     visibility: hidden !important;
     pointer-events: none !important;
-    transform: translateY(3px) !important;
-    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease !important;
+    transform: translateY(2px) !important;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease !important;
     width: 100% !important;
 }
 
@@ -16619,16 +16622,29 @@ h1, h2, h3, h4, h5, h6,
     position: relative !important;
 }
 
-/* Slide 1: Tagline two-liner */
+/* Slide 1: Tagline single-line */
 .top-bar-left {
-    display: flex !important;
-    flex-direction: column !important;
+    display: inline-flex !important;
+    flex-direction: row !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 1.5px !important;
+    gap: 6px !important;
     text-align: center !important;
-    font-size: 11px !important;
-    line-height: 1.3 !important;
+    font-size: 11.5px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+}
+
+.top-bar .orange-rule,
+.top-bar-left .orange-rule,
+.top-bar-orange-rule {
+    width: 14px !important;
+    height: 2px !important;
+    background: #FF5A00 !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    margin: 0 4px 0 0 !important;
+    flex-shrink: 0 !important;
 }
 
 .top-bar-tagline {
@@ -16636,25 +16652,35 @@ h1, h2, h3, h4, h5, h6,
     font-weight: 700 !important;
     color: #FFFFFF !important;
     letter-spacing: 0.15px !important;
+    white-space: nowrap !important;
+}
+
+.top-bar-dash {
+    color: #FF5A00 !important;
+    margin: 0 4px !important;
+    display: inline-block !important;
+    font-weight: 700 !important;
 }
 
 .top-bar-sub {
-    font-size: 10.5px !important;
+    font-size: 11px !important;
     font-weight: 600 !important;
     color: #FFA043 !important;
-    letter-spacing: 0.3px !important;
+    letter-spacing: 0.2px !important;
+    white-space: nowrap !important;
 }
 
-/* Slide 2: Contact Details two-liner */
+/* Slide 2: Contact Details single-line */
 .top-bar-right {
-    display: flex !important;
-    flex-direction: column !important;
+    display: inline-flex !important;
+    flex-direction: row !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 1.5px !important;
+    gap: 12px !important;
     text-align: center !important;
-    font-size: 11px !important;
-    line-height: 1.3 !important;
+    font-size: 11.5px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
 }
 
 .top-bar-contact-phone {
@@ -16665,20 +16691,21 @@ h1, h2, h3, h4, h5, h6,
 
 .top-bar-contact-phone a,
 .contact-num {
-    font-size: 12px !important;
+    font-size: 11.5px !important;
     font-weight: 700 !important;
     color: #FFFFFF !important;
     display: inline-flex !important;
     align-items: center !important;
-    gap: 6px !important;
+    gap: 5px !important;
     text-decoration: none !important;
+    white-space: nowrap !important;
     transition: color 0.15s ease !important;
 }
 
 .top-bar-contact-phone a i,
 .contact-num i {
     color: #38bdf8 !important;
-    font-size: 11px !important;
+    font-size: 10.5px !important;
 }
 
 .top-bar-contact-phone a:hover,
@@ -16691,7 +16718,7 @@ h1, h2, h3, h4, h5, h6,
     align-items: center !important;
     justify-content: center !important;
     gap: 8px !important;
-    font-size: 10.5px !important;
+    font-size: 11px !important;
     white-space: nowrap !important;
 }
 
@@ -16714,82 +16741,63 @@ h1, h2, h3, h4, h5, h6,
     margin: 0 4px !important;
 }
 
-@media (max-width: 960px) {
+/* Compact viewports: keep strictly single-line, scaled cleanly */
+@media (max-width: 600px) {
+    .top-bar {
+        padding: 4px 0 !important;
+        font-size: 10.5px !important;
+        min-height: 26px !important;
+    }
     .top-bar-inner {
-        flex-direction: column !important;
-        gap: 6px !important;
-        text-align: center !important;
+        padding: 0 8px !important;
+        min-height: 18px !important;
+    }
+    .top-bar-track {
+        min-height: 18px !important;
+    }
+    .top-bar-left {
+        font-size: 10.5px !important;
+        gap: 3px !important;
+        flex-direction: row !important;
+        white-space: nowrap !important;
+    }
+    .top-bar-tagline {
+        font-size: 10.5px !important;
+    }
+    .top-bar-sub {
+        font-size: 10px !important;
     }
     .top-bar .orange-rule,
     .top-bar-left .orange-rule,
     .top-bar-orange-rule {
-        display: none !important;
+        width: 10px !important;
+        margin-right: 2px !important;
+    }
+    .top-bar-right {
+        gap: 8px !important;
+        font-size: 10.5px !important;
+        flex-direction: row !important;
+        white-space: nowrap !important;
+    }
+    .top-bar-contact-phone a,
+    .contact-num {
+        font-size: 10.5px !important;
+    }
+    .top-bar-contact-email {
+        font-size: 10px !important;
     }
 }
 
-@media (max-width: 600px) {
-    .top-bar {
-        padding: 5px 0 !important;
-        font-size: 11px !important;
-    }
-    .top-bar-inner {
-        flex-direction: column !important;
-        gap: 4px !important;
-        text-align: center !important;
-        padding: 0 8px !important;
-    }
-    .top-bar-left {
-        font-size: 11px !important;
-        line-height: 1.35 !important;
-        justify-content: center !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 1.5px !important;
-        text-align: center !important;
-    }
-    .top-bar .orange-rule,
+@media (max-width: 360px) {
     .top-bar-left .orange-rule,
-    .top-bar-orange-rule,
-    .top-bar-dash {
+    .top-bar-orange-rule {
         display: none !important;
     }
-    .top-bar-tagline,
-    .top-bar-left > span:nth-of-type(2) {
-        font-weight: 600 !important;
-        color: #ffffff !important;
-        letter-spacing: 0.15px !important;
-    }
-    .top-bar-sub,
-    .top-bar-badge,
-    .top-bar-left > span:last-child {
+    .top-bar-tagline {
         font-size: 10px !important;
-        font-weight: 500 !important;
-        color: rgba(255, 255, 255, 0.78) !important;
-        letter-spacing: 0.35px !important;
-        opacity: 1 !important;
     }
-    .top-bar-right {
-        font-size: 11.5px !important;
-        gap: 2px !important;
-        justify-content: center !important;
-        display: flex !important;
-        align-items: center !important;
-        white-space: nowrap !important;
-    }
-    .top-bar-right a {
-        min-height: 20px !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        touch-action: manipulation;
-    }
-    .contact-num {
-        font-weight: 600 !important;
-        color: #ffffff !important;
-    }
-    .top-sep {
-        margin: 0 4px !important;
-        opacity: 0.3 !important;
+    .top-bar-sub {
+        font-size: 9.5px !important;
     }
 }
 
