@@ -16563,74 +16563,27 @@ h1, h2, h3, h4, h5, h6,
     }
 }
 
-/* ── 3. TOP-BAR SLIM SINGLE-LINE ROTATOR (HALLMARK COMPLIANT) ── */
+/* ── 3. TOP-BAR SLIM DUAL-LAYOUT (DESKTOP) & ROTATOR (MOBILE) ── */
 .top-bar {
     background: #0B1F33 !important;
     color: #FFFFFF !important;
-    padding: 5px 0 !important;
-    font-size: 11.5px !important;
+    padding: 6px 0 !important;
+    font-size: 12.5px !important;
     line-height: 1.2 !important;
     position: relative !important;
     z-index: 1001 !important;
-    overflow: hidden !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-    min-height: 28px !important;
+    min-height: 32px !important;
     box-sizing: border-box !important;
 }
 
-.top-bar-inner {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    position: relative !important;
-    min-height: 20px !important;
-    text-align: center !important;
-}
-
-.top-bar-track {
-    width: 100% !important;
-    max-width: 800px !important;
-    position: relative !important;
-    min-height: 20px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-.top-bar-slide {
-    position: absolute !important;
-    inset: 0 !important;
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    white-space: nowrap !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-    transform: translateY(2px) !important;
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease !important;
-    width: 100% !important;
-}
-
-.top-bar-slide.is-active {
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
-    transform: translateY(0) !important;
-    position: relative !important;
-}
-
-/* Slide 1: Tagline single-line */
+/* Base Tagline & Contact Elements */
 .top-bar-left {
     display: inline-flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    justify-content: center !important;
     gap: 6px !important;
-    text-align: center !important;
-    font-size: 11.5px !important;
+    font-size: 12.5px !important;
     line-height: 1.2 !important;
     white-space: nowrap !important;
 }
@@ -16638,67 +16591,62 @@ h1, h2, h3, h4, h5, h6,
 .top-bar .orange-rule,
 .top-bar-left .orange-rule,
 .top-bar-orange-rule {
-    width: 14px !important;
+    width: 18px !important;
     height: 2px !important;
     background: #FF5A00 !important;
     display: inline-block !important;
     vertical-align: middle !important;
-    margin: 0 4px 0 0 !important;
+    margin: 0 8px 0 0 !important;
     flex-shrink: 0 !important;
 }
 
 .top-bar-tagline {
-    font-size: 11.5px !important;
-    font-weight: 700 !important;
+    font-size: 12.5px !important;
+    font-weight: 600 !important;
     color: #FFFFFF !important;
-    letter-spacing: 0.15px !important;
+    letter-spacing: 0.1px !important;
     white-space: nowrap !important;
 }
 
 .top-bar-dash {
     color: #FF5A00 !important;
-    margin: 0 4px !important;
+    margin: 0 6px !important;
     display: inline-block !important;
     font-weight: 700 !important;
 }
 
 .top-bar-sub {
-    font-size: 11px !important;
-    font-weight: 600 !important;
-    color: #FFA043 !important;
-    letter-spacing: 0.2px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    letter-spacing: 0.1px !important;
     white-space: nowrap !important;
 }
 
-/* Slide 2: Contact Details single-line */
 .top-bar-right {
     display: inline-flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    justify-content: center !important;
     gap: 12px !important;
-    text-align: center !important;
-    font-size: 11.5px !important;
+    font-size: 12.5px !important;
     line-height: 1.2 !important;
     white-space: nowrap !important;
-    max-width: 100% !important;
 }
 
 .top-bar-contact-phone {
     display: inline-flex !important;
     align-items: center !important;
-    justify-content: center !important;
     flex-shrink: 0 !important;
 }
 
 .top-bar-contact-phone a,
 .contact-num {
-    font-size: 11.5px !important;
-    font-weight: 700 !important;
+    font-size: 12.5px !important;
+    font-weight: 600 !important;
     color: #FFFFFF !important;
     display: inline-flex !important;
     align-items: center !important;
-    gap: 5px !important;
+    gap: 6px !important;
     text-decoration: none !important;
     white-space: nowrap !important;
     flex-shrink: 0 !important;
@@ -16708,7 +16656,7 @@ h1, h2, h3, h4, h5, h6,
 .top-bar-contact-phone a i,
 .contact-num i {
     color: #38bdf8 !important;
-    font-size: 10.5px !important;
+    font-size: 12px !important;
     flex-shrink: 0 !important;
 }
 
@@ -16721,51 +16669,185 @@ h1, h2, h3, h4, h5, h6,
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 6px !important;
-    font-size: 11px !important;
-    white-space: nowrap !important;
     flex-shrink: 0 !important;
 }
 
 .top-bar-contact-email a {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
     text-decoration: none !important;
     display: inline-flex !important;
     align-items: center !important;
-    gap: 5px !important;
     flex-shrink: 0 !important;
-    transition: color 0.15s ease !important;
+    transition: color 0.15s ease, transform 0.15s ease !important;
 }
 
-.top-bar-contact-email a:hover {
-    color: #FFA043 !important;
+.top-bar-contact-email a:hover,
+.top-bar-right a:hover {
+    color: #38bdf8 !important;
 }
 
-.contact-email-full {
-    display: inline !important;
+.top-bar-right a i {
+    font-size: 13.5px !important;
+    vertical-align: middle !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    transition: color 0.18s ease, transform 0.18s ease !important;
 }
 
+.top-bar-right a:hover i {
+    color: #38bdf8 !important;
+    transform: translateY(-1px) !important;
+}
+
+.contact-email-full,
 .contact-email-short {
     display: none !important;
 }
 
 .contact-label {
     display: inline !important;
+    font-weight: 500 !important;
 }
 
-.top-sep-mid {
-    color: rgba(255, 255, 255, 0.4) !important;
-    font-size: 10px !important;
-    margin: 0 4px !important;
+.top-sep {
+    color: rgba(255, 255, 255, 0.35) !important;
+    font-size: 12px !important;
+    margin: 0 2px !important;
     display: inline-block !important;
     flex-shrink: 0 !important;
 }
 
-.top-bar-contact-email .top-sep {
-    color: rgba(255, 255, 255, 0.3) !important;
-    font-size: 10px !important;
-    margin: 0 4px !important;
+.top-sep-mid {
+    color: rgba(255, 255, 255, 0.35) !important;
+    font-size: 12px !important;
+    margin: 0 2px !important;
+    display: inline-block !important;
     flex-shrink: 0 !important;
+}
+
+/* ── DESKTOP STRIP (min-width: 769px): Full width, Tagline Left, Contact Right ── */
+@media (min-width: 769px) {
+    .top-bar {
+        padding: 6px 0 !important;
+        min-height: 32px !important;
+    }
+    .top-bar-inner {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        text-align: left !important;
+        min-height: 20px !important;
+    }
+    .top-bar-track {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        position: static !important;
+        min-height: auto !important;
+    }
+    .top-bar-slide,
+    .top-bar-slide.is-active {
+        position: static !important;
+        inset: auto !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: none !important;
+        width: auto !important;
+        max-width: none !important;
+        display: flex !important;
+        align-items: center !important;
+        flex-direction: row !important;
+    }
+    .top-bar-slide-tagline {
+        display: flex !important;
+        justify-content: flex-start !important;
+    }
+    .top-bar-slide-contact {
+        display: flex !important;
+        justify-content: flex-end !important;
+        margin-left: auto !important;
+    }
+    .top-bar-left {
+        justify-content: flex-start !important;
+        text-align: left !important;
+    }
+    .top-bar-right {
+        justify-content: flex-end !important;
+        text-align: right !important;
+    }
+}
+
+/* ── MOBILE ROTATOR (max-width: 768px): Single line 10s Tagline / 20s Contact ── */
+@media (max-width: 768px) {
+    .top-bar-inner {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        position: relative !important;
+        min-height: 20px !important;
+        text-align: center !important;
+    }
+    .top-bar-track {
+        width: 100% !important;
+        max-width: 800px !important;
+        position: relative !important;
+        min-height: 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .top-bar-slide {
+        position: absolute !important;
+        inset: 0 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transform: translateY(2px) !important;
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease !important;
+        width: 100% !important;
+    }
+    .top-bar-slide.is-active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: translateY(0) !important;
+        position: relative !important;
+    }
+    .top-bar-left {
+        justify-content: center !important;
+        text-align: center !important;
+        font-size: 11.5px !important;
+    }
+    .top-bar .orange-rule,
+    .top-bar-left .orange-rule,
+    .top-bar-orange-rule {
+        width: 14px !important;
+        margin: 0 4px 0 0 !important;
+    }
+    .top-bar-tagline {
+        font-size: 11.5px !important;
+    }
+    .top-bar-sub {
+        font-size: 11px !important;
+    }
+    .top-bar-right {
+        justify-content: center !important;
+        text-align: center !important;
+        font-size: 11.5px !important;
+    }
+    .top-bar-contact-phone a,
+    .contact-num {
+        font-size: 11.5px !important;
+    }
 }
 
 /* Compact viewports: keep strictly single-line, scaled cleanly, zero overlapping */
