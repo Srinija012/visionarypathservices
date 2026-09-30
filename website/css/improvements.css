@@ -21434,6 +21434,7 @@ body {
 
 .cta-btn-call .cta-icon {
     stroke: #0B1F33;
+    transform: scaleX(-1);
 }
 
 .cta-btn-call:hover {
@@ -21441,6 +21442,10 @@ body {
     border-color: #CBD5E1;
     transform: translateY(-2px);
     box-shadow: 0 4px 14px rgba(11, 31, 51, 0.08);
+}
+
+.cta-btn-call:hover .cta-icon {
+    transform: scaleX(-1) scale(1.08);
 }
 
 /* Button 2: WhatsApp (Fresh pale green with vibrant WhatsApp green icon & label) */
