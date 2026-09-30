@@ -21425,48 +21425,48 @@ body {
     text-overflow: ellipsis;
 }
 
-/* Button 1: Call Desk (Warm ivory cream with wine/magenta icon) */
+/* Button 1: Call Desk (Crisp white / soft surface with brand navy phone icon) */
 .cta-btn-call {
-    background-color: #FAF7F2;
-    border-color: #F1E5D8;
-    color: #172B3F !important;
+    background-color: #FFFFFF;
+    border-color: #E2E8F0;
+    color: #0B1F33 !important;
 }
 
 .cta-btn-call .cta-icon {
-    stroke: #B01258;
+    stroke: #0B1F33;
 }
 
 .cta-btn-call:hover {
-    background-color: #F4EDE2;
-    border-color: #E6D4BF;
+    background-color: #F8FAFC;
+    border-color: #CBD5E1;
     transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(176, 18, 88, 0.12);
+    box-shadow: 0 4px 14px rgba(11, 31, 51, 0.08);
 }
 
-/* Button 2: WhatsApp (Mint seafoam green with emerald/teal icon) */
+/* Button 2: WhatsApp (Fresh pale green with vibrant WhatsApp green icon & label) */
 .cta-btn-whatsapp {
-    background-color: #E8F8F5;
-    border-color: #BFEFE4;
-    color: #064E3B !important;
+    background-color: #F0FDF4;
+    border-color: #BBF7D0;
+    color: #15803D !important;
 }
 
 .cta-btn-whatsapp .cta-icon {
-    stroke: #00897B;
+    stroke: #16A34A;
 }
 
 .cta-btn-whatsapp:hover {
-    background-color: #DCF6EF;
-    border-color: #A2E6D5;
+    background-color: #DCFCE7;
+    border-color: #86EFAC;
     transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(0, 137, 123, 0.14);
+    box-shadow: 0 4px 14px rgba(22, 163, 74, 0.18);
 }
 
-/* Button 3: Book Visit (Vibrant rich magenta brand berry with white icon) */
+/* Button 3: Book Visit (Signature Brand Orange gradient with white icon & label) */
 .cta-btn-book {
-    background-color: #B01258;
-    border-color: #B01258;
+    background: var(--color-orange-gradient, linear-gradient(135deg, #FF5A00 0%, #FF8A00 100%));
+    border-color: transparent;
     color: #FFFFFF !important;
-    box-shadow: 0 4px 14px rgba(176, 18, 88, 0.28);
+    box-shadow: 0 4px 14px rgba(255, 90, 0, 0.32);
 }
 
 .cta-btn-book .cta-icon {
@@ -21474,10 +21474,10 @@ body {
 }
 
 .cta-btn-book:hover {
-    background-color: #9A0E4B;
-    border-color: #9A0E4B;
+    background: linear-gradient(135deg, #E04F00 0%, #FF7A00 100%);
+    border-color: transparent;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(176, 18, 88, 0.42);
+    box-shadow: 0 6px 20px rgba(255, 90, 0, 0.44);
 }
 
 /* Desktop Floating Action Dock */
