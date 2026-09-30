@@ -158,14 +158,10 @@ assert(
     mainJs.includes('initMobileFooterAccordions') && mainJs.includes('.footer-col-accordion'),
     '[FAIL] main.js missing mobile footer accordion initializer.'
 );
-console.log('Verifying Mobile Top-Bar Cleanliness (Hallmark Anti-Orphan & Anti-Slop)...');
+console.log('Verifying Top-Bar Cleanliness (Thin Strip & Single-Line Layout)...');
 assert(
-    improvementsCss.includes('.top-bar-left .orange-rule') && improvementsCss.includes('.top-bar-dash') && improvementsCss.includes('display: none !important;'),
-    '[FAIL] Mobile top-bar must suppress .orange-rule and .top-bar-dash to avoid orphaned lines and trailing bullets.'
-);
-assert(
-    improvementsCss.includes('.top-bar-left {') && improvementsCss.includes('flex-direction: column !important;'),
-    '[FAIL] Mobile top-bar tagline must stack cleanly with flex-direction: column.'
+    improvementsCss.includes('.top-bar-left {') && improvementsCss.includes('flex-direction: row !important;'),
+    '[FAIL] Top-bar tagline must be formatted in a single line with flex-direction: row.'
 );
 assert(
     mainJs.includes('initTopBarTicker') && mainJs.includes('10000') && mainJs.includes('20000'),
@@ -175,7 +171,7 @@ assert(
     improvementsCss.includes('.top-bar-track') && improvementsCss.includes('.top-bar-slide') && improvementsCss.includes('.top-bar-slide.is-active'),
     '[FAIL] improvements.css missing .top-bar-track and .top-bar-slide rotator styles.'
 );
-console.log('✅ PASS: Mobile Top-Bar renders cleanly as slim two-liner with 10s/20s rotator engine.');
+console.log('✅ PASS: Top-Bar renders cleanly as thin strip with single-line layout and 10s/20s rotator engine.');
 
 console.log('\n🎉 ALL MOBILE RESPONSIVENESS AND HALLMARK GATES PASSED (100% CLEAN)!\n');
 
